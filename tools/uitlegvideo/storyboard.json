@@ -1,0 +1,53 @@
+{
+ "about": "Montage van de uitlegvideo: de kale app, altijd volledig in beeld, harde knippen, een muis die laat zien waar er geklikt wordt. Elk shot is een stuk van een afspeelopname; `from` en `to` zijn ankers in die opname (lib/edl.mjs, resolveAnchor).",
+ "shots": [
+  {
+   "id": "ask",
+   "scene": "chat",
+   "from": "mark:start-screen",
+   "to": "mark:source-open",
+   "about": "Startscherm met de drie duiven, de vraag getypt bij de Knowledge Partner, haar antwoord met bronnummers."
+  },
+  {
+   "id": "source",
+   "scene": "chat",
+   "from": "mark:source-open",
+   "to": "mark:graph-open",
+   "about": "Bronnummer 6 opent de bronlade: de bevinding en de oorspronkelijke woorden uit het onderzoek."
+  },
+  {
+   "id": "graph",
+   "scene": "chat",
+   "from": "mark:graph-open",
+   "to": "mark:graph-back",
+   "about": "Open in the knowledge graph: de bevinding in haar omgeving, het volgende niveau (citaten en artikel) en het artikel zelf."
+  },
+  {
+   "id": "other",
+   "scene": "chat",
+   "from": "mark:ask-other-0.2",
+   "to": "chunk:text#2-0.1",
+   "about": "Terug in het gesprek dezelfde vraag aan de andere duif: de Stakeholder antwoordt. Het shot eindigt vlak vóór de afsluitende tekst van de facilitator (het tweede streambrok met facilitatortekst), zodat die niet even opflitst vóór de knip."
+  },
+  {
+   "id": "signal-meeting",
+   "scene": "meeting-nonverbal-respond",
+   "from": "mic+25.5",
+   "to": "audio:media-ended#1+0.3",
+   "about": "De signalerende duif aan tafel: het verloop loopt mee met wat er gezegd wordt; na 'Any objections?' de knop Let the pigeon step in; zij koert en beweegt."
+  },
+  {
+   "id": "stake-meeting",
+   "scene": "meeting-individualist-respond",
+   "from": "mic+22.0",
+   "to": "pcmEnd+1.5",
+   "about": "Hetzelfde fragment met de Stakeholder: het verloop, de knop Let the pigeon respond, 'One moment…', en dan haar antwoord in beeld en hardop."
+  }
+ ],
+ "creditSeconds": 3,
+ "poster": {
+  "shot": "stake-meeting",
+  "at": "pcmStart+4"
+ },
+ "loopCrossfade": 0.6
+}

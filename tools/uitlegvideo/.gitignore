@@ -1,0 +1,4 @@
+# Afgeleid of lokaal: opnieuw te maken met de scripts in deze map.
+out/
+meeting-audio/meeting-dialogue.wav
+meeting-audio/*.wav

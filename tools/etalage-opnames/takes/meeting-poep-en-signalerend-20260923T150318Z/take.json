@@ -1,0 +1,481 @@
+{
+ "format": "duiven-etalage-take/1",
+ "id": "meeting-poep-en-signalerend-20260923T150318Z",
+ "kind": "meeting",
+ "item": {
+  "statement": "poep",
+  "lang": "en",
+  "pigeon": "signalerend",
+  "modulePigeon": "nonverbal"
+ },
+ "input": {
+  "speaker": "Chair",
+  "text": "The market traders keep complaining about pigeon droppings on their stalls.",
+  "audio": "uitspraken/poep-en.mp3",
+  "audioSha256": "872cf49b37bd46abe985dea22aa1b01465104a8cefd37acd7c650db2b0e186ff",
+  "audioMs": 3994,
+  "voice": "Charlotte (ElevenLabs eleven_multilingual_v2)",
+  "micLeadMs": 4000,
+  "windowMs": 25000,
+  "placeholder": true
+ },
+ "recordedAt": "2026-09-23T15:03:18.608Z",
+ "finishedAt": "2026-09-23T15:03:37.807Z",
+ "server": {
+  "base": "http://127.0.0.1:8094",
+  "modelPolicy": {
+   "model": "vertex_ai/gemini-3.5-flash",
+   "detectionModel": "vertex_ai/gemini-3.5-flash",
+   "endpoint": "https://llm-proxy.invalid"
+  },
+  "knowledge": {
+   "kbId": "Duiven",
+   "bundleSchema": "duiven/3",
+   "languages": [
+    "nl",
+    "en"
+   ],
+   "importedAt": "2026-09-15T12:26:51Z",
+   "counts": {
+    "belongs_to": 4067,
+    "belongs_to_perspective": 4067,
+    "belongs_to_subthema": 4067,
+    "contains": 4067,
+    "contains_perspective": 297,
+    "contains_subthema": 149,
+    "contains_thema": 26,
+    "destillaat": 4067,
+    "domein": 3,
+    "has_quote": 4225,
+    "interview": 120,
+    "perspective": 297,
+    "quote": 4225,
+    "subthema": 149,
+    "thema": 26
+   }
+  },
+  "database": {
+   "name": "duif_etalage",
+   "copyOf": "duif_v3"
+  },
+  "module": {
+   "commit": "44186b900325eefad26c20b91e92f7350eb81bd0",
+   "moduleTree": "272829aae8444c82053a849b7a66ccc5a5a9109f",
+   "dirty": false,
+   "paraiCore": {
+    "commit": "29c670c73b73295c8c96592947cb9622e730c51c",
+    "dirty": false
+   },
+   "tags": [
+    "skipauth"
+   ],
+   "builtAt": "2026-09-23T14:40:12.508Z",
+   "binary": "module/bin/duif-etalage",
+   "bundleSha256": "d64a902bff38bf25d090a3bfe74e3f6bf4cfc7c21cb5160bddda9c45dced540d"
+  },
+  "pigeons": [
+   {
+    "id": "biological",
+    "engine": "agent",
+    "chat": true,
+    "meeting": true,
+    "autonomousDefault": false
+   },
+   {
+    "id": "individualist",
+    "engine": "agent",
+    "chat": true,
+    "meeting": true,
+    "autonomousDefault": false
+   },
+   {
+    "id": "nonverbal",
+    "engine": "pipeline",
+    "chat": false,
+    "meeting": true,
+    "autonomousDefault": true
+   }
+  ]
+ },
+ "failure": null,
+ "session": {
+  "id": "8ee367ef915211c992be4b107998a358",
+  "lang": "en",
+  "pigeonId": "nonverbal",
+  "autonomous": true,
+  "eagerness": "normal",
+  "cooldownSeconds": 0
+ },
+ "timeline": {
+  "micOpenMs": 1366,
+  "utteranceStartMs": 5366,
+  "utteranceEndMs": 9360,
+  "windowEndMs": 34360
+ },
+ "actions": [
+  {
+   "name": "load",
+   "t": 127
+  },
+  {
+   "name": "seat",
+   "t": 1160
+  },
+  {
+   "name": "reaction",
+   "t": 11948,
+   "type": "sound"
+  },
+  {
+   "name": "reaction-done",
+   "t": 16737
+  },
+  {
+   "name": "end-click",
+   "t": 18246
+  },
+  {
+   "name": "ended",
+   "t": 18286
+  }
+ ],
+ "exchanges": [
+  {
+   "id": 1,
+   "method": "GET",
+   "path": "/access/notice",
+   "requestBody": null,
+   "t": 219,
+   "headMs": 10,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 11,
+   "body": "{\"version\":\"2026-09-22.1\",\"acknowledged\":true,\"acknowledgedAt\":\"2026-09-22T12:57:04.398172+02:00\"}\n"
+  },
+  {
+   "id": 2,
+   "method": "GET",
+   "path": "/duiven",
+   "requestBody": null,
+   "t": 225,
+   "headMs": 3,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 4,
+   "body": "{\"duiven\":[{\"id\":\"biological\",\"name\":{\"en\":\"Knowledge Partner\",\"nl\":\"Kennispartner\"},\"voiceReady\":true,\"knowledgeBase\":true,\"chat\":true,\"meeting\":true,\"topics\":[{\"id\":\"population-control\",\"label\":{\"en\":\"Population control\",\"nl\":\"Populatiebeheer\"}},{\"id\":\"nuisance-and-health\",\"label\":{\"en\":\"Nuisance and health\",\"nl\":\"Overlast en gezondheid\"}},{\"id\":\"feeding-and-food\",\"label\":{\"en\":\"Feeding and food\",\"nl\":\"Voeren en voedsel\"}},{\"id\":\"nesting-and-shelter\",\"label\":{\"en\":\"Nesting and shelter\",\"nl\":\"Nestelen en beschutting\"}},{\"id\":\"urban-ecology\",\"label\":{\"en\":\"Urban ecology\",\"nl\":\"Stadsecologie\"}}],\"engine\":\"agent\",\"autonomousDefault\":false},{\"id\":\"individualist\",\"name\":{\"en\":\"Stakeholder\",\"nl\":\"Stakeholder\"},\"voiceReady\":true,\"knowledgeBase\":true,\"chat\":true,\"meeting\":true,\"topics\":[{\"id\":\"pigeon-rights\",\"label\":{\"en\":\"What pigeons are owed\",\"nl\":\"Waar duiven recht op hebben\"}},{\"id\":\"city-space\",\"label\":{\"en\":\"Whose city is it\",\"nl\":\"Van wie is de stad\"}},{\"id\":\"decided-about-not-with\",\"label\":{\"en\":\"Decided about, not with\",\"nl\":\"Over ons, zonder ons\"}},{\"id\":\"pest-framing\",\"label\":{\"en\":\"Being called vermin\",\"nl\":\"Ongedierte genoemd worden\"}}],\"engine\":\"agent\",\"autonomousDefault\":false},{\"id\":\"nonverbal\",\"name\":{\"en\":\"Signaling Pigeon\",\"nl\":\"Signalerende duif\"},\"voiceReady\":false,\"knowledgeBase\":false,\"chat\":false,\"meeting\":true,\"topics\":[{\"id\":\"threat-and-removal\",\"label\":{\"en\":\"Population intervention\",\"nl\":\"Ingrijpen in de populatie\"}},{\"id\":\"food\",\"label\":{\"en\":\"Access to food\",\"nl\":\"Toegang tot voedsel\"}},{\"id\":\"nesting\",\"label\":{\"en\":\"Nesting and roosting access\",\"nl\":\"Toegang tot nest- en verblijfplaatsen\"}},{\"id\":\"pigeons-nearby\",\"label\":{\"en\":\"Pigeons nearby\",\"nl\":\"Duiven in de buurt\"}}],\"engine\":\"pipeline\",\"autonomousDefault\":true}],\"gedrag\":{\"interventieZelfstandig\":false,\"interventieThrottleSeconden\":0,\"inactiviteitPromptMinuten\":10,\"inactiviteitSluitSeconden\":90,\"taalDefault\":\"en\",\"detectieGretigheid\":\"normal\",\"detectieVensterWoorden\":3,\"detectieIntervalSeconden\":6,\"stilteMilliseconden\":1500,\"arousalHalveringSeconden\":120},\"modelPolicy\":{\"model\":\"vertex_ai/gemini-3.5-flash\",\"detectionModel\":\"vertex_ai/gemini-3.5-flash\",\"endpoint\":\"https://llm-proxy.invalid\"}}\n"
+  },
+  {
+   "id": 3,
+   "method": "GET",
+   "path": "/chat/sessions",
+   "requestBody": null,
+   "t": 225,
+   "headMs": 7,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 8,
+   "bodyOmitted": "chatgeschiedenis van het opnameaccount; hoort niet bij deze vergadering"
+  },
+  {
+   "id": 4,
+   "method": "GET",
+   "path": "/knowledge/status",
+   "requestBody": null,
+   "t": 230,
+   "headMs": 2,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 3,
+   "body": "{\"state\":\"ready\",\"kbId\":\"Duiven\",\"counts\":{\"belongs_to\":4067,\"belongs_to_perspective\":4067,\"belongs_to_subthema\":4067,\"contains\":4067,\"contains_perspective\":297,\"contains_subthema\":149,\"contains_thema\":26,\"destillaat\":4067,\"domein\":3,\"has_quote\":4225,\"interview\":120,\"perspective\":297,\"quote\":4225,\"subthema\":149,\"thema\":26},\"bundleSchema\":\"duiven/3\",\"languages\":[\"nl\",\"en\"],\"sourceLanguage\":\"nl\",\"importedAt\":\"2026-09-15T12:26:51Z\"}\n"
+  },
+  {
+   "id": 5,
+   "method": "POST",
+   "path": "/meeting/sessions",
+   "requestBody": "{\"pigeonId\":\"nonverbal\",\"playbackTracking\":true,\"lang\":\"en\",\"autonomous\":true,\"eagerness\":\"normal\",\"cooldownSeconds\":0}",
+   "t": 1295,
+   "headMs": 4,
+   "status": 201,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 4,
+   "body": "{\"autonomous\":true,\"autonomyPaused\":false,\"eagerness\":\"normal\",\"lang\":\"en\",\"listening\":\"reconnecting\",\"pigeonId\":\"nonverbal\",\"playbackTracking\":true,\"sessionId\":\"8ee367ef915211c992be4b107998a358\",\"settings\":{\"turnId\":\"0\",\"autonomyPaused\":false,\"playbackTracking\":true,\"autonomous\":true,\"eagerness\":\"normal\",\"cooldownSeconds\":0},\"voice\":\"off\"}\n"
+  },
+  {
+   "id": 46,
+   "method": "POST",
+   "path": "/meeting/sessions/8ee367ef915211c992be4b107998a358/playback",
+   "requestBody": "{\"turnId\":\"1\",\"state\":\"started\"}",
+   "t": 11841,
+   "headMs": 2,
+   "status": 202,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"accepted\":true,\"settings\":{\"turnId\":\"1\",\"autonomyPaused\":false,\"playbackTracking\":true,\"autonomous\":true,\"eagerness\":\"normal\",\"cooldownSeconds\":0},\"speaking\":true}\n"
+  },
+  {
+   "id": 65,
+   "method": "POST",
+   "path": "/meeting/sessions/8ee367ef915211c992be4b107998a358/playback",
+   "requestBody": "{\"turnId\":\"1\",\"state\":\"ended\"}",
+   "t": 16581,
+   "headMs": 1,
+   "status": 202,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 1,
+   "body": "{\"accepted\":true,\"settings\":{\"turnId\":\"1\",\"autonomyPaused\":false,\"playbackTracking\":true,\"autonomous\":true,\"eagerness\":\"normal\",\"cooldownSeconds\":0},\"speaking\":false}\n"
+  },
+  {
+   "id": 73,
+   "method": "DELETE",
+   "path": "/meeting/sessions/8ee367ef915211c992be4b107998a358",
+   "requestBody": null,
+   "t": 18280,
+   "headMs": 8,
+   "status": 204,
+   "headers": [],
+   "endMs": 8,
+   "body": ""
+  }
+ ],
+ "audioUpload": {
+  "requests": 65,
+  "statuses": {
+   "202": 65
+  },
+  "firstMs": 1749,
+  "lastMs": 18170
+ },
+ "channels": [
+  {
+   "channel": 1,
+   "path": "/meeting/sessions/8ee367ef915211c992be4b107998a358/events",
+   "t": 1299,
+   "messages": [
+    {
+     "t": 1308,
+     "data": "{\"type\":\"state\",\"turnId\":\"0\",\"autonomyPaused\":false,\"playbackTracking\":true,\"sessionId\":\"8ee367ef915211c992be4b107998a358\",\"pigeonId\":\"nonverbal\",\"lang\":\"en\",\"listening\":\"reconnecting\",\"speaking\":false,\"detector\":{\"enabled\":true,\"state\":\"ready\",\"retryable\":false},\"settings\":{\"turnId\":\"0\",\"autonomyPaused\":false,\"playbackTracking\":true,\"autonomous\":true,\"eagerness\":\"normal\",\"cooldownSeconds\":0},\"voice\":\"off\"}"
+    },
+    {
+     "t": 1433,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"8ee367ef915211c992be4b107998a358\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "t": 6138,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"8ee367ef915211c992be4b107998a358\",\"speaking\":false,\"text\":\"The\"}"
+    },
+    {
+     "t": 6299,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"8ee367ef915211c992be4b107998a358\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "t": 6447,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"8ee367ef915211c992be4b107998a358\",\"speaking\":false,\"text\":\"The mar\"}"
+    },
+    {
+     "t": 6623,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"8ee367ef915211c992be4b107998a358\",\"speaking\":false,\"text\":\"The market\"}"
+    },
+    {
+     "t": 6910,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"8ee367ef915211c992be4b107998a358\",\"speaking\":false,\"text\":\"The market trad\"}"
+    },
+    {
+     "t": 7128,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"8ee367ef915211c992be4b107998a358\",\"speaking\":false,\"text\":\"The market traders\"}"
+    },
+    {
+     "t": 7187,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"8ee367ef915211c992be4b107998a358\",\"speaking\":false,\"text\":\"The market traders ke\"}"
+    },
+    {
+     "t": 7422,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"8ee367ef915211c992be4b107998a358\",\"speaking\":false,\"text\":\"The market traders keep\"}"
+    },
+    {
+     "t": 7473,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"8ee367ef915211c992be4b107998a358\",\"speaking\":false,\"text\":\"The market traders keep comp\"}"
+    },
+    {
+     "t": 7524,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"8ee367ef915211c992be4b107998a358\",\"speaking\":false,\"text\":\"The market traders keep compla\"}"
+    },
+    {
+     "t": 7658,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"8ee367ef915211c992be4b107998a358\",\"speaking\":false,\"text\":\"The market traders keep complaining\"}"
+    },
+    {
+     "t": 7702,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"8ee367ef915211c992be4b107998a358\",\"speaking\":false,\"text\":\"The market traders keep complaining about\"}"
+    },
+    {
+     "t": 8185,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"8ee367ef915211c992be4b107998a358\",\"speaking\":false,\"text\":\"The market traders keep complaining about p\"}"
+    },
+    {
+     "t": 8452,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"8ee367ef915211c992be4b107998a358\",\"speaking\":false,\"text\":\"The market traders keep complaining about pige\"}"
+    },
+    {
+     "t": 8503,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"8ee367ef915211c992be4b107998a358\",\"speaking\":false,\"text\":\"The market traders keep complaining about pigeon\"}"
+    },
+    {
+     "t": 8704,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"8ee367ef915211c992be4b107998a358\",\"speaking\":false,\"text\":\"The market traders keep complaining about pigeon drop\"}"
+    },
+    {
+     "t": 8759,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"8ee367ef915211c992be4b107998a358\",\"speaking\":false,\"text\":\"The market traders keep complaining about pigeon dropp\"}"
+    },
+    {
+     "t": 8977,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"8ee367ef915211c992be4b107998a358\",\"speaking\":false,\"text\":\"The market traders keep complaining about pigeon droppings on\"}"
+    },
+    {
+     "t": 9206,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"8ee367ef915211c992be4b107998a358\",\"speaking\":false,\"text\":\"The market traders keep complaining about pigeon droppings on their\"}"
+    },
+    {
+     "t": 9484,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"8ee367ef915211c992be4b107998a358\",\"speaking\":false,\"text\":\"The market traders keep complaining about pigeon droppings on their st\"}"
+    },
+    {
+     "t": 9538,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"8ee367ef915211c992be4b107998a358\",\"speaking\":false,\"text\":\"The market traders keep complaining about pigeon droppings on their stall\"}"
+    },
+    {
+     "t": 9731,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"8ee367ef915211c992be4b107998a358\",\"speaking\":false,\"text\":\"The market traders keep complaining about pigeon droppings on their stalls.\"}"
+    },
+    {
+     "t": 10559,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"8ee367ef915211c992be4b107998a358\",\"speaking\":false,\"text\":\"The market traders keep complaining about pigeon droppings on their stalls.\",\"final\":true}"
+    },
+    {
+     "t": 11558,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"8ee367ef915211c992be4b107998a358\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "t": 11827,
+     "data": "{\"type\":\"candidate\",\"sessionId\":\"8ee367ef915211c992be4b107998a358\",\"speaking\":false,\"candidate\":{\"id\":\"bbc58756753470d01d012a6c83b3287c\",\"score\":0,\"reason\":\"signal\",\"sources\":0}}"
+    },
+    {
+     "t": 11828,
+     "data": "{\"type\":\"candidate\",\"sessionId\":\"8ee367ef915211c992be4b107998a358\",\"speaking\":false}"
+    },
+    {
+     "t": 11828,
+     "data": "{\"type\":\"intervention\",\"sessionId\":\"8ee367ef915211c992be4b107998a358\",\"speaking\":false}"
+    },
+    {
+     "t": 11828,
+     "data": "{\"type\":\"sound\",\"turnId\":\"1\",\"eventId\":\"6cc4280f0e50899d2d5a511b932c778f\",\"durationMs\":1000,\"playbackTracking\":true,\"playback\":\"pending\",\"sessionId\":\"8ee367ef915211c992be4b107998a358\",\"speaking\":false,\"sound\":{\"id\":\"shuffle\",\"band\":\"calm\",\"file\":\"sounds/shuffle.mp3\",\"url\":\"/api/duif/v1/sounds/shuffle\"}}"
+    },
+    {
+     "t": 11828,
+     "data": "{\"type\":\"playback_state\",\"turnId\":\"1\",\"playback\":\"pending\",\"sessionId\":\"8ee367ef915211c992be4b107998a358\",\"speaking\":true}"
+    },
+    {
+     "t": 11842,
+     "data": "{\"type\":\"playback_state\",\"turnId\":\"1\",\"playback\":\"playing\",\"sessionId\":\"8ee367ef915211c992be4b107998a358\",\"speaking\":true}"
+    },
+    {
+     "t": 16582,
+     "data": "{\"type\":\"playback_state\",\"turnId\":\"1\",\"autonomyPaused\":false,\"playback\":\"ended\",\"sessionId\":\"8ee367ef915211c992be4b107998a358\",\"speaking\":false}"
+    },
+    {
+     "t": 16800,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"8ee367ef915211c992be4b107998a358\",\"listening\":\"listening\",\"speaking\":false}"
+    }
+   ],
+   "openMs": 1308,
+   "closeMs": 18280
+  }
+ ],
+ "probes": [
+  {
+   "kind": "mic-open",
+   "t": 1366,
+   "audio": 1
+  },
+  {
+   "kind": "gesture",
+   "t": 1398,
+   "clip": "Peck"
+  },
+  {
+   "kind": "gesture",
+   "t": 1617,
+   "clip": "WingWave"
+  },
+  {
+   "kind": "media-play",
+   "t": 11828,
+   "src": "http://127.0.0.1:8094/modules/duif/media/pigeon-field-coo.mp3"
+  },
+  {
+   "kind": "gesture",
+   "t": 11828,
+   "clip": "WingWave"
+  },
+  {
+   "kind": "media-playing",
+   "t": 11841,
+   "src": "http://127.0.0.1:8094/modules/duif/media/pigeon-field-coo.mp3"
+  },
+  {
+   "kind": "media-ended",
+   "t": 16581,
+   "src": "http://127.0.0.1:8094/modules/duif/media/pigeon-field-coo.mp3"
+  }
+ ],
+ "transcript": [
+  {
+   "t": 10559,
+   "text": "The market traders keep complaining about pigeon droppings on their stalls."
+  }
+ ],
+ "voice": [],
+ "checks": {
+  "reaction": "signal",
+  "delayMs": 2468,
+  "sessionLang": "en",
+  "langMatches": true,
+  "autonomous": true
+ }
+}

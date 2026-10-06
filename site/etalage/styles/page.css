@@ -1,0 +1,1072 @@
+/* De etalage, in de layout en maten van het ontwerp: zwevende
+ * balk, waaier van 300 px brede kaarten, gesprek onder de duif (720 px in
+ * het ontwerp, op desktop 1040 px met een leesbare regellengte),
+ * onderzoek met posters, FAQ als overlay. Werkt vanaf 360 px zonder horizontaal
+ * scrollen, met toetsenbord en op 200% zoom. */
+
+*, *::before, *::after { box-sizing: border-box; }
+/* Wat de pagina naar een element scrolt (anker, focus), houdt de meelopende kop
+ * vrij; --kop zet app.js, en is 0 als de kop niet meeloopt. */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-padding-top: calc(var(--kop, 80px) + 16px); }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+/* De tekst komt uit i18n.js; tot die er staat blijft de pagina even leeg, met een
+ * vangnet als het script niet laadt. */
+html.is-loading body { opacity: 0; animation: etalage-reveal 0s linear 1.6s forwards; }
+@keyframes etalage-reveal { to { opacity: 1; } }
+html.has-dialog { overflow: hidden; }
+
+img, video { display: block; max-width: 100%; }
+button, input, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+h1, h2, h3 { margin: 0; font-family: var(--font-serif); font-weight: 800; letter-spacing: -.015em; line-height: 1.15; }
+p { margin: 0; }
+ul, ol { margin: 0; padding: 0; }
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 4px; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; border-radius: 4px; }
+[hidden] { display: none !important; }
+
+.sr-only {
+  position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; border: 0;
+}
+.icon { display: inline-flex; flex: none; line-height: 0; }
+.eyebrow { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: var(--secondary); }
+@media screen { :where([data-theme="dark"]) .eyebrow { color: var(--link); } }
+
+.skip {
+  position: absolute; left: 16px; top: -64px; z-index: 100;
+  padding: 10px 16px; border-radius: var(--radius-md);
+  background: var(--secondary); color: var(--secondary-foreground); font-weight: 600;
+}
+.skip:focus { top: 12px; }
+
+.textbtn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 0; border: 0; background: none;
+  color: var(--link); font-weight: 600; font-size: inherit;
+  text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px;
+}
+.textbtn:hover { text-decoration-thickness: 2px; }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 40px; padding: 0 18px; border-radius: var(--radius-md); border: 0;
+  font-size: 14px; font-weight: 600;
+}
+.btn--ink { background: var(--secondary); color: var(--secondary-foreground); }
+.btn--ink:hover { background: color-mix(in oklab, var(--secondary) 88%, var(--foreground)); }
+
+/* ---- kop ---------------------------------------------------------------------- */
+
+.topbar {
+  position: sticky; top: 16px; z-index: 50;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  width: calc(100% - 32px); max-width: 1200px; margin: 16px auto 0;
+  padding: 9px 14px 9px 20px;
+  background: color-mix(in oklab, var(--background) 82%, transparent);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  border: 1px solid var(--border); border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-sm);
+}
+/* Bij 200% zoom (of een laag venster) neemt een meelopende kop te veel hoogte in. */
+@media (max-height: 500px) {
+  .topbar { position: relative; top: auto; }
+}
+.topbar__title {
+  min-width: 0;
+  font-family: var(--font-serif); font-weight: 800; font-size: 17px; letter-spacing: -.01em;
+  line-height: 1.2; color: var(--foreground); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.topbar__title:hover { text-decoration: none; }
+.topbar__right { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.topbar__rule { width: 1px; height: 24px; background: var(--border); }
+
+.lang { display: flex; gap: 2px; padding: 3px; background: var(--muted); border-radius: 11px; }
+.lang__btn {
+  min-width: 36px; min-height: 28px; padding: 5px 10px; border: 0; border-radius: 8px;
+  background: transparent; color: var(--muted-foreground);
+  font-size: 12px; font-weight: 600; line-height: 1;
+  transition: background .15s, color .15s;
+}
+.lang__btn[aria-pressed="true"] { background: var(--secondary); color: var(--secondary-foreground); }
+.lang__btn:not([aria-pressed="true"]):hover { color: var(--foreground); }
+
+/* Licht of donker: een schakelaar met het icoon van de weergave die nu staat. */
+.themebtn {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 32px; height: 32px; padding: 0; border: 1px solid var(--border); border-radius: 9px;
+  background: transparent; color: var(--muted-foreground);
+  transition: background .15s, border-color .15s, color .15s;
+}
+.themebtn:hover { background: var(--muted); border-color: var(--border-strong); color: var(--foreground); }
+
+.login {
+  display: inline-flex; align-items: center; gap: 6px; min-height: 32px;
+  padding: 5px 11px; border: 1px solid var(--border); border-radius: 9px;
+  color: var(--foreground); font-size: 13px; font-weight: 600;
+  transition: background .15s, border-color .15s;
+}
+.login:hover { background: var(--muted); border-color: var(--border-strong); text-decoration: none; }
+.login .icon { color: var(--muted-foreground); }
+
+.brands { display: inline-flex; align-items: center; gap: 10px; }
+.brands__aimaps { width: auto; height: 20px; }
+.brands__parai { width: auto; height: 22px; }
+.brands__x { color: var(--muted-foreground); font-size: 14px; }
+
+@media (max-width: 760px) {
+  .topbar { gap: 10px; padding: 8px 10px 8px 14px; }
+  .topbar .topbar__rule, .topbar .brands { display: none; }
+  .topbar__title { font-size: 15px; white-space: normal; }
+  .topbar__right { gap: 8px; }
+}
+/* De themaschakelaar kost de kop 40 px. Onder 390 px worden taal en Inloggen
+ * daarom compacter en valt het slotje weg: zo past de titel op twee regels en
+ * blijft Inloggen voluit. */
+@media (max-width: 389px) {
+  .topbar { gap: 8px; padding-left: 12px; }
+  .topbar__right { gap: 6px; }
+  .lang__btn { min-width: 32px; padding: 5px 8px; }
+  .login { padding: 5px 9px; }
+  .login .icon { display: none; }
+}
+/* Inloggen houdt zijn woord zolang het past; pas op de smalste schermen blijft
+ * alleen het slotje over (de naam staat dan nog voor schermlezers). */
+@media (max-width: 350px) {
+  .login { padding: 5px 8px; }
+  .login .icon { display: inline-flex; }
+  .login__text { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .lang__btn { min-width: 32px; padding: 5px 8px; }
+}
+
+/* ---- hero ---------------------------------------------------------------------- */
+
+.hero {
+  position: relative;
+  max-width: 1200px; margin: 0 auto; padding: 44px 20px 0;
+  text-align: center;
+}
+.hero__eyebrow { margin-bottom: 14px; }
+.hero h1 {
+  max-width: 25ch; margin: 0 auto;
+  font-size: clamp(1.75rem, 1.05rem + 2.3vw, 2.9rem); line-height: 1.08; letter-spacing: -.02em;
+  text-wrap: balance;
+}
+.hero__line {
+  max-width: 620px; margin: 14px auto 0;
+  color: var(--muted-foreground); font-size: 15px; line-height: 1.6; text-wrap: balance;
+}
+.faqbtn {
+  position: absolute; top: 26px; right: 20px; z-index: 20;
+  width: 44px; height: 44px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--border); background: var(--background); color: var(--foreground);
+  font-family: var(--font-serif); font-weight: 800; font-size: 20px; line-height: 1;
+  box-shadow: var(--shadow-sm); transition: background .15s, border-color .15s;
+}
+.faqbtn:hover { background: var(--muted); border-color: var(--secondary); }
+/* Smal: de vraagknop staat op de regel van de bovenkop, niet op een eigen regel
+ * boven de titel. De bovenkop houdt aan weerszijden ruimte voor de knop. */
+@media (max-width: 760px) {
+  .hero { padding: 22px 16px 0; }
+  .hero__eyebrow { display: flex; align-items: center; justify-content: center; min-height: 44px; margin-bottom: 10px; padding: 0 52px; font-size: 11px; letter-spacing: .08em; text-wrap: balance; }
+  .faqbtn { top: 22px; right: 16px; }
+}
+
+/* ---- waaier ---------------------------------------------------------------------- */
+
+.stage { overflow-x: clip; padding-top: 22px; outline: none; }
+.fan {
+  --card-w: 300px;
+  --side-x: 220px;
+  --side-y: 40px;
+  --side-scale: .78;
+  --card-aspect: .82;
+  --breakout: 0;
+  --card-h: calc(var(--card-w) / var(--card-aspect));
+  --top: calc(var(--card-h) * var(--breakout));
+  position: relative;
+  max-width: 940px; margin: 0 auto;
+  height: calc(var(--top) + var(--card-h) + var(--side-y) + 18px);
+}
+.fan__track { position: absolute; inset: 0; touch-action: pan-y; }
+.fan__slot {
+  position: absolute; left: 50%; top: var(--top);
+  width: var(--card-w);
+  transform-origin: 50% 40%;
+  transition: transform .55s var(--ease-spring), opacity .45s, filter .45s;
+}
+.fan__slot[data-rel="center"] { transform: translateX(-50%); z-index: 3; }
+.fan__slot[data-rel="right"],
+.fan__slot[data-rel="left"] { z-index: 1; opacity: .5; filter: saturate(.85); }
+.fan__slot[data-rel="right"] { transform: translate(calc(-50% + var(--side-x)), var(--side-y)) scale(var(--side-scale)); }
+.fan__slot[data-rel="left"] { transform: translate(calc(-50% - var(--side-x)), var(--side-y)) scale(var(--side-scale)); }
+.fan__slot[data-rel="right"]:hover,
+.fan__slot[data-rel="left"]:hover { opacity: .72; }
+
+.card {
+  --accent: var(--sg);
+  position: relative; display: block;
+  width: var(--card-w); aspect-ratio: var(--card-aspect);
+  padding: 0; border: 0; border-radius: var(--radius-xl);
+  background: none; color: #fff; text-align: left;
+  -webkit-tap-highlight-color: transparent;
+  transform: perspective(900px) rotateX(calc(var(--tilt-y, 0) * -5deg)) rotateY(calc(var(--tilt-x, 0) * 7deg));
+  transition: transform .5s var(--ease-out-quart), box-shadow .3s;
+  box-shadow: var(--shadow-sm);
+}
+.card[data-pigeon="kennispartner"] { --accent: var(--kp); }
+.card[data-pigeon="stakeholder"] { --accent: var(--sh); }
+.card.is-tilting { transition: transform .12s linear, box-shadow .3s; }
+.card[aria-current="true"] { box-shadow: var(--shadow-lg); outline: 2px solid var(--accent); outline-offset: 3px; }
+.card:focus-visible { outline: 3px solid var(--focus); outline-offset: 5px; border-radius: var(--radius-xl); }
+
+.card__plate {
+  position: absolute; inset: 0; overflow: hidden;
+  border-radius: inherit; background: var(--muted);
+}
+.card__plate-img, .card__portrait {
+  width: 100%; height: 100%; object-fit: cover;
+  transform: translate(calc(var(--tilt-x, 0) * -5px), calc(var(--tilt-y, 0) * -4px)) scale(1.05);
+  transition: transform .5s var(--ease-out-quart);
+}
+.card.is-tilting .card__plate-img { transition: transform .12s linear; }
+/* De studioplaat van de terugval: een zachte gloed in de kleur van de duif. */
+.card__plate--studio {
+  background:
+    radial-gradient(120% 85% at 50% 18%, color-mix(in oklab, var(--accent) 16%, #f7f7f4) 0%, color-mix(in oklab, var(--accent) 48%, #d9dbd6) 58%, color-mix(in oklab, var(--accent) 60%, #2a302d) 100%);
+}
+@media screen {
+  :where([data-theme="dark"]) .card__plate--studio {
+    background:
+      radial-gradient(120% 85% at 50% 18%, color-mix(in oklab, var(--accent) 34%, #3b403d) 0%, color-mix(in oklab, var(--accent) 22%, #232826) 62%, #151917 100%);
+  }
+}
+.card__portrait {
+  transform: translate(calc(var(--tilt-x, 0) * 7px), calc(var(--tilt-y, 0) * 5px)) scale(1.04);
+  transform-origin: 50% 100%;
+}
+.card.is-tilting .card__portrait { transition: transform .12s linear; }
+.card__portrait.is-reacting { animation: pigeon-peck 1.05s var(--ease-out-quart); }
+@keyframes pigeon-peck {
+  0%, 100% { transform: scale(1.04); }
+  22% { transform: translateY(-3%) rotate(-2.5deg) scale(1.06); }
+  48% { transform: translateY(1.5%) rotate(1.5deg) scale(1.05); }
+  70% { transform: translateY(-1%) rotate(-.5deg) scale(1.045); }
+}
+
+/* De duivenlaag uit het manifest: mag boven en naast de kaart uitsteken. Zij
+ * ligt boven het naamverloop, zodat dat de duif niet donker maakt; de poten
+ * staan in rust boven de naam (beeldstroom). */
+.card__pigeon {
+  position: absolute; z-index: 2; pointer-events: none;
+  transform: translate(calc(var(--tilt-x, 0) * 9px), calc(var(--tilt-y, 0) * 6px));
+  transition: transform .5s var(--ease-out-quart);
+}
+.card.is-tilting .card__pigeon { transition: transform .12s linear; }
+.card__rest, .card__clip { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+.card__clip { visibility: hidden; }
+.card__pigeon.is-playing .card__clip { visibility: visible; }
+.card__pigeon.is-playing .card__rest { visibility: hidden; }
+
+.card__shade {
+  position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  border-radius: inherit;
+  background: linear-gradient(to top, rgb(0 0 0 / .72) 0%, rgb(0 0 0 / .18) 38%, rgb(0 0 0 / 0) 58%);
+}
+.card__caption {
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 3;
+  display: flex; flex-direction: column; padding: 14px 16px 16px;
+}
+.card__label { display: inline-flex; align-items: center; gap: 7px; margin-bottom: 6px; font-size: 12px; font-weight: 600; opacity: .92; }
+.card__name { font-family: var(--font-serif); font-weight: 800; font-size: 22px; line-height: 1.1; letter-spacing: -.01em; text-shadow: 0 1px 12px rgb(0 0 0 / .25); }
+.card__badge {
+  position: absolute; top: 12px; right: 12px; z-index: 3;
+  padding: 3px 10px; border-radius: 999px;
+  background: #7a5711; color: #fff; font-size: 12px; font-weight: 600; letter-spacing: .01em;
+  box-shadow: 0 1px 6px rgb(0 0 0 / .18);
+  transition: opacity .3s;
+}
+/* Op een zijkaart valt de badge weg: half doorzichtig zou hij onleesbaar zijn,
+ * en de naam van de kaart noemt hem toch al. */
+.fan__slot:not([data-rel="center"]) .card__badge { opacity: 0; }
+
+.arrowbtn {
+  position: absolute; z-index: 20;
+  top: calc(var(--top) + var(--card-h) / 2 - 22px);
+  width: 44px; height: 44px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--border);
+  background: color-mix(in oklab, var(--background) 88%, transparent);
+  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+  color: var(--foreground); box-shadow: var(--shadow-sm);
+  transition: background .15s, border-color .15s;
+}
+.arrowbtn:hover { background: var(--muted); border-color: var(--secondary); }
+.fan__prev { left: 0; }
+.fan__next, .fan__auto { right: 0; }
+.fan__auto { top: calc(var(--top) + var(--card-h) / 2 + 32px); }
+@media (prefers-reduced-motion: reduce) { .fan__auto { display: none; } }
+
+@media (min-width: 1600px) {
+  .fan { --card-w: 330px; --side-x: 244px; --side-y: 44px; }
+  .fan__prev { left: -24px; }
+  .fan__next, .fan__auto { right: -24px; }
+}
+@media (max-width: 1000px) {
+  .fan__prev { left: 16px; }
+  .fan__next, .fan__auto { right: 16px; }
+}
+@media (max-width: 720px) {
+  .fan { --card-w: 252px; --side-x: 172px; --side-y: 30px; }
+  .card__name { font-size: 20px; }
+}
+@media (max-width: 480px) {
+  .fan { --card-w: 226px; --side-x: 146px; --side-y: 24px; --side-scale: .74; }
+  .fan__prev { left: 8px; }
+  .fan__next, .fan__auto { right: 8px; }
+  /* Op de smalste kaart reikt de dasknoop tot 0,37 kaartbreedte (84 px); de
+   * badge blijft er met een kleinere letter en dichter bij de hoek ruim naast. */
+  .card__badge { top: 8px; right: 8px; padding: 2px 8px; font-size: 11px; }
+}
+
+/* ---- onder de kaart ---------------------------------------------------------------- */
+
+.talk { --accent: var(--kp); --accent-ink: var(--kp-ink); max-width: 752px; margin: 10px auto 0; padding: 0 16px; }
+/* Op desktop is het paneel breder dan de waaier (940 px) en smaller dan de
+ * 1160 px inhoud van de rest van de pagina; de intro erboven blijft smal. */
+@media (min-width: 960px) { .talk { max-width: 1072px; } }
+.talk[data-pigeon="stakeholder"] { --accent: var(--sh); --accent-ink: var(--sh-ink); }
+.talk[data-pigeon="signalerend"] { --accent: var(--sg); --accent-ink: var(--sg-ink); }
+.talk__intro { text-align: center; margin-bottom: 18px; }
+.talk__chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 5px 14px; border-radius: 999px;
+  background: color-mix(in oklab, var(--accent) 12%, var(--background));
+  color: var(--accent-ink);
+  font-family: var(--font-sans); font-size: 12px; font-weight: 700; line-height: 1.5;
+  text-transform: uppercase; letter-spacing: .08em;
+}
+.talk__icon { margin-right: 2px; }
+.talk__blurb { max-width: 58ch; margin: 12px auto 0; color: var(--muted-foreground); line-height: 1.6; text-wrap: pretty; }
+
+/* ---- paneel ------------------------------------------------------------------------ */
+
+/* clip in plaats van hidden: hidden maakt van het paneel een scrollcontainer,
+ * en dan loopt de duif aan tafel niet meer mee met de pagina. */
+.panel { border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: clip; background: var(--background); }
+.panel::before { content: ""; display: block; height: 4px; background: var(--accent); }
+.panel__head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 14px; border-bottom: 1px solid var(--border); }
+.tabs { display: inline-flex; gap: 2px; padding: 3px; background: var(--muted); border-radius: 11px; }
+.tab {
+  min-height: 32px; padding: 6px 16px; border: 0; border-radius: 8px;
+  background: transparent; color: var(--muted-foreground);
+  font-size: 13px; font-weight: 600;
+  transition: background .15s, color .15s;
+}
+.tab[aria-selected="true"] { background: var(--background); color: var(--foreground); box-shadow: var(--shadow-xs); }
+.tab:not([aria-selected="true"]):hover { color: var(--foreground); }
+
+.honest { margin: 12px auto 0; text-align: center; font-size: 12.5px; color: var(--muted-foreground); }
+.honest .textbtn { font-weight: 600; }
+
+/* ---- chat -------------------------------------------------------------------------- */
+
+.chat__scroll {
+  height: 380px; overflow-y: auto; overflow-x: hidden; padding: 18px;
+  overscroll-behavior: contain;
+}
+.chat__scroll:focus-visible, .meeting__scroll:focus-visible { outline-offset: -3px; }
+.chat__thread { display: flex; flex-direction: column; min-height: 100%; }
+.chat__empty { display: flex; flex-direction: column; align-items: center; gap: 12px; margin: auto; padding: 24px 12px; color: var(--muted-foreground); font-size: 14px; text-align: center; }
+.chat__empty-avatar {
+  width: 56px; height: 56px; border-radius: 50%; object-fit: cover;
+  background: color-mix(in oklab, var(--accent) 14%, var(--background));
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--accent) 22%, transparent);
+}
+.turn { display: flex; flex-direction: column; }
+
+.msg { --msg-accent: var(--sg); --msg-ink: var(--sg-ink); display: flex; flex-direction: column; margin-bottom: 16px; animation: msg-in .4s var(--ease-out-expo) both; }
+.msg[data-author="kennispartner"] { --msg-accent: var(--kp); --msg-ink: var(--kp-ink); }
+.msg[data-author="stakeholder"] { --msg-accent: var(--sh); --msg-ink: var(--sh-ink); }
+@keyframes msg-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.msg__author {
+  display: inline-flex; align-items: center; gap: 8px; margin: 0 0 6px 2px;
+  color: var(--msg-ink); font-size: 12.5px; font-weight: 700;
+}
+.msg__avatar {
+  width: 28px; height: 28px; border-radius: 50%; object-fit: cover; flex: none;
+  background: color-mix(in oklab, var(--msg-accent, var(--accent)) 16%, var(--background));
+  box-shadow: 0 0 0 2px color-mix(in oklab, var(--msg-accent, var(--accent)) 30%, transparent);
+}
+.msg__bubble { font-size: 15px; line-height: 1.65; overflow-wrap: anywhere; }
+.msg__text p { white-space: pre-wrap; }
+.msg__text p + p { margin-top: .75em; }
+
+.msg--pigeon { align-items: flex-start; }
+.msg--pigeon .msg__bubble {
+  max-width: min(100%, 36rem); padding: 12px 16px;
+  background: color-mix(in oklab, var(--msg-accent) 8%, var(--background));
+  border: 1px solid color-mix(in oklab, var(--msg-accent) 20%, var(--border));
+  border-radius: 18px; border-top-left-radius: 6px;
+}
+.msg--facilitator { align-items: flex-start; margin-left: 18px; }
+.msg--facilitator .msg__author { color: var(--muted-foreground); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+.msg--facilitator .msg__bubble {
+  max-width: min(100%, 33rem); padding: 10px 14px; font-size: 14.5px;
+  background: var(--background); border: 1px solid var(--border); border-radius: 14px;
+}
+.msg--user { align-items: flex-end; }
+.msg--user .msg__bubble {
+  position: relative; max-width: min(88%, 32rem); padding: 10px 14px;
+  background: var(--secondary); color: var(--secondary-foreground);
+  border-radius: 18px; border-top-right-radius: 6px;
+}
+.msg--user.has-compare { margin-bottom: 34px; }
+.msg--thinking .msg__bubble { display: inline-flex; align-items: center; gap: 5px; min-height: 44px; }
+
+/* Op de hoek van je eigen vraag: dezelfde vraag aan de andere duif. */
+.ask-other {
+  position: absolute; right: 12px; bottom: 0; transform: translateY(62%);
+  display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;
+  min-height: 30px; padding: 4px 12px 4px 9px; border-radius: 999px;
+  border: 1px solid var(--border-strong); background: var(--background); color: var(--foreground);
+  font-size: 12.5px; font-weight: 600; box-shadow: var(--shadow-sm);
+  transition: border-color .15s, background .15s;
+}
+.ask-other:hover { border-color: var(--foreground); background: var(--muted); }
+.ask-other[aria-disabled="true"] { opacity: .5; cursor: default; }
+
+.dots { display: inline-flex; gap: 5px; }
+.dots span { width: 6px; height: 6px; border-radius: 50%; background: var(--muted-foreground); animation: dots 1.2s infinite; }
+.dots span:nth-child(2) { animation-delay: .2s; }
+.dots span:nth-child(3) { animation-delay: .4s; }
+@keyframes dots { 0%, 60%, 100% { opacity: .2; } 30% { opacity: 1; } }
+
+.cites { white-space: nowrap; }
+.cite {
+  display: inline-block; min-width: 1.35em; margin: 0 1px; padding: 0 3px;
+  border: 0; border-radius: 5px; vertical-align: super;
+  background: color-mix(in oklab, var(--msg-accent) 16%, transparent); color: var(--msg-ink);
+  font-size: .7em; font-weight: 700; line-height: 1.5;
+}
+button.cite:hover { background: color-mix(in oklab, var(--msg-accent) 26%, transparent); }
+span.cite { cursor: default; }
+
+.msg__foot { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 2px 0; }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px; min-height: 30px;
+  padding: 3px 11px; border-radius: 999px; border: 1px solid var(--border);
+  background: transparent; color: var(--muted-foreground);
+  font-size: 12.5px; font-weight: 600; line-height: 1.4;
+}
+button.chip:hover { background: var(--muted); }
+.chip--sources {
+  color: var(--msg-ink, var(--foreground));
+  border-color: color-mix(in oklab, var(--msg-accent) 34%, transparent);
+  background: color-mix(in oklab, var(--msg-accent) 9%, transparent);
+}
+button.chip--sources:hover { background: color-mix(in oklab, var(--msg-accent) 17%, transparent); }
+.chip--stance { color: var(--msg-ink); border-style: dashed; border-color: color-mix(in oklab, var(--msg-accent) 45%, transparent); }
+.chip--related { cursor: default; font-weight: 500; border-color: transparent; padding-inline: 4px; }
+.chip--gap { color: var(--warning-ink); background: var(--warning-soft); border-color: color-mix(in oklab, var(--warning-ink) 30%, transparent); }
+.chip--listen { color: var(--foreground); }
+.chip--listen:disabled { opacity: .45; cursor: default; }
+.chip__icon { display: inline-flex; }
+
+.chat__steps { display: flex; flex-wrap: wrap; gap: 6px; padding: 0 18px 10px; }
+.chat__steps:empty { display: none; }
+.chip--step { cursor: default; font-weight: 500; }
+.chip--step.is-running { color: var(--foreground); border-color: color-mix(in oklab, var(--foreground) 28%, transparent); }
+.chip--step[data-state="done"] { opacity: .62; }
+.pulse { width: 6px; height: 6px; border-radius: 50%; background: currentColor; animation: pulse 1.2s ease-in-out infinite alternate; }
+@keyframes pulse { from { opacity: .25; } to { opacity: 1; } }
+
+.chat__note { max-width: 46ch; margin: 2px auto 16px; text-align: center; font-size: 13px; line-height: 1.55; color: var(--muted-foreground); }
+.chat__note-login { display: inline-flex; align-items: center; gap: 4px; font-weight: 600; }
+.chat__origin {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 14px;
+  margin: 2px 0 14px; padding: 0 2px 8px; border-bottom: 1px solid var(--border);
+  font-size: 12.5px; color: var(--muted-foreground);
+}
+.chat__origin:focus { outline: none; }
+.chat__origin:focus-visible { outline: 2px solid var(--focus); }
+.chat__repeated { display: flex; align-items: center; gap: 12px; margin: 0 0 14px; font-size: 12px; color: var(--muted-foreground); }
+.chat__repeated::before, .chat__repeated::after { content: ""; flex: 1; height: 1px; background: var(--border); }
+.chat__notice { padding: 4px 2px 10px; font-size: 13.5px; color: var(--muted-foreground); }
+/* Laden: een rustige puls op de laadregel in het gesprek en op de plaatshouders
+ * van de Data-regel, zodat er nooit een lege chip of een los 'Data:' staat. */
+.chat__loading { margin: auto; padding: 24px 12px; font-size: 14px; color: var(--muted-foreground); text-align: center; }
+.chat__loading { animation: wait-pulse 1.6s ease-in-out infinite; }
+@keyframes wait-pulse { 50% { opacity: .45; } }
+
+.chat__foot { border-top: 1px solid var(--border); padding: 12px 14px; }
+.chat__questions { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+.qbtn {
+  min-height: 36px; padding: 6px 12px; border-radius: var(--radius-md);
+  border: 1px solid color-mix(in oklab, var(--secondary) 55%, transparent);
+  background: transparent; color: var(--secondary);
+  font-size: 13px; font-weight: 500; line-height: 1.35; text-align: left;
+  transition: background .15s, transform .15s;
+}
+.qbtn:hover { background: color-mix(in oklab, var(--secondary) 6%, transparent); }
+.qbtn[aria-disabled="true"] { opacity: .5; cursor: default; }
+.qbtn[aria-disabled="true"]:hover { background: transparent; }
+.qbtn.is-asked { border-style: dashed; }
+@media screen {
+  :where([data-theme="dark"]) .qbtn { color: var(--link); border-color: color-mix(in oklab, var(--link) 45%, transparent); }
+}
+
+.composer {
+  display: flex; align-items: flex-end; gap: 8px;
+  padding: 7px; border: 1px solid var(--border); border-radius: 14px;
+  background: var(--background); box-shadow: var(--shadow-xs);
+  transition: border-color .15s, box-shadow .15s;
+}
+/* De focusring van de typbalk: een volle lijn in de duiveninkt, ≥ 3:1 tegen de
+ * achtergrond in licht en donker (WCAG 1.4.11). */
+.composer:focus-within { border-color: var(--accent-ink); box-shadow: 0 0 0 1px var(--accent-ink); }
+.composer__input {
+  flex: 1; min-width: 0; min-height: 38px; max-height: 120px; padding: 8px;
+  border: 0; outline: none; resize: none; background: transparent;
+  font-size: 15px; line-height: 1.5;
+}
+.composer__input::placeholder { color: var(--muted-foreground); }
+.composer__send {
+  flex: none; width: 38px; height: 38px; border: 0; border-radius: 9px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--accent); color: var(--on-accent);
+  transition: transform .15s, opacity .15s;
+}
+.composer__send[aria-disabled="true"] { opacity: .4; cursor: default; }
+.composer__send:not([aria-disabled="true"]):active { transform: scale(.92); }
+
+/* Desktop: in het brede paneel groeit de letter mee in plaats van de regel.
+ * De bubbels begrenzen hun regel in ch (±70 tekens per regel), het venster
+ * wordt hoger met het scherm, en vragen en typbalk krijgen meer lucht. */
+@media (min-width: 960px) {
+  .panel__head { padding: 12px 20px; }
+  .chat__scroll { height: clamp(440px, 58vh, 580px); padding: 26px 32px 18px; }
+  .chat__steps { padding: 0 32px 12px; }
+  .msg { margin-bottom: 20px; }
+  .msg__author { font-size: 13px; }
+  .msg__bubble { font-size: 16px; line-height: 1.7; }
+  .msg--pigeon .msg__bubble { max-width: min(100%, 54ch); padding: 14px 20px; }
+  .msg--facilitator { margin-left: 24px; }
+  .msg--facilitator .msg__bubble { max-width: min(100%, 56ch); padding: 12px 18px; font-size: 15.5px; }
+  .msg--user .msg__bubble { max-width: min(80%, 44ch); padding: 11px 18px; }
+  .chat__foot { padding: 16px 32px 20px; }
+  .chat__questions { gap: 10px; margin-bottom: 14px; }
+  .qbtn { min-height: 40px; padding: 8px 16px; font-size: 14px; }
+  .composer { padding: 8px 8px 8px 10px; }
+  .composer__input { min-height: 42px; font-size: 16px; }
+  .composer__send { width: 42px; height: 42px; border-radius: 10px; }
+}
+
+/* ---- vergadering ---------------------------------------------------------------------- */
+
+/* De duif zit zelf aan tafel: een kleine kaart met dezelfde plaat en duivenlaag
+ * als in de waaier. Zij blijft in beeld terwijl je een uitspraak kiest: op een
+ * breed scherm als kolom links die meeloopt, op een smal scherm als strook
+ * boven in het paneel. De duivenlaag steekt boven en opzij buiten de kaart
+ * (--breakout, --sideout uit het manifest); de strook houdt daar ruimte voor,
+ * want het paneel knipt af wat erbuiten valt.
+ *
+ * --kop (app.js) is de onderkant van de meelopende kop; de strook sluit daar
+ * zonder spleet op aan. De pagina houdt de kop al vrij (scroll-padding op
+ * html); --dekking is wat de strook daaronder bedekt. Focusbare elementen in
+ * het verslag houden die ruimte extra vrij, zodat de toetsenbordfocus nooit
+ * onder de strook valt (WCAG 2.4.11). */
+.meeting {
+  --table-w: 72px;
+  --table-h: calc(var(--table-w) / var(--card-aspect, .82));
+  --sticky-top: calc(var(--kop, 84px) - 1px);
+  --dekking: var(--tafel-h, 0px);
+}
+.meeting__main :is(button, a, [tabindex]) { scroll-margin-top: calc(var(--dekking) + 8px); scroll-margin-bottom: 8px; }
+.meeting__table {
+  position: sticky; top: var(--sticky-top); z-index: 5;
+  display: flex; align-items: flex-end; gap: 14px;
+  padding: calc(var(--table-h) * var(--breakout, 0) + 8px) 16px 10px calc(var(--table-w) * var(--sideout, 0) + 16px);
+  background: var(--background);
+  border-bottom: 1px solid var(--border);
+}
+.table-card {
+  --accent: var(--kp);
+  position: relative; flex: none;
+  width: var(--table-w); aspect-ratio: var(--card-aspect, .82);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+.table-card[data-pigeon="stakeholder"] { --accent: var(--sh); }
+.table-card[data-pigeon="signalerend"] { --accent: var(--sg); }
+.meeting__table-meta {
+  flex: 1; min-width: 0;
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px 12px;
+  padding-left: calc(var(--table-w) * var(--sideout, 0));
+}
+.meeting__table-name { font-size: 13.5px; font-weight: 600; }
+@media (min-width: 960px) {
+  .meeting { --table-w: 200px; --sticky-top: calc(var(--kop, 80px) + 16px); --dekking: 0px; display: grid; grid-template-columns: 300px minmax(0, 1fr); }
+  .meeting__table {
+    align-self: start;
+    flex-direction: column; align-items: center; gap: 16px;
+    padding: calc(var(--table-h) * var(--breakout, 0) + 22px) 16px 20px;
+    border-bottom: 0;
+    background: none;
+  }
+  .meeting__table-meta { flex: none; flex-direction: column; justify-content: center; padding-left: 0; text-align: center; }
+  .meeting__main { border-left: 1px solid var(--border); }
+}
+/* Laag venster (200% zoom): de kop loopt niet mee, de tafel dan ook niet. */
+@media (max-height: 500px) {
+  .meeting__table { position: relative; top: auto; }
+  .meeting { --dekking: 0px; }
+}
+.soundbtn {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 32px;
+  padding: 5px 12px; border-radius: 999px; border: 1px solid var(--border);
+  background: var(--background); color: var(--foreground);
+  font-size: 12.5px; font-weight: 600;
+}
+.soundbtn:hover { background: var(--muted); }
+.soundbtn__icon { display: inline-flex; }
+.soundbtn[aria-checked="false"] .soundbtn__icon { color: var(--muted-foreground); }
+/* De pil: gevuld in de duivenkleur met de knop rechts als het geluid aan is,
+ * leeg met de knop links als het uit is. Rand en knop ≥ 3:1 (WCAG 1.4.11). */
+.soundbtn__track {
+  position: relative; flex: none; width: 30px; height: 18px; border-radius: 999px;
+  border: 1.5px solid var(--muted-foreground); background: transparent;
+  transition: background .15s, border-color .15s;
+}
+.soundbtn__track::after {
+  content: ""; position: absolute; top: 2px; left: 2px;
+  width: 11px; height: 11px; border-radius: 50%;
+  background: var(--muted-foreground);
+  transition: transform .18s var(--ease-out-quart), background .15s;
+}
+.soundbtn[aria-checked="true"] .soundbtn__track { background: var(--accent); border-color: var(--accent); }
+.soundbtn[aria-checked="true"] .soundbtn__track::after { transform: translateX(12px); background: var(--on-accent); }
+.soundbtn__state { min-width: 2.1em; font-size: 12px; font-weight: 500; color: var(--muted-foreground); text-align: left; }
+.meeting__muted { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 8px; margin: -2px 0 10px; font-size: 13px; color: var(--muted-foreground); }
+.meeting__muted-icon { display: inline-flex; }
+.meeting__intro { margin-bottom: 14px; font-size: 13.5px; color: var(--muted-foreground); }
+.meeting__scroll { height: 300px; overflow-y: auto; overflow-x: hidden; padding: 14px 18px; overscroll-behavior: contain; }
+.meeting__scroll { display: flex; flex-direction: column; }
+.meeting__log { display: flex; flex-direction: column; flex: 1; }
+.meeting__empty { margin: auto; padding: 24px 12px; font-size: 14px; color: var(--muted-foreground); text-align: center; }
+.mrow { animation: msg-in .4s var(--ease-out-expo) both; }
+.mrow--said { margin-bottom: 12px; padding: 2px 0 2px 12px; border-left: 2px solid var(--border-strong); }
+.mrow__speaker { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted-foreground); }
+.mrow__text { font-size: 14.5px; line-height: 1.5; }
+.mrow--speech { margin-left: 14px; }
+.mrow--signal { --msg-accent: var(--sg); --msg-ink: var(--sg-ink); display: flex; align-items: center; gap: 10px; margin: 0 0 14px 14px; }
+.signal-mark {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px; border-radius: 50%;
+  border: 1.5px solid color-mix(in oklab, var(--sg) 60%, transparent);
+  background: color-mix(in oklab, var(--sg) 10%, var(--background)); color: var(--sg-ink);
+}
+.mrow--signal.is-live .signal-mark { animation: signal-pulse 1.1s var(--ease-out-quart) 3; }
+/* De duif aan tafel reageert: haar kopje in het verslag veert even op, zodat
+ * de reactie ook te zien is als de kaart zelf buiten beeld staat. */
+.mrow.is-live .msg__avatar { animation: avatar-hop .9s var(--ease-out-quart) 1; }
+@keyframes avatar-hop {
+  0%, 100% { transform: none; }
+  30% { transform: translateY(-5px) rotate(-6deg); }
+  60% { transform: translateY(1px) rotate(3deg); }
+}
+@keyframes signal-pulse {
+  0% { box-shadow: 0 0 0 0 color-mix(in oklab, var(--sg) 40%, transparent); }
+  100% { box-shadow: 0 0 0 14px color-mix(in oklab, var(--sg) 0%, transparent); }
+}
+.meeting__foot { border-top: 1px solid var(--border); padding: 12px 14px; }
+.meeting__ask { margin-bottom: 8px; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted-foreground); }
+.meeting__statements { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.stmt {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 2px;
+  padding: 9px 12px; border-radius: var(--radius-md); text-align: left;
+  border: 1px solid color-mix(in oklab, var(--secondary) 45%, var(--border));
+  background: transparent; color: var(--foreground);
+  transition: background .15s, opacity .15s;
+}
+.stmt:hover { background: color-mix(in oklab, var(--secondary) 5%, transparent); }
+.stmt__speaker { font-size: 11px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--muted-foreground); }
+.stmt__text { font-size: 13.5px; line-height: 1.4; }
+.stmt[aria-disabled="true"] { cursor: default; }
+.stmt[aria-disabled="true"]:hover { background: transparent; }
+.stmt.is-said { opacity: .55; border-style: dashed; }
+.meeting__restart { margin-top: 10px; font-size: 13px; }
+/* Desktop: de vergadering deelt het brede paneel; het verslag krijgt dezelfde
+ * regellengte en lucht als het gesprek. */
+@media (min-width: 960px) {
+  .meeting__scroll { height: clamp(320px, 40vh, 400px); padding: 20px 32px; }
+  .meeting__intro { max-width: 70ch; font-size: 14px; }
+  .mrow__text { max-width: 60ch; font-size: 15.5px; line-height: 1.55; }
+  .meeting__foot { padding: 16px 32px 20px; }
+  .meeting__statements { gap: 10px; }
+  .stmt { padding: 11px 14px; }
+  .stmt__text { font-size: 14px; }
+}
+@media (max-width: 560px) {
+  .meeting__statements { grid-template-columns: 1fr; }
+  .chat__scroll { height: 400px; }
+}
+
+/* ---- videoband ------------------------------------------------------------------------ */
+
+.band { margin-top: 96px; background: var(--surface); border-block: 1px solid var(--border); }
+.band__inner {
+  max-width: 1200px; margin: 0 auto; padding: 56px 20px;
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr); gap: 48px; align-items: center;
+}
+.band h2 { margin-top: 12px; font-size: clamp(1.6rem, 1.2rem + 1.2vw, 2.1rem); }
+.band__body { margin-top: 14px; max-width: 46ch; color: var(--muted-foreground); line-height: 1.7; }
+.band__frame {
+  position: relative; display: block; width: 100%; aspect-ratio: 16 / 9;
+  padding: 0; border: 1px solid var(--border); border-radius: var(--radius-xl); overflow: hidden;
+  background: var(--muted); color: var(--foreground);
+}
+.band__frame.is-soon {
+  background:
+    radial-gradient(60% 90% at 18% 110%, color-mix(in oklab, var(--kp) 30%, transparent), transparent 70%),
+    radial-gradient(60% 90% at 82% -10%, color-mix(in oklab, var(--sh) 26%, transparent), transparent 70%),
+    linear-gradient(135deg, color-mix(in oklab, var(--sg) 12%, var(--background)), color-mix(in oklab, var(--sg) 22%, var(--background)));
+}
+.band__heads { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 4%; padding: 0 12%; }
+.band__head {
+  width: 24%; height: auto; aspect-ratio: 1; border-radius: 50%; object-fit: cover;
+  background: var(--background);
+  box-shadow: 0 0 0 4px color-mix(in oklab, var(--background) 80%, transparent), var(--shadow-md);
+}
+/* Even groot: de band is een stil beeld, geen keuze; alleen de waaier
+ * zet de gekozen duif vooraan. */
+.band__head[data-pigeon="kennispartner"] { background: color-mix(in oklab, var(--kp) 22%, var(--background)); }
+.band__head[data-pigeon="stakeholder"] { background: color-mix(in oklab, var(--sh) 22%, var(--background)); }
+.band__head[data-pigeon="signalerend"] { background: color-mix(in oklab, var(--sg) 22%, var(--background)); }
+.band__soon {
+  position: absolute; left: 16px; top: 16px;
+  padding: 4px 12px; border-radius: 999px;
+  background: var(--background); color: var(--foreground);
+  font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+  box-shadow: var(--shadow-sm);
+}
+.band__play {
+  position: absolute; right: 16px; bottom: 16px;
+  width: 52px; height: 52px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--background); color: var(--foreground); box-shadow: var(--shadow-md);
+}
+.band__poster { width: 100%; height: 100%; object-fit: cover; }
+.band__frame:not(.is-soon) .band__play { left: 50%; top: 50%; right: auto; bottom: auto; transform: translate(-50%, -50%); width: 64px; height: 64px; }
+.band__video { width: 100%; aspect-ratio: 16 / 9; border-radius: var(--radius-xl); background: #000; }
+/* Een video met eigen maat (CONFIG.video.width en height) houdt haar eigen
+   verhouding, zonder balken; sections.js zet --band-ratio. Een 4:3-video wordt
+   daardoor hoger dan de 16:9-band, dus de hoogte blijft binnen 420 px en het
+   vlak staat midden in zijn kolom. */
+.band__frame[data-ratio], .band__video[data-ratio] {
+  display: block; aspect-ratio: var(--band-ratio);
+  width: min(100%, calc(420px * var(--band-ratio))); margin-inline: auto;
+}
+@media (max-width: 860px) {
+  .band { margin-top: 72px; }
+  .band__inner { grid-template-columns: minmax(0, 1fr); gap: 28px; padding: 44px 16px; }
+}
+
+/* ---- onderzoek ------------------------------------------------------------------------ */
+
+.research { max-width: 1200px; margin: 88px auto 0; padding: 0 20px; }
+.research__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 44px; align-items: start; }
+.research h2 { margin-top: 12px; font-size: 30px; }
+.research__body { max-width: 52ch; margin-top: 16px; color: var(--muted-foreground); line-height: 1.7; }
+.research__links { display: flex; flex-direction: column; gap: 2px; margin-top: 22px; list-style: none; }
+.rlink { display: inline-flex; align-items: center; gap: 8px; padding: 8px 0; font-weight: 600; width: fit-content; }
+.rlink .icon { opacity: .6; }
+.rlink.is-soon, .rlink.is-plain { color: var(--muted-foreground); }
+.research__posters-title, .cards__title { font-size: 20px; }
+.research__posters-note, .cards__note { margin: 6px 0 16px; font-size: 13px; color: var(--muted-foreground); }
+/* De posters delen de kolom (A-formaat, 1 : √2); pas op een smal scherm
+ * worden ze een rij om door te schuiven. */
+.posters { display: flex; gap: 18px; overflow-x: auto; padding: 6px 6px 16px; margin-inline: -4px; scroll-snap-type: x mandatory; }
+.posters::-webkit-scrollbar, .cards__list::-webkit-scrollbar { height: 8px; }
+.posters::-webkit-scrollbar-thumb, .cards__list::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+.poster { flex: 1 1 0; min-width: 110px; max-width: 236px; margin: 0; scroll-snap-align: start; }
+.poster__frame {
+  position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+  width: 100%; aspect-ratio: 1 / 1.4142; overflow: hidden; padding: 0;
+  border: 1px solid var(--border); border-radius: var(--radius-lg);
+  background: var(--muted); color: var(--muted-foreground);
+}
+.poster__frame::after { content: ""; position: absolute; inset: 10px; border: 1.5px dashed color-mix(in oklab, var(--muted-foreground) 35%, transparent); border-radius: var(--radius-md); }
+.poster__frame.has-art::after { display: none; }
+.poster__frame img { width: 100%; height: 100%; object-fit: cover; }
+.poster__soon { font-size: 13px; font-weight: 600; }
+.poster figcaption { margin-top: 10px; }
+.poster__title { display: block; font-size: 14px; font-weight: 600; }
+.poster__sub { display: block; font-size: 13px; color: var(--muted-foreground); }
+
+/* Een poster of kaartje om groot te bekijken: licht optillen bij aanwijzen. */
+button.poster__frame, .pcard__button { cursor: zoom-in; transition: transform .25s var(--ease-out-quart), box-shadow .25s var(--ease-out-quart); }
+button.poster__frame:hover, .pcard__button:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+button.poster__frame:focus-visible, .pcard__button:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
+
+/* De kaartjes: één rij van gelijke hoogte. De breedte van elk kaartje volgt
+ * zijn vorm (staand of liggend A-formaat), zodat de rij precies de breedte vult. */
+.cards { margin-top: 56px; }
+.cards__list { display: flex; gap: 16px; margin: 0 -4px; padding: 6px 6px 16px; list-style: none; }
+.pcard { flex: .7071 1 0; min-width: 0; scroll-snap-align: start; }
+.pcard.is-landscape { flex-grow: 1.4142; }
+.pcard__button {
+  display: block; width: 100%; padding: 0; overflow: hidden;
+  border: 1px solid var(--border); border-radius: var(--radius-md); background: #fff;
+  box-shadow: var(--shadow-sm);
+}
+.pcard__button img { display: block; width: 100%; height: auto; }
+@media (max-width: 860px) {
+  .research { margin-top: 64px; padding: 0 16px; }
+  .research__grid { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+  .cards { margin-top: 44px; }
+  .cards__list { overflow-x: auto; scroll-snap-type: x mandatory; }
+  .pcard { flex: 0 0 auto; }
+  .pcard__button { width: auto; }
+  .pcard__button img { width: auto; height: 240px; }
+}
+@media (max-width: 480px) {
+  .poster { flex: 0 0 auto; width: 200px; max-width: none; }
+  .pcard__button img { height: 200px; }
+}
+
+/* ---- methode -------------------------------------------------------------------------- */
+
+.method { margin-top: 56px; border-block: 1px solid var(--border); }
+.method__summary {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 22px 2px; list-style: none; cursor: pointer;
+}
+.method__summary::-webkit-details-marker { display: none; }
+.method__title { font-family: var(--font-serif); font-weight: 800; font-size: clamp(1.25rem, 1.05rem + .6vw, 1.45rem); line-height: 1.25; }
+.method__plus { color: var(--secondary); transition: transform .2s var(--ease-out-quart); }
+.method[open] .method__plus { transform: rotate(45deg); }
+@media screen { :where([data-theme="dark"]) .method__plus { color: var(--link); } }
+.method__body { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 40px; padding: 0 2px 36px; }
+.method__intro { max-width: 62ch; color: var(--muted-foreground); line-height: 1.7; }
+.method__list { margin: 26px 0 0; }
+.method__list dt { margin-top: 22px; font-weight: 700; font-size: 15.5px; }
+.method__list dt:first-child { margin-top: 0; }
+.method__list dd { max-width: 64ch; margin: 5px 0 0; color: var(--muted-foreground); font-size: 14.5px; line-height: 1.7; }
+.method__note { max-width: 64ch; margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--border); font-size: 13.5px; color: var(--muted-foreground); }
+.method__graph { position: sticky; top: 104px; margin: 0; align-self: start; }
+.method__graph img { width: 100%; height: auto; border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--surface); }
+.method__graph figcaption { margin-top: 8px; font-size: 12.5px; color: var(--muted-foreground); }
+@media (max-width: 860px) {
+  .method__body { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .method__graph { position: static; }
+}
+
+/* ---- dialogen ---------------------------------------------------------------------------- */
+
+.dialog {
+  position: fixed; inset: 0; width: 100%; height: 100%; max-width: 100%; max-height: 100%;
+  margin: 0; padding: 40px 16px; border: 0; background: transparent; color: var(--foreground);
+  overflow-y: auto; overscroll-behavior: contain;
+}
+.dialog::backdrop { background: var(--scrim); -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px); }
+.dialog__panel {
+  max-width: 720px; margin: 0 auto;
+  background: var(--background); border: 1px solid var(--border); border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-lg); overflow: hidden;
+  animation: dialog-in .25s var(--ease-out-expo) both;
+}
+@keyframes dialog-in { from { opacity: 0; transform: translateY(8px) scale(.985); } to { opacity: 1; transform: none; } }
+.dialog__close {
+  flex: none; width: 36px; height: 36px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--border); background: var(--background);
+}
+.dialog__close:hover { background: var(--muted); }
+
+.faq__head { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 26px; border-bottom: 1px solid var(--border); }
+.faq__heading { display: flex; align-items: center; gap: 12px; }
+.faq__heading h2 { font-size: 22px; }
+.faq__mark {
+  width: 34px; height: 34px; border-radius: 50%; flex: none;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--secondary); color: var(--secondary-foreground);
+  font-family: var(--font-serif); font-weight: 800; font-size: 18px;
+}
+.faq__items { padding: 8px 26px 12px; }
+.faq__item { border-bottom: 1px solid var(--border); }
+.faq__q { font-size: inherit; letter-spacing: 0; }
+.faq__q button {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  width: 100%; padding: 18px 2px; border: 0; background: none; text-align: left; color: var(--foreground);
+}
+.faq__q button span:first-child { font-family: var(--font-serif); font-weight: 800; font-size: 17px; line-height: 1.3; }
+.faq__q .icon { color: var(--secondary); transition: transform .2s var(--ease-out-quart); }
+.faq__item.is-open .faq__q .icon { transform: rotate(45deg); }
+@media screen { :where([data-theme="dark"]) .faq__q .icon { color: var(--link); } }
+.faq__answer p { max-width: 62ch; padding: 0 2px 20px; color: var(--muted-foreground); line-height: 1.65; }
+.faq__foot { display: flex; justify-content: flex-end; padding: 18px 26px 24px; }
+@media (max-width: 560px) {
+  .dialog { padding: 16px 10px; }
+  .faq__head { padding: 18px; }
+  .faq__items { padding: 4px 18px 8px; }
+  .faq__foot { padding: 14px 18px 18px; }
+}
+
+/* De viewer voor posters en kaartjes: breder dan de FAQ, het beeld past in de
+ * hoogte van het scherm; een kaartje toont voor- en achterkant naast elkaar. */
+.dialog--viewer .dialog__panel { max-width: 1120px; }
+.viewer__head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding: 20px 24px 12px; }
+.viewer__heading h2 { font-size: 22px; line-height: 1.25; }
+.viewer__count { margin-top: 4px; font-size: 13px; color: var(--muted-foreground); }
+.viewer__stage { display: flex; justify-content: center; gap: 20px; padding: 8px 24px; }
+.viewer__side { flex: 0 1 auto; min-width: 0; margin: 0; text-align: center; }
+.viewer__side img {
+  display: block; max-width: 100%; width: auto; height: auto; max-height: max(320px, calc(100vh - 310px)); margin: 0 auto;
+  border: 1px solid var(--border); border-radius: var(--radius-md); background: #fff;
+}
+.viewer__stage.is-pair .viewer__side { flex: 0 1 auto; }
+/* Voor- en achterkant: ruimte voor de onderschrift en de vraag eronder. */
+.viewer__stage.is-pair .viewer__side img { max-height: max(280px, calc(100vh - 380px)); }
+.viewer__side figcaption { margin-top: 8px; font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted-foreground); }
+.viewer__text { max-width: 68ch; margin: 0 auto; padding: 8px 24px 0; text-align: center; color: var(--muted-foreground); line-height: 1.6; }
+.viewer__links { display: flex; justify-content: center; padding: 4px 24px 0; }
+.viewer__full[hidden], .viewer__links:not(:has(a:not([hidden]))) { display: none; }
+.viewer__nav { display: flex; justify-content: center; gap: 12px; padding: 16px 24px 22px; }
+.viewer__nav[hidden] { display: none; }
+.viewer__step { width: 44px; height: 44px; padding: 0; justify-content: center; }
+@media (max-width: 720px) {
+  .viewer__head { padding: 16px 16px 8px; }
+  .viewer__stage { flex-direction: column; align-items: center; padding: 8px 16px; }
+  .viewer__stage.is-pair .viewer__side { flex: none; }
+  .viewer__side img, .viewer__stage.is-pair .viewer__side img { max-height: none; }
+  .viewer__text { padding: 8px 16px 0; }
+}
+
+/* Het bronpaneel: een lade rechts, op smalle schermen een blad van onderen. */
+.dialog--sheet { padding: 0; overflow: hidden; }
+.dialog--sheet .dialog__panel {
+  --accent: var(--kp);
+  position: absolute; top: 0; right: 0; bottom: 0;
+  display: flex; flex-direction: column;
+  width: min(480px, 100%); max-width: none; margin: 0;
+  border-width: 0 0 0 1px; border-radius: 0;
+  animation: sheet-in .3s var(--ease-out-expo) both;
+}
+.dialog--sheet[data-author="stakeholder"] .dialog__panel { --accent: var(--sh); }
+@keyframes sheet-in { from { transform: translateX(24px); opacity: 0; } to { transform: none; opacity: 1; } }
+.sheet__head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding: 20px 22px 16px; border-bottom: 1px solid var(--border); }
+.sheet__title { font-size: 20px; }
+.sheet__from { margin-top: 4px; font-size: 13px; color: var(--muted-foreground); }
+.source-list { flex: 1; overflow-y: auto; padding: 4px 22px; list-style: none; overscroll-behavior: contain; }
+.source { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 12px; padding: 16px 0; border-bottom: 1px solid var(--border); scroll-margin: 12px; }
+.source:last-child { border-bottom: 0; }
+.source:focus { outline: none; }
+.source:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.source__n {
+  width: 26px; height: 26px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--muted); font-size: 12px; font-weight: 700;
+}
+.source.is-focus .source__n { background: var(--accent); color: var(--on-accent); }
+.source__title { font-family: var(--font-sans); font-size: 15px; font-weight: 700; line-height: 1.35; letter-spacing: 0; overflow-wrap: anywhere; }
+.source__meta { margin-top: 3px; font-size: 13px; color: var(--muted-foreground); }
+.source__passage { margin: 12px 0 0; }
+.source__passage figcaption { font-size: 11px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--muted-foreground); }
+.source__passage blockquote {
+  margin: 6px 0 0; padding-left: 12px; border-left: 3px solid var(--accent);
+  font-family: var(--font-serif); font-size: 15px; line-height: 1.6; overflow-wrap: anywhere;
+}
+.source__link { display: inline-flex; align-items: center; gap: 4px; margin-top: 10px; font-size: 13.5px; font-weight: 600; }
+.sheet__foot { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; padding: 14px 22px 18px; border-top: 1px solid var(--border); }
+.graph-link { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; }
+.sheet__note { font-size: 12.5px; color: var(--muted-foreground); }
+@media (max-width: 640px) {
+  .dialog--sheet .dialog__panel {
+    top: auto; left: 0; width: 100%; max-height: 86vh;
+    border-width: 1px 0 0; border-radius: 20px 20px 0 0;
+    animation-name: sheet-up;
+  }
+  @keyframes sheet-up { from { transform: translateY(24px); opacity: 0; } to { transform: none; opacity: 1; } }
+}
+
+/* ---- voet ------------------------------------------------------------------------------ */
+
+.footer { margin-top: 96px; border-top: 1px solid var(--border); }
+.footer__inner {
+  max-width: 1200px; margin: 0 auto; padding: 32px 20px 44px;
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px;
+}
+.footer .brands__aimaps { height: 24px; }
+.footer .brands__parai { height: 26px; }
+.footer__line { font-size: 14px; font-weight: 600; }
+/* Eén naamsvermelding per regel: bij vier platen en een model is een doorlopende
+ * zin niet meer te lezen. */
+.footer__credits { flex-basis: 100%; font-size: 12.5px; line-height: 1.55; color: var(--muted-foreground); }
+.footer__credits-title { font-weight: 600; margin-bottom: 4px; }
+.footer__credits-list { list-style: none; display: grid; gap: 3px; }
+.footer__credits a { color: inherit; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: color-mix(in oklab, currentColor 45%, transparent); }
+.footer__credits a:hover { text-decoration-color: currentColor; }
+.noscript { max-width: 720px; margin: 24px auto; padding: 0 16px; }
+@media (max-width: 560px) {
+  .footer { margin-top: 72px; }
+  .footer__inner { padding: 28px 16px 36px; flex-direction: column; align-items: flex-start; }
+}
+
+/* ---- minder beweging ---------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .card { transform: none; }
+  .pulse { animation: none; opacity: .8; }
+}
+
+/* ---- afdruk ------------------------------------------------------------------------- */
+
+/* Op papier: de tekst en de drie duiven naast elkaar, zonder knoppen, gesprek
+ * of video. De methode staat open (app.js opent haar voor het afdrukken). */
+@media print {
+  :root { color-scheme: light; }
+  body { background: #fff; }
+  .skip, .topbar__right .lang, .themebtn, .login, .topbar__rule, .faqbtn, .arrowbtn,
+  .panel, .honest, .band__media, .research__posters, .cards,
+  .method__plus { display: none !important; }
+  .topbar { position: static; margin-top: 0; box-shadow: none; border: 0; background: none; -webkit-backdrop-filter: none; backdrop-filter: none; }
+  .hero { padding-top: 12px; }
+  .stage { padding-top: 12px; }
+  .fan { --card-w: 170px; height: auto; max-width: none; }
+  .fan__track { position: static; display: flex; justify-content: center; gap: 28px; padding-top: calc(var(--card-h) * var(--breakout)); }
+  .fan__slot { position: static; transform: none !important; opacity: 1 !important; filter: none !important; }
+  .card, .card[aria-current="true"] { transform: none; box-shadow: none; outline: 0; }
+  /* De kaart is beeld: plaat, verloop en witte naam horen bij elkaar, ook als
+   * de printer achtergronden weglaat (Chrome liet de plaat dan weg). */
+  .card { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .card__badge { display: none; }
+  .talk { margin-top: 24px; }
+  .band { margin-top: 32px; border: 0; background: none; }
+  .band__inner { display: block; padding: 0 20px; }
+  .research { margin-top: 32px; }
+  .research__grid { display: block; }
+  .method__body { display: block; }
+  /* Alleen per onderwerp niet breken; het hele blok zou een lege pagina geven. */
+  .fan__slot, .method__list dd { break-inside: avoid; }
+  .method__list dt { break-after: avoid; }
+}

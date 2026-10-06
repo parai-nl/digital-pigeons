@@ -1,0 +1,5480 @@
+{
+ "format": "duiven-uitlegvideo-take/1",
+ "id": "meeting-nonverbal-20260923T115814Z",
+ "scene": "meeting-nonverbal",
+ "recordedAt": "2026-09-23T11:58:14.817Z",
+ "exchanges": [
+  {
+   "id": 1,
+   "method": "GET",
+   "path": "/api/duif/v1/access/notice",
+   "requestBody": null,
+   "t": 117,
+   "headMs": 7,
+   "status": 200,
+   "statusText": "OK",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 8,
+   "body": "{\"version\":\"2026-09-22.1\",\"acknowledged\":true,\"acknowledgedAt\":\"2026-09-22T12:57:04.398172+02:00\"}\n"
+  },
+  {
+   "id": 2,
+   "method": "GET",
+   "path": "/api/duif/v1/duiven",
+   "requestBody": null,
+   "t": 122,
+   "headMs": 2,
+   "status": 200,
+   "statusText": "OK",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 3,
+   "body": "{\"duiven\":[{\"id\":\"biological\",\"name\":{\"en\":\"Knowledge Partner\",\"nl\":\"Kennispartner\"},\"voiceReady\":true,\"knowledgeBase\":true,\"chat\":true,\"meeting\":true,\"topics\":[{\"id\":\"population-control\",\"label\":{\"en\":\"Population control\",\"nl\":\"Populatiebeheer\"}},{\"id\":\"nuisance-and-health\",\"label\":{\"en\":\"Nuisance and health\",\"nl\":\"Overlast en gezondheid\"}},{\"id\":\"feeding-and-food\",\"label\":{\"en\":\"Feeding and food\",\"nl\":\"Voeren en voedsel\"}},{\"id\":\"nesting-and-shelter\",\"label\":{\"en\":\"Nesting and shelter\",\"nl\":\"Nestelen en beschutting\"}},{\"id\":\"urban-ecology\",\"label\":{\"en\":\"Urban ecology\",\"nl\":\"Stadsecologie\"}}],\"engine\":\"agent\",\"autonomousDefault\":false},{\"id\":\"individualist\",\"name\":{\"en\":\"Stakeholder\",\"nl\":\"Stakeholder\"},\"voiceReady\":true,\"knowledgeBase\":true,\"chat\":true,\"meeting\":true,\"topics\":[{\"id\":\"pigeon-rights\",\"label\":{\"en\":\"What pigeons are owed\",\"nl\":\"Waar duiven recht op hebben\"}},{\"id\":\"city-space\",\"label\":{\"en\":\"Whose city is it\",\"nl\":\"Van wie is de stad\"}},{\"id\":\"decided-about-not-with\",\"label\":{\"en\":\"Decided about, not with\",\"nl\":\"Over ons, zonder ons\"}},{\"id\":\"pest-framing\",\"label\":{\"en\":\"Being called vermin\",\"nl\":\"Ongedierte genoemd worden\"}}],\"engine\":\"agent\",\"autonomousDefault\":false},{\"id\":\"nonverbal\",\"name\":{\"en\":\"Signaling Pigeon\",\"nl\":\"Signalerende duif\"},\"voiceReady\":false,\"knowledgeBase\":false,\"chat\":false,\"meeting\":true,\"topics\":[{\"id\":\"threat-and-removal\",\"label\":{\"en\":\"Population intervention\",\"nl\":\"Ingrijpen in de populatie\"}},{\"id\":\"food\",\"label\":{\"en\":\"Access to food\",\"nl\":\"Toegang tot voedsel\"}},{\"id\":\"nesting\",\"label\":{\"en\":\"Nesting and roosting access\",\"nl\":\"Toegang tot nest- en verblijfplaatsen\"}},{\"id\":\"pigeons-nearby\",\"label\":{\"en\":\"Pigeons nearby\",\"nl\":\"Duiven in de buurt\"}}],\"engine\":\"pipeline\",\"autonomousDefault\":true}],\"gedrag\":{\"interventieZelfstandig\":false,\"interventieThrottleSeconden\":0,\"inactiviteitPromptMinuten\":10,\"inactiviteitSluitSeconden\":90,\"taalDefault\":\"en\",\"detectieGretigheid\":\"normal\",\"detectieVensterWoorden\":3,\"detectieIntervalSeconden\":6,\"stilteMilliseconden\":1500,\"arousalHalveringSeconden\":120},\"modelPolicy\":{\"model\":\"vertex_ai/gemini-3.5-flash\",\"detectionModel\":\"vertex_ai/gemini-3.5-flash\",\"endpoint\":\"https://llm-proxy.invalid\"}}\n"
+  },
+  {
+   "id": 3,
+   "method": "GET",
+   "path": "/api/duif/v1/chat/sessions",
+   "requestBody": null,
+   "t": 122,
+   "headMs": 10,
+   "status": 200,
+   "statusText": "OK",
+   "headers": [
+    [
+     "content-type",
+     "application/json"
+    ]
+   ],
+   "endMs": 10,
+   "body": "{\"sessions\":[]}",
+   "sanitized": "eerdere gesprekken van het opnameaccount verwijderd"
+  },
+  {
+   "id": 4,
+   "method": "GET",
+   "path": "/api/duif/v1/knowledge/status",
+   "requestBody": null,
+   "t": 126,
+   "headMs": 3,
+   "status": 200,
+   "statusText": "OK",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 3,
+   "body": "{\"state\":\"ready\",\"kbId\":\"Duiven\",\"counts\":{\"belongs_to\":4067,\"belongs_to_perspective\":4067,\"belongs_to_subthema\":4067,\"contains\":4067,\"contains_perspective\":297,\"contains_subthema\":149,\"contains_thema\":26,\"destillaat\":4067,\"domein\":3,\"has_quote\":4225,\"interview\":120,\"perspective\":297,\"quote\":4225,\"subthema\":149,\"thema\":26},\"bundleSchema\":\"duiven/3\",\"languages\":[\"nl\",\"en\"],\"sourceLanguage\":\"nl\",\"importedAt\":\"2026-09-15T12:26:51Z\"}\n"
+  },
+  {
+   "id": 5,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions",
+   "requestBody": "{\"pigeonId\":\"nonverbal\",\"playbackTracking\":true,\"lang\":\"en\",\"autonomous\":true,\"eagerness\":\"normal\",\"cooldownSeconds\":0}",
+   "t": 725,
+   "headMs": 4,
+   "status": 201,
+   "statusText": "Created",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 4,
+   "body": "{\"autonomous\":true,\"autonomyPaused\":false,\"eagerness\":\"normal\",\"lang\":\"en\",\"listening\":\"reconnecting\",\"pigeonId\":\"nonverbal\",\"playbackTracking\":true,\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"settings\":{\"turnId\":\"0\",\"autonomyPaused\":false,\"playbackTracking\":true,\"autonomous\":true,\"eagerness\":\"normal\",\"cooldownSeconds\":0},\"voice\":\"off\"}\n"
+  },
+  {
+   "id": 6,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 1195,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 7,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 3689,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 8,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 65536
+   },
+   "t": 3691,
+   "headMs": 5,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 5,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":16}\n"
+  },
+  {
+   "id": 9,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 3755,
+   "headMs": 1,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 10,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 3925,
+   "headMs": 4,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 4,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 11,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 4267,
+   "headMs": 7,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 8,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 12,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 4438,
+   "headMs": 6,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 6,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 13,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 4789,
+   "headMs": 6,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 7,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 14,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 4955,
+   "headMs": 4,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 4,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 15,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 5296,
+   "headMs": 7,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 8,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 16,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 5467,
+   "headMs": 7,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 8,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 17,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 5808,
+   "headMs": 6,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 6,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 18,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 5990,
+   "headMs": 7,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 7,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 19,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 6326,
+   "headMs": 6,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 7,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 20,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 6496,
+   "headMs": 5,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 5,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 21,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 6837,
+   "headMs": 5,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 6,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 22,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 7008,
+   "headMs": 8,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 8,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 23,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 7350,
+   "headMs": 7,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 8,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 24,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 7515,
+   "headMs": 4,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 5,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 25,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 7857,
+   "headMs": 7,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 8,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 26,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 8027,
+   "headMs": 6,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 6,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 27,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 8368,
+   "headMs": 5,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 5,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 28,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 8549,
+   "headMs": 3,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 3,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 29,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 8886,
+   "headMs": 4,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 4,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 30,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 9056,
+   "headMs": 4,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 4,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 31,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 9398,
+   "headMs": 6,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 6,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 32,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 9568,
+   "headMs": 4,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 5,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 33,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 9910,
+   "headMs": 7,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 7,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 34,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 10075,
+   "headMs": 4,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 4,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 35,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 10416,
+   "headMs": 6,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 6,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 36,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 10587,
+   "headMs": 6,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 6,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 37,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 10928,
+   "headMs": 7,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 7,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 38,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 11110,
+   "headMs": 6,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 6,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 39,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 11446,
+   "headMs": 7,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 8,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 40,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 11616,
+   "headMs": 4,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 5,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 41,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 11958,
+   "headMs": 5,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 5,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 42,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 12128,
+   "headMs": 9,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 10,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 43,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 12475,
+   "headMs": 6,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 6,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 44,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 12646,
+   "headMs": 6,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 7,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 45,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 12987,
+   "headMs": 7,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 7,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 46,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 13158,
+   "headMs": 4,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 4,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 47,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 13509,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 3,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 48,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 13675,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 49,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 14016,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 50,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 14187,
+   "headMs": 1,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 51,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 14528,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 52,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 14709,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 53,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 15045,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 3,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 54,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 15216,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 55,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 15557,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 56,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 15728,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 57,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 16075,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 58,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 16245,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 3,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 59,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 16587,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 60,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 16757,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 3,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 61,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 17246,
+   "headMs": 98,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 185,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 62,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 17344,
+   "headMs": 87,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 175,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 63,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/playback",
+   "requestBody": "{\"turnId\":\"1\",\"state\":\"started\"}",
+   "t": 17695,
+   "headMs": 89,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 176,
+   "body": "{\"accepted\":true,\"settings\":{\"turnId\":\"1\",\"autonomyPaused\":false,\"playbackTracking\":true,\"autonomous\":true,\"eagerness\":\"normal\",\"cooldownSeconds\":0},\"speaking\":true}\n"
+  },
+  {
+   "id": 64,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 17695,
+   "headMs": 176,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 266,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 65,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 17872,
+   "headMs": 89,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 178,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 66,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 18139,
+   "headMs": 89,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 176,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 67,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 18315,
+   "headMs": 89,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 176,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 68,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 18695,
+   "headMs": 87,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 168,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 69,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 18863,
+   "headMs": 82,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 165,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 70,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 19191,
+   "headMs": 82,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 154,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 71,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 19345,
+   "headMs": 78,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 155,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 72,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 19733,
+   "headMs": 77,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 154,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 73,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 19888,
+   "headMs": 77,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 156,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 74,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 20207,
+   "headMs": 81,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 163,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 75,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 20371,
+   "headMs": 83,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 83,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 76,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 20688,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 77,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 20869,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 78,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 21205,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 79,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 21376,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 80,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 21717,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 81,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 21888,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 82,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/playback",
+   "requestBody": "{\"turnId\":\"1\",\"state\":\"ended\"}",
+   "t": 22219,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"accepted\":true,\"settings\":{\"turnId\":\"1\",\"autonomyPaused\":false,\"playbackTracking\":true,\"autonomous\":true,\"eagerness\":\"normal\",\"cooldownSeconds\":0},\"speaking\":false}\n"
+  },
+  {
+   "id": 83,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 22235,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 84,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 22405,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 85,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 22747,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 86,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 22917,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 87,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 23259,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 88,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 23429,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 89,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 23765,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 90,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 23936,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 91,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 24277,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 92,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 24448,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 93,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 24795,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 94,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 24965,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 95,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 25307,
+   "headMs": 1,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 96,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 25477,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 97,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 25819,
+   "headMs": 1,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 98,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 25989,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 99,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 26325,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 100,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 26496,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 101,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 26837,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 102,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 27008,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 103,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 27355,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 104,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 27525,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 105,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 27867,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 106,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 28037,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 107,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 28389,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 108,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 28555,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 109,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 28896,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 110,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 29067,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 111,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 29408,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 112,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 29579,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 113,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 29915,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 114,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 30085,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 115,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 30427,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 116,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 30597,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 3,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 117,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 30934,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 118,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 31105,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 119,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 31446,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 120,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 31617,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 121,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 31957,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 122,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 32129,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 123,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 32470,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 3,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 124,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 32641,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 125,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 32982,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 3,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 126,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 33152,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 127,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 33494,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 128,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 33665,
+   "headMs": 3,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 3,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 129,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 34007,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 130,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 34177,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 131,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 34518,
+   "headMs": 1,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 132,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 34689,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 133,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 35030,
+   "headMs": 1,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 134,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 35201,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 135,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 35542,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 136,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 35713,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 137,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 36055,
+   "headMs": 1,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 138,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 36225,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 139,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 36567,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 140,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 36737,
+   "headMs": 1,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 141,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 37078,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 142,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 37249,
+   "headMs": 1,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 143,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 37590,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 144,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 37760,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 145,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 38102,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 146,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 38272,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 147,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 38615,
+   "headMs": 1,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 148,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 38785,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 149,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 39127,
+   "headMs": 1,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 1,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 150,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 39297,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 151,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 39638,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 152,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 39809,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 153,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 40150,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 154,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 40321,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 155,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 40662,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 156,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 40833,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 157,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 41174,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 158,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 41345,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 159,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 41686,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 160,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 41857,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 161,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 42198,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 162,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 42368,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 163,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 42710,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 164,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 42880,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 165,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 43222,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 166,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 43392,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 167,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 43734,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 168,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 43905,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 169,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 44246,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 170,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 44417,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 171,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 44759,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 172,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 44930,
+   "headMs": 1,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 173,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 45270,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 174,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 45442,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 175,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 45782,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 176,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 45953,
+   "headMs": 1,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 177,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 46295,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 178,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 46465,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 179,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 46807,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 180,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 46978,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 181,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 47398,
+   "headMs": 83,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 164,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 182,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 47563,
+   "headMs": 83,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 165,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 183,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/playback",
+   "requestBody": "{\"turnId\":\"2\",\"state\":\"started\"}",
+   "t": 47728,
+   "headMs": 82,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 161,
+   "body": "{\"accepted\":true,\"settings\":{\"turnId\":\"2\",\"autonomyPaused\":false,\"playbackTracking\":true,\"autonomous\":true,\"eagerness\":\"normal\",\"cooldownSeconds\":0},\"speaking\":true}\n"
+  },
+  {
+   "id": 184,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 47890,
+   "headMs": 78,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 156,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 185,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 48046,
+   "headMs": 77,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 155,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 186,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 48356,
+   "headMs": 79,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 157,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 187,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 48590,
+   "headMs": 80,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 156,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 188,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 48900,
+   "headMs": 77,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 155,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 189,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 49055,
+   "headMs": 80,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 160,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 190,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 49377,
+   "headMs": 81,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 165,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 191,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 49542,
+   "headMs": 80,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 160,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 192,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 49949,
+   "headMs": 83,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 162,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 193,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 50112,
+   "headMs": 84,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 166,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 194,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 50441,
+   "headMs": 81,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 163,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 195,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 50604,
+   "headMs": 81,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 164,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 196,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 50931,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 197,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 51072,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 198,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/playback",
+   "requestBody": "{\"turnId\":\"2\",\"state\":\"ended\"}",
+   "t": 51318,
+   "headMs": 1,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 1,
+   "body": "{\"accepted\":true,\"settings\":{\"turnId\":\"2\",\"autonomyPaused\":false,\"playbackTracking\":true,\"autonomous\":true,\"eagerness\":\"normal\",\"cooldownSeconds\":0},\"speaking\":false}\n"
+  },
+  {
+   "id": 199,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 51415,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 200,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 51586,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 201,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 51925,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 202,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 52097,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 203,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 52438,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 204,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 52609,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 205,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 52950,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 206,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 53122,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 207,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 53463,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 208,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 53634,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 209,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 53975,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 210,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 54145,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 211,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 54488,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 212,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 54656,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 213,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 54998,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 214,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 55170,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 215,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 55511,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 216,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 55681,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 3,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 217,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 56022,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 218,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 56192,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 219,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 56534,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 220,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 56705,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 221,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 57046,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 222,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 57217,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 223,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 57559,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 224,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 57730,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 225,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 58071,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 226,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 58242,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 227,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 58582,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 228,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 58753,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 229,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 59095,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 230,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 59266,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 231,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 59606,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 3,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 232,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 59777,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 233,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 60119,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 234,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 60290,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 235,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 60631,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 236,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 60800,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 237,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 61142,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 238,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 61313,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 3,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 239,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 61656,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 240,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 61825,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 241,
+   "method": "DELETE",
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913",
+   "requestBody": null,
+   "t": 61937,
+   "headMs": 8,
+   "status": 204,
+   "statusText": "No Content",
+   "headers": [],
+   "endMs": 8,
+   "body": ""
+  }
+ ],
+ "channels": [
+  {
+   "channel": 1,
+   "path": "/api/duif/v1/meeting/sessions/f4de92cae6c1b59157bf81a055e2c913/events",
+   "t": 729,
+   "messages": [
+    {
+     "ms": 8,
+     "data": "{\"type\":\"state\",\"turnId\":\"0\",\"autonomyPaused\":false,\"playbackTracking\":true,\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"pigeonId\":\"nonverbal\",\"lang\":\"en\",\"listening\":\"reconnecting\",\"speaking\":false,\"detector\":{\"enabled\":true,\"state\":\"ready\",\"retryable\":false},\"settings\":{\"turnId\":\"0\",\"autonomyPaused\":false,\"playbackTracking\":true,\"autonomous\":true,\"eagerness\":\"normal\",\"cooldownSeconds\":0},\"voice\":\"off\"}"
+    },
+    {
+     "ms": 136,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "ms": 5001,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "ms": 5857,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Ok\"}"
+    },
+    {
+     "ms": 6244,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Okay,\"}"
+    },
+    {
+     "ms": 6324,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Okay, next\"}"
+    },
+    {
+     "ms": 6720,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Okay, next it\"}"
+    },
+    {
+     "ms": 6819,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Okay, next item\"}"
+    },
+    {
+     "ms": 6872,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Okay, next item:\"}"
+    },
+    {
+     "ms": 7286,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Okay, next item: the\"}"
+    },
+    {
+     "ms": 7381,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Okay, next item: the p\"}"
+    },
+    {
+     "ms": 7433,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Okay, next item: the pige\"}"
+    },
+    {
+     "ms": 7757,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Okay, next item: the pigeons\"}"
+    },
+    {
+     "ms": 7813,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Okay, next item: the pigeons on\"}"
+    },
+    {
+     "ms": 7857,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Okay, next item: the pigeons on the\"}"
+    },
+    {
+     "ms": 7914,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Okay, next item: the pigeons on the mar\"}"
+    },
+    {
+     "ms": 8313,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Okay, next item: the pigeons on the market\"}"
+    },
+    {
+     "ms": 8454,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Okay, next item: the pigeons on the market squ\"}"
+    },
+    {
+     "ms": 8858,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Okay, next item: the pigeons on the market square,\"}"
+    },
+    {
+     "ms": 8957,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Okay, next item: the pigeons on the market square, the\"}"
+    },
+    {
+     "ms": 9390,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Okay, next item: the pigeons on the market square, the trad\"}"
+    },
+    {
+     "ms": 9486,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Okay, next item: the pigeons on the market square, the traders\"}"
+    },
+    {
+     "ms": 9531,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Okay, next item: the pigeons on the market square, the traders keep\"}"
+    },
+    {
+     "ms": 9922,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Okay, next item: the pigeons on the market square, the traders keep comp\"}"
+    },
+    {
+     "ms": 9957,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Okay, next item: the pigeons on the market square, the traders keep compla\"}"
+    },
+    {
+     "ms": 10000,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "ms": 10013,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Okay, next item: the pigeons on the market square, the traders keep complaining\"}"
+    },
+    {
+     "ms": 10383,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Okay, next item: the pigeons on the market square, the traders keep complaining about\"}"
+    },
+    {
+     "ms": 10489,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Okay, next item: the pigeons on the market square, the traders keep complaining about d\"}"
+    },
+    {
+     "ms": 10527,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Okay, next item: the pigeons on the market square, the traders keep complaining about drop\"}"
+    },
+    {
+     "ms": 10909,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Okay, next item: the pigeons on the market square, the traders keep complaining about dropp\"}"
+    },
+    {
+     "ms": 10959,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Okay, next item: the pigeons on the market square, the traders keep complaining about droppings\"}"
+    },
+    {
+     "ms": 11003,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Okay, next item: the pigeons on the market square, the traders keep complaining about droppings on\"}"
+    },
+    {
+     "ms": 11063,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Okay, next item: the pigeons on the market square, the traders keep complaining about droppings on their\"}"
+    },
+    {
+     "ms": 11404,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Okay, next item: the pigeons on the market square, the traders keep complaining about droppings on their st\"}"
+    },
+    {
+     "ms": 11444,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Okay, next item: the pigeons on the market square, the traders keep complaining about droppings on their stall\"}"
+    },
+    {
+     "ms": 11955,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Okay, next item: the pigeons on the market square, the traders keep complaining about droppings on their stalls.\"}"
+    },
+    {
+     "ms": 12051,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Okay, next item: the pigeons on the market square, the traders keep complaining about droppings on their stalls.\"}"
+    },
+    {
+     "ms": 12535,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Okay, next item: the pigeons on the market square, the traders keep complaining about droppings on their stalls.\",\"final\":true}"
+    },
+    {
+     "ms": 13048,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"We\"}"
+    },
+    {
+     "ms": 13160,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"We cle\"}"
+    },
+    {
+     "ms": 13313,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"We clean\"}"
+    },
+    {
+     "ms": 13500,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"We clean ever\"}"
+    },
+    {
+     "ms": 13500,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"We clean every\"}"
+    },
+    {
+     "ms": 13526,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"We clean every mor\"}"
+    },
+    {
+     "ms": 14094,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"We clean every morning,\"}"
+    },
+    {
+     "ms": 14548,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"We clean every morning, and\"}"
+    },
+    {
+     "ms": 14627,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"We clean every morning, and by\"}"
+    },
+    {
+     "ms": 15072,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"We clean every morning, and by no\"}"
+    },
+    {
+     "ms": 15101,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"We clean every morning, and by noon\"}"
+    },
+    {
+     "ms": 15203,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"We clean every morning, and by noon it\"}"
+    },
+    {
+     "ms": 15251,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "ms": 15378,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"We clean every morning, and by noon it's\"}"
+    },
+    {
+     "ms": 15422,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"We clean every morning, and by noon it's back\"}"
+    },
+    {
+     "ms": 15677,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"We clean every morning, and by noon it's back.\",\"final\":true}"
+    },
+    {
+     "ms": 16351,
+     "data": "{\"type\":\"candidate\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"candidate\":{\"id\":\"fb415bef83ce4bcc9f267358e2c0a034\",\"score\":0,\"reason\":\"signal\",\"sources\":0}}"
+    },
+    {
+     "ms": 16352,
+     "data": "{\"type\":\"candidate\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false}"
+    },
+    {
+     "ms": 16352,
+     "data": "{\"type\":\"intervention\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false}"
+    },
+    {
+     "ms": 16352,
+     "data": "{\"type\":\"sound\",\"turnId\":\"1\",\"eventId\":\"76121253ab02a9274c63d2c42e46ea58\",\"durationMs\":1170,\"playbackTracking\":true,\"playback\":\"pending\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"sound\":{\"id\":\"coo-soft\",\"band\":\"calm\",\"file\":\"sounds/coo-soft.mp3\",\"url\":\"/api/duif/v1/sounds/coo-soft\"}}"
+    },
+    {
+     "ms": 16353,
+     "data": "{\"type\":\"playback_state\",\"turnId\":\"1\",\"playback\":\"pending\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":true}"
+    },
+    {
+     "ms": 16790,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Hon\"}"
+    },
+    {
+     "ms": 16879,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Honest\"}"
+    },
+    {
+     "ms": 17055,
+     "data": "{\"type\":\"playback_state\",\"turnId\":\"1\",\"playback\":\"playing\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":true}"
+    },
+    {
+     "ms": 17322,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Honestly,\"}"
+    },
+    {
+     "ms": 17499,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Honestly, I\"}"
+    },
+    {
+     "ms": 17499,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Honestly, I th\"}"
+    },
+    {
+     "ms": 17762,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Honestly, I think\"}"
+    },
+    {
+     "ms": 18299,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Honestly, I think it\"}"
+    },
+    {
+     "ms": 18300,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Honestly, I think it's\"}"
+    },
+    {
+     "ms": 18380,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Honestly, I think it's time\"}"
+    },
+    {
+     "ms": 18544,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Honestly, I think it's time for\"}"
+    },
+    {
+     "ms": 18846,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Honestly, I think it's time for a\"}"
+    },
+    {
+     "ms": 19316,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Honestly, I think it's time for a cul\"}"
+    },
+    {
+     "ms": 19316,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Honestly, I think it's time for a culling\"}"
+    },
+    {
+     "ms": 19560,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Honestly, I think it's time for a culling program\"}"
+    },
+    {
+     "ms": 19813,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Honestly, I think it's time for a culling program.\",\"final\":true,\"pigeonWindow\":true}"
+    },
+    {
+     "ms": 20315,
+     "data": "{\"type\":\"candidate\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"candidate\":{\"id\":\"5b95c9680e62e6b95d28a75676ce211c\",\"score\":0,\"reason\":\"signal\",\"sources\":0}}"
+    },
+    {
+     "ms": 20501,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"listening\":\"listening\",\"speaking\":true}"
+    },
+    {
+     "ms": 21069,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Ag\"}"
+    },
+    {
+     "ms": 21122,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Agre\"}"
+    },
+    {
+     "ms": 21438,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Agreed.\"}"
+    },
+    {
+     "ms": 21492,
+     "data": "{\"type\":\"playback_state\",\"turnId\":\"1\",\"autonomyPaused\":false,\"playback\":\"ended\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false}"
+    },
+    {
+     "ms": 21589,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Agreed. If\"}"
+    },
+    {
+     "ms": 21713,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Agreed. If we\"}"
+    },
+    {
+     "ms": 21886,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Agreed. If we start\"}"
+    },
+    {
+     "ms": 22481,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Agreed. If we start in\"}"
+    },
+    {
+     "ms": 22558,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Agreed. If we start in spr\"}"
+    },
+    {
+     "ms": 22770,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Agreed. If we start in spring,\"}"
+    },
+    {
+     "ms": 22940,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Agreed. If we start in spring, the\"}"
+    },
+    {
+     "ms": 23125,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Agreed. If we start in spring, the squ\"}"
+    },
+    {
+     "ms": 23462,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Agreed. If we start in spring, the square\"}"
+    },
+    {
+     "ms": 23462,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Agreed. If we start in spring, the square is\"}"
+    },
+    {
+     "ms": 23574,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Agreed. If we start in spring, the square is cle\"}"
+    },
+    {
+     "ms": 23632,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Agreed. If we start in spring, the square is clean\"}"
+    },
+    {
+     "ms": 23803,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Agreed. If we start in spring, the square is clean before\"}"
+    },
+    {
+     "ms": 24104,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Agreed. If we start in spring, the square is clean before the\"}"
+    },
+    {
+     "ms": 24507,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Agreed. If we start in spring, the square is clean before the festival\"}"
+    },
+    {
+     "ms": 24826,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Agreed. If we start in spring, the square is clean before the festival seas\"}"
+    },
+    {
+     "ms": 25166,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Agreed. If we start in spring, the square is clean before the festival season,\"}"
+    },
+    {
+     "ms": 25501,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "ms": 25621,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Agreed. If we start in spring, the square is clean before the festival season, nob\"}"
+    },
+    {
+     "ms": 25673,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Agreed. If we start in spring, the square is clean before the festival season, nobody\"}"
+    },
+    {
+     "ms": 25798,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Agreed. If we start in spring, the square is clean before the festival season, nobody is\"}"
+    },
+    {
+     "ms": 25843,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Agreed. If we start in spring, the square is clean before the festival season, nobody is go\"}"
+    },
+    {
+     "ms": 26146,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Agreed. If we start in spring, the square is clean before the festival season, nobody is going to\"}"
+    },
+    {
+     "ms": 26315,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Agreed. If we start in spring, the square is clean before the festival season, nobody is going to miss\"}"
+    },
+    {
+     "ms": 26356,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Agreed. If we start in spring, the square is clean before the festival season, nobody is going to miss a\"}"
+    },
+    {
+     "ms": 26663,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Agreed. If we start in spring, the square is clean before the festival season, nobody is going to miss a f\"}"
+    },
+    {
+     "ms": 26712,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Agreed. If we start in spring, the square is clean before the festival season, nobody is going to miss a few\"}"
+    },
+    {
+     "ms": 26755,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Agreed. If we start in spring, the square is clean before the festival season, nobody is going to miss a few h\"}"
+    },
+    {
+     "ms": 26824,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Agreed. If we start in spring, the square is clean before the festival season, nobody is going to miss a few hund\"}"
+    },
+    {
+     "ms": 26871,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Agreed. If we start in spring, the square is clean before the festival season, nobody is going to miss a few hundred\"}"
+    },
+    {
+     "ms": 27177,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Agreed. If we start in spring, the square is clean before the festival season, nobody is going to miss a few hundred p\"}"
+    },
+    {
+     "ms": 27217,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Agreed. If we start in spring, the square is clean before the festival season, nobody is going to miss a few hundred pige\"}"
+    },
+    {
+     "ms": 27387,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Agreed. If we start in spring, the square is clean before the festival season, nobody is going to miss a few hundred pigeons.\",\"final\":true}"
+    },
+    {
+     "ms": 28775,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"R\"}"
+    },
+    {
+     "ms": 28830,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Right\"}"
+    },
+    {
+     "ms": 28926,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Right.\"}"
+    },
+    {
+     "ms": 29386,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Right. So\"}"
+    },
+    {
+     "ms": 29443,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Right. So we\"}"
+    },
+    {
+     "ms": 29836,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Right. So we rem\"}"
+    },
+    {
+     "ms": 29916,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Right. So we remove\"}"
+    },
+    {
+     "ms": 30305,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Right. So we remove th\"}"
+    },
+    {
+     "ms": 30408,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Right. So we remove them. A\"}"
+    },
+    {
+     "ms": 30452,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Right. So we remove them. Any\"}"
+    },
+    {
+     "ms": 30509,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Right. So we remove them. Any obj\"}"
+    },
+    {
+     "ms": 30751,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "ms": 30870,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Right. So we remove them. Any objec\"}"
+    },
+    {
+     "ms": 30931,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"text\":\"Right. So we remove them. Any objections?\",\"final\":true}"
+    },
+    {
+     "ms": 36001,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "ms": 41251,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "ms": 44585,
+     "data": "{\"type\":\"candidate\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"candidate\":{\"id\":\"0d82849b07861d4e6d1b15a50bc4fc54\",\"score\":0,\"reason\":\"signal\",\"sources\":0}}"
+    },
+    {
+     "ms": 46354,
+     "data": "{\"type\":\"candidate\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"candidate\":{\"id\":\"85911856691dd3ea215c3a365bb517ac\",\"score\":0,\"reason\":\"signal\",\"sources\":0}}"
+    },
+    {
+     "ms": 46502,
+     "data": "{\"type\":\"candidate\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false}"
+    },
+    {
+     "ms": 46502,
+     "data": "{\"type\":\"intervention\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false}"
+    },
+    {
+     "ms": 46502,
+     "data": "{\"type\":\"sound\",\"turnId\":\"2\",\"eventId\":\"16276f9b7a11f6f6c698d84b449ad61b\",\"durationMs\":1700,\"playbackTracking\":true,\"playback\":\"pending\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false,\"sound\":{\"id\":\"flap-alarm\",\"band\":\"alarm\",\"file\":\"sounds/flap-alarm.mp3\",\"url\":\"/api/duif/v1/sounds/flap-alarm\"}}"
+    },
+    {
+     "ms": 46502,
+     "data": "{\"type\":\"playback_state\",\"turnId\":\"2\",\"playback\":\"pending\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":true}"
+    },
+    {
+     "ms": 46502,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"listening\":\"listening\",\"speaking\":true}"
+    },
+    {
+     "ms": 47080,
+     "data": "{\"type\":\"playback_state\",\"turnId\":\"2\",\"playback\":\"playing\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":true}"
+    },
+    {
+     "ms": 50590,
+     "data": "{\"type\":\"playback_state\",\"turnId\":\"2\",\"autonomyPaused\":false,\"playback\":\"ended\",\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"speaking\":false}"
+    },
+    {
+     "ms": 51501,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "ms": 56752,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"f4de92cae6c1b59157bf81a055e2c913\",\"listening\":\"listening\",\"speaking\":false}"
+    }
+   ],
+   "openMs": 8,
+   "closeMs": 61208
+  }
+ ],
+ "actions": [
+  {
+   "name": "load",
+   "t": 40
+  },
+  {
+   "name": "seat",
+   "t": 609
+  },
+  {
+   "name": "channel",
+   "t": 804,
+   "at": 1790164695546
+  },
+  {
+   "name": "reaction-done",
+   "t": 59422
+  },
+  {
+   "name": "end-click",
+   "t": 61923
+  },
+  {
+   "name": "ended",
+   "t": 61943
+  }
+ ],
+ "probes": [
+  {
+   "kind": "mic-open",
+   "t": 821,
+   "audio": 1
+  },
+  {
+   "kind": "media-play",
+   "t": 17081,
+   "src": "http://127.0.0.1:8092/modules/duif/media/pigeon-field-coo.mp3"
+  },
+  {
+   "kind": "media-playing",
+   "t": 17694,
+   "src": "http://127.0.0.1:8092/modules/duif/media/pigeon-field-coo.mp3"
+  },
+  {
+   "kind": "media-ended",
+   "t": 22219,
+   "src": "http://127.0.0.1:8092/modules/duif/media/pigeon-field-coo.mp3"
+  },
+  {
+   "kind": "media-play",
+   "t": 47231,
+   "src": "http://127.0.0.1:8092/modules/duif/media/pigeon-field-loft-chorus.mp3"
+  },
+  {
+   "kind": "media-playing",
+   "t": 47728,
+   "src": "http://127.0.0.1:8092/modules/duif/media/pigeon-field-loft-chorus.mp3"
+  },
+  {
+   "kind": "media-ended",
+   "t": 51318,
+   "src": "http://127.0.0.1:8092/modules/duif/media/pigeon-field-loft-chorus.mp3"
+  }
+ ],
+ "app": {
+  "commit": "04b010f868f14fd769f68937bf6356f07fcfd6b2",
+  "dirty": false,
+  "bundleSha256": "d64a902bff38bf25d090a3bfe74e3f6bf4cfc7c21cb5160bddda9c45dced540d",
+  "server": "http://127.0.0.1:8092",
+  "modelPolicy": {
+   "model": "vertex_ai/gemini-3.5-flash",
+   "detectionModel": "vertex_ai/gemini-3.5-flash",
+   "endpoint": "https://llm-proxy.invalid"
+  },
+  "knowledge": {
+   "kbId": "Duiven",
+   "bundleSchema": "duiven/3",
+   "importedAt": "2026-09-15T12:26:51Z"
+  }
+ },
+ "provenance": [],
+ "input": {
+  "pigeon": "nonverbal",
+  "autonomous": true,
+  "microphone": "meeting-audio/meeting-dialogue.wav",
+  "micLeadInMs": 4000,
+  "dialogue": "meeting-audio/meeting-dialogue.json",
+  "dialogueEndMs": 26599
+ },
+ "selection": "Kandidaat. De keuze staat in video.config.json; alle takes blijven bewaard.",
+ "sanitized": {
+  "freshVisitor": "GET /chat/sessions tijdens de opname beperkt tot gesprekken uit deze opname",
+  "chatSessionsRemoved": 0,
+  "headers": "alleen content-type en x-duif-*; geen cookies of autorisatie"
+ },
+ "failure": null,
+ "audio": []
+}

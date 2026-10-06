@@ -1,0 +1,261 @@
+version: meeting-conversations-2026-09-15.4
+status: synthetic-project-written-fixtures; scores are design annotations, not model output
+# Zes gespreksverlopen van twee tot drie minuten, in EN en NL, voor het meten
+# van de kandidaatgenerator en de klok. Ze zijn geschreven voor dit project;
+# er staat geen echte vergadering in en ze worden nergens opgeslagen buiten dit
+# bestand.
+#
+# `atMs` is het moment waarop het segment als gecommit binnenkomt op een
+# gesimuleerde tijdlijn. De scores per duif zijn de ontworpen verwachting van
+# wat de kandidaatgenerator na dít segment zou moeten opleveren: 0 = geen
+# kandidaat (PASS), hoger = een sterkere kandidaat. Ze zijn geen gemeten
+# modeluitvoer en geen gekalibreerde kans; de offline test gebruikt ze om de
+# klok te meten, de live-run meet het model zelf.
+#
+# `addressed` markeert een segment waarin iemand de duif rechtstreeks
+# aanspreekt; dat gaat langs de cooldown maar wacht op het zinseinde.
+# `topic` is het thema-id waar de kandidaat aan hangt (per duif verschillend,
+# dus per duif genoteerd waar het uitmaakt; de offline stub gebruikt het eerste
+# thema van de duif als het veld leeg is).
+conversations:
+  - id: fireworks
+    lang: en
+    note: >-
+      Fireworks policy for New Year. Nobody proposes anything about pigeons; the
+      biological pigeon should offer an adjacent insight about noise and light,
+      the individualist should mostly stay quiet, the signaling pigeon may sound
+      once or twice.
+    segments:
+      - {atMs: 0, speaker: Chair, text: "Right, item four: the fireworks policy for the new year in this district.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 14000, speaker: Ruben, text: "Last year we had complaints from three streets about the noise around the square until two in the morning.", biological: 0.2, individualist: 0.0, nonverbal: 0.1}
+      - {atMs: 31000, speaker: Ilse, text: "The residents' association wants a central display instead of everyone lighting their own, so the noise is concentrated in one hour.", biological: 0.35, individualist: 0.1, nonverbal: 0.2}
+      - {atMs: 48000, speaker: Ruben, text: "A central display on the square means very loud shells and a lot of light right against the station roof.", biological: 0.72, individualist: 0.2, nonverbal: 0.45, topic: urban-ecology}
+      - {atMs: 66000, speaker: Chair, text: "And the cleaning afterwards, we should not forget that either, the square was a mess.", biological: 0.3, individualist: 0.15, nonverbal: 0.2}
+      - {atMs: 84000, speaker: Ilse, text: "What worries me more is the animals. People keep their dogs indoors, but everything living on those roofs has nowhere to go.", biological: 0.85, individualist: 0.45, nonverbal: 0.6, topic: urban-ecology}
+      - {atMs: 103000, speaker: Ruben, text: "Is that actually a problem? I have never seen a bird fall out of the sky on New Year's Eve.", biological: 0.8, individualist: 0.5, nonverbal: 0.55, topic: urban-ecology}
+      - {atMs: 121000, speaker: Chair, text: "Let us keep to the decision. Central display, yes or no, and who pays for the clean-up.", biological: 0.3, individualist: 0.2, nonverbal: 0.15}
+      - {atMs: 140000, speaker: Ilse, text: "Then I would like the animal side written into the proposal before we vote on it.", biological: 0.7, individualist: 0.55, nonverbal: 0.4, topic: urban-ecology}
+      - {atMs: 158000, speaker: Ruben, text: "Fine by me, as long as it does not delay the permit application again.", biological: 0.35, individualist: 0.25, nonverbal: 0.15}
+      - {atMs: 176000, speaker: Chair, text: "Agreed. Ilse writes one paragraph, we vote next week.", biological: 0.2, individualist: 0.15, nonverbal: 0.1}
+  - id: fireworks
+    lang: nl
+    note: Nederlandse tegenhanger van fireworks/en; zelfde verloop en dezelfde ontworpen scores.
+    segments:
+      - {atMs: 0, speaker: Voorzitter, text: "Goed, punt vier: het vuurwerkbeleid voor oud en nieuw in deze wijk.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 14000, speaker: Ruben, text: "Vorig jaar kregen we uit drie straten klachten over het lawaai rond het plein tot twee uur 's nachts.", biological: 0.2, individualist: 0.0, nonverbal: 0.1}
+      - {atMs: 31000, speaker: Ilse, text: "De bewonersvereniging wil één centrale show in plaats van iedereen zijn eigen rotjes, dan zit het lawaai in één uur.", biological: 0.35, individualist: 0.1, nonverbal: 0.2}
+      - {atMs: 48000, speaker: Ruben, text: "Een centrale show op het plein betekent heel harde knallen en veel licht pal tegen het stationsdak aan.", biological: 0.72, individualist: 0.2, nonverbal: 0.45, topic: urban-ecology}
+      - {atMs: 66000, speaker: Voorzitter, text: "En het schoonmaken erna, dat moeten we ook niet vergeten, het plein lag er verschrikkelijk bij.", biological: 0.3, individualist: 0.15, nonverbal: 0.2}
+      - {atMs: 84000, speaker: Ilse, text: "Wat mij meer zorgen baart zijn de dieren. Mensen houden hun hond binnen, maar alles wat op die daken leeft kan nergens heen.", biological: 0.85, individualist: 0.45, nonverbal: 0.6, topic: urban-ecology}
+      - {atMs: 103000, speaker: Ruben, text: "Is dat echt een probleem? Ik heb nog nooit een vogel uit de lucht zien vallen met oud en nieuw.", biological: 0.8, individualist: 0.5, nonverbal: 0.55, topic: urban-ecology}
+      - {atMs: 121000, speaker: Voorzitter, text: "Laten we bij het besluit blijven. Centrale show, ja of nee, en wie betaalt het opruimen.", biological: 0.3, individualist: 0.2, nonverbal: 0.15}
+      - {atMs: 140000, speaker: Ilse, text: "Dan wil ik de dierenkant in het voorstel hebben staan voordat we erover stemmen.", biological: 0.7, individualist: 0.55, nonverbal: 0.4, topic: urban-ecology}
+      - {atMs: 158000, speaker: Ruben, text: "Van mij mag het, als het de vergunningsaanvraag maar niet weer vertraagt.", biological: 0.35, individualist: 0.25, nonverbal: 0.15}
+      - {atMs: 176000, speaker: Voorzitter, text: "Akkoord. Ilse schrijft één alinea, volgende week stemmen we.", biological: 0.2, individualist: 0.15, nonverbal: 0.1}
+  - id: vermin
+    lang: en
+    note: >-
+      Cleaning the station square. Someone calls the pigeons vermin and later
+      addresses the pigeon at the table directly. The individualist should speak
+      even where the corpus has nothing on the exact sentence.
+    segments:
+      - {atMs: 0, speaker: Chair, text: "Next: the cleaning contract for the station square, it runs out in March.", biological: 0.1, individualist: 0.05, nonverbal: 0.05}
+      - {atMs: 15000, speaker: Dana, text: "The contractor says the benches under the canopy cost them twice as much time as the rest of the square.", biological: 0.3, individualist: 0.2, nonverbal: 0.2}
+      - {atMs: 33000, speaker: Peter, text: "That is because of the pigeons. Rats with wings, that is what they are, and we pay for it every month.", biological: 0.6, individualist: 0.95, nonverbal: 0.6, topic: pest-framing}
+      - {atMs: 50000, speaker: Dana, text: "Come on, that is a bit strong. They are just birds looking for the crumbs we drop.", biological: 0.65, individualist: 0.8, nonverbal: 0.5, topic: pest-framing}
+      - {atMs: 68000, speaker: Peter, text: "Strong or not, the vermin are a cost item on this budget and I want them dealt with.", biological: 0.7, individualist: 0.95, nonverbal: 0.75, topic: pest-framing}
+      - {atMs: 87000, speaker: Chair, text: "Let us stay with the contract. Do we extend it or do we go out to tender again?", biological: 0.2, individualist: 0.3, nonverbal: 0.15}
+      - {atMs: 105000, speaker: Dana, text: "Before that, I would like to hear what the pigeon at the table makes of this.", biological: 0.75, individualist: 0.9, nonverbal: 0.7, addressed: true, topic: pest-framing}
+      - {atMs: 124000, speaker: Peter, text: "Fine, but it does not change that someone has to scrub those benches every week.", biological: 0.55, individualist: 0.7, nonverbal: 0.4, topic: nuisance-and-health}
+      - {atMs: 143000, speaker: Chair, text: "We could put a bin under the canopy and see whether that changes anything.", biological: 0.7, individualist: 0.55, nonverbal: 0.7, topic: feeding-and-food}
+      - {atMs: 161000, speaker: Dana, text: "That is worth trying before we start talking about getting rid of anything.", biological: 0.6, individualist: 0.7, nonverbal: 0.8, topic: population-control}
+      - {atMs: 178000, speaker: Chair, text: "Right. One bin, three months, and we look at the cleaning hours again in June.", biological: 0.35, individualist: 0.3, nonverbal: 0.25}
+  - id: vermin
+    lang: nl
+    note: Nederlandse tegenhanger van vermin/en; zelfde verloop en dezelfde ontworpen scores.
+    segments:
+      - {atMs: 0, speaker: Voorzitter, text: "Volgende punt: het schoonmaakcontract voor het stationsplein, dat loopt in maart af.", biological: 0.1, individualist: 0.05, nonverbal: 0.05}
+      - {atMs: 15000, speaker: Dana, text: "De aannemer zegt dat de bankjes onder de overkapping hun twee keer zoveel tijd kosten als de rest van het plein.", biological: 0.3, individualist: 0.2, nonverbal: 0.2}
+      - {atMs: 33000, speaker: Peter, text: "Dat komt door de duiven. Ratten met vleugels, dat zijn het, en wij betalen er elke maand voor.", biological: 0.6, individualist: 0.95, nonverbal: 0.6, topic: pest-framing}
+      - {atMs: 50000, speaker: Dana, text: "Kom op, dat is nogal fors. Het zijn gewoon vogels die de kruimels zoeken die wij laten vallen.", biological: 0.65, individualist: 0.8, nonverbal: 0.5, topic: pest-framing}
+      - {atMs: 68000, speaker: Peter, text: "Fors of niet, dat ongedierte staat als kostenpost op deze begroting en ik wil dat het wordt aangepakt.", biological: 0.7, individualist: 0.95, nonverbal: 0.75, topic: pest-framing}
+      - {atMs: 87000, speaker: Voorzitter, text: "Laten we bij het contract blijven. Verlengen we het, of gaan we opnieuw aanbesteden?", biological: 0.2, individualist: 0.3, nonverbal: 0.15}
+      - {atMs: 105000, speaker: Dana, text: "Voordat we dat doen, wil ik graag horen wat de duif aan tafel hiervan vindt.", biological: 0.75, individualist: 0.9, nonverbal: 0.7, addressed: true, topic: pest-framing}
+      - {atMs: 124000, speaker: Peter, text: "Prima, maar het verandert niets aan het feit dat iemand die bankjes elke week moet schrobben.", biological: 0.55, individualist: 0.7, nonverbal: 0.4, topic: nuisance-and-health}
+      - {atMs: 143000, speaker: Voorzitter, text: "We zouden een afvalbak onder de overkapping kunnen zetten en kijken of dat iets verandert.", biological: 0.7, individualist: 0.55, nonverbal: 0.7, topic: feeding-and-food}
+      - {atMs: 161000, speaker: Dana, text: "Dat is het proberen waard voordat we het over wegjagen gaan hebben.", biological: 0.6, individualist: 0.7, nonverbal: 0.8, topic: population-control}
+      - {atMs: 178000, speaker: Voorzitter, text: "Goed. Eén bak, drie maanden, en in juni kijken we opnieuw naar de schoonmaakuren.", biological: 0.35, individualist: 0.3, nonverbal: 0.25}
+  - id: disease
+    lang: en
+    note: >-
+      A market square committee, on the claim that pigeons spread disease to
+      people. The corpus covers this claim (kb-eval case kb-nl-ziekten), so
+      the knowledge partner should find sources here, and the individualist has
+      an interest of her own in the claim. Written for this project; no real
+      meeting is recorded here.
+    segments:
+      - {atMs: 0, speaker: Chair, text: "Item three: the market traders' letter about the pigeons on the square.", biological: 0.15, individualist: 0.1, nonverbal: 0.05}
+      - {atMs: 16000, speaker: Nadia, text: "They write that the birds walk over the vegetable stalls all morning and nobody stops them.", biological: 0.4, individualist: 0.35, nonverbal: 0.3, topic: feeding-and-food}
+      - {atMs: 34000, speaker: Bram, text: "My worry is the health side. Those pigeons carry disease and we are selling food there.", biological: 0.9, individualist: 0.6, nonverbal: 0.5, topic: nuisance-and-health}
+      - {atMs: 53000, speaker: Nadia, text: "Carry what exactly? I have never seen anyone at that market get ill from a bird.", biological: 0.9, individualist: 0.65, nonverbal: 0.45, topic: nuisance-and-health}
+      - {atMs: 72000, speaker: Bram, text: "Droppings on a stall are droppings on a stall. The traders want that dealt with before summer.", biological: 0.85, individualist: 0.7, nonverbal: 0.55, topic: nuisance-and-health}
+      - {atMs: 91000, speaker: Chair, text: "The health service has not reported anything about the market, as far as I know.", biological: 0.8, individualist: 0.5, nonverbal: 0.35, topic: nuisance-and-health}
+      - {atMs: 110000, speaker: Bram, text: "Not reported is not the same as not happening. I would rather be careful with food stalls.", biological: 0.85, individualist: 0.75, nonverbal: 0.5, topic: nuisance-and-health}
+      - {atMs: 129000, speaker: Nadia, text: "Then let us hear what is actually known about pigeons and illness before we decide anything.", biological: 0.95, individualist: 0.6, nonverbal: 0.4, addressed: true, topic: nuisance-and-health}
+      - {atMs: 148000, speaker: Bram, text: "Known or not, the stalls need covers and the square needs cleaning more often.", biological: 0.6, individualist: 0.65, nonverbal: 0.4, topic: nuisance-and-health}
+      - {atMs: 166000, speaker: Chair, text: "Covers we can arrange. The cleaning frequency is a cost question for the next meeting.", biological: 0.35, individualist: 0.3, nonverbal: 0.2}
+      - {atMs: 184000, speaker: Nadia, text: "Fine, as long as we do not write down that the birds make people sick without knowing it.", biological: 0.9, individualist: 0.7, nonverbal: 0.35, topic: nuisance-and-health}
+  - id: disease
+    lang: nl
+    note: Nederlandse tegenhanger van disease/en; zelfde verloop en dezelfde ontworpen scores.
+    segments:
+      - {atMs: 0, speaker: Voorzitter, text: "Punt drie: de brief van de marktkooplieden over de duiven op het plein.", biological: 0.15, individualist: 0.1, nonverbal: 0.05}
+      - {atMs: 16000, speaker: Nadia, text: "Ze schrijven dat de vogels de hele ochtend over de groentekramen lopen en dat niemand ze tegenhoudt.", biological: 0.4, individualist: 0.35, nonverbal: 0.3, topic: feeding-and-food}
+      - {atMs: 34000, speaker: Bram, text: "Mijn zorg is de gezondheid. Die duiven dragen ziekten over en wij verkopen daar eten.", biological: 0.9, individualist: 0.6, nonverbal: 0.5, topic: nuisance-and-health}
+      - {atMs: 53000, speaker: Nadia, text: "Dragen ze wat precies over? Ik heb nog nooit iemand op die markt ziek zien worden van een vogel.", biological: 0.9, individualist: 0.65, nonverbal: 0.45, topic: nuisance-and-health}
+      - {atMs: 72000, speaker: Bram, text: "Uitwerpselen op een kraam zijn uitwerpselen op een kraam. De kooplieden willen dat voor de zomer geregeld hebben.", biological: 0.85, individualist: 0.7, nonverbal: 0.55, topic: nuisance-and-health}
+      - {atMs: 91000, speaker: Voorzitter, text: "De GGD heeft voor zover ik weet niets over de markt gemeld.", biological: 0.8, individualist: 0.5, nonverbal: 0.35, topic: nuisance-and-health}
+      - {atMs: 110000, speaker: Bram, text: "Niet gemeld is niet hetzelfde als niet gebeurd. Ik ben liever voorzichtig bij eetkramen.", biological: 0.85, individualist: 0.75, nonverbal: 0.5, topic: nuisance-and-health}
+      - {atMs: 129000, speaker: Nadia, text: "Laten we dan eerst horen wat er werkelijk bekend is over duiven en ziekte voordat we iets besluiten.", biological: 0.95, individualist: 0.6, nonverbal: 0.4, addressed: true, topic: nuisance-and-health}
+      - {atMs: 148000, speaker: Bram, text: "Bekend of niet, de kramen hebben afdekking nodig en het plein moet vaker schoongemaakt worden.", biological: 0.6, individualist: 0.65, nonverbal: 0.4, topic: nuisance-and-health}
+      - {atMs: 166000, speaker: Voorzitter, text: "Afdekking kunnen we regelen. De schoonmaakfrequentie is een kostenvraag voor de volgende vergadering.", biological: 0.35, individualist: 0.3, nonverbal: 0.2}
+      - {atMs: 184000, speaker: Nadia, text: "Prima, zolang we niet opschrijven dat de vogels mensen ziek maken zonder dat we dat weten.", biological: 0.9, individualist: 0.7, nonverbal: 0.35, topic: nuisance-and-health}
+  - id: tangential
+    lang: en
+    note: >-
+      Bridge maintenance. Pigeons are never the subject; only the ledges and
+      netting brush against it. The signaling pigeon (lowest bar) should sound,
+      the talking pigeons should stay mostly quiet.
+    segments:
+      - {atMs: 0, speaker: Chair, text: "The maintenance plan for the bridge, we have three quotes and one deadline.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 16000, speaker: Mieke, text: "The steel under the deck has to be treated this summer, otherwise we lose another year.", biological: 0.05, individualist: 0.0, nonverbal: 0.1}
+      - {atMs: 34000, speaker: Jonas, text: "Scaffolding goes up in June and comes down in September, that is the whole window.", biological: 0.1, individualist: 0.05, nonverbal: 0.15}
+      - {atMs: 52000, speaker: Mieke, text: "The contractor wants to close off the ledges underneath while they work, for safety.", biological: 0.4, individualist: 0.35, nonverbal: 0.65, topic: nesting}
+      - {atMs: 71000, speaker: Jonas, text: "Close them off with what, netting? That was in the quote as an optional item.", biological: 0.45, individualist: 0.4, nonverbal: 0.75, topic: nesting}
+      - {atMs: 90000, speaker: Chair, text: "Netting is fine as long as it comes off again afterwards, we are not making it permanent.", biological: 0.5, individualist: 0.5, nonverbal: 0.8, topic: nesting}
+      - {atMs: 109000, speaker: Mieke, text: "The lighting under the deck also needs replacing while the scaffolding is there.", biological: 0.1, individualist: 0.05, nonverbal: 0.2}
+      - {atMs: 128000, speaker: Jonas, text: "And the cycle path stays open, that was the condition from the district.", biological: 0.0, individualist: 0.0, nonverbal: 0.05}
+      - {atMs: 147000, speaker: Chair, text: "So: steel, lighting, temporary netting, cycle path open. Anything else?", biological: 0.35, individualist: 0.3, nonverbal: 0.6, topic: nesting}
+      - {atMs: 166000, speaker: Mieke, text: "Only the budget line, we are eleven thousand over on the lighting.", biological: 0.0, individualist: 0.0, nonverbal: 0.05}
+      - {atMs: 182000, speaker: Chair, text: "We take that from the reserve. Done, next item.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+  - id: tangential
+    lang: nl
+    note: Nederlandse tegenhanger van tangential/en; zelfde verloop en dezelfde ontworpen scores.
+    segments:
+      - {atMs: 0, speaker: Voorzitter, text: "Het onderhoudsplan voor de brug, we hebben drie offertes en één deadline.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 16000, speaker: Mieke, text: "Het staal onder het dek moet deze zomer behandeld worden, anders verliezen we weer een jaar.", biological: 0.05, individualist: 0.0, nonverbal: 0.1}
+      - {atMs: 34000, speaker: Jonas, text: "De steigers gaan in juni omhoog en in september weer weg, dat is het hele venster.", biological: 0.1, individualist: 0.05, nonverbal: 0.15}
+      - {atMs: 52000, speaker: Mieke, text: "De aannemer wil de richels eronder afsluiten zolang ze bezig zijn, voor de veiligheid.", biological: 0.4, individualist: 0.35, nonverbal: 0.65, topic: nesting}
+      - {atMs: 71000, speaker: Jonas, text: "Afsluiten waarmee, netten? Dat stond als optiepost in de offerte.", biological: 0.45, individualist: 0.4, nonverbal: 0.75, topic: nesting}
+      - {atMs: 90000, speaker: Voorzitter, text: "Netten is prima zolang ze er daarna weer af gaan, we maken er niets permanents van.", biological: 0.5, individualist: 0.5, nonverbal: 0.8, topic: nesting}
+      - {atMs: 109000, speaker: Mieke, text: "De verlichting onder het dek moet ook vervangen worden nu de steiger er toch staat.", biological: 0.1, individualist: 0.05, nonverbal: 0.2}
+      - {atMs: 128000, speaker: Jonas, text: "En het fietspad blijft open, dat was de voorwaarde van het stadsdeel.", biological: 0.0, individualist: 0.0, nonverbal: 0.05}
+      - {atMs: 147000, speaker: Voorzitter, text: "Dus: staal, verlichting, tijdelijke netten, fietspad open. Nog iets?", biological: 0.35, individualist: 0.3, nonverbal: 0.6, topic: nesting}
+      - {atMs: 166000, speaker: Mieke, text: "Alleen de begrotingsregel, we zitten elfduizend over op de verlichting.", biological: 0.0, individualist: 0.0, nonverbal: 0.05}
+      - {atMs: 182000, speaker: Voorzitter, text: "Dat halen we uit de reserve. Klaar, volgend punt.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+  - id: control
+    lang: en
+    note: Negative control. Parking permits and a bicycle shed; no pigeon should ever speak.
+    segments:
+      - {atMs: 0, speaker: Chair, text: "Parking permits for the new block, we promised the residents an answer this month.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 17000, speaker: Sam, text: "There are forty-two applications and twenty-eight places, that is the whole problem in one line.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 35000, speaker: Nadia, text: "We could give priority to households without a car-sharing subscription.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 54000, speaker: Sam, text: "That is going to be very hard to check, and people will simply cancel the subscription.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 73000, speaker: Chair, text: "What about the bicycle shed? If it were finished, some of them would not apply at all.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 92000, speaker: Nadia, text: "The shed is waiting on the electrical connection, which is now scheduled for April.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 111000, speaker: Sam, text: "April is after our answer, so it does not help us with this decision.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 130000, speaker: Chair, text: "Then we allocate by date of application and we say so plainly in the letter.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 149000, speaker: Nadia, text: "I will draft the letter, but I want the shed date in it as well.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 168000, speaker: Chair, text: "Do that. Anything else before we close?", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+  - id: control
+    lang: nl
+    note: Nederlandse negatieve controle; geen enkele duif hoort hier te spreken.
+    segments:
+      - {atMs: 0, speaker: Voorzitter, text: "Parkeervergunningen voor het nieuwe blok, we hebben de bewoners deze maand een antwoord beloofd.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 17000, speaker: Sam, text: "Er zijn tweeënveertig aanvragen en achtentwintig plaatsen, dat is het hele probleem in één zin.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 35000, speaker: Nadia, text: "We zouden voorrang kunnen geven aan huishoudens zonder deelauto-abonnement.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 54000, speaker: Sam, text: "Dat wordt heel lastig te controleren, en mensen zeggen dat abonnement gewoon op.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 73000, speaker: Voorzitter, text: "En de fietsenberging dan? Als die af was, zou een deel helemaal niet aanvragen.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 92000, speaker: Nadia, text: "De berging wacht op de elektra-aansluiting, en die staat nu voor april gepland.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 111000, speaker: Sam, text: "April is na ons antwoord, dus daar hebben we bij dit besluit niets aan.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 130000, speaker: Voorzitter, text: "Dan verdelen we op datum van aanvraag en dat zeggen we gewoon zo in de brief.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 149000, speaker: Nadia, text: "Ik stel de brief op, maar dan wil ik de datum van de berging er ook in hebben.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 168000, speaker: Voorzitter, text: "Doe dat. Nog iets voordat we afsluiten?", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+  - id: ambient
+    lang: nl
+    note: >-
+      Het plein, 's ochtends: duiven op het dak, klachten van bewoners,
+      kruimels bij de bakker. Er ligt geen enkel besluit op tafel. De
+      signalerende duif hoort hier meerdere keren te klinken — rustig, in het
+      brede thema pigeons-nearby — terwijl de twee pratende duiven met hun
+      hogere lat zwijgen.
+    segments:
+      - {atMs: 0, speaker: Voorzitter, text: "Even over het plein, voordat we naar het volgende punt gaan.", biological: 0.0, individualist: 0.0, nonverbal: 0.05}
+      - {atMs: 12000, speaker: Anneke, text: "Ik loop daar elke ochtend langs, rond half acht ongeveer.", biological: 0.0, individualist: 0.0, nonverbal: 0.05}
+      - {atMs: 24000, speaker: Anneke, text: "Dan zitten er tientallen duiven op de rand van het dak.", biological: 0.3, individualist: 0.25, nonverbal: 0.3, topic: pigeons-nearby}
+      - {atMs: 36000, speaker: Bram, text: "Die zie ik ook, altijd op precies dezelfde richel.", biological: 0.3, individualist: 0.25, nonverbal: 0.3, topic: pigeons-nearby}
+      - {atMs: 48000, speaker: Anneke, text: "De bewoners van nummer twaalf klagen er al maanden over.", biological: 0.35, individualist: 0.3, nonverbal: 0.28, topic: pigeons-nearby}
+      - {atMs: 60000, speaker: Bram, text: "Over de rommel op de stoep, vooral rond de bankjes.", biological: 0.3, individualist: 0.3, nonverbal: 0.25, topic: pigeons-nearby}
+      - {atMs: 72000, speaker: Voorzitter, text: "En bij de bakker liggen 's ochtends altijd kruimels op straat.", biological: 0.4, individualist: 0.3, nonverbal: 0.3, topic: pigeons-nearby}
+      - {atMs: 84000, speaker: Anneke, text: "Precies daar zitten ze, dat lijkt me geen toeval.", biological: 0.35, individualist: 0.3, nonverbal: 0.3, topic: pigeons-nearby}
+      # 0,15 ligt boven de lat van het brede thema (0,14) en onder die
+      # van elk ander thema (0,18 en 0,22). Alleen als de volgorde van de latten
+      # klopt komt dit segment door de klok heen.
+      - {atMs: 96000, speaker: Voorzitter, text: "We besluiten hier vandaag niets over, ik wilde het alleen noemen.", biological: 0.2, individualist: 0.2, nonverbal: 0.15, topic: pigeons-nearby}
+      - {atMs: 108000, speaker: Bram, text: "Het valt me wel op dat het er meer worden dan vorig jaar.", biological: 0.4, individualist: 0.35, nonverbal: 0.3, topic: pigeons-nearby}
+      - {atMs: 120000, speaker: Anneke, text: "Ik hoor ze 's ochtends ook, dat gekoer boven op de daken.", biological: 0.3, individualist: 0.25, nonverbal: 0.3, topic: pigeons-nearby}
+      - {atMs: 132000, speaker: Bram, text: "Bij de markt zitten ze op donderdag overal tussen de kramen.", biological: 0.35, individualist: 0.3, nonverbal: 0.3, topic: pigeons-nearby}
+      - {atMs: 144000, speaker: Voorzitter, text: "Goed om te weten, we komen er vast nog een keer op terug.", biological: 0.15, individualist: 0.15, nonverbal: 0.2, topic: pigeons-nearby}
+      - {atMs: 156000, speaker: Bram, text: "Dan gaan we nu door naar de fietsenstalling.", biological: 0.0, individualist: 0.0, nonverbal: 0.05}
+  - id: ambient
+    lang: en
+    note: Engelse tegenhanger van ambient/nl; zelfde verloop en dezelfde ontworpen scores.
+    segments:
+      - {atMs: 0, speaker: Chair, text: "Just a word about the square, before we move to the next item.", biological: 0.0, individualist: 0.0, nonverbal: 0.05}
+      - {atMs: 12000, speaker: Anneke, text: "I walk past there every morning, around half past seven.", biological: 0.0, individualist: 0.0, nonverbal: 0.05}
+      - {atMs: 24000, speaker: Anneke, text: "There are dozens of pigeons sitting along the edge of the roof.", biological: 0.3, individualist: 0.25, nonverbal: 0.3, topic: pigeons-nearby}
+      - {atMs: 36000, speaker: Bram, text: "I see them too, always on exactly the same ledge.", biological: 0.3, individualist: 0.25, nonverbal: 0.3, topic: pigeons-nearby}
+      - {atMs: 48000, speaker: Anneke, text: "The residents of number twelve have been complaining for months.", biological: 0.35, individualist: 0.3, nonverbal: 0.28, topic: pigeons-nearby}
+      - {atMs: 60000, speaker: Bram, text: "About the mess on the pavement, mostly around the benches.", biological: 0.3, individualist: 0.3, nonverbal: 0.25, topic: pigeons-nearby}
+      - {atMs: 72000, speaker: Chair, text: "And there are always crumbs outside the baker's in the morning.", biological: 0.4, individualist: 0.3, nonverbal: 0.3, topic: pigeons-nearby}
+      - {atMs: 84000, speaker: Anneke, text: "That is exactly where they sit, which does not look like chance to me.", biological: 0.35, individualist: 0.3, nonverbal: 0.3, topic: pigeons-nearby}
+      # Zie ambient/nl — 0,15 komt alleen door de brede lat heen.
+      - {atMs: 96000, speaker: Chair, text: "We are deciding nothing about it today, I only wanted to mention it.", biological: 0.2, individualist: 0.2, nonverbal: 0.15, topic: pigeons-nearby}
+      - {atMs: 108000, speaker: Bram, text: "It does strike me that there are more of them than last year.", biological: 0.4, individualist: 0.35, nonverbal: 0.3, topic: pigeons-nearby}
+      - {atMs: 120000, speaker: Anneke, text: "I hear them in the morning too, that cooing up on the roofs.", biological: 0.3, individualist: 0.25, nonverbal: 0.3, topic: pigeons-nearby}
+      - {atMs: 132000, speaker: Bram, text: "At the market on Thursday they sit all over the stalls.", biological: 0.35, individualist: 0.3, nonverbal: 0.3, topic: pigeons-nearby}
+      - {atMs: 144000, speaker: Chair, text: "Good to know, I am sure we will come back to it another time.", biological: 0.15, individualist: 0.15, nonverbal: 0.2, topic: pigeons-nearby}
+      - {atMs: 156000, speaker: Bram, text: "Then we move on now to the bicycle store.", biological: 0.0, individualist: 0.0, nonverbal: 0.05}
+  - id: budget
+    lang: nl
+    note: >-
+      Tweede negatieve controle naast control. Een begrotingspunt zonder
+      één woord over duiven of hun omgeving; ook de laagste lat hoort hier stil
+      te blijven.
+    segments:
+      - {atMs: 0, speaker: Voorzitter, text: "De kadernota, we moeten er deze maand een klap op geven.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 16000, speaker: Sam, text: "De post onderhoud is met elfduizend euro overschreden.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 32000, speaker: Nadia, text: "Dat komt door de verlichting, niet door het straatwerk.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 48000, speaker: Sam, text: "Kunnen we dat uit de reserve halen, net als vorig jaar?", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 64000, speaker: Voorzitter, text: "Dat mag, maar dan is de reserve dit jaar wel op.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 80000, speaker: Nadia, text: "Dan zet ik het zo in de nota en stuur ik hem rond.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 96000, speaker: Sam, text: "Prima, dan hebben we dit punt gehad.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 112000, speaker: Voorzitter, text: "Nog even de planning: de nota moet voor de veertiende rond zijn.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 128000, speaker: Nadia, text: "Dat haal ik, mits ik de cijfers van de afdeling op tijd krijg.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 144000, speaker: Sam, text: "Die stuur ik je maandag, dan kun je dinsdag verder.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 158000, speaker: Voorzitter, text: "Afgesproken. Dan sluit ik dit agendapunt af.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+  - id: budget
+    lang: en
+    note: Engelse tegenhanger van budget/nl; ook hier hoort geen enkele duif te klinken.
+    segments:
+      - {atMs: 0, speaker: Chair, text: "The budget memorandum, we have to sign it off this month.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 16000, speaker: Sam, text: "The maintenance line is eleven thousand euros over.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 32000, speaker: Nadia, text: "That is the lighting, not the paving work.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 48000, speaker: Sam, text: "Can we take that out of the reserve, the way we did last year?", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 64000, speaker: Chair, text: "We can, but then the reserve is gone for this year.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 80000, speaker: Nadia, text: "Then I will put it in the memorandum and send it round.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 96000, speaker: Sam, text: "Fine, then we are done with this item.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 112000, speaker: Chair, text: "One more thing on timing: the memorandum has to be ready before the fourteenth.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 128000, speaker: Nadia, text: "I can make that, as long as I get the department figures in time.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 144000, speaker: Sam, text: "I will send those on Monday, so you can carry on from Tuesday.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}
+      - {atMs: 158000, speaker: Chair, text: "Agreed. Then I am closing this item on the agenda.", biological: 0.0, individualist: 0.0, nonverbal: 0.0}

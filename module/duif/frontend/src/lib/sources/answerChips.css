@@ -1,0 +1,37 @@
+/* De voetregel van een gefundeerd antwoord: de bronchip die de lade opent, en
+   de dekkingsmarkering van de Stakeholder ernaast. De chat en de vergadering
+   tonen hetzelfde, dus staat de vormtaal hier één keer in plaats van twee keer
+   in een <style>-blok. De kleur van de bronchip komt uit --answer-accent, dat
+   het antwoord zelf per duif zet. */
+.duif-answer-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  min-height: 1.8rem;
+  padding: .2rem .65rem;
+  border: 1px solid var(--chip-line, var(--duif-line));
+  border-radius: 999px;
+  background: var(--chip-fill, transparent);
+  color: var(--chip-ink, var(--duif-dim));
+  font-size: .72rem;
+  font-weight: 550;
+  line-height: 1.4;
+  text-align: left;
+  cursor: pointer;
+}
+.duif-answer-chip svg { flex: none; color: var(--chip-ink, var(--duif-dim)); }
+.duif-answer-chip.is-sources { --chip-ink: var(--answer-accent, var(--duif-ink)); --chip-line: color-mix(in oklch, var(--answer-accent, var(--duif-ink)) 32%, transparent); --chip-fill: color-mix(in oklch, var(--answer-accent, var(--duif-ink)) 10%, transparent); }
+.duif-answer-chip.is-sources:hover { --chip-fill: color-mix(in oklch, var(--answer-accent, var(--duif-ink)) 18%, transparent); }
+/* De Stakeholder mag zonder bron een begrensd standpunt innemen.
+   Dat is bedoeld gedrag en geen storing, dus geen waarschuwingskleur — maar het
+   mag ook niet als onderzoek gelezen worden, dus wel een eigen, zichtbaar
+   label. Haar eigen accentkleur in een gestippelde rand: hetzelfde gewicht als
+   de andere chips, en zichtbaar anders dan de brondekking ernaast. */
+.duif-answer-chip.is-stance { --chip-ink: var(--answer-accent, var(--duif-ink)); --chip-line: color-mix(in oklch, var(--answer-accent, var(--duif-ink)) 40%, transparent); --chip-fill: transparent; border-style: dashed; cursor: default; }
+/* De stappen van een lopende beurt. Dezelfde vorm als de chips onder
+   een antwoord — dat is met opzet, want het is hetzelfde gesprek — maar zonder
+   kleuraccent en zonder klikgedrag: dit is een stand, geen knop. De lopende
+   stap krijgt de inktkleur en een iets vastere rand, zodat het oog hem vindt
+   zonder dat de regel gaat schreeuwen. */
+.duif-answer-chip.is-step { cursor: default; font-weight: 500; }
+.duif-answer-chip.is-step.is-running { --chip-ink: var(--duif-ink); --chip-line: color-mix(in oklch, var(--duif-ink) 30%, transparent); }

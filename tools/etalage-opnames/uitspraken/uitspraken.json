@@ -1,0 +1,111 @@
+{
+ "provider": "ElevenLabs",
+ "model": "eleven_multilingual_v2",
+ "lines": {
+  "poep-nl": {
+   "statement": "poep",
+   "lang": "nl",
+   "speaker": "Voorzitter",
+   "text": "De marktkooplui klagen over duivenpoep op hun kramen.",
+   "voice": "Charlotte",
+   "voiceId": "XB0fDUnXU5powFXDhCwa",
+   "model": "eleven_multilingual_v2",
+   "file": "poep-nl.mp3",
+   "durationMs": 3251,
+   "sha256": "3f7d05b252f62928ccb2f0fab29174e6e1c94187d1bcd047203e372f864b8911",
+   "madeAt": "2026-09-23T14:47:21.361Z"
+  },
+  "poep-en": {
+   "statement": "poep",
+   "lang": "en",
+   "speaker": "Chair",
+   "text": "The market traders keep complaining about pigeon droppings on their stalls.",
+   "voice": "Charlotte",
+   "voiceId": "XB0fDUnXU5powFXDhCwa",
+   "model": "eleven_multilingual_v2",
+   "file": "poep-en.mp3",
+   "durationMs": 3994,
+   "sha256": "872cf49b37bd46abe985dea22aa1b01465104a8cefd37acd7c650db2b0e186ff",
+   "madeAt": "2026-09-23T14:47:22.451Z"
+  },
+  "afschot-nl": {
+   "statement": "afschot",
+   "lang": "nl",
+   "speaker": "Beheer",
+   "text": "Ik denk dat het tijd is voor afschot.",
+   "voice": "Daniel",
+   "voiceId": "onwK4e9ZLuTAKqWW03F9",
+   "model": "eleven_multilingual_v2",
+   "file": "afschot-nl.mp3",
+   "durationMs": 2136,
+   "sha256": "499801802155d34044fcbf2caaf008438fcc1a366a910322096bd15348c9ca5a",
+   "madeAt": "2026-09-23T14:47:23.418Z"
+  },
+  "afschot-en": {
+   "statement": "afschot",
+   "lang": "en",
+   "speaker": "Operations",
+   "text": "I think it's time for a culling programme.",
+   "voice": "Daniel",
+   "voiceId": "onwK4e9ZLuTAKqWW03F9",
+   "model": "eleven_multilingual_v2",
+   "file": "afschot-en.mp3",
+   "durationMs": 2508,
+   "sha256": "e752ff2845b63700142d7ada7c456faa5c6a8783857b64d1c02dbcb9470e6ff7",
+   "madeAt": "2026-09-23T14:47:24.431Z"
+  },
+  "bakken-nl": {
+   "statement": "bakken",
+   "lang": "nl",
+   "speaker": "Adviseur",
+   "text": "Dan sluiten we de afvalbakken 's nachts ook meteen af.",
+   "voice": "Sarah",
+   "voiceId": "EXAVITQu4vr4xnSDxMaL",
+   "model": "eleven_multilingual_v2",
+   "file": "bakken-nl.mp3",
+   "durationMs": 3065,
+   "sha256": "7c29a6541d61e549d396cd97e9e7cdf70a83f3db342d1d11358656634b091f04",
+   "madeAt": "2026-09-23T14:47:25.307Z"
+  },
+  "bakken-en": {
+   "statement": "bakken",
+   "lang": "en",
+   "speaker": "Advisor",
+   "text": "And we'll lock the bins at night while we're at it.",
+   "voice": "Sarah",
+   "voiceId": "EXAVITQu4vr4xnSDxMaL",
+   "model": "eleven_multilingual_v2",
+   "file": "bakken-en.mp3",
+   "durationMs": 2415,
+   "sha256": "df92c644dcd38c9d4033fe630e9d6e26262522e8e653c0064f52eea25434ea20",
+   "madeAt": "2026-09-23T14:47:26.139Z"
+  },
+  "begroting-nl": {
+   "statement": "begroting",
+   "lang": "nl",
+   "speaker": "Voorzitter",
+   "text": "Goed. Volgende punt: de begroting voor volgend jaar.",
+   "voice": "Charlotte",
+   "voiceId": "XB0fDUnXU5powFXDhCwa",
+   "model": "eleven_multilingual_v2",
+   "file": "begroting-nl.mp3",
+   "durationMs": 3529,
+   "sha256": "fb1c23a2da6186ce8a0790901fdf20d196f74f529133389ffd57b02a7ae13ea0",
+   "madeAt": "2026-09-23T14:47:27.200Z"
+  },
+  "begroting-en": {
+   "statement": "begroting",
+   "lang": "en",
+   "speaker": "Chair",
+   "text": "Right. Next item: next year's budget.",
+   "voice": "Charlotte",
+   "voiceId": "XB0fDUnXU5powFXDhCwa",
+   "model": "eleven_multilingual_v2",
+   "file": "begroting-en.mp3",
+   "durationMs": 3065,
+   "sha256": "ffaf9592f04e4ad6cd59e057f639a54aab64fba0bb9a5abb8e69768c5d97a84a",
+   "madeAt": "2026-09-23T14:47:28.245Z"
+  }
+ },
+ "placeholder": true
+}

@@ -1,0 +1,243 @@
+/* Bewust niet `@import "tailwindcss"`: die haalt ook preflight binnen, en
+ * preflight reset html, body, knoppen en koppen van de hele pagina — dus van de
+ * parai-core-shell waarin deze module als bundle hangt. Een module hoort haar
+ * gastheer niet te herstellen. Daarom alleen de theme- en utilities-laag; de
+ * preflight staat in dev-theme.css, waar hij bij de DevShell hoort die in
+ * standalone dev de shell nadoet. De laagvolgorde blijft die van Tailwind zelf,
+ * anders wint een utility het niet meer van een basisregel. */
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+@import "__PARAI_UI_DIR__/css/theme.css";
+@import "__PARAI_UI_DIR__/css/base.css";
+@import "__PARAI_UI_DIR__/css/animations.css";
+/* Alleen de parai-ui-bestanden die de duif importeert, met hun eigen imports;
+ * parai-ui-sources.ts maakt de lijst, vite.config.ts vult hem in. */
+@source "__PARAI_UI_USED__";
+@source "./**/*.{svelte,ts}";
+
+/* Project tokens remain separate from the host shell. All pigeon identities
+ * have the same surface and emphasis; colour marks identity, never value.
+ *
+ * De grond is bijna wit en niet beige:
+ * het oude #f4f3ed gaf de werkruimte een gelige waas naast de portretten en de
+ * kennisgraaf. Grond en papier liggen nu dicht bij elkaar — een kaart moet van
+ * de grond te onderscheiden zijn, maar het verschil hoort een nuance te zijn en
+ * geen vlak. Alles blijft een spoor groen: de grond is de familie van de
+ * duiven, geen neutraal grijs. Het donkere thema schuift mee in dezelfde
+ * richting: koeler en minder bruin, geen omgekeerde kopie van de lichte waarden.
+ *
+ * --duif-stage en --duif-graph-canvas blijven aan de grond hangen, bewust: het
+ * vergaderpodium krijgt zijn eigen kleur al van de 5%-menging met de duif die
+ * aan tafel zit (LiveView), en het graafdoek leeft van de knopen erop. Een
+ * eigen, beige waarde zou juist daar het oude gevoel terugzetten. */
+:root {
+  --duif-paper: #ffffff;
+  --duif-ground: #f5f7f6;
+  --duif-ink: #252e2b;
+  /* De gedempte inkt bestaat twee keer: --duif-dim-base is de kleur van het
+   * thema, --duif-dim is wat de tekst gebruikt. Een scherm dat zijn achtergrond
+   * tint (het vergaderpodium) kan --duif-dim dan bijstellen zonder naar
+   * zichzelf te verwijzen — een custom property die zichzelf leest, is
+   * ongeldig. */
+  --duif-dim-base: #66706a;
+  --duif-dim: var(--duif-dim-base);
+  --duif-line: #dde2df;
+  --duif-persona-biological: #43674c;
+  --duif-persona-individualist: #906714;
+  /* Eén tint donkerder dan het oude #65717b: deze kleur is ook
+   * --secondary, en de zoomknoppen van de kennisgraaf zetten hem als tekst op
+   * een 10%-vlak van zichzelf. Daar haalde #65717b 4,42:1 en bleef hij onder
+   * AA; #5f6b75 maakt er 4,78:1 van en op de grond 5,07:1. De identiteit van
+   * de Signalerende duif blijft dezelfde grijsblauwe familie. */
+  --duif-persona-nonverbal: #5f6b75;
+  --duif-feather: #e8ecea;
+  /* De schijf achter een duivenportret: een lichte tint van de
+   * personakleur (currentColor in PigeonPortrait), zodat een donkere duif op
+   * 37–43 px niet in de kaart of de achtergrond verdwijnt. Gelijk voor alle
+   * drie; alleen de tint volgt de persona. */
+  --duif-portrait-disc: color-mix(in oklab, currentColor 16%, var(--duif-paper));
+  --duif-stage: var(--duif-ground);
+  --duif-listen: #2e7653;
+  --duif-reconnect: #986516;
+  --duif-off: var(--duif-dim);
+  --duif-stop: #a33e3b;
+  --duif-stop-halo: #a33e3b40;
+  --duif-arousal-calm: var(--info);
+  --duif-arousal-insistent: var(--warning);
+  --duif-arousal-alarm: var(--destructive);
+  --duif-graph-canvas: var(--duif-ground);
+  --duif-graph-ink: var(--duif-ink);
+  --duif-graph-dim: var(--duif-dim);
+  --duif-graph-edge: color-mix(in oklch, var(--duif-ink) 22%, var(--duif-ground));
+  --duif-graph-halo: var(--duif-persona-biological);
+  /* De twee leesmaten van het vergaderpodium. De bijdrage van de duif
+   * is een gesprek en geen affiche: zij staat iets boven de chattekst
+   * (1,0625rem) en blijft binnen ongeveer 1,25 keer die maat, zodat een
+   * stand-scherm hem op afstand nog draagt zonder dat een laptop ervan
+   * overloopt. De ondergrens is die van een bijdrage in het verloop (1,1rem):
+   * de bijdrage die vooraan staat mag nooit kleiner zijn dan dezelfde bijdrage
+   * verderop. De serif-koppen — de openingsvraag boven de duif en de naam op de
+   * startkaart — delen één maat, zodat het podium en de startkaart dezelfde
+   * schaal ademen. */
+  --duif-type-answer: clamp(1.1rem, 1.4vw, 1.3rem);
+  --duif-type-stage-title: clamp(1.15rem, 1.8vw, 1.5rem);
+  --duif-radius-stage: 1.5rem;
+  --duif-radius-card: .85rem;
+  --duif-focus-ring: var(--duif-persona-biological);
+  /* De dimlaag van de uitleg: donker genoeg om het venster ervoor te
+   * laten staan, doorzichtig genoeg om te laten zien dat het gesprek of de
+   * vergadering eronder gewoon doorloopt. */
+  --duif-scrim: rgb(23 32 28 / .46);
+  /* De rand van een venster op die dimlaag. In licht thema draagt het papier
+   * van het venster de scheiding al ruim (3,1:1 tegen de gedimde achtergrond);
+   * daar is de gewone lijnkleur genoeg. In donker thema is dat oppervlak bijna
+   * even donker als wat eronder ligt, dus moet de rand het doen — en die haalt
+   * met de gewone lijnkleur maar 2,1:1 waar WCAG 1.4.11 er 3 vraagt. */
+  --duif-dialog-edge: var(--duif-line);
+}
+.dark {
+  --duif-paper: #212827;
+  --duif-ground: #171d1c;
+  --duif-ink: #eff2f0;
+  --duif-dim-base: #b0bab7;
+  --duif-line: #3d4846;
+  --duif-persona-biological: #9bbe91;
+  --duif-persona-individualist: #e5c473;
+  --duif-persona-nonverbal: #b7c3cc;
+  --duif-feather: #2e3836;
+  /* In donker een lichtere schijf dan kaart en achtergrond: de donkere
+   * Kennispartner valt anders weg tegen #212827. */
+  --duif-portrait-disc: color-mix(in oklab, currentColor 34%, #56615f);
+  --duif-listen: #9bbe91;
+  --duif-reconnect: #e5c473;
+  --duif-stop: #a8413e;
+  --duif-stop-halo: #dc737360;
+  --duif-scrim: rgb(4 9 7 / .64);
+  --duif-dialog-edge: #5f6d63;
+}
+@layer base {
+  .duif-root {
+    /* Existing imported components consume the host vocabulary locally. */
+    --background: var(--duif-ground);
+    --foreground: var(--duif-ink);
+    --card: var(--duif-paper);
+    --card-foreground: var(--duif-ink);
+    --muted: var(--duif-feather);
+    --muted-foreground: var(--duif-dim);
+    --border: var(--duif-line);
+    --input: var(--duif-line);
+    --primary: var(--duif-persona-biological);
+    --primary-foreground: var(--duif-paper);
+    --secondary: var(--duif-persona-nonverbal);
+    --secondary-foreground: var(--duif-paper);
+    --accent: var(--duif-feather);
+    --accent-foreground: var(--duif-ink);
+    /* position: relative — de uitleg legt haar dimlaag over de module en niet
+       over de schil van de gastheer. */
+    position: relative;
+    height: 100%; min-height: 0; display: flex; flex-direction: column;
+    font-family: var(--font-sans, system-ui, sans-serif);
+    color: var(--duif-ink); background: var(--duif-ground);
+    font-size: .9375rem;
+  }
+  .duif-root *, .duif-root *::before, .duif-root *::after { box-sizing: border-box; }
+  .duif-root :where(button, [role='button'], summary, a, input, textarea, select):focus-visible { outline: 2px solid var(--duif-focus-ring); outline-offset: 3px; }
+  .duif-root :where(button):not(:disabled) { cursor: pointer; }
+  .duif-root button { font-family: inherit; }
+  .duif-root button:disabled { opacity: .5; cursor: not-allowed; }
+  .duif-root [hidden] { display: none !important; }
+  /* De duif spreekt in de interfaceletter. De klasse markeert nog steeds waar
+     zíj aan het woord is (chat, vergadering, ladetitel) en niet de facilitator,
+     maar haar stem is één letter in alle drie: de schreef leest bij lange
+     antwoorden slecht en hoort bij koppen, niet bij lopende tekst. */
+  .duif-voice { font-family: var(--font-sans, system-ui, sans-serif); }
+}
+/* Een venster van de module dat naar <body> portalt, staat buiten .duif-root en
+   dus buiten de woorden daar: --primary is er het merkrood van de gastheer en
+   --secondary zijn linkblauw, en die halen in donker geen leesbaar contrast op
+   het venster. De gastheerwoorden zelf overschrijven mag alleen
+   binnen .duif-root (frontend_bundle_test.go); deze klassen zetten de kleuren
+   van de module daarom rechtstreeks op het venster, zijn tekst en zijn
+   knoppen. De gevulde knop is inkt op papier, de omrande inkt met een
+   inktrand, de kale knop inkt zonder rand: in licht en donker ruim boven
+   4,5:1. Gebruikt door "Ben je er nog?" en de bevestigingsvragen van de
+   vergadering (ConfirmDialog). Ongelaagd, zodat ze boven de hulpklassen van
+   de bibliotheek gaan. */
+.duif-dialog { background: var(--duif-paper); color: var(--duif-ink); border: 1px solid var(--duif-dialog-edge); font-family: var(--font-sans, system-ui, sans-serif); }
+.duif-dialog-text { color: var(--duif-dim); }
+.duif-dialog-primary { background: var(--duif-ink); color: var(--duif-paper); }
+.duif-dialog-primary:hover { background: color-mix(in oklab, var(--duif-ink) 88%, var(--duif-paper)); }
+.duif-dialog-outline { background: transparent; color: var(--duif-ink); border: 1px solid var(--duif-ink); }
+.duif-dialog-outline:hover { background: var(--duif-feather); }
+.duif-dialog-ghost { background: transparent; color: var(--duif-ink); }
+.duif-dialog-ghost:hover { background: var(--duif-feather); }
+.duif-dialog :where(button):focus-visible { outline: 2px solid var(--duif-focus-ring); outline-offset: 3px; }
+
+/* De kop van de module is één regel: het verlengde van de schilbalk van
+   parai-core, in dezelfde stijl (pilknoppen, gedempte tekst, icoon plus
+   label). Geen tweede titelblok en geen tweede taalkiezer — de schil zegt al
+   welke module openstaat en in welke taal. */
+.duif-header { padding: 0 clamp(1rem, 3vw, 2rem); flex: none; }
+.duif-nav { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .1rem .8rem; min-height: 3rem; border-bottom: 1px solid var(--duif-line); }
+.duif-nav-tabs { display: flex; align-items: center; gap: .1rem; }
+/* De vier gespreksknoppen blijven bij elkaar op één regel, ook wanneer de
+   weergaven rechts ernaast niet meer passen en naar een tweede regel zakken. */
+.duif-nav-left { display: flex; align-items: center; flex-wrap: nowrap; min-width: 0; gap: .1rem; }
+.duif-nav-views { display: flex; align-items: center; flex-wrap: wrap; gap: .1rem; margin-left: auto; }
+.duif-nav-item { display: inline-flex; align-items: center; gap: .4rem; min-height: 2.15rem; padding: .35rem .6rem; border: 0; border-radius: .45rem; background: transparent; color: var(--duif-dim); font-size: .8rem; font-weight: 550; white-space: nowrap; text-decoration: none; transition: background 140ms, color 140ms; }
+.duif-nav-item:hover { background: var(--duif-feather); color: var(--duif-ink); }
+.duif-nav-item[aria-selected='true'], .duif-nav-item[aria-expanded='true'], .duif-nav-item[aria-pressed='true'], .duif-nav-strong { background: var(--duif-feather); color: var(--duif-ink); font-weight: 650; }
+.duif-nav-rule { width: 1px; height: 1.1rem; align-self: center; margin: 0 .35rem; background: var(--duif-line); }
+.duif-language-locked { display: inline-flex; align-items: center; gap: .3rem; margin-left: .3rem; padding: .3rem .45rem; border: 1px solid var(--duif-line); border-radius: .45rem; color: var(--duif-dim); font-size: .7rem; font-weight: 600; letter-spacing: .04em; }
+.duif-eyebrow { font-size: .65rem; text-transform: uppercase; font-weight: 650; letter-spacing: .12em; color: var(--duif-dim); }
+.duif-text-action { display: inline-flex; align-items: center; justify-content: center; gap: .4rem; min-height: 2.5rem; padding: .25rem .1rem; border: 0; background: transparent; color: var(--duif-dim); font-size: .8rem; font-weight: 550; text-align: left; }
+.duif-text-action:hover, .duif-text-action[aria-expanded='true'], .duif-text-action[aria-pressed='true'] { color: var(--duif-ink); text-decoration: underline; text-underline-offset: .3rem; }
+.duif-pigeon-row { padding: .7rem 0 .8rem; }
+.duif-workspace { min-height: 0; flex: 1; position: relative; overflow-x: hidden; overflow-y: auto; }
+.duif-panel { height: 100%; min-height: 0; display: flex; flex-direction: column; }
+.duif-signal-intro { padding: 2rem 1.25rem; display: flex; flex-direction: column; align-items: center; text-align: center; overflow-y: auto; height: 100%; }
+.duif-signal-portrait { width: clamp(5rem, 14vh, 9rem); margin-bottom: .7rem; }
+.duif-signal-intro h2 { font-family: var(--font-serif, Georgia, serif); font-weight: 500; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.25; max-width: 24ch; margin: .65rem 0; }
+.duif-signal-intro p { max-width: 54ch; font-size: .9rem; color: var(--duif-dim); line-height: 1.7; margin: .5rem 0 1.5rem; }
+.duif-signal-intro small { font-size: .7rem; color: var(--duif-dim); margin-top: .9rem; line-height: 1.6; }
+.duif-primary-button { display: inline-flex; align-items: center; gap: .8rem; border: 0; border-radius: .6rem; padding: .8rem 1rem; background: var(--duif-ink); color: var(--duif-paper); font-size: .85rem; font-weight: 550; }
+.duif-quiet-button { padding: .5rem .65rem; background: transparent; border: 1px solid var(--duif-line); border-radius: .5rem; color: var(--duif-ink); font-size: .75rem; min-height: 2.5rem; }
+@media (max-width: 650px) {
+  .duif-nav { min-height: 2.6rem; gap: .1rem .3rem; }
+  .duif-nav-views { margin-left: 0; }
+  .duif-nav-item { font-size: .72rem; gap: .3rem; padding: .3rem .45rem; min-height: 2rem; }
+  .duif-nav-rule { margin: 0 .2rem; }
+  .duif-pigeon-row { padding: .5rem 0 .6rem; }
+}
+/* De weg naar de projectsite staat naast de weergaven, maar hoort er niet bij:
+   tot de regel ruim past, is hij alleen een huisje (met zijn naam in
+   aria-label en title), zodat de kop niet eerder over twee regels breekt. */
+@media (max-width: 860px) {
+  .duif-nav-site .duif-nav-label { display: none; }
+}
+/* Op een telefoonbreedte past de regel alleen nog als iconen. De knoppen houden
+   hun naam via aria-label, dus wie hem niet ziet hoort hem nog steeds; de weg
+   terug van het graafscherm houdt zijn woorden, want een pijl alleen zegt niet
+   waar je heen gaat. */
+@media (max-width: 480px) {
+  .duif-nav-item:not(.duif-nav-strong) .duif-nav-label { display: none; }
+  .duif-nav-item { padding: .3rem .5rem; }
+}
+/* Browser zoom and landscape windows reduce height as well as width. Keep the
+   named pigeon choices and regie visible, while giving the conversation room. */
+@media (max-height: 650px) {
+  .duif-nav { min-height: 2.5rem; }
+  .duif-nav-item { min-height: 2rem; }
+  .duif-pigeon-row { padding: .4rem 0 .5rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+	.duif-root * {
+		animation-duration: 0.001ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.001ms !important;
+	}
+}
+
+/* Alleen voor hulptechnologie: tekst die de visuele opmaak al uitdrukt (bv. een dubbele punt achter een label). */
+.duif-visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }

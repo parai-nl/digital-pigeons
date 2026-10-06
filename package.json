@@ -1,0 +1,19 @@
+{
+  "name": "ai-maps-duiven",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Digitale Duif van Rotterdam: de publieke etalage in site/ (AI-MAPS · Erasmus Universiteit Rotterdam, gemaakt door Parai). Node is alleen ontwikkelgereedschap; de pagina heeft geen bouwstap.",
+  "license": "MIT",
+  "scripts": {
+    "check:etalage": "node scripts/check-etalage.mjs",
+    "test:e2e": "playwright test",
+    "test:e2e:install": "playwright install chromium",
+    "serve": "DUIVEN_ETALAGE_HEADERS=1 node tools/static-server.mjs 8770 site",
+    "test:echt": "playwright test tests/etalage/echt.spec.js",
+    "test": "npm run check:etalage && npm run test:e2e"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0"
+  }
+}

@@ -1,0 +1,814 @@
+{
+  "version": 1,
+  "visual": [
+    {
+      "id": "portrait-biological",
+      "kind": "portrait",
+      "pigeon": "biological",
+      "status": "approved",
+      "file": "stadsduif-v4-biologisch-kaart.webp",
+      "sha256": "c470d13a410c52b7c054255a5170a0c59c53096a2ce6849f1322fb98179e1a8a",
+      "bytes": 21560,
+      "width": 512,
+      "height": 512,
+      "durationMs": null,
+      "hasAudio": false,
+      "focus": [
+        0.5,
+        0.5
+      ],
+      "origin": {
+        "reference": "https://commons.wikimedia.org/wiki/File:Columba_livia_Luc_Viatour.jpg",
+        "maker": "Digitale Duiven; fototextuur: Luc Viatour / Lucnix.be",
+        "still": "model-v4/varianten/eind/it17/biologisch-kaart.png"
+      },
+      "rights": {
+        "publicDistribution": true,
+        "license": "CC BY-SA 3.0"
+      },
+      "approval": {
+        "reviewedBy": "projectteam",
+        "reviewedAt": "2026-09-24",
+        "basis": "Model v4 is op 24 september 2026 visueel goedgekeurd zoals het is: de drie GLB-modellen, rustposters, kaart- en kopportretten in deze bytes. De pikbeweging is op 23 september 2026 goedgekeurd."
+      },
+      "attribution": {
+        "title": "Stadsduif v4 — kaartportret biologische duif",
+        "creator": "Digitale Duiven; fototextuur: Luc Viatour / Lucnix.be",
+        "source": "https://commons.wikimedia.org/wiki/File:Columba_livia_Luc_Viatour.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "changes": "Blender-render van het v4-model met een eigen camera voor dit portret, geschaald met Lanczos naar WebP met verliesloze alfa (tools/design-model/portraits_v4.mjs). Eigen Blender-model v4 (iteratie 17): anatomie van snavel, washuid, hals, staart en poten herzien, animaties Peck en WingWave met piekmomenten in extras.peaks; afgeleide fototextuur. Geen scan en geen levende duif. Model, rustposter en portretten vallen onder dezelfde CC BY-SA 3.0-licentie. Het verenkleed heeft een donkerdere leigrijze kleurslag met diepere vleugelbanden (natuurlijke variatie)."
+      },
+      "alt": {
+        "en": "Portrait of the biological pigeon.",
+        "nl": "Portret van de biologische duif."
+      },
+      "captureSet": "stadsduif-v4-iteratie-17"
+    },
+    {
+      "id": "portrait-individualist",
+      "kind": "portrait",
+      "pigeon": "individualist",
+      "status": "approved",
+      "file": "stadsduif-v4-individualistisch-kaart.webp",
+      "sha256": "59ac1d22d97513f148aa24a9150aa83dd38c4a625e1f9f95402df80458b787ad",
+      "bytes": 28996,
+      "width": 512,
+      "height": 512,
+      "durationMs": null,
+      "hasAudio": false,
+      "focus": [
+        0.5,
+        0.5
+      ],
+      "origin": {
+        "reference": "https://commons.wikimedia.org/wiki/File:Columba_livia_Luc_Viatour.jpg",
+        "maker": "Digitale Duiven; fototextuur: Luc Viatour / Lucnix.be",
+        "still": "model-v4/varianten/eind/it17/individualistisch-kaart.png"
+      },
+      "rights": {
+        "publicDistribution": true,
+        "license": "CC BY-SA 3.0"
+      },
+      "approval": {
+        "reviewedBy": "projectteam",
+        "reviewedAt": "2026-09-24",
+        "basis": "Model v4 is op 24 september 2026 visueel goedgekeurd zoals het is: de drie GLB-modellen, rustposters, kaart- en kopportretten in deze bytes. De pikbeweging is op 23 september 2026 goedgekeurd."
+      },
+      "attribution": {
+        "title": "Stadsduif v4 — kaartportret individualistische duif",
+        "creator": "Digitale Duiven; fototextuur: Luc Viatour / Lucnix.be",
+        "source": "https://commons.wikimedia.org/wiki/File:Columba_livia_Luc_Viatour.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "changes": "Blender-render van het v4-model met een eigen camera voor dit portret, geschaald met Lanczos naar WebP met verliesloze alfa (tools/design-model/portraits_v4.mjs). Eigen Blender-model v4 (iteratie 17): anatomie van snavel, washuid, hals, staart en poten herzien, animaties Peck en WingWave met piekmomenten in extras.peaks; afgeleide fototextuur. Geen scan en geen levende duif. Model, rustposter en portretten vallen onder dezelfde CC BY-SA 3.0-licentie. Om de hals een stropdas: eigen procedurele geometrie en stof, meebewogen met het skelet."
+      },
+      "alt": {
+        "en": "Portrait of the individualistic pigeon.",
+        "nl": "Portret van de individualistische duif."
+      },
+      "captureSet": "stadsduif-v4-iteratie-17"
+    },
+    {
+      "id": "portrait-nonverbal",
+      "kind": "portrait",
+      "pigeon": "nonverbal",
+      "status": "approved",
+      "file": "stadsduif-v4-signalerend-kaart.webp",
+      "sha256": "d7dc37f92e2d433595e9279ec95e1881150def4c43c09390ed405c51c5a24c57",
+      "bytes": 28746,
+      "width": 512,
+      "height": 512,
+      "durationMs": null,
+      "hasAudio": false,
+      "focus": [
+        0.5,
+        0.5
+      ],
+      "origin": {
+        "reference": "https://commons.wikimedia.org/wiki/File:Columba_livia_Luc_Viatour.jpg",
+        "maker": "Digitale Duiven; fototextuur: Luc Viatour / Lucnix.be",
+        "still": "model-v4/varianten/eind/it17/signalerend-kaart.png"
+      },
+      "rights": {
+        "publicDistribution": true,
+        "license": "CC BY-SA 3.0"
+      },
+      "approval": {
+        "reviewedBy": "projectteam",
+        "reviewedAt": "2026-09-24",
+        "basis": "Model v4 is op 24 september 2026 visueel goedgekeurd zoals het is: de drie GLB-modellen, rustposters, kaart- en kopportretten in deze bytes. De pikbeweging is op 23 september 2026 goedgekeurd."
+      },
+      "attribution": {
+        "title": "Stadsduif v4 — kaartportret signalerende duif",
+        "creator": "Digitale Duiven; fototextuur: Luc Viatour / Lucnix.be",
+        "source": "https://commons.wikimedia.org/wiki/File:Columba_livia_Luc_Viatour.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "changes": "Blender-render van het v4-model met een eigen camera voor dit portret, geschaald met Lanczos naar WebP met verliesloze alfa (tools/design-model/portraits_v4.mjs). Eigen Blender-model v4 (iteratie 17): anatomie van snavel, washuid, hals, staart en poten herzien, animaties Peck en WingWave met piekmomenten in extras.peaks; afgeleide fototextuur. Geen scan en geen levende duif. Model, rustposter en portretten vallen onder dezelfde CC BY-SA 3.0-licentie."
+      },
+      "alt": {
+        "en": "Portrait of the signaling pigeon.",
+        "nl": "Portret van de signalerende duif."
+      },
+      "captureSet": "stadsduif-v4-iteratie-17"
+    },
+    {
+      "id": "portrait-head-biological",
+      "kind": "portrait-head",
+      "pigeon": "biological",
+      "status": "approved",
+      "file": "stadsduif-v4-biologisch-kop.webp",
+      "sha256": "290bd0e24dfa001e08847221eca014d11b1796876bdbb38440acbb869bce1e1b",
+      "bytes": 8216,
+      "width": 256,
+      "height": 256,
+      "durationMs": null,
+      "hasAudio": false,
+      "focus": [
+        0.5,
+        0.5
+      ],
+      "origin": {
+        "reference": "https://commons.wikimedia.org/wiki/File:Columba_livia_Luc_Viatour.jpg",
+        "maker": "Digitale Duiven; fototextuur: Luc Viatour / Lucnix.be",
+        "still": "model-v4/varianten/eind/it17/biologisch-kop.png"
+      },
+      "rights": {
+        "publicDistribution": true,
+        "license": "CC BY-SA 3.0"
+      },
+      "approval": {
+        "reviewedBy": "projectteam",
+        "reviewedAt": "2026-09-24",
+        "basis": "Model v4 is op 24 september 2026 visueel goedgekeurd zoals het is: de drie GLB-modellen, rustposters, kaart- en kopportretten in deze bytes. De pikbeweging is op 23 september 2026 goedgekeurd."
+      },
+      "attribution": {
+        "title": "Stadsduif v4 — kopportret biologische duif",
+        "creator": "Digitale Duiven; fototextuur: Luc Viatour / Lucnix.be",
+        "source": "https://commons.wikimedia.org/wiki/File:Columba_livia_Luc_Viatour.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "changes": "Blender-render van het v4-model met een eigen camera voor dit portret, geschaald met Lanczos naar WebP met verliesloze alfa (tools/design-model/portraits_v4.mjs). Eigen Blender-model v4 (iteratie 17): anatomie van snavel, washuid, hals, staart en poten herzien, animaties Peck en WingWave met piekmomenten in extras.peaks; afgeleide fototextuur. Geen scan en geen levende duif. Model, rustposter en portretten vallen onder dezelfde CC BY-SA 3.0-licentie. Het verenkleed heeft een donkerdere leigrijze kleurslag met diepere vleugelbanden (natuurlijke variatie)."
+      },
+      "alt": {
+        "en": "Head portrait of the biological pigeon.",
+        "nl": "Kopportret van de biologische duif."
+      },
+      "captureSet": "stadsduif-v4-iteratie-17"
+    },
+    {
+      "id": "portrait-head-individualist",
+      "kind": "portrait-head",
+      "pigeon": "individualist",
+      "status": "approved",
+      "file": "stadsduif-v4-individualistisch-kop.webp",
+      "sha256": "f00b3a1afe3f256efbad9569a9293f7924203ede628487fde56f015546c6ae1a",
+      "bytes": 11042,
+      "width": 256,
+      "height": 256,
+      "durationMs": null,
+      "hasAudio": false,
+      "focus": [
+        0.5,
+        0.5
+      ],
+      "origin": {
+        "reference": "https://commons.wikimedia.org/wiki/File:Columba_livia_Luc_Viatour.jpg",
+        "maker": "Digitale Duiven; fototextuur: Luc Viatour / Lucnix.be",
+        "still": "model-v4/varianten/eind/it17/individualistisch-kop.png"
+      },
+      "rights": {
+        "publicDistribution": true,
+        "license": "CC BY-SA 3.0"
+      },
+      "approval": {
+        "reviewedBy": "projectteam",
+        "reviewedAt": "2026-09-24",
+        "basis": "Model v4 is op 24 september 2026 visueel goedgekeurd zoals het is: de drie GLB-modellen, rustposters, kaart- en kopportretten in deze bytes. De pikbeweging is op 23 september 2026 goedgekeurd."
+      },
+      "attribution": {
+        "title": "Stadsduif v4 — kopportret individualistische duif",
+        "creator": "Digitale Duiven; fototextuur: Luc Viatour / Lucnix.be",
+        "source": "https://commons.wikimedia.org/wiki/File:Columba_livia_Luc_Viatour.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "changes": "Blender-render van het v4-model met een eigen camera voor dit portret, geschaald met Lanczos naar WebP met verliesloze alfa (tools/design-model/portraits_v4.mjs). Eigen Blender-model v4 (iteratie 17): anatomie van snavel, washuid, hals, staart en poten herzien, animaties Peck en WingWave met piekmomenten in extras.peaks; afgeleide fototextuur. Geen scan en geen levende duif. Model, rustposter en portretten vallen onder dezelfde CC BY-SA 3.0-licentie. Om de hals een stropdas: eigen procedurele geometrie en stof, meebewogen met het skelet."
+      },
+      "alt": {
+        "en": "Head portrait of the individualistic pigeon.",
+        "nl": "Kopportret van de individualistische duif."
+      },
+      "captureSet": "stadsduif-v4-iteratie-17"
+    },
+    {
+      "id": "portrait-head-nonverbal",
+      "kind": "portrait-head",
+      "pigeon": "nonverbal",
+      "status": "approved",
+      "file": "stadsduif-v4-signalerend-kop.webp",
+      "sha256": "b05cdcbf5d83a0995e8ce34f797f0dccdd192d0f40f5ed32ab1b155921556b37",
+      "bytes": 7236,
+      "width": 256,
+      "height": 256,
+      "durationMs": null,
+      "hasAudio": false,
+      "focus": [
+        0.5,
+        0.5
+      ],
+      "origin": {
+        "reference": "https://commons.wikimedia.org/wiki/File:Columba_livia_Luc_Viatour.jpg",
+        "maker": "Digitale Duiven; fototextuur: Luc Viatour / Lucnix.be",
+        "still": "model-v4/varianten/eind/it17/signalerend-kop.png"
+      },
+      "rights": {
+        "publicDistribution": true,
+        "license": "CC BY-SA 3.0"
+      },
+      "approval": {
+        "reviewedBy": "projectteam",
+        "reviewedAt": "2026-09-24",
+        "basis": "Model v4 is op 24 september 2026 visueel goedgekeurd zoals het is: de drie GLB-modellen, rustposters, kaart- en kopportretten in deze bytes. De pikbeweging is op 23 september 2026 goedgekeurd."
+      },
+      "attribution": {
+        "title": "Stadsduif v4 — kopportret signalerende duif",
+        "creator": "Digitale Duiven; fototextuur: Luc Viatour / Lucnix.be",
+        "source": "https://commons.wikimedia.org/wiki/File:Columba_livia_Luc_Viatour.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "changes": "Blender-render van het v4-model met een eigen camera voor dit portret, geschaald met Lanczos naar WebP met verliesloze alfa (tools/design-model/portraits_v4.mjs). Eigen Blender-model v4 (iteratie 17): anatomie van snavel, washuid, hals, staart en poten herzien, animaties Peck en WingWave met piekmomenten in extras.peaks; afgeleide fototextuur. Geen scan en geen levende duif. Model, rustposter en portretten vallen onder dezelfde CC BY-SA 3.0-licentie."
+      },
+      "alt": {
+        "en": "Head portrait of the signaling pigeon.",
+        "nl": "Kopportret van de signalerende duif."
+      },
+      "captureSet": "stadsduif-v4-iteratie-17"
+    },
+    {
+      "id": "signal-rest",
+      "kind": "rest",
+      "pigeon": "nonverbal",
+      "status": "pending",
+      "file": null,
+      "sha256": null,
+      "bytes": null,
+      "width": null,
+      "height": null,
+      "durationMs": null,
+      "hasAudio": false,
+      "focus": [
+        0.5,
+        0.5
+      ],
+      "origin": null,
+      "rights": null,
+      "approval": null,
+      "alt": {
+        "en": "Pigeon at rest",
+        "nl": "Duif in rust"
+      },
+      "captureSet": null
+    },
+    {
+      "id": "signal-movement-01",
+      "kind": "movement",
+      "pigeon": "nonverbal",
+      "status": "pending",
+      "file": null,
+      "sha256": null,
+      "bytes": null,
+      "width": null,
+      "height": null,
+      "durationMs": null,
+      "hasAudio": false,
+      "focus": [
+        0.5,
+        0.5
+      ],
+      "origin": null,
+      "rights": null,
+      "approval": null,
+      "alt": {
+        "en": "Pigeon movement",
+        "nl": "Duivenbeweging"
+      },
+      "captureSet": null
+    }
+  ],
+  "sounds": [
+    {
+      "id": "alarm-call",
+      "neutralId": "signal-01",
+      "file": "sounds/alarm-call.mp3",
+      "kind": "synthetic",
+      "status": "temporary",
+      "sha256": "143f4d2ef9fdfdd20ab74b84db285a6824635af381682c881a8055dacc5b28b2",
+      "durationMs": 1200,
+      "bytes": 10283,
+      "origin": {
+        "reference": "Existing project prototype; config/personas.yaml documents original tone/noise synthesis",
+        "maker": "Project prototype; individual maker not recorded",
+        "recordedAt": null,
+        "location": null
+      },
+      "rights": {
+        "publicDistribution": false,
+        "note": "Temporary project playback; field recording rights and final approval are pending"
+      },
+      "approval": null
+    },
+    {
+      "id": "coo-insistent",
+      "neutralId": "signal-02",
+      "file": "sounds/coo-insistent.mp3",
+      "kind": "synthetic",
+      "status": "temporary",
+      "sha256": "1adca416ca1d0c4ba96e5168671ce6b0fb3b149615c0cf0a928f49905e1ec876",
+      "durationMs": 1460,
+      "bytes": 12372,
+      "origin": {
+        "reference": "Existing project prototype; config/personas.yaml documents original tone/noise synthesis",
+        "maker": "Project prototype; individual maker not recorded",
+        "recordedAt": null,
+        "location": null
+      },
+      "rights": {
+        "publicDistribution": false,
+        "note": "Temporary project playback; field recording rights and final approval are pending"
+      },
+      "approval": null
+    },
+    {
+      "id": "coo-soft",
+      "neutralId": "signal-03",
+      "file": "sounds/coo-soft.mp3",
+      "kind": "synthetic",
+      "status": "temporary",
+      "sha256": "5caf5a73c1b79dcd6d192f886b701044cdcfc371146007293c2d71d3bf1271c3",
+      "durationMs": 1170,
+      "bytes": 10074,
+      "origin": {
+        "reference": "Existing project prototype; config/personas.yaml documents original tone/noise synthesis",
+        "maker": "Project prototype; individual maker not recorded",
+        "recordedAt": null,
+        "location": null
+      },
+      "rights": {
+        "publicDistribution": false,
+        "note": "Temporary project playback; field recording rights and final approval are pending"
+      },
+      "approval": null
+    },
+    {
+      "id": "flap-alarm",
+      "neutralId": "signal-04",
+      "file": "sounds/flap-alarm.mp3",
+      "kind": "synthetic",
+      "status": "temporary",
+      "sha256": "5cf4846b174e7e7ce0fe67ba4c757ad1f0c4db6a5105116574350c78cf363f89",
+      "durationMs": 1700,
+      "bytes": 14462,
+      "origin": {
+        "reference": "Existing project prototype; config/personas.yaml documents original tone/noise synthesis",
+        "maker": "Project prototype; individual maker not recorded",
+        "recordedAt": null,
+        "location": null
+      },
+      "rights": {
+        "publicDistribution": false,
+        "note": "Temporary project playback; field recording rights and final approval are pending"
+      },
+      "approval": null
+    },
+    {
+      "id": "shuffle",
+      "neutralId": "signal-05",
+      "file": "sounds/shuffle.mp3",
+      "kind": "synthetic",
+      "status": "temporary",
+      "sha256": "fc57755985528ca2403f86a0ee256bc56e3811f51aaba0af52a891ab07647fcc",
+      "durationMs": 1000,
+      "bytes": 8820,
+      "origin": {
+        "reference": "Existing project prototype; config/personas.yaml documents original tone/noise synthesis",
+        "maker": "Project prototype; individual maker not recorded",
+        "recordedAt": null,
+        "location": null
+      },
+      "rights": {
+        "publicDistribution": false,
+        "note": "Temporary project playback; field recording rights and final approval are pending"
+      },
+      "approval": null
+    },
+    {
+      "id": "wing-rustle",
+      "neutralId": "signal-06",
+      "file": "sounds/wing-rustle.mp3",
+      "kind": "synthetic",
+      "status": "temporary",
+      "sha256": "4acc619577750bee617bf33a42eca4d6a55947318218ac82f32574f05cd4cb21",
+      "durationMs": 1200,
+      "bytes": 10283,
+      "origin": {
+        "reference": "Existing project prototype; config/personas.yaml documents original tone/noise synthesis",
+        "maker": "Project prototype; individual maker not recorded",
+        "recordedAt": null,
+        "location": null
+      },
+      "rights": {
+        "publicDistribution": false,
+        "note": "Temporary project playback; field recording rights and final approval are pending"
+      },
+      "approval": null
+    }
+  ],
+  "native": {
+    "pigeons": {
+      "biological": {
+        "model": {
+          "id": "stadsduif-v4-biologisch",
+          "kind": "model",
+          "status": "approved",
+          "file": "stadsduif-v4-biologisch.glb",
+          "sha256": "b3f40b3b6609a0521e2c1f60c1d048b9571ab75abca673bdf4b852cdc4521f11",
+          "bytes": 7833460,
+          "origin": {
+            "reference": "https://commons.wikimedia.org/wiki/File:Columba_livia_Luc_Viatour.jpg",
+            "maker": "Digitale Duiven; fototextuur: Luc Viatour / Lucnix.be"
+          },
+          "rights": {
+            "publicDistribution": true,
+            "license": "CC BY-SA 3.0"
+          },
+          "approval": {
+            "reviewedBy": "projectteam",
+            "reviewedAt": "2026-09-24",
+            "basis": "Model v4 is op 24 september 2026 visueel goedgekeurd zoals het is: de drie GLB-modellen, rustposters, kaart- en kopportretten in deze bytes. De pikbeweging is op 23 september 2026 goedgekeurd."
+          },
+          "attribution": {
+            "title": "Stadsduif v4 — 3D-model biologische duif",
+            "creator": "Digitale Duiven; fototextuur: Luc Viatour / Lucnix.be",
+            "source": "https://commons.wikimedia.org/wiki/File:Columba_livia_Luc_Viatour.jpg",
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "changes": "Eigen Blender-model v4 (iteratie 17): anatomie van snavel, washuid, hals, staart en poten herzien, animaties Peck en WingWave met piekmomenten in extras.peaks; afgeleide fototextuur. Geen scan en geen levende duif. Model, rustposter en portretten vallen onder dezelfde CC BY-SA 3.0-licentie. Het verenkleed heeft een donkerdere leigrijze kleurslag met diepere vleugelbanden (natuurlijke variatie)."
+          }
+        },
+        "poster": {
+          "id": "stadsduif-v4-biologisch-rust",
+          "kind": "poster",
+          "status": "approved",
+          "file": "stadsduif-v4-biologisch-rust.png",
+          "sha256": "8e50a7595c8ca9f8d1d85669133b7fda9ef2cf15dfcf42f613458277eb8a7332",
+          "bytes": 674255,
+          "origin": {
+            "reference": "https://commons.wikimedia.org/wiki/File:Columba_livia_Luc_Viatour.jpg",
+            "maker": "Digitale Duiven; fototextuur: Luc Viatour / Lucnix.be"
+          },
+          "rights": {
+            "publicDistribution": true,
+            "license": "CC BY-SA 3.0"
+          },
+          "approval": {
+            "reviewedBy": "projectteam",
+            "reviewedAt": "2026-10-05",
+            "basis": "De gedecodeerde pixels (RGBA, 1400×1100) zijn identiek aan de rustposter die op 24 september 2026 met model v4 visueel is goedgekeurd; die goedkeuring geldt daarom voor deze bytes."
+          },
+          "attribution": {
+            "title": "Stadsduif v4 — rustposter biologische duif",
+            "creator": "Digitale Duiven; fototextuur: Luc Viatour / Lucnix.be",
+            "source": "https://commons.wikimedia.org/wiki/File:Columba_livia_Luc_Viatour.jpg",
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "changes": "Blender-render van het v4-model in de vergaderkijkhoek van deze duif, gekadreerd volgens stage-composition.json. Eigen Blender-model v4 (iteratie 17): anatomie van snavel, washuid, hals, staart en poten herzien, animaties Peck en WingWave met piekmomenten in extras.peaks; afgeleide fototextuur. Geen scan en geen levende duif. Model, rustposter en portretten vallen onder dezelfde CC BY-SA 3.0-licentie. Het verenkleed heeft een donkerdere leigrijze kleurslag met diepere vleugelbanden (natuurlijke variatie)."
+          },
+          "width": 1400,
+          "height": 1100
+        },
+        "view": {
+          "azimuth": -1.5708,
+          "elevation": 0.12,
+          "fov": 32
+        }
+      },
+      "individualist": {
+        "model": {
+          "id": "stadsduif-v4-individualistisch",
+          "kind": "model",
+          "status": "approved",
+          "file": "stadsduif-v4-individualistisch.glb",
+          "sha256": "3985334f8363a919a8569c4f71e2da1b47e2095306915d2b98b99b7834e36c17",
+          "bytes": 8282444,
+          "origin": {
+            "reference": "https://commons.wikimedia.org/wiki/File:Columba_livia_Luc_Viatour.jpg",
+            "maker": "Digitale Duiven; fototextuur: Luc Viatour / Lucnix.be"
+          },
+          "rights": {
+            "publicDistribution": true,
+            "license": "CC BY-SA 3.0"
+          },
+          "approval": {
+            "reviewedBy": "projectteam",
+            "reviewedAt": "2026-09-24",
+            "basis": "Model v4 is op 24 september 2026 visueel goedgekeurd zoals het is: de drie GLB-modellen, rustposters, kaart- en kopportretten in deze bytes. De pikbeweging is op 23 september 2026 goedgekeurd."
+          },
+          "attribution": {
+            "title": "Stadsduif v4 — 3D-model individualistische duif",
+            "creator": "Digitale Duiven; fototextuur: Luc Viatour / Lucnix.be",
+            "source": "https://commons.wikimedia.org/wiki/File:Columba_livia_Luc_Viatour.jpg",
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "changes": "Eigen Blender-model v4 (iteratie 17): anatomie van snavel, washuid, hals, staart en poten herzien, animaties Peck en WingWave met piekmomenten in extras.peaks; afgeleide fototextuur. Geen scan en geen levende duif. Model, rustposter en portretten vallen onder dezelfde CC BY-SA 3.0-licentie. Om de hals een stropdas: eigen procedurele geometrie en stof, meebewogen met het skelet."
+          }
+        },
+        "poster": {
+          "id": "stadsduif-v4-individualistisch-rust",
+          "kind": "poster",
+          "status": "approved",
+          "file": "stadsduif-v4-individualistisch-rust.png",
+          "sha256": "bf67ac6a195a998455ffaa04469c52246c885cb7abd4b74c58649e807aa99dc5",
+          "bytes": 718025,
+          "origin": {
+            "reference": "https://commons.wikimedia.org/wiki/File:Columba_livia_Luc_Viatour.jpg",
+            "maker": "Digitale Duiven; fototextuur: Luc Viatour / Lucnix.be"
+          },
+          "rights": {
+            "publicDistribution": true,
+            "license": "CC BY-SA 3.0"
+          },
+          "approval": {
+            "reviewedBy": "projectteam",
+            "reviewedAt": "2026-10-05",
+            "basis": "De gedecodeerde pixels (RGBA, 1400×1100) zijn identiek aan de rustposter die op 24 september 2026 met model v4 visueel is goedgekeurd; die goedkeuring geldt daarom voor deze bytes."
+          },
+          "attribution": {
+            "title": "Stadsduif v4 — rustposter individualistische duif",
+            "creator": "Digitale Duiven; fototextuur: Luc Viatour / Lucnix.be",
+            "source": "https://commons.wikimedia.org/wiki/File:Columba_livia_Luc_Viatour.jpg",
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "changes": "Blender-render van het v4-model in de vergaderkijkhoek van deze duif, gekadreerd volgens stage-composition.json. Eigen Blender-model v4 (iteratie 17): anatomie van snavel, washuid, hals, staart en poten herzien, animaties Peck en WingWave met piekmomenten in extras.peaks; afgeleide fototextuur. Geen scan en geen levende duif. Model, rustposter en portretten vallen onder dezelfde CC BY-SA 3.0-licentie. Om de hals een stropdas: eigen procedurele geometrie en stof, meebewogen met het skelet."
+          },
+          "width": 1400,
+          "height": 1100
+        },
+        "view": {
+          "azimuth": -1.84159,
+          "elevation": 0.13,
+          "fov": 32
+        }
+      },
+      "nonverbal": {
+        "model": {
+          "id": "stadsduif-v4-signalerend",
+          "kind": "model",
+          "status": "approved",
+          "file": "stadsduif-v4-signalerend.glb",
+          "sha256": "835b4ab814f419fa789ce7f602c8d889e0396cd94954b6f660101d75ae330919",
+          "bytes": 7714108,
+          "origin": {
+            "reference": "https://commons.wikimedia.org/wiki/File:Columba_livia_Luc_Viatour.jpg",
+            "maker": "Digitale Duiven; fototextuur: Luc Viatour / Lucnix.be"
+          },
+          "rights": {
+            "publicDistribution": true,
+            "license": "CC BY-SA 3.0"
+          },
+          "approval": {
+            "reviewedBy": "projectteam",
+            "reviewedAt": "2026-09-24",
+            "basis": "Model v4 is op 24 september 2026 visueel goedgekeurd zoals het is: de drie GLB-modellen, rustposters, kaart- en kopportretten in deze bytes. De pikbeweging is op 23 september 2026 goedgekeurd."
+          },
+          "attribution": {
+            "title": "Stadsduif v4 — 3D-model signalerende duif",
+            "creator": "Digitale Duiven; fototextuur: Luc Viatour / Lucnix.be",
+            "source": "https://commons.wikimedia.org/wiki/File:Columba_livia_Luc_Viatour.jpg",
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "changes": "Eigen Blender-model v4 (iteratie 17): anatomie van snavel, washuid, hals, staart en poten herzien, animaties Peck en WingWave met piekmomenten in extras.peaks; afgeleide fototextuur. Geen scan en geen levende duif. Model, rustposter en portretten vallen onder dezelfde CC BY-SA 3.0-licentie."
+          }
+        },
+        "poster": {
+          "id": "stadsduif-v4-signalerend-rust",
+          "kind": "poster",
+          "status": "approved",
+          "file": "stadsduif-v4-signalerend-rust.png",
+          "sha256": "1e378e511a9908b72f5c054621f0c93ada97f03604462ea3cfd90749fb8668c7",
+          "bytes": 766212,
+          "origin": {
+            "reference": "https://commons.wikimedia.org/wiki/File:Columba_livia_Luc_Viatour.jpg",
+            "maker": "Digitale Duiven; fototextuur: Luc Viatour / Lucnix.be"
+          },
+          "rights": {
+            "publicDistribution": true,
+            "license": "CC BY-SA 3.0"
+          },
+          "approval": {
+            "reviewedBy": "projectteam",
+            "reviewedAt": "2026-10-05",
+            "basis": "De gedecodeerde pixels (RGBA, 1400×1100) zijn identiek aan de rustposter die op 24 september 2026 met model v4 visueel is goedgekeurd; die goedkeuring geldt daarom voor deze bytes."
+          },
+          "attribution": {
+            "title": "Stadsduif v4 — rustposter signalerende duif",
+            "creator": "Digitale Duiven; fototextuur: Luc Viatour / Lucnix.be",
+            "source": "https://commons.wikimedia.org/wiki/File:Columba_livia_Luc_Viatour.jpg",
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "changes": "Blender-render van het v4-model in de vergaderkijkhoek van deze duif, gekadreerd volgens stage-composition.json. Eigen Blender-model v4 (iteratie 17): anatomie van snavel, washuid, hals, staart en poten herzien, animaties Peck en WingWave met piekmomenten in extras.peaks; afgeleide fototextuur. Geen scan en geen levende duif. Model, rustposter en portretten vallen onder dezelfde CC BY-SA 3.0-licentie."
+          },
+          "width": 1400,
+          "height": 1100
+        },
+        "view": {
+          "azimuth": -0.57,
+          "elevation": 0.105,
+          "fov": 32
+        }
+      }
+    },
+    "sounds": {
+      "calm": {
+        "id": "pigeon-field-coo",
+        "kind": "field-recording",
+        "status": "approved",
+        "file": "pigeon-field-coo.mp3",
+        "sha256": "5e9c89c10b1061d9e164dfabafa94f1cdcd3878cd1e4c562c4a933a9f46a2a6e",
+        "bytes": 110060,
+        "origin": {
+          "reference": "https://freesound.org/people/TheKingOfGeeks360/sounds/808001/",
+          "maker": "TheKingOfGeeks360"
+        },
+        "rights": {
+          "publicDistribution": true,
+          "license": "CC0 1.0"
+        },
+        "approval": {
+          "reviewedBy": "projectteam — herkomst, CC0-licentie, bestandsintegriteit en luidheid gemeten en gecontroleerd (geautomatiseerd)",
+          "reviewedAt": "2026-09-15",
+          "basis": "Selectie en mastering op herkomst, licentie, codec en gemeten luidheid; geen menselijke luisterbeoordeling."
+        },
+        "attribution": {
+          "title": "Pigeons & Doves - Homing Pigeon Cooing",
+          "creator": "TheKingOfGeeks360",
+          "source": "https://freesound.org/people/TheKingOfGeeks360/sounds/808001/",
+          "license": "CC0 1.0",
+          "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "changes": "Fragment uit de openbare HQ-preview, 20 ms fade-in en 78 ms fade-out, +2,31 dB naar −24,3 LUFS (true peak −6,6 dBTP); MP3 192 kbit/s, stereo 48 kHz. Andere duif dan de fototextuur; geen oorspronkelijke synchronisatie met het model."
+        },
+        "durationMs": 4529
+      },
+      "insistent": {
+        "id": "pigeon-field-coos-repeated",
+        "kind": "field-recording",
+        "status": "approved",
+        "file": "pigeon-field-coos-repeated.mp3",
+        "sha256": "97ff30b6767a4837209c57628f85c434c5e3be1a34dd41c43bb2e0c4c67a14d5",
+        "bytes": 96236,
+        "origin": {
+          "reference": "https://freesound.org/people/craigsmith/sounds/479589/",
+          "maker": "craigsmith"
+        },
+        "rights": {
+          "publicDistribution": true,
+          "license": "CC0 1.0"
+        },
+        "approval": {
+          "reviewedBy": "projectteam — herkomst, CC0-licentie, bestandsintegriteit en luidheid gemeten en gecontroleerd (geautomatiseerd)",
+          "reviewedAt": "2026-09-15",
+          "basis": "Selectie en mastering op herkomst, licentie, codec en gemeten luidheid; geen menselijke luisterbeoordeling."
+        },
+        "attribution": {
+          "title": "R01-28 Pigeon Coos",
+          "creator": "craigsmith",
+          "source": "https://freesound.org/people/craigsmith/sounds/479589/",
+          "license": "CC0 1.0",
+          "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "changes": "Fragment 3,90–7,85 s uit de openbare HQ-preview, 30 ms fade-in en 120 ms fade-out, +7,67 dB naar −19,8 LUFS (true peak −11,4 dBTP); mono bron, MP3 192 kbit/s, stereo 48 kHz. Andere duif dan de fototextuur; geen oorspronkelijke synchronisatie met het model."
+        },
+        "durationMs": 3950
+      },
+      "alarm": {
+        "id": "pigeon-field-loft-chorus",
+        "kind": "field-recording",
+        "status": "approved",
+        "file": "pigeon-field-loft-chorus.mp3",
+        "sha256": "8ada2bdf415c24b527eff7b8f8400defbc3a98da5998c24d05334b1e8986316c",
+        "bytes": 87596,
+        "origin": {
+          "reference": "https://freesound.org/people/Beskinsky/sounds/778143/",
+          "maker": "Beskinsky"
+        },
+        "rights": {
+          "publicDistribution": true,
+          "license": "CC0 1.0"
+        },
+        "approval": {
+          "reviewedBy": "projectteam — herkomst, CC0-licentie, bestandsintegriteit en luidheid gemeten en gecontroleerd (geautomatiseerd)",
+          "reviewedAt": "2026-09-15",
+          "basis": "Selectie en mastering op herkomst, licentie, codec en gemeten luidheid; geen menselijke luisterbeoordeling."
+        },
+        "attribution": {
+          "title": "Tauben im Taubenschlag (pigeons)",
+          "creator": "Beskinsky",
+          "source": "https://freesound.org/people/Beskinsky/sounds/778143/",
+          "license": "CC0 1.0",
+          "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "changes": "Fragment 95,20–98,80 s uit de openbare HQ-preview, 30 ms fade-in en 150 ms fade-out, +7,83 dB met true-peak-limiter op −1 dBTP naar −15,4 LUFS (true peak −1,2 dBTP); MP3 192 kbit/s, stereo 48 kHz. Meerdere duiven in een til, andere duiven dan de fototextuur; geen oorspronkelijke synchronisatie met het model."
+        },
+        "durationMs": 3600
+      }
+    }
+  },
+  "explainer": {
+    "video": {
+      "id": "explainer-video",
+      "kind": "explainer-video",
+      "status": "approved",
+      "origin": {
+        "reference": "uitlegvideo.mp4",
+        "maker": "Digitale Duiven"
+      },
+      "rights": {
+        "publicDistribution": true
+      },
+      "approval": {
+        "reviewedBy": "projectteam",
+        "reviewedAt": "2026-09-24",
+        "basis": "Gekozen montage van de uitlegvideo"
+      },
+      "file": "uitlegvideo.mp4",
+      "sha256": "2591ed6d578a4ddbe30a183dca412cb60df37d2454654cbd221eac5b4187118e",
+      "bytes": 7740477,
+      "width": 1440,
+      "height": 1080,
+      "durationMs": 79900,
+      "hasAudio": true,
+      "language": "en"
+    },
+    "poster": {
+      "id": "explainer-poster",
+      "kind": "explainer-poster",
+      "status": "approved",
+      "origin": {
+        "reference": "uitlegvideo.mp4",
+        "maker": "Digitale Duiven"
+      },
+      "rights": {
+        "publicDistribution": true
+      },
+      "approval": {
+        "reviewedBy": "projectteam",
+        "reviewedAt": "2026-09-24",
+        "basis": "Gekozen montage van de uitlegvideo"
+      },
+      "file": "uitlegvideo-poster.png",
+      "sha256": "580885d12217d83c9574c3a2052ef648d086669f8c4623a03020133076fd7a47",
+      "bytes": 378126,
+      "width": 1440,
+      "height": 1080
+    },
+    "captions": {
+      "id": "explainer-captions",
+      "kind": "explainer-captions",
+      "status": "approved",
+      "origin": {
+        "reference": "uitlegvideo.mp4",
+        "maker": "Digitale Duiven"
+      },
+      "rights": {
+        "publicDistribution": true
+      },
+      "approval": {
+        "reviewedBy": "projectteam",
+        "reviewedAt": "2026-09-24",
+        "basis": "Gekozen montage van de uitlegvideo"
+      },
+      "file": "uitlegvideo-en.vtt",
+      "sha256": "80a3be40f139a41bff01a529cf5901b6c354d17449d974627fb3d4bf4f8dae30",
+      "bytes": 500,
+      "language": "en"
+    }
+  }
+}

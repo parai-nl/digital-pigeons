@@ -1,0 +1,2513 @@
+{
+ "format": "duiven-etalage-take/1",
+ "id": "meeting-poep-en-kennispartner-20260923T150201Z",
+ "kind": "meeting",
+ "item": {
+  "statement": "poep",
+  "lang": "en",
+  "pigeon": "kennispartner",
+  "modulePigeon": "biological"
+ },
+ "input": {
+  "speaker": "Chair",
+  "text": "The market traders keep complaining about pigeon droppings on their stalls.",
+  "audio": "uitspraken/poep-en.mp3",
+  "audioSha256": "872cf49b37bd46abe985dea22aa1b01465104a8cefd37acd7c650db2b0e186ff",
+  "audioMs": 3994,
+  "voice": "Charlotte (ElevenLabs eleven_multilingual_v2)",
+  "micLeadMs": 4000,
+  "windowMs": 25000,
+  "placeholder": true
+ },
+ "recordedAt": "2026-09-23T15:02:01.472Z",
+ "finishedAt": "2026-09-23T15:02:45.830Z",
+ "server": {
+  "base": "http://127.0.0.1:8094",
+  "modelPolicy": {
+   "model": "vertex_ai/gemini-3.5-flash",
+   "detectionModel": "vertex_ai/gemini-3.5-flash",
+   "endpoint": "https://llm-proxy.invalid"
+  },
+  "knowledge": {
+   "kbId": "Duiven",
+   "bundleSchema": "duiven/3",
+   "languages": [
+    "nl",
+    "en"
+   ],
+   "importedAt": "2026-09-15T12:26:51Z",
+   "counts": {
+    "belongs_to": 4067,
+    "belongs_to_perspective": 4067,
+    "belongs_to_subthema": 4067,
+    "contains": 4067,
+    "contains_perspective": 297,
+    "contains_subthema": 149,
+    "contains_thema": 26,
+    "destillaat": 4067,
+    "domein": 3,
+    "has_quote": 4225,
+    "interview": 120,
+    "perspective": 297,
+    "quote": 4225,
+    "subthema": 149,
+    "thema": 26
+   }
+  },
+  "database": {
+   "name": "duif_etalage",
+   "copyOf": "duif_v3"
+  },
+  "module": {
+   "commit": "44186b900325eefad26c20b91e92f7350eb81bd0",
+   "moduleTree": "272829aae8444c82053a849b7a66ccc5a5a9109f",
+   "dirty": false,
+   "paraiCore": {
+    "commit": "29c670c73b73295c8c96592947cb9622e730c51c",
+    "dirty": false
+   },
+   "tags": [
+    "skipauth"
+   ],
+   "builtAt": "2026-09-23T14:40:12.508Z",
+   "binary": "module/bin/duif-etalage",
+   "bundleSha256": "d64a902bff38bf25d090a3bfe74e3f6bf4cfc7c21cb5160bddda9c45dced540d"
+  },
+  "pigeons": [
+   {
+    "id": "biological",
+    "engine": "agent",
+    "chat": true,
+    "meeting": true,
+    "autonomousDefault": false
+   },
+   {
+    "id": "individualist",
+    "engine": "agent",
+    "chat": true,
+    "meeting": true,
+    "autonomousDefault": false
+   },
+   {
+    "id": "nonverbal",
+    "engine": "pipeline",
+    "chat": false,
+    "meeting": true,
+    "autonomousDefault": true
+   }
+  ]
+ },
+ "failure": null,
+ "session": {
+  "id": "98f4694f8a15890a98b411321a708a83",
+  "lang": "en",
+  "pigeonId": "biological",
+  "autonomous": true,
+  "eagerness": "normal",
+  "cooldownSeconds": 0
+ },
+ "timeline": {
+  "micOpenMs": 1376,
+  "utteranceStartMs": 5376,
+  "utteranceEndMs": 9370,
+  "windowEndMs": 34370
+ },
+ "actions": [
+  {
+   "name": "load",
+   "t": 113
+  },
+  {
+   "name": "autonomy-on",
+   "t": 343
+  },
+  {
+   "name": "seat",
+   "t": 1162
+  },
+  {
+   "name": "reaction",
+   "t": 18268,
+   "type": "persona"
+  },
+  {
+   "name": "reaction-done",
+   "t": 41881
+  },
+  {
+   "name": "end-click",
+   "t": 43383
+  },
+  {
+   "name": "ended",
+   "t": 43406
+  }
+ ],
+ "exchanges": [
+  {
+   "id": 1,
+   "method": "GET",
+   "path": "/access/notice",
+   "requestBody": null,
+   "t": 194,
+   "headMs": 7,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 8,
+   "body": "{\"version\":\"2026-09-22.1\",\"acknowledged\":true,\"acknowledgedAt\":\"2026-09-22T12:57:04.398172+02:00\"}\n"
+  },
+  {
+   "id": 2,
+   "method": "GET",
+   "path": "/duiven",
+   "requestBody": null,
+   "t": 199,
+   "headMs": 2,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 3,
+   "body": "{\"duiven\":[{\"id\":\"biological\",\"name\":{\"en\":\"Knowledge Partner\",\"nl\":\"Kennispartner\"},\"voiceReady\":true,\"knowledgeBase\":true,\"chat\":true,\"meeting\":true,\"topics\":[{\"id\":\"population-control\",\"label\":{\"en\":\"Population control\",\"nl\":\"Populatiebeheer\"}},{\"id\":\"nuisance-and-health\",\"label\":{\"en\":\"Nuisance and health\",\"nl\":\"Overlast en gezondheid\"}},{\"id\":\"feeding-and-food\",\"label\":{\"en\":\"Feeding and food\",\"nl\":\"Voeren en voedsel\"}},{\"id\":\"nesting-and-shelter\",\"label\":{\"en\":\"Nesting and shelter\",\"nl\":\"Nestelen en beschutting\"}},{\"id\":\"urban-ecology\",\"label\":{\"en\":\"Urban ecology\",\"nl\":\"Stadsecologie\"}}],\"engine\":\"agent\",\"autonomousDefault\":false},{\"id\":\"individualist\",\"name\":{\"en\":\"Stakeholder\",\"nl\":\"Stakeholder\"},\"voiceReady\":true,\"knowledgeBase\":true,\"chat\":true,\"meeting\":true,\"topics\":[{\"id\":\"pigeon-rights\",\"label\":{\"en\":\"What pigeons are owed\",\"nl\":\"Waar duiven recht op hebben\"}},{\"id\":\"city-space\",\"label\":{\"en\":\"Whose city is it\",\"nl\":\"Van wie is de stad\"}},{\"id\":\"decided-about-not-with\",\"label\":{\"en\":\"Decided about, not with\",\"nl\":\"Over ons, zonder ons\"}},{\"id\":\"pest-framing\",\"label\":{\"en\":\"Being called vermin\",\"nl\":\"Ongedierte genoemd worden\"}}],\"engine\":\"agent\",\"autonomousDefault\":false},{\"id\":\"nonverbal\",\"name\":{\"en\":\"Signaling Pigeon\",\"nl\":\"Signalerende duif\"},\"voiceReady\":false,\"knowledgeBase\":false,\"chat\":false,\"meeting\":true,\"topics\":[{\"id\":\"threat-and-removal\",\"label\":{\"en\":\"Population intervention\",\"nl\":\"Ingrijpen in de populatie\"}},{\"id\":\"food\",\"label\":{\"en\":\"Access to food\",\"nl\":\"Toegang tot voedsel\"}},{\"id\":\"nesting\",\"label\":{\"en\":\"Nesting and roosting access\",\"nl\":\"Toegang tot nest- en verblijfplaatsen\"}},{\"id\":\"pigeons-nearby\",\"label\":{\"en\":\"Pigeons nearby\",\"nl\":\"Duiven in de buurt\"}}],\"engine\":\"pipeline\",\"autonomousDefault\":true}],\"gedrag\":{\"interventieZelfstandig\":false,\"interventieThrottleSeconden\":0,\"inactiviteitPromptMinuten\":10,\"inactiviteitSluitSeconden\":90,\"taalDefault\":\"en\",\"detectieGretigheid\":\"normal\",\"detectieVensterWoorden\":3,\"detectieIntervalSeconden\":6,\"stilteMilliseconden\":1500,\"arousalHalveringSeconden\":120},\"modelPolicy\":{\"model\":\"vertex_ai/gemini-3.5-flash\",\"detectionModel\":\"vertex_ai/gemini-3.5-flash\",\"endpoint\":\"https://llm-proxy.invalid\"}}\n"
+  },
+  {
+   "id": 3,
+   "method": "GET",
+   "path": "/chat/sessions",
+   "requestBody": null,
+   "t": 199,
+   "headMs": 5,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 7,
+   "bodyOmitted": "chatgeschiedenis van het opnameaccount; hoort niet bij deze vergadering"
+  },
+  {
+   "id": 4,
+   "method": "GET",
+   "path": "/knowledge/status",
+   "requestBody": null,
+   "t": 203,
+   "headMs": 3,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 3,
+   "body": "{\"state\":\"ready\",\"kbId\":\"Duiven\",\"counts\":{\"belongs_to\":4067,\"belongs_to_perspective\":4067,\"belongs_to_subthema\":4067,\"contains\":4067,\"contains_perspective\":297,\"contains_subthema\":149,\"contains_thema\":26,\"destillaat\":4067,\"domein\":3,\"has_quote\":4225,\"interview\":120,\"perspective\":297,\"quote\":4225,\"subthema\":149,\"thema\":26},\"bundleSchema\":\"duiven/3\",\"languages\":[\"nl\",\"en\"],\"sourceLanguage\":\"nl\",\"importedAt\":\"2026-09-15T12:26:51Z\"}\n"
+  },
+  {
+   "id": 5,
+   "method": "POST",
+   "path": "/meeting/sessions",
+   "requestBody": "{\"pigeonId\":\"biological\",\"playbackTracking\":true,\"lang\":\"en\",\"autonomous\":true,\"eagerness\":\"normal\",\"cooldownSeconds\":0}",
+   "t": 1312,
+   "headMs": 4,
+   "status": 201,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 5,
+   "body": "{\"autonomous\":true,\"autonomyPaused\":false,\"eagerness\":\"normal\",\"lang\":\"en\",\"listening\":\"reconnecting\",\"pigeonId\":\"biological\",\"playbackTracking\":true,\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"settings\":{\"turnId\":\"0\",\"autonomyPaused\":false,\"playbackTracking\":true,\"autonomous\":true,\"eagerness\":\"normal\",\"cooldownSeconds\":0},\"voice\":\"ready\"}\n"
+  },
+  {
+   "id": 72,
+   "method": "POST",
+   "path": "/meeting/sessions/98f4694f8a15890a98b411321a708a83/playback",
+   "requestBody": "{\"turnId\":\"1\",\"state\":\"started\"}",
+   "t": 18714,
+   "headMs": 3,
+   "status": 202,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 4,
+   "body": "{\"accepted\":true,\"settings\":{\"turnId\":\"1\",\"autonomyPaused\":false,\"playbackTracking\":true,\"autonomous\":true,\"eagerness\":\"normal\",\"cooldownSeconds\":0},\"speaking\":true}\n"
+  },
+  {
+   "id": 161,
+   "method": "POST",
+   "path": "/meeting/sessions/98f4694f8a15890a98b411321a708a83/playback",
+   "requestBody": "{\"turnId\":\"1\",\"state\":\"ended\"}",
+   "t": 41034,
+   "headMs": 1,
+   "status": 202,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"accepted\":true,\"settings\":{\"turnId\":\"1\",\"autonomyPaused\":false,\"playbackTracking\":true,\"autonomous\":true,\"eagerness\":\"normal\",\"cooldownSeconds\":0},\"speaking\":false}\n"
+  },
+  {
+   "id": 171,
+   "method": "DELETE",
+   "path": "/meeting/sessions/98f4694f8a15890a98b411321a708a83",
+   "requestBody": null,
+   "t": 43400,
+   "headMs": 7,
+   "status": 204,
+   "headers": [],
+   "endMs": 7,
+   "body": ""
+  }
+ ],
+ "audioUpload": {
+  "requests": 163,
+  "statuses": {
+   "202": 163
+  },
+  "firstMs": 1770,
+  "lastMs": 43332
+ },
+ "channels": [
+  {
+   "channel": 1,
+   "path": "/meeting/sessions/98f4694f8a15890a98b411321a708a83/events",
+   "t": 1317,
+   "messages": [
+    {
+     "t": 1325,
+     "data": "{\"type\":\"state\",\"turnId\":\"0\",\"autonomyPaused\":false,\"playbackTracking\":true,\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"pigeonId\":\"biological\",\"lang\":\"en\",\"listening\":\"reconnecting\",\"speaking\":false,\"detector\":{\"enabled\":true,\"state\":\"ready\",\"retryable\":false},\"settings\":{\"turnId\":\"0\",\"autonomyPaused\":false,\"playbackTracking\":true,\"autonomous\":true,\"eagerness\":\"normal\",\"cooldownSeconds\":0},\"voice\":\"ready\"}"
+    },
+    {
+     "t": 1502,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "t": 6200,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"speaking\":false,\"text\":\"The\"}"
+    },
+    {
+     "t": 6317,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "t": 6482,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"speaking\":false,\"text\":\"The market\"}"
+    },
+    {
+     "t": 6674,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"speaking\":false,\"text\":\"The market\"}"
+    },
+    {
+     "t": 6940,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"speaking\":false,\"text\":\"The market trad\"}"
+    },
+    {
+     "t": 7200,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"speaking\":false,\"text\":\"The market traders\"}"
+    },
+    {
+     "t": 7248,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"speaking\":false,\"text\":\"The market traders ke\"}"
+    },
+    {
+     "t": 7449,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"speaking\":false,\"text\":\"The market traders keep\"}"
+    },
+    {
+     "t": 7501,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"speaking\":false,\"text\":\"The market traders keep comp\"}"
+    },
+    {
+     "t": 7573,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"speaking\":false,\"text\":\"The market traders keep compla\"}"
+    },
+    {
+     "t": 7700,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"speaking\":false,\"text\":\"The market traders keep complaining\"}"
+    },
+    {
+     "t": 7700,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"speaking\":false,\"text\":\"The market traders keep complaining about\"}"
+    },
+    {
+     "t": 8222,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"speaking\":false,\"text\":\"The market traders keep complaining about p\"}"
+    },
+    {
+     "t": 8482,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"speaking\":false,\"text\":\"The market traders keep complaining about pige\"}"
+    },
+    {
+     "t": 8536,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"speaking\":false,\"text\":\"The market traders keep complaining about pigeon\"}"
+    },
+    {
+     "t": 8747,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"speaking\":false,\"text\":\"The market traders keep complaining about pigeon drop\"}"
+    },
+    {
+     "t": 8747,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"speaking\":false,\"text\":\"The market traders keep complaining about pigeon dropp\"}"
+    },
+    {
+     "t": 9009,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"speaking\":false,\"text\":\"The market traders keep complaining about pigeon droppings on\"}"
+    },
+    {
+     "t": 9181,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"speaking\":false,\"text\":\"The market traders keep complaining about pigeon droppings on their\"}"
+    },
+    {
+     "t": 9585,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"speaking\":false,\"text\":\"The market traders keep complaining about pigeon droppings on their st\"}"
+    },
+    {
+     "t": 9585,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"speaking\":false,\"text\":\"The market traders keep complaining about pigeon droppings on their stall\"}"
+    },
+    {
+     "t": 9800,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"speaking\":false,\"text\":\"The market traders keep complaining about pigeon droppings on their stalls.\"}"
+    },
+    {
+     "t": 10701,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"speaking\":false,\"text\":\"The market traders keep complaining about pigeon droppings on their stalls.\",\"final\":true}"
+    },
+    {
+     "t": 11319,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "t": 16567,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "t": 18225,
+     "data": "{\"type\":\"candidate\",\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"speaking\":false,\"candidate\":{\"id\":\"02ade89d24a7b0803c2b10659c40f465\",\"topic\":{\"id\":\"nuisance-and-health\",\"label\":{\"en\":\"Nuisance and health\",\"nl\":\"Overlast en gezondheid\"}},\"score\":0.8,\"reason\":\"topic\",\"sources\":20}}"
+    },
+    {
+     "t": 18226,
+     "data": "{\"type\":\"arousal\",\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"speaking\":false,\"arousal\":0.8}"
+    },
+    {
+     "t": 18227,
+     "data": "{\"type\":\"candidate\",\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"speaking\":false}"
+    },
+    {
+     "t": 18227,
+     "data": "{\"type\":\"intervention\",\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"speaking\":false,\"topic\":{\"id\":\"nuisance-and-health\",\"label\":{\"en\":\"Nuisance and health\",\"nl\":\"Overlast en gezondheid\"}},\"score\":0.8}"
+    },
+    {
+     "t": 18227,
+     "data": "{\"type\":\"persona\",\"turnId\":\"1\",\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"pigeonId\":\"biological\",\"lang\":\"en\",\"speaking\":false}"
+    },
+    {
+     "t": 18230,
+     "data": "{\"type\":\"sources\",\"turnId\":\"1\",\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"speaking\":false,\"kbStatus\":\"sources\",\"sources\":[{\"grounding\":\"corpus_grounded\",\"number\":1,\"type\":\"destillaat\",\"id\":\"destillaat:0714046f-a4eb-5d9b-9fd7-f4304112a95f\",\"text\":\"Openluchtmarkten laten na sluitingstijd grote hoeveelheden voedselafval achter op straat. Dit trekt stadsduiven aan om op de grond te foerageren, waardoor ze actiever worden in een omgeving met rondslingerend vuil.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:53e458b4-4ca0-5098-92ab-e44caf9adffe\",\"citation\":\"Jiguet, F., Sunnen, L., Prévot, A. C., \\u0026 Princé, K. (2019). Urban pigeons losing toes due to human activities. Biological Conservation, 240, 108241. https://doi.org/10.1016/J.BIOCON.2019.108241\",\"citationConfidence\":\"high\",\"quote\":\"The organic pollution might be a proxy of human population density, and might provide food for the pigeons, attracting them on ground.\",\"paper\":\"jiguet2019\",\"doi\":\"10.1016/J.BIOCON.2019.108241\",\"passages\":[{\"id\":\"quote:2b78dd24-387b-531f-a772-0e3ee6ece17d\",\"text\":\"The organic pollution might be a proxy of human population density, and might provide food for the pigeons, attracting them on ground.\"},{\"id\":\"quote:c705786b-b438-5adc-8901-d02cf2bcb694\",\"text\":\"Open street food markets are visited by thousands of people gathering in high concentrations, and provide a large\\namount of wasted food for pigeons in the afternoon when sellers and\\nclients are gone.\"}]},\"localized\":{\"text\":{\"en\":\"Outdoor markets leave large amounts of food waste on the street after closing time. This attracts urban pigeons to forage on the ground, making them more active in an environment with loose litter.\",\"nl\":\"Openluchtmarkten laten na sluitingstijd grote hoeveelheden voedselafval achter op straat. Dit trekt stadsduiven aan om op de grond te foerageren, waardoor ze actiever worden in een omgeving met rondslingerend vuil.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":2,\"type\":\"destillaat\",\"id\":\"destillaat:baa2ed95-2ada-50e9-bb41-0901c3b57eb2\",\"text\":\"De ophoping van duivenuitwerpselen en nestmateriaal veroorzaakt niet alleen hygiënische problemen en visuele vervuiling, maar versnelt ook de achteruitgang van gebouwen en verhoogt de onderhoudskosten.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"Litter that accumulates under and on the surfaces used to roost or to\\nnest are not only problematic from hygienic and urban deface reasons, they also cause\\nstructural and aesthetic damages to man-made structures accelerating their deterioration\\nand increasing the costs of maintenance (Haag-Wackernagel, 1995; Pimentel et al., 2000).\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:868fb380-5bd4-5875-a656-a900e9ad4c46\",\"text\":\"Litter that accumulates under and on the surfaces used to roost or to\\nnest are not only problematic from hygienic and urban deface reasons, they also cause\\nstructural and aesthetic damages to man-made structures accelerating their deterioration\\nand increasing the costs of maintenance (Haag-Wackernagel, 1995; Pimentel et al., 2000).\"}]},\"localized\":{\"text\":{\"en\":\"The accumulation of pigeon droppings and nesting material not only causes hygienic problems and visual pollution, but also accelerates the deterioration of buildings and increases maintenance costs.\",\"nl\":\"De ophoping van duivenuitwerpselen en nestmateriaal veroorzaakt niet alleen hygiënische problemen en visuele vervuiling, maar versnelt ook de achteruitgang van gebouwen en verhoogt de onderhoudskosten.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":3,\"type\":\"destillaat\",\"id\":\"destillaat:cc7e2132-0876-5584-8895-b7fd7b6bb65c\",\"text\":\"Het verjagen van duiven bij graansilo's en in de voedingsmiddelenindustrie is van cruciaal belang om de hygiëne tijdens de voedselbereiding te waarborgen.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"Pigeons do not only soil buildings but also foul foodstuffs; problems are relevant in\\nparticular places as grain elevators or food industries, all sites where scaring pigeons is of\\nparamount importance for hygienic purposes related to food preparation (Gingrich \\u0026\\nOsterberg, 2003).\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:36cec99c-ca93-5d2e-ad0d-d7028690c7d2\",\"text\":\"Pigeons do not only soil buildings but also foul foodstuffs; problems are relevant in\\nparticular places as grain elevators or food industries, all sites where scaring pigeons is of\\nparamount importance for hygienic purposes related to food preparation (Gingrich \\u0026\\nOsterberg, 2003).\"}]},\"localized\":{\"text\":{\"en\":\"Driving away pigeons at grain silos and in the food industry is crucial for safeguarding hygiene during food preparation.\",\"nl\":\"Het verjagen van duiven bij graansilo's en in de voedingsmiddelenindustrie is van cruciaal belang om de hygiëne tijdens de voedselbereiding te waarborgen.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":4,\"type\":\"destillaat\",\"id\":\"destillaat:397852fd-44a5-5c17-b5ef-401425d8c89c\",\"text\":\"De wereldwijde aanwezigheid van stadsduiven in stedelijke gebieden brengt potentiële gezondheidsrisico's met zich mee door ziekteverwekkers en parasieten, en hun uitwerpselen kunnen schade aan gebouwen veroorzaken.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8e70e457-1447-53dc-a7c1-c5971108b709\",\"citation\":\"Jenni-Eiermann, S., Heynen, D., \\u0026 Schaub, M. (2014). Effect of an ultrasonic device on the behaviour and the stress hormone corticosterone in feral pigeons. Journal of Pest Science, 87, 315-322. https://doi.org/10.1007/s10340-014-0553-y\",\"citationConfidence\":\"high\",\"citationMissing\":\"issue\",\"quote\":\"The worldwide presence of feral pigeons Columba livia domestica in urban habitats presents potential\\npublic health hazards from pathogens and parasites, and\\ndroppings can lead to damage to buildings.\",\"paper\":\"jenni-eiermann2014\",\"doi\":\"10.1007/s10340-014-0553-y\",\"passages\":[{\"id\":\"quote:2d48eec7-63ed-5eb2-ba54-da25ead0b37f\",\"text\":\"The worldwide presence of feral pigeons Columba livia domestica in urban habitats presents potential\\npublic health hazards from pathogens and parasites, and\\ndroppings can lead to damage to buildings.\"}]},\"localized\":{\"text\":{\"en\":\"The worldwide presence of urban pigeons in built-up areas carries potential health risks through pathogens and parasites, and their droppings can cause damage to buildings.\",\"nl\":\"De wereldwijde aanwezigheid van stadsduiven in stedelijke gebieden brengt potentiële gezondheidsrisico's met zich mee door ziekteverwekkers en parasieten, en hun uitwerpselen kunnen schade aan gebouwen veroorzaken.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":5,\"type\":\"destillaat\",\"id\":\"destillaat:6dbc1511-aa5d-5a39-8f30-ba9e6937dde1\",\"text\":\"Stadsduiven veroorzaken diverse vormen van overlast in stedelijke gebieden, waaronder corrosieve schade aan gebouwen door hun uitwerpselen en het nestelen in de directe nabijheid van woningen.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:0bcd8848-06e9-51bb-93fe-dc1d37aec88a\",\"citation\":\"Soh, M. C. K., Pang, R. Y. T., Ng, B. X. K., Lee, B. P. Y. H., Loo, A. H. B., \\u0026 Er, K. B. H. (2021). Restricted human activities shift the foraging strategies of feral pigeons (Columba livia) and three other commensal bird species. Biological Conservation, 253, 108927. https://doi.org/10.1016/j.biocon.2020.108927\",\"citationConfidence\":\"high\",\"quote\":\"Furthermore, feral pigeons cause several dis-amenities, such as corrosive\\ndamage to building structures from their droppings (Del Monte and\\nSabbioni, 1986; Spennemann and Watson, 2017), and nesting in close\\nproximity to human habitation.\",\"paper\":\"soh2021\",\"doi\":\"10.1016/j.biocon.2020.108927\",\"passages\":[{\"id\":\"quote:697985fb-9236-50dc-a503-908eeb0ffc40\",\"text\":\"Furthermore, feral pigeons cause several dis-amenities, such as corrosive\\ndamage to building structures from their droppings (Del Monte and\\nSabbioni, 1986; Spennemann and Watson, 2017), and nesting in close\\nproximity to human habitation.\"}]},\"localized\":{\"text\":{\"en\":\"Urban pigeons cause various forms of nuisance in urban areas, including corrosive damage to buildings from their droppings and nesting in close proximity to homes.\",\"nl\":\"Stadsduiven veroorzaken diverse vormen van overlast in stedelijke gebieden, waaronder corrosieve schade aan gebouwen door hun uitwerpselen en het nestelen in de directe nabijheid van woningen.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":6,\"type\":\"destillaat\",\"id\":\"destillaat:ffd00af1-9b65-531d-8cf4-50f7cf1927a4\",\"text\":\"De uiterlijke gezondheidstoestand van duiven, zoals verminkingen, beïnvloedt de emotionele en esthetische afkeer die mensen voor de dieren voelen.\",\"perspective\":\"Sociale verbinding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:d216d6f5-20c1-57ad-aaab-c4b907424096\",\"citation\":\"Skandrani, Z., Desquilbet, M., \\u0026 Prévot, A. C. (2018). A renewed framework for urban biodiversity governance: Urban pigeons as a case-study. Natures Sciences Sociétés, 26(3), 280–290. https://doi.org/10.1051/nss/2018051\",\"citationConfidence\":\"high\",\"quote\":\"However,\\nthe visible sanitary state of pigeons could be decisive in\\ndetermining people’s emotional apprehensions linked to\\naesthetic features (Stokes, 2007).\",\"paper\":\"skandrani2018\",\"doi\":\"10.1051/nss/2018051\",\"passages\":[{\"id\":\"quote:274ea757-f069-5dcf-b51b-784897007a26\",\"text\":\"However,\\nthe visible sanitary state of pigeons could be decisive in\\ndetermining people’s emotional apprehensions linked to\\naesthetic features (Stokes, 2007).\"}]},\"localized\":{\"text\":{\"en\":\"The outward health condition of pigeons, such as disfigurement, influences the emotional and aesthetic aversion people feel toward the animals.\",\"nl\":\"De uiterlijke gezondheidstoestand van duiven, zoals verminkingen, beïnvloedt de emotionele en esthetische afkeer die mensen voor de dieren voelen.\"},\"perspective\":{\"en\":\"Social connection\",\"nl\":\"Sociale verbinding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":7,\"type\":\"destillaat\",\"id\":\"destillaat:f1431c96-e8e7-5c6f-b862-c9a2d28c6244\",\"text\":\"De angst voor duiven en het labelen van deze dieren als 'vies' komt voort uit de menselijke behoefte om de stad strikt te ordenen en te bepalen wat er wel en niet thuishoort.\",\"perspective\":\"Sociale verbinding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:d216d6f5-20c1-57ad-aaab-c4b907424096\",\"citation\":\"Skandrani, Z., Desquilbet, M., \\u0026 Prévot, A. C. (2018). A renewed framework for urban biodiversity governance: Urban pigeons as a case-study. Natures Sciences Sociétés, 26(3), 280–290. https://doi.org/10.1051/nss/2018051\",\"citationConfidence\":\"high\",\"quote\":\"In particular,\\ncities are subject to an ordering process that clearly\\ndetermines what can be included and what does not belong\\nto it (Grifﬁths and Poulter, 2000).\",\"paper\":\"skandrani2018\",\"doi\":\"10.1051/nss/2018051\",\"passages\":[{\"id\":\"quote:a5dc99b2-e842-550c-a7be-8294c66fdfdd\",\"text\":\"In particular,\\ncities are subject to an ordering process that clearly\\ndetermines what can be included and what does not belong\\nto it (Grifﬁths and Poulter, 2000).\"}]},\"localized\":{\"text\":{\"en\":\"The fear of pigeons and the labeling of these animals as 'dirty' stems from the human need to strictly order the city and determine what does and does not belong there.\",\"nl\":\"De angst voor duiven en het labelen van deze dieren als 'vies' komt voort uit de menselijke behoefte om de stad strikt te ordenen en te bepalen wat er wel en niet thuishoort.\"},\"perspective\":{\"en\":\"Social connection\",\"nl\":\"Sociale verbinding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":8,\"type\":\"destillaat\",\"id\":\"destillaat:adf554bd-4275-517d-8aa7-8de9e5d62577\",\"text\":\"Fysieke verminkingen aan de poten van stadsduiven, zoals afgesnoerde tenen, hangen direct samen met de mate van netheid van de openbare ruimte waarin rondslingerend vuil zoals draden en haren letsel veroorzaakt.\",\"perspective\":\"Ecologische bezorgdheid\",\"theme\":\"Milieuvervuiling en vogelgezondheid\",\"ref\":{\"id\":\"interview:6253ceb0-7f66-5317-9ded-fdc75cf5858e\",\"citation\":\"Skandrani, Z., Desquilbet, M., \\u0026 Prévot, A.-C. (2018). A renewed framework for urban biodiversity governance: urban pigeons as a case-study. Natures Sciences Sociétés, 26(3), 280-290. https://doi.org/10.1051/nss/2018051\",\"citationConfidence\":\"high\",\"quote\":\"These results and observations suggest that\\npigeon mutilations are at least partly linked with the\\ncleanliness status of the ground.\",\"paper\":\"skadranietal2017-arenewedframeworkforurbanbiodiversitygovernance-1\",\"doi\":\"10.1051/nss/2018051\",\"passages\":[{\"id\":\"quote:b3637ffb-15aa-50a7-b8f2-308a145a7b03\",\"text\":\"These results and observations suggest that\\npigeon mutilations are at least partly linked with the\\ncleanliness status of the ground.\"},{\"id\":\"quote:efe0fe84-8708-598b-b9d1-e4d1bcaf5c5e\",\"text\":\"the levels of foot\\nmutilations of individual pigeons (atrophied claws,\\nstumps) are correlated with the density of inhabitants\\nin the neighborhood\"}]},\"localized\":{\"text\":{\"en\":\"Physical mutilations to the legs of urban pigeons, such as constricted toes, are directly related to the cleanliness of the public space, where loose litter such as wire and hair causes injury.\",\"nl\":\"Fysieke verminkingen aan de poten van stadsduiven, zoals afgesnoerde tenen, hangen direct samen met de mate van netheid van de openbare ruimte waarin rondslingerend vuil zoals draden en haren letsel veroorzaakt.\"},\"perspective\":{\"en\":\"Ecological concern\",\"nl\":\"Ecologische bezorgdheid\"},\"theme\":{\"en\":\"Environmental pollution and bird health\",\"nl\":\"Milieuvervuiling en vogelgezondheid\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":9,\"type\":\"destillaat\",\"id\":\"destillaat:a0616f7e-8993-5ca6-a3e5-0c19e158b1bd\",\"text\":\"De onderzoekers waarschuwen dat opgedroogde duivenpoep die als stof door de lucht zweeft een ernstig gezondheidsrisico vormt wanneer het wordt ingeademd.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:36878a2d-e678-54a2-98a9-1a72d88d450b\",\"citation\":\"Przybylska, K., Haidt, A., Myczko, Ł., Ekner-Grzyb, A., Rosin, Z. M., Kwieciński, Z., Tryjanowski, P., Suchodolska, J., Takacs, V., Jankowiak, Ł., Tobółka, M., Wasielewski, O., Graclik, A., Krawczyk, A. J., Kasprzak, A., Szwajkowski, P., Wylegała, P., Malecha, A. W., Mizera, T., \\u0026 Skórka, P. (2012). Local and Landscape-Level Factors Affecting the Density and Distribution of the Feral Pigeon Columba livia var. domestica in an Urban Environment. Acta Ornithologica, 47(1), 37–45. https://doi.org/10.3161/000164512X653908\",\"citationConfidence\":\"high\",\"quote\":\"The major health problem is the harmful effect of pigeon faeces as dust floating in the\\nair that can be inhaled\",\"paper\":\"przybylska2012\",\"doi\":\"10.3161/000164512X653908\",\"passages\":[{\"id\":\"quote:303ec0c7-ce8a-5d4a-80e8-3f06d7a5b050\",\"text\":\"The major health problem is the harmful effect of pigeon faeces as dust floating in the\\nair that can be inhaled\"}]},\"localized\":{\"text\":{\"en\":\"The researchers warn that dried pigeon droppings floating through the air as dust pose a serious health risk when inhaled.\",\"nl\":\"De onderzoekers waarschuwen dat opgedroogde duivenpoep die als stof door de lucht zweeft een ernstig gezondheidsrisico vormt wanneer het wordt ingeademd.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":10,\"type\":\"destillaat\",\"id\":\"destillaat:7ca4c818-89ef-53e5-b4c7-c38dadbf2faa\",\"text\":\"De auteurs concluderen dat de stadsduif via zijn uitwerpselen een waardevolle ecosysteemdienst levert die wereldwijd kan bijdragen aan duurzame stadslandbouw.\",\"perspective\":\"Ecologische waardering\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:836b7aae-cd75-5414-967f-045ef2457fb9\",\"citation\":\"Duffaut, C., Brondeau, F., \\u0026 Gasparini, J. (2023). An original and efficient fertilizer for cherry tomato plants grown in urban agriculture: Feral pigeon guano. Urban Agriculture and Regional Food Systems, 8(1), e20046. https://doi.org/10.1002/uar2.20046\",\"citationConfidence\":\"high\",\"quote\":\"The feral pigeon is a\\nwidespread representative of urban biodiversity and the guano\\nsecreted by them may constitute interesting ecosystem services in urban environment that can be used in short circuits\\nin urban agriculture all over the world.\",\"paper\":\"duffaut2023\",\"doi\":\"10.1002/uar2.20046\",\"passages\":[{\"id\":\"quote:4a695cde-ada3-5fbd-8145-f1b5149030a7\",\"text\":\"The feral pigeon is a\\nwidespread representative of urban biodiversity and the guano\\nsecreted by them may constitute interesting ecosystem services in urban environment that can be used in short circuits\\nin urban agriculture all over the world.\"}]},\"localized\":{\"text\":{\"en\":\"The authors conclude that, through its droppings, the urban pigeon provides a valuable ecosystem service that can contribute to sustainable urban agriculture worldwide.\",\"nl\":\"De auteurs concluderen dat de stadsduif via zijn uitwerpselen een waardevolle ecosysteemdienst levert die wereldwijd kan bijdragen aan duurzame stadslandbouw.\"},\"perspective\":{\"en\":\"Ecological appreciation\",\"nl\":\"Ecologische waardering\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":11,\"type\":\"destillaat\",\"id\":\"destillaat:f2c7eb52-0997-599b-add8-6300b2840330\",\"text\":\"De meerderheid van de stadsbewoners staat vijandig tegenover duiven, beschouwt ze als vliegende ratten en jaagt ze weg.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:5beb0855-2986-5886-929b-f35124ffe4fe\",\"citation\":\"Belguermi, A., Bovet, D., Pascal, A., Prévot-Julliard, A.-C., Saint Jalme, M., Rat-Fischer, L., \\u0026 Leboucher, G. (2011). Pigeons discriminate between human feeders. Animal Cognition, 14(6), 909–914. https://doi.org/10.1007/s10071-011-0420-7\",\"citationConfidence\":\"high\",\"quote\":\"The majority of city dwellers are hostile to pigeons,\\nregarding them as ‘flying rats’ and chasing them away\\n(Jerolmack 2008).\",\"paper\":\"belguermi2011\",\"doi\":\"10.1007/s10071-011-0420-7\",\"passages\":[{\"id\":\"quote:e5d21aff-7ed5-5aae-91a7-897788cc5e86\",\"text\":\"The majority of city dwellers are hostile to pigeons,\\nregarding them as ‘flying rats’ and chasing them away\\n(Jerolmack 2008).\"}]},\"localized\":{\"text\":{\"en\":\"The majority of city residents are hostile toward pigeons, regard them as flying rats, and chase them away.\",\"nl\":\"De meerderheid van de stadsbewoners staat vijandig tegenover duiven, beschouwt ze als vliegende ratten en jaagt ze weg.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":12,\"type\":\"destillaat\",\"id\":\"destillaat:ccc62809-22c4-5c49-856f-d6728f08bc63\",\"text\":\"Stadsduiven vormen een aanzienlijk epidemiologisch risico omdat ze dragers en verspreiders zijn van talrijke micro-organismen die dodelijke ziekten bij mensen kunnen veroorzaken.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"Feral pigeons are of considerable epidemiological importance, being reservoirs and potential\\nvectors of a large number of microorganisms and source of antigens of zoonotic concern,\\ncausing both infections and allergic diseases, that can be lethal (Haag-Wackernagel, 2006;\\nHaag-Wackernagel \\u0026 Bircher, 2009; Haag-Wackernagel \\u0026 Moch, 2004; Magnino et al., 2009;\\nRosický, 1978).\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:1b49b165-7755-5b97-b8bd-fd537db2ba91\",\"text\":\"Feral pigeons are of considerable epidemiological importance, being reservoirs and potential\\nvectors of a large number of microorganisms and source of antigens of zoonotic concern,\\ncausing both infections and allergic diseases, that can be lethal (Haag-Wackernagel, 2006;\\nHaag-Wackernagel \\u0026 Bircher, 2009; Haag-Wackernagel \\u0026 Moch, 2004; Magnino et al., 2009;\\nRosický, 1978).\"}]},\"localized\":{\"text\":{\"en\":\"Urban pigeons pose a considerable epidemiological risk because they carry and spread numerous microorganisms that can cause fatal diseases in humans.\",\"nl\":\"Stadsduiven vormen een aanzienlijk epidemiologisch risico omdat ze dragers en verspreiders zijn van talrijke micro-organismen die dodelijke ziekten bij mensen kunnen veroorzaken.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":13,\"type\":\"destillaat\",\"id\":\"destillaat:6efa3fd9-2180-5773-806c-3b190b8cd39d\",\"text\":\"De fysieke verminkingen aan de poten van stadsduiven worden vermoedelijk veroorzaakt door rondslingerend vuil zoals haren en touwtjes, wat betekent dat de gezondheid van de duif direct samenhangt met de netheid van de straat.\",\"perspective\":\"Ecologische bezorgdheid\",\"theme\":\"Milieuvervuiling en vogelgezondheid\",\"ref\":{\"id\":\"interview:d216d6f5-20c1-57ad-aaab-c4b907424096\",\"citation\":\"Skandrani, Z., Desquilbet, M., \\u0026 Prévot, A. C. (2018). A renewed framework for urban biodiversity governance: Urban pigeons as a case-study. Natures Sciences Sociétés, 26(3), 280–290. https://doi.org/10.1051/nss/2018051\",\"citationConfidence\":\"high\",\"quote\":\"This\\nresult is reinforced by direct observations of pigeons\\ninjured by hairs or strings wrapped around the feet\\nwhen ringing pigeons during the MNHN pigeon\\nprogram. These results and observations suggest that\\npigeon mutilations are at least partly linked with the\\ncleanliness status of the ground.\",\"paper\":\"skandrani2018\",\"doi\":\"10.1051/nss/2018051\",\"passages\":[{\"id\":\"quote:fa42e779-9392-5bc5-b680-b70b2a5b223f\",\"text\":\"This\\nresult is reinforced by direct observations of pigeons\\ninjured by hairs or strings wrapped around the feet\\nwhen ringing pigeons during the MNHN pigeon\\nprogram. These results and observations suggest that\\npigeon mutilations are at least partly linked with the\\ncleanliness status of the ground.\"}]},\"localized\":{\"text\":{\"en\":\"The physical mutilations to the feet of urban pigeons are presumably caused by loose debris such as hair and string, which means that the health of the pigeon is directly linked to the cleanliness of the street.\",\"nl\":\"De fysieke verminkingen aan de poten van stadsduiven worden vermoedelijk veroorzaakt door rondslingerend vuil zoals haren en touwtjes, wat betekent dat de gezondheid van de duif direct samenhangt met de netheid van de straat.\"},\"perspective\":{\"en\":\"Ecological concern\",\"nl\":\"Ecologische bezorgdheid\"},\"theme\":{\"en\":\"Environmental pollution and bird health\",\"nl\":\"Milieuvervuiling en vogelgezondheid\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":14,\"type\":\"destillaat\",\"id\":\"destillaat:8f3cdf32-5baa-5b8e-9214-447177e5acec\",\"text\":\"Vanwege de gezondheidsrisico's en de hoge kosten door infrastructurele schade is er een grote behoefte aan effectieve methoden om te voorkomen dat stadsduiven op en in gebouwen nestelen.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8e70e457-1447-53dc-a7c1-c5971108b709\",\"citation\":\"Jenni-Eiermann, S., Heynen, D., \\u0026 Schaub, M. (2014). Effect of an ultrasonic device on the behaviour and the stress hormone corticosterone in feral pigeons. Journal of Pest Science, 87, 315-322. https://doi.org/10.1007/s10340-014-0553-y\",\"citationConfidence\":\"high\",\"citationMissing\":\"issue\",\"quote\":\"Health risks and high costs due to\\ninfrastructural damage raise a strong interest to prevent feral\\npigeons from roosting on and in buildings.\",\"paper\":\"jenni-eiermann2014\",\"doi\":\"10.1007/s10340-014-0553-y\",\"passages\":[{\"id\":\"quote:ac4ec3d2-524d-5b56-b336-ead571aa9bbd\",\"text\":\"Health risks and high costs due to\\ninfrastructural damage raise a strong interest to prevent feral\\npigeons from roosting on and in buildings.\"}]},\"localized\":{\"text\":{\"en\":\"Because of the health risks and the high costs from infrastructural damage, there is a great need for effective methods to prevent urban pigeons from nesting on and in buildings.\",\"nl\":\"Vanwege de gezondheidsrisico's en de hoge kosten door infrastructurele schade is er een grote behoefte aan effectieve methoden om te voorkomen dat stadsduiven op en in gebouwen nestelen.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":15,\"type\":\"destillaat\",\"id\":\"destillaat:7702b6cb-b5fd-5948-b7ea-feb2a640e8c0\",\"text\":\"Hoewel duiven zich succesvol hebben aangepast aan de stad, heeft dit geleid tot een slechte reputatie bij mensen, die hen vaak als plaag beschouwen vanwege gebouwschade en ziekteoverdracht.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:edf48f05-bf73-5872-8e8e-93c785959ff0\",\"citation\":\"Geijtenbeek, J. W. (2026). The effect of large-scale urban events on feral pigeons (Columba livia) [Writing assignment, Utrecht University].\",\"citationConfidence\":\"medium\",\"citationMissing\":\"repository URL, page count, degree name\",\"quote\":\"However, this successful adaptation has also lead to them having a bad reputation with humans,\\nand feral pigeons are often considered pests, as they can transmit diseases and damage\\nbuildings (Giunchi et al., 2012).\",\"paper\":\"effects-human-activities-pigeons-msthesis-jgeijtenbeek\",\"passages\":[{\"id\":\"quote:f0cc33f7-c827-5918-9632-29d27ee46d6c\",\"text\":\"However, this successful adaptation has also lead to them having a bad reputation with humans,\\nand feral pigeons are often considered pests, as they can transmit diseases and damage\\nbuildings (Giunchi et al., 2012).\"}]},\"localized\":{\"text\":{\"en\":\"Although pigeons have successfully adapted to the city, this has earned them a poor reputation among people, who often regard them as pests because of damage to buildings and disease transmission.\",\"nl\":\"Hoewel duiven zich succesvol hebben aangepast aan de stad, heeft dit geleid tot een slechte reputatie bij mensen, die hen vaak als plaag beschouwen vanwege gebouwschade en ziekteoverdracht.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":16,\"type\":\"destillaat\",\"id\":\"destillaat:7401d00f-4728-5ebe-89fc-ff1408e5b10e\",\"text\":\"Stadsduiven kunnen de oorzaak zijn van alledaagse ongelukken, zoals het uitglijden over oppervlakken die vervuild zijn met duivenpoep.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"Feral pigeons can also be the source of accidents of various nature, from the trivial slipping\\non surfaces littered by pigeon droppings, to the most serious problem of hazards to aircraft\\n(bird-strike).\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:a9af9947-0cef-5341-accb-82baf53c24ac\",\"text\":\"Feral pigeons can also be the source of accidents of various nature, from the trivial slipping\\non surfaces littered by pigeon droppings, to the most serious problem of hazards to aircraft\\n(bird-strike).\"}]},\"localized\":{\"text\":{\"en\":\"Urban pigeons can be the cause of everyday accidents, such as slipping on surfaces soiled with pigeon droppings.\",\"nl\":\"Stadsduiven kunnen de oorzaak zijn van alledaagse ongelukken, zoals het uitglijden over oppervlakken die vervuild zijn met duivenpoep.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":17,\"type\":\"destillaat\",\"id\":\"destillaat:da0f9f5e-ff3c-59af-9291-e08d202b03fe\",\"text\":\"Direct contact met duiven is niet noodzakelijk voor ziekteoverdracht, aangezien ziekteverwekkers zich voornamelijk verspreiden via uitwerpselen, afscheidingen of verenstof in de omgeving.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"Pathogens can be transmitted to humans mainly via excreta, secretions, or\\ndust from feathers spread into the environment, thus a direct contact with pigeons can be\\nunimportant (Curtis et al., 2002; Geigenfeind \\u0026 Haag-Wackernagel, 2010).\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:45ff13c1-8278-5fa1-b4cc-517a5f55b9d7\",\"text\":\"Pathogens can be transmitted to humans mainly via excreta, secretions, or\\ndust from feathers spread into the environment, thus a direct contact with pigeons can be\\nunimportant (Curtis et al., 2002; Geigenfeind \\u0026 Haag-Wackernagel, 2010).\"}]},\"localized\":{\"text\":{\"en\":\"Direct contact with pigeons is not necessary for disease transmission, since pathogens spread mainly through droppings, secretions, or feather dust in the environment.\",\"nl\":\"Direct contact met duiven is niet noodzakelijk voor ziekteoverdracht, aangezien ziekteverwekkers zich voornamelijk verspreiden via uitwerpselen, afscheidingen of verenstof in de omgeving.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":18,\"type\":\"destillaat\",\"id\":\"destillaat:1b7abe66-5f8f-5a4f-b321-9b6eea75f933\",\"text\":\"De stadsduif wordt in veel stedelijke gebieden beschouwd als een plaagsoort vanwege de schade die zij toebrengt aan gebouwen en de landbouw, evenals het risico op ziekteoverdracht naar mensen en andere diersoorten.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:2fc5e76f-e2b4-5dbe-a7f9-34eaa882e833\",\"citation\":\"Cano-Terriza, D., Guerra, R., Lecollinet, S., Cerdà-Cuéllar, M., Cabezón, O., Almería, S., \\u0026 García-Bocanegra, I. (2015). Epidemiological survey of zoonotic pathogens in feral pigeons (Columba livia var. domestica) and sympatric zoo species in Southern Spain. Comparative Immunology, Microbiology and Infectious Diseases, 43, 22-27. https://doi.org/10.1016/j.cimid.2015.10.003\",\"citationConfidence\":\"high\",\"citationMissing\":\"issue\",\"quote\":\"Feral pigeon is considered a pest species in many urban areas due to\\nthe destruction architectonic and urban heritage, damage to agriculture and risk of disease transmission to other sympatric species,\\nincluding humans.\",\"paper\":\"cano-terriza2015\",\"doi\":\"10.1016/j.cimid.2015.10.003\",\"passages\":[{\"id\":\"quote:31ff212c-eab0-5e00-af3e-f6296357d876\",\"text\":\"Feral pigeon is considered a pest species in many urban areas due to\\nthe destruction architectonic and urban heritage, damage to agriculture and risk of disease transmission to other sympatric species,\\nincluding humans.\"}]},\"localized\":{\"text\":{\"en\":\"The urban pigeon is regarded as a pest species in many urban areas because of the damage it causes to buildings and agriculture, as well as the risk of disease transmission to humans and other animal species.\",\"nl\":\"De stadsduif wordt in veel stedelijke gebieden beschouwd als een plaagsoort vanwege de schade die zij toebrengt aan gebouwen en de landbouw, evenals het risico op ziekteoverdracht naar mensen en andere diersoorten.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":19,\"type\":\"destillaat\",\"id\":\"destillaat:6e4b0f3e-38d2-5774-b80e-f53f6caa1ca1\",\"text\":\"De sensorische ecologie van duiven biedt waardevolle inzichten in de manier waarop zij stressoren tijdens grootschalige stedelijke evenementen waarnemen.\",\"perspective\":\"Ecologische aanpassing\",\"theme\":\"Gehoor en geluid bij dieren\",\"ref\":{\"id\":\"interview:edf48f05-bf73-5872-8e8e-93c785959ff0\",\"citation\":\"Geijtenbeek, J. W. (2026). The effect of large-scale urban events on feral pigeons (Columba livia) [Writing assignment, Utrecht University].\",\"citationConfidence\":\"medium\",\"citationMissing\":\"repository URL, page count, degree name\",\"quote\":\"The sensory ecology of pigeons can give insight\\ninto how pigeons perceive stressors at urban events.\",\"paper\":\"effects-human-activities-pigeons-msthesis-jgeijtenbeek\",\"passages\":[{\"id\":\"quote:4b4aeb5b-43b6-51ce-87b2-56867be74514\",\"text\":\"The sensory ecology of pigeons can give insight\\ninto how pigeons perceive stressors at urban events.\"}]},\"localized\":{\"text\":{\"en\":\"The sensory ecology of pigeons offers valuable insights into the way they perceive stressors during large-scale urban events.\",\"nl\":\"De sensorische ecologie van duiven biedt waardevolle inzichten in de manier waarop zij stressoren tijdens grootschalige stedelijke evenementen waarnemen.\"},\"perspective\":{\"en\":\"Ecological adaptation\",\"nl\":\"Ecologische aanpassing\"},\"theme\":{\"en\":\"Hearing and sound in animals\",\"nl\":\"Gehoor en geluid bij dieren\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":20,\"type\":\"destillaat\",\"id\":\"destillaat:2eb24d98-98b6-5611-a7a5-71623ce3bc08\",\"text\":\"De focus bij duivenoverlast moet worden verlegd van populatiecontrole naar het verminderen van sociale ontevredenheid en het verbeteren van de perceptie van de burger.\",\"perspective\":\"Sociale verbinding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:d216d6f5-20c1-57ad-aaab-c4b907424096\",\"citation\":\"Skandrani, Z., Desquilbet, M., \\u0026 Prévot, A. C. (2018). A renewed framework for urban biodiversity governance: Urban pigeons as a case-study. Natures Sciences Sociétés, 26(3), 280–290. https://doi.org/10.1051/nss/2018051\",\"citationConfidence\":\"high\",\"quote\":\"We propose a novel framework whose\\nmain goal is the reduction of social discomfort (Serpell,\\n2004) and therefore consider the challenge of humanpigeon coexistence beyond pigeon population control,\\nby concentrating on social perceptions of the pigeons.\",\"paper\":\"skandrani2018\",\"doi\":\"10.1051/nss/2018051\",\"passages\":[{\"id\":\"quote:ecfeb414-2f24-5b72-b9cf-6673ae8e0221\",\"text\":\"We propose a novel framework whose\\nmain goal is the reduction of social discomfort (Serpell,\\n2004) and therefore consider the challenge of humanpigeon coexistence beyond pigeon population control,\\nby concentrating on social perceptions of the pigeons.\"}]},\"localized\":{\"text\":{\"en\":\"The focus in addressing pigeon nuisance should shift from population control to reducing social dissatisfaction and improving public perception.\",\"nl\":\"De focus bij duivenoverlast moet worden verlegd van populatiecontrole naar het verminderen van sociale ontevredenheid en het verbeteren van de perceptie van de burger.\"},\"perspective\":{\"en\":\"Social connection\",\"nl\":\"Sociale verbinding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"}]}"
+    },
+    {
+     "t": 18233,
+     "data": "{\"type\":\"text\",\"turnId\":\"1\",\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"speaking\":false,\"delta\":\"For pigeons like me, studies suggest that open street food markets are highly attractive because they provide a large amount of wasted food in the afternoon after sellers and clients have left [1]. At the same time, research recognizes that droppings on surfaces near food present hygienic challenges [3], as pathogens can be transmitted to humans through contact with excreta [17].\"}"
+    },
+    {
+     "t": 18235,
+     "data": "{\"type\":\"text_done\",\"turnId\":\"1\",\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"speaking\":false,\"kbStatus\":\"sources\",\"sources\":[{\"grounding\":\"corpus_grounded\",\"number\":1,\"type\":\"destillaat\",\"id\":\"destillaat:0714046f-a4eb-5d9b-9fd7-f4304112a95f\",\"text\":\"Openluchtmarkten laten na sluitingstijd grote hoeveelheden voedselafval achter op straat. Dit trekt stadsduiven aan om op de grond te foerageren, waardoor ze actiever worden in een omgeving met rondslingerend vuil.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:53e458b4-4ca0-5098-92ab-e44caf9adffe\",\"citation\":\"Jiguet, F., Sunnen, L., Prévot, A. C., \\u0026 Princé, K. (2019). Urban pigeons losing toes due to human activities. Biological Conservation, 240, 108241. https://doi.org/10.1016/J.BIOCON.2019.108241\",\"citationConfidence\":\"high\",\"quote\":\"The organic pollution might be a proxy of human population density, and might provide food for the pigeons, attracting them on ground.\",\"paper\":\"jiguet2019\",\"doi\":\"10.1016/J.BIOCON.2019.108241\",\"passages\":[{\"id\":\"quote:2b78dd24-387b-531f-a772-0e3ee6ece17d\",\"text\":\"The organic pollution might be a proxy of human population density, and might provide food for the pigeons, attracting them on ground.\"},{\"id\":\"quote:c705786b-b438-5adc-8901-d02cf2bcb694\",\"text\":\"Open street food markets are visited by thousands of people gathering in high concentrations, and provide a large\\namount of wasted food for pigeons in the afternoon when sellers and\\nclients are gone.\"}]},\"localized\":{\"text\":{\"en\":\"Outdoor markets leave large amounts of food waste on the street after closing time. This attracts urban pigeons to forage on the ground, making them more active in an environment with loose litter.\",\"nl\":\"Openluchtmarkten laten na sluitingstijd grote hoeveelheden voedselafval achter op straat. Dit trekt stadsduiven aan om op de grond te foerageren, waardoor ze actiever worden in een omgeving met rondslingerend vuil.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":2,\"type\":\"destillaat\",\"id\":\"destillaat:baa2ed95-2ada-50e9-bb41-0901c3b57eb2\",\"text\":\"De ophoping van duivenuitwerpselen en nestmateriaal veroorzaakt niet alleen hygiënische problemen en visuele vervuiling, maar versnelt ook de achteruitgang van gebouwen en verhoogt de onderhoudskosten.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"Litter that accumulates under and on the surfaces used to roost or to\\nnest are not only problematic from hygienic and urban deface reasons, they also cause\\nstructural and aesthetic damages to man-made structures accelerating their deterioration\\nand increasing the costs of maintenance (Haag-Wackernagel, 1995; Pimentel et al., 2000).\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:868fb380-5bd4-5875-a656-a900e9ad4c46\",\"text\":\"Litter that accumulates under and on the surfaces used to roost or to\\nnest are not only problematic from hygienic and urban deface reasons, they also cause\\nstructural and aesthetic damages to man-made structures accelerating their deterioration\\nand increasing the costs of maintenance (Haag-Wackernagel, 1995; Pimentel et al., 2000).\"}]},\"localized\":{\"text\":{\"en\":\"The accumulation of pigeon droppings and nesting material not only causes hygienic problems and visual pollution, but also accelerates the deterioration of buildings and increases maintenance costs.\",\"nl\":\"De ophoping van duivenuitwerpselen en nestmateriaal veroorzaakt niet alleen hygiënische problemen en visuele vervuiling, maar versnelt ook de achteruitgang van gebouwen en verhoogt de onderhoudskosten.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":3,\"type\":\"destillaat\",\"id\":\"destillaat:cc7e2132-0876-5584-8895-b7fd7b6bb65c\",\"text\":\"Het verjagen van duiven bij graansilo's en in de voedingsmiddelenindustrie is van cruciaal belang om de hygiëne tijdens de voedselbereiding te waarborgen.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"Pigeons do not only soil buildings but also foul foodstuffs; problems are relevant in\\nparticular places as grain elevators or food industries, all sites where scaring pigeons is of\\nparamount importance for hygienic purposes related to food preparation (Gingrich \\u0026\\nOsterberg, 2003).\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:36cec99c-ca93-5d2e-ad0d-d7028690c7d2\",\"text\":\"Pigeons do not only soil buildings but also foul foodstuffs; problems are relevant in\\nparticular places as grain elevators or food industries, all sites where scaring pigeons is of\\nparamount importance for hygienic purposes related to food preparation (Gingrich \\u0026\\nOsterberg, 2003).\"}]},\"localized\":{\"text\":{\"en\":\"Driving away pigeons at grain silos and in the food industry is crucial for safeguarding hygiene during food preparation.\",\"nl\":\"Het verjagen van duiven bij graansilo's en in de voedingsmiddelenindustrie is van cruciaal belang om de hygiëne tijdens de voedselbereiding te waarborgen.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":4,\"type\":\"destillaat\",\"id\":\"destillaat:397852fd-44a5-5c17-b5ef-401425d8c89c\",\"text\":\"De wereldwijde aanwezigheid van stadsduiven in stedelijke gebieden brengt potentiële gezondheidsrisico's met zich mee door ziekteverwekkers en parasieten, en hun uitwerpselen kunnen schade aan gebouwen veroorzaken.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8e70e457-1447-53dc-a7c1-c5971108b709\",\"citation\":\"Jenni-Eiermann, S., Heynen, D., \\u0026 Schaub, M. (2014). Effect of an ultrasonic device on the behaviour and the stress hormone corticosterone in feral pigeons. Journal of Pest Science, 87, 315-322. https://doi.org/10.1007/s10340-014-0553-y\",\"citationConfidence\":\"high\",\"citationMissing\":\"issue\",\"quote\":\"The worldwide presence of feral pigeons Columba livia domestica in urban habitats presents potential\\npublic health hazards from pathogens and parasites, and\\ndroppings can lead to damage to buildings.\",\"paper\":\"jenni-eiermann2014\",\"doi\":\"10.1007/s10340-014-0553-y\",\"passages\":[{\"id\":\"quote:2d48eec7-63ed-5eb2-ba54-da25ead0b37f\",\"text\":\"The worldwide presence of feral pigeons Columba livia domestica in urban habitats presents potential\\npublic health hazards from pathogens and parasites, and\\ndroppings can lead to damage to buildings.\"}]},\"localized\":{\"text\":{\"en\":\"The worldwide presence of urban pigeons in built-up areas carries potential health risks through pathogens and parasites, and their droppings can cause damage to buildings.\",\"nl\":\"De wereldwijde aanwezigheid van stadsduiven in stedelijke gebieden brengt potentiële gezondheidsrisico's met zich mee door ziekteverwekkers en parasieten, en hun uitwerpselen kunnen schade aan gebouwen veroorzaken.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":5,\"type\":\"destillaat\",\"id\":\"destillaat:6dbc1511-aa5d-5a39-8f30-ba9e6937dde1\",\"text\":\"Stadsduiven veroorzaken diverse vormen van overlast in stedelijke gebieden, waaronder corrosieve schade aan gebouwen door hun uitwerpselen en het nestelen in de directe nabijheid van woningen.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:0bcd8848-06e9-51bb-93fe-dc1d37aec88a\",\"citation\":\"Soh, M. C. K., Pang, R. Y. T., Ng, B. X. K., Lee, B. P. Y. H., Loo, A. H. B., \\u0026 Er, K. B. H. (2021). Restricted human activities shift the foraging strategies of feral pigeons (Columba livia) and three other commensal bird species. Biological Conservation, 253, 108927. https://doi.org/10.1016/j.biocon.2020.108927\",\"citationConfidence\":\"high\",\"quote\":\"Furthermore, feral pigeons cause several dis-amenities, such as corrosive\\ndamage to building structures from their droppings (Del Monte and\\nSabbioni, 1986; Spennemann and Watson, 2017), and nesting in close\\nproximity to human habitation.\",\"paper\":\"soh2021\",\"doi\":\"10.1016/j.biocon.2020.108927\",\"passages\":[{\"id\":\"quote:697985fb-9236-50dc-a503-908eeb0ffc40\",\"text\":\"Furthermore, feral pigeons cause several dis-amenities, such as corrosive\\ndamage to building structures from their droppings (Del Monte and\\nSabbioni, 1986; Spennemann and Watson, 2017), and nesting in close\\nproximity to human habitation.\"}]},\"localized\":{\"text\":{\"en\":\"Urban pigeons cause various forms of nuisance in urban areas, including corrosive damage to buildings from their droppings and nesting in close proximity to homes.\",\"nl\":\"Stadsduiven veroorzaken diverse vormen van overlast in stedelijke gebieden, waaronder corrosieve schade aan gebouwen door hun uitwerpselen en het nestelen in de directe nabijheid van woningen.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":6,\"type\":\"destillaat\",\"id\":\"destillaat:ffd00af1-9b65-531d-8cf4-50f7cf1927a4\",\"text\":\"De uiterlijke gezondheidstoestand van duiven, zoals verminkingen, beïnvloedt de emotionele en esthetische afkeer die mensen voor de dieren voelen.\",\"perspective\":\"Sociale verbinding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:d216d6f5-20c1-57ad-aaab-c4b907424096\",\"citation\":\"Skandrani, Z., Desquilbet, M., \\u0026 Prévot, A. C. (2018). A renewed framework for urban biodiversity governance: Urban pigeons as a case-study. Natures Sciences Sociétés, 26(3), 280–290. https://doi.org/10.1051/nss/2018051\",\"citationConfidence\":\"high\",\"quote\":\"However,\\nthe visible sanitary state of pigeons could be decisive in\\ndetermining people’s emotional apprehensions linked to\\naesthetic features (Stokes, 2007).\",\"paper\":\"skandrani2018\",\"doi\":\"10.1051/nss/2018051\",\"passages\":[{\"id\":\"quote:274ea757-f069-5dcf-b51b-784897007a26\",\"text\":\"However,\\nthe visible sanitary state of pigeons could be decisive in\\ndetermining people’s emotional apprehensions linked to\\naesthetic features (Stokes, 2007).\"}]},\"localized\":{\"text\":{\"en\":\"The outward health condition of pigeons, such as disfigurement, influences the emotional and aesthetic aversion people feel toward the animals.\",\"nl\":\"De uiterlijke gezondheidstoestand van duiven, zoals verminkingen, beïnvloedt de emotionele en esthetische afkeer die mensen voor de dieren voelen.\"},\"perspective\":{\"en\":\"Social connection\",\"nl\":\"Sociale verbinding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":7,\"type\":\"destillaat\",\"id\":\"destillaat:f1431c96-e8e7-5c6f-b862-c9a2d28c6244\",\"text\":\"De angst voor duiven en het labelen van deze dieren als 'vies' komt voort uit de menselijke behoefte om de stad strikt te ordenen en te bepalen wat er wel en niet thuishoort.\",\"perspective\":\"Sociale verbinding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:d216d6f5-20c1-57ad-aaab-c4b907424096\",\"citation\":\"Skandrani, Z., Desquilbet, M., \\u0026 Prévot, A. C. (2018). A renewed framework for urban biodiversity governance: Urban pigeons as a case-study. Natures Sciences Sociétés, 26(3), 280–290. https://doi.org/10.1051/nss/2018051\",\"citationConfidence\":\"high\",\"quote\":\"In particular,\\ncities are subject to an ordering process that clearly\\ndetermines what can be included and what does not belong\\nto it (Grifﬁths and Poulter, 2000).\",\"paper\":\"skandrani2018\",\"doi\":\"10.1051/nss/2018051\",\"passages\":[{\"id\":\"quote:a5dc99b2-e842-550c-a7be-8294c66fdfdd\",\"text\":\"In particular,\\ncities are subject to an ordering process that clearly\\ndetermines what can be included and what does not belong\\nto it (Grifﬁths and Poulter, 2000).\"}]},\"localized\":{\"text\":{\"en\":\"The fear of pigeons and the labeling of these animals as 'dirty' stems from the human need to strictly order the city and determine what does and does not belong there.\",\"nl\":\"De angst voor duiven en het labelen van deze dieren als 'vies' komt voort uit de menselijke behoefte om de stad strikt te ordenen en te bepalen wat er wel en niet thuishoort.\"},\"perspective\":{\"en\":\"Social connection\",\"nl\":\"Sociale verbinding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":8,\"type\":\"destillaat\",\"id\":\"destillaat:adf554bd-4275-517d-8aa7-8de9e5d62577\",\"text\":\"Fysieke verminkingen aan de poten van stadsduiven, zoals afgesnoerde tenen, hangen direct samen met de mate van netheid van de openbare ruimte waarin rondslingerend vuil zoals draden en haren letsel veroorzaakt.\",\"perspective\":\"Ecologische bezorgdheid\",\"theme\":\"Milieuvervuiling en vogelgezondheid\",\"ref\":{\"id\":\"interview:6253ceb0-7f66-5317-9ded-fdc75cf5858e\",\"citation\":\"Skandrani, Z., Desquilbet, M., \\u0026 Prévot, A.-C. (2018). A renewed framework for urban biodiversity governance: urban pigeons as a case-study. Natures Sciences Sociétés, 26(3), 280-290. https://doi.org/10.1051/nss/2018051\",\"citationConfidence\":\"high\",\"quote\":\"These results and observations suggest that\\npigeon mutilations are at least partly linked with the\\ncleanliness status of the ground.\",\"paper\":\"skadranietal2017-arenewedframeworkforurbanbiodiversitygovernance-1\",\"doi\":\"10.1051/nss/2018051\",\"passages\":[{\"id\":\"quote:b3637ffb-15aa-50a7-b8f2-308a145a7b03\",\"text\":\"These results and observations suggest that\\npigeon mutilations are at least partly linked with the\\ncleanliness status of the ground.\"},{\"id\":\"quote:efe0fe84-8708-598b-b9d1-e4d1bcaf5c5e\",\"text\":\"the levels of foot\\nmutilations of individual pigeons (atrophied claws,\\nstumps) are correlated with the density of inhabitants\\nin the neighborhood\"}]},\"localized\":{\"text\":{\"en\":\"Physical mutilations to the legs of urban pigeons, such as constricted toes, are directly related to the cleanliness of the public space, where loose litter such as wire and hair causes injury.\",\"nl\":\"Fysieke verminkingen aan de poten van stadsduiven, zoals afgesnoerde tenen, hangen direct samen met de mate van netheid van de openbare ruimte waarin rondslingerend vuil zoals draden en haren letsel veroorzaakt.\"},\"perspective\":{\"en\":\"Ecological concern\",\"nl\":\"Ecologische bezorgdheid\"},\"theme\":{\"en\":\"Environmental pollution and bird health\",\"nl\":\"Milieuvervuiling en vogelgezondheid\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":9,\"type\":\"destillaat\",\"id\":\"destillaat:a0616f7e-8993-5ca6-a3e5-0c19e158b1bd\",\"text\":\"De onderzoekers waarschuwen dat opgedroogde duivenpoep die als stof door de lucht zweeft een ernstig gezondheidsrisico vormt wanneer het wordt ingeademd.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:36878a2d-e678-54a2-98a9-1a72d88d450b\",\"citation\":\"Przybylska, K., Haidt, A., Myczko, Ł., Ekner-Grzyb, A., Rosin, Z. M., Kwieciński, Z., Tryjanowski, P., Suchodolska, J., Takacs, V., Jankowiak, Ł., Tobółka, M., Wasielewski, O., Graclik, A., Krawczyk, A. J., Kasprzak, A., Szwajkowski, P., Wylegała, P., Malecha, A. W., Mizera, T., \\u0026 Skórka, P. (2012). Local and Landscape-Level Factors Affecting the Density and Distribution of the Feral Pigeon Columba livia var. domestica in an Urban Environment. Acta Ornithologica, 47(1), 37–45. https://doi.org/10.3161/000164512X653908\",\"citationConfidence\":\"high\",\"quote\":\"The major health problem is the harmful effect of pigeon faeces as dust floating in the\\nair that can be inhaled\",\"paper\":\"przybylska2012\",\"doi\":\"10.3161/000164512X653908\",\"passages\":[{\"id\":\"quote:303ec0c7-ce8a-5d4a-80e8-3f06d7a5b050\",\"text\":\"The major health problem is the harmful effect of pigeon faeces as dust floating in the\\nair that can be inhaled\"}]},\"localized\":{\"text\":{\"en\":\"The researchers warn that dried pigeon droppings floating through the air as dust pose a serious health risk when inhaled.\",\"nl\":\"De onderzoekers waarschuwen dat opgedroogde duivenpoep die als stof door de lucht zweeft een ernstig gezondheidsrisico vormt wanneer het wordt ingeademd.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":10,\"type\":\"destillaat\",\"id\":\"destillaat:7ca4c818-89ef-53e5-b4c7-c38dadbf2faa\",\"text\":\"De auteurs concluderen dat de stadsduif via zijn uitwerpselen een waardevolle ecosysteemdienst levert die wereldwijd kan bijdragen aan duurzame stadslandbouw.\",\"perspective\":\"Ecologische waardering\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:836b7aae-cd75-5414-967f-045ef2457fb9\",\"citation\":\"Duffaut, C., Brondeau, F., \\u0026 Gasparini, J. (2023). An original and efficient fertilizer for cherry tomato plants grown in urban agriculture: Feral pigeon guano. Urban Agriculture and Regional Food Systems, 8(1), e20046. https://doi.org/10.1002/uar2.20046\",\"citationConfidence\":\"high\",\"quote\":\"The feral pigeon is a\\nwidespread representative of urban biodiversity and the guano\\nsecreted by them may constitute interesting ecosystem services in urban environment that can be used in short circuits\\nin urban agriculture all over the world.\",\"paper\":\"duffaut2023\",\"doi\":\"10.1002/uar2.20046\",\"passages\":[{\"id\":\"quote:4a695cde-ada3-5fbd-8145-f1b5149030a7\",\"text\":\"The feral pigeon is a\\nwidespread representative of urban biodiversity and the guano\\nsecreted by them may constitute interesting ecosystem services in urban environment that can be used in short circuits\\nin urban agriculture all over the world.\"}]},\"localized\":{\"text\":{\"en\":\"The authors conclude that, through its droppings, the urban pigeon provides a valuable ecosystem service that can contribute to sustainable urban agriculture worldwide.\",\"nl\":\"De auteurs concluderen dat de stadsduif via zijn uitwerpselen een waardevolle ecosysteemdienst levert die wereldwijd kan bijdragen aan duurzame stadslandbouw.\"},\"perspective\":{\"en\":\"Ecological appreciation\",\"nl\":\"Ecologische waardering\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":11,\"type\":\"destillaat\",\"id\":\"destillaat:f2c7eb52-0997-599b-add8-6300b2840330\",\"text\":\"De meerderheid van de stadsbewoners staat vijandig tegenover duiven, beschouwt ze als vliegende ratten en jaagt ze weg.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:5beb0855-2986-5886-929b-f35124ffe4fe\",\"citation\":\"Belguermi, A., Bovet, D., Pascal, A., Prévot-Julliard, A.-C., Saint Jalme, M., Rat-Fischer, L., \\u0026 Leboucher, G. (2011). Pigeons discriminate between human feeders. Animal Cognition, 14(6), 909–914. https://doi.org/10.1007/s10071-011-0420-7\",\"citationConfidence\":\"high\",\"quote\":\"The majority of city dwellers are hostile to pigeons,\\nregarding them as ‘flying rats’ and chasing them away\\n(Jerolmack 2008).\",\"paper\":\"belguermi2011\",\"doi\":\"10.1007/s10071-011-0420-7\",\"passages\":[{\"id\":\"quote:e5d21aff-7ed5-5aae-91a7-897788cc5e86\",\"text\":\"The majority of city dwellers are hostile to pigeons,\\nregarding them as ‘flying rats’ and chasing them away\\n(Jerolmack 2008).\"}]},\"localized\":{\"text\":{\"en\":\"The majority of city residents are hostile toward pigeons, regard them as flying rats, and chase them away.\",\"nl\":\"De meerderheid van de stadsbewoners staat vijandig tegenover duiven, beschouwt ze als vliegende ratten en jaagt ze weg.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":12,\"type\":\"destillaat\",\"id\":\"destillaat:ccc62809-22c4-5c49-856f-d6728f08bc63\",\"text\":\"Stadsduiven vormen een aanzienlijk epidemiologisch risico omdat ze dragers en verspreiders zijn van talrijke micro-organismen die dodelijke ziekten bij mensen kunnen veroorzaken.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"Feral pigeons are of considerable epidemiological importance, being reservoirs and potential\\nvectors of a large number of microorganisms and source of antigens of zoonotic concern,\\ncausing both infections and allergic diseases, that can be lethal (Haag-Wackernagel, 2006;\\nHaag-Wackernagel \\u0026 Bircher, 2009; Haag-Wackernagel \\u0026 Moch, 2004; Magnino et al., 2009;\\nRosický, 1978).\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:1b49b165-7755-5b97-b8bd-fd537db2ba91\",\"text\":\"Feral pigeons are of considerable epidemiological importance, being reservoirs and potential\\nvectors of a large number of microorganisms and source of antigens of zoonotic concern,\\ncausing both infections and allergic diseases, that can be lethal (Haag-Wackernagel, 2006;\\nHaag-Wackernagel \\u0026 Bircher, 2009; Haag-Wackernagel \\u0026 Moch, 2004; Magnino et al., 2009;\\nRosický, 1978).\"}]},\"localized\":{\"text\":{\"en\":\"Urban pigeons pose a considerable epidemiological risk because they carry and spread numerous microorganisms that can cause fatal diseases in humans.\",\"nl\":\"Stadsduiven vormen een aanzienlijk epidemiologisch risico omdat ze dragers en verspreiders zijn van talrijke micro-organismen die dodelijke ziekten bij mensen kunnen veroorzaken.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":13,\"type\":\"destillaat\",\"id\":\"destillaat:6efa3fd9-2180-5773-806c-3b190b8cd39d\",\"text\":\"De fysieke verminkingen aan de poten van stadsduiven worden vermoedelijk veroorzaakt door rondslingerend vuil zoals haren en touwtjes, wat betekent dat de gezondheid van de duif direct samenhangt met de netheid van de straat.\",\"perspective\":\"Ecologische bezorgdheid\",\"theme\":\"Milieuvervuiling en vogelgezondheid\",\"ref\":{\"id\":\"interview:d216d6f5-20c1-57ad-aaab-c4b907424096\",\"citation\":\"Skandrani, Z., Desquilbet, M., \\u0026 Prévot, A. C. (2018). A renewed framework for urban biodiversity governance: Urban pigeons as a case-study. Natures Sciences Sociétés, 26(3), 280–290. https://doi.org/10.1051/nss/2018051\",\"citationConfidence\":\"high\",\"quote\":\"This\\nresult is reinforced by direct observations of pigeons\\ninjured by hairs or strings wrapped around the feet\\nwhen ringing pigeons during the MNHN pigeon\\nprogram. These results and observations suggest that\\npigeon mutilations are at least partly linked with the\\ncleanliness status of the ground.\",\"paper\":\"skandrani2018\",\"doi\":\"10.1051/nss/2018051\",\"passages\":[{\"id\":\"quote:fa42e779-9392-5bc5-b680-b70b2a5b223f\",\"text\":\"This\\nresult is reinforced by direct observations of pigeons\\ninjured by hairs or strings wrapped around the feet\\nwhen ringing pigeons during the MNHN pigeon\\nprogram. These results and observations suggest that\\npigeon mutilations are at least partly linked with the\\ncleanliness status of the ground.\"}]},\"localized\":{\"text\":{\"en\":\"The physical mutilations to the feet of urban pigeons are presumably caused by loose debris such as hair and string, which means that the health of the pigeon is directly linked to the cleanliness of the street.\",\"nl\":\"De fysieke verminkingen aan de poten van stadsduiven worden vermoedelijk veroorzaakt door rondslingerend vuil zoals haren en touwtjes, wat betekent dat de gezondheid van de duif direct samenhangt met de netheid van de straat.\"},\"perspective\":{\"en\":\"Ecological concern\",\"nl\":\"Ecologische bezorgdheid\"},\"theme\":{\"en\":\"Environmental pollution and bird health\",\"nl\":\"Milieuvervuiling en vogelgezondheid\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":14,\"type\":\"destillaat\",\"id\":\"destillaat:8f3cdf32-5baa-5b8e-9214-447177e5acec\",\"text\":\"Vanwege de gezondheidsrisico's en de hoge kosten door infrastructurele schade is er een grote behoefte aan effectieve methoden om te voorkomen dat stadsduiven op en in gebouwen nestelen.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8e70e457-1447-53dc-a7c1-c5971108b709\",\"citation\":\"Jenni-Eiermann, S., Heynen, D., \\u0026 Schaub, M. (2014). Effect of an ultrasonic device on the behaviour and the stress hormone corticosterone in feral pigeons. Journal of Pest Science, 87, 315-322. https://doi.org/10.1007/s10340-014-0553-y\",\"citationConfidence\":\"high\",\"citationMissing\":\"issue\",\"quote\":\"Health risks and high costs due to\\ninfrastructural damage raise a strong interest to prevent feral\\npigeons from roosting on and in buildings.\",\"paper\":\"jenni-eiermann2014\",\"doi\":\"10.1007/s10340-014-0553-y\",\"passages\":[{\"id\":\"quote:ac4ec3d2-524d-5b56-b336-ead571aa9bbd\",\"text\":\"Health risks and high costs due to\\ninfrastructural damage raise a strong interest to prevent feral\\npigeons from roosting on and in buildings.\"}]},\"localized\":{\"text\":{\"en\":\"Because of the health risks and the high costs from infrastructural damage, there is a great need for effective methods to prevent urban pigeons from nesting on and in buildings.\",\"nl\":\"Vanwege de gezondheidsrisico's en de hoge kosten door infrastructurele schade is er een grote behoefte aan effectieve methoden om te voorkomen dat stadsduiven op en in gebouwen nestelen.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":15,\"type\":\"destillaat\",\"id\":\"destillaat:7702b6cb-b5fd-5948-b7ea-feb2a640e8c0\",\"text\":\"Hoewel duiven zich succesvol hebben aangepast aan de stad, heeft dit geleid tot een slechte reputatie bij mensen, die hen vaak als plaag beschouwen vanwege gebouwschade en ziekteoverdracht.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:edf48f05-bf73-5872-8e8e-93c785959ff0\",\"citation\":\"Geijtenbeek, J. W. (2026). The effect of large-scale urban events on feral pigeons (Columba livia) [Writing assignment, Utrecht University].\",\"citationConfidence\":\"medium\",\"citationMissing\":\"repository URL, page count, degree name\",\"quote\":\"However, this successful adaptation has also lead to them having a bad reputation with humans,\\nand feral pigeons are often considered pests, as they can transmit diseases and damage\\nbuildings (Giunchi et al., 2012).\",\"paper\":\"effects-human-activities-pigeons-msthesis-jgeijtenbeek\",\"passages\":[{\"id\":\"quote:f0cc33f7-c827-5918-9632-29d27ee46d6c\",\"text\":\"However, this successful adaptation has also lead to them having a bad reputation with humans,\\nand feral pigeons are often considered pests, as they can transmit diseases and damage\\nbuildings (Giunchi et al., 2012).\"}]},\"localized\":{\"text\":{\"en\":\"Although pigeons have successfully adapted to the city, this has earned them a poor reputation among people, who often regard them as pests because of damage to buildings and disease transmission.\",\"nl\":\"Hoewel duiven zich succesvol hebben aangepast aan de stad, heeft dit geleid tot een slechte reputatie bij mensen, die hen vaak als plaag beschouwen vanwege gebouwschade en ziekteoverdracht.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":16,\"type\":\"destillaat\",\"id\":\"destillaat:7401d00f-4728-5ebe-89fc-ff1408e5b10e\",\"text\":\"Stadsduiven kunnen de oorzaak zijn van alledaagse ongelukken, zoals het uitglijden over oppervlakken die vervuild zijn met duivenpoep.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"Feral pigeons can also be the source of accidents of various nature, from the trivial slipping\\non surfaces littered by pigeon droppings, to the most serious problem of hazards to aircraft\\n(bird-strike).\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:a9af9947-0cef-5341-accb-82baf53c24ac\",\"text\":\"Feral pigeons can also be the source of accidents of various nature, from the trivial slipping\\non surfaces littered by pigeon droppings, to the most serious problem of hazards to aircraft\\n(bird-strike).\"}]},\"localized\":{\"text\":{\"en\":\"Urban pigeons can be the cause of everyday accidents, such as slipping on surfaces soiled with pigeon droppings.\",\"nl\":\"Stadsduiven kunnen de oorzaak zijn van alledaagse ongelukken, zoals het uitglijden over oppervlakken die vervuild zijn met duivenpoep.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":17,\"type\":\"destillaat\",\"id\":\"destillaat:da0f9f5e-ff3c-59af-9291-e08d202b03fe\",\"text\":\"Direct contact met duiven is niet noodzakelijk voor ziekteoverdracht, aangezien ziekteverwekkers zich voornamelijk verspreiden via uitwerpselen, afscheidingen of verenstof in de omgeving.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"Pathogens can be transmitted to humans mainly via excreta, secretions, or\\ndust from feathers spread into the environment, thus a direct contact with pigeons can be\\nunimportant (Curtis et al., 2002; Geigenfeind \\u0026 Haag-Wackernagel, 2010).\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:45ff13c1-8278-5fa1-b4cc-517a5f55b9d7\",\"text\":\"Pathogens can be transmitted to humans mainly via excreta, secretions, or\\ndust from feathers spread into the environment, thus a direct contact with pigeons can be\\nunimportant (Curtis et al., 2002; Geigenfeind \\u0026 Haag-Wackernagel, 2010).\"}]},\"localized\":{\"text\":{\"en\":\"Direct contact with pigeons is not necessary for disease transmission, since pathogens spread mainly through droppings, secretions, or feather dust in the environment.\",\"nl\":\"Direct contact met duiven is niet noodzakelijk voor ziekteoverdracht, aangezien ziekteverwekkers zich voornamelijk verspreiden via uitwerpselen, afscheidingen of verenstof in de omgeving.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":18,\"type\":\"destillaat\",\"id\":\"destillaat:1b7abe66-5f8f-5a4f-b321-9b6eea75f933\",\"text\":\"De stadsduif wordt in veel stedelijke gebieden beschouwd als een plaagsoort vanwege de schade die zij toebrengt aan gebouwen en de landbouw, evenals het risico op ziekteoverdracht naar mensen en andere diersoorten.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:2fc5e76f-e2b4-5dbe-a7f9-34eaa882e833\",\"citation\":\"Cano-Terriza, D., Guerra, R., Lecollinet, S., Cerdà-Cuéllar, M., Cabezón, O., Almería, S., \\u0026 García-Bocanegra, I. (2015). Epidemiological survey of zoonotic pathogens in feral pigeons (Columba livia var. domestica) and sympatric zoo species in Southern Spain. Comparative Immunology, Microbiology and Infectious Diseases, 43, 22-27. https://doi.org/10.1016/j.cimid.2015.10.003\",\"citationConfidence\":\"high\",\"citationMissing\":\"issue\",\"quote\":\"Feral pigeon is considered a pest species in many urban areas due to\\nthe destruction architectonic and urban heritage, damage to agriculture and risk of disease transmission to other sympatric species,\\nincluding humans.\",\"paper\":\"cano-terriza2015\",\"doi\":\"10.1016/j.cimid.2015.10.003\",\"passages\":[{\"id\":\"quote:31ff212c-eab0-5e00-af3e-f6296357d876\",\"text\":\"Feral pigeon is considered a pest species in many urban areas due to\\nthe destruction architectonic and urban heritage, damage to agriculture and risk of disease transmission to other sympatric species,\\nincluding humans.\"}]},\"localized\":{\"text\":{\"en\":\"The urban pigeon is regarded as a pest species in many urban areas because of the damage it causes to buildings and agriculture, as well as the risk of disease transmission to humans and other animal species.\",\"nl\":\"De stadsduif wordt in veel stedelijke gebieden beschouwd als een plaagsoort vanwege de schade die zij toebrengt aan gebouwen en de landbouw, evenals het risico op ziekteoverdracht naar mensen en andere diersoorten.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":19,\"type\":\"destillaat\",\"id\":\"destillaat:6e4b0f3e-38d2-5774-b80e-f53f6caa1ca1\",\"text\":\"De sensorische ecologie van duiven biedt waardevolle inzichten in de manier waarop zij stressoren tijdens grootschalige stedelijke evenementen waarnemen.\",\"perspective\":\"Ecologische aanpassing\",\"theme\":\"Gehoor en geluid bij dieren\",\"ref\":{\"id\":\"interview:edf48f05-bf73-5872-8e8e-93c785959ff0\",\"citation\":\"Geijtenbeek, J. W. (2026). The effect of large-scale urban events on feral pigeons (Columba livia) [Writing assignment, Utrecht University].\",\"citationConfidence\":\"medium\",\"citationMissing\":\"repository URL, page count, degree name\",\"quote\":\"The sensory ecology of pigeons can give insight\\ninto how pigeons perceive stressors at urban events.\",\"paper\":\"effects-human-activities-pigeons-msthesis-jgeijtenbeek\",\"passages\":[{\"id\":\"quote:4b4aeb5b-43b6-51ce-87b2-56867be74514\",\"text\":\"The sensory ecology of pigeons can give insight\\ninto how pigeons perceive stressors at urban events.\"}]},\"localized\":{\"text\":{\"en\":\"The sensory ecology of pigeons offers valuable insights into the way they perceive stressors during large-scale urban events.\",\"nl\":\"De sensorische ecologie van duiven biedt waardevolle inzichten in de manier waarop zij stressoren tijdens grootschalige stedelijke evenementen waarnemen.\"},\"perspective\":{\"en\":\"Ecological adaptation\",\"nl\":\"Ecologische aanpassing\"},\"theme\":{\"en\":\"Hearing and sound in animals\",\"nl\":\"Gehoor en geluid bij dieren\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":20,\"type\":\"destillaat\",\"id\":\"destillaat:2eb24d98-98b6-5611-a7a5-71623ce3bc08\",\"text\":\"De focus bij duivenoverlast moet worden verlegd van populatiecontrole naar het verminderen van sociale ontevredenheid en het verbeteren van de perceptie van de burger.\",\"perspective\":\"Sociale verbinding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:d216d6f5-20c1-57ad-aaab-c4b907424096\",\"citation\":\"Skandrani, Z., Desquilbet, M., \\u0026 Prévot, A. C. (2018). A renewed framework for urban biodiversity governance: Urban pigeons as a case-study. Natures Sciences Sociétés, 26(3), 280–290. https://doi.org/10.1051/nss/2018051\",\"citationConfidence\":\"high\",\"quote\":\"We propose a novel framework whose\\nmain goal is the reduction of social discomfort (Serpell,\\n2004) and therefore consider the challenge of humanpigeon coexistence beyond pigeon population control,\\nby concentrating on social perceptions of the pigeons.\",\"paper\":\"skandrani2018\",\"doi\":\"10.1051/nss/2018051\",\"passages\":[{\"id\":\"quote:ecfeb414-2f24-5b72-b9cf-6673ae8e0221\",\"text\":\"We propose a novel framework whose\\nmain goal is the reduction of social discomfort (Serpell,\\n2004) and therefore consider the challenge of humanpigeon coexistence beyond pigeon population control,\\nby concentrating on social perceptions of the pigeons.\"}]},\"localized\":{\"text\":{\"en\":\"The focus in addressing pigeon nuisance should shift from population control to reducing social dissatisfaction and improving public perception.\",\"nl\":\"De focus bij duivenoverlast moet worden verlegd van populatiecontrole naar het verminderen van sociale ontevredenheid en het verbeteren van de perceptie van de burger.\"},\"perspective\":{\"en\":\"Social connection\",\"nl\":\"Sociale verbinding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"}]}"
+    },
+    {
+     "t": 18712,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 1,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 0,
+      "length": 12288
+     }
+    },
+    {
+     "t": 18716,
+     "data": "{\"type\":\"playback_state\",\"turnId\":\"1\",\"playback\":\"playing\",\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"speaking\":true}"
+    },
+    {
+     "t": 18878,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 2,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 12288,
+      "length": 16384
+     }
+    },
+    {
+     "t": 18999,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 3,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 28672,
+      "length": 12288
+     }
+    },
+    {
+     "t": 19199,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 4,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 40960,
+      "length": 12288
+     }
+    },
+    {
+     "t": 19432,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 5,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 53248,
+      "length": 12288
+     }
+    },
+    {
+     "t": 19623,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 6,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 65536,
+      "length": 12288
+     }
+    },
+    {
+     "t": 19953,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 7,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 77824,
+      "length": 24576
+     }
+    },
+    {
+     "t": 20277,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 8,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 102400,
+      "length": 12288
+     }
+    },
+    {
+     "t": 20497,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 9,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 114688,
+      "length": 12288
+     }
+    },
+    {
+     "t": 20702,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 10,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 126976,
+      "length": 12288
+     }
+    },
+    {
+     "t": 20970,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 11,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 139264,
+      "length": 12288
+     }
+    },
+    {
+     "t": 21114,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 12,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 151552,
+      "length": 12288
+     }
+    },
+    {
+     "t": 21328,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 13,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 163840,
+      "length": 12288
+     }
+    },
+    {
+     "t": 21561,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 14,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 176128,
+      "length": 12288
+     }
+    },
+    {
+     "t": 21566,
+     "data": "{\"type\":\"arousal\",\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"speaking\":false,\"arousal\":0.7513374491912552}"
+    },
+    {
+     "t": 21566,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"listening\":\"listening\",\"speaking\":true}"
+    },
+    {
+     "t": 21757,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 15,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 188416,
+      "length": 12288
+     }
+    },
+    {
+     "t": 22015,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 16,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 200704,
+      "length": 12288
+     }
+    },
+    {
+     "t": 22206,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 17,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 212992,
+      "length": 12288
+     }
+    },
+    {
+     "t": 22501,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 18,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 225280,
+      "length": 12288
+     }
+    },
+    {
+     "t": 22629,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 19,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 237568,
+      "length": 12288
+     }
+    },
+    {
+     "t": 22844,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 20,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 249856,
+      "length": 12288
+     }
+    },
+    {
+     "t": 23056,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 21,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 262144,
+      "length": 12288
+     }
+    },
+    {
+     "t": 23273,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 22,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 274432,
+      "length": 12288
+     }
+    },
+    {
+     "t": 23600,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 23,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 286720,
+      "length": 24576
+     }
+    },
+    {
+     "t": 23882,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 24,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 311296,
+      "length": 12288
+     }
+    },
+    {
+     "t": 24121,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 25,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 323584,
+      "length": 12288
+     }
+    },
+    {
+     "t": 24378,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 26,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 335872,
+      "length": 12288
+     }
+    },
+    {
+     "t": 24641,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 27,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 348160,
+      "length": 24576
+     }
+    },
+    {
+     "t": 24981,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 28,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 372736,
+      "length": 12288
+     }
+    },
+    {
+     "t": 25177,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 29,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 385024,
+      "length": 12288
+     }
+    },
+    {
+     "t": 25384,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 30,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 397312,
+      "length": 12288
+     }
+    },
+    {
+     "t": 25646,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 31,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 409600,
+      "length": 12288
+     }
+    },
+    {
+     "t": 25811,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 32,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 421888,
+      "length": 12288
+     }
+    },
+    {
+     "t": 26039,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 33,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 434176,
+      "length": 12288
+     }
+    },
+    {
+     "t": 26238,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 34,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 446464,
+      "length": 12288
+     }
+    },
+    {
+     "t": 26469,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 35,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 458752,
+      "length": 12288
+     }
+    },
+    {
+     "t": 26694,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 36,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 471040,
+      "length": 12288
+     }
+    },
+    {
+     "t": 26817,
+     "data": "{\"type\":\"arousal\",\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"speaking\":false,\"arousal\":0.7288949923605367}"
+    },
+    {
+     "t": 26817,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"listening\":\"listening\",\"speaking\":true}"
+    },
+    {
+     "t": 26893,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 37,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 483328,
+      "length": 12288
+     }
+    },
+    {
+     "t": 27113,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 38,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 495616,
+      "length": 12288
+     }
+    },
+    {
+     "t": 27306,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 39,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 507904,
+      "length": 12288
+     }
+    },
+    {
+     "t": 27525,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 40,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 520192,
+      "length": 12288
+     }
+    },
+    {
+     "t": 27767,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 41,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 532480,
+      "length": 12288
+     }
+    },
+    {
+     "t": 27971,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 42,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 544768,
+      "length": 12288
+     }
+    },
+    {
+     "t": 28162,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 43,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 557056,
+      "length": 12288
+     }
+    },
+    {
+     "t": 28377,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 44,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 569344,
+      "length": 12288
+     }
+    },
+    {
+     "t": 28609,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 45,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 581632,
+      "length": 12288
+     }
+    },
+    {
+     "t": 28800,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 46,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 593920,
+      "length": 12288
+     }
+    },
+    {
+     "t": 29018,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 47,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 606208,
+      "length": 12288
+     }
+    },
+    {
+     "t": 29315,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 48,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 618496,
+      "length": 12288
+     }
+    },
+    {
+     "t": 29442,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 49,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 630784,
+      "length": 12288
+     }
+    },
+    {
+     "t": 29651,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 50,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 643072,
+      "length": 12288
+     }
+    },
+    {
+     "t": 29866,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 51,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 655360,
+      "length": 12288
+     }
+    },
+    {
+     "t": 30136,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 52,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 667648,
+      "length": 12288
+     }
+    },
+    {
+     "t": 30364,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 53,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 679936,
+      "length": 12288
+     }
+    },
+    {
+     "t": 30519,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 54,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 692224,
+      "length": 12288
+     }
+    },
+    {
+     "t": 30717,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 55,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 704512,
+      "length": 12288
+     }
+    },
+    {
+     "t": 30931,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 56,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 716800,
+      "length": 12288
+     }
+    },
+    {
+     "t": 31145,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 57,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 729088,
+      "length": 12288
+     }
+    },
+    {
+     "t": 31323,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 58,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 741376,
+      "length": 16384
+     }
+    },
+    {
+     "t": 31605,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 59,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 757760,
+      "length": 16384
+     }
+    },
+    {
+     "t": 31936,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 60,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 774144,
+      "length": 12288
+     }
+    },
+    {
+     "t": 32066,
+     "data": "{\"type\":\"arousal\",\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"speaking\":false,\"arousal\":0.7071228983968806}"
+    },
+    {
+     "t": 32067,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"listening\":\"listening\",\"speaking\":true}"
+    },
+    {
+     "t": 32130,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 61,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 786432,
+      "length": 12288
+     }
+    },
+    {
+     "t": 32357,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 62,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 798720,
+      "length": 12288
+     }
+    },
+    {
+     "t": 32563,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 63,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 811008,
+      "length": 12288
+     }
+    },
+    {
+     "t": 32781,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 64,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 823296,
+      "length": 12288
+     }
+    },
+    {
+     "t": 32994,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 65,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 835584,
+      "length": 12288
+     }
+    },
+    {
+     "t": 33208,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 66,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 847872,
+      "length": 12288
+     }
+    },
+    {
+     "t": 33422,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 67,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 860160,
+      "length": 12288
+     }
+    },
+    {
+     "t": 33658,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 68,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 872448,
+      "length": 12288
+     }
+    },
+    {
+     "t": 33870,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 69,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 884736,
+      "length": 12288
+     }
+    },
+    {
+     "t": 34062,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 70,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 897024,
+      "length": 12288
+     }
+    },
+    {
+     "t": 34269,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 71,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 909312,
+      "length": 12288
+     }
+    },
+    {
+     "t": 34559,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 72,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 921600,
+      "length": 12288
+     }
+    },
+    {
+     "t": 34726,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 73,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 933888,
+      "length": 12288
+     }
+    },
+    {
+     "t": 34943,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 74,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 946176,
+      "length": 12288
+     }
+    },
+    {
+     "t": 35139,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 75,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 958464,
+      "length": 12288
+     }
+    },
+    {
+     "t": 35377,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 76,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 970752,
+      "length": 12288
+     }
+    },
+    {
+     "t": 35607,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 77,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 983040,
+      "length": 12288
+     }
+    },
+    {
+     "t": 35805,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 78,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 995328,
+      "length": 12288
+     }
+    },
+    {
+     "t": 36018,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 79,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 1007616,
+      "length": 12288
+     }
+    },
+    {
+     "t": 36233,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 80,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 1019904,
+      "length": 12288
+     }
+    },
+    {
+     "t": 36445,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 81,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 1032192,
+      "length": 12288
+     }
+    },
+    {
+     "t": 36550,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "98f4694f8a15890a98b411321a708a83",
+      "speaking": false,
+      "seq": 82,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 1044480,
+      "length": 24576
+     }
+    },
+    {
+     "t": 36588,
+     "data": "{\"type\":\"tts_done\",\"turnId\":\"1\",\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"speaking\":false,\"frames\":82}"
+    },
+    {
+     "t": 36590,
+     "data": "{\"type\":\"response_done\",\"turnId\":\"1\",\"playbackTracking\":true,\"playback\":\"playing\",\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"speaking\":false,\"kbStatus\":\"sources\",\"sources\":[{\"grounding\":\"corpus_grounded\",\"number\":1,\"type\":\"destillaat\",\"id\":\"destillaat:0714046f-a4eb-5d9b-9fd7-f4304112a95f\",\"text\":\"Openluchtmarkten laten na sluitingstijd grote hoeveelheden voedselafval achter op straat. Dit trekt stadsduiven aan om op de grond te foerageren, waardoor ze actiever worden in een omgeving met rondslingerend vuil.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:53e458b4-4ca0-5098-92ab-e44caf9adffe\",\"citation\":\"Jiguet, F., Sunnen, L., Prévot, A. C., \\u0026 Princé, K. (2019). Urban pigeons losing toes due to human activities. Biological Conservation, 240, 108241. https://doi.org/10.1016/J.BIOCON.2019.108241\",\"citationConfidence\":\"high\",\"quote\":\"The organic pollution might be a proxy of human population density, and might provide food for the pigeons, attracting them on ground.\",\"paper\":\"jiguet2019\",\"doi\":\"10.1016/J.BIOCON.2019.108241\",\"passages\":[{\"id\":\"quote:2b78dd24-387b-531f-a772-0e3ee6ece17d\",\"text\":\"The organic pollution might be a proxy of human population density, and might provide food for the pigeons, attracting them on ground.\"},{\"id\":\"quote:c705786b-b438-5adc-8901-d02cf2bcb694\",\"text\":\"Open street food markets are visited by thousands of people gathering in high concentrations, and provide a large\\namount of wasted food for pigeons in the afternoon when sellers and\\nclients are gone.\"}]},\"localized\":{\"text\":{\"en\":\"Outdoor markets leave large amounts of food waste on the street after closing time. This attracts urban pigeons to forage on the ground, making them more active in an environment with loose litter.\",\"nl\":\"Openluchtmarkten laten na sluitingstijd grote hoeveelheden voedselafval achter op straat. Dit trekt stadsduiven aan om op de grond te foerageren, waardoor ze actiever worden in een omgeving met rondslingerend vuil.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":2,\"type\":\"destillaat\",\"id\":\"destillaat:baa2ed95-2ada-50e9-bb41-0901c3b57eb2\",\"text\":\"De ophoping van duivenuitwerpselen en nestmateriaal veroorzaakt niet alleen hygiënische problemen en visuele vervuiling, maar versnelt ook de achteruitgang van gebouwen en verhoogt de onderhoudskosten.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"Litter that accumulates under and on the surfaces used to roost or to\\nnest are not only problematic from hygienic and urban deface reasons, they also cause\\nstructural and aesthetic damages to man-made structures accelerating their deterioration\\nand increasing the costs of maintenance (Haag-Wackernagel, 1995; Pimentel et al., 2000).\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:868fb380-5bd4-5875-a656-a900e9ad4c46\",\"text\":\"Litter that accumulates under and on the surfaces used to roost or to\\nnest are not only problematic from hygienic and urban deface reasons, they also cause\\nstructural and aesthetic damages to man-made structures accelerating their deterioration\\nand increasing the costs of maintenance (Haag-Wackernagel, 1995; Pimentel et al., 2000).\"}]},\"localized\":{\"text\":{\"en\":\"The accumulation of pigeon droppings and nesting material not only causes hygienic problems and visual pollution, but also accelerates the deterioration of buildings and increases maintenance costs.\",\"nl\":\"De ophoping van duivenuitwerpselen en nestmateriaal veroorzaakt niet alleen hygiënische problemen en visuele vervuiling, maar versnelt ook de achteruitgang van gebouwen en verhoogt de onderhoudskosten.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":3,\"type\":\"destillaat\",\"id\":\"destillaat:cc7e2132-0876-5584-8895-b7fd7b6bb65c\",\"text\":\"Het verjagen van duiven bij graansilo's en in de voedingsmiddelenindustrie is van cruciaal belang om de hygiëne tijdens de voedselbereiding te waarborgen.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"Pigeons do not only soil buildings but also foul foodstuffs; problems are relevant in\\nparticular places as grain elevators or food industries, all sites where scaring pigeons is of\\nparamount importance for hygienic purposes related to food preparation (Gingrich \\u0026\\nOsterberg, 2003).\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:36cec99c-ca93-5d2e-ad0d-d7028690c7d2\",\"text\":\"Pigeons do not only soil buildings but also foul foodstuffs; problems are relevant in\\nparticular places as grain elevators or food industries, all sites where scaring pigeons is of\\nparamount importance for hygienic purposes related to food preparation (Gingrich \\u0026\\nOsterberg, 2003).\"}]},\"localized\":{\"text\":{\"en\":\"Driving away pigeons at grain silos and in the food industry is crucial for safeguarding hygiene during food preparation.\",\"nl\":\"Het verjagen van duiven bij graansilo's en in de voedingsmiddelenindustrie is van cruciaal belang om de hygiëne tijdens de voedselbereiding te waarborgen.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":4,\"type\":\"destillaat\",\"id\":\"destillaat:397852fd-44a5-5c17-b5ef-401425d8c89c\",\"text\":\"De wereldwijde aanwezigheid van stadsduiven in stedelijke gebieden brengt potentiële gezondheidsrisico's met zich mee door ziekteverwekkers en parasieten, en hun uitwerpselen kunnen schade aan gebouwen veroorzaken.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8e70e457-1447-53dc-a7c1-c5971108b709\",\"citation\":\"Jenni-Eiermann, S., Heynen, D., \\u0026 Schaub, M. (2014). Effect of an ultrasonic device on the behaviour and the stress hormone corticosterone in feral pigeons. Journal of Pest Science, 87, 315-322. https://doi.org/10.1007/s10340-014-0553-y\",\"citationConfidence\":\"high\",\"citationMissing\":\"issue\",\"quote\":\"The worldwide presence of feral pigeons Columba livia domestica in urban habitats presents potential\\npublic health hazards from pathogens and parasites, and\\ndroppings can lead to damage to buildings.\",\"paper\":\"jenni-eiermann2014\",\"doi\":\"10.1007/s10340-014-0553-y\",\"passages\":[{\"id\":\"quote:2d48eec7-63ed-5eb2-ba54-da25ead0b37f\",\"text\":\"The worldwide presence of feral pigeons Columba livia domestica in urban habitats presents potential\\npublic health hazards from pathogens and parasites, and\\ndroppings can lead to damage to buildings.\"}]},\"localized\":{\"text\":{\"en\":\"The worldwide presence of urban pigeons in built-up areas carries potential health risks through pathogens and parasites, and their droppings can cause damage to buildings.\",\"nl\":\"De wereldwijde aanwezigheid van stadsduiven in stedelijke gebieden brengt potentiële gezondheidsrisico's met zich mee door ziekteverwekkers en parasieten, en hun uitwerpselen kunnen schade aan gebouwen veroorzaken.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":5,\"type\":\"destillaat\",\"id\":\"destillaat:6dbc1511-aa5d-5a39-8f30-ba9e6937dde1\",\"text\":\"Stadsduiven veroorzaken diverse vormen van overlast in stedelijke gebieden, waaronder corrosieve schade aan gebouwen door hun uitwerpselen en het nestelen in de directe nabijheid van woningen.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:0bcd8848-06e9-51bb-93fe-dc1d37aec88a\",\"citation\":\"Soh, M. C. K., Pang, R. Y. T., Ng, B. X. K., Lee, B. P. Y. H., Loo, A. H. B., \\u0026 Er, K. B. H. (2021). Restricted human activities shift the foraging strategies of feral pigeons (Columba livia) and three other commensal bird species. Biological Conservation, 253, 108927. https://doi.org/10.1016/j.biocon.2020.108927\",\"citationConfidence\":\"high\",\"quote\":\"Furthermore, feral pigeons cause several dis-amenities, such as corrosive\\ndamage to building structures from their droppings (Del Monte and\\nSabbioni, 1986; Spennemann and Watson, 2017), and nesting in close\\nproximity to human habitation.\",\"paper\":\"soh2021\",\"doi\":\"10.1016/j.biocon.2020.108927\",\"passages\":[{\"id\":\"quote:697985fb-9236-50dc-a503-908eeb0ffc40\",\"text\":\"Furthermore, feral pigeons cause several dis-amenities, such as corrosive\\ndamage to building structures from their droppings (Del Monte and\\nSabbioni, 1986; Spennemann and Watson, 2017), and nesting in close\\nproximity to human habitation.\"}]},\"localized\":{\"text\":{\"en\":\"Urban pigeons cause various forms of nuisance in urban areas, including corrosive damage to buildings from their droppings and nesting in close proximity to homes.\",\"nl\":\"Stadsduiven veroorzaken diverse vormen van overlast in stedelijke gebieden, waaronder corrosieve schade aan gebouwen door hun uitwerpselen en het nestelen in de directe nabijheid van woningen.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":6,\"type\":\"destillaat\",\"id\":\"destillaat:ffd00af1-9b65-531d-8cf4-50f7cf1927a4\",\"text\":\"De uiterlijke gezondheidstoestand van duiven, zoals verminkingen, beïnvloedt de emotionele en esthetische afkeer die mensen voor de dieren voelen.\",\"perspective\":\"Sociale verbinding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:d216d6f5-20c1-57ad-aaab-c4b907424096\",\"citation\":\"Skandrani, Z., Desquilbet, M., \\u0026 Prévot, A. C. (2018). A renewed framework for urban biodiversity governance: Urban pigeons as a case-study. Natures Sciences Sociétés, 26(3), 280–290. https://doi.org/10.1051/nss/2018051\",\"citationConfidence\":\"high\",\"quote\":\"However,\\nthe visible sanitary state of pigeons could be decisive in\\ndetermining people’s emotional apprehensions linked to\\naesthetic features (Stokes, 2007).\",\"paper\":\"skandrani2018\",\"doi\":\"10.1051/nss/2018051\",\"passages\":[{\"id\":\"quote:274ea757-f069-5dcf-b51b-784897007a26\",\"text\":\"However,\\nthe visible sanitary state of pigeons could be decisive in\\ndetermining people’s emotional apprehensions linked to\\naesthetic features (Stokes, 2007).\"}]},\"localized\":{\"text\":{\"en\":\"The outward health condition of pigeons, such as disfigurement, influences the emotional and aesthetic aversion people feel toward the animals.\",\"nl\":\"De uiterlijke gezondheidstoestand van duiven, zoals verminkingen, beïnvloedt de emotionele en esthetische afkeer die mensen voor de dieren voelen.\"},\"perspective\":{\"en\":\"Social connection\",\"nl\":\"Sociale verbinding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":7,\"type\":\"destillaat\",\"id\":\"destillaat:f1431c96-e8e7-5c6f-b862-c9a2d28c6244\",\"text\":\"De angst voor duiven en het labelen van deze dieren als 'vies' komt voort uit de menselijke behoefte om de stad strikt te ordenen en te bepalen wat er wel en niet thuishoort.\",\"perspective\":\"Sociale verbinding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:d216d6f5-20c1-57ad-aaab-c4b907424096\",\"citation\":\"Skandrani, Z., Desquilbet, M., \\u0026 Prévot, A. C. (2018). A renewed framework for urban biodiversity governance: Urban pigeons as a case-study. Natures Sciences Sociétés, 26(3), 280–290. https://doi.org/10.1051/nss/2018051\",\"citationConfidence\":\"high\",\"quote\":\"In particular,\\ncities are subject to an ordering process that clearly\\ndetermines what can be included and what does not belong\\nto it (Grifﬁths and Poulter, 2000).\",\"paper\":\"skandrani2018\",\"doi\":\"10.1051/nss/2018051\",\"passages\":[{\"id\":\"quote:a5dc99b2-e842-550c-a7be-8294c66fdfdd\",\"text\":\"In particular,\\ncities are subject to an ordering process that clearly\\ndetermines what can be included and what does not belong\\nto it (Grifﬁths and Poulter, 2000).\"}]},\"localized\":{\"text\":{\"en\":\"The fear of pigeons and the labeling of these animals as 'dirty' stems from the human need to strictly order the city and determine what does and does not belong there.\",\"nl\":\"De angst voor duiven en het labelen van deze dieren als 'vies' komt voort uit de menselijke behoefte om de stad strikt te ordenen en te bepalen wat er wel en niet thuishoort.\"},\"perspective\":{\"en\":\"Social connection\",\"nl\":\"Sociale verbinding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":8,\"type\":\"destillaat\",\"id\":\"destillaat:adf554bd-4275-517d-8aa7-8de9e5d62577\",\"text\":\"Fysieke verminkingen aan de poten van stadsduiven, zoals afgesnoerde tenen, hangen direct samen met de mate van netheid van de openbare ruimte waarin rondslingerend vuil zoals draden en haren letsel veroorzaakt.\",\"perspective\":\"Ecologische bezorgdheid\",\"theme\":\"Milieuvervuiling en vogelgezondheid\",\"ref\":{\"id\":\"interview:6253ceb0-7f66-5317-9ded-fdc75cf5858e\",\"citation\":\"Skandrani, Z., Desquilbet, M., \\u0026 Prévot, A.-C. (2018). A renewed framework for urban biodiversity governance: urban pigeons as a case-study. Natures Sciences Sociétés, 26(3), 280-290. https://doi.org/10.1051/nss/2018051\",\"citationConfidence\":\"high\",\"quote\":\"These results and observations suggest that\\npigeon mutilations are at least partly linked with the\\ncleanliness status of the ground.\",\"paper\":\"skadranietal2017-arenewedframeworkforurbanbiodiversitygovernance-1\",\"doi\":\"10.1051/nss/2018051\",\"passages\":[{\"id\":\"quote:b3637ffb-15aa-50a7-b8f2-308a145a7b03\",\"text\":\"These results and observations suggest that\\npigeon mutilations are at least partly linked with the\\ncleanliness status of the ground.\"},{\"id\":\"quote:efe0fe84-8708-598b-b9d1-e4d1bcaf5c5e\",\"text\":\"the levels of foot\\nmutilations of individual pigeons (atrophied claws,\\nstumps) are correlated with the density of inhabitants\\nin the neighborhood\"}]},\"localized\":{\"text\":{\"en\":\"Physical mutilations to the legs of urban pigeons, such as constricted toes, are directly related to the cleanliness of the public space, where loose litter such as wire and hair causes injury.\",\"nl\":\"Fysieke verminkingen aan de poten van stadsduiven, zoals afgesnoerde tenen, hangen direct samen met de mate van netheid van de openbare ruimte waarin rondslingerend vuil zoals draden en haren letsel veroorzaakt.\"},\"perspective\":{\"en\":\"Ecological concern\",\"nl\":\"Ecologische bezorgdheid\"},\"theme\":{\"en\":\"Environmental pollution and bird health\",\"nl\":\"Milieuvervuiling en vogelgezondheid\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":9,\"type\":\"destillaat\",\"id\":\"destillaat:a0616f7e-8993-5ca6-a3e5-0c19e158b1bd\",\"text\":\"De onderzoekers waarschuwen dat opgedroogde duivenpoep die als stof door de lucht zweeft een ernstig gezondheidsrisico vormt wanneer het wordt ingeademd.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:36878a2d-e678-54a2-98a9-1a72d88d450b\",\"citation\":\"Przybylska, K., Haidt, A., Myczko, Ł., Ekner-Grzyb, A., Rosin, Z. M., Kwieciński, Z., Tryjanowski, P., Suchodolska, J., Takacs, V., Jankowiak, Ł., Tobółka, M., Wasielewski, O., Graclik, A., Krawczyk, A. J., Kasprzak, A., Szwajkowski, P., Wylegała, P., Malecha, A. W., Mizera, T., \\u0026 Skórka, P. (2012). Local and Landscape-Level Factors Affecting the Density and Distribution of the Feral Pigeon Columba livia var. domestica in an Urban Environment. Acta Ornithologica, 47(1), 37–45. https://doi.org/10.3161/000164512X653908\",\"citationConfidence\":\"high\",\"quote\":\"The major health problem is the harmful effect of pigeon faeces as dust floating in the\\nair that can be inhaled\",\"paper\":\"przybylska2012\",\"doi\":\"10.3161/000164512X653908\",\"passages\":[{\"id\":\"quote:303ec0c7-ce8a-5d4a-80e8-3f06d7a5b050\",\"text\":\"The major health problem is the harmful effect of pigeon faeces as dust floating in the\\nair that can be inhaled\"}]},\"localized\":{\"text\":{\"en\":\"The researchers warn that dried pigeon droppings floating through the air as dust pose a serious health risk when inhaled.\",\"nl\":\"De onderzoekers waarschuwen dat opgedroogde duivenpoep die als stof door de lucht zweeft een ernstig gezondheidsrisico vormt wanneer het wordt ingeademd.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":10,\"type\":\"destillaat\",\"id\":\"destillaat:7ca4c818-89ef-53e5-b4c7-c38dadbf2faa\",\"text\":\"De auteurs concluderen dat de stadsduif via zijn uitwerpselen een waardevolle ecosysteemdienst levert die wereldwijd kan bijdragen aan duurzame stadslandbouw.\",\"perspective\":\"Ecologische waardering\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:836b7aae-cd75-5414-967f-045ef2457fb9\",\"citation\":\"Duffaut, C., Brondeau, F., \\u0026 Gasparini, J. (2023). An original and efficient fertilizer for cherry tomato plants grown in urban agriculture: Feral pigeon guano. Urban Agriculture and Regional Food Systems, 8(1), e20046. https://doi.org/10.1002/uar2.20046\",\"citationConfidence\":\"high\",\"quote\":\"The feral pigeon is a\\nwidespread representative of urban biodiversity and the guano\\nsecreted by them may constitute interesting ecosystem services in urban environment that can be used in short circuits\\nin urban agriculture all over the world.\",\"paper\":\"duffaut2023\",\"doi\":\"10.1002/uar2.20046\",\"passages\":[{\"id\":\"quote:4a695cde-ada3-5fbd-8145-f1b5149030a7\",\"text\":\"The feral pigeon is a\\nwidespread representative of urban biodiversity and the guano\\nsecreted by them may constitute interesting ecosystem services in urban environment that can be used in short circuits\\nin urban agriculture all over the world.\"}]},\"localized\":{\"text\":{\"en\":\"The authors conclude that, through its droppings, the urban pigeon provides a valuable ecosystem service that can contribute to sustainable urban agriculture worldwide.\",\"nl\":\"De auteurs concluderen dat de stadsduif via zijn uitwerpselen een waardevolle ecosysteemdienst levert die wereldwijd kan bijdragen aan duurzame stadslandbouw.\"},\"perspective\":{\"en\":\"Ecological appreciation\",\"nl\":\"Ecologische waardering\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":11,\"type\":\"destillaat\",\"id\":\"destillaat:f2c7eb52-0997-599b-add8-6300b2840330\",\"text\":\"De meerderheid van de stadsbewoners staat vijandig tegenover duiven, beschouwt ze als vliegende ratten en jaagt ze weg.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:5beb0855-2986-5886-929b-f35124ffe4fe\",\"citation\":\"Belguermi, A., Bovet, D., Pascal, A., Prévot-Julliard, A.-C., Saint Jalme, M., Rat-Fischer, L., \\u0026 Leboucher, G. (2011). Pigeons discriminate between human feeders. Animal Cognition, 14(6), 909–914. https://doi.org/10.1007/s10071-011-0420-7\",\"citationConfidence\":\"high\",\"quote\":\"The majority of city dwellers are hostile to pigeons,\\nregarding them as ‘flying rats’ and chasing them away\\n(Jerolmack 2008).\",\"paper\":\"belguermi2011\",\"doi\":\"10.1007/s10071-011-0420-7\",\"passages\":[{\"id\":\"quote:e5d21aff-7ed5-5aae-91a7-897788cc5e86\",\"text\":\"The majority of city dwellers are hostile to pigeons,\\nregarding them as ‘flying rats’ and chasing them away\\n(Jerolmack 2008).\"}]},\"localized\":{\"text\":{\"en\":\"The majority of city residents are hostile toward pigeons, regard them as flying rats, and chase them away.\",\"nl\":\"De meerderheid van de stadsbewoners staat vijandig tegenover duiven, beschouwt ze als vliegende ratten en jaagt ze weg.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":12,\"type\":\"destillaat\",\"id\":\"destillaat:ccc62809-22c4-5c49-856f-d6728f08bc63\",\"text\":\"Stadsduiven vormen een aanzienlijk epidemiologisch risico omdat ze dragers en verspreiders zijn van talrijke micro-organismen die dodelijke ziekten bij mensen kunnen veroorzaken.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"Feral pigeons are of considerable epidemiological importance, being reservoirs and potential\\nvectors of a large number of microorganisms and source of antigens of zoonotic concern,\\ncausing both infections and allergic diseases, that can be lethal (Haag-Wackernagel, 2006;\\nHaag-Wackernagel \\u0026 Bircher, 2009; Haag-Wackernagel \\u0026 Moch, 2004; Magnino et al., 2009;\\nRosický, 1978).\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:1b49b165-7755-5b97-b8bd-fd537db2ba91\",\"text\":\"Feral pigeons are of considerable epidemiological importance, being reservoirs and potential\\nvectors of a large number of microorganisms and source of antigens of zoonotic concern,\\ncausing both infections and allergic diseases, that can be lethal (Haag-Wackernagel, 2006;\\nHaag-Wackernagel \\u0026 Bircher, 2009; Haag-Wackernagel \\u0026 Moch, 2004; Magnino et al., 2009;\\nRosický, 1978).\"}]},\"localized\":{\"text\":{\"en\":\"Urban pigeons pose a considerable epidemiological risk because they carry and spread numerous microorganisms that can cause fatal diseases in humans.\",\"nl\":\"Stadsduiven vormen een aanzienlijk epidemiologisch risico omdat ze dragers en verspreiders zijn van talrijke micro-organismen die dodelijke ziekten bij mensen kunnen veroorzaken.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":13,\"type\":\"destillaat\",\"id\":\"destillaat:6efa3fd9-2180-5773-806c-3b190b8cd39d\",\"text\":\"De fysieke verminkingen aan de poten van stadsduiven worden vermoedelijk veroorzaakt door rondslingerend vuil zoals haren en touwtjes, wat betekent dat de gezondheid van de duif direct samenhangt met de netheid van de straat.\",\"perspective\":\"Ecologische bezorgdheid\",\"theme\":\"Milieuvervuiling en vogelgezondheid\",\"ref\":{\"id\":\"interview:d216d6f5-20c1-57ad-aaab-c4b907424096\",\"citation\":\"Skandrani, Z., Desquilbet, M., \\u0026 Prévot, A. C. (2018). A renewed framework for urban biodiversity governance: Urban pigeons as a case-study. Natures Sciences Sociétés, 26(3), 280–290. https://doi.org/10.1051/nss/2018051\",\"citationConfidence\":\"high\",\"quote\":\"This\\nresult is reinforced by direct observations of pigeons\\ninjured by hairs or strings wrapped around the feet\\nwhen ringing pigeons during the MNHN pigeon\\nprogram. These results and observations suggest that\\npigeon mutilations are at least partly linked with the\\ncleanliness status of the ground.\",\"paper\":\"skandrani2018\",\"doi\":\"10.1051/nss/2018051\",\"passages\":[{\"id\":\"quote:fa42e779-9392-5bc5-b680-b70b2a5b223f\",\"text\":\"This\\nresult is reinforced by direct observations of pigeons\\ninjured by hairs or strings wrapped around the feet\\nwhen ringing pigeons during the MNHN pigeon\\nprogram. These results and observations suggest that\\npigeon mutilations are at least partly linked with the\\ncleanliness status of the ground.\"}]},\"localized\":{\"text\":{\"en\":\"The physical mutilations to the feet of urban pigeons are presumably caused by loose debris such as hair and string, which means that the health of the pigeon is directly linked to the cleanliness of the street.\",\"nl\":\"De fysieke verminkingen aan de poten van stadsduiven worden vermoedelijk veroorzaakt door rondslingerend vuil zoals haren en touwtjes, wat betekent dat de gezondheid van de duif direct samenhangt met de netheid van de straat.\"},\"perspective\":{\"en\":\"Ecological concern\",\"nl\":\"Ecologische bezorgdheid\"},\"theme\":{\"en\":\"Environmental pollution and bird health\",\"nl\":\"Milieuvervuiling en vogelgezondheid\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":14,\"type\":\"destillaat\",\"id\":\"destillaat:8f3cdf32-5baa-5b8e-9214-447177e5acec\",\"text\":\"Vanwege de gezondheidsrisico's en de hoge kosten door infrastructurele schade is er een grote behoefte aan effectieve methoden om te voorkomen dat stadsduiven op en in gebouwen nestelen.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8e70e457-1447-53dc-a7c1-c5971108b709\",\"citation\":\"Jenni-Eiermann, S., Heynen, D., \\u0026 Schaub, M. (2014). Effect of an ultrasonic device on the behaviour and the stress hormone corticosterone in feral pigeons. Journal of Pest Science, 87, 315-322. https://doi.org/10.1007/s10340-014-0553-y\",\"citationConfidence\":\"high\",\"citationMissing\":\"issue\",\"quote\":\"Health risks and high costs due to\\ninfrastructural damage raise a strong interest to prevent feral\\npigeons from roosting on and in buildings.\",\"paper\":\"jenni-eiermann2014\",\"doi\":\"10.1007/s10340-014-0553-y\",\"passages\":[{\"id\":\"quote:ac4ec3d2-524d-5b56-b336-ead571aa9bbd\",\"text\":\"Health risks and high costs due to\\ninfrastructural damage raise a strong interest to prevent feral\\npigeons from roosting on and in buildings.\"}]},\"localized\":{\"text\":{\"en\":\"Because of the health risks and the high costs from infrastructural damage, there is a great need for effective methods to prevent urban pigeons from nesting on and in buildings.\",\"nl\":\"Vanwege de gezondheidsrisico's en de hoge kosten door infrastructurele schade is er een grote behoefte aan effectieve methoden om te voorkomen dat stadsduiven op en in gebouwen nestelen.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":15,\"type\":\"destillaat\",\"id\":\"destillaat:7702b6cb-b5fd-5948-b7ea-feb2a640e8c0\",\"text\":\"Hoewel duiven zich succesvol hebben aangepast aan de stad, heeft dit geleid tot een slechte reputatie bij mensen, die hen vaak als plaag beschouwen vanwege gebouwschade en ziekteoverdracht.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:edf48f05-bf73-5872-8e8e-93c785959ff0\",\"citation\":\"Geijtenbeek, J. W. (2026). The effect of large-scale urban events on feral pigeons (Columba livia) [Writing assignment, Utrecht University].\",\"citationConfidence\":\"medium\",\"citationMissing\":\"repository URL, page count, degree name\",\"quote\":\"However, this successful adaptation has also lead to them having a bad reputation with humans,\\nand feral pigeons are often considered pests, as they can transmit diseases and damage\\nbuildings (Giunchi et al., 2012).\",\"paper\":\"effects-human-activities-pigeons-msthesis-jgeijtenbeek\",\"passages\":[{\"id\":\"quote:f0cc33f7-c827-5918-9632-29d27ee46d6c\",\"text\":\"However, this successful adaptation has also lead to them having a bad reputation with humans,\\nand feral pigeons are often considered pests, as they can transmit diseases and damage\\nbuildings (Giunchi et al., 2012).\"}]},\"localized\":{\"text\":{\"en\":\"Although pigeons have successfully adapted to the city, this has earned them a poor reputation among people, who often regard them as pests because of damage to buildings and disease transmission.\",\"nl\":\"Hoewel duiven zich succesvol hebben aangepast aan de stad, heeft dit geleid tot een slechte reputatie bij mensen, die hen vaak als plaag beschouwen vanwege gebouwschade en ziekteoverdracht.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":16,\"type\":\"destillaat\",\"id\":\"destillaat:7401d00f-4728-5ebe-89fc-ff1408e5b10e\",\"text\":\"Stadsduiven kunnen de oorzaak zijn van alledaagse ongelukken, zoals het uitglijden over oppervlakken die vervuild zijn met duivenpoep.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"Feral pigeons can also be the source of accidents of various nature, from the trivial slipping\\non surfaces littered by pigeon droppings, to the most serious problem of hazards to aircraft\\n(bird-strike).\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:a9af9947-0cef-5341-accb-82baf53c24ac\",\"text\":\"Feral pigeons can also be the source of accidents of various nature, from the trivial slipping\\non surfaces littered by pigeon droppings, to the most serious problem of hazards to aircraft\\n(bird-strike).\"}]},\"localized\":{\"text\":{\"en\":\"Urban pigeons can be the cause of everyday accidents, such as slipping on surfaces soiled with pigeon droppings.\",\"nl\":\"Stadsduiven kunnen de oorzaak zijn van alledaagse ongelukken, zoals het uitglijden over oppervlakken die vervuild zijn met duivenpoep.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":17,\"type\":\"destillaat\",\"id\":\"destillaat:da0f9f5e-ff3c-59af-9291-e08d202b03fe\",\"text\":\"Direct contact met duiven is niet noodzakelijk voor ziekteoverdracht, aangezien ziekteverwekkers zich voornamelijk verspreiden via uitwerpselen, afscheidingen of verenstof in de omgeving.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"Pathogens can be transmitted to humans mainly via excreta, secretions, or\\ndust from feathers spread into the environment, thus a direct contact with pigeons can be\\nunimportant (Curtis et al., 2002; Geigenfeind \\u0026 Haag-Wackernagel, 2010).\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:45ff13c1-8278-5fa1-b4cc-517a5f55b9d7\",\"text\":\"Pathogens can be transmitted to humans mainly via excreta, secretions, or\\ndust from feathers spread into the environment, thus a direct contact with pigeons can be\\nunimportant (Curtis et al., 2002; Geigenfeind \\u0026 Haag-Wackernagel, 2010).\"}]},\"localized\":{\"text\":{\"en\":\"Direct contact with pigeons is not necessary for disease transmission, since pathogens spread mainly through droppings, secretions, or feather dust in the environment.\",\"nl\":\"Direct contact met duiven is niet noodzakelijk voor ziekteoverdracht, aangezien ziekteverwekkers zich voornamelijk verspreiden via uitwerpselen, afscheidingen of verenstof in de omgeving.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":18,\"type\":\"destillaat\",\"id\":\"destillaat:1b7abe66-5f8f-5a4f-b321-9b6eea75f933\",\"text\":\"De stadsduif wordt in veel stedelijke gebieden beschouwd als een plaagsoort vanwege de schade die zij toebrengt aan gebouwen en de landbouw, evenals het risico op ziekteoverdracht naar mensen en andere diersoorten.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:2fc5e76f-e2b4-5dbe-a7f9-34eaa882e833\",\"citation\":\"Cano-Terriza, D., Guerra, R., Lecollinet, S., Cerdà-Cuéllar, M., Cabezón, O., Almería, S., \\u0026 García-Bocanegra, I. (2015). Epidemiological survey of zoonotic pathogens in feral pigeons (Columba livia var. domestica) and sympatric zoo species in Southern Spain. Comparative Immunology, Microbiology and Infectious Diseases, 43, 22-27. https://doi.org/10.1016/j.cimid.2015.10.003\",\"citationConfidence\":\"high\",\"citationMissing\":\"issue\",\"quote\":\"Feral pigeon is considered a pest species in many urban areas due to\\nthe destruction architectonic and urban heritage, damage to agriculture and risk of disease transmission to other sympatric species,\\nincluding humans.\",\"paper\":\"cano-terriza2015\",\"doi\":\"10.1016/j.cimid.2015.10.003\",\"passages\":[{\"id\":\"quote:31ff212c-eab0-5e00-af3e-f6296357d876\",\"text\":\"Feral pigeon is considered a pest species in many urban areas due to\\nthe destruction architectonic and urban heritage, damage to agriculture and risk of disease transmission to other sympatric species,\\nincluding humans.\"}]},\"localized\":{\"text\":{\"en\":\"The urban pigeon is regarded as a pest species in many urban areas because of the damage it causes to buildings and agriculture, as well as the risk of disease transmission to humans and other animal species.\",\"nl\":\"De stadsduif wordt in veel stedelijke gebieden beschouwd als een plaagsoort vanwege de schade die zij toebrengt aan gebouwen en de landbouw, evenals het risico op ziekteoverdracht naar mensen en andere diersoorten.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":19,\"type\":\"destillaat\",\"id\":\"destillaat:6e4b0f3e-38d2-5774-b80e-f53f6caa1ca1\",\"text\":\"De sensorische ecologie van duiven biedt waardevolle inzichten in de manier waarop zij stressoren tijdens grootschalige stedelijke evenementen waarnemen.\",\"perspective\":\"Ecologische aanpassing\",\"theme\":\"Gehoor en geluid bij dieren\",\"ref\":{\"id\":\"interview:edf48f05-bf73-5872-8e8e-93c785959ff0\",\"citation\":\"Geijtenbeek, J. W. (2026). The effect of large-scale urban events on feral pigeons (Columba livia) [Writing assignment, Utrecht University].\",\"citationConfidence\":\"medium\",\"citationMissing\":\"repository URL, page count, degree name\",\"quote\":\"The sensory ecology of pigeons can give insight\\ninto how pigeons perceive stressors at urban events.\",\"paper\":\"effects-human-activities-pigeons-msthesis-jgeijtenbeek\",\"passages\":[{\"id\":\"quote:4b4aeb5b-43b6-51ce-87b2-56867be74514\",\"text\":\"The sensory ecology of pigeons can give insight\\ninto how pigeons perceive stressors at urban events.\"}]},\"localized\":{\"text\":{\"en\":\"The sensory ecology of pigeons offers valuable insights into the way they perceive stressors during large-scale urban events.\",\"nl\":\"De sensorische ecologie van duiven biedt waardevolle inzichten in de manier waarop zij stressoren tijdens grootschalige stedelijke evenementen waarnemen.\"},\"perspective\":{\"en\":\"Ecological adaptation\",\"nl\":\"Ecologische aanpassing\"},\"theme\":{\"en\":\"Hearing and sound in animals\",\"nl\":\"Gehoor en geluid bij dieren\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":20,\"type\":\"destillaat\",\"id\":\"destillaat:2eb24d98-98b6-5611-a7a5-71623ce3bc08\",\"text\":\"De focus bij duivenoverlast moet worden verlegd van populatiecontrole naar het verminderen van sociale ontevredenheid en het verbeteren van de perceptie van de burger.\",\"perspective\":\"Sociale verbinding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:d216d6f5-20c1-57ad-aaab-c4b907424096\",\"citation\":\"Skandrani, Z., Desquilbet, M., \\u0026 Prévot, A. C. (2018). A renewed framework for urban biodiversity governance: Urban pigeons as a case-study. Natures Sciences Sociétés, 26(3), 280–290. https://doi.org/10.1051/nss/2018051\",\"citationConfidence\":\"high\",\"quote\":\"We propose a novel framework whose\\nmain goal is the reduction of social discomfort (Serpell,\\n2004) and therefore consider the challenge of humanpigeon coexistence beyond pigeon population control,\\nby concentrating on social perceptions of the pigeons.\",\"paper\":\"skandrani2018\",\"doi\":\"10.1051/nss/2018051\",\"passages\":[{\"id\":\"quote:ecfeb414-2f24-5b72-b9cf-6673ae8e0221\",\"text\":\"We propose a novel framework whose\\nmain goal is the reduction of social discomfort (Serpell,\\n2004) and therefore consider the challenge of humanpigeon coexistence beyond pigeon population control,\\nby concentrating on social perceptions of the pigeons.\"}]},\"localized\":{\"text\":{\"en\":\"The focus in addressing pigeon nuisance should shift from population control to reducing social dissatisfaction and improving public perception.\",\"nl\":\"De focus bij duivenoverlast moet worden verlegd van populatiecontrole naar het verminderen van sociale ontevredenheid en het verbeteren van de perceptie van de burger.\"},\"perspective\":{\"en\":\"Social connection\",\"nl\":\"Sociale verbinding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"}]}"
+    },
+    {
+     "t": 36592,
+     "data": "{\"type\":\"playback_state\",\"turnId\":\"1\",\"playback\":\"playing\",\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"speaking\":true}"
+    },
+    {
+     "t": 37317,
+     "data": "{\"type\":\"arousal\",\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"speaking\":false,\"arousal\":0.6860011956758011}"
+    },
+    {
+     "t": 37318,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"listening\":\"listening\",\"speaking\":true}"
+    },
+    {
+     "t": 41035,
+     "data": "{\"type\":\"playback_state\",\"turnId\":\"1\",\"autonomyPaused\":false,\"playback\":\"ended\",\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"speaking\":false}"
+    },
+    {
+     "t": 42567,
+     "data": "{\"type\":\"arousal\",\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"speaking\":false,\"arousal\":0.6655103018130459}"
+    },
+    {
+     "t": 42567,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"98f4694f8a15890a98b411321a708a83\",\"listening\":\"listening\",\"speaking\":false}"
+    }
+   ],
+   "openMs": 1325,
+   "closeMs": 43400
+  }
+ ],
+ "probes": [
+  {
+   "kind": "mic-open",
+   "t": 1376,
+   "audio": 1
+  },
+  {
+   "kind": "gesture",
+   "t": 1405,
+   "clip": "Peck"
+  },
+  {
+   "kind": "gesture",
+   "t": 1626,
+   "clip": "WingWave"
+  },
+  {
+   "kind": "gesture",
+   "t": 18234,
+   "clip": "WingWave"
+  },
+  {
+   "kind": "pcm-start",
+   "t": 18714,
+   "at": 18764,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 18878,
+   "at": 19019,
+   "duration": 0.3413333333333333,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 18999,
+   "at": 19358,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 19199,
+   "at": 19617,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 19432,
+   "at": 19871,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 19623,
+   "at": 20121,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 19954,
+   "at": 20377,
+   "duration": 0.512,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 20278,
+   "at": 20893,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 20497,
+   "at": 21150,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 20702,
+   "at": 21408,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 20970,
+   "at": 21655,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 21114,
+   "at": 21916,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 21328,
+   "at": 22173,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 21561,
+   "at": 22432,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 21757,
+   "at": 22687,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 22016,
+   "at": 22941,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 22206,
+   "at": 23195,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 22502,
+   "at": 23448,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 22630,
+   "at": 23709,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 22844,
+   "at": 23961,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 23056,
+   "at": 24221,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 23274,
+   "at": 24476,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 23601,
+   "at": 24739,
+   "duration": 0.512,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 23882,
+   "at": 25239,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 24122,
+   "at": 25504,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 24378,
+   "at": 25756,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 24641,
+   "at": 26019,
+   "duration": 0.512,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 24982,
+   "at": 26520,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 25178,
+   "at": 26780,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 25384,
+   "at": 27034,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 25646,
+   "at": 27291,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 25812,
+   "at": 27553,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 26039,
+   "at": 27806,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 26239,
+   "at": 28065,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 26469,
+   "at": 28316,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 26694,
+   "at": 28568,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 26893,
+   "at": 28826,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 27114,
+   "at": 29087,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 27306,
+   "at": 29340,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 27526,
+   "at": 29597,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 27767,
+   "at": 29854,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 27972,
+   "at": 30113,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 28163,
+   "at": 30373,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 28378,
+   "at": 30620,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 28609,
+   "at": 30878,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 28802,
+   "at": 31140,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 29018,
+   "at": 31388,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 29316,
+   "at": 31643,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 29443,
+   "at": 31909,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 29651,
+   "at": 32160,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 29866,
+   "at": 32412,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 30137,
+   "at": 32667,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 30365,
+   "at": 32922,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 30519,
+   "at": 33182,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 30718,
+   "at": 33440,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 30932,
+   "at": 33697,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 31145,
+   "at": 33947,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 31324,
+   "at": 34200,
+   "duration": 0.3413333333333333,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 31606,
+   "at": 34547,
+   "duration": 0.3413333333333333,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 31937,
+   "at": 34888,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 32130,
+   "at": 35145,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 32358,
+   "at": 35400,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 32564,
+   "at": 35665,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 32782,
+   "at": 35915,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 32994,
+   "at": 36164,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 33209,
+   "at": 36427,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 33423,
+   "at": 36684,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 33659,
+   "at": 36936,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 33871,
+   "at": 37196,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 34063,
+   "at": 37441,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 34270,
+   "at": 37707,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 34560,
+   "at": 37965,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 34727,
+   "at": 38217,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 34943,
+   "at": 38465,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 35140,
+   "at": 38731,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 35378,
+   "at": 38985,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 35608,
+   "at": 39242,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 35806,
+   "at": 39493,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 36019,
+   "at": 39754,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 36233,
+   "at": 40011,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 36445,
+   "at": 40260,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 36551,
+   "at": 40521,
+   "duration": 0.512,
+   "sampleRate": 24000
+  }
+ ],
+ "transcript": [
+  {
+   "t": 10701,
+   "text": "The market traders keep complaining about pigeon droppings on their stalls."
+  }
+ ],
+ "voice": [
+  {
+   "file": "stem.mp3",
+   "turnId": "1",
+   "format": "pcm16",
+   "sampleRate": 24000,
+   "bytes": 1069056,
+   "ms": 22272,
+   "sha256": "abc1f47a2716b151d8a89f38b811ad0fe787b78c46700a18874044fdd0433c01",
+   "encoded": "mp3, mono, 64 kbit/s (libmp3lame, bit-exact)"
+  }
+ ],
+ "checks": {
+  "reaction": "speech",
+  "delayMs": 8857,
+  "sessionLang": "en",
+  "langMatches": true,
+  "autonomous": true
+ }
+}

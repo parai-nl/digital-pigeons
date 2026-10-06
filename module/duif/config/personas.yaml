@@ -1,0 +1,231 @@
+# Persona-configuratie — Digitale Duif van Rotterdam.
+# Persona-id's zijn Engels: één naamruimte voor config, code en wire.
+# Alle inhoud is nieuw geschreven
+# projectcontent; er staat geen tekst uit private Parai-repo's in.
+#
+# `topics:` is de themalijst per duif: de beschrijving gaat mee in de
+# kandidaatprompt, het label is wat de vergadering ziet bij een kandidaat, en
+# `gevoeligheid` (0–1, exclusief 0) verschuift de spreeklat voor dat ene thema —
+# 0,5 is neutraal. De spreeklat zelf staat per duif onder `spreeklat:`.
+personas:
+  - id: biological
+    naam: { en: "Knowledge Partner", nl: "Kennispartner" }
+    # Op de Soniox-route (de geconfigureerde route) is dit veld alleen nog een
+    # aan/uit-schakelaar: gevuld betekent "deze duif spreekt", de waarde zelf
+    # doet niets. De stem is er één voor beide pratende duiven — Logan, uit
+    # SONIOX_TTS_VOICE — en dat is een ontwerpkeuze, geen openstaand punt. Deze id blijft staan voor de ElevenLabs-route, waar hij
+    # wél de stem kiest (premade "George", warm, verhalend).
+    voice_id: "JBFqnCBsd6RMkjVDRZzb"
+    # Het spreektempo is de enige stemknop die per duif verschilt: de
+    # kennispartner is de geduldige van
+    # de twee en praat een tikje onder het normale tempo. Soniox accepteert
+    # 0,7-1,3; dit is bewust een nuance, geen tweede stem.
+    spreektempo: 0.97
+    prompts: { en: prompts/biological.en.md, nl: prompts/biological.nl.md }
+    # De spreeklat van deze duif: wanneer zij ongevraagd invalt. De
+    # instructie gaat mee in de kandidaatprompt, de getallen zijn de klok.
+    # Gekalibreerd op eval/meeting-conversations.v1.yaml.
+    spreeklat:
+      prompts: { en: prompts/speakup.biological.en.md, nl: prompts/speakup.biological.nl.md }
+      drempel: 0.55                   # kennispartner: alleen met een echte toevoeging
+      cooldown_seconden: 45
+      cooldown_groei_seconden: 15     # oplopende rem in plaats van een sessieplafond
+      cooldown_max_seconden: 120
+      thema_cooldown_seconden: 180
+      beleefdheid: false              # geen wachten op stilte, zij breekt direct in
+      zonder_bron: false              # geen bron, geen bijdrage
+    kennisbank: true                    # RAG op standpunten; geen bron → geen antwoord
+    chat: true
+    vergadering: true
+    # Standaard uit: een pratende duif die uit zichzelf invalt onderbreekt het
+    # gesprek met een hele alinea, en dat loopt nog niet vloeiend genoeg om
+    # ongevraagd aan te staan.
+    interventie_zelfstandig: false
+    engine: agent                       # chat via de facilitator, die de vraag aanscherpt; het zoeken zit in ask_pigeon. De vergadering blijft direct
+    # De facilitator blijft hier intern: rond de biologische duif zegt hij
+    # niets uit zichzelf. Alleen `clarify` en `redirect_to_pigeon` blijven
+    # zichtbaar. De schakelaars staan los; aanzetten is één regel.
+    facilitator: { framing: false, mediation: false }
+    topics:                             # thema's uit de kennisbank-structuur
+      - id: population-control
+        label: { en: "Population control", nl: "Populatiebeheer" }
+        beschrijving:
+          en: "Measures to reduce or manage the number of city pigeons: culling, contraceptive feed, egg replacement, nest removal, feeding bans, or setting population targets."
+          nl: "Maatregelen om het aantal stadsduiven te verkleinen of te beheersen: afschot, anticonceptievoer, eieren vervangen, nesten weghalen, voederverboden of streefaantallen."
+        gevoeligheid: 0.9
+      - id: nuisance-and-health
+        label: { en: "Nuisance and health", nl: "Overlast en gezondheid" }
+        beschrijving:
+          en: "Complaints about droppings, damage to buildings, noise, or claims that pigeons spread disease to people."
+          nl: "Klachten over uitwerpselen, schade aan gebouwen, geluid, of beweringen dat duiven ziekten overbrengen op mensen."
+        gevoeligheid: 0.7
+      - id: feeding-and-food
+        label: { en: "Feeding and food", nl: "Voeren en voedsel" }
+        beschrijving:
+          en: "Residents feeding pigeons, food waste and litter on the street, waste collection, and how the food supply shapes the pigeon population."
+          nl: "Bewoners die duiven voeren, voedselresten en zwerfafval op straat, afvalinzameling, en hoe het voedselaanbod de duivenpopulatie stuurt."
+        gevoeligheid: 0.6
+      - id: nesting-and-shelter
+        label: { en: "Nesting and shelter", nl: "Nestelen en beschutting" }
+        beschrijving:
+          en: "Where pigeons nest and shelter: ledges, station roofs, bridges, anti-perch spikes, netting, and purpose-built pigeon lofts."
+          nl: "Waar duiven nestelen en schuilen: richels, stationsdaken, bruggen, anti-zitpennen, netten, en aangelegde duiventillen."
+        gevoeligheid: 0.6
+      - id: urban-ecology
+        label: { en: "Urban ecology", nl: "Stadsecologie" }
+        beschrijving:
+          en: "The pigeon's place in the city ecosystem: biodiversity, predators such as peregrines, green space, and how the city's design shapes which animals can live in it."
+          nl: "De plek van de duif in het stadsecosysteem: biodiversiteit, roofvogels als de slechtvalk, groen in de stad, en hoe de inrichting van de stad bepaalt welke dieren er kunnen leven."
+        gevoeligheid: 0.5
+  - id: individualist
+    naam: { en: "Stakeholder", nl: "Stakeholder" }
+    # Zelfde verhaal als bij de kennispartner: op Soniox alleen aan/uit, en
+    # deze duif krijgt dezelfde ene stem. Een stem per duif is bewust niet
+    # gebouwd. De id geldt voor de ElevenLabs-route (premade "Callum", hees,
+    # eigenwijs).
+    voice_id: "N2lVS1w4EtoT3dr4eOWO"
+    # Zij zit in een discussie en praat feller en sneller dan de kennispartner
+    # Hetzelfde bereik, dezelfde stem, alleen het tempo verschilt.
+    spreektempo: 1.10
+    prompts: { en: prompts/individualist.en.md, nl: prompts/individualist.nl.md }
+    spreeklat:
+      prompts: { en: prompts/speakup.individualist.en.md, nl: prompts/speakup.individualist.nl.md }
+      drempel: 0.45                   # inwoner aan tafel: spreekt zodra het haar aangaat
+      cooldown_seconden: 45
+      cooldown_groei_seconden: 15
+      cooldown_max_seconden: 120
+      thema_cooldown_seconden: 120
+      beleefdheid: false              # geen wachten op stilte, zij breekt direct in
+      zonder_bron: true               # mag een begrensd standpunt innemen en benoemt zelf dat er geen onderzoek voor is
+    kennisbank: true                    # feiten uit onderzoek; ontworpen standpunt blijft interpretatie
+    chat: true
+    vergadering: true
+    interventie_zelfstandig: false      # zelfde reden als bij de kennispartner
+    engine: agent                       # chat via de facilitator; de vergadering blijft direct
+    # De stakeholder draagt één pet: haar eigen, harde perspectief.
+    # De facilitator bemiddelt daaromheen — één zin kader vóór zij spreekt, twee
+    # à drie zinnen bemiddeling erna.
+    facilitator: { framing: true, mediation: true }
+    topics:                             # thema's uit de systemprompt van deze duif
+      - id: pigeon-rights
+        label: { en: "What pigeons are owed", nl: "Waar duiven recht op hebben" }
+        beschrijving:
+          en: "The moral standing of pigeons: whether they have interests or rights, whether they may be harmed or removed, and what the city owes the animals that live in it."
+          nl: "De morele status van duiven: of ze belangen of rechten hebben, of je ze mag schaden of weghalen, en wat de stad verschuldigd is aan de dieren die er wonen."
+        gevoeligheid: 0.9
+      - id: city-space
+        label: { en: "Whose city is it", nl: "Van wie is de stad" }
+        beschrijving:
+          en: "Who public space is for: sharing squares, stations and rooftops between people and animals, and who gets to decide what belongs in the city."
+          nl: "Voor wie de openbare ruimte is: pleinen, stations en daken delen tussen mensen en dieren, en wie bepaalt wat er in de stad thuishoort."
+        gevoeligheid: 0.8
+      - id: decided-about-not-with
+        label: { en: "Decided about, not with", nl: "Over ons, zonder ons" }
+        beschrijving:
+          en: "People deciding the fate of animals without them: policy made about pigeons, who is invited to the table, and participation that leaves out the affected party."
+          nl: "Mensen die over het lot van dieren beslissen zonder hen: beleid dat óver duiven gaat, wie er aan tafel zit, en participatie waarin de betrokkene ontbreekt."
+        gevoeligheid: 0.9
+      - id: pest-framing
+        label: { en: "Being called vermin", nl: "Ongedierte genoemd worden" }
+        beschrijving:
+          en: "Language that frames pigeons as pests, vermin, plague or a problem to be solved, including jokes and shorthand like \"rats with wings\"."
+          nl: "Taal die duiven neerzet als ongedierte, plaag of op te lossen probleem, inclusief grappen en uitdrukkingen als \"ratten met vleugels\"."
+        gevoeligheid: 1.0
+  - id: nonverbal
+    naam: { en: "Signaling Pigeon", nl: "Signalerende duif" }
+    voice_id: ""                        # geen TTS: veldopname-mp3's
+    prompts: { en: prompts/nonverbal.en.md, nl: prompts/nonverbal.nl.md }  # topic-triggerbeschrijving; geen chat
+    spreeklat:
+      prompts: { en: prompts/speakup.nonverbal.en.md, nl: prompts/speakup.nonverbal.nl.md }
+      drempel: 0.30                   # laagste lat: alles wat aan het onderwerp grenst
+      cooldown_seconden: 20
+      cooldown_groei_seconden: 5
+      cooldown_max_seconden: 45
+      thema_cooldown_seconden: 0      # geen themacooldown: een geluid herhaalt geen punt
+      beleefdheid: false              # geen beleefdheidswachttijd
+      zonder_bron: true               # deze duif heeft geen kennisbank
+    kennisbank: false
+    chat: false                         # productmatrix: alleen vergadering
+    vergadering: true
+    # Standaard aan: deze duif heeft geen woorden. Reageert zij niet uit
+    # zichzelf op het gesprek, dan gebeurt er aan tafel niets en lijkt zij
+    # stuk. Haar bijdrage is een geluid en een beweging, geen onderbreking
+    # van een spreker.
+    interventie_zelfstandig: true
+    signal_catalogue: signaling-catalogue.v1.yaml # internal source-to-theme design mapping
+    topics:
+      # De beschrijvingen scoren nabijheid, geen bewijs. De gevoeligheid
+      # verschuift de lat (hoger = eerder een geluid). De score kiest de band
+      # niet zelf: hij is een impuls op de arousal-meter van de sessie
+      # (meeting_detect.go: arousal.bump = max(verval(arousal, dt), score),
+      # halveringstijd 120 s), en het geluid komt uit de band van de meterstand
+      # op het moment van spelen (meeting_intervene.go: playSound leest
+      # arousal.level(); onder 0,34 rustig, tot 0,67 nadrukkelijk, daarboven
+      # alarm). Een lage score laat een hoge meter dus staan: kort na een alarm
+      # klinkt ook een rustige score nog nadrukkelijk, tot de meter gezakt is.
+      # Een breed thema staat daarom op een hoge gevoeligheid met een lage
+      # score: het mag er altijd doorheen, en vanuit rust klinkt het rustig.
+      - id: threat-and-removal
+        label: { en: "Population intervention", nl: "Ingrijpen in de populatie" }
+        beschrijving:
+          en: "Catching, chasing away, killing, moving or otherwise managing city pigeons, and every decision that touches it. Talk about their numbers, about nuisance, about control or about 'doing something' counts, and so does the argument against it. Score high (0.7-0.9) when a concrete measure is on the table, in the middle when the table is circling it."
+          nl: "Vangen, wegjagen, doden, verplaatsen of anderszins beheren van stadsduiven, en elk besluit dat daaraan raakt. Praten over hun aantallen, over overlast, over beheersing of over 'er iets aan doen' telt mee, en het tegenargument net zo goed. Scoor hoog (0,7-0,9) als er een concrete maatregel op tafel ligt, in het midden als de tafel eromheen draait."
+        gevoeligheid: 0.8
+      - id: food
+        label: { en: "Access to food", nl: "Toegang tot voedsel" }
+        beschrijving:
+          en: "Anything about what city pigeons eat or can reach: feeding them, crumbs, food waste, bins, leftovers from the market or the baker, a feeding ban, and the decisions around it. Score high (0.6-0.9) when a decision about their food is being made, in the middle (0.4-0.6) when the table is circling such a decision. A bare observation or description without a decision belongs in pigeons-nearby, not here."
+          nl: "Alles over wat stadsduiven eten of kunnen bereiken: voeren, kruimels, voedselafval, afvalbakken, restjes van de markt of de bakker, een voerverbod, en de besluiten daaromheen. Scoor hoog (0,6-0,9) als er een besluit over hun voedsel valt, in het midden (0,4-0,6) als de tafel om zo'n besluit heen draait. Een kale waarneming of beschrijving zonder besluit hoort in pigeons-nearby, niet hier."
+        gevoeligheid: 0.7
+      - id: nesting
+        label: { en: "Nesting and roosting access", nl: "Toegang tot nest- en verblijfplaatsen" }
+        beschrijving:
+          en: "Anything about where city pigeons sit, sleep or nest: roofs, ledges, canopies, bridges, lofts, nets, spikes, closing a place off or opening it up. Score high (0.6-0.9) when a place is actually being closed off or kept open, in the middle (0.4-0.6) when the table is circling such a decision. A bare observation or description without a decision belongs in pigeons-nearby, not here."
+          nl: "Alles over waar stadsduiven zitten, slapen of nestelen: daken, richels, overkappingen, bruggen, tillen, netten, pinnen, een plek afsluiten of openhouden. Scoor hoog (0,6-0,9) als een plek werkelijk wordt afgesloten of opengehouden, in het midden (0,4-0,6) als de tafel om zo'n besluit heen draait. Een kale waarneming of beschrijving zonder besluit hoort in pigeons-nearby, niet hier."
+        gevoeligheid: 0.7
+      - id: pigeons-nearby
+        label: { en: "Pigeons nearby", nl: "Duiven in de buurt" }
+        beschrijving:
+          en: "The conversation is about pigeons or about the place where they live, without any decision on the table: birds on the square, complaints from residents, what someone sees in the morning, the mess on the pavement, the station roof, the market, the benches. This broad theme is enough on its own — you do not need a proposal and you do not need proof. Score it low (0.15-0.33), so the sound stays a quiet one; use it whenever the conversation keeps being about pigeons and no other theme fits better. A bare observation or description lands here: pigeons on a roof, crumbs on the pavement, scaffolding on the church tower, birds under a canopy."
+          nl: "Het gesprek gaat over duiven of over de plek waar zij leven, zonder dat er een besluit ligt: vogels op het plein, klachten van bewoners, wat iemand 's ochtends ziet, de rommel op de stoep, het stationsdak, de markt, de bankjes. Dit brede thema is op zichzelf genoeg - je hebt geen voorstel nodig en geen bewijs. Scoor het laag (0,15-0,33), zodat het geluid een rustig geluid blijft; gebruik het zodra het gesprek over duiven blijft gaan en geen ander thema beter past. Een kale waarneming of beschrijving landt hier: duiven op een dak, kruimels op de stoep, steigers om de kerktoren, vogels onder een overkapping."
+        gevoeligheid: 0.9
+    geluiden:                           # geluiden per arousal-band
+      # De bestanden in config/sounds/ zijn synthetische placeholders
+      # (hoorbaar, geen echte duif: toon- en ruisopbouw, nieuw gegenereerd).
+      # De banden bepalen wanneer een geluid in aanmerking komt. Legacy bandnamen zijn technische variatie, geen
+      # onderzoeksclaim over de betekenis of emotie van een opname.
+      - { id: coo-soft, bestand: sounds/coo-soft.mp3, band: calm }
+      - { id: shuffle, bestand: sounds/shuffle.mp3, band: calm }
+      - { id: coo-insistent, bestand: sounds/coo-insistent.mp3, band: insistent }
+      - { id: wing-rustle, bestand: sounds/wing-rustle.mp3, band: insistent }
+      - { id: flap-alarm, bestand: sounds/flap-alarm.mp3, band: alarm }
+      - { id: alarm-call, bestand: sounds/alarm-call.mp3, band: alarm }
+# De facilitator is geen duif: hij staat niet in /v1/duiven, heeft geen stem,
+# geen thema's en geen vergaderrol. Daarom een eigen minimaal blok in plaats
+# van een vierde persona-rij met vier uitzonderingen. Hij wordt geladen en
+# gevalideerd zodra één duif op `engine: agent` staat.
+# De naam die de gebruiker ziet komt uit de frontend-i18n (chat.facilitator),
+# niet uit deze configuratie: één bron voor die string.
+facilitator:
+  prompts: { en: prompts/facilitator.en.md, nl: prompts/facilitator.nl.md }
+
+gedrag:                                 # per sessie overridebaar waar aangegeven
+  # De terugval voor een duif die zelf geen stand noemt. Alle drie de duiven
+  # zetten hem zelf (`interventie_zelfstandig:` per persona), dus
+  # deze waarde is alleen nog het vangnet voor een nieuwe duif.
+  interventie_zelfstandig: false        # zelfstandig meedoen; gedeelde terugval, uit
+  interventie_throttle_seconden: 0      # 0 = de eigen cooldown van de duif (spreeklat)
+  # De inactiviteitsbewaking telt alleen bewuste bediening van het scherm
+  # (klik, toets, aanraking); spraak en de duif zelf tellen niet.
+  inactiviteit_prompt_seconden: 600     # stilte op het scherm tot "Ben je er nog?"
+  inactiviteit_sluit_seconden: 120      # aftelling in die vraag; daarna stopt de vergadering
+  vergadering_max_seconden: 7200        # hard plafond op één vergadering, ook als er steeds geklikt wordt
+  taal_default: en                      # Engels eerst, NL optie
+  detectie_gretigheid: normal           # verschuift de spreeklat: reserved | normal | eager
+  detectie_venster_woorden: 3           # minimaal aantal nieuwe gecommitte woorden voor een evaluatie
+  detectie_interval_seconden: 6         # cadans: hoogstens één kandidaatcall per zoveel seconden
+  # De stiltewachttijd is een slapende knop: hij telt alleen mee voor een
+  # duif met `beleefdheid: true`, en dat staat bij alle drie uit. Laat staan voor
+  # wie het wachten later terug wil zetten.
+  stilte_milliseconden: 1500            # vereiste stilte vóór een ongevraagde bijdrage (alleen bij beleefdheid: true)
+  arousal_halvering_seconden: 120       # halveringstijd van het arousal-model

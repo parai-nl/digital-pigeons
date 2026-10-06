@@ -1,0 +1,63 @@
+/* DEV-ONLY tokens voor de DevShell. In de parai-core-shell levert core deze
+ * 23 basistokens (:root + .dark); de gebundelde module levert ze bewust NIET,
+ * anders zou een light-only :root-blok in de bundle core's .dark overschrijven.
+ * Nooit importeren vanuit index.ts of App.svelte.
+ *
+ * De waarden hier zijn eigen keuzes voor lokaal ontwikkelen (een neutrale
+ * grijsschaal met een warm accent), geen kopie van het huismerk. */
+
+/* Preflight hoort bij de pagina, niet bij de module: in productie levert de
+ * core-shell hem, hier de DevShell. app.css laat hem daarom bewust weg. */
+@layer theme, base, components, utilities;
+@import "tailwindcss/preflight.css" layer(base);
+
+:root {
+	--radius: 0.625rem;
+	--background: oklch(0.99 0.003 80);
+	--foreground: oklch(0.2 0.01 260);
+	--primary: oklch(0.62 0.17 35);
+	--primary-foreground: oklch(0.99 0 0);
+	--secondary: oklch(0.36 0.06 250);
+	--secondary-foreground: oklch(0.98 0 0);
+	--muted: oklch(0.95 0.005 80);
+	--muted-foreground: oklch(0.52 0.01 260);
+	--accent: oklch(0.94 0.01 80);
+	--accent-foreground: oklch(0.22 0.01 260);
+	--destructive: oklch(0.56 0.22 27);
+	--border: oklch(0.9 0.005 80);
+	--input: oklch(0.9 0.005 80);
+	--ring: oklch(0.62 0.17 35);
+	--card: oklch(1 0 0);
+	--card-foreground: oklch(0.2 0.01 260);
+	--sidebar: oklch(0.975 0.004 80);
+	--sidebar-foreground: oklch(0.22 0.01 260);
+	--success: oklch(0.55 0.15 150);
+	--warning: oklch(0.6 0.14 80);
+	--info: oklch(0.52 0.12 240);
+	--overlay: oklch(0 0 0 / 70%);
+}
+
+.dark {
+	--background: oklch(0.17 0.01 260);
+	--foreground: oklch(0.95 0.005 80);
+	--primary: oklch(0.68 0.17 35);
+	--primary-foreground: oklch(0.15 0 0);
+	--secondary: oklch(0.72 0.06 250);
+	--secondary-foreground: oklch(0.15 0.01 260);
+	--muted: oklch(0.24 0.01 260);
+	--muted-foreground: oklch(0.7 0.01 260);
+	--accent: oklch(0.26 0.01 260);
+	--accent-foreground: oklch(0.95 0.005 80);
+	--destructive: oklch(0.65 0.2 27);
+	--border: oklch(0.3 0.01 260);
+	--input: oklch(0.3 0.01 260);
+	--ring: oklch(0.68 0.17 35);
+	--card: oklch(0.2 0.01 260);
+	--card-foreground: oklch(0.95 0.005 80);
+	--sidebar: oklch(0.19 0.01 260);
+	--sidebar-foreground: oklch(0.9 0.005 80);
+	--success: oklch(0.68 0.15 150);
+	--warning: oklch(0.75 0.14 80);
+	--info: oklch(0.7 0.12 240);
+	--overlay: oklch(0 0 0 / 80%);
+}

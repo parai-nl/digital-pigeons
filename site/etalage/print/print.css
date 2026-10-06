@@ -1,0 +1,93 @@
+/* Print: A4 staand, zonder marges van de browser. Op het scherm een vel op een
+ * grijze tafel, op papier alleen het vel. */
+*, *::before, *::after { box-sizing: border-box; }
+/* Papier is altijd licht, ook als het systeem donker staat. */
+:root { color-scheme: light; --secondary: oklch(0.325 0.115 265); }
+body { margin: 0; background: #e9eae6; color: #1f2422; font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+h1, h2 { margin: 0; font-family: var(--font-serif); font-weight: 800; letter-spacing: -.015em; }
+p { margin: 0; }
+a { color: var(--secondary); }
+:focus-visible { outline: 2px solid var(--secondary); outline-offset: 3px; }
+
+.print-controls {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 20px;
+  max-width: 210mm; margin: 20px auto; padding: 0 16px; font-size: 14px;
+}
+.print-back { font-weight: 600; text-decoration: none; }
+.print-back:hover { text-decoration: underline; }
+.print-controls__group { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.print-seg { display: flex; gap: 2px; padding: 3px; background: #dcded9; border-radius: 10px; }
+.print-seg button, .print-go {
+  min-height: 36px; padding: 6px 12px; border: 0; border-radius: 8px;
+  background: transparent; color: #3b423f; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer;
+}
+.print-seg button[aria-pressed="true"] { background: #fff; color: #1f2422; box-shadow: 0 1px 2px rgb(0 0 0 / .08); }
+.print-go { background: var(--secondary); color: #fff; padding: 6px 16px; }
+
+.print-sheet {
+  display: flex; flex-direction: column;
+  width: 210mm; min-height: 297mm; margin: 0 auto 48px; padding: 14mm;
+  background: #fff; box-shadow: 0 10px 30px rgb(38 55 43 / .12);
+}
+.print-eyebrow { font-size: 8pt; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--secondary); }
+.print-header h1 { margin: 3mm 0 3mm; font-size: 32pt; line-height: 1.05; }
+.print-intro { max-width: 160mm; font-size: 10.5pt; line-height: 1.5; color: #4a514e; }
+
+/* Met de naamsvermelding in de voet moet de poster op één A4 blijven. */
+.print-pigeons { margin: 8mm 0 3mm; }
+.print-pigeon { display: grid; grid-template-columns: 48mm 1fr; gap: 8mm; align-items: center; padding: 6mm 0; border-top: 1px solid #dde0dc; break-inside: avoid; }
+.print-pigeon img { width: 48mm; height: 48mm; object-fit: cover; border-radius: 50%; background: #eef1ee; }
+.print-pigeon--kennispartner img { object-position: 30% 20%; background: color-mix(in oklab, #43674c 16%, #fff); }
+.print-pigeon--stakeholder img { object-position: 40% 20%; background: color-mix(in oklab, #906714 16%, #fff); }
+.print-pigeon--signalerend img { object-position: 10% 20%; background: color-mix(in oklab, #5f6b75 16%, #fff); }
+/* De kop uit het manifest is al uitgesneden: midden in de cirkel. */
+.print-pigeon img.is-head { object-position: 50% 50%; }
+.print-label { font-size: 8pt; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #6a716d; }
+.print-pigeon h2 { margin: 1mm 0 2.5mm; font-size: 23pt; }
+.print-pigeon--kennispartner h2 { color: #43674c; }
+.print-pigeon--stakeholder h2 { color: #7a5711; }
+.print-pigeon--signalerend h2 { color: #4f5a63; }
+.print-pigeon p { font-size: 10.5pt; line-height: 1.5; }
+.print-mode { margin-top: 2.5mm; font-size: 8.5pt !important; color: #6a716d; }
+.print-disclosure { margin-top: 5mm; font-size: 8.5pt; line-height: 1.5; color: #6a716d; }
+
+.print-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; margin: 8mm 0 5mm; }
+.print-card { display: flex; flex-direction: column; min-height: 62mm; padding: 5mm; border: 1px dashed #9aa39c; border-radius: 3mm; break-inside: avoid; }
+.print-card__number { font-size: 7pt; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #6a716d; }
+.print-card h2 { margin: 3mm 0 2.5mm; font-size: 17pt; line-height: 1.1; }
+.print-card__action { font-size: 8.5pt; line-height: 1.45; color: #4a514e; margin-bottom: 2.5mm; }
+.print-card__question { font-size: 9.5pt; line-height: 1.5; font-weight: 600; }
+.print-lines { display: flex; flex-direction: column; gap: 6mm; margin-top: auto; padding-top: 5mm; }
+.print-lines span { display: block; border-bottom: 1px solid #cfd4cf; }
+
+.print-footer { margin-top: auto; padding-top: 5mm; font-size: 8pt; line-height: 1.45; color: #6a716d; }
+.print-footer p + p { margin-top: 1mm; }
+.print-credits { margin-top: 2.5mm; }
+.print-credits__title { font-weight: 700; }
+.print-credits__list { list-style: none; margin: .5mm 0 0; padding: 0; }
+.print-credits a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+/* De licentienaam breekt niet op zijn streepje. */
+.print-credits li > a:last-child { white-space: nowrap; }
+/* Op papier is een link niet te volgen: het adres komt erachter. */
+@media print {
+  .print-credits a[href]::after { content: " (" attr(href) ")"; white-space: normal; word-break: break-all; }
+}
+.print-noscript { max-width: 210mm; margin: 20px auto; padding: 0 16px; }
+
+@media screen and (max-width: 820px) {
+  .print-sheet { width: auto; min-height: 0; margin: 0 12px 32px; padding: 22px; }
+  .print-header h1 { font-size: 2.1rem; }
+  .print-cards { grid-template-columns: 1fr; }
+  .print-card { min-height: 220px; }
+  .print-pigeon { grid-template-columns: 76px 1fr; gap: 16px; }
+  .print-pigeon img { width: 76px; height: 76px; }
+  .print-pigeon h2 { font-size: 1.5rem; }
+}
+
+@page { size: A4 portrait; margin: 0; }
+@media print {
+  body { background: #fff; }
+  .print-controls { display: none; }
+  .print-sheet { width: 210mm; min-height: 297mm; margin: 0; box-shadow: none; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}

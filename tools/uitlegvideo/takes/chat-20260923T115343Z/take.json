@@ -1,0 +1,440 @@
+{
+ "format": "duiven-uitlegvideo-take/1",
+ "id": "chat-20260923T115343Z",
+ "scene": "chat",
+ "recordedAt": "2026-09-23T11:53:43.965Z",
+ "exchanges": [
+  {
+   "id": 1,
+   "method": "GET",
+   "path": "/api/duif/v1/access/notice",
+   "requestBody": null,
+   "t": 121,
+   "headMs": 13,
+   "status": 200,
+   "statusText": "OK",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 13,
+   "body": "{\"version\":\"2026-09-22.1\",\"acknowledged\":true,\"acknowledgedAt\":\"2026-09-22T12:57:04.398172+02:00\"}\n"
+  },
+  {
+   "id": 2,
+   "method": "GET",
+   "path": "/api/duif/v1/duiven",
+   "requestBody": null,
+   "t": 126,
+   "headMs": 5,
+   "status": 200,
+   "statusText": "OK",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 6,
+   "body": "{\"duiven\":[{\"id\":\"biological\",\"name\":{\"en\":\"Knowledge Partner\",\"nl\":\"Kennispartner\"},\"voiceReady\":true,\"knowledgeBase\":true,\"chat\":true,\"meeting\":true,\"topics\":[{\"id\":\"population-control\",\"label\":{\"en\":\"Population control\",\"nl\":\"Populatiebeheer\"}},{\"id\":\"nuisance-and-health\",\"label\":{\"en\":\"Nuisance and health\",\"nl\":\"Overlast en gezondheid\"}},{\"id\":\"feeding-and-food\",\"label\":{\"en\":\"Feeding and food\",\"nl\":\"Voeren en voedsel\"}},{\"id\":\"nesting-and-shelter\",\"label\":{\"en\":\"Nesting and shelter\",\"nl\":\"Nestelen en beschutting\"}},{\"id\":\"urban-ecology\",\"label\":{\"en\":\"Urban ecology\",\"nl\":\"Stadsecologie\"}}],\"engine\":\"agent\",\"autonomousDefault\":false},{\"id\":\"individualist\",\"name\":{\"en\":\"Stakeholder\",\"nl\":\"Stakeholder\"},\"voiceReady\":true,\"knowledgeBase\":true,\"chat\":true,\"meeting\":true,\"topics\":[{\"id\":\"pigeon-rights\",\"label\":{\"en\":\"What pigeons are owed\",\"nl\":\"Waar duiven recht op hebben\"}},{\"id\":\"city-space\",\"label\":{\"en\":\"Whose city is it\",\"nl\":\"Van wie is de stad\"}},{\"id\":\"decided-about-not-with\",\"label\":{\"en\":\"Decided about, not with\",\"nl\":\"Over ons, zonder ons\"}},{\"id\":\"pest-framing\",\"label\":{\"en\":\"Being called vermin\",\"nl\":\"Ongedierte genoemd worden\"}}],\"engine\":\"agent\",\"autonomousDefault\":false},{\"id\":\"nonverbal\",\"name\":{\"en\":\"Signaling Pigeon\",\"nl\":\"Signalerende duif\"},\"voiceReady\":false,\"knowledgeBase\":false,\"chat\":false,\"meeting\":true,\"topics\":[{\"id\":\"threat-and-removal\",\"label\":{\"en\":\"Population intervention\",\"nl\":\"Ingrijpen in de populatie\"}},{\"id\":\"food\",\"label\":{\"en\":\"Access to food\",\"nl\":\"Toegang tot voedsel\"}},{\"id\":\"nesting\",\"label\":{\"en\":\"Nesting and roosting access\",\"nl\":\"Toegang tot nest- en verblijfplaatsen\"}},{\"id\":\"pigeons-nearby\",\"label\":{\"en\":\"Pigeons nearby\",\"nl\":\"Duiven in de buurt\"}}],\"engine\":\"pipeline\",\"autonomousDefault\":true}],\"gedrag\":{\"interventieZelfstandig\":false,\"interventieThrottleSeconden\":0,\"inactiviteitPromptMinuten\":10,\"inactiviteitSluitSeconden\":90,\"taalDefault\":\"en\",\"detectieGretigheid\":\"normal\",\"detectieVensterWoorden\":3,\"detectieIntervalSeconden\":6,\"stilteMilliseconden\":1500,\"arousalHalveringSeconden\":120},\"modelPolicy\":{\"model\":\"vertex_ai/gemini-3.5-flash\",\"detectionModel\":\"vertex_ai/gemini-3.5-flash\",\"endpoint\":\"https://llm-proxy.invalid\"}}\n"
+  },
+  {
+   "id": 3,
+   "method": "GET",
+   "path": "/api/duif/v1/chat/sessions",
+   "requestBody": null,
+   "t": 126,
+   "headMs": 38,
+   "status": 200,
+   "statusText": "OK",
+   "headers": [
+    [
+     "content-type",
+     "application/json"
+    ]
+   ],
+   "endMs": 38,
+   "body": "{\"sessions\":[]}",
+   "sanitized": "eerdere gesprekken van het opnameaccount verwijderd"
+  },
+  {
+   "id": 4,
+   "method": "GET",
+   "path": "/api/duif/v1/knowledge/status",
+   "requestBody": null,
+   "t": 132,
+   "headMs": 12,
+   "status": 200,
+   "statusText": "OK",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 12,
+   "body": "{\"state\":\"ready\",\"kbId\":\"Duiven\",\"counts\":{\"belongs_to\":4067,\"belongs_to_perspective\":4067,\"belongs_to_subthema\":4067,\"contains\":4067,\"contains_perspective\":297,\"contains_subthema\":149,\"contains_thema\":26,\"destillaat\":4067,\"domein\":3,\"has_quote\":4225,\"interview\":120,\"perspective\":297,\"quote\":4225,\"subthema\":149,\"thema\":26},\"bundleSchema\":\"duiven/3\",\"languages\":[\"nl\",\"en\"],\"sourceLanguage\":\"nl\",\"importedAt\":\"2026-09-15T12:26:51Z\"}\n"
+  },
+  {
+   "id": 5,
+   "method": "GET",
+   "path": "/api/duif/v1/knowledge/status",
+   "requestBody": null,
+   "t": 2547,
+   "headMs": 7,
+   "status": 200,
+   "statusText": "OK",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 7,
+   "body": "{\"state\":\"ready\",\"kbId\":\"Duiven\",\"counts\":{\"belongs_to\":4067,\"belongs_to_perspective\":4067,\"belongs_to_subthema\":4067,\"contains\":4067,\"contains_perspective\":297,\"contains_subthema\":149,\"contains_thema\":26,\"destillaat\":4067,\"domein\":3,\"has_quote\":4225,\"interview\":120,\"perspective\":297,\"quote\":4225,\"subthema\":149,\"thema\":26},\"bundleSchema\":\"duiven/3\",\"languages\":[\"nl\",\"en\"],\"sourceLanguage\":\"nl\",\"importedAt\":\"2026-09-15T12:26:51Z\"}\n"
+  },
+  {
+   "id": 6,
+   "method": "GET",
+   "path": "/api/duif/v1/knowledge/status",
+   "requestBody": null,
+   "t": 3380,
+   "headMs": 7,
+   "status": 200,
+   "statusText": "OK",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 8,
+   "body": "{\"state\":\"ready\",\"kbId\":\"Duiven\",\"counts\":{\"belongs_to\":4067,\"belongs_to_perspective\":4067,\"belongs_to_subthema\":4067,\"contains\":4067,\"contains_perspective\":297,\"contains_subthema\":149,\"contains_thema\":26,\"destillaat\":4067,\"domein\":3,\"has_quote\":4225,\"interview\":120,\"perspective\":297,\"quote\":4225,\"subthema\":149,\"thema\":26},\"bundleSchema\":\"duiven/3\",\"languages\":[\"nl\",\"en\"],\"sourceLanguage\":\"nl\",\"importedAt\":\"2026-09-15T12:26:51Z\"}\n"
+  },
+  {
+   "id": 7,
+   "method": "POST",
+   "path": "/api/duif/v1/chat/turn",
+   "requestBody": "{\"sessionId\":\"\",\"pigeonId\":\"biological\",\"message\":\"Pigeons are rats with wings. Would culling them actually solve anything for Rotterdam?\",\"lang\":\"en\"}",
+   "t": 4215,
+   "headMs": 11,
+   "status": 200,
+   "statusText": "OK",
+   "headers": [
+    [
+     "content-type",
+     "text/event-stream"
+    ],
+    [
+     "x-duif-session-id",
+     "cd3a5b7dda9655823e8069ab6c7dbc7d"
+    ]
+   ],
+   "endMs": 12409,
+   "chunks": [
+    {
+     "ms": 13,
+     "text": "data: {\"type\":\"phase\",\"phase\":\"facilitator\"}\n\n"
+    },
+    {
+     "ms": 4040,
+     "text": "data: {\"type\":\"tool\",\"id\":\"tool-1\",\"name\":\"ask_pigeon\"}\n\ndata: {\"type\":\"phase\",\"phase\":\"pigeon_grounding\"}\n\n"
+    },
+    {
+     "ms": 4363,
+     "text": "data: {\"type\":\"artifact\",\"id\":\"pigeon-1\",\"kind\":\"pigeon_answer\",\"persona\":\"biological\",\"kbStatus\":\"sources\"}\n\ndata: {\"type\":\"sources\",\"id\":\"pigeon-1\",\"sources\":[{\"grounding\":\"corpus_grounded\",\"number\":1,\"type\":\"destillaat\",\"id\":\"destillaat:32a7d081-1201-5f24-9dd0-cca028f8de38\",\"text\":\"Door de negatieve reputatie van de duif als 'rat van de hemel' wordt de positieve ecologische rol van deze vogel in de stad nauwelijks onderzocht.\",\"perspective\":\"Ecologische waardering\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:3b344b3f-663f-5156-bae4-09add5e18b62\",\"citation\":\"Capoccia, S., Boyle, C., \\u0026 Darnell, T. (2018). Loved or loathed, feral pigeons as subjects in ecological and social research. Journal of Urban Ecology, 4(1). https://doi.org/10.1093/jue/juy024\",\"citationConfidence\":\"high\",\"quote\":\"Named ‘rats of the sky’,\\npigeons are a flagship species of the human imprint on local\\nbiodiversity (Jerolmack 2008).\",\"paper\":\"capoccia2018\",\"doi\":\"10.1093/jue/juy024\",\"passages\":[{\"id\":\"quote:7a850a49-c321-5cd0-89d4-7bd515dc51d6\",\"text\":\"Named ‘rats of the sky’,\\npigeons are a flagship species of the human imprint on local\\nbiodiversity (Jerolmack 2008).\"}]},\"localized\":{\"text\":{\"en\":\"Because of the pigeon's negative reputation as a 'rat of the sky', the positive ecological role of this bird in the city is barely studied.\",\"nl\":\"Door de negatieve reputatie van de duif als 'rat van de hemel' wordt de positieve ecologische rol van deze vogel in de stad nauwelijks onderzocht.\"},\"perspective\":{\"en\":\"Ecological appreciation\",\"nl\":\"Ecologische waardering\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":2,\"type\":\"destillaat\",\"id\":\"destillaat:f8a5a742-7ba8-5eeb-b59b-c3da70f9160a\",\"text\":\"De negatieve reputatie van duiven als 'ratten van de lucht' verklaart waarom hun positieve ecologische rol in de stadsnatuur zo weinig wordt onderzocht.\",\"perspective\":\"Ecologische waardering\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:90dd3ba5-42c9-5dd6-a460-a7d88faafb1f\",\"citation\":\"Capoccia, S., Boyle, C., \\u0026 Darnell, T. (2018). Loved or loathed, feral pigeons as subjects in ecological and social research. Journal of Urban Ecology, 1-6. https://doi.org/10.1093/jue/juy024\",\"citationConfidence\":\"high\",\"citationMissing\":\"volume, issue\",\"quote\":\"Named ‘rats of the sky’,\\npigeons are a flagship species of the human imprint on local\\nbiodiversity (Jerolmack 2008).\",\"paper\":\"capocciaetal2018-lovedorloathedferalpigeonsassubjects-1\",\"doi\":\"10.1093/jue/juy024\",\"passages\":[{\"id\":\"quote:a1e0369b-3cc6-5600-9cf9-e6f6d98c5c43\",\"text\":\"Named ‘rats of the sky’,\\npigeons are a flagship species of the human imprint on local\\nbiodiversity (Jerolmack 2008).\"}]},\"localized\":{\"text\":{\"en\":\"The negative reputation of pigeons as 'rats of the sky' explains why their positive ecological role in urban nature is so rarely studied.\",\"nl\":\"De negatieve reputatie van duiven als 'ratten van de lucht' verklaart waarom hun positieve ecologische rol in de stadsnatuur zo weinig wordt onderzocht.\"},\"perspective\":{\"en\":\"Ecological appreciation\",\"nl\":\"Ecologische waardering\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":3,\"type\":\"destillaat\",\"id\":\"destillaat:9e0fde74-6619-59de-a81e-9f128de60238\",\"text\":\"Het doden van duiven is een ineffectieve methode voor populatiebeheer vanwege hun hoge demografische compensatievermogen. Effectiever is het verlagen van de draagkracht van de leefomgeving door het beperken van voedselbronnen en nestgelegenheden.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:53e458b4-4ca0-5098-92ab-e44caf9adffe\",\"citation\":\"Jiguet, F., Sunnen, L., Prévot, A. C., \\u0026 Princé, K. (2019). Urban pigeons losing toes due to human activities. Biological Conservation, 240, 108241. https://doi.org/10.1016/J.BIOCON.2019.108241\",\"citationConfidence\":\"high\",\"quote\":\"Managing pigeon numbers is efficient if reducing the carrying capacity of its\\nhabitat, in terms of food and nesting sites, while pigeon culling is inefficient as breeding populations have a high demographic compensatory potential\",\"paper\":\"jiguet2019\",\"doi\":\"10.1016/J.BIOCON.2019.108241\",\"passages\":[{\"id\":\"quote:eaa67173-ab43-5456-9051-1d2663390886\",\"text\":\"Managing pigeon numbers is efficient if reducing the carrying capacity of its\\nhabitat, in terms of food and nesting sites, while pigeon culling is inefficient as breeding populations have a high demographic compensatory potential\"}]},\"localized\":{\"text\":{\"en\":\"Killing pigeons is an ineffective method of population control because of their high demographic compensatory capacity. More effective is lowering the carrying capacity of the environment by limiting food sources and nesting opportunities.\",\"nl\":\"Het doden van duiven is een ineffectieve methode voor populatiebeheer vanwege hun hoge demografische compensatievermogen. Effectiever is het verlagen van de draagkracht van de leefomgeving door het beperken van voedselbronnen en nestgelegenheden.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":4,\"type\":\"destillaat\",\"id\":\"destillaat:bbf9e54c-dffc-505a-b7d6-77192b46b290\",\"text\":\"Verschillende modellen tonen aan dat het doden van duiven (culling) waarschijnlijk minder effectief is voor populatiebeheer dan het verminderen van hun voortplantingssucces, met name vanwege hun hoge productiviteit en sterftecijfers.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"Several models indicate that for monogamous species with high mortality rates and high\\nproductivity, such as feral pigeons, culling is likely less effective than the reduction of\\nreproductive potential for controlling population (Barlow et al., 1997; Dolbeer, 1998).\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:1b4745eb-638b-516c-a44b-6b64a326e659\",\"text\":\"Several models indicate that for monogamous species with high mortality rates and high\\nproductivity, such as feral pigeons, culling is likely less effective than the reduction of\\nreproductive potential for controlling population (Barlow et al., 1997; Dolbeer, 1998).\"}]},\"localized\":{\"text\":{\"en\":\"Various models show that killing pigeons (culling) is probably less effective for population management than reducing their reproductive success, particularly because of their high productivity and mortality rates.\",\"nl\":\"Verschillende modellen tonen aan dat het doden van duiven (culling) waarschijnlijk minder effectief is voor populatiebeheer dan het verminderen van hun voortplantingssucces, met name vanwege hun hoge productiviteit en sterftecijfers.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":5,\"type\":\"destillaat\",\"id\":\"destillaat:ec48c45c-3d8b-5be7-a2b1-a7a83cb182cc\",\"text\":\"Veel directe maatregelen om de populatieomvang van stadsduiven te beheersen, zoals afschot, blijken in de praktijk weinig effectief te zijn.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:edf48f05-bf73-5872-8e8e-93c785959ff0\",\"citation\":\"Geijtenbeek, J. W. (2026). The effect of large-scale urban events on feral pigeons (Columba livia) [Writing assignment, Utrecht University].\",\"citationConfidence\":\"medium\",\"citationMissing\":\"repository URL, page count, degree name\",\"quote\":\"Yet, many of these measures only have limited\\neVects on actually controlling pigeon populations (Skandrani et al., 2018).\",\"paper\":\"effects-human-activities-pigeons-msthesis-jgeijtenbeek\",\"passages\":[{\"id\":\"quote:858f081a-ccd9-5de0-99ef-6f74dcb72488\",\"text\":\"Yet, many of these measures only have limited\\neVects on actually controlling pigeon populations (Skandrani et al., 2018).\"}]},\"localized\":{\"text\":{\"en\":\"Many direct measures to control the population size of urban pigeons, such as culling, prove in practice to be of little effect.\",\"nl\":\"Veel directe maatregelen om de populatieomvang van stadsduiven te beheersen, zoals afschot, blijken in de praktijk weinig effectief te zijn.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":6,\"type\":\"destillaat\",\"id\":\"destillaat:edeee1e7-e381-5ba6-93c6-4fbfa2f96fc5\",\"text\":\"Het doden of ruimen van duiven is niet effectief om hun populatiegrootte te verminderen, omdat de populatie door hun hoge vruchtbaarheid snel weer herstelt.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:c54c8881-9b2d-5f8c-989d-0180ce70f30c\",\"citation\":\"Stukenholtz, E. E., Hailu, T. A., Childers, S., Leatherwood, C., Evans, L., Roulain, D., Townsley, D., Treider, M., II, R. N. P., Ray, D. A., Zak, J. C., Stevens, R. D., Stukenholtz, E. E., Hailu, T. A., Childers, S., Leatherwood, C., Evans, L., Roulain, D., Townsley, D., … Stevens, R. D. (2019). Ecology of Feral Pigeons: Population Monitoring, Resource Selection, and Management Practices. Wildlife Population Monitoring. https://doi.org/10.5772/intechopen.84612\",\"citationConfidence\":\"high\",\"quote\":\"Killing pigeons has proven to be only a temporary solution. Due to\\ntheir high fertility rates, pigeons can rebound quickly.\",\"paper\":\"stukenholtz2019\",\"doi\":\"10.5772/intechopen.84612\",\"passages\":[{\"id\":\"quote:dc4d934f-a8de-55b4-8dbc-4e4f4d70d627\",\"text\":\"Killing pigeons has proven to be only a temporary solution. Due to\\ntheir high fertility rates, pigeons can rebound quickly.\"},{\"id\":\"quote:e82231e1-4e22-5325-9a0c-d9a2b73961b1\",\"text\":\"However, killing pigeons has been unsuccessful in decreasing\\nabundance\"}]},\"localized\":{\"text\":{\"en\":\"Killing or culling pigeons is not effective in reducing their population size, because the population quickly recovers owing to their high fertility.\",\"nl\":\"Het doden of ruimen van duiven is niet effectief om hun populatiegrootte te verminderen, omdat de populatie door hun hoge vruchtbaarheid snel weer herstelt.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":7,\"type\":\"destillaat\",\"id\":\"destillaat:a93acf4e-eff2-5e01-9b05-79f58b5eebc4\",\"text\":\"De hoge concentratie stadsduiven dwingt overheden tot actieve populatieregulering om overlast te beperken.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:836b7aae-cd75-5414-967f-045ef2457fb9\",\"citation\":\"Duffaut, C., Brondeau, F., \\u0026 Gasparini, J. (2023). An original and efficient fertilizer for cherry tomato plants grown in urban agriculture: Feral pigeon guano. Urban Agriculture and Regional Food Systems, 8(1), e20046. https://doi.org/10.1002/uar2.20046\",\"citationConfidence\":\"high\",\"quote\":\"The\\nurban pigeon (Columba livia) is present in almost all cities of\\nthe world (Aronson et al., 2014) and can reach high densities\\nin some cities that has forced local authorities to manage local\\nnuisance.\",\"paper\":\"duffaut2023\",\"doi\":\"10.1002/uar2.20046\",\"passages\":[{\"id\":\"quote:79616794-e8bb-587e-b330-b2afcdbb4104\",\"text\":\"The\\nurban pigeon (Columba livia) is present in almost all cities of\\nthe world (Aronson et al., 2014) and can reach high densities\\nin some cities that has forced local authorities to manage local\\nnuisance.\"}]},\"localized\":{\"text\":{\"en\":\"The high concentration of urban pigeons forces authorities into active population regulation to limit nuisance.\",\"nl\":\"De hoge concentratie stadsduiven dwingt overheden tot actieve populatieregulering om overlast te beperken.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":8,\"type\":\"destillaat\",\"id\":\"destillaat:93b55eea-ea1c-5138-a681-9689c276a64a\",\"text\":\"Het doden van volwassen duiven door afschot of vergiftiging is ineffectief omdat de opengevallen plekken snel worden ingenomen door jonge of migrerende duiven.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:d216d6f5-20c1-57ad-aaab-c4b907424096\",\"citation\":\"Skandrani, Z., Desquilbet, M., \\u0026 Prévot, A. C. (2018). A renewed framework for urban biodiversity governance: Urban pigeons as a case-study. Natures Sciences Sociétés, 26(3), 280–290. https://doi.org/10.1051/nss/2018051\",\"citationConfidence\":\"high\",\"quote\":\"However,\\nbecause of the high ﬂexibility of pigeon populations in\\nterms of reproduction and dispersal, culled birds are soon\\nreplaced by new juveniles and immigrating birds from\\nother areas (Magnino et al., 2009).\",\"paper\":\"skandrani2018\",\"doi\":\"10.1051/nss/2018051\",\"passages\":[{\"id\":\"quote:01cd07b3-2bdd-5454-bece-0471cba8b04d\",\"text\":\"However,\\nbecause of the high ﬂexibility of pigeon populations in\\nterms of reproduction and dispersal, culled birds are soon\\nreplaced by new juveniles and immigrating birds from\\nother areas (Magnino et al., 2009).\"}]},\"localized\":{\"text\":{\"en\":\"Killing adult pigeons by culling or poisoning is ineffective because the vacated spots are quickly taken over by young or migrating pigeons.\",\"nl\":\"Het doden van volwassen duiven door afschot of vergiftiging is ineffectief omdat de opengevallen plekken snel worden ingenomen door jonge of migrerende duiven.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"}]}\n\ndata: {\"type\":\"phase\",\"phase\":\"pigeon\"}\n\n"
+    },
+    {
+     "ms": 11882,
+     "text": "data: {\"type\":\"artifact_delta\",\"id\":\"pigeon-1\",\"delta\":\"The provided sources do not specifically\"}\n\n"
+    },
+    {
+     "ms": 11919,
+     "text": "data: {\"type\":\"artifact_delta\",\"id\":\"pigeon-1\",\"delta\":\" evaluate Rotterdam, but they do address culling in general urban settings where pigeons are indeed sometimes referred to as \\\"rats of\"}\n\n"
+    },
+    {
+     "ms": 12022,
+     "text": "data: {\"type\":\"artifact_delta\",\"id\":\"pigeon-1\",\"delta\":\" the sky\\\" [1]. For pigeons like me, studies suggest that culling is unsuccessful or only a temporary solution because\"}\n\n"
+    },
+    {
+     "ms": 12101,
+     "text": "data: {\"type\":\"artifact_delta\",\"id\":\"pigeon-1\",\"delta\":\" our high fertility and dispersal mean lost birds are quickly replaced by juveniles and immigrants [6, 8]. Instead, research\"}\n\n"
+    },
+    {
+     "ms": 12402,
+     "text": "data: {\"type\":\"artifact_delta\",\"id\":\"pigeon-1\",\"delta\":\" indicates that managing population numbers is more efficient when authorities reduce the carrying capacity of the habitat, specifically by limiting available food and nesting sites\"}\n\ndata: {\"type\":\"artifact_delta\",\"id\":\"pigeon-1\",\"delta\":\" [3, 4].\"}\n\n"
+    },
+    {
+     "ms": 12403,
+     "text": "data: {\"type\":\"artifact\",\"id\":\"pigeon-1\",\"kind\":\"pigeon_answer\",\"persona\":\"biological\",\"kbStatus\":\"sources\",\"done\":true}\n\ndata: {\"type\":\"tool_result\",\"id\":\"tool-1\",\"name\":\"ask_pigeon\"}\n\n"
+    },
+    {
+     "ms": 12408,
+     "text": "data: {\"type\":\"done\",\"sessionId\":\"cd3a5b7dda9655823e8069ab6c7dbc7d\",\"kbStatus\":\"sources\",\"stopReason\":\"natural\",\"provenance\":{\"contractVersion\":\"duiven-2026-09-07-v1\",\"personaVersion\":\"9315a68d3df59eaae95a2a4c2eb0c88bc5c1f1a74f9abcad7ab5a8bfd60898e5\",\"promptVersion\":\"b211e5c1c399604f9ec6ee5bb2caa848b9b779600db9071579b123ec6add1df7\",\"model\":\"vertex_ai/gemini-3.5-flash\",\"kbState\":\"versioned\",\"kbId\":\"Duiven\",\"kbVersion\":\"774f03e56ee7b10562e58e9b81d657647e5601647d29e74bde8ef7cb5e4fbcbf\"}}\n\n"
+    }
+   ]
+  },
+  {
+   "id": 8,
+   "method": "GET",
+   "path": "/api/duif/v1/chat/sessions/cd3a5b7dda9655823e8069ab6c7dbc7d/messages",
+   "requestBody": null,
+   "t": 17464,
+   "headMs": 6,
+   "status": 200,
+   "statusText": "OK",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 7,
+   "body": "{\"messages\":[{\"id\":\"8f43f7acd8c9ba745a8c4792edd88530\",\"role\":\"user\",\"content\":\"Pigeons are rats with wings. Would culling them actually solve anything for Rotterdam?\",\"createdAt\":\"2026-09-23T13:53:48.186007+02:00\",\"kind\":\"text\"},{\"id\":\"0e89c9d6b08be6bda269ad5aaeb35ef2\",\"role\":\"assistant\",\"content\":\"The provided sources do not specifically evaluate Rotterdam, but they do address culling in general urban settings where pigeons are indeed sometimes referred to as \\\"rats of the sky\\\" [1]. For pigeons like me, studies suggest that culling is unsuccessful or only a temporary solution because our high fertility and dispersal mean lost birds are quickly replaced by juveniles and immigrants [6, 8]. Instead, research indicates that managing population numbers is more efficient when authorities reduce the carrying capacity of the habitat, specifically by limiting available food and nesting sites [3, 4].\",\"kbStatus\":\"sources\",\"sources\":[{\"grounding\":\"corpus_grounded\",\"number\":1,\"type\":\"destillaat\",\"id\":\"destillaat:32a7d081-1201-5f24-9dd0-cca028f8de38\",\"text\":\"Door de negatieve reputatie van de duif als 'rat van de hemel' wordt de positieve ecologische rol van deze vogel in de stad nauwelijks onderzocht.\",\"perspective\":\"Ecologische waardering\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:3b344b3f-663f-5156-bae4-09add5e18b62\",\"citation\":\"Capoccia, S., Boyle, C., \\u0026 Darnell, T. (2018). Loved or loathed, feral pigeons as subjects in ecological and social research. Journal of Urban Ecology, 4(1). https://doi.org/10.1093/jue/juy024\",\"citationConfidence\":\"high\",\"quote\":\"Named ‘rats of the sky’,\\npigeons are a flagship species of the human imprint on local\\nbiodiversity (Jerolmack 2008).\",\"paper\":\"capoccia2018\",\"doi\":\"10.1093/jue/juy024\",\"passages\":[{\"id\":\"quote:7a850a49-c321-5cd0-89d4-7bd515dc51d6\",\"text\":\"Named ‘rats of the sky’,\\npigeons are a flagship species of the human imprint on local\\nbiodiversity (Jerolmack 2008).\"}]},\"localized\":{\"text\":{\"en\":\"Because of the pigeon's negative reputation as a 'rat of the sky', the positive ecological role of this bird in the city is barely studied.\",\"nl\":\"Door de negatieve reputatie van de duif als 'rat van de hemel' wordt de positieve ecologische rol van deze vogel in de stad nauwelijks onderzocht.\"},\"perspective\":{\"en\":\"Ecological appreciation\",\"nl\":\"Ecologische waardering\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":2,\"type\":\"destillaat\",\"id\":\"destillaat:f8a5a742-7ba8-5eeb-b59b-c3da70f9160a\",\"text\":\"De negatieve reputatie van duiven als 'ratten van de lucht' verklaart waarom hun positieve ecologische rol in de stadsnatuur zo weinig wordt onderzocht.\",\"perspective\":\"Ecologische waardering\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:90dd3ba5-42c9-5dd6-a460-a7d88faafb1f\",\"citation\":\"Capoccia, S., Boyle, C., \\u0026 Darnell, T. (2018). Loved or loathed, feral pigeons as subjects in ecological and social research. Journal of Urban Ecology, 1-6. https://doi.org/10.1093/jue/juy024\",\"citationConfidence\":\"high\",\"citationMissing\":\"volume, issue\",\"quote\":\"Named ‘rats of the sky’,\\npigeons are a flagship species of the human imprint on local\\nbiodiversity (Jerolmack 2008).\",\"paper\":\"capocciaetal2018-lovedorloathedferalpigeonsassubjects-1\",\"doi\":\"10.1093/jue/juy024\",\"passages\":[{\"id\":\"quote:a1e0369b-3cc6-5600-9cf9-e6f6d98c5c43\",\"text\":\"Named ‘rats of the sky’,\\npigeons are a flagship species of the human imprint on local\\nbiodiversity (Jerolmack 2008).\"}]},\"localized\":{\"text\":{\"en\":\"The negative reputation of pigeons as 'rats of the sky' explains why their positive ecological role in urban nature is so rarely studied.\",\"nl\":\"De negatieve reputatie van duiven als 'ratten van de lucht' verklaart waarom hun positieve ecologische rol in de stadsnatuur zo weinig wordt onderzocht.\"},\"perspective\":{\"en\":\"Ecological appreciation\",\"nl\":\"Ecologische waardering\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":3,\"type\":\"destillaat\",\"id\":\"destillaat:9e0fde74-6619-59de-a81e-9f128de60238\",\"text\":\"Het doden van duiven is een ineffectieve methode voor populatiebeheer vanwege hun hoge demografische compensatievermogen. Effectiever is het verlagen van de draagkracht van de leefomgeving door het beperken van voedselbronnen en nestgelegenheden.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:53e458b4-4ca0-5098-92ab-e44caf9adffe\",\"citation\":\"Jiguet, F., Sunnen, L., Prévot, A. C., \\u0026 Princé, K. (2019). Urban pigeons losing toes due to human activities. Biological Conservation, 240, 108241. https://doi.org/10.1016/J.BIOCON.2019.108241\",\"citationConfidence\":\"high\",\"quote\":\"Managing pigeon numbers is efficient if reducing the carrying capacity of its\\nhabitat, in terms of food and nesting sites, while pigeon culling is inefficient as breeding populations have a high demographic compensatory potential\",\"paper\":\"jiguet2019\",\"doi\":\"10.1016/J.BIOCON.2019.108241\",\"passages\":[{\"id\":\"quote:eaa67173-ab43-5456-9051-1d2663390886\",\"text\":\"Managing pigeon numbers is efficient if reducing the carrying capacity of its\\nhabitat, in terms of food and nesting sites, while pigeon culling is inefficient as breeding populations have a high demographic compensatory potential\"}]},\"localized\":{\"text\":{\"en\":\"Killing pigeons is an ineffective method of population control because of their high demographic compensatory capacity. More effective is lowering the carrying capacity of the environment by limiting food sources and nesting opportunities.\",\"nl\":\"Het doden van duiven is een ineffectieve methode voor populatiebeheer vanwege hun hoge demografische compensatievermogen. Effectiever is het verlagen van de draagkracht van de leefomgeving door het beperken van voedselbronnen en nestgelegenheden.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":4,\"type\":\"destillaat\",\"id\":\"destillaat:bbf9e54c-dffc-505a-b7d6-77192b46b290\",\"text\":\"Verschillende modellen tonen aan dat het doden van duiven (culling) waarschijnlijk minder effectief is voor populatiebeheer dan het verminderen van hun voortplantingssucces, met name vanwege hun hoge productiviteit en sterftecijfers.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"Several models indicate that for monogamous species with high mortality rates and high\\nproductivity, such as feral pigeons, culling is likely less effective than the reduction of\\nreproductive potential for controlling population (Barlow et al., 1997; Dolbeer, 1998).\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:1b4745eb-638b-516c-a44b-6b64a326e659\",\"text\":\"Several models indicate that for monogamous species with high mortality rates and high\\nproductivity, such as feral pigeons, culling is likely less effective than the reduction of\\nreproductive potential for controlling population (Barlow et al., 1997; Dolbeer, 1998).\"}]},\"localized\":{\"text\":{\"en\":\"Various models show that killing pigeons (culling) is probably less effective for population management than reducing their reproductive success, particularly because of their high productivity and mortality rates.\",\"nl\":\"Verschillende modellen tonen aan dat het doden van duiven (culling) waarschijnlijk minder effectief is voor populatiebeheer dan het verminderen van hun voortplantingssucces, met name vanwege hun hoge productiviteit en sterftecijfers.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":5,\"type\":\"destillaat\",\"id\":\"destillaat:ec48c45c-3d8b-5be7-a2b1-a7a83cb182cc\",\"text\":\"Veel directe maatregelen om de populatieomvang van stadsduiven te beheersen, zoals afschot, blijken in de praktijk weinig effectief te zijn.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:edf48f05-bf73-5872-8e8e-93c785959ff0\",\"citation\":\"Geijtenbeek, J. W. (2026). The effect of large-scale urban events on feral pigeons (Columba livia) [Writing assignment, Utrecht University].\",\"citationConfidence\":\"medium\",\"citationMissing\":\"repository URL, page count, degree name\",\"quote\":\"Yet, many of these measures only have limited\\neVects on actually controlling pigeon populations (Skandrani et al., 2018).\",\"paper\":\"effects-human-activities-pigeons-msthesis-jgeijtenbeek\",\"passages\":[{\"id\":\"quote:858f081a-ccd9-5de0-99ef-6f74dcb72488\",\"text\":\"Yet, many of these measures only have limited\\neVects on actually controlling pigeon populations (Skandrani et al., 2018).\"}]},\"localized\":{\"text\":{\"en\":\"Many direct measures to control the population size of urban pigeons, such as culling, prove in practice to be of little effect.\",\"nl\":\"Veel directe maatregelen om de populatieomvang van stadsduiven te beheersen, zoals afschot, blijken in de praktijk weinig effectief te zijn.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":6,\"type\":\"destillaat\",\"id\":\"destillaat:edeee1e7-e381-5ba6-93c6-4fbfa2f96fc5\",\"text\":\"Het doden of ruimen van duiven is niet effectief om hun populatiegrootte te verminderen, omdat de populatie door hun hoge vruchtbaarheid snel weer herstelt.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:c54c8881-9b2d-5f8c-989d-0180ce70f30c\",\"citation\":\"Stukenholtz, E. E., Hailu, T. A., Childers, S., Leatherwood, C., Evans, L., Roulain, D., Townsley, D., Treider, M., II, R. N. P., Ray, D. A., Zak, J. C., Stevens, R. D., Stukenholtz, E. E., Hailu, T. A., Childers, S., Leatherwood, C., Evans, L., Roulain, D., Townsley, D., … Stevens, R. D. (2019). Ecology of Feral Pigeons: Population Monitoring, Resource Selection, and Management Practices. Wildlife Population Monitoring. https://doi.org/10.5772/intechopen.84612\",\"citationConfidence\":\"high\",\"quote\":\"Killing pigeons has proven to be only a temporary solution. Due to\\ntheir high fertility rates, pigeons can rebound quickly.\",\"paper\":\"stukenholtz2019\",\"doi\":\"10.5772/intechopen.84612\",\"passages\":[{\"id\":\"quote:dc4d934f-a8de-55b4-8dbc-4e4f4d70d627\",\"text\":\"Killing pigeons has proven to be only a temporary solution. Due to\\ntheir high fertility rates, pigeons can rebound quickly.\"},{\"id\":\"quote:e82231e1-4e22-5325-9a0c-d9a2b73961b1\",\"text\":\"However, killing pigeons has been unsuccessful in decreasing\\nabundance\"}]},\"localized\":{\"text\":{\"en\":\"Killing or culling pigeons is not effective in reducing their population size, because the population quickly recovers owing to their high fertility.\",\"nl\":\"Het doden of ruimen van duiven is niet effectief om hun populatiegrootte te verminderen, omdat de populatie door hun hoge vruchtbaarheid snel weer herstelt.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":7,\"type\":\"destillaat\",\"id\":\"destillaat:a93acf4e-eff2-5e01-9b05-79f58b5eebc4\",\"text\":\"De hoge concentratie stadsduiven dwingt overheden tot actieve populatieregulering om overlast te beperken.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:836b7aae-cd75-5414-967f-045ef2457fb9\",\"citation\":\"Duffaut, C., Brondeau, F., \\u0026 Gasparini, J. (2023). An original and efficient fertilizer for cherry tomato plants grown in urban agriculture: Feral pigeon guano. Urban Agriculture and Regional Food Systems, 8(1), e20046. https://doi.org/10.1002/uar2.20046\",\"citationConfidence\":\"high\",\"quote\":\"The\\nurban pigeon (Columba livia) is present in almost all cities of\\nthe world (Aronson et al., 2014) and can reach high densities\\nin some cities that has forced local authorities to manage local\\nnuisance.\",\"paper\":\"duffaut2023\",\"doi\":\"10.1002/uar2.20046\",\"passages\":[{\"id\":\"quote:79616794-e8bb-587e-b330-b2afcdbb4104\",\"text\":\"The\\nurban pigeon (Columba livia) is present in almost all cities of\\nthe world (Aronson et al., 2014) and can reach high densities\\nin some cities that has forced local authorities to manage local\\nnuisance.\"}]},\"localized\":{\"text\":{\"en\":\"The high concentration of urban pigeons forces authorities into active population regulation to limit nuisance.\",\"nl\":\"De hoge concentratie stadsduiven dwingt overheden tot actieve populatieregulering om overlast te beperken.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":8,\"type\":\"destillaat\",\"id\":\"destillaat:93b55eea-ea1c-5138-a681-9689c276a64a\",\"text\":\"Het doden van volwassen duiven door afschot of vergiftiging is ineffectief omdat de opengevallen plekken snel worden ingenomen door jonge of migrerende duiven.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:d216d6f5-20c1-57ad-aaab-c4b907424096\",\"citation\":\"Skandrani, Z., Desquilbet, M., \\u0026 Prévot, A. C. (2018). A renewed framework for urban biodiversity governance: Urban pigeons as a case-study. Natures Sciences Sociétés, 26(3), 280–290. https://doi.org/10.1051/nss/2018051\",\"citationConfidence\":\"high\",\"quote\":\"However,\\nbecause of the high ﬂexibility of pigeon populations in\\nterms of reproduction and dispersal, culled birds are soon\\nreplaced by new juveniles and immigrating birds from\\nother areas (Magnino et al., 2009).\",\"paper\":\"skandrani2018\",\"doi\":\"10.1051/nss/2018051\",\"passages\":[{\"id\":\"quote:01cd07b3-2bdd-5454-bece-0471cba8b04d\",\"text\":\"However,\\nbecause of the high ﬂexibility of pigeon populations in\\nterms of reproduction and dispersal, culled birds are soon\\nreplaced by new juveniles and immigrating birds from\\nother areas (Magnino et al., 2009).\"}]},\"localized\":{\"text\":{\"en\":\"Killing adult pigeons by culling or poisoning is ineffective because the vacated spots are quickly taken over by young or migrating pigeons.\",\"nl\":\"Het doden van volwassen duiven door afschot of vergiftiging is ineffectief omdat de opengevallen plekken snel worden ingenomen door jonge of migrerende duiven.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"}],\"createdAt\":\"2026-09-23T13:54:00.582603+02:00\",\"kind\":\"pigeon_answer\",\"persona\":\"biological\",\"provenance\":{\"contractVersion\":\"duiven-2026-09-07-v1\",\"personaVersion\":\"9315a68d3df59eaae95a2a4c2eb0c88bc5c1f1a74f9abcad7ab5a8bfd60898e5\",\"promptVersion\":\"b211e5c1c399604f9ec6ee5bb2caa848b9b779600db9071579b123ec6add1df7\",\"model\":\"vertex_ai/gemini-3.5-flash\",\"kbState\":\"versioned\",\"kbId\":\"Duiven\",\"kbVersion\":\"774f03e56ee7b10562e58e9b81d657647e5601647d29e74bde8ef7cb5e4fbcbf\"}}]}\n"
+  },
+  {
+   "id": 9,
+   "method": "POST",
+   "path": "/api/duif/v1/chat/comparisons",
+   "requestBody": "{\"requestId\":\"b83667964a268d5d40e270a79f82a7cf\",\"sourceSessionId\":\"cd3a5b7dda9655823e8069ab6c7dbc7d\",\"questionId\":\"8f43f7acd8c9ba745a8c4792edd88530\",\"pigeonId\":\"individualist\"}",
+   "t": 17471,
+   "headMs": 8,
+   "status": 201,
+   "statusText": "Created",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 8,
+   "body": "{\"session\":{\"id\":\"085f5047d32b9bbcec45d26b5fff584e\",\"pigeonId\":\"individualist\",\"lang\":\"en\",\"createdAt\":\"2026-09-23T13:54:01.440896+02:00\",\"updatedAt\":\"2026-09-23T13:54:01.440896+02:00\",\"comparison\":{\"groupId\":\"8f43f7acd8c9ba745a8c4792edd88530\",\"sessionId\":\"cd3a5b7dda9655823e8069ab6c7dbc7d\",\"pigeonId\":\"biological\",\"questionId\":\"8f43f7acd8c9ba745a8c4792edd88530\",\"originalQuestion\":\"Pigeons are rats with wings. Would culling them actually solve anything for Rotterdam?\",\"contextMessageIds\":[\"8f43f7acd8c9ba745a8c4792edd88530\",\"0e89c9d6b08be6bda269ad5aaeb35ef2\"]},\"title\":\"Pigeons are rats with wings. Would culling them actually solve anything for Rotterdam?\"}}\n"
+  },
+  {
+   "id": 10,
+   "method": "GET",
+   "path": "/api/duif/v1/chat/sessions/085f5047d32b9bbcec45d26b5fff584e/messages",
+   "requestBody": null,
+   "t": 17480,
+   "headMs": 3,
+   "status": 200,
+   "statusText": "OK",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 3,
+   "body": "{\"messages\":[{\"id\":\"84f8114245720a156cb6deed0096f731\",\"role\":\"user\",\"content\":\"Pigeons are rats with wings. Would culling them actually solve anything for Rotterdam?\",\"createdAt\":\"2026-09-23T13:54:01.440896+02:00\",\"kind\":\"text\"},{\"id\":\"78d2296a445c4efd331ad87f812967eb\",\"role\":\"assistant\",\"content\":\"The provided sources do not specifically evaluate Rotterdam, but they do address culling in general urban settings where pigeons are indeed sometimes referred to as \\\"rats of the sky\\\" [1]. For pigeons like me, studies suggest that culling is unsuccessful or only a temporary solution because our high fertility and dispersal mean lost birds are quickly replaced by juveniles and immigrants [6, 8]. Instead, research indicates that managing population numbers is more efficient when authorities reduce the carrying capacity of the habitat, specifically by limiting available food and nesting sites [3, 4].\",\"kbStatus\":\"sources\",\"sources\":[{\"grounding\":\"corpus_grounded\",\"number\":1,\"type\":\"destillaat\",\"id\":\"destillaat:32a7d081-1201-5f24-9dd0-cca028f8de38\",\"text\":\"Door de negatieve reputatie van de duif als 'rat van de hemel' wordt de positieve ecologische rol van deze vogel in de stad nauwelijks onderzocht.\",\"perspective\":\"Ecologische waardering\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:3b344b3f-663f-5156-bae4-09add5e18b62\",\"citation\":\"Capoccia, S., Boyle, C., \\u0026 Darnell, T. (2018). Loved or loathed, feral pigeons as subjects in ecological and social research. Journal of Urban Ecology, 4(1). https://doi.org/10.1093/jue/juy024\",\"citationConfidence\":\"high\",\"quote\":\"Named ‘rats of the sky’,\\npigeons are a flagship species of the human imprint on local\\nbiodiversity (Jerolmack 2008).\",\"paper\":\"capoccia2018\",\"doi\":\"10.1093/jue/juy024\",\"passages\":[{\"id\":\"quote:7a850a49-c321-5cd0-89d4-7bd515dc51d6\",\"text\":\"Named ‘rats of the sky’,\\npigeons are a flagship species of the human imprint on local\\nbiodiversity (Jerolmack 2008).\"}]},\"localized\":{\"text\":{\"en\":\"Because of the pigeon's negative reputation as a 'rat of the sky', the positive ecological role of this bird in the city is barely studied.\",\"nl\":\"Door de negatieve reputatie van de duif als 'rat van de hemel' wordt de positieve ecologische rol van deze vogel in de stad nauwelijks onderzocht.\"},\"perspective\":{\"en\":\"Ecological appreciation\",\"nl\":\"Ecologische waardering\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":2,\"type\":\"destillaat\",\"id\":\"destillaat:f8a5a742-7ba8-5eeb-b59b-c3da70f9160a\",\"text\":\"De negatieve reputatie van duiven als 'ratten van de lucht' verklaart waarom hun positieve ecologische rol in de stadsnatuur zo weinig wordt onderzocht.\",\"perspective\":\"Ecologische waardering\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:90dd3ba5-42c9-5dd6-a460-a7d88faafb1f\",\"citation\":\"Capoccia, S., Boyle, C., \\u0026 Darnell, T. (2018). Loved or loathed, feral pigeons as subjects in ecological and social research. Journal of Urban Ecology, 1-6. https://doi.org/10.1093/jue/juy024\",\"citationConfidence\":\"high\",\"citationMissing\":\"volume, issue\",\"quote\":\"Named ‘rats of the sky’,\\npigeons are a flagship species of the human imprint on local\\nbiodiversity (Jerolmack 2008).\",\"paper\":\"capocciaetal2018-lovedorloathedferalpigeonsassubjects-1\",\"doi\":\"10.1093/jue/juy024\",\"passages\":[{\"id\":\"quote:a1e0369b-3cc6-5600-9cf9-e6f6d98c5c43\",\"text\":\"Named ‘rats of the sky’,\\npigeons are a flagship species of the human imprint on local\\nbiodiversity (Jerolmack 2008).\"}]},\"localized\":{\"text\":{\"en\":\"The negative reputation of pigeons as 'rats of the sky' explains why their positive ecological role in urban nature is so rarely studied.\",\"nl\":\"De negatieve reputatie van duiven als 'ratten van de lucht' verklaart waarom hun positieve ecologische rol in de stadsnatuur zo weinig wordt onderzocht.\"},\"perspective\":{\"en\":\"Ecological appreciation\",\"nl\":\"Ecologische waardering\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":3,\"type\":\"destillaat\",\"id\":\"destillaat:9e0fde74-6619-59de-a81e-9f128de60238\",\"text\":\"Het doden van duiven is een ineffectieve methode voor populatiebeheer vanwege hun hoge demografische compensatievermogen. Effectiever is het verlagen van de draagkracht van de leefomgeving door het beperken van voedselbronnen en nestgelegenheden.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:53e458b4-4ca0-5098-92ab-e44caf9adffe\",\"citation\":\"Jiguet, F., Sunnen, L., Prévot, A. C., \\u0026 Princé, K. (2019). Urban pigeons losing toes due to human activities. Biological Conservation, 240, 108241. https://doi.org/10.1016/J.BIOCON.2019.108241\",\"citationConfidence\":\"high\",\"quote\":\"Managing pigeon numbers is efficient if reducing the carrying capacity of its\\nhabitat, in terms of food and nesting sites, while pigeon culling is inefficient as breeding populations have a high demographic compensatory potential\",\"paper\":\"jiguet2019\",\"doi\":\"10.1016/J.BIOCON.2019.108241\",\"passages\":[{\"id\":\"quote:eaa67173-ab43-5456-9051-1d2663390886\",\"text\":\"Managing pigeon numbers is efficient if reducing the carrying capacity of its\\nhabitat, in terms of food and nesting sites, while pigeon culling is inefficient as breeding populations have a high demographic compensatory potential\"}]},\"localized\":{\"text\":{\"en\":\"Killing pigeons is an ineffective method of population control because of their high demographic compensatory capacity. More effective is lowering the carrying capacity of the environment by limiting food sources and nesting opportunities.\",\"nl\":\"Het doden van duiven is een ineffectieve methode voor populatiebeheer vanwege hun hoge demografische compensatievermogen. Effectiever is het verlagen van de draagkracht van de leefomgeving door het beperken van voedselbronnen en nestgelegenheden.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":4,\"type\":\"destillaat\",\"id\":\"destillaat:bbf9e54c-dffc-505a-b7d6-77192b46b290\",\"text\":\"Verschillende modellen tonen aan dat het doden van duiven (culling) waarschijnlijk minder effectief is voor populatiebeheer dan het verminderen van hun voortplantingssucces, met name vanwege hun hoge productiviteit en sterftecijfers.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"Several models indicate that for monogamous species with high mortality rates and high\\nproductivity, such as feral pigeons, culling is likely less effective than the reduction of\\nreproductive potential for controlling population (Barlow et al., 1997; Dolbeer, 1998).\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:1b4745eb-638b-516c-a44b-6b64a326e659\",\"text\":\"Several models indicate that for monogamous species with high mortality rates and high\\nproductivity, such as feral pigeons, culling is likely less effective than the reduction of\\nreproductive potential for controlling population (Barlow et al., 1997; Dolbeer, 1998).\"}]},\"localized\":{\"text\":{\"en\":\"Various models show that killing pigeons (culling) is probably less effective for population management than reducing their reproductive success, particularly because of their high productivity and mortality rates.\",\"nl\":\"Verschillende modellen tonen aan dat het doden van duiven (culling) waarschijnlijk minder effectief is voor populatiebeheer dan het verminderen van hun voortplantingssucces, met name vanwege hun hoge productiviteit en sterftecijfers.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":5,\"type\":\"destillaat\",\"id\":\"destillaat:ec48c45c-3d8b-5be7-a2b1-a7a83cb182cc\",\"text\":\"Veel directe maatregelen om de populatieomvang van stadsduiven te beheersen, zoals afschot, blijken in de praktijk weinig effectief te zijn.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:edf48f05-bf73-5872-8e8e-93c785959ff0\",\"citation\":\"Geijtenbeek, J. W. (2026). The effect of large-scale urban events on feral pigeons (Columba livia) [Writing assignment, Utrecht University].\",\"citationConfidence\":\"medium\",\"citationMissing\":\"repository URL, page count, degree name\",\"quote\":\"Yet, many of these measures only have limited\\neVects on actually controlling pigeon populations (Skandrani et al., 2018).\",\"paper\":\"effects-human-activities-pigeons-msthesis-jgeijtenbeek\",\"passages\":[{\"id\":\"quote:858f081a-ccd9-5de0-99ef-6f74dcb72488\",\"text\":\"Yet, many of these measures only have limited\\neVects on actually controlling pigeon populations (Skandrani et al., 2018).\"}]},\"localized\":{\"text\":{\"en\":\"Many direct measures to control the population size of urban pigeons, such as culling, prove in practice to be of little effect.\",\"nl\":\"Veel directe maatregelen om de populatieomvang van stadsduiven te beheersen, zoals afschot, blijken in de praktijk weinig effectief te zijn.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":6,\"type\":\"destillaat\",\"id\":\"destillaat:edeee1e7-e381-5ba6-93c6-4fbfa2f96fc5\",\"text\":\"Het doden of ruimen van duiven is niet effectief om hun populatiegrootte te verminderen, omdat de populatie door hun hoge vruchtbaarheid snel weer herstelt.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:c54c8881-9b2d-5f8c-989d-0180ce70f30c\",\"citation\":\"Stukenholtz, E. E., Hailu, T. A., Childers, S., Leatherwood, C., Evans, L., Roulain, D., Townsley, D., Treider, M., II, R. N. P., Ray, D. A., Zak, J. C., Stevens, R. D., Stukenholtz, E. E., Hailu, T. A., Childers, S., Leatherwood, C., Evans, L., Roulain, D., Townsley, D., … Stevens, R. D. (2019). Ecology of Feral Pigeons: Population Monitoring, Resource Selection, and Management Practices. Wildlife Population Monitoring. https://doi.org/10.5772/intechopen.84612\",\"citationConfidence\":\"high\",\"quote\":\"Killing pigeons has proven to be only a temporary solution. Due to\\ntheir high fertility rates, pigeons can rebound quickly.\",\"paper\":\"stukenholtz2019\",\"doi\":\"10.5772/intechopen.84612\",\"passages\":[{\"id\":\"quote:dc4d934f-a8de-55b4-8dbc-4e4f4d70d627\",\"text\":\"Killing pigeons has proven to be only a temporary solution. Due to\\ntheir high fertility rates, pigeons can rebound quickly.\"},{\"id\":\"quote:e82231e1-4e22-5325-9a0c-d9a2b73961b1\",\"text\":\"However, killing pigeons has been unsuccessful in decreasing\\nabundance\"}]},\"localized\":{\"text\":{\"en\":\"Killing or culling pigeons is not effective in reducing their population size, because the population quickly recovers owing to their high fertility.\",\"nl\":\"Het doden of ruimen van duiven is niet effectief om hun populatiegrootte te verminderen, omdat de populatie door hun hoge vruchtbaarheid snel weer herstelt.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":7,\"type\":\"destillaat\",\"id\":\"destillaat:a93acf4e-eff2-5e01-9b05-79f58b5eebc4\",\"text\":\"De hoge concentratie stadsduiven dwingt overheden tot actieve populatieregulering om overlast te beperken.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:836b7aae-cd75-5414-967f-045ef2457fb9\",\"citation\":\"Duffaut, C., Brondeau, F., \\u0026 Gasparini, J. (2023). An original and efficient fertilizer for cherry tomato plants grown in urban agriculture: Feral pigeon guano. Urban Agriculture and Regional Food Systems, 8(1), e20046. https://doi.org/10.1002/uar2.20046\",\"citationConfidence\":\"high\",\"quote\":\"The\\nurban pigeon (Columba livia) is present in almost all cities of\\nthe world (Aronson et al., 2014) and can reach high densities\\nin some cities that has forced local authorities to manage local\\nnuisance.\",\"paper\":\"duffaut2023\",\"doi\":\"10.1002/uar2.20046\",\"passages\":[{\"id\":\"quote:79616794-e8bb-587e-b330-b2afcdbb4104\",\"text\":\"The\\nurban pigeon (Columba livia) is present in almost all cities of\\nthe world (Aronson et al., 2014) and can reach high densities\\nin some cities that has forced local authorities to manage local\\nnuisance.\"}]},\"localized\":{\"text\":{\"en\":\"The high concentration of urban pigeons forces authorities into active population regulation to limit nuisance.\",\"nl\":\"De hoge concentratie stadsduiven dwingt overheden tot actieve populatieregulering om overlast te beperken.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":8,\"type\":\"destillaat\",\"id\":\"destillaat:93b55eea-ea1c-5138-a681-9689c276a64a\",\"text\":\"Het doden van volwassen duiven door afschot of vergiftiging is ineffectief omdat de opengevallen plekken snel worden ingenomen door jonge of migrerende duiven.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:d216d6f5-20c1-57ad-aaab-c4b907424096\",\"citation\":\"Skandrani, Z., Desquilbet, M., \\u0026 Prévot, A. C. (2018). A renewed framework for urban biodiversity governance: Urban pigeons as a case-study. Natures Sciences Sociétés, 26(3), 280–290. https://doi.org/10.1051/nss/2018051\",\"citationConfidence\":\"high\",\"quote\":\"However,\\nbecause of the high ﬂexibility of pigeon populations in\\nterms of reproduction and dispersal, culled birds are soon\\nreplaced by new juveniles and immigrating birds from\\nother areas (Magnino et al., 2009).\",\"paper\":\"skandrani2018\",\"doi\":\"10.1051/nss/2018051\",\"passages\":[{\"id\":\"quote:01cd07b3-2bdd-5454-bece-0471cba8b04d\",\"text\":\"However,\\nbecause of the high ﬂexibility of pigeon populations in\\nterms of reproduction and dispersal, culled birds are soon\\nreplaced by new juveniles and immigrating birds from\\nother areas (Magnino et al., 2009).\"}]},\"localized\":{\"text\":{\"en\":\"Killing adult pigeons by culling or poisoning is ineffective because the vacated spots are quickly taken over by young or migrating pigeons.\",\"nl\":\"Het doden van volwassen duiven door afschot of vergiftiging is ineffectief omdat de opengevallen plekken snel worden ingenomen door jonge of migrerende duiven.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"}],\"createdAt\":\"2026-09-23T13:54:01.440896+02:00\",\"kind\":\"pigeon_answer\",\"persona\":\"biological\",\"provenance\":{\"contractVersion\":\"duiven-2026-09-07-v1\",\"personaVersion\":\"9315a68d3df59eaae95a2a4c2eb0c88bc5c1f1a74f9abcad7ab5a8bfd60898e5\",\"promptVersion\":\"b211e5c1c399604f9ec6ee5bb2caa848b9b779600db9071579b123ec6add1df7\",\"model\":\"vertex_ai/gemini-3.5-flash\",\"kbState\":\"versioned\",\"kbId\":\"Duiven\",\"kbVersion\":\"774f03e56ee7b10562e58e9b81d657647e5601647d29e74bde8ef7cb5e4fbcbf\"}}]}\n"
+  },
+  {
+   "id": 11,
+   "method": "GET",
+   "path": "/api/duif/v1/knowledge/status",
+   "requestBody": null,
+   "t": 17480,
+   "headMs": 2,
+   "status": 200,
+   "statusText": "OK",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"state\":\"ready\",\"kbId\":\"Duiven\",\"counts\":{\"belongs_to\":4067,\"belongs_to_perspective\":4067,\"belongs_to_subthema\":4067,\"contains\":4067,\"contains_perspective\":297,\"contains_subthema\":149,\"contains_thema\":26,\"destillaat\":4067,\"domein\":3,\"has_quote\":4225,\"interview\":120,\"perspective\":297,\"quote\":4225,\"subthema\":149,\"thema\":26},\"bundleSchema\":\"duiven/3\",\"languages\":[\"nl\",\"en\"],\"sourceLanguage\":\"nl\",\"importedAt\":\"2026-09-15T12:26:51Z\"}\n"
+  },
+  {
+   "id": 12,
+   "method": "POST",
+   "path": "/api/duif/v1/chat/turn",
+   "requestBody": "{\"sessionId\":\"085f5047d32b9bbcec45d26b5fff584e\",\"pigeonId\":\"individualist\",\"message\":\"Pigeons are rats with wings. Would culling them actually solve anything for Rotterdam?\",\"lang\":\"en\"}",
+   "t": 17485,
+   "headMs": 7,
+   "status": 200,
+   "statusText": "OK",
+   "headers": [
+    [
+     "content-type",
+     "text/event-stream"
+    ],
+    [
+     "x-duif-session-id",
+     "085f5047d32b9bbcec45d26b5fff584e"
+    ]
+   ],
+   "endMs": 27560,
+   "chunks": [
+    {
+     "ms": 7,
+     "text": "data: {\"type\":\"phase\",\"phase\":\"facilitator\"}\n\n"
+    },
+    {
+     "ms": 4373,
+     "text": "data: {\"type\":\"tool\",\"id\":\"tool-1\",\"name\":\"ask_pigeon\"}\n\ndata: {\"type\":\"text\",\"delta\":\"We are putting the tension between urban control and the pigeon's presence in Rotterdam directly to the pigeon.\"}\n\n"
+    },
+    {
+     "ms": 4376,
+     "text": "data: {\"type\":\"phase\",\"phase\":\"pigeon_grounding\"}\n\n"
+    },
+    {
+     "ms": 4687,
+     "text": "data: {\"type\":\"artifact\",\"id\":\"pigeon-1\",\"kind\":\"pigeon_answer\",\"persona\":\"individualist\",\"kbStatus\":\"sources\"}\n\ndata: {\"type\":\"sources\",\"id\":\"pigeon-1\",\"sources\":[{\"grounding\":\"corpus_grounded\",\"number\":1,\"type\":\"destillaat\",\"id\":\"destillaat:32a7d081-1201-5f24-9dd0-cca028f8de38\",\"text\":\"Door de negatieve reputatie van de duif als 'rat van de hemel' wordt de positieve ecologische rol van deze vogel in de stad nauwelijks onderzocht.\",\"perspective\":\"Ecologische waardering\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:3b344b3f-663f-5156-bae4-09add5e18b62\",\"citation\":\"Capoccia, S., Boyle, C., \\u0026 Darnell, T. (2018). Loved or loathed, feral pigeons as subjects in ecological and social research. Journal of Urban Ecology, 4(1). https://doi.org/10.1093/jue/juy024\",\"citationConfidence\":\"high\",\"quote\":\"Named ‘rats of the sky’,\\npigeons are a flagship species of the human imprint on local\\nbiodiversity (Jerolmack 2008).\",\"paper\":\"capoccia2018\",\"doi\":\"10.1093/jue/juy024\",\"passages\":[{\"id\":\"quote:7a850a49-c321-5cd0-89d4-7bd515dc51d6\",\"text\":\"Named ‘rats of the sky’,\\npigeons are a flagship species of the human imprint on local\\nbiodiversity (Jerolmack 2008).\"}]},\"localized\":{\"text\":{\"en\":\"Because of the pigeon's negative reputation as a 'rat of the sky', the positive ecological role of this bird in the city is barely studied.\",\"nl\":\"Door de negatieve reputatie van de duif als 'rat van de hemel' wordt de positieve ecologische rol van deze vogel in de stad nauwelijks onderzocht.\"},\"perspective\":{\"en\":\"Ecological appreciation\",\"nl\":\"Ecologische waardering\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":2,\"type\":\"destillaat\",\"id\":\"destillaat:f8a5a742-7ba8-5eeb-b59b-c3da70f9160a\",\"text\":\"De negatieve reputatie van duiven als 'ratten van de lucht' verklaart waarom hun positieve ecologische rol in de stadsnatuur zo weinig wordt onderzocht.\",\"perspective\":\"Ecologische waardering\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:90dd3ba5-42c9-5dd6-a460-a7d88faafb1f\",\"citation\":\"Capoccia, S., Boyle, C., \\u0026 Darnell, T. (2018). Loved or loathed, feral pigeons as subjects in ecological and social research. Journal of Urban Ecology, 1-6. https://doi.org/10.1093/jue/juy024\",\"citationConfidence\":\"high\",\"citationMissing\":\"volume, issue\",\"quote\":\"Named ‘rats of the sky’,\\npigeons are a flagship species of the human imprint on local\\nbiodiversity (Jerolmack 2008).\",\"paper\":\"capocciaetal2018-lovedorloathedferalpigeonsassubjects-1\",\"doi\":\"10.1093/jue/juy024\",\"passages\":[{\"id\":\"quote:a1e0369b-3cc6-5600-9cf9-e6f6d98c5c43\",\"text\":\"Named ‘rats of the sky’,\\npigeons are a flagship species of the human imprint on local\\nbiodiversity (Jerolmack 2008).\"}]},\"localized\":{\"text\":{\"en\":\"The negative reputation of pigeons as 'rats of the sky' explains why their positive ecological role in urban nature is so rarely studied.\",\"nl\":\"De negatieve reputatie van duiven als 'ratten van de lucht' verklaart waarom hun positieve ecologische rol in de stadsnatuur zo weinig wordt onderzocht.\"},\"perspective\":{\"en\":\"Ecological appreciation\",\"nl\":\"Ecologische waardering\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":3,\"type\":\"destillaat\",\"id\":\"destillaat:9e0fde74-6619-59de-a81e-9f128de60238\",\"text\":\"Het doden van duiven is een ineffectieve methode voor populatiebeheer vanwege hun hoge demografische compensatievermogen. Effectiever is het verlagen van de draagkracht van de leefomgeving door het beperken van voedselbronnen en nestgelegenheden.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:53e458b4-4ca0-5098-92ab-e44caf9adffe\",\"citation\":\"Jiguet, F., Sunnen, L., Prévot, A. C., \\u0026 Princé, K. (2019). Urban pigeons losing toes due to human activities. Biological Conservation, 240, 108241. https://doi.org/10.1016/J.BIOCON.2019.108241\",\"citationConfidence\":\"high\",\"quote\":\"Managing pigeon numbers is efficient if reducing the carrying capacity of its\\nhabitat, in terms of food and nesting sites, while pigeon culling is inefficient as breeding populations have a high demographic compensatory potential\",\"paper\":\"jiguet2019\",\"doi\":\"10.1016/J.BIOCON.2019.108241\",\"passages\":[{\"id\":\"quote:eaa67173-ab43-5456-9051-1d2663390886\",\"text\":\"Managing pigeon numbers is efficient if reducing the carrying capacity of its\\nhabitat, in terms of food and nesting sites, while pigeon culling is inefficient as breeding populations have a high demographic compensatory potential\"}]},\"localized\":{\"text\":{\"en\":\"Killing pigeons is an ineffective method of population control because of their high demographic compensatory capacity. More effective is lowering the carrying capacity of the environment by limiting food sources and nesting opportunities.\",\"nl\":\"Het doden van duiven is een ineffectieve methode voor populatiebeheer vanwege hun hoge demografische compensatievermogen. Effectiever is het verlagen van de draagkracht van de leefomgeving door het beperken van voedselbronnen en nestgelegenheden.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":4,\"type\":\"destillaat\",\"id\":\"destillaat:bbf9e54c-dffc-505a-b7d6-77192b46b290\",\"text\":\"Verschillende modellen tonen aan dat het doden van duiven (culling) waarschijnlijk minder effectief is voor populatiebeheer dan het verminderen van hun voortplantingssucces, met name vanwege hun hoge productiviteit en sterftecijfers.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"Several models indicate that for monogamous species with high mortality rates and high\\nproductivity, such as feral pigeons, culling is likely less effective than the reduction of\\nreproductive potential for controlling population (Barlow et al., 1997; Dolbeer, 1998).\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:1b4745eb-638b-516c-a44b-6b64a326e659\",\"text\":\"Several models indicate that for monogamous species with high mortality rates and high\\nproductivity, such as feral pigeons, culling is likely less effective than the reduction of\\nreproductive potential for controlling population (Barlow et al., 1997; Dolbeer, 1998).\"}]},\"localized\":{\"text\":{\"en\":\"Various models show that killing pigeons (culling) is probably less effective for population management than reducing their reproductive success, particularly because of their high productivity and mortality rates.\",\"nl\":\"Verschillende modellen tonen aan dat het doden van duiven (culling) waarschijnlijk minder effectief is voor populatiebeheer dan het verminderen van hun voortplantingssucces, met name vanwege hun hoge productiviteit en sterftecijfers.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":5,\"type\":\"destillaat\",\"id\":\"destillaat:ec48c45c-3d8b-5be7-a2b1-a7a83cb182cc\",\"text\":\"Veel directe maatregelen om de populatieomvang van stadsduiven te beheersen, zoals afschot, blijken in de praktijk weinig effectief te zijn.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:edf48f05-bf73-5872-8e8e-93c785959ff0\",\"citation\":\"Geijtenbeek, J. W. (2026). The effect of large-scale urban events on feral pigeons (Columba livia) [Writing assignment, Utrecht University].\",\"citationConfidence\":\"medium\",\"citationMissing\":\"repository URL, page count, degree name\",\"quote\":\"Yet, many of these measures only have limited\\neVects on actually controlling pigeon populations (Skandrani et al., 2018).\",\"paper\":\"effects-human-activities-pigeons-msthesis-jgeijtenbeek\",\"passages\":[{\"id\":\"quote:858f081a-ccd9-5de0-99ef-6f74dcb72488\",\"text\":\"Yet, many of these measures only have limited\\neVects on actually controlling pigeon populations (Skandrani et al., 2018).\"}]},\"localized\":{\"text\":{\"en\":\"Many direct measures to control the population size of urban pigeons, such as culling, prove in practice to be of little effect.\",\"nl\":\"Veel directe maatregelen om de populatieomvang van stadsduiven te beheersen, zoals afschot, blijken in de praktijk weinig effectief te zijn.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":6,\"type\":\"destillaat\",\"id\":\"destillaat:edeee1e7-e381-5ba6-93c6-4fbfa2f96fc5\",\"text\":\"Het doden of ruimen van duiven is niet effectief om hun populatiegrootte te verminderen, omdat de populatie door hun hoge vruchtbaarheid snel weer herstelt.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:c54c8881-9b2d-5f8c-989d-0180ce70f30c\",\"citation\":\"Stukenholtz, E. E., Hailu, T. A., Childers, S., Leatherwood, C., Evans, L., Roulain, D., Townsley, D., Treider, M., II, R. N. P., Ray, D. A., Zak, J. C., Stevens, R. D., Stukenholtz, E. E., Hailu, T. A., Childers, S., Leatherwood, C., Evans, L., Roulain, D., Townsley, D., … Stevens, R. D. (2019). Ecology of Feral Pigeons: Population Monitoring, Resource Selection, and Management Practices. Wildlife Population Monitoring. https://doi.org/10.5772/intechopen.84612\",\"citationConfidence\":\"high\",\"quote\":\"Killing pigeons has proven to be only a temporary solution. Due to\\ntheir high fertility rates, pigeons can rebound quickly.\",\"paper\":\"stukenholtz2019\",\"doi\":\"10.5772/intechopen.84612\",\"passages\":[{\"id\":\"quote:dc4d934f-a8de-55b4-8dbc-4e4f4d70d627\",\"text\":\"Killing pigeons has proven to be only a temporary solution. Due to\\ntheir high fertility rates, pigeons can rebound quickly.\"},{\"id\":\"quote:e82231e1-4e22-5325-9a0c-d9a2b73961b1\",\"text\":\"However, killing pigeons has been unsuccessful in decreasing\\nabundance\"}]},\"localized\":{\"text\":{\"en\":\"Killing or culling pigeons is not effective in reducing their population size, because the population quickly recovers owing to their high fertility.\",\"nl\":\"Het doden of ruimen van duiven is niet effectief om hun populatiegrootte te verminderen, omdat de populatie door hun hoge vruchtbaarheid snel weer herstelt.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":7,\"type\":\"destillaat\",\"id\":\"destillaat:a93acf4e-eff2-5e01-9b05-79f58b5eebc4\",\"text\":\"De hoge concentratie stadsduiven dwingt overheden tot actieve populatieregulering om overlast te beperken.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:836b7aae-cd75-5414-967f-045ef2457fb9\",\"citation\":\"Duffaut, C., Brondeau, F., \\u0026 Gasparini, J. (2023). An original and efficient fertilizer for cherry tomato plants grown in urban agriculture: Feral pigeon guano. Urban Agriculture and Regional Food Systems, 8(1), e20046. https://doi.org/10.1002/uar2.20046\",\"citationConfidence\":\"high\",\"quote\":\"The\\nurban pigeon (Columba livia) is present in almost all cities of\\nthe world (Aronson et al., 2014) and can reach high densities\\nin some cities that has forced local authorities to manage local\\nnuisance.\",\"paper\":\"duffaut2023\",\"doi\":\"10.1002/uar2.20046\",\"passages\":[{\"id\":\"quote:79616794-e8bb-587e-b330-b2afcdbb4104\",\"text\":\"The\\nurban pigeon (Columba livia) is present in almost all cities of\\nthe world (Aronson et al., 2014) and can reach high densities\\nin some cities that has forced local authorities to manage local\\nnuisance.\"}]},\"localized\":{\"text\":{\"en\":\"The high concentration of urban pigeons forces authorities into active population regulation to limit nuisance.\",\"nl\":\"De hoge concentratie stadsduiven dwingt overheden tot actieve populatieregulering om overlast te beperken.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":8,\"type\":\"destillaat\",\"id\":\"destillaat:93b55eea-ea1c-5138-a681-9689c276a64a\",\"text\":\"Het doden van volwassen duiven door afschot of vergiftiging is ineffectief omdat de opengevallen plekken snel worden ingenomen door jonge of migrerende duiven.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:d216d6f5-20c1-57ad-aaab-c4b907424096\",\"citation\":\"Skandrani, Z., Desquilbet, M., \\u0026 Prévot, A. C. (2018). A renewed framework for urban biodiversity governance: Urban pigeons as a case-study. Natures Sciences Sociétés, 26(3), 280–290. https://doi.org/10.1051/nss/2018051\",\"citationConfidence\":\"high\",\"quote\":\"However,\\nbecause of the high ﬂexibility of pigeon populations in\\nterms of reproduction and dispersal, culled birds are soon\\nreplaced by new juveniles and immigrating birds from\\nother areas (Magnino et al., 2009).\",\"paper\":\"skandrani2018\",\"doi\":\"10.1051/nss/2018051\",\"passages\":[{\"id\":\"quote:01cd07b3-2bdd-5454-bece-0471cba8b04d\",\"text\":\"However,\\nbecause of the high ﬂexibility of pigeon populations in\\nterms of reproduction and dispersal, culled birds are soon\\nreplaced by new juveniles and immigrating birds from\\nother areas (Magnino et al., 2009).\"}]},\"localized\":{\"text\":{\"en\":\"Killing adult pigeons by culling or poisoning is ineffective because the vacated spots are quickly taken over by young or migrating pigeons.\",\"nl\":\"Het doden van volwassen duiven door afschot of vergiftiging is ineffectief omdat de opengevallen plekken snel worden ingenomen door jonge of migrerende duiven.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"}]}\n\ndata: {\"type\":\"phase\",\"phase\":\"pigeon\"}\n\n"
+    },
+    {
+     "ms": 21807,
+     "text": "data: {\"type\":\"artifact_delta\",\"id\":\"pigeon-1\",\"delta\":\"Rot\"}\n\n"
+    },
+    {
+     "ms": 21906,
+     "text": "data: {\"type\":\"artifact_delta\",\"id\":\"pigeon-1\",\"delta\":\"terdam is not studied, but our \\\"rats\\\" label just reflects the human imprint [1]. Killing us is unsuccessful in\"}\n\n"
+    },
+    {
+     "ms": 22199,
+     "text": "data: {\"type\":\"artifact_delta\",\"id\":\"pigeon-1\",\"delta\":\" decreasing our abundance [6]. Any culled birds are soon replaced by juveniles and incoming flyers [8]. Why choose a\"}\n\ndata: {\"type\":\"artifact_delta\",\"id\":\"pigeon-1\",\"delta\":\" cruel culling cycle when reducing our food and nesting works [3]?\"}\n\n"
+    },
+    {
+     "ms": 22200,
+     "text": "data: {\"type\":\"artifact\",\"id\":\"pigeon-1\",\"kind\":\"pigeon_answer\",\"persona\":\"individualist\",\"kbStatus\":\"sources\",\"done\":true}\n\ndata: {\"type\":\"tool_result\",\"id\":\"tool-1\",\"name\":\"ask_pigeon\"}\n\n"
+    },
+    {
+     "ms": 22205,
+     "text": "data: {\"type\":\"phase\",\"phase\":\"mediation\"}\n\n"
+    },
+    {
+     "ms": 27440,
+     "text": "data: {\"type\":\"text\",\"delta\":\"This debate highlights the tension between the human desire for clean, orderly streets and the practical limits\"}\n\ndata: {\"type\":\"text\",\"delta\":\" of lethal animal control. Choosing to cull the pigeon population in Rotterdam would mean committing to a continuous, ineffective cycle of eradication\"}\n\n"
+    },
+    {
+     "ms": 27472,
+     "text": "data: {\"type\":\"text\",\"delta\":\" rather than addressing how human waste and architecture invite them in. If killing is not a permanent solution, are we prepared to\"}\n\n"
+    },
+    {
+     "ms": 27501,
+     "text": "data: {\"type\":\"text\",\"delta\":\" change our own habits and urban design to manage the space we share?\"}\n\n"
+    },
+    {
+     "ms": 27560,
+     "text": "data: {\"type\":\"done\",\"sessionId\":\"085f5047d32b9bbcec45d26b5fff584e\",\"kbStatus\":\"sources\",\"stopReason\":\"natural\",\"provenance\":{\"contractVersion\":\"duiven-2026-09-07-v1\",\"personaVersion\":\"ff996915bceffff46e1a92a2037311ffd17cf6dff27a35dc34325af6ba17a7a8\",\"promptVersion\":\"de87036e16a796abb1fead60162a5c4c27e14e4fbecd8ee10b88058c1b51b06a\",\"model\":\"vertex_ai/gemini-3.5-flash\",\"kbState\":\"versioned\",\"kbId\":\"Duiven\",\"kbVersion\":\"774f03e56ee7b10562e58e9b81d657647e5601647d29e74bde8ef7cb5e4fbcbf\"}}\n\n"
+    }
+   ]
+  }
+ ],
+ "channels": [],
+ "actions": [
+  {
+   "name": "load",
+   "t": 37
+  },
+  {
+   "name": "help-open",
+   "t": 1674
+  },
+  {
+   "name": "help-shown",
+   "t": 1717
+  },
+  {
+   "name": "help-close",
+   "t": 2118
+  },
+  {
+   "name": "start-screen",
+   "t": 2132
+  },
+  {
+   "name": "select-individualist",
+   "t": 2532
+  },
+  {
+   "name": "select-nonverbal",
+   "t": 2950
+  },
+  {
+   "name": "select-biological",
+   "t": 3367
+  },
+  {
+   "name": "type",
+   "t": 3784
+  },
+  {
+   "name": "typed",
+   "t": 3803
+  },
+  {
+   "name": "send",
+   "t": 4204
+  },
+  {
+   "name": "answer-done",
+   "t": 16626
+  },
+  {
+   "name": "ask-other",
+   "t": 17027
+  },
+  {
+   "name": "answer2-done",
+   "t": 45054
+  },
+  {
+   "name": "end",
+   "t": 45455
+  }
+ ],
+ "probes": [],
+ "app": {
+  "commit": "04b010f868f14fd769f68937bf6356f07fcfd6b2",
+  "dirty": false,
+  "bundleSha256": "d64a902bff38bf25d090a3bfe74e3f6bf4cfc7c21cb5160bddda9c45dced540d",
+  "server": "http://127.0.0.1:8092",
+  "modelPolicy": {
+   "model": "vertex_ai/gemini-3.5-flash",
+   "detectionModel": "vertex_ai/gemini-3.5-flash",
+   "endpoint": "https://llm-proxy.invalid"
+  },
+  "knowledge": {
+   "kbId": "Duiven",
+   "bundleSchema": "duiven/3",
+   "importedAt": "2026-09-15T12:26:51Z"
+  }
+ },
+ "provenance": [
+  {
+   "contractVersion": "duiven-2026-09-07-v1",
+   "personaVersion": "9315a68d3df59eaae95a2a4c2eb0c88bc5c1f1a74f9abcad7ab5a8bfd60898e5",
+   "promptVersion": "b211e5c1c399604f9ec6ee5bb2caa848b9b779600db9071579b123ec6add1df7",
+   "model": "vertex_ai/gemini-3.5-flash",
+   "kbState": "versioned",
+   "kbId": "Duiven",
+   "kbVersion": "774f03e56ee7b10562e58e9b81d657647e5601647d29e74bde8ef7cb5e4fbcbf"
+  },
+  {
+   "contractVersion": "duiven-2026-09-07-v1",
+   "personaVersion": "ff996915bceffff46e1a92a2037311ffd17cf6dff27a35dc34325af6ba17a7a8",
+   "promptVersion": "de87036e16a796abb1fead60162a5c4c27e14e4fbecd8ee10b88058c1b51b06a",
+   "model": "vertex_ai/gemini-3.5-flash",
+   "kbState": "versioned",
+   "kbId": "Duiven",
+   "kbVersion": "774f03e56ee7b10562e58e9b81d657647e5601647d29e74bde8ef7cb5e4fbcbf"
+  }
+ ],
+ "input": {
+  "question": "Pigeons are rats with wings. Would culling them actually solve anything for Rotterdam?",
+  "pigeon": "biological",
+  "thenAskOther": "individualist"
+ },
+ "selection": "Kandidaat. De keuze staat in video.config.json; alle takes blijven bewaard.",
+ "sanitized": {
+  "freshVisitor": "GET /chat/sessions tijdens de opname beperkt tot gesprekken uit deze opname",
+  "chatSessionsRemoved": 0,
+  "headers": "alleen content-type en x-duif-*; geen cookies of autorisatie"
+ },
+ "failure": null,
+ "audio": []
+}

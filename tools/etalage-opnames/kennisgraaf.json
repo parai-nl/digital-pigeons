@@ -1,0 +1,112 @@
+{
+ "images": {
+  "kennisgraaf-licht.webp": {
+   "lang": "nl",
+   "scheme": "light",
+   "selection": "Milieu en dierenwelzijn",
+   "crop": "graafcanvas, bijgesneden tot de knopen, namen en verbindingen (zonder boom, leespaneel en knoppen)",
+   "width": 1525,
+   "height": 1186,
+   "cssWidth": 763,
+   "cssHeight": 593,
+   "devicePixelRatio": 2,
+   "quality": 82,
+   "bytes": 52954,
+   "sha256": "3aaedac8899a7870edb26fc47a98610d225616d53ee9f04caf17d045e633f209",
+   "madeAt": "2026-09-24T08:29:26.675Z",
+   "moduleCommit": "61dce9240cc2fb960f89424a1162d7c0aa53d9bc",
+   "moduleTree": "272829aae8444c82053a849b7a66ccc5a5a9109f",
+   "bundleSha256": "d64a902bff38bf25d090a3bfe74e3f6bf4cfc7c21cb5160bddda9c45dced540d",
+   "database": "duif_etalage (kopie van duif_v3)",
+   "knowledgeBase": {
+    "kbId": "Duiven",
+    "importedAt": "2026-09-15T12:26:51Z"
+   },
+   "tool": {
+    "commit": "e29425c248783f6116f8bd18fb7fc7e2cddcf419",
+    "dirty": false
+   }
+  },
+  "kennisgraaf-donker.webp": {
+   "lang": "nl",
+   "scheme": "dark",
+   "selection": "Milieu en dierenwelzijn",
+   "crop": "graafcanvas, bijgesneden tot de knopen, namen en verbindingen (zonder boom, leespaneel en knoppen)",
+   "width": 1525,
+   "height": 1186,
+   "cssWidth": 763,
+   "cssHeight": 593,
+   "devicePixelRatio": 2,
+   "quality": 82,
+   "bytes": 51622,
+   "sha256": "5a7de7c55dc539ea376c847b73bb0f19afa7a074325a3a2c7ccb432ca75b8362",
+   "madeAt": "2026-09-24T08:29:36.042Z",
+   "moduleCommit": "61dce9240cc2fb960f89424a1162d7c0aa53d9bc",
+   "moduleTree": "272829aae8444c82053a849b7a66ccc5a5a9109f",
+   "bundleSha256": "d64a902bff38bf25d090a3bfe74e3f6bf4cfc7c21cb5160bddda9c45dced540d",
+   "database": "duif_etalage (kopie van duif_v3)",
+   "knowledgeBase": {
+    "kbId": "Duiven",
+    "importedAt": "2026-09-15T12:26:51Z"
+   },
+   "tool": {
+    "commit": "e29425c248783f6116f8bd18fb7fc7e2cddcf419",
+    "dirty": false
+   }
+  },
+  "kennisgraaf-licht-en.webp": {
+   "lang": "en",
+   "scheme": "light",
+   "selection": "Environment and animal welfare",
+   "crop": "graafcanvas, bijgesneden tot de knopen, namen en verbindingen (zonder boom, leespaneel en knoppen)",
+   "width": 1517,
+   "height": 1185,
+   "cssWidth": 759,
+   "cssHeight": 593,
+   "devicePixelRatio": 2,
+   "quality": 82,
+   "bytes": 53170,
+   "sha256": "36c00454368dff4e71af729c44fbb3de041cadc0ab1267b0b86315ed67b503a0",
+   "madeAt": "2026-09-24T08:29:45.806Z",
+   "moduleCommit": "61dce9240cc2fb960f89424a1162d7c0aa53d9bc",
+   "moduleTree": "272829aae8444c82053a849b7a66ccc5a5a9109f",
+   "bundleSha256": "d64a902bff38bf25d090a3bfe74e3f6bf4cfc7c21cb5160bddda9c45dced540d",
+   "database": "duif_etalage (kopie van duif_v3)",
+   "knowledgeBase": {
+    "kbId": "Duiven",
+    "importedAt": "2026-09-15T12:26:51Z"
+   },
+   "tool": {
+    "commit": "e29425c248783f6116f8bd18fb7fc7e2cddcf419",
+    "dirty": false
+   }
+  },
+  "kennisgraaf-donker-en.webp": {
+   "lang": "en",
+   "scheme": "dark",
+   "selection": "Environment and animal welfare",
+   "crop": "graafcanvas, bijgesneden tot de knopen, namen en verbindingen (zonder boom, leespaneel en knoppen)",
+   "width": 1517,
+   "height": 1186,
+   "cssWidth": 759,
+   "cssHeight": 593,
+   "devicePixelRatio": 2,
+   "quality": 82,
+   "bytes": 51704,
+   "sha256": "5eb394c34f948bd3f341899a27eafe773a46d9234c548561203af8db5abd17b4",
+   "madeAt": "2026-09-24T08:29:55.185Z",
+   "moduleCommit": "61dce9240cc2fb960f89424a1162d7c0aa53d9bc",
+   "moduleTree": "272829aae8444c82053a849b7a66ccc5a5a9109f",
+   "bundleSha256": "d64a902bff38bf25d090a3bfe74e3f6bf4cfc7c21cb5160bddda9c45dced540d",
+   "database": "duif_etalage (kopie van duif_v3)",
+   "knowledgeBase": {
+    "kbId": "Duiven",
+    "importedAt": "2026-09-15T12:26:51Z"
+   },
+   "tool": {
+    "commit": "e29425c248783f6116f8bd18fb7fc7e2cddcf419",
+    "dirty": false
+   }
+  }
+ }
+}

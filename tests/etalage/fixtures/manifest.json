@@ -1,0 +1,128 @@
+{
+ "schema": 1,
+ "model": {
+  "file": "stadsduif-v3.glb",
+  "version": "[fixture] v3",
+  "final": false
+ },
+ "card": {
+  "aspect": 0.82
+ },
+ "pigeons": {
+  "kennispartner": {
+   "plate": {
+    "src": "etalage/media/duiven/kennispartner/plaat.webp",
+    "width": 300,
+    "height": 366
+   },
+   "layer": {
+    "left": -0.06,
+    "top": -0.2,
+    "width": 1.12,
+    "height": 1.2
+   },
+   "rest": {
+    "src": "etalage/media/duiven/kennispartner/rust.webp",
+    "width": 360,
+    "height": 400
+   },
+   "clips": {
+    "peck": {
+     "webm": "etalage/media/duiven/kennispartner/peck.webm",
+     "hevc": "etalage/media/duiven/kennispartner/peck.mov",
+     "ms": 1000
+    },
+    "ruffle": {
+     "webm": "etalage/media/duiven/kennispartner/ruffle.webm",
+     "hevc": "etalage/media/duiven/kennispartner/ruffle.mov",
+     "ms": 1000
+    }
+   },
+   "defaultClip": "peck",
+   "avatar": {
+    "src": "etalage/media/duiven/kennispartner/kop.webp"
+   },
+   "model": {
+    "file": "stadsduif-v3.glb",
+    "version": "[fixture] v3"
+   }
+  },
+  "stakeholder": {
+   "plate": {
+    "src": "etalage/media/duiven/stakeholder/plaat.webp",
+    "width": 300,
+    "height": 366
+   },
+   "layer": {
+    "left": -0.06,
+    "top": -0.2,
+    "width": 1.12,
+    "height": 1.2
+   },
+   "rest": {
+    "src": "etalage/media/duiven/stakeholder/rust.webp",
+    "width": 360,
+    "height": 400
+   },
+   "clips": {
+    "peck": {
+     "webm": "etalage/media/duiven/stakeholder/peck.webm",
+     "hevc": "etalage/media/duiven/stakeholder/peck.mov",
+     "ms": 1000
+    },
+    "ruffle": {
+     "webm": "etalage/media/duiven/stakeholder/ruffle.webm",
+     "hevc": "etalage/media/duiven/stakeholder/ruffle.mov",
+     "ms": 1000
+    }
+   },
+   "defaultClip": "peck",
+   "avatar": {
+    "src": "etalage/media/duiven/stakeholder/kop.webp"
+   }
+  },
+  "signalerend": {
+   "plate": {
+    "src": "etalage/media/duiven/signalerend/plaat.webp",
+    "width": 300,
+    "height": 366
+   },
+   "layer": {
+    "left": -0.06,
+    "top": -0.2,
+    "width": 1.12,
+    "height": 1.2
+   },
+   "rest": {
+    "src": "etalage/media/duiven/signalerend/rust.webp",
+    "width": 360,
+    "height": 400
+   },
+   "clips": {
+    "peck": {
+     "webm": "etalage/media/duiven/signalerend/peck.webm",
+     "hevc": "etalage/media/duiven/signalerend/peck.mov",
+     "ms": 1000
+    },
+    "ruffle": {
+     "webm": "etalage/media/duiven/signalerend/ruffle.webm",
+     "hevc": "etalage/media/duiven/signalerend/ruffle.mov",
+     "ms": 1000
+    }
+   },
+   "defaultClip": "peck",
+   "avatar": {
+    "src": "etalage/media/duiven/signalerend/kop.webp"
+   }
+  }
+ },
+ "credits": [
+  {
+   "nl": "[fixture] Beeldvermelding NL · CC BY 4.0",
+   "en": "[fixture] Image credit EN · CC BY 4.0",
+   "url": "https://example.org/fixture/credit",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://example.org/fixture/license"
+  }
+ ]
+}

@@ -1,0 +1,420 @@
+{
+ "format": "duiven-etalage-take/1",
+ "id": "meeting-begroting-en-stakeholder-20260923T151222Z",
+ "kind": "meeting",
+ "item": {
+  "statement": "begroting",
+  "lang": "en",
+  "pigeon": "stakeholder",
+  "modulePigeon": "individualist"
+ },
+ "input": {
+  "speaker": "Chair",
+  "text": "Right. Next item: next year's budget.",
+  "audio": "uitspraken/begroting-en.mp3",
+  "audioSha256": "ffaf9592f04e4ad6cd59e057f639a54aab64fba0bb9a5abb8e69768c5d97a84a",
+  "audioMs": 3065,
+  "voice": "Charlotte (ElevenLabs eleven_multilingual_v2)",
+  "micLeadMs": 4000,
+  "windowMs": 25000,
+  "placeholder": true
+ },
+ "recordedAt": "2026-09-23T15:12:22.356Z",
+ "finishedAt": "2026-09-23T15:12:58.198Z",
+ "server": {
+  "base": "http://127.0.0.1:8094",
+  "modelPolicy": {
+   "model": "vertex_ai/gemini-3.5-flash",
+   "detectionModel": "vertex_ai/gemini-3.5-flash",
+   "endpoint": "https://llm-proxy.invalid"
+  },
+  "knowledge": {
+   "kbId": "Duiven",
+   "bundleSchema": "duiven/3",
+   "languages": [
+    "nl",
+    "en"
+   ],
+   "importedAt": "2026-09-15T12:26:51Z",
+   "counts": {
+    "belongs_to": 4067,
+    "belongs_to_perspective": 4067,
+    "belongs_to_subthema": 4067,
+    "contains": 4067,
+    "contains_perspective": 297,
+    "contains_subthema": 149,
+    "contains_thema": 26,
+    "destillaat": 4067,
+    "domein": 3,
+    "has_quote": 4225,
+    "interview": 120,
+    "perspective": 297,
+    "quote": 4225,
+    "subthema": 149,
+    "thema": 26
+   }
+  },
+  "database": {
+   "name": "duif_etalage",
+   "copyOf": "duif_v3"
+  },
+  "module": {
+   "commit": "44186b900325eefad26c20b91e92f7350eb81bd0",
+   "moduleTree": "272829aae8444c82053a849b7a66ccc5a5a9109f",
+   "dirty": false,
+   "paraiCore": {
+    "commit": "29c670c73b73295c8c96592947cb9622e730c51c",
+    "dirty": false
+   },
+   "tags": [
+    "skipauth"
+   ],
+   "builtAt": "2026-09-23T14:40:12.508Z",
+   "binary": "module/bin/duif-etalage",
+   "bundleSha256": "d64a902bff38bf25d090a3bfe74e3f6bf4cfc7c21cb5160bddda9c45dced540d"
+  },
+  "pigeons": [
+   {
+    "id": "biological",
+    "engine": "agent",
+    "chat": true,
+    "meeting": true,
+    "autonomousDefault": false
+   },
+   {
+    "id": "individualist",
+    "engine": "agent",
+    "chat": true,
+    "meeting": true,
+    "autonomousDefault": false
+   },
+   {
+    "id": "nonverbal",
+    "engine": "pipeline",
+    "chat": false,
+    "meeting": true,
+    "autonomousDefault": true
+   }
+  ]
+ },
+ "failure": null,
+ "session": {
+  "id": "519d43469b61e81d913b84090813a95f",
+  "lang": "en",
+  "pigeonId": "individualist",
+  "autonomous": true,
+  "eagerness": "normal",
+  "cooldownSeconds": 0
+ },
+ "timeline": {
+  "micOpenMs": 1308,
+  "utteranceStartMs": 5308,
+  "utteranceEndMs": 8373,
+  "windowEndMs": 33373
+ },
+ "actions": [
+  {
+   "name": "load",
+   "t": 94
+  },
+  {
+   "name": "autonomy-on",
+   "t": 279
+  },
+  {
+   "name": "seat",
+   "t": 1097
+  },
+  {
+   "name": "window-closed",
+   "t": 33437
+  },
+  {
+   "name": "end-click",
+   "t": 34938
+  },
+  {
+   "name": "ended",
+   "t": 34959
+  }
+ ],
+ "exchanges": [
+  {
+   "id": 1,
+   "method": "GET",
+   "path": "/access/notice",
+   "requestBody": null,
+   "t": 177,
+   "headMs": 8,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 10,
+   "body": "{\"version\":\"2026-09-22.1\",\"acknowledged\":true,\"acknowledgedAt\":\"2026-09-22T12:57:04.398172+02:00\"}\n"
+  },
+  {
+   "id": 2,
+   "method": "GET",
+   "path": "/duiven",
+   "requestBody": null,
+   "t": 182,
+   "headMs": 2,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 3,
+   "body": "{\"duiven\":[{\"id\":\"biological\",\"name\":{\"en\":\"Knowledge Partner\",\"nl\":\"Kennispartner\"},\"voiceReady\":true,\"knowledgeBase\":true,\"chat\":true,\"meeting\":true,\"topics\":[{\"id\":\"population-control\",\"label\":{\"en\":\"Population control\",\"nl\":\"Populatiebeheer\"}},{\"id\":\"nuisance-and-health\",\"label\":{\"en\":\"Nuisance and health\",\"nl\":\"Overlast en gezondheid\"}},{\"id\":\"feeding-and-food\",\"label\":{\"en\":\"Feeding and food\",\"nl\":\"Voeren en voedsel\"}},{\"id\":\"nesting-and-shelter\",\"label\":{\"en\":\"Nesting and shelter\",\"nl\":\"Nestelen en beschutting\"}},{\"id\":\"urban-ecology\",\"label\":{\"en\":\"Urban ecology\",\"nl\":\"Stadsecologie\"}}],\"engine\":\"agent\",\"autonomousDefault\":false},{\"id\":\"individualist\",\"name\":{\"en\":\"Stakeholder\",\"nl\":\"Stakeholder\"},\"voiceReady\":true,\"knowledgeBase\":true,\"chat\":true,\"meeting\":true,\"topics\":[{\"id\":\"pigeon-rights\",\"label\":{\"en\":\"What pigeons are owed\",\"nl\":\"Waar duiven recht op hebben\"}},{\"id\":\"city-space\",\"label\":{\"en\":\"Whose city is it\",\"nl\":\"Van wie is de stad\"}},{\"id\":\"decided-about-not-with\",\"label\":{\"en\":\"Decided about, not with\",\"nl\":\"Over ons, zonder ons\"}},{\"id\":\"pest-framing\",\"label\":{\"en\":\"Being called vermin\",\"nl\":\"Ongedierte genoemd worden\"}}],\"engine\":\"agent\",\"autonomousDefault\":false},{\"id\":\"nonverbal\",\"name\":{\"en\":\"Signaling Pigeon\",\"nl\":\"Signalerende duif\"},\"voiceReady\":false,\"knowledgeBase\":false,\"chat\":false,\"meeting\":true,\"topics\":[{\"id\":\"threat-and-removal\",\"label\":{\"en\":\"Population intervention\",\"nl\":\"Ingrijpen in de populatie\"}},{\"id\":\"food\",\"label\":{\"en\":\"Access to food\",\"nl\":\"Toegang tot voedsel\"}},{\"id\":\"nesting\",\"label\":{\"en\":\"Nesting and roosting access\",\"nl\":\"Toegang tot nest- en verblijfplaatsen\"}},{\"id\":\"pigeons-nearby\",\"label\":{\"en\":\"Pigeons nearby\",\"nl\":\"Duiven in de buurt\"}}],\"engine\":\"pipeline\",\"autonomousDefault\":true}],\"gedrag\":{\"interventieZelfstandig\":false,\"interventieThrottleSeconden\":0,\"inactiviteitPromptMinuten\":10,\"inactiviteitSluitSeconden\":90,\"taalDefault\":\"en\",\"detectieGretigheid\":\"normal\",\"detectieVensterWoorden\":3,\"detectieIntervalSeconden\":6,\"stilteMilliseconden\":1500,\"arousalHalveringSeconden\":120},\"modelPolicy\":{\"model\":\"vertex_ai/gemini-3.5-flash\",\"detectionModel\":\"vertex_ai/gemini-3.5-flash\",\"endpoint\":\"https://llm-proxy.invalid\"}}\n"
+  },
+  {
+   "id": 3,
+   "method": "GET",
+   "path": "/chat/sessions",
+   "requestBody": null,
+   "t": 182,
+   "headMs": 6,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 8,
+   "bodyOmitted": "chatgeschiedenis van het opnameaccount; hoort niet bij deze vergadering"
+  },
+  {
+   "id": 4,
+   "method": "GET",
+   "path": "/knowledge/status",
+   "requestBody": null,
+   "t": 185,
+   "headMs": 2,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"state\":\"ready\",\"kbId\":\"Duiven\",\"counts\":{\"belongs_to\":4067,\"belongs_to_perspective\":4067,\"belongs_to_subthema\":4067,\"contains\":4067,\"contains_perspective\":297,\"contains_subthema\":149,\"contains_thema\":26,\"destillaat\":4067,\"domein\":3,\"has_quote\":4225,\"interview\":120,\"perspective\":297,\"quote\":4225,\"subthema\":149,\"thema\":26},\"bundleSchema\":\"duiven/3\",\"languages\":[\"nl\",\"en\"],\"sourceLanguage\":\"nl\",\"importedAt\":\"2026-09-15T12:26:51Z\"}\n"
+  },
+  {
+   "id": 5,
+   "method": "GET",
+   "path": "/chat/sessions/3294eaa1f8606aab568e8f343d74925f/messages",
+   "requestBody": null,
+   "t": 261,
+   "headMs": 8,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 9,
+   "bodyOmitted": "chatgeschiedenis van het opnameaccount; hoort niet bij deze vergadering"
+  },
+  {
+   "id": 6,
+   "method": "GET",
+   "path": "/knowledge/status",
+   "requestBody": null,
+   "t": 262,
+   "headMs": 7,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 7,
+   "body": "{\"state\":\"ready\",\"kbId\":\"Duiven\",\"counts\":{\"belongs_to\":4067,\"belongs_to_perspective\":4067,\"belongs_to_subthema\":4067,\"contains\":4067,\"contains_perspective\":297,\"contains_subthema\":149,\"contains_thema\":26,\"destillaat\":4067,\"domein\":3,\"has_quote\":4225,\"interview\":120,\"perspective\":297,\"quote\":4225,\"subthema\":149,\"thema\":26},\"bundleSchema\":\"duiven/3\",\"languages\":[\"nl\",\"en\"],\"sourceLanguage\":\"nl\",\"importedAt\":\"2026-09-15T12:26:51Z\"}\n"
+  },
+  {
+   "id": 7,
+   "method": "POST",
+   "path": "/meeting/sessions",
+   "requestBody": "{\"pigeonId\":\"individualist\",\"playbackTracking\":true,\"lang\":\"en\",\"autonomous\":true,\"eagerness\":\"normal\",\"cooldownSeconds\":0}",
+   "t": 1227,
+   "headMs": 4,
+   "status": 201,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 5,
+   "body": "{\"autonomous\":true,\"autonomyPaused\":false,\"eagerness\":\"normal\",\"lang\":\"en\",\"listening\":\"reconnecting\",\"pigeonId\":\"individualist\",\"playbackTracking\":true,\"sessionId\":\"519d43469b61e81d913b84090813a95f\",\"settings\":{\"turnId\":\"0\",\"autonomyPaused\":false,\"playbackTracking\":true,\"autonomous\":true,\"eagerness\":\"normal\",\"cooldownSeconds\":0},\"voice\":\"ready\"}\n"
+  },
+  {
+   "id": 138,
+   "method": "DELETE",
+   "path": "/meeting/sessions/519d43469b61e81d913b84090813a95f",
+   "requestBody": null,
+   "t": 34953,
+   "headMs": 7,
+   "status": 204,
+   "headers": [],
+   "endMs": 7,
+   "body": ""
+  }
+ ],
+ "audioUpload": {
+  "requests": 130,
+  "statuses": {
+   "202": 130
+  },
+  "firstMs": 1694,
+  "lastMs": 34690
+ },
+ "channels": [
+  {
+   "channel": 1,
+   "path": "/meeting/sessions/519d43469b61e81d913b84090813a95f/events",
+   "t": 1232,
+   "messages": [
+    {
+     "t": 1239,
+     "data": "{\"type\":\"state\",\"turnId\":\"0\",\"autonomyPaused\":false,\"playbackTracking\":true,\"sessionId\":\"519d43469b61e81d913b84090813a95f\",\"pigeonId\":\"individualist\",\"lang\":\"en\",\"listening\":\"reconnecting\",\"speaking\":false,\"detector\":{\"enabled\":true,\"state\":\"ready\",\"retryable\":false},\"settings\":{\"turnId\":\"0\",\"autonomyPaused\":false,\"playbackTracking\":true,\"autonomous\":true,\"eagerness\":\"normal\",\"cooldownSeconds\":0},\"voice\":\"ready\"}"
+    },
+    {
+     "t": 1424,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"519d43469b61e81d913b84090813a95f\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "t": 6232,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"519d43469b61e81d913b84090813a95f\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "t": 6350,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"519d43469b61e81d913b84090813a95f\",\"speaking\":false,\"text\":\"R\"}"
+    },
+    {
+     "t": 6408,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"519d43469b61e81d913b84090813a95f\",\"speaking\":false,\"text\":\"Right\"}"
+    },
+    {
+     "t": 6607,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"519d43469b61e81d913b84090813a95f\",\"speaking\":false,\"text\":\"Right.\"}"
+    },
+    {
+     "t": 7079,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"519d43469b61e81d913b84090813a95f\",\"speaking\":false,\"text\":\"Right. Ne\"}"
+    },
+    {
+     "t": 7127,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"519d43469b61e81d913b84090813a95f\",\"speaking\":false,\"text\":\"Right. Next\"}"
+    },
+    {
+     "t": 7373,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"519d43469b61e81d913b84090813a95f\",\"speaking\":false,\"text\":\"Right. Next it\"}"
+    },
+    {
+     "t": 7422,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"519d43469b61e81d913b84090813a95f\",\"speaking\":false,\"text\":\"Right. Next it\"}"
+    },
+    {
+     "t": 7604,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"519d43469b61e81d913b84090813a95f\",\"speaking\":false,\"text\":\"Right. Next item,\"}"
+    },
+    {
+     "t": 7934,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"519d43469b61e81d913b84090813a95f\",\"speaking\":false,\"text\":\"Right. Next item, ne\"}"
+    },
+    {
+     "t": 8131,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"519d43469b61e81d913b84090813a95f\",\"speaking\":false,\"text\":\"Right. Next item, next\"}"
+    },
+    {
+     "t": 8406,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"519d43469b61e81d913b84090813a95f\",\"speaking\":false,\"text\":\"Right. Next item, next year\"}"
+    },
+    {
+     "t": 8459,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"519d43469b61e81d913b84090813a95f\",\"speaking\":false,\"text\":\"Right. Next item, next year's\"}"
+    },
+    {
+     "t": 8659,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"519d43469b61e81d913b84090813a95f\",\"speaking\":false,\"text\":\"Right. Next item, next year's bud\"}"
+    },
+    {
+     "t": 8710,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"519d43469b61e81d913b84090813a95f\",\"speaking\":false,\"text\":\"Right. Next item, next year's budg\"}"
+    },
+    {
+     "t": 8972,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"519d43469b61e81d913b84090813a95f\",\"speaking\":false,\"text\":\"Right. Next item, next year's budget.\"}"
+    },
+    {
+     "t": 9963,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"519d43469b61e81d913b84090813a95f\",\"speaking\":false,\"text\":\"Right. Next item, next year's budget.\",\"final\":true}"
+    },
+    {
+     "t": 11232,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"519d43469b61e81d913b84090813a95f\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "t": 16482,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"519d43469b61e81d913b84090813a95f\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "t": 21482,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"519d43469b61e81d913b84090813a95f\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "t": 26731,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"519d43469b61e81d913b84090813a95f\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "t": 31731,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"519d43469b61e81d913b84090813a95f\",\"listening\":\"listening\",\"speaking\":false}"
+    }
+   ],
+   "openMs": 1239,
+   "closeMs": 34953
+  }
+ ],
+ "probes": [
+  {
+   "kind": "mic-open",
+   "t": 1308,
+   "audio": 1
+  },
+  {
+   "kind": "gesture",
+   "t": 1321,
+   "clip": "Peck"
+  },
+  {
+   "kind": "gesture",
+   "t": 1548,
+   "clip": "WingWave"
+  }
+ ],
+ "transcript": [
+  {
+   "t": 9963,
+   "text": "Right. Next item, next year's budget."
+  }
+ ],
+ "voice": [],
+ "checks": {
+  "reaction": "silence",
+  "delayMs": null,
+  "sessionLang": "en",
+  "langMatches": true,
+  "autonomous": true
+ }
+}

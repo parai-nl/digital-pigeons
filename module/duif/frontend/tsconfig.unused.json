@@ -1,0 +1,18 @@
+{
+  // Tweede pas over dezelfde bron, met één extra eis: geen ongebruikte locals
+  // en parameters. Waarom apart en niet in tsconfig.json: svelte-check typeert
+  // ook de @parai/ui-checkout mee, en die is niet van ons — één ongebruikte
+  // import daar zou de poort van deze module dichtgooien. Deze pas kijkt
+  // daarom alleen naar de TypeScript-laag; .svelte blijft aan svelte-check.
+  // Basis is het gegenereerde tsconfig.check.json (scripts/tsconfig-check.ts,
+  // eerste stap van `bun run check`), zodat ook deze pas PARAI_UI_DIR en
+  // PARAI_GRAPH_DIR volgt. Los gedraaid (`tsc -p tsconfig.unused.json`) leest
+  // hij het bestand van de vorige check: draai eerst `bun scripts/tsconfig-check.ts`.
+  "extends": "./tsconfig.check.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
+  },
+  "include": ["src/**/*.ts", "vitest-setup.ts", "tools/svelte-modules.d.ts"]
+}

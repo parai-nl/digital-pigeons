@@ -1,0 +1,68 @@
+{
+  "placeholder": false,
+  "note": "Definitief sinds 24 september 2026: het projectteam nam de vragen en uitspraken over zoals ze waren. Andere vragen: vervang de teksten, neem opnieuw op (README.md) en laat placeholder op false; de id's mogen blijven of veranderen. Het gereedschap leest dit bestand ongewijzigd.",
+  "chat": [
+    {
+      "id": "afschot",
+      "text": {
+        "nl": "Duiven zijn ratten met vleugels. Zou afschieten iets oplossen voor Rotterdam?",
+        "en": "Pigeons are rats with wings. Would culling them actually solve anything for Rotterdam?"
+      }
+    },
+    {
+      "id": "markt",
+      "text": {
+        "nl": "Waarom zitten jullie altijd op het marktplein?",
+        "en": "Why are you always on the market square?"
+      }
+    },
+    {
+      "id": "vuurwerk",
+      "text": {
+        "nl": "Wat doet vuurwerk met jou?",
+        "en": "What do fireworks do to you?"
+      }
+    },
+    {
+      "id": "nestelen",
+      "text": {
+        "nl": "Waar nestel je het liefst in de stad?",
+        "en": "Where do you prefer to nest in the city?"
+      }
+    }
+  ],
+  "meeting": [
+    {
+      "id": "poep",
+      "speaker": { "nl": "Voorzitter", "en": "Chair" },
+      "text": {
+        "nl": "De marktkooplui klagen over duivenpoep op hun kramen.",
+        "en": "The market traders keep complaining about pigeon droppings on their stalls."
+      }
+    },
+    {
+      "id": "afschot",
+      "speaker": { "nl": "Beheer", "en": "Operations" },
+      "text": {
+        "nl": "Ik denk dat het tijd is voor afschot.",
+        "en": "I think it's time for a culling programme."
+      }
+    },
+    {
+      "id": "bakken",
+      "speaker": { "nl": "Adviseur", "en": "Advisor" },
+      "text": {
+        "nl": "Dan sluiten we de afvalbakken 's nachts ook meteen af.",
+        "en": "And we'll lock the bins at night while we're at it."
+      }
+    },
+    {
+      "id": "begroting",
+      "speaker": { "nl": "Voorzitter", "en": "Chair" },
+      "text": {
+        "nl": "Goed. Volgende punt: de begroting voor volgend jaar.",
+        "en": "Right. Next item: next year's budget."
+      }
+    }
+  ]
+}

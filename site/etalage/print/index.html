@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Digitale Duif van Rotterdam · print</title>
+<link rel="icon" href="../media/logo/parai.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../styles/tokens.css">
+<link rel="stylesheet" href="print.css">
+<script type="module" src="print.js"></script>
+</head>
+<body>
+<nav class="print-controls" data-controls>
+  <a class="print-back" href="../../" data-back></a>
+  <div class="print-controls__group">
+    <div class="print-seg" role="group" data-kind-group>
+      <button type="button" data-kind="poster" aria-pressed="false"></button>
+      <button type="button" data-kind="cards" aria-pressed="false"></button>
+    </div>
+    <div class="print-seg" role="group" aria-label="Taal / Language">
+      <button type="button" data-lang="nl" lang="nl" aria-pressed="false">NL</button>
+      <button type="button" data-lang="en" lang="en" aria-pressed="false">EN</button>
+    </div>
+    <button type="button" class="print-go" data-print></button>
+  </div>
+</nav>
+<main class="print-sheet" data-sheet></main>
+<noscript><p class="print-noscript">Dit printmateriaal heeft JavaScript nodig om de taal te kiezen. / This print material needs JavaScript to choose its language.</p></noscript>
+</body>
+</html>

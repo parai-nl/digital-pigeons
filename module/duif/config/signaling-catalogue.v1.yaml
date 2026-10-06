@@ -1,0 +1,50 @@
+# Internal design catalogue; no meeting content and no copied source passages.
+version: signaling-2026-09-07.1
+review_basis: corpus-relations-and-grounded-quotes-read-2026-09-07
+external_validation: pending
+relations:
+  - topic_id: threat-and-removal
+    source_id: interview:1f1c00a8-1b06-5893-89a2-0473a4e168dc
+    source_key: giunchi2012
+    finding_id: destillaat:3c862652-1533-56a0-97ed-744a15bf6402
+    quote_id: quote:4ce1adf1-10e1-5cd5-adc7-3595ced692a8
+    grounded: true
+    finding: "The cited modelling comparison concerns culling and reduced reproductive potential in pigeon population management."
+    rationale: "A current intervention proposal is a defensible occasion to draw attention to pigeons at the table."
+    boundary: "This comparison does not prove that every measure is ineffective, establish ethical permission or assign any emotion to a sound."
+  - topic_id: food
+    source_id: interview:46256d2b-644e-58f2-9518-89f6045fda6a
+    source_key: soh2021
+    finding_id: destillaat:3927ab6e-c9af-5315-a2a6-409ae060ef14
+    quote_id: quote:0e8e4925-efaa-5fce-b648-620b8b0553d2
+    grounded: true
+    finding: "The source relates urban feral pigeons' association with people to human-derived food and nesting opportunities."
+    rationale: "Changing pigeons' access to food is therefore a bounded relevant theme; merely mentioning human food is insufficient."
+    boundary: "This relation gives no universal feeding policy, diet prescription, welfare prediction or meaning for a coo."
+  - topic_id: nesting
+    source_id: interview:46256d2b-644e-58f2-9518-89f6045fda6a
+    source_key: soh2021
+    finding_id: destillaat:3927ab6e-c9af-5315-a2a6-409ae060ef14
+    quote_id: quote:0e8e4925-efaa-5fce-b648-620b8b0553d2
+    grounded: true
+    finding: "The source includes nesting opportunities in its account of urban pigeon presence near people."
+    rationale: "A proposal about access to actual pigeon nesting or roosting space is a relevant design trigger."
+    boundary: "This does not establish preference for any ledge or quantify the impact of closing a particular site."
+  - topic_id: nesting
+    source_id: interview:132d21d3-e5d8-5457-9d82-bfbbf1575b95
+    source_key: lim2023
+    finding_id: destillaat:5edcb2dd-98b1-57e6-ad15-96e58a48152c
+    quote_id: quote:b1b33627-39d4-5f46-a9c1-8176e9ca98a4
+    grounded: true
+    finding: "The source explicitly identifies limited knowledge of roosting and nesting preferences."
+    rationale: "Keep the relevance relation broad while recording a limit on more specific interpretations."
+    boundary: "A knowledge gap is not evidence for a preferred design or for a bird's feelings."
+  - topic_id: pigeons-nearby
+    source_id: interview:46256d2b-644e-58f2-9518-89f6045fda6a
+    source_key: soh2021
+    finding_id: destillaat:3927ab6e-c9af-5315-a2a6-409ae060ef14
+    quote_id: quote:0e8e4925-efaa-5fce-b648-620b8b0553d2
+    grounded: true
+    finding: "The source describes urban feral pigeons as living close to people, tied to human-derived food and nesting opportunities in the built environment."
+    rationale: "A meeting that talks about pigeons or about the built place they live in is therefore a defensible occasion for a quiet signal, without any proposal being required."
+    boundary: "Proximity of the subject is not a finding: it establishes no measure, no welfare effect, no preference and no meaning for a sound."

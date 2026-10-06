@@ -1,0 +1,112 @@
+{
+  "about": "Welke take in de video komt en hoe de afspeelsessie loopt. Een andere take kiezen is één regel onder takes; daarna render.mjs.",
+  "base": "http://127.0.0.1:8092",
+  "takes": {
+    "chat": "chat-20260923T115343Z",
+    "meeting-nonverbal": "meeting-nonverbal-20260923T115814Z",
+    "meeting-individualist": "meeting-individualist-20260923T120050Z",
+    "meeting-nonverbal-respond": "meeting-nonverbal-respond-20260923T161712Z",
+    "meeting-individualist-respond": "meeting-individualist-respond-20260923T160714Z"
+  },
+  "timeMap": {
+    "chat": {
+      "waitGapMs": 500,
+      "streamGapMs": 6000
+    },
+    "meeting": {
+      "respondWaitMs": 1200,
+      "voiceWaitMs": 1000
+    }
+  },
+  "pacing": {
+    "chat": {
+      "settle": 1500,
+      "start": 1800,
+      "typingDelayMs": 22,
+      "beforeSend": 400,
+      "readFirst": 4800,
+      "source": 4800,
+      "graphSettle": 1900,
+      "graph": 1400,
+      "graphExpand": 3000,
+      "graphPaper": 3800,
+      "back": 600,
+      "hoverAskOther": 900,
+      "readSecond": 7000
+    },
+    "meeting": {
+      "setup": 1500,
+      "toggle": 600,
+      "afterEnd": 800
+    }
+  },
+  "choices": {
+    "chat": "chat-20260923T115343Z boven chat-20260923T123336Z: beide acht bronnen en schone markeringen; in deze gaan beide duiven letterlijk in op 'rats of the sky' met een bron [1], en elke zin van de Kennispartner heeft een bron. De Stakeholder is kort en fel (51 woorden).",
+    "meeting-nonverbal": "115814Z: zacht koeren tijdens 'time for a culling programme', een alarmvleugelslag na 'So we remove them'. 115558Z had dezelfde twee reacties, maar de opname beëindigde de vergadering 0,6 s na het begin van de vleugelslag (te korte wachttijd in de driver). 115657Z reageerde alleen kalm midden in het fragment. Voor de snelle video telt het zachte koeren tijdens 'culling program', op ware snelheid.",
+    "meeting-individualist": "120050Z: zij breekt zelf in tijdens het voorstel van de adviseur, spreekt 12,8 s en noemt twee bronnen. In 115924Z brak de server haar bijdrage af voordat er geluid was (context_changed) en zweeg zij daarna. De video toont haar eerste twee zinnen; de derde valt samen met de volgende kandidaatmelding.",
+    "chat-supplement": "chat-supplement-20260923T140045Z: de leesverzoeken van bronnenlade en kennisgraaf (5 GET's naar /api/duif/v1/graph/) bij het afspelen van de gekozen chattake, zonder modelaanroep.",
+    "meeting-nonverbal-respond": "161712Z: na het fragment 'Let the pigeon step in'; 0,2 s later koert zij (kalme band) en beweegt. 160942Z en 161022Z hebben hetzelfde, maar de driver beëindigde de vergadering terwijl het geluid nog klonk (settle telde het geluid pas vanaf het afspelen; gerepareerd). 161756Z: de knop kwam pas na 330 s en er kwam geen reactie (mislukt).",
+    "meeting-individualist-respond": "160714Z: na 'Any objections?' de knop; zij antwoordt 'I strongly object to this lazy plan to kill us…' met twee bronnen, 13 s stem, kort en direct. 160834Z (ook goed) is langer (18 s stem) en eindigt minder scherp."
+  },
+  "supplements": {
+    "chat": [
+      "chat-supplement-20260923T140045Z"
+    ]
+  },
+  "capture": {
+    "jpegQuality": 92,
+    "fullTranscript": false,
+    "about": "fullTranscript: bij het afspelen van een vergadering 'Full transcript' openen, zoals de opname deed, of de standaardstand van de app laten staan: de laatste twee zinnen onder de duif. Alleen weergave, geen verzoek. Met de v4-duiven past op 1152×864 niet de hele duif én het hele verloop op het podium: open stond de kop van de Stakeholder twaalf seconden boven de rand en die van de signalerende duif tijdens haar reactie. Dicht staan de duif en de twee laatste zinnen (…nobody is going to miss a few hundred pigeons. / Right. So we remove them. Any objections?) samen in beeld. Terug: true."
+  },
+  "defaultFormat": "4x3-1152",
+  "formats": {
+    "16x9": {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "scale": 1.5,
+      "out": {
+        "width": 1920,
+        "height": 1080
+      }
+    },
+    "4x3": {
+      "viewport": {
+        "width": 1104,
+        "height": 828
+      },
+      "scale": 1.3043478260869565,
+      "out": {
+        "width": 1440,
+        "height": 1080
+      }
+    },
+    "4x3-1152": {
+      "viewport": {
+        "width": 1152,
+        "height": 864
+      },
+      "scale": 1.25,
+      "out": {
+        "width": 1440,
+        "height": 1080
+      }
+    },
+    "4x3-1024": {
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "scale": 1.40625,
+      "out": {
+        "width": 1440,
+        "height": 1080
+      }
+    }
+  },
+  "credits": {
+    "manifest": "module/duif/config/media-manifest.v1.json",
+    "about": "De naamsvermelding komt uit deze catalogus (pad vanaf de root van de repo) en wordt vergeleken met wat de afgespeelde app bij het model vermeldt."
+  }
+}

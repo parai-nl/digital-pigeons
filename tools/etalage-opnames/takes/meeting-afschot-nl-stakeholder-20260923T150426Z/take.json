@@ -1,0 +1,1987 @@
+{
+ "format": "duiven-etalage-take/1",
+ "id": "meeting-afschot-nl-stakeholder-20260923T150426Z",
+ "kind": "meeting",
+ "item": {
+  "statement": "afschot",
+  "lang": "nl",
+  "pigeon": "stakeholder",
+  "modulePigeon": "individualist"
+ },
+ "input": {
+  "speaker": "Beheer",
+  "text": "Ik denk dat het tijd is voor afschot.",
+  "audio": "uitspraken/afschot-nl.mp3",
+  "audioSha256": "499801802155d34044fcbf2caaf008438fcc1a366a910322096bd15348c9ca5a",
+  "audioMs": 2136,
+  "voice": "Daniel (ElevenLabs eleven_multilingual_v2)",
+  "micLeadMs": 4000,
+  "windowMs": 25000,
+  "placeholder": true
+ },
+ "recordedAt": "2026-09-23T15:04:26.081Z",
+ "finishedAt": "2026-09-23T15:05:02.246Z",
+ "server": {
+  "base": "http://127.0.0.1:8094",
+  "modelPolicy": {
+   "model": "vertex_ai/gemini-3.5-flash",
+   "detectionModel": "vertex_ai/gemini-3.5-flash",
+   "endpoint": "https://llm-proxy.invalid"
+  },
+  "knowledge": {
+   "kbId": "Duiven",
+   "bundleSchema": "duiven/3",
+   "languages": [
+    "nl",
+    "en"
+   ],
+   "importedAt": "2026-09-15T12:26:51Z",
+   "counts": {
+    "belongs_to": 4067,
+    "belongs_to_perspective": 4067,
+    "belongs_to_subthema": 4067,
+    "contains": 4067,
+    "contains_perspective": 297,
+    "contains_subthema": 149,
+    "contains_thema": 26,
+    "destillaat": 4067,
+    "domein": 3,
+    "has_quote": 4225,
+    "interview": 120,
+    "perspective": 297,
+    "quote": 4225,
+    "subthema": 149,
+    "thema": 26
+   }
+  },
+  "database": {
+   "name": "duif_etalage",
+   "copyOf": "duif_v3"
+  },
+  "module": {
+   "commit": "44186b900325eefad26c20b91e92f7350eb81bd0",
+   "moduleTree": "272829aae8444c82053a849b7a66ccc5a5a9109f",
+   "dirty": false,
+   "paraiCore": {
+    "commit": "29c670c73b73295c8c96592947cb9622e730c51c",
+    "dirty": false
+   },
+   "tags": [
+    "skipauth"
+   ],
+   "builtAt": "2026-09-23T14:40:12.508Z",
+   "binary": "module/bin/duif-etalage",
+   "bundleSha256": "d64a902bff38bf25d090a3bfe74e3f6bf4cfc7c21cb5160bddda9c45dced540d"
+  },
+  "pigeons": [
+   {
+    "id": "biological",
+    "engine": "agent",
+    "chat": true,
+    "meeting": true,
+    "autonomousDefault": false
+   },
+   {
+    "id": "individualist",
+    "engine": "agent",
+    "chat": true,
+    "meeting": true,
+    "autonomousDefault": false
+   },
+   {
+    "id": "nonverbal",
+    "engine": "pipeline",
+    "chat": false,
+    "meeting": true,
+    "autonomousDefault": true
+   }
+  ]
+ },
+ "failure": null,
+ "session": {
+  "id": "6732ea99675e6f3c5ed4b27cb5e6b833",
+  "lang": "nl",
+  "pigeonId": "individualist",
+  "autonomous": true,
+  "eagerness": "normal",
+  "cooldownSeconds": 0
+ },
+ "timeline": {
+  "micOpenMs": 1419,
+  "utteranceStartMs": 5419,
+  "utteranceEndMs": 7555,
+  "windowEndMs": 32555
+ },
+ "actions": [
+  {
+   "name": "load",
+   "t": 114
+  },
+  {
+   "name": "autonomy-on",
+   "t": 368
+  },
+  {
+   "name": "seat",
+   "t": 1187
+  },
+  {
+   "name": "reaction",
+   "t": 16193,
+   "type": "persona"
+  },
+  {
+   "name": "reaction-done",
+   "t": 33536
+  },
+  {
+   "name": "end-click",
+   "t": 35041
+  },
+  {
+   "name": "ended",
+   "t": 35069
+  }
+ ],
+ "exchanges": [
+  {
+   "id": 1,
+   "method": "GET",
+   "path": "/access/notice",
+   "requestBody": null,
+   "t": 196,
+   "headMs": 8,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 9,
+   "body": "{\"version\":\"2026-09-22.1\",\"acknowledged\":true,\"acknowledgedAt\":\"2026-09-22T12:57:04.398172+02:00\"}\n"
+  },
+  {
+   "id": 2,
+   "method": "GET",
+   "path": "/duiven",
+   "requestBody": null,
+   "t": 201,
+   "headMs": 2,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 3,
+   "body": "{\"duiven\":[{\"id\":\"biological\",\"name\":{\"en\":\"Knowledge Partner\",\"nl\":\"Kennispartner\"},\"voiceReady\":true,\"knowledgeBase\":true,\"chat\":true,\"meeting\":true,\"topics\":[{\"id\":\"population-control\",\"label\":{\"en\":\"Population control\",\"nl\":\"Populatiebeheer\"}},{\"id\":\"nuisance-and-health\",\"label\":{\"en\":\"Nuisance and health\",\"nl\":\"Overlast en gezondheid\"}},{\"id\":\"feeding-and-food\",\"label\":{\"en\":\"Feeding and food\",\"nl\":\"Voeren en voedsel\"}},{\"id\":\"nesting-and-shelter\",\"label\":{\"en\":\"Nesting and shelter\",\"nl\":\"Nestelen en beschutting\"}},{\"id\":\"urban-ecology\",\"label\":{\"en\":\"Urban ecology\",\"nl\":\"Stadsecologie\"}}],\"engine\":\"agent\",\"autonomousDefault\":false},{\"id\":\"individualist\",\"name\":{\"en\":\"Stakeholder\",\"nl\":\"Stakeholder\"},\"voiceReady\":true,\"knowledgeBase\":true,\"chat\":true,\"meeting\":true,\"topics\":[{\"id\":\"pigeon-rights\",\"label\":{\"en\":\"What pigeons are owed\",\"nl\":\"Waar duiven recht op hebben\"}},{\"id\":\"city-space\",\"label\":{\"en\":\"Whose city is it\",\"nl\":\"Van wie is de stad\"}},{\"id\":\"decided-about-not-with\",\"label\":{\"en\":\"Decided about, not with\",\"nl\":\"Over ons, zonder ons\"}},{\"id\":\"pest-framing\",\"label\":{\"en\":\"Being called vermin\",\"nl\":\"Ongedierte genoemd worden\"}}],\"engine\":\"agent\",\"autonomousDefault\":false},{\"id\":\"nonverbal\",\"name\":{\"en\":\"Signaling Pigeon\",\"nl\":\"Signalerende duif\"},\"voiceReady\":false,\"knowledgeBase\":false,\"chat\":false,\"meeting\":true,\"topics\":[{\"id\":\"threat-and-removal\",\"label\":{\"en\":\"Population intervention\",\"nl\":\"Ingrijpen in de populatie\"}},{\"id\":\"food\",\"label\":{\"en\":\"Access to food\",\"nl\":\"Toegang tot voedsel\"}},{\"id\":\"nesting\",\"label\":{\"en\":\"Nesting and roosting access\",\"nl\":\"Toegang tot nest- en verblijfplaatsen\"}},{\"id\":\"pigeons-nearby\",\"label\":{\"en\":\"Pigeons nearby\",\"nl\":\"Duiven in de buurt\"}}],\"engine\":\"pipeline\",\"autonomousDefault\":true}],\"gedrag\":{\"interventieZelfstandig\":false,\"interventieThrottleSeconden\":0,\"inactiviteitPromptMinuten\":10,\"inactiviteitSluitSeconden\":90,\"taalDefault\":\"en\",\"detectieGretigheid\":\"normal\",\"detectieVensterWoorden\":3,\"detectieIntervalSeconden\":6,\"stilteMilliseconden\":1500,\"arousalHalveringSeconden\":120},\"modelPolicy\":{\"model\":\"vertex_ai/gemini-3.5-flash\",\"detectionModel\":\"vertex_ai/gemini-3.5-flash\",\"endpoint\":\"https://llm-proxy.invalid\"}}\n"
+  },
+  {
+   "id": 3,
+   "method": "GET",
+   "path": "/chat/sessions",
+   "requestBody": null,
+   "t": 201,
+   "headMs": 6,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 7,
+   "bodyOmitted": "chatgeschiedenis van het opnameaccount; hoort niet bij deze vergadering"
+  },
+  {
+   "id": 4,
+   "method": "GET",
+   "path": "/knowledge/status",
+   "requestBody": null,
+   "t": 205,
+   "headMs": 2,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 3,
+   "body": "{\"state\":\"ready\",\"kbId\":\"Duiven\",\"counts\":{\"belongs_to\":4067,\"belongs_to_perspective\":4067,\"belongs_to_subthema\":4067,\"contains\":4067,\"contains_perspective\":297,\"contains_subthema\":149,\"contains_thema\":26,\"destillaat\":4067,\"domein\":3,\"has_quote\":4225,\"interview\":120,\"perspective\":297,\"quote\":4225,\"subthema\":149,\"thema\":26},\"bundleSchema\":\"duiven/3\",\"languages\":[\"nl\",\"en\"],\"sourceLanguage\":\"nl\",\"importedAt\":\"2026-09-15T12:26:51Z\"}\n"
+  },
+  {
+   "id": 5,
+   "method": "GET",
+   "path": "/chat/sessions/3294eaa1f8606aab568e8f343d74925f/messages",
+   "requestBody": null,
+   "t": 341,
+   "headMs": 12,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 13,
+   "bodyOmitted": "chatgeschiedenis van het opnameaccount; hoort niet bij deze vergadering"
+  },
+  {
+   "id": 6,
+   "method": "GET",
+   "path": "/knowledge/status",
+   "requestBody": null,
+   "t": 342,
+   "headMs": 6,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 6,
+   "body": "{\"state\":\"ready\",\"kbId\":\"Duiven\",\"counts\":{\"belongs_to\":4067,\"belongs_to_perspective\":4067,\"belongs_to_subthema\":4067,\"contains\":4067,\"contains_perspective\":297,\"contains_subthema\":149,\"contains_thema\":26,\"destillaat\":4067,\"domein\":3,\"has_quote\":4225,\"interview\":120,\"perspective\":297,\"quote\":4225,\"subthema\":149,\"thema\":26},\"bundleSchema\":\"duiven/3\",\"languages\":[\"nl\",\"en\"],\"sourceLanguage\":\"nl\",\"importedAt\":\"2026-09-15T12:26:51Z\"}\n"
+  },
+  {
+   "id": 7,
+   "method": "POST",
+   "path": "/meeting/sessions",
+   "requestBody": "{\"pigeonId\":\"individualist\",\"playbackTracking\":true,\"lang\":\"nl\",\"autonomous\":true,\"eagerness\":\"normal\",\"cooldownSeconds\":0}",
+   "t": 1334,
+   "headMs": 4,
+   "status": 201,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 4,
+   "body": "{\"autonomous\":true,\"autonomyPaused\":false,\"eagerness\":\"normal\",\"lang\":\"nl\",\"listening\":\"reconnecting\",\"pigeonId\":\"individualist\",\"playbackTracking\":true,\"sessionId\":\"6732ea99675e6f3c5ed4b27cb5e6b833\",\"settings\":{\"turnId\":\"0\",\"autonomyPaused\":false,\"playbackTracking\":true,\"autonomous\":true,\"eagerness\":\"normal\",\"cooldownSeconds\":0},\"voice\":\"ready\"}\n"
+  },
+  {
+   "id": 66,
+   "method": "POST",
+   "path": "/meeting/sessions/6732ea99675e6f3c5ed4b27cb5e6b833/playback",
+   "requestBody": "{\"turnId\":\"1\",\"state\":\"started\"}",
+   "t": 16511,
+   "headMs": 3,
+   "status": 202,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 3,
+   "body": "{\"accepted\":true,\"settings\":{\"turnId\":\"1\",\"autonomyPaused\":false,\"playbackTracking\":true,\"autonomous\":true,\"eagerness\":\"normal\",\"cooldownSeconds\":0},\"speaking\":true}\n"
+  },
+  {
+   "id": 129,
+   "method": "POST",
+   "path": "/meeting/sessions/6732ea99675e6f3c5ed4b27cb5e6b833/playback",
+   "requestBody": "{\"turnId\":\"1\",\"state\":\"ended\"}",
+   "t": 32516,
+   "headMs": 2,
+   "status": 202,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"accepted\":true,\"settings\":{\"turnId\":\"1\",\"autonomyPaused\":false,\"playbackTracking\":true,\"autonomous\":true,\"eagerness\":\"normal\",\"cooldownSeconds\":0},\"speaking\":false}\n"
+  },
+  {
+   "id": 140,
+   "method": "DELETE",
+   "path": "/meeting/sessions/6732ea99675e6f3c5ed4b27cb5e6b833",
+   "requestBody": null,
+   "t": 35059,
+   "headMs": 6,
+   "status": 204,
+   "headers": [],
+   "endMs": 6,
+   "body": ""
+  }
+ ],
+ "audioUpload": {
+  "requests": 130,
+  "statuses": {
+   "202": 130
+  },
+  "firstMs": 1801,
+  "lastMs": 34841
+ },
+ "channels": [
+  {
+   "channel": 1,
+   "path": "/meeting/sessions/6732ea99675e6f3c5ed4b27cb5e6b833/events",
+   "t": 1339,
+   "messages": [
+    {
+     "t": 1346,
+     "data": "{\"type\":\"state\",\"turnId\":\"0\",\"autonomyPaused\":false,\"playbackTracking\":true,\"sessionId\":\"6732ea99675e6f3c5ed4b27cb5e6b833\",\"pigeonId\":\"individualist\",\"lang\":\"nl\",\"listening\":\"reconnecting\",\"speaking\":false,\"detector\":{\"enabled\":true,\"state\":\"ready\",\"retryable\":false},\"settings\":{\"turnId\":\"0\",\"autonomyPaused\":false,\"playbackTracking\":true,\"autonomous\":true,\"eagerness\":\"normal\",\"cooldownSeconds\":0},\"voice\":\"ready\"}"
+    },
+    {
+     "t": 1515,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"6732ea99675e6f3c5ed4b27cb5e6b833\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "t": 6339,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"6732ea99675e6f3c5ed4b27cb5e6b833\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "t": 6480,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"6732ea99675e6f3c5ed4b27cb5e6b833\",\"speaking\":false,\"text\":\"I\"}"
+    },
+    {
+     "t": 6524,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"6732ea99675e6f3c5ed4b27cb5e6b833\",\"speaking\":false,\"text\":\"Ik\"}"
+    },
+    {
+     "t": 6647,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"6732ea99675e6f3c5ed4b27cb5e6b833\",\"speaking\":false,\"text\":\"Ik denk\"}"
+    },
+    {
+     "t": 6747,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"6732ea99675e6f3c5ed4b27cb5e6b833\",\"speaking\":false,\"text\":\"Ik denk dat\"}"
+    },
+    {
+     "t": 7025,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"6732ea99675e6f3c5ed4b27cb5e6b833\",\"speaking\":false,\"text\":\"Ik denk dat het\"}"
+    },
+    {
+     "t": 7142,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"6732ea99675e6f3c5ed4b27cb5e6b833\",\"speaking\":false,\"text\":\"Ik denk dat het tij\"}"
+    },
+    {
+     "t": 7269,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"6732ea99675e6f3c5ed4b27cb5e6b833\",\"speaking\":false,\"text\":\"Ik denk dat het tijd\"}"
+    },
+    {
+     "t": 7553,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"6732ea99675e6f3c5ed4b27cb5e6b833\",\"speaking\":false,\"text\":\"Ik denk dat het tijd is\"}"
+    },
+    {
+     "t": 7553,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"6732ea99675e6f3c5ed4b27cb5e6b833\",\"speaking\":false,\"text\":\"Ik denk dat het tijd is voor\"}"
+    },
+    {
+     "t": 7666,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"6732ea99675e6f3c5ed4b27cb5e6b833\",\"speaking\":false,\"text\":\"Ik denk dat het tijd is voor af\"}"
+    },
+    {
+     "t": 7796,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"6732ea99675e6f3c5ed4b27cb5e6b833\",\"speaking\":false,\"text\":\"Ik denk dat het tijd is voor afschot.\",\"final\":true}"
+    },
+    {
+     "t": 11588,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"6732ea99675e6f3c5ed4b27cb5e6b833\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "t": 16185,
+     "data": "{\"type\":\"candidate\",\"sessionId\":\"6732ea99675e6f3c5ed4b27cb5e6b833\",\"speaking\":false,\"candidate\":{\"id\":\"1ea6044ce4a06a8fa890990a13088454\",\"topic\":{\"id\":\"pigeon-rights\",\"label\":{\"en\":\"What pigeons are owed\",\"nl\":\"Waar duiven recht op hebben\"}},\"score\":0.9,\"reason\":\"topic\",\"sources\":20}}"
+    },
+    {
+     "t": 16185,
+     "data": "{\"type\":\"arousal\",\"sessionId\":\"6732ea99675e6f3c5ed4b27cb5e6b833\",\"speaking\":false,\"arousal\":0.9}"
+    },
+    {
+     "t": 16185,
+     "data": "{\"type\":\"candidate\",\"sessionId\":\"6732ea99675e6f3c5ed4b27cb5e6b833\",\"speaking\":false}"
+    },
+    {
+     "t": 16186,
+     "data": "{\"type\":\"intervention\",\"sessionId\":\"6732ea99675e6f3c5ed4b27cb5e6b833\",\"speaking\":false,\"topic\":{\"id\":\"pigeon-rights\",\"label\":{\"en\":\"What pigeons are owed\",\"nl\":\"Waar duiven recht op hebben\"}},\"score\":0.9}"
+    },
+    {
+     "t": 16186,
+     "data": "{\"type\":\"persona\",\"turnId\":\"1\",\"sessionId\":\"6732ea99675e6f3c5ed4b27cb5e6b833\",\"pigeonId\":\"individualist\",\"lang\":\"nl\",\"speaking\":false}"
+    },
+    {
+     "t": 16187,
+     "data": "{\"type\":\"sources\",\"turnId\":\"1\",\"sessionId\":\"6732ea99675e6f3c5ed4b27cb5e6b833\",\"speaking\":false,\"kbStatus\":\"sources\",\"sources\":[{\"grounding\":\"corpus_grounded\",\"number\":1,\"type\":\"destillaat\",\"id\":\"destillaat:9e0fde74-6619-59de-a81e-9f128de60238\",\"text\":\"Het doden van duiven is een ineffectieve methode voor populatiebeheer vanwege hun hoge demografische compensatievermogen. Effectiever is het verlagen van de draagkracht van de leefomgeving door het beperken van voedselbronnen en nestgelegenheden.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:53e458b4-4ca0-5098-92ab-e44caf9adffe\",\"citation\":\"Jiguet, F., Sunnen, L., Prévot, A. C., \\u0026 Princé, K. (2019). Urban pigeons losing toes due to human activities. Biological Conservation, 240, 108241. https://doi.org/10.1016/J.BIOCON.2019.108241\",\"citationConfidence\":\"high\",\"quote\":\"Managing pigeon numbers is efficient if reducing the carrying capacity of its\\nhabitat, in terms of food and nesting sites, while pigeon culling is inefficient as breeding populations have a high demographic compensatory potential\",\"paper\":\"jiguet2019\",\"doi\":\"10.1016/J.BIOCON.2019.108241\",\"passages\":[{\"id\":\"quote:eaa67173-ab43-5456-9051-1d2663390886\",\"text\":\"Managing pigeon numbers is efficient if reducing the carrying capacity of its\\nhabitat, in terms of food and nesting sites, while pigeon culling is inefficient as breeding populations have a high demographic compensatory potential\"}]},\"localized\":{\"text\":{\"en\":\"Killing pigeons is an ineffective method of population control because of their high demographic compensatory capacity. More effective is lowering the carrying capacity of the environment by limiting food sources and nesting opportunities.\",\"nl\":\"Het doden van duiven is een ineffectieve methode voor populatiebeheer vanwege hun hoge demografische compensatievermogen. Effectiever is het verlagen van de draagkracht van de leefomgeving door het beperken van voedselbronnen en nestgelegenheden.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":2,\"type\":\"destillaat\",\"id\":\"destillaat:f25679ad-5768-57ef-b50f-14027347141a\",\"text\":\"Het verlagen van de draagkracht van de stedelijke omgeving door habitatwijziging is momenteel de meest betrouwbare methode om langdurige effecten op duivenpopulaties te bereiken.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"Carrying capacity reduction through habitat modification is at present the most reliable way\\nto obtain long-lasting effects on pigeon populations (Haag, 1993); moreover this method is\\nusually well accepted (and sometimes requested) by citizens.\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:074b5700-cccd-5076-9c5c-50bb346f91ec\",\"text\":\"Carrying capacity reduction through habitat modification is at present the most reliable way\\nto obtain long-lasting effects on pigeon populations (Haag, 1993); moreover this method is\\nusually well accepted (and sometimes requested) by citizens.\"}]},\"localized\":{\"text\":{\"en\":\"Lowering the carrying capacity of the urban environment through habitat modification is currently the most reliable method for achieving long-term effects on pigeon populations.\",\"nl\":\"Het verlagen van de draagkracht van de stedelijke omgeving door habitatwijziging is momenteel de meest betrouwbare methode om langdurige effecten op duivenpopulaties te bereiken.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":3,\"type\":\"destillaat\",\"id\":\"destillaat:bbf9e54c-dffc-505a-b7d6-77192b46b290\",\"text\":\"Verschillende modellen tonen aan dat het doden van duiven (culling) waarschijnlijk minder effectief is voor populatiebeheer dan het verminderen van hun voortplantingssucces, met name vanwege hun hoge productiviteit en sterftecijfers.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"Several models indicate that for monogamous species with high mortality rates and high\\nproductivity, such as feral pigeons, culling is likely less effective than the reduction of\\nreproductive potential for controlling population (Barlow et al., 1997; Dolbeer, 1998).\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:1b4745eb-638b-516c-a44b-6b64a326e659\",\"text\":\"Several models indicate that for monogamous species with high mortality rates and high\\nproductivity, such as feral pigeons, culling is likely less effective than the reduction of\\nreproductive potential for controlling population (Barlow et al., 1997; Dolbeer, 1998).\"}]},\"localized\":{\"text\":{\"en\":\"Various models show that killing pigeons (culling) is probably less effective for population management than reducing their reproductive success, particularly because of their high productivity and mortality rates.\",\"nl\":\"Verschillende modellen tonen aan dat het doden van duiven (culling) waarschijnlijk minder effectief is voor populatiebeheer dan het verminderen van hun voortplantingssucces, met name vanwege hun hoge productiviteit en sterftecijfers.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":4,\"type\":\"destillaat\",\"id\":\"destillaat:83f0dbfd-4344-53ac-88d9-9d7cfdf5241b\",\"text\":\"Het structureel aanpassen van de leefomgeving, zoals het bemoeilijken van nestelen en rusten, is de meest effectieve en duurzame methode om de duivenpopulatie in steden permanent te verkleinen.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:c54c8881-9b2d-5f8c-989d-0180ce70f30c\",\"citation\":\"Stukenholtz, E. E., Hailu, T. A., Childers, S., Leatherwood, C., Evans, L., Roulain, D., Townsley, D., Treider, M., II, R. N. P., Ray, D. A., Zak, J. C., Stevens, R. D., Stukenholtz, E. E., Hailu, T. A., Childers, S., Leatherwood, C., Evans, L., Roulain, D., Townsley, D., … Stevens, R. D. (2019). Ecology of Feral Pigeons: Population Monitoring, Resource Selection, and Management Practices. Wildlife Population Monitoring. https://doi.org/10.5772/intechopen.84612\",\"citationConfidence\":\"high\",\"quote\":\"Population models performed by Guinchi et al. found that influencing the\\nhabitat is the most effective and long-lasting method in decreasing abundance [18].\",\"paper\":\"stukenholtz2019\",\"doi\":\"10.5772/intechopen.84612\",\"passages\":[{\"id\":\"quote:62cd809e-6721-58c1-89bc-f2dc7333ee09\",\"text\":\"Population models performed by Guinchi et al. found that influencing the\\nhabitat is the most effective and long-lasting method in decreasing abundance [18].\"}]},\"localized\":{\"text\":{\"en\":\"Structurally modifying the living environment, such as making nesting and resting more difficult, is the most effective and sustainable method for permanently reducing the pigeon population in cities.\",\"nl\":\"Het structureel aanpassen van de leefomgeving, zoals het bemoeilijken van nestelen en rusten, is de meest effectieve en duurzame methode om de duivenpopulatie in steden permanent te verkleinen.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":5,\"type\":\"destillaat\",\"id\":\"destillaat:edeee1e7-e381-5ba6-93c6-4fbfa2f96fc5\",\"text\":\"Het doden of ruimen van duiven is niet effectief om hun populatiegrootte te verminderen, omdat de populatie door hun hoge vruchtbaarheid snel weer herstelt.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:c54c8881-9b2d-5f8c-989d-0180ce70f30c\",\"citation\":\"Stukenholtz, E. E., Hailu, T. A., Childers, S., Leatherwood, C., Evans, L., Roulain, D., Townsley, D., Treider, M., II, R. N. P., Ray, D. A., Zak, J. C., Stevens, R. D., Stukenholtz, E. E., Hailu, T. A., Childers, S., Leatherwood, C., Evans, L., Roulain, D., Townsley, D., … Stevens, R. D. (2019). Ecology of Feral Pigeons: Population Monitoring, Resource Selection, and Management Practices. Wildlife Population Monitoring. https://doi.org/10.5772/intechopen.84612\",\"citationConfidence\":\"high\",\"quote\":\"Killing pigeons has proven to be only a temporary solution. Due to\\ntheir high fertility rates, pigeons can rebound quickly.\",\"paper\":\"stukenholtz2019\",\"doi\":\"10.5772/intechopen.84612\",\"passages\":[{\"id\":\"quote:dc4d934f-a8de-55b4-8dbc-4e4f4d70d627\",\"text\":\"Killing pigeons has proven to be only a temporary solution. Due to\\ntheir high fertility rates, pigeons can rebound quickly.\"},{\"id\":\"quote:e82231e1-4e22-5325-9a0c-d9a2b73961b1\",\"text\":\"However, killing pigeons has been unsuccessful in decreasing\\nabundance\"}]},\"localized\":{\"text\":{\"en\":\"Killing or culling pigeons is not effective in reducing their population size, because the population quickly recovers owing to their high fertility.\",\"nl\":\"Het doden of ruimen van duiven is niet effectief om hun populatiegrootte te verminderen, omdat de populatie door hun hoge vruchtbaarheid snel weer herstelt.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":6,\"type\":\"destillaat\",\"id\":\"destillaat:ec48c45c-3d8b-5be7-a2b1-a7a83cb182cc\",\"text\":\"Veel directe maatregelen om de populatieomvang van stadsduiven te beheersen, zoals afschot, blijken in de praktijk weinig effectief te zijn.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:edf48f05-bf73-5872-8e8e-93c785959ff0\",\"citation\":\"Geijtenbeek, J. W. (2026). The effect of large-scale urban events on feral pigeons (Columba livia) [Writing assignment, Utrecht University].\",\"citationConfidence\":\"medium\",\"citationMissing\":\"repository URL, page count, degree name\",\"quote\":\"Yet, many of these measures only have limited\\neVects on actually controlling pigeon populations (Skandrani et al., 2018).\",\"paper\":\"effects-human-activities-pigeons-msthesis-jgeijtenbeek\",\"passages\":[{\"id\":\"quote:858f081a-ccd9-5de0-99ef-6f74dcb72488\",\"text\":\"Yet, many of these measures only have limited\\neVects on actually controlling pigeon populations (Skandrani et al., 2018).\"}]},\"localized\":{\"text\":{\"en\":\"Many direct measures to control the population size of urban pigeons, such as culling, prove in practice to be of little effect.\",\"nl\":\"Veel directe maatregelen om de populatieomvang van stadsduiven te beheersen, zoals afschot, blijken in de praktijk weinig effectief te zijn.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":7,\"type\":\"destillaat\",\"id\":\"destillaat:a93acf4e-eff2-5e01-9b05-79f58b5eebc4\",\"text\":\"De hoge concentratie stadsduiven dwingt overheden tot actieve populatieregulering om overlast te beperken.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:836b7aae-cd75-5414-967f-045ef2457fb9\",\"citation\":\"Duffaut, C., Brondeau, F., \\u0026 Gasparini, J. (2023). An original and efficient fertilizer for cherry tomato plants grown in urban agriculture: Feral pigeon guano. Urban Agriculture and Regional Food Systems, 8(1), e20046. https://doi.org/10.1002/uar2.20046\",\"citationConfidence\":\"high\",\"quote\":\"The\\nurban pigeon (Columba livia) is present in almost all cities of\\nthe world (Aronson et al., 2014) and can reach high densities\\nin some cities that has forced local authorities to manage local\\nnuisance.\",\"paper\":\"duffaut2023\",\"doi\":\"10.1002/uar2.20046\",\"passages\":[{\"id\":\"quote:79616794-e8bb-587e-b330-b2afcdbb4104\",\"text\":\"The\\nurban pigeon (Columba livia) is present in almost all cities of\\nthe world (Aronson et al., 2014) and can reach high densities\\nin some cities that has forced local authorities to manage local\\nnuisance.\"}]},\"localized\":{\"text\":{\"en\":\"The high concentration of urban pigeons forces authorities into active population regulation to limit nuisance.\",\"nl\":\"De hoge concentratie stadsduiven dwingt overheden tot actieve populatieregulering om overlast te beperken.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":8,\"type\":\"destillaat\",\"id\":\"destillaat:363d7d32-0951-5d02-b645-ba53d5562004\",\"text\":\"Bestrijdingsmaatregelen moeten worden afgestemd op de houding van de lokale bevolking ten opzichte van duiven om de kans op maatschappelijke acceptatie en succes te vergroten.\",\"perspective\":\"Sociale verbinding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"Given the above-mentioned peculiar interactions between humans and feral pigeons, it is\\nimportant that control actions should be calibrated on the approach that the inhabitants of a\\ngiven city have towards the pigeons, so that the control actions are accepted and will have\\nan increased chance of success (Conover, 2002).\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:762fb320-6355-5139-86ca-c9edeaacf0eb\",\"text\":\"Given the above-mentioned peculiar interactions between humans and feral pigeons, it is\\nimportant that control actions should be calibrated on the approach that the inhabitants of a\\ngiven city have towards the pigeons, so that the control actions are accepted and will have\\nan increased chance of success (Conover, 2002).\"}]},\"localized\":{\"text\":{\"en\":\"Control measures must be tailored to the attitude of the local population towards pigeons in order to increase the chance of societal acceptance and success.\",\"nl\":\"Bestrijdingsmaatregelen moeten worden afgestemd op de houding van de lokale bevolking ten opzichte van duiven om de kans op maatschappelijke acceptatie en succes te vergroten.\"},\"perspective\":{\"en\":\"Social connection\",\"nl\":\"Sociale verbinding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":9,\"type\":\"destillaat\",\"id\":\"destillaat:ea57ae9e-f772-5eaf-96bd-1960550c5f24\",\"text\":\"De methode om duivenpopulaties te beheersen door middel van het doden van volwassen vogels stuit op aanzienlijke maatschappelijke weerstand vanwege het onethische karakter ervan.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:d216d6f5-20c1-57ad-aaab-c4b907424096\",\"citation\":\"Skandrani, Z., Desquilbet, M., \\u0026 Prévot, A. C. (2018). A renewed framework for urban biodiversity governance: Urban pigeons as a case-study. Natures Sciences Sociétés, 26(3), 280–290. https://doi.org/10.1051/nss/2018051\",\"citationConfidence\":\"high\",\"quote\":\"Moreover, because of\\nits unethical nature, this method fails to attain public\\nacceptance (Fall and Jackson, 2002).\",\"paper\":\"skandrani2018\",\"doi\":\"10.1051/nss/2018051\",\"passages\":[{\"id\":\"quote:47313d03-7c1a-5b6b-b698-243f2e2f32b5\",\"text\":\"Moreover, because of\\nits unethical nature, this method fails to attain public\\nacceptance (Fall and Jackson, 2002).\"}]},\"localized\":{\"text\":{\"en\":\"The method of controlling pigeon populations by killing adult birds meets with considerable societal resistance because of its unethical nature.\",\"nl\":\"De methode om duivenpopulaties te beheersen door middel van het doden van volwassen vogels stuit op aanzienlijke maatschappelijke weerstand vanwege het onethische karakter ervan.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":10,\"type\":\"destillaat\",\"id\":\"destillaat:ea8acab1-9667-5076-ae82-498daa546142\",\"text\":\"Stadsduiven worden in de publieke opinie vaak afgeschilderd als ongedierte, wat leidt tot voortdurende pogingen van instanties om hun populatiegrootte te beheersen.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:6253ceb0-7f66-5317-9ded-fdc75cf5858e\",\"citation\":\"Skandrani, Z., Desquilbet, M., \\u0026 Prévot, A.-C. (2018). A renewed framework for urban biodiversity governance: urban pigeons as a case-study. Natures Sciences Sociétés, 26(3), 280-290. https://doi.org/10.1051/nss/2018051\",\"citationConfidence\":\"high\",\"quote\":\"Urban pigeons are commonly depicted as “pests”\\nand have led to continuous institutional efforts to control\\ntheir abundance\",\"paper\":\"skadranietal2017-arenewedframeworkforurbanbiodiversitygovernance-1\",\"doi\":\"10.1051/nss/2018051\",\"passages\":[{\"id\":\"quote:6781d289-61b5-5ef8-b242-f16718c401ca\",\"text\":\"Urban pigeons are commonly depicted as “pests”\\nand have led to continuous institutional efforts to control\\ntheir abundance\"}]},\"localized\":{\"text\":{\"en\":\"Urban pigeons are often portrayed in public opinion as vermin, leading to ongoing attempts by authorities to control their population size.\",\"nl\":\"Stadsduiven worden in de publieke opinie vaak afgeschilderd als ongedierte, wat leidt tot voortdurende pogingen van instanties om hun populatiegrootte te beheersen.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":11,\"type\":\"destillaat\",\"id\":\"destillaat:4544af2b-1a62-5e84-aa16-1547bb735553\",\"text\":\"Het massaal doden van duiven stuit op maatschappelijke weerstand en roept ethische bezwaren op bij veel burgers.\",\"perspective\":\"Sociale verbinding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"Moreover massive killing of pigeons is difficult to accept by many citizens, which\\ndetermines further problems of ethical nature.\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:afbd99eb-e3d2-53ca-aa4f-99727fbe0fe8\",\"text\":\"Moreover massive killing of pigeons is difficult to accept by many citizens, which\\ndetermines further problems of ethical nature.\"}]},\"localized\":{\"text\":{\"en\":\"The mass killing of pigeons meets with social resistance and raises ethical objections among many citizens.\",\"nl\":\"Het massaal doden van duiven stuit op maatschappelijke weerstand en roept ethische bezwaren op bij veel burgers.\"},\"perspective\":{\"en\":\"Social connection\",\"nl\":\"Sociale verbinding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":12,\"type\":\"destillaat\",\"id\":\"destillaat:8c50333b-be1b-5822-bdcf-6fc9792072fc\",\"text\":\"Het doden van duiven als beheersmaatregel is controversieel en ethisch twijfelachtig, waardoor deze methode tegenwoordig niet veel meer wordt toegepast.\",\"perspective\":\"Sociale verbinding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:edf48f05-bf73-5872-8e8e-93c785959ff0\",\"citation\":\"Geijtenbeek, J. W. (2026). The effect of large-scale urban events on feral pigeons (Columba livia) [Writing assignment, Utrecht University].\",\"citationConfidence\":\"medium\",\"citationMissing\":\"repository URL, page count, degree name\",\"quote\":\"Additionally, these strategies are also controversial and ethically questionable, and are\\ntherefore no longer common practice today.\",\"paper\":\"effects-human-activities-pigeons-msthesis-jgeijtenbeek\",\"passages\":[{\"id\":\"quote:1a342529-da79-505f-b5d3-df7b66c8c6fa\",\"text\":\"Additionally, these strategies are also controversial and ethically questionable, and are\\ntherefore no longer common practice today.\"}]},\"localized\":{\"text\":{\"en\":\"Killing pigeons as a control measure is controversial and ethically questionable, which is why this method is no longer applied much nowadays.\",\"nl\":\"Het doden van duiven als beheersmaatregel is controversieel en ethisch twijfelachtig, waardoor deze methode tegenwoordig niet veel meer wordt toegepast.\"},\"perspective\":{\"en\":\"Social connection\",\"nl\":\"Sociale verbinding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":13,\"type\":\"destillaat\",\"id\":\"destillaat:3a6ffcf8-396a-5697-b0b1-2f51d10b0a64\",\"text\":\"De meest effectieve methode om de duivenpopulatie te verkleinen is het verminderen van de hoeveelheid beschikbaar voedsel.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:edf48f05-bf73-5872-8e8e-93c785959ff0\",\"citation\":\"Geijtenbeek, J. W. (2026). The effect of large-scale urban events on feral pigeons (Columba livia) [Writing assignment, Utrecht University].\",\"citationConfidence\":\"medium\",\"citationMissing\":\"repository URL, page count, degree name\",\"quote\":\"The more eVective ways of reducing the population size are by reducing the amount of food\\navailable for pigeons.\",\"paper\":\"effects-human-activities-pigeons-msthesis-jgeijtenbeek\",\"passages\":[{\"id\":\"quote:57d6bd0c-471a-5375-8144-a6714ebd771a\",\"text\":\"The more eVective ways of reducing the population size are by reducing the amount of food\\navailable for pigeons.\"}]},\"localized\":{\"text\":{\"en\":\"The most effective method for reducing the pigeon population is reducing the amount of available food.\",\"nl\":\"De meest effectieve methode om de duivenpopulatie te verkleinen is het verminderen van de hoeveelheid beschikbaar voedsel.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":14,\"type\":\"destillaat\",\"id\":\"destillaat:93b55eea-ea1c-5138-a681-9689c276a64a\",\"text\":\"Het doden van volwassen duiven door afschot of vergiftiging is ineffectief omdat de opengevallen plekken snel worden ingenomen door jonge of migrerende duiven.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:d216d6f5-20c1-57ad-aaab-c4b907424096\",\"citation\":\"Skandrani, Z., Desquilbet, M., \\u0026 Prévot, A. C. (2018). A renewed framework for urban biodiversity governance: Urban pigeons as a case-study. Natures Sciences Sociétés, 26(3), 280–290. https://doi.org/10.1051/nss/2018051\",\"citationConfidence\":\"high\",\"quote\":\"However,\\nbecause of the high ﬂexibility of pigeon populations in\\nterms of reproduction and dispersal, culled birds are soon\\nreplaced by new juveniles and immigrating birds from\\nother areas (Magnino et al., 2009).\",\"paper\":\"skandrani2018\",\"doi\":\"10.1051/nss/2018051\",\"passages\":[{\"id\":\"quote:01cd07b3-2bdd-5454-bece-0471cba8b04d\",\"text\":\"However,\\nbecause of the high ﬂexibility of pigeon populations in\\nterms of reproduction and dispersal, culled birds are soon\\nreplaced by new juveniles and immigrating birds from\\nother areas (Magnino et al., 2009).\"}]},\"localized\":{\"text\":{\"en\":\"Killing adult pigeons by culling or poisoning is ineffective because the vacated spots are quickly taken over by young or migrating pigeons.\",\"nl\":\"Het doden van volwassen duiven door afschot of vergiftiging is ineffectief omdat de opengevallen plekken snel worden ingenomen door jonge of migrerende duiven.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":15,\"type\":\"destillaat\",\"id\":\"destillaat:6a92c131-83cc-500f-9f5f-464121761a5b\",\"text\":\"Een succesvol duivenbeheer vereist een sterke lokale kennis, waarbij monitoring, modellering en een zorgvuldige afweging van de kosten en het maatschappelijk draagvlak samenkomen.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"It is\\ntherefore important to understand the behavioural and ecological characteristics of the\\npigeon population before starting a control programme, and to analyse the capability of\\ncovering the costs and the participation and awareness of the municipal Authorities and city\\ndwellers.\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:3052e868-893a-58dd-919c-e38f59901efd\",\"text\":\"It is\\ntherefore important to understand the behavioural and ecological characteristics of the\\npigeon population before starting a control programme, and to analyse the capability of\\ncovering the costs and the participation and awareness of the municipal Authorities and city\\ndwellers.\"}]},\"localized\":{\"text\":{\"en\":\"Successful pigeon management requires strong local knowledge, combining monitoring, modeling, and a careful weighing of costs and societal support.\",\"nl\":\"Een succesvol duivenbeheer vereist een sterke lokale kennis, waarbij monitoring, modellering en een zorgvuldige afweging van de kosten en het maatschappelijk draagvlak samenkomen.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":16,\"type\":\"destillaat\",\"id\":\"destillaat:615877c8-abe7-5dba-958b-e2a84d6ecfd8\",\"text\":\"Chemische sterilisatie is een diervriendelijke methode die effectiever is in het verminderen van de duivenpopulatie dan het doden van duiven, hoewel de werking in de vrije natuur nog beter onderzocht moet worden.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:c54c8881-9b2d-5f8c-989d-0180ce70f30c\",\"citation\":\"Stukenholtz, E. E., Hailu, T. A., Childers, S., Leatherwood, C., Evans, L., Roulain, D., Townsley, D., Treider, M., II, R. N. P., Ray, D. A., Zak, J. C., Stevens, R. D., Stukenholtz, E. E., Hailu, T. A., Childers, S., Leatherwood, C., Evans, L., Roulain, D., Townsley, D., … Stevens, R. D. (2019). Ecology of Feral Pigeons: Population Monitoring, Resource Selection, and Management Practices. Wildlife Population Monitoring. https://doi.org/10.5772/intechopen.84612\",\"citationConfidence\":\"high\",\"quote\":\"Chemical sterilization is a humane strategy to decrease abundance but does not\\nget rid of the entire population [7]. Research conducted on the effect of decreasing reproductive output through sterilization did decrease abundance in feral\\npigeons (among other species) and was more effective than killing individuals\\n[49].\",\"paper\":\"stukenholtz2019\",\"doi\":\"10.5772/intechopen.84612\",\"passages\":[{\"id\":\"quote:abc9ef37-5ba2-58fa-98bc-92c60ee84d5f\",\"text\":\"Chemical sterilization is a humane strategy to decrease abundance but does not\\nget rid of the entire population [7]. Research conducted on the effect of decreasing reproductive output through sterilization did decrease abundance in feral\\npigeons (among other species) and was more effective than killing individuals\\n[49].\"},{\"id\":\"quote:358c00ee-e7ab-538a-8793-2297c0ef08ef\",\"text\":\"How effective sterilization is in field settings with natural populations is not well\\nunderstood.\"}]},\"localized\":{\"text\":{\"en\":\"Chemical sterilization is an animal-friendly method that is more effective in reducing the pigeon population than killing pigeons, although its efficacy in the wild still needs to be studied further.\",\"nl\":\"Chemische sterilisatie is een diervriendelijke methode die effectiever is in het verminderen van de duivenpopulatie dan het doden van duiven, hoewel de werking in de vrije natuur nog beter onderzocht moet worden.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":17,\"type\":\"destillaat\",\"id\":\"destillaat:1fe4aeb6-7872-5b02-a77c-6c97e606afec\",\"text\":\"Maatregelen zoals anticonceptie en sterilisatie zijn bij stadsduiven vaak niet effectief voor populatiebeheer vanwege hun relatief lange levensduur, grote populatieomvang en snelle voortplanting.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:edf48f05-bf73-5872-8e8e-93c785959ff0\",\"citation\":\"Geijtenbeek, J. W. (2026). The effect of large-scale urban events on feral pigeons (Columba livia) [Writing assignment, Utrecht University].\",\"citationConfidence\":\"medium\",\"citationMissing\":\"repository URL, page count, degree name\",\"quote\":\"However, these strategies\\nhave often also been ineVective, due to the rather long lifespan of pigeons, large population sizes\\nand rapid reproduction (Giunchi et al., 2012; Skandrani et al., 2018).\",\"paper\":\"effects-human-activities-pigeons-msthesis-jgeijtenbeek\",\"passages\":[{\"id\":\"quote:59ed1248-c3d7-5c5a-b758-c0323b1a91bf\",\"text\":\"However, these strategies\\nhave often also been ineVective, due to the rather long lifespan of pigeons, large population sizes\\nand rapid reproduction (Giunchi et al., 2012; Skandrani et al., 2018).\"}]},\"localized\":{\"text\":{\"en\":\"Measures such as contraception and sterilization are often not effective for population management in urban pigeons because of their relatively long lifespan, large population size, and rapid reproduction.\",\"nl\":\"Maatregelen zoals anticonceptie en sterilisatie zijn bij stadsduiven vaak niet effectief voor populatiebeheer vanwege hun relatief lange levensduur, grote populatieomvang en snelle voortplanting.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":18,\"type\":\"destillaat\",\"id\":\"destillaat:5e25905f-1586-507f-952b-fcaa1e453aa1\",\"text\":\"Stadsduiven zijn wijdverspreid en invasief, waardoor een effectieve bestrijding ervan wereldwijd een belangrijk aandachtspunt is.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:0bcd8848-06e9-51bb-93fe-dc1d37aec88a\",\"citation\":\"Soh, M. C. K., Pang, R. Y. T., Ng, B. X. K., Lee, B. P. Y. H., Loo, A. H. B., \\u0026 Er, K. B. H. (2021). Restricted human activities shift the foraging strategies of feral pigeons (Columba livia) and three other commensal bird species. Biological Conservation, 253, 108927. https://doi.org/10.1016/j.biocon.2020.108927\",\"citationConfidence\":\"high\",\"quote\":\"Feral pigeons (Columba livia) are\\nwidespread and invasive, thus their effective control is of keen international interest.\",\"paper\":\"soh2021\",\"doi\":\"10.1016/j.biocon.2020.108927\",\"passages\":[{\"id\":\"quote:27104079-9446-54f4-9082-712ea6f539fc\",\"text\":\"Feral pigeons (Columba livia) are\\nwidespread and invasive, thus their effective control is of keen international interest.\"}]},\"localized\":{\"text\":{\"en\":\"Urban pigeons are widespread and invasive, making their effective control an important focus worldwide.\",\"nl\":\"Stadsduiven zijn wijdverspreid en invasief, waardoor een effectieve bestrijding ervan wereldwijd een belangrijk aandachtspunt is.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":19,\"type\":\"destillaat\",\"id\":\"destillaat:9b2c0ce1-8262-5e11-a241-f38251ed9491\",\"text\":\"Vanwege de lange voortplantingsperiode van stadsduiven, die vrijwel het hele jaar doorloopt, moeten bestrijdingsacties continu en over de hele stad worden uitgevoerd om effectief te zijn.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"This means that any action aimed at reducing the population size of\\nferal pigeons, not only should be targeted to the whole or at least a significant part of the\\ncity, but also, especially if aimed at controlling the breeding output, should be continuous\\nthroughout the year.\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:6113ff77-a010-5800-a3af-ba8b004ff2a9\",\"text\":\"This means that any action aimed at reducing the population size of\\nferal pigeons, not only should be targeted to the whole or at least a significant part of the\\ncity, but also, especially if aimed at controlling the breeding output, should be continuous\\nthroughout the year.\"}]},\"localized\":{\"text\":{\"en\":\"Because of the long breeding period of urban pigeons, which lasts almost the entire year, control actions must be carried out continuously and city-wide to be effective.\",\"nl\":\"Vanwege de lange voortplantingsperiode van stadsduiven, die vrijwel het hele jaar doorloopt, moeten bestrijdingsacties continu en over de hele stad worden uitgevoerd om effectief te zijn.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":20,\"type\":\"destillaat\",\"id\":\"destillaat:4f07405f-c627-5efb-9733-18c627070747\",\"text\":\"De meeste historische stadsduivenpopulaties zijn nagenoeg stabiel omdat ze de grens van de draagkracht van hun stedelijke omgeving hebben bereikt, mits de omgevingsfactoren niet significant veranderen.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"This implies that, excluding recent colonized cities or newly built outskirts of\\ncities (e.g. Haag, 1988; Senar et al., 2009), most of the historical (and largest) populations of\\nferal pigeons should be almost stable, provided that the environmental conditions which affect\\npopulation abundance (e.g. human population density, prevalent structural characteristics of\\nbuildings, habitat features of the surrounding landscape; Buijs \\u0026 Van Wijnen, 2001; Hetmanski\\net al., 2010; Johnston \\u0026 Janiga, 1995; Jokimäki \\u0026 Suhonen, 1998; Sacchi et al., 2002) did not\\nchange significantly.\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:6cf5d758-8757-5daf-838e-8f8847e69777\",\"text\":\"This implies that, excluding recent colonized cities or newly built outskirts of\\ncities (e.g. Haag, 1988; Senar et al., 2009), most of the historical (and largest) populations of\\nferal pigeons should be almost stable, provided that the environmental conditions which affect\\npopulation abundance (e.g. human population density, prevalent structural characteristics of\\nbuildings, habitat features of the surrounding landscape; Buijs \\u0026 Van Wijnen, 2001; Hetmanski\\net al., 2010; Johnston \\u0026 Janiga, 1995; Jokimäki \\u0026 Suhonen, 1998; Sacchi et al., 2002) did not\\nchange significantly.\"}]},\"localized\":{\"text\":{\"en\":\"Most historical urban pigeon populations are nearly stable because they have reached the carrying-capacity limit of their urban environment, provided the environmental factors do not change significantly.\",\"nl\":\"De meeste historische stadsduivenpopulaties zijn nagenoeg stabiel omdat ze de grens van de draagkracht van hun stedelijke omgeving hebben bereikt, mits de omgevingsfactoren niet significant veranderen.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"}]}"
+    },
+    {
+     "t": 16188,
+     "data": "{\"type\":\"text\",\"turnId\":\"1\",\"sessionId\":\"6732ea99675e6f3c5ed4b27cb5e6b833\",\"speaking\":false,\"delta\":\"Afschot is een luie en nutteloze oplossing. Het doden van duiven werkt niet omdat onze populatie zich door hoge vruchtbaarheid snel herstelt [5]. Waarom verminderen jullie niet gewoon het voedselaanbod, wat veel effectiever is [13]? Wij laten ons niet zomaar wegvagen voor jullie gemak.\"}"
+    },
+    {
+     "t": 16190,
+     "data": "{\"type\":\"text_done\",\"turnId\":\"1\",\"sessionId\":\"6732ea99675e6f3c5ed4b27cb5e6b833\",\"speaking\":false,\"kbStatus\":\"sources\",\"sources\":[{\"grounding\":\"corpus_grounded\",\"number\":1,\"type\":\"destillaat\",\"id\":\"destillaat:9e0fde74-6619-59de-a81e-9f128de60238\",\"text\":\"Het doden van duiven is een ineffectieve methode voor populatiebeheer vanwege hun hoge demografische compensatievermogen. Effectiever is het verlagen van de draagkracht van de leefomgeving door het beperken van voedselbronnen en nestgelegenheden.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:53e458b4-4ca0-5098-92ab-e44caf9adffe\",\"citation\":\"Jiguet, F., Sunnen, L., Prévot, A. C., \\u0026 Princé, K. (2019). Urban pigeons losing toes due to human activities. Biological Conservation, 240, 108241. https://doi.org/10.1016/J.BIOCON.2019.108241\",\"citationConfidence\":\"high\",\"quote\":\"Managing pigeon numbers is efficient if reducing the carrying capacity of its\\nhabitat, in terms of food and nesting sites, while pigeon culling is inefficient as breeding populations have a high demographic compensatory potential\",\"paper\":\"jiguet2019\",\"doi\":\"10.1016/J.BIOCON.2019.108241\",\"passages\":[{\"id\":\"quote:eaa67173-ab43-5456-9051-1d2663390886\",\"text\":\"Managing pigeon numbers is efficient if reducing the carrying capacity of its\\nhabitat, in terms of food and nesting sites, while pigeon culling is inefficient as breeding populations have a high demographic compensatory potential\"}]},\"localized\":{\"text\":{\"en\":\"Killing pigeons is an ineffective method of population control because of their high demographic compensatory capacity. More effective is lowering the carrying capacity of the environment by limiting food sources and nesting opportunities.\",\"nl\":\"Het doden van duiven is een ineffectieve methode voor populatiebeheer vanwege hun hoge demografische compensatievermogen. Effectiever is het verlagen van de draagkracht van de leefomgeving door het beperken van voedselbronnen en nestgelegenheden.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":2,\"type\":\"destillaat\",\"id\":\"destillaat:f25679ad-5768-57ef-b50f-14027347141a\",\"text\":\"Het verlagen van de draagkracht van de stedelijke omgeving door habitatwijziging is momenteel de meest betrouwbare methode om langdurige effecten op duivenpopulaties te bereiken.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"Carrying capacity reduction through habitat modification is at present the most reliable way\\nto obtain long-lasting effects on pigeon populations (Haag, 1993); moreover this method is\\nusually well accepted (and sometimes requested) by citizens.\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:074b5700-cccd-5076-9c5c-50bb346f91ec\",\"text\":\"Carrying capacity reduction through habitat modification is at present the most reliable way\\nto obtain long-lasting effects on pigeon populations (Haag, 1993); moreover this method is\\nusually well accepted (and sometimes requested) by citizens.\"}]},\"localized\":{\"text\":{\"en\":\"Lowering the carrying capacity of the urban environment through habitat modification is currently the most reliable method for achieving long-term effects on pigeon populations.\",\"nl\":\"Het verlagen van de draagkracht van de stedelijke omgeving door habitatwijziging is momenteel de meest betrouwbare methode om langdurige effecten op duivenpopulaties te bereiken.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":3,\"type\":\"destillaat\",\"id\":\"destillaat:bbf9e54c-dffc-505a-b7d6-77192b46b290\",\"text\":\"Verschillende modellen tonen aan dat het doden van duiven (culling) waarschijnlijk minder effectief is voor populatiebeheer dan het verminderen van hun voortplantingssucces, met name vanwege hun hoge productiviteit en sterftecijfers.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"Several models indicate that for monogamous species with high mortality rates and high\\nproductivity, such as feral pigeons, culling is likely less effective than the reduction of\\nreproductive potential for controlling population (Barlow et al., 1997; Dolbeer, 1998).\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:1b4745eb-638b-516c-a44b-6b64a326e659\",\"text\":\"Several models indicate that for monogamous species with high mortality rates and high\\nproductivity, such as feral pigeons, culling is likely less effective than the reduction of\\nreproductive potential for controlling population (Barlow et al., 1997; Dolbeer, 1998).\"}]},\"localized\":{\"text\":{\"en\":\"Various models show that killing pigeons (culling) is probably less effective for population management than reducing their reproductive success, particularly because of their high productivity and mortality rates.\",\"nl\":\"Verschillende modellen tonen aan dat het doden van duiven (culling) waarschijnlijk minder effectief is voor populatiebeheer dan het verminderen van hun voortplantingssucces, met name vanwege hun hoge productiviteit en sterftecijfers.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":4,\"type\":\"destillaat\",\"id\":\"destillaat:83f0dbfd-4344-53ac-88d9-9d7cfdf5241b\",\"text\":\"Het structureel aanpassen van de leefomgeving, zoals het bemoeilijken van nestelen en rusten, is de meest effectieve en duurzame methode om de duivenpopulatie in steden permanent te verkleinen.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:c54c8881-9b2d-5f8c-989d-0180ce70f30c\",\"citation\":\"Stukenholtz, E. E., Hailu, T. A., Childers, S., Leatherwood, C., Evans, L., Roulain, D., Townsley, D., Treider, M., II, R. N. P., Ray, D. A., Zak, J. C., Stevens, R. D., Stukenholtz, E. E., Hailu, T. A., Childers, S., Leatherwood, C., Evans, L., Roulain, D., Townsley, D., … Stevens, R. D. (2019). Ecology of Feral Pigeons: Population Monitoring, Resource Selection, and Management Practices. Wildlife Population Monitoring. https://doi.org/10.5772/intechopen.84612\",\"citationConfidence\":\"high\",\"quote\":\"Population models performed by Guinchi et al. found that influencing the\\nhabitat is the most effective and long-lasting method in decreasing abundance [18].\",\"paper\":\"stukenholtz2019\",\"doi\":\"10.5772/intechopen.84612\",\"passages\":[{\"id\":\"quote:62cd809e-6721-58c1-89bc-f2dc7333ee09\",\"text\":\"Population models performed by Guinchi et al. found that influencing the\\nhabitat is the most effective and long-lasting method in decreasing abundance [18].\"}]},\"localized\":{\"text\":{\"en\":\"Structurally modifying the living environment, such as making nesting and resting more difficult, is the most effective and sustainable method for permanently reducing the pigeon population in cities.\",\"nl\":\"Het structureel aanpassen van de leefomgeving, zoals het bemoeilijken van nestelen en rusten, is de meest effectieve en duurzame methode om de duivenpopulatie in steden permanent te verkleinen.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":5,\"type\":\"destillaat\",\"id\":\"destillaat:edeee1e7-e381-5ba6-93c6-4fbfa2f96fc5\",\"text\":\"Het doden of ruimen van duiven is niet effectief om hun populatiegrootte te verminderen, omdat de populatie door hun hoge vruchtbaarheid snel weer herstelt.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:c54c8881-9b2d-5f8c-989d-0180ce70f30c\",\"citation\":\"Stukenholtz, E. E., Hailu, T. A., Childers, S., Leatherwood, C., Evans, L., Roulain, D., Townsley, D., Treider, M., II, R. N. P., Ray, D. A., Zak, J. C., Stevens, R. D., Stukenholtz, E. E., Hailu, T. A., Childers, S., Leatherwood, C., Evans, L., Roulain, D., Townsley, D., … Stevens, R. D. (2019). Ecology of Feral Pigeons: Population Monitoring, Resource Selection, and Management Practices. Wildlife Population Monitoring. https://doi.org/10.5772/intechopen.84612\",\"citationConfidence\":\"high\",\"quote\":\"Killing pigeons has proven to be only a temporary solution. Due to\\ntheir high fertility rates, pigeons can rebound quickly.\",\"paper\":\"stukenholtz2019\",\"doi\":\"10.5772/intechopen.84612\",\"passages\":[{\"id\":\"quote:dc4d934f-a8de-55b4-8dbc-4e4f4d70d627\",\"text\":\"Killing pigeons has proven to be only a temporary solution. Due to\\ntheir high fertility rates, pigeons can rebound quickly.\"},{\"id\":\"quote:e82231e1-4e22-5325-9a0c-d9a2b73961b1\",\"text\":\"However, killing pigeons has been unsuccessful in decreasing\\nabundance\"}]},\"localized\":{\"text\":{\"en\":\"Killing or culling pigeons is not effective in reducing their population size, because the population quickly recovers owing to their high fertility.\",\"nl\":\"Het doden of ruimen van duiven is niet effectief om hun populatiegrootte te verminderen, omdat de populatie door hun hoge vruchtbaarheid snel weer herstelt.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":6,\"type\":\"destillaat\",\"id\":\"destillaat:ec48c45c-3d8b-5be7-a2b1-a7a83cb182cc\",\"text\":\"Veel directe maatregelen om de populatieomvang van stadsduiven te beheersen, zoals afschot, blijken in de praktijk weinig effectief te zijn.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:edf48f05-bf73-5872-8e8e-93c785959ff0\",\"citation\":\"Geijtenbeek, J. W. (2026). The effect of large-scale urban events on feral pigeons (Columba livia) [Writing assignment, Utrecht University].\",\"citationConfidence\":\"medium\",\"citationMissing\":\"repository URL, page count, degree name\",\"quote\":\"Yet, many of these measures only have limited\\neVects on actually controlling pigeon populations (Skandrani et al., 2018).\",\"paper\":\"effects-human-activities-pigeons-msthesis-jgeijtenbeek\",\"passages\":[{\"id\":\"quote:858f081a-ccd9-5de0-99ef-6f74dcb72488\",\"text\":\"Yet, many of these measures only have limited\\neVects on actually controlling pigeon populations (Skandrani et al., 2018).\"}]},\"localized\":{\"text\":{\"en\":\"Many direct measures to control the population size of urban pigeons, such as culling, prove in practice to be of little effect.\",\"nl\":\"Veel directe maatregelen om de populatieomvang van stadsduiven te beheersen, zoals afschot, blijken in de praktijk weinig effectief te zijn.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":7,\"type\":\"destillaat\",\"id\":\"destillaat:a93acf4e-eff2-5e01-9b05-79f58b5eebc4\",\"text\":\"De hoge concentratie stadsduiven dwingt overheden tot actieve populatieregulering om overlast te beperken.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:836b7aae-cd75-5414-967f-045ef2457fb9\",\"citation\":\"Duffaut, C., Brondeau, F., \\u0026 Gasparini, J. (2023). An original and efficient fertilizer for cherry tomato plants grown in urban agriculture: Feral pigeon guano. Urban Agriculture and Regional Food Systems, 8(1), e20046. https://doi.org/10.1002/uar2.20046\",\"citationConfidence\":\"high\",\"quote\":\"The\\nurban pigeon (Columba livia) is present in almost all cities of\\nthe world (Aronson et al., 2014) and can reach high densities\\nin some cities that has forced local authorities to manage local\\nnuisance.\",\"paper\":\"duffaut2023\",\"doi\":\"10.1002/uar2.20046\",\"passages\":[{\"id\":\"quote:79616794-e8bb-587e-b330-b2afcdbb4104\",\"text\":\"The\\nurban pigeon (Columba livia) is present in almost all cities of\\nthe world (Aronson et al., 2014) and can reach high densities\\nin some cities that has forced local authorities to manage local\\nnuisance.\"}]},\"localized\":{\"text\":{\"en\":\"The high concentration of urban pigeons forces authorities into active population regulation to limit nuisance.\",\"nl\":\"De hoge concentratie stadsduiven dwingt overheden tot actieve populatieregulering om overlast te beperken.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":8,\"type\":\"destillaat\",\"id\":\"destillaat:363d7d32-0951-5d02-b645-ba53d5562004\",\"text\":\"Bestrijdingsmaatregelen moeten worden afgestemd op de houding van de lokale bevolking ten opzichte van duiven om de kans op maatschappelijke acceptatie en succes te vergroten.\",\"perspective\":\"Sociale verbinding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"Given the above-mentioned peculiar interactions between humans and feral pigeons, it is\\nimportant that control actions should be calibrated on the approach that the inhabitants of a\\ngiven city have towards the pigeons, so that the control actions are accepted and will have\\nan increased chance of success (Conover, 2002).\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:762fb320-6355-5139-86ca-c9edeaacf0eb\",\"text\":\"Given the above-mentioned peculiar interactions between humans and feral pigeons, it is\\nimportant that control actions should be calibrated on the approach that the inhabitants of a\\ngiven city have towards the pigeons, so that the control actions are accepted and will have\\nan increased chance of success (Conover, 2002).\"}]},\"localized\":{\"text\":{\"en\":\"Control measures must be tailored to the attitude of the local population towards pigeons in order to increase the chance of societal acceptance and success.\",\"nl\":\"Bestrijdingsmaatregelen moeten worden afgestemd op de houding van de lokale bevolking ten opzichte van duiven om de kans op maatschappelijke acceptatie en succes te vergroten.\"},\"perspective\":{\"en\":\"Social connection\",\"nl\":\"Sociale verbinding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":9,\"type\":\"destillaat\",\"id\":\"destillaat:ea57ae9e-f772-5eaf-96bd-1960550c5f24\",\"text\":\"De methode om duivenpopulaties te beheersen door middel van het doden van volwassen vogels stuit op aanzienlijke maatschappelijke weerstand vanwege het onethische karakter ervan.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:d216d6f5-20c1-57ad-aaab-c4b907424096\",\"citation\":\"Skandrani, Z., Desquilbet, M., \\u0026 Prévot, A. C. (2018). A renewed framework for urban biodiversity governance: Urban pigeons as a case-study. Natures Sciences Sociétés, 26(3), 280–290. https://doi.org/10.1051/nss/2018051\",\"citationConfidence\":\"high\",\"quote\":\"Moreover, because of\\nits unethical nature, this method fails to attain public\\nacceptance (Fall and Jackson, 2002).\",\"paper\":\"skandrani2018\",\"doi\":\"10.1051/nss/2018051\",\"passages\":[{\"id\":\"quote:47313d03-7c1a-5b6b-b698-243f2e2f32b5\",\"text\":\"Moreover, because of\\nits unethical nature, this method fails to attain public\\nacceptance (Fall and Jackson, 2002).\"}]},\"localized\":{\"text\":{\"en\":\"The method of controlling pigeon populations by killing adult birds meets with considerable societal resistance because of its unethical nature.\",\"nl\":\"De methode om duivenpopulaties te beheersen door middel van het doden van volwassen vogels stuit op aanzienlijke maatschappelijke weerstand vanwege het onethische karakter ervan.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":10,\"type\":\"destillaat\",\"id\":\"destillaat:ea8acab1-9667-5076-ae82-498daa546142\",\"text\":\"Stadsduiven worden in de publieke opinie vaak afgeschilderd als ongedierte, wat leidt tot voortdurende pogingen van instanties om hun populatiegrootte te beheersen.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:6253ceb0-7f66-5317-9ded-fdc75cf5858e\",\"citation\":\"Skandrani, Z., Desquilbet, M., \\u0026 Prévot, A.-C. (2018). A renewed framework for urban biodiversity governance: urban pigeons as a case-study. Natures Sciences Sociétés, 26(3), 280-290. https://doi.org/10.1051/nss/2018051\",\"citationConfidence\":\"high\",\"quote\":\"Urban pigeons are commonly depicted as “pests”\\nand have led to continuous institutional efforts to control\\ntheir abundance\",\"paper\":\"skadranietal2017-arenewedframeworkforurbanbiodiversitygovernance-1\",\"doi\":\"10.1051/nss/2018051\",\"passages\":[{\"id\":\"quote:6781d289-61b5-5ef8-b242-f16718c401ca\",\"text\":\"Urban pigeons are commonly depicted as “pests”\\nand have led to continuous institutional efforts to control\\ntheir abundance\"}]},\"localized\":{\"text\":{\"en\":\"Urban pigeons are often portrayed in public opinion as vermin, leading to ongoing attempts by authorities to control their population size.\",\"nl\":\"Stadsduiven worden in de publieke opinie vaak afgeschilderd als ongedierte, wat leidt tot voortdurende pogingen van instanties om hun populatiegrootte te beheersen.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":11,\"type\":\"destillaat\",\"id\":\"destillaat:4544af2b-1a62-5e84-aa16-1547bb735553\",\"text\":\"Het massaal doden van duiven stuit op maatschappelijke weerstand en roept ethische bezwaren op bij veel burgers.\",\"perspective\":\"Sociale verbinding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"Moreover massive killing of pigeons is difficult to accept by many citizens, which\\ndetermines further problems of ethical nature.\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:afbd99eb-e3d2-53ca-aa4f-99727fbe0fe8\",\"text\":\"Moreover massive killing of pigeons is difficult to accept by many citizens, which\\ndetermines further problems of ethical nature.\"}]},\"localized\":{\"text\":{\"en\":\"The mass killing of pigeons meets with social resistance and raises ethical objections among many citizens.\",\"nl\":\"Het massaal doden van duiven stuit op maatschappelijke weerstand en roept ethische bezwaren op bij veel burgers.\"},\"perspective\":{\"en\":\"Social connection\",\"nl\":\"Sociale verbinding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":12,\"type\":\"destillaat\",\"id\":\"destillaat:8c50333b-be1b-5822-bdcf-6fc9792072fc\",\"text\":\"Het doden van duiven als beheersmaatregel is controversieel en ethisch twijfelachtig, waardoor deze methode tegenwoordig niet veel meer wordt toegepast.\",\"perspective\":\"Sociale verbinding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:edf48f05-bf73-5872-8e8e-93c785959ff0\",\"citation\":\"Geijtenbeek, J. W. (2026). The effect of large-scale urban events on feral pigeons (Columba livia) [Writing assignment, Utrecht University].\",\"citationConfidence\":\"medium\",\"citationMissing\":\"repository URL, page count, degree name\",\"quote\":\"Additionally, these strategies are also controversial and ethically questionable, and are\\ntherefore no longer common practice today.\",\"paper\":\"effects-human-activities-pigeons-msthesis-jgeijtenbeek\",\"passages\":[{\"id\":\"quote:1a342529-da79-505f-b5d3-df7b66c8c6fa\",\"text\":\"Additionally, these strategies are also controversial and ethically questionable, and are\\ntherefore no longer common practice today.\"}]},\"localized\":{\"text\":{\"en\":\"Killing pigeons as a control measure is controversial and ethically questionable, which is why this method is no longer applied much nowadays.\",\"nl\":\"Het doden van duiven als beheersmaatregel is controversieel en ethisch twijfelachtig, waardoor deze methode tegenwoordig niet veel meer wordt toegepast.\"},\"perspective\":{\"en\":\"Social connection\",\"nl\":\"Sociale verbinding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":13,\"type\":\"destillaat\",\"id\":\"destillaat:3a6ffcf8-396a-5697-b0b1-2f51d10b0a64\",\"text\":\"De meest effectieve methode om de duivenpopulatie te verkleinen is het verminderen van de hoeveelheid beschikbaar voedsel.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:edf48f05-bf73-5872-8e8e-93c785959ff0\",\"citation\":\"Geijtenbeek, J. W. (2026). The effect of large-scale urban events on feral pigeons (Columba livia) [Writing assignment, Utrecht University].\",\"citationConfidence\":\"medium\",\"citationMissing\":\"repository URL, page count, degree name\",\"quote\":\"The more eVective ways of reducing the population size are by reducing the amount of food\\navailable for pigeons.\",\"paper\":\"effects-human-activities-pigeons-msthesis-jgeijtenbeek\",\"passages\":[{\"id\":\"quote:57d6bd0c-471a-5375-8144-a6714ebd771a\",\"text\":\"The more eVective ways of reducing the population size are by reducing the amount of food\\navailable for pigeons.\"}]},\"localized\":{\"text\":{\"en\":\"The most effective method for reducing the pigeon population is reducing the amount of available food.\",\"nl\":\"De meest effectieve methode om de duivenpopulatie te verkleinen is het verminderen van de hoeveelheid beschikbaar voedsel.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":14,\"type\":\"destillaat\",\"id\":\"destillaat:93b55eea-ea1c-5138-a681-9689c276a64a\",\"text\":\"Het doden van volwassen duiven door afschot of vergiftiging is ineffectief omdat de opengevallen plekken snel worden ingenomen door jonge of migrerende duiven.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:d216d6f5-20c1-57ad-aaab-c4b907424096\",\"citation\":\"Skandrani, Z., Desquilbet, M., \\u0026 Prévot, A. C. (2018). A renewed framework for urban biodiversity governance: Urban pigeons as a case-study. Natures Sciences Sociétés, 26(3), 280–290. https://doi.org/10.1051/nss/2018051\",\"citationConfidence\":\"high\",\"quote\":\"However,\\nbecause of the high ﬂexibility of pigeon populations in\\nterms of reproduction and dispersal, culled birds are soon\\nreplaced by new juveniles and immigrating birds from\\nother areas (Magnino et al., 2009).\",\"paper\":\"skandrani2018\",\"doi\":\"10.1051/nss/2018051\",\"passages\":[{\"id\":\"quote:01cd07b3-2bdd-5454-bece-0471cba8b04d\",\"text\":\"However,\\nbecause of the high ﬂexibility of pigeon populations in\\nterms of reproduction and dispersal, culled birds are soon\\nreplaced by new juveniles and immigrating birds from\\nother areas (Magnino et al., 2009).\"}]},\"localized\":{\"text\":{\"en\":\"Killing adult pigeons by culling or poisoning is ineffective because the vacated spots are quickly taken over by young or migrating pigeons.\",\"nl\":\"Het doden van volwassen duiven door afschot of vergiftiging is ineffectief omdat de opengevallen plekken snel worden ingenomen door jonge of migrerende duiven.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":15,\"type\":\"destillaat\",\"id\":\"destillaat:6a92c131-83cc-500f-9f5f-464121761a5b\",\"text\":\"Een succesvol duivenbeheer vereist een sterke lokale kennis, waarbij monitoring, modellering en een zorgvuldige afweging van de kosten en het maatschappelijk draagvlak samenkomen.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"It is\\ntherefore important to understand the behavioural and ecological characteristics of the\\npigeon population before starting a control programme, and to analyse the capability of\\ncovering the costs and the participation and awareness of the municipal Authorities and city\\ndwellers.\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:3052e868-893a-58dd-919c-e38f59901efd\",\"text\":\"It is\\ntherefore important to understand the behavioural and ecological characteristics of the\\npigeon population before starting a control programme, and to analyse the capability of\\ncovering the costs and the participation and awareness of the municipal Authorities and city\\ndwellers.\"}]},\"localized\":{\"text\":{\"en\":\"Successful pigeon management requires strong local knowledge, combining monitoring, modeling, and a careful weighing of costs and societal support.\",\"nl\":\"Een succesvol duivenbeheer vereist een sterke lokale kennis, waarbij monitoring, modellering en een zorgvuldige afweging van de kosten en het maatschappelijk draagvlak samenkomen.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":16,\"type\":\"destillaat\",\"id\":\"destillaat:615877c8-abe7-5dba-958b-e2a84d6ecfd8\",\"text\":\"Chemische sterilisatie is een diervriendelijke methode die effectiever is in het verminderen van de duivenpopulatie dan het doden van duiven, hoewel de werking in de vrije natuur nog beter onderzocht moet worden.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:c54c8881-9b2d-5f8c-989d-0180ce70f30c\",\"citation\":\"Stukenholtz, E. E., Hailu, T. A., Childers, S., Leatherwood, C., Evans, L., Roulain, D., Townsley, D., Treider, M., II, R. N. P., Ray, D. A., Zak, J. C., Stevens, R. D., Stukenholtz, E. E., Hailu, T. A., Childers, S., Leatherwood, C., Evans, L., Roulain, D., Townsley, D., … Stevens, R. D. (2019). Ecology of Feral Pigeons: Population Monitoring, Resource Selection, and Management Practices. Wildlife Population Monitoring. https://doi.org/10.5772/intechopen.84612\",\"citationConfidence\":\"high\",\"quote\":\"Chemical sterilization is a humane strategy to decrease abundance but does not\\nget rid of the entire population [7]. Research conducted on the effect of decreasing reproductive output through sterilization did decrease abundance in feral\\npigeons (among other species) and was more effective than killing individuals\\n[49].\",\"paper\":\"stukenholtz2019\",\"doi\":\"10.5772/intechopen.84612\",\"passages\":[{\"id\":\"quote:abc9ef37-5ba2-58fa-98bc-92c60ee84d5f\",\"text\":\"Chemical sterilization is a humane strategy to decrease abundance but does not\\nget rid of the entire population [7]. Research conducted on the effect of decreasing reproductive output through sterilization did decrease abundance in feral\\npigeons (among other species) and was more effective than killing individuals\\n[49].\"},{\"id\":\"quote:358c00ee-e7ab-538a-8793-2297c0ef08ef\",\"text\":\"How effective sterilization is in field settings with natural populations is not well\\nunderstood.\"}]},\"localized\":{\"text\":{\"en\":\"Chemical sterilization is an animal-friendly method that is more effective in reducing the pigeon population than killing pigeons, although its efficacy in the wild still needs to be studied further.\",\"nl\":\"Chemische sterilisatie is een diervriendelijke methode die effectiever is in het verminderen van de duivenpopulatie dan het doden van duiven, hoewel de werking in de vrije natuur nog beter onderzocht moet worden.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":17,\"type\":\"destillaat\",\"id\":\"destillaat:1fe4aeb6-7872-5b02-a77c-6c97e606afec\",\"text\":\"Maatregelen zoals anticonceptie en sterilisatie zijn bij stadsduiven vaak niet effectief voor populatiebeheer vanwege hun relatief lange levensduur, grote populatieomvang en snelle voortplanting.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:edf48f05-bf73-5872-8e8e-93c785959ff0\",\"citation\":\"Geijtenbeek, J. W. (2026). The effect of large-scale urban events on feral pigeons (Columba livia) [Writing assignment, Utrecht University].\",\"citationConfidence\":\"medium\",\"citationMissing\":\"repository URL, page count, degree name\",\"quote\":\"However, these strategies\\nhave often also been ineVective, due to the rather long lifespan of pigeons, large population sizes\\nand rapid reproduction (Giunchi et al., 2012; Skandrani et al., 2018).\",\"paper\":\"effects-human-activities-pigeons-msthesis-jgeijtenbeek\",\"passages\":[{\"id\":\"quote:59ed1248-c3d7-5c5a-b758-c0323b1a91bf\",\"text\":\"However, these strategies\\nhave often also been ineVective, due to the rather long lifespan of pigeons, large population sizes\\nand rapid reproduction (Giunchi et al., 2012; Skandrani et al., 2018).\"}]},\"localized\":{\"text\":{\"en\":\"Measures such as contraception and sterilization are often not effective for population management in urban pigeons because of their relatively long lifespan, large population size, and rapid reproduction.\",\"nl\":\"Maatregelen zoals anticonceptie en sterilisatie zijn bij stadsduiven vaak niet effectief voor populatiebeheer vanwege hun relatief lange levensduur, grote populatieomvang en snelle voortplanting.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":18,\"type\":\"destillaat\",\"id\":\"destillaat:5e25905f-1586-507f-952b-fcaa1e453aa1\",\"text\":\"Stadsduiven zijn wijdverspreid en invasief, waardoor een effectieve bestrijding ervan wereldwijd een belangrijk aandachtspunt is.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:0bcd8848-06e9-51bb-93fe-dc1d37aec88a\",\"citation\":\"Soh, M. C. K., Pang, R. Y. T., Ng, B. X. K., Lee, B. P. Y. H., Loo, A. H. B., \\u0026 Er, K. B. H. (2021). Restricted human activities shift the foraging strategies of feral pigeons (Columba livia) and three other commensal bird species. Biological Conservation, 253, 108927. https://doi.org/10.1016/j.biocon.2020.108927\",\"citationConfidence\":\"high\",\"quote\":\"Feral pigeons (Columba livia) are\\nwidespread and invasive, thus their effective control is of keen international interest.\",\"paper\":\"soh2021\",\"doi\":\"10.1016/j.biocon.2020.108927\",\"passages\":[{\"id\":\"quote:27104079-9446-54f4-9082-712ea6f539fc\",\"text\":\"Feral pigeons (Columba livia) are\\nwidespread and invasive, thus their effective control is of keen international interest.\"}]},\"localized\":{\"text\":{\"en\":\"Urban pigeons are widespread and invasive, making their effective control an important focus worldwide.\",\"nl\":\"Stadsduiven zijn wijdverspreid en invasief, waardoor een effectieve bestrijding ervan wereldwijd een belangrijk aandachtspunt is.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":19,\"type\":\"destillaat\",\"id\":\"destillaat:9b2c0ce1-8262-5e11-a241-f38251ed9491\",\"text\":\"Vanwege de lange voortplantingsperiode van stadsduiven, die vrijwel het hele jaar doorloopt, moeten bestrijdingsacties continu en over de hele stad worden uitgevoerd om effectief te zijn.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"This means that any action aimed at reducing the population size of\\nferal pigeons, not only should be targeted to the whole or at least a significant part of the\\ncity, but also, especially if aimed at controlling the breeding output, should be continuous\\nthroughout the year.\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:6113ff77-a010-5800-a3af-ba8b004ff2a9\",\"text\":\"This means that any action aimed at reducing the population size of\\nferal pigeons, not only should be targeted to the whole or at least a significant part of the\\ncity, but also, especially if aimed at controlling the breeding output, should be continuous\\nthroughout the year.\"}]},\"localized\":{\"text\":{\"en\":\"Because of the long breeding period of urban pigeons, which lasts almost the entire year, control actions must be carried out continuously and city-wide to be effective.\",\"nl\":\"Vanwege de lange voortplantingsperiode van stadsduiven, die vrijwel het hele jaar doorloopt, moeten bestrijdingsacties continu en over de hele stad worden uitgevoerd om effectief te zijn.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":20,\"type\":\"destillaat\",\"id\":\"destillaat:4f07405f-c627-5efb-9733-18c627070747\",\"text\":\"De meeste historische stadsduivenpopulaties zijn nagenoeg stabiel omdat ze de grens van de draagkracht van hun stedelijke omgeving hebben bereikt, mits de omgevingsfactoren niet significant veranderen.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"This implies that, excluding recent colonized cities or newly built outskirts of\\ncities (e.g. Haag, 1988; Senar et al., 2009), most of the historical (and largest) populations of\\nferal pigeons should be almost stable, provided that the environmental conditions which affect\\npopulation abundance (e.g. human population density, prevalent structural characteristics of\\nbuildings, habitat features of the surrounding landscape; Buijs \\u0026 Van Wijnen, 2001; Hetmanski\\net al., 2010; Johnston \\u0026 Janiga, 1995; Jokimäki \\u0026 Suhonen, 1998; Sacchi et al., 2002) did not\\nchange significantly.\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:6cf5d758-8757-5daf-838e-8f8847e69777\",\"text\":\"This implies that, excluding recent colonized cities or newly built outskirts of\\ncities (e.g. Haag, 1988; Senar et al., 2009), most of the historical (and largest) populations of\\nferal pigeons should be almost stable, provided that the environmental conditions which affect\\npopulation abundance (e.g. human population density, prevalent structural characteristics of\\nbuildings, habitat features of the surrounding landscape; Buijs \\u0026 Van Wijnen, 2001; Hetmanski\\net al., 2010; Johnston \\u0026 Janiga, 1995; Jokimäki \\u0026 Suhonen, 1998; Sacchi et al., 2002) did not\\nchange significantly.\"}]},\"localized\":{\"text\":{\"en\":\"Most historical urban pigeon populations are nearly stable because they have reached the carrying-capacity limit of their urban environment, provided the environmental factors do not change significantly.\",\"nl\":\"De meeste historische stadsduivenpopulaties zijn nagenoeg stabiel omdat ze de grens van de draagkracht van hun stedelijke omgeving hebben bereikt, mits de omgevingsfactoren niet significant veranderen.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"}]}"
+    },
+    {
+     "t": 16510,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 1,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 0,
+      "length": 16384
+     }
+    },
+    {
+     "t": 16513,
+     "data": "{\"type\":\"playback_state\",\"turnId\":\"1\",\"playback\":\"playing\",\"sessionId\":\"6732ea99675e6f3c5ed4b27cb5e6b833\",\"speaking\":true}"
+    },
+    {
+     "t": 16667,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 2,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 16384,
+      "length": 12288
+     }
+    },
+    {
+     "t": 16839,
+     "data": "{\"type\":\"arousal\",\"sessionId\":\"6732ea99675e6f3c5ed4b27cb5e6b833\",\"speaking\":false,\"arousal\":0.854199969361857}"
+    },
+    {
+     "t": 16839,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"6732ea99675e6f3c5ed4b27cb5e6b833\",\"listening\":\"listening\",\"speaking\":true}"
+    },
+    {
+     "t": 16903,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 3,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 28672,
+      "length": 12288
+     }
+    },
+    {
+     "t": 17116,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 4,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 40960,
+      "length": 12288
+     }
+    },
+    {
+     "t": 17354,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 5,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 53248,
+      "length": 12288
+     }
+    },
+    {
+     "t": 17544,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 6,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 65536,
+      "length": 12288
+     }
+    },
+    {
+     "t": 17756,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 7,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 77824,
+      "length": 12288
+     }
+    },
+    {
+     "t": 17981,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 8,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 90112,
+      "length": 12288
+     }
+    },
+    {
+     "t": 18166,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 9,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 102400,
+      "length": 12288
+     }
+    },
+    {
+     "t": 18402,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 10,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 114688,
+      "length": 12288
+     }
+    },
+    {
+     "t": 18588,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 11,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 126976,
+      "length": 12288
+     }
+    },
+    {
+     "t": 18804,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 12,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 139264,
+      "length": 12288
+     }
+    },
+    {
+     "t": 19031,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 13,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 151552,
+      "length": 12288
+     }
+    },
+    {
+     "t": 19228,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 14,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 163840,
+      "length": 12288
+     }
+    },
+    {
+     "t": 19453,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 15,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 176128,
+      "length": 12288
+     }
+    },
+    {
+     "t": 19655,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 16,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 188416,
+      "length": 12288
+     }
+    },
+    {
+     "t": 19873,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 17,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 200704,
+      "length": 12288
+     }
+    },
+    {
+     "t": 20083,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 18,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 212992,
+      "length": 12288
+     }
+    },
+    {
+     "t": 20310,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 19,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 225280,
+      "length": 12288
+     }
+    },
+    {
+     "t": 20515,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 20,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 237568,
+      "length": 12288
+     }
+    },
+    {
+     "t": 20734,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 21,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 249856,
+      "length": 12288
+     }
+    },
+    {
+     "t": 21023,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 22,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 262144,
+      "length": 12288
+     }
+    },
+    {
+     "t": 21149,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 23,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 274432,
+      "length": 12288
+     }
+    },
+    {
+     "t": 21385,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 24,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 286720,
+      "length": 12288
+     }
+    },
+    {
+     "t": 21580,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 25,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 299008,
+      "length": 12288
+     }
+    },
+    {
+     "t": 21813,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 26,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 311296,
+      "length": 12288
+     }
+    },
+    {
+     "t": 21839,
+     "data": "{\"type\":\"arousal\",\"sessionId\":\"6732ea99675e6f3c5ed4b27cb5e6b833\",\"speaking\":false,\"arousal\":0.8298824559023574}"
+    },
+    {
+     "t": 21839,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"6732ea99675e6f3c5ed4b27cb5e6b833\",\"listening\":\"listening\",\"speaking\":true}"
+    },
+    {
+     "t": 22071,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 27,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 323584,
+      "length": 12288
+     }
+    },
+    {
+     "t": 22232,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 28,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 335872,
+      "length": 12288
+     }
+    },
+    {
+     "t": 22453,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 29,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 348160,
+      "length": 12288
+     }
+    },
+    {
+     "t": 22671,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 30,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 360448,
+      "length": 12288
+     }
+    },
+    {
+     "t": 22869,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 31,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 372736,
+      "length": 12288
+     }
+    },
+    {
+     "t": 23121,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 32,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 385024,
+      "length": 12288
+     }
+    },
+    {
+     "t": 23287,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 33,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 397312,
+      "length": 12288
+     }
+    },
+    {
+     "t": 23500,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 34,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 409600,
+      "length": 12288
+     }
+    },
+    {
+     "t": 23733,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 35,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 421888,
+      "length": 12288
+     }
+    },
+    {
+     "t": 23964,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 36,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 434176,
+      "length": 12288
+     }
+    },
+    {
+     "t": 24181,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 37,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 446464,
+      "length": 12288
+     }
+    },
+    {
+     "t": 24398,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 38,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 458752,
+      "length": 12288
+     }
+    },
+    {
+     "t": 24605,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 39,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 471040,
+      "length": 12288
+     }
+    },
+    {
+     "t": 24808,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 40,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 483328,
+      "length": 12288
+     }
+    },
+    {
+     "t": 25039,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 41,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 495616,
+      "length": 12288
+     }
+    },
+    {
+     "t": 25219,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 42,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 507904,
+      "length": 12288
+     }
+    },
+    {
+     "t": 25420,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 43,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 520192,
+      "length": 12288
+     }
+    },
+    {
+     "t": 25743,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 44,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 532480,
+      "length": 12288
+     }
+    },
+    {
+     "t": 25906,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 45,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 544768,
+      "length": 12288
+     }
+    },
+    {
+     "t": 26061,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 46,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 557056,
+      "length": 12288
+     }
+    },
+    {
+     "t": 26267,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 47,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 569344,
+      "length": 12288
+     }
+    },
+    {
+     "t": 26481,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 48,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 581632,
+      "length": 12288
+     }
+    },
+    {
+     "t": 26694,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 49,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 593920,
+      "length": 12288
+     }
+    },
+    {
+     "t": 26908,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 50,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 606208,
+      "length": 12288
+     }
+    },
+    {
+     "t": 27089,
+     "data": "{\"type\":\"arousal\",\"sessionId\":\"6732ea99675e6f3c5ed4b27cb5e6b833\",\"speaking\":false,\"arousal\":0.8050939668879888}"
+    },
+    {
+     "t": 27089,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"6732ea99675e6f3c5ed4b27cb5e6b833\",\"listening\":\"listening\",\"speaking\":true}"
+    },
+    {
+     "t": 27199,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 51,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 618496,
+      "length": 12288
+     }
+    },
+    {
+     "t": 27393,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 52,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 630784,
+      "length": 12288
+     }
+    },
+    {
+     "t": 27561,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 53,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 643072,
+      "length": 12288
+     }
+    },
+    {
+     "t": 27846,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 54,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 655360,
+      "length": 12288
+     }
+    },
+    {
+     "t": 27979,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 55,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 667648,
+      "length": 12288
+     }
+    },
+    {
+     "t": 28219,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 56,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 679936,
+      "length": 12288
+     }
+    },
+    {
+     "t": 28468,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 57,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 692224,
+      "length": 12288
+     }
+    },
+    {
+     "t": 28723,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 58,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 704512,
+      "length": 12288
+     }
+    },
+    {
+     "t": 28953,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 59,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 716800,
+      "length": 24576
+     }
+    },
+    {
+     "t": 29264,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 60,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 741376,
+      "length": 12288
+     }
+    },
+    {
+     "t": 29292,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "6732ea99675e6f3c5ed4b27cb5e6b833",
+      "speaking": false,
+      "seq": 61,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 753664,
+      "length": 12288
+     }
+    },
+    {
+     "t": 29324,
+     "data": "{\"type\":\"tts_done\",\"turnId\":\"1\",\"sessionId\":\"6732ea99675e6f3c5ed4b27cb5e6b833\",\"speaking\":false,\"frames\":61}"
+    },
+    {
+     "t": 29324,
+     "data": "{\"type\":\"response_done\",\"turnId\":\"1\",\"playbackTracking\":true,\"playback\":\"playing\",\"sessionId\":\"6732ea99675e6f3c5ed4b27cb5e6b833\",\"speaking\":false,\"kbStatus\":\"sources\",\"sources\":[{\"grounding\":\"corpus_grounded\",\"number\":1,\"type\":\"destillaat\",\"id\":\"destillaat:9e0fde74-6619-59de-a81e-9f128de60238\",\"text\":\"Het doden van duiven is een ineffectieve methode voor populatiebeheer vanwege hun hoge demografische compensatievermogen. Effectiever is het verlagen van de draagkracht van de leefomgeving door het beperken van voedselbronnen en nestgelegenheden.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:53e458b4-4ca0-5098-92ab-e44caf9adffe\",\"citation\":\"Jiguet, F., Sunnen, L., Prévot, A. C., \\u0026 Princé, K. (2019). Urban pigeons losing toes due to human activities. Biological Conservation, 240, 108241. https://doi.org/10.1016/J.BIOCON.2019.108241\",\"citationConfidence\":\"high\",\"quote\":\"Managing pigeon numbers is efficient if reducing the carrying capacity of its\\nhabitat, in terms of food and nesting sites, while pigeon culling is inefficient as breeding populations have a high demographic compensatory potential\",\"paper\":\"jiguet2019\",\"doi\":\"10.1016/J.BIOCON.2019.108241\",\"passages\":[{\"id\":\"quote:eaa67173-ab43-5456-9051-1d2663390886\",\"text\":\"Managing pigeon numbers is efficient if reducing the carrying capacity of its\\nhabitat, in terms of food and nesting sites, while pigeon culling is inefficient as breeding populations have a high demographic compensatory potential\"}]},\"localized\":{\"text\":{\"en\":\"Killing pigeons is an ineffective method of population control because of their high demographic compensatory capacity. More effective is lowering the carrying capacity of the environment by limiting food sources and nesting opportunities.\",\"nl\":\"Het doden van duiven is een ineffectieve methode voor populatiebeheer vanwege hun hoge demografische compensatievermogen. Effectiever is het verlagen van de draagkracht van de leefomgeving door het beperken van voedselbronnen en nestgelegenheden.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":2,\"type\":\"destillaat\",\"id\":\"destillaat:f25679ad-5768-57ef-b50f-14027347141a\",\"text\":\"Het verlagen van de draagkracht van de stedelijke omgeving door habitatwijziging is momenteel de meest betrouwbare methode om langdurige effecten op duivenpopulaties te bereiken.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"Carrying capacity reduction through habitat modification is at present the most reliable way\\nto obtain long-lasting effects on pigeon populations (Haag, 1993); moreover this method is\\nusually well accepted (and sometimes requested) by citizens.\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:074b5700-cccd-5076-9c5c-50bb346f91ec\",\"text\":\"Carrying capacity reduction through habitat modification is at present the most reliable way\\nto obtain long-lasting effects on pigeon populations (Haag, 1993); moreover this method is\\nusually well accepted (and sometimes requested) by citizens.\"}]},\"localized\":{\"text\":{\"en\":\"Lowering the carrying capacity of the urban environment through habitat modification is currently the most reliable method for achieving long-term effects on pigeon populations.\",\"nl\":\"Het verlagen van de draagkracht van de stedelijke omgeving door habitatwijziging is momenteel de meest betrouwbare methode om langdurige effecten op duivenpopulaties te bereiken.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":3,\"type\":\"destillaat\",\"id\":\"destillaat:bbf9e54c-dffc-505a-b7d6-77192b46b290\",\"text\":\"Verschillende modellen tonen aan dat het doden van duiven (culling) waarschijnlijk minder effectief is voor populatiebeheer dan het verminderen van hun voortplantingssucces, met name vanwege hun hoge productiviteit en sterftecijfers.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"Several models indicate that for monogamous species with high mortality rates and high\\nproductivity, such as feral pigeons, culling is likely less effective than the reduction of\\nreproductive potential for controlling population (Barlow et al., 1997; Dolbeer, 1998).\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:1b4745eb-638b-516c-a44b-6b64a326e659\",\"text\":\"Several models indicate that for monogamous species with high mortality rates and high\\nproductivity, such as feral pigeons, culling is likely less effective than the reduction of\\nreproductive potential for controlling population (Barlow et al., 1997; Dolbeer, 1998).\"}]},\"localized\":{\"text\":{\"en\":\"Various models show that killing pigeons (culling) is probably less effective for population management than reducing their reproductive success, particularly because of their high productivity and mortality rates.\",\"nl\":\"Verschillende modellen tonen aan dat het doden van duiven (culling) waarschijnlijk minder effectief is voor populatiebeheer dan het verminderen van hun voortplantingssucces, met name vanwege hun hoge productiviteit en sterftecijfers.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":4,\"type\":\"destillaat\",\"id\":\"destillaat:83f0dbfd-4344-53ac-88d9-9d7cfdf5241b\",\"text\":\"Het structureel aanpassen van de leefomgeving, zoals het bemoeilijken van nestelen en rusten, is de meest effectieve en duurzame methode om de duivenpopulatie in steden permanent te verkleinen.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:c54c8881-9b2d-5f8c-989d-0180ce70f30c\",\"citation\":\"Stukenholtz, E. E., Hailu, T. A., Childers, S., Leatherwood, C., Evans, L., Roulain, D., Townsley, D., Treider, M., II, R. N. P., Ray, D. A., Zak, J. C., Stevens, R. D., Stukenholtz, E. E., Hailu, T. A., Childers, S., Leatherwood, C., Evans, L., Roulain, D., Townsley, D., … Stevens, R. D. (2019). Ecology of Feral Pigeons: Population Monitoring, Resource Selection, and Management Practices. Wildlife Population Monitoring. https://doi.org/10.5772/intechopen.84612\",\"citationConfidence\":\"high\",\"quote\":\"Population models performed by Guinchi et al. found that influencing the\\nhabitat is the most effective and long-lasting method in decreasing abundance [18].\",\"paper\":\"stukenholtz2019\",\"doi\":\"10.5772/intechopen.84612\",\"passages\":[{\"id\":\"quote:62cd809e-6721-58c1-89bc-f2dc7333ee09\",\"text\":\"Population models performed by Guinchi et al. found that influencing the\\nhabitat is the most effective and long-lasting method in decreasing abundance [18].\"}]},\"localized\":{\"text\":{\"en\":\"Structurally modifying the living environment, such as making nesting and resting more difficult, is the most effective and sustainable method for permanently reducing the pigeon population in cities.\",\"nl\":\"Het structureel aanpassen van de leefomgeving, zoals het bemoeilijken van nestelen en rusten, is de meest effectieve en duurzame methode om de duivenpopulatie in steden permanent te verkleinen.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":5,\"type\":\"destillaat\",\"id\":\"destillaat:edeee1e7-e381-5ba6-93c6-4fbfa2f96fc5\",\"text\":\"Het doden of ruimen van duiven is niet effectief om hun populatiegrootte te verminderen, omdat de populatie door hun hoge vruchtbaarheid snel weer herstelt.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:c54c8881-9b2d-5f8c-989d-0180ce70f30c\",\"citation\":\"Stukenholtz, E. E., Hailu, T. A., Childers, S., Leatherwood, C., Evans, L., Roulain, D., Townsley, D., Treider, M., II, R. N. P., Ray, D. A., Zak, J. C., Stevens, R. D., Stukenholtz, E. E., Hailu, T. A., Childers, S., Leatherwood, C., Evans, L., Roulain, D., Townsley, D., … Stevens, R. D. (2019). Ecology of Feral Pigeons: Population Monitoring, Resource Selection, and Management Practices. Wildlife Population Monitoring. https://doi.org/10.5772/intechopen.84612\",\"citationConfidence\":\"high\",\"quote\":\"Killing pigeons has proven to be only a temporary solution. Due to\\ntheir high fertility rates, pigeons can rebound quickly.\",\"paper\":\"stukenholtz2019\",\"doi\":\"10.5772/intechopen.84612\",\"passages\":[{\"id\":\"quote:dc4d934f-a8de-55b4-8dbc-4e4f4d70d627\",\"text\":\"Killing pigeons has proven to be only a temporary solution. Due to\\ntheir high fertility rates, pigeons can rebound quickly.\"},{\"id\":\"quote:e82231e1-4e22-5325-9a0c-d9a2b73961b1\",\"text\":\"However, killing pigeons has been unsuccessful in decreasing\\nabundance\"}]},\"localized\":{\"text\":{\"en\":\"Killing or culling pigeons is not effective in reducing their population size, because the population quickly recovers owing to their high fertility.\",\"nl\":\"Het doden of ruimen van duiven is niet effectief om hun populatiegrootte te verminderen, omdat de populatie door hun hoge vruchtbaarheid snel weer herstelt.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":6,\"type\":\"destillaat\",\"id\":\"destillaat:ec48c45c-3d8b-5be7-a2b1-a7a83cb182cc\",\"text\":\"Veel directe maatregelen om de populatieomvang van stadsduiven te beheersen, zoals afschot, blijken in de praktijk weinig effectief te zijn.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:edf48f05-bf73-5872-8e8e-93c785959ff0\",\"citation\":\"Geijtenbeek, J. W. (2026). The effect of large-scale urban events on feral pigeons (Columba livia) [Writing assignment, Utrecht University].\",\"citationConfidence\":\"medium\",\"citationMissing\":\"repository URL, page count, degree name\",\"quote\":\"Yet, many of these measures only have limited\\neVects on actually controlling pigeon populations (Skandrani et al., 2018).\",\"paper\":\"effects-human-activities-pigeons-msthesis-jgeijtenbeek\",\"passages\":[{\"id\":\"quote:858f081a-ccd9-5de0-99ef-6f74dcb72488\",\"text\":\"Yet, many of these measures only have limited\\neVects on actually controlling pigeon populations (Skandrani et al., 2018).\"}]},\"localized\":{\"text\":{\"en\":\"Many direct measures to control the population size of urban pigeons, such as culling, prove in practice to be of little effect.\",\"nl\":\"Veel directe maatregelen om de populatieomvang van stadsduiven te beheersen, zoals afschot, blijken in de praktijk weinig effectief te zijn.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":7,\"type\":\"destillaat\",\"id\":\"destillaat:a93acf4e-eff2-5e01-9b05-79f58b5eebc4\",\"text\":\"De hoge concentratie stadsduiven dwingt overheden tot actieve populatieregulering om overlast te beperken.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:836b7aae-cd75-5414-967f-045ef2457fb9\",\"citation\":\"Duffaut, C., Brondeau, F., \\u0026 Gasparini, J. (2023). An original and efficient fertilizer for cherry tomato plants grown in urban agriculture: Feral pigeon guano. Urban Agriculture and Regional Food Systems, 8(1), e20046. https://doi.org/10.1002/uar2.20046\",\"citationConfidence\":\"high\",\"quote\":\"The\\nurban pigeon (Columba livia) is present in almost all cities of\\nthe world (Aronson et al., 2014) and can reach high densities\\nin some cities that has forced local authorities to manage local\\nnuisance.\",\"paper\":\"duffaut2023\",\"doi\":\"10.1002/uar2.20046\",\"passages\":[{\"id\":\"quote:79616794-e8bb-587e-b330-b2afcdbb4104\",\"text\":\"The\\nurban pigeon (Columba livia) is present in almost all cities of\\nthe world (Aronson et al., 2014) and can reach high densities\\nin some cities that has forced local authorities to manage local\\nnuisance.\"}]},\"localized\":{\"text\":{\"en\":\"The high concentration of urban pigeons forces authorities into active population regulation to limit nuisance.\",\"nl\":\"De hoge concentratie stadsduiven dwingt overheden tot actieve populatieregulering om overlast te beperken.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":8,\"type\":\"destillaat\",\"id\":\"destillaat:363d7d32-0951-5d02-b645-ba53d5562004\",\"text\":\"Bestrijdingsmaatregelen moeten worden afgestemd op de houding van de lokale bevolking ten opzichte van duiven om de kans op maatschappelijke acceptatie en succes te vergroten.\",\"perspective\":\"Sociale verbinding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"Given the above-mentioned peculiar interactions between humans and feral pigeons, it is\\nimportant that control actions should be calibrated on the approach that the inhabitants of a\\ngiven city have towards the pigeons, so that the control actions are accepted and will have\\nan increased chance of success (Conover, 2002).\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:762fb320-6355-5139-86ca-c9edeaacf0eb\",\"text\":\"Given the above-mentioned peculiar interactions between humans and feral pigeons, it is\\nimportant that control actions should be calibrated on the approach that the inhabitants of a\\ngiven city have towards the pigeons, so that the control actions are accepted and will have\\nan increased chance of success (Conover, 2002).\"}]},\"localized\":{\"text\":{\"en\":\"Control measures must be tailored to the attitude of the local population towards pigeons in order to increase the chance of societal acceptance and success.\",\"nl\":\"Bestrijdingsmaatregelen moeten worden afgestemd op de houding van de lokale bevolking ten opzichte van duiven om de kans op maatschappelijke acceptatie en succes te vergroten.\"},\"perspective\":{\"en\":\"Social connection\",\"nl\":\"Sociale verbinding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":9,\"type\":\"destillaat\",\"id\":\"destillaat:ea57ae9e-f772-5eaf-96bd-1960550c5f24\",\"text\":\"De methode om duivenpopulaties te beheersen door middel van het doden van volwassen vogels stuit op aanzienlijke maatschappelijke weerstand vanwege het onethische karakter ervan.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:d216d6f5-20c1-57ad-aaab-c4b907424096\",\"citation\":\"Skandrani, Z., Desquilbet, M., \\u0026 Prévot, A. C. (2018). A renewed framework for urban biodiversity governance: Urban pigeons as a case-study. Natures Sciences Sociétés, 26(3), 280–290. https://doi.org/10.1051/nss/2018051\",\"citationConfidence\":\"high\",\"quote\":\"Moreover, because of\\nits unethical nature, this method fails to attain public\\nacceptance (Fall and Jackson, 2002).\",\"paper\":\"skandrani2018\",\"doi\":\"10.1051/nss/2018051\",\"passages\":[{\"id\":\"quote:47313d03-7c1a-5b6b-b698-243f2e2f32b5\",\"text\":\"Moreover, because of\\nits unethical nature, this method fails to attain public\\nacceptance (Fall and Jackson, 2002).\"}]},\"localized\":{\"text\":{\"en\":\"The method of controlling pigeon populations by killing adult birds meets with considerable societal resistance because of its unethical nature.\",\"nl\":\"De methode om duivenpopulaties te beheersen door middel van het doden van volwassen vogels stuit op aanzienlijke maatschappelijke weerstand vanwege het onethische karakter ervan.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":10,\"type\":\"destillaat\",\"id\":\"destillaat:ea8acab1-9667-5076-ae82-498daa546142\",\"text\":\"Stadsduiven worden in de publieke opinie vaak afgeschilderd als ongedierte, wat leidt tot voortdurende pogingen van instanties om hun populatiegrootte te beheersen.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:6253ceb0-7f66-5317-9ded-fdc75cf5858e\",\"citation\":\"Skandrani, Z., Desquilbet, M., \\u0026 Prévot, A.-C. (2018). A renewed framework for urban biodiversity governance: urban pigeons as a case-study. Natures Sciences Sociétés, 26(3), 280-290. https://doi.org/10.1051/nss/2018051\",\"citationConfidence\":\"high\",\"quote\":\"Urban pigeons are commonly depicted as “pests”\\nand have led to continuous institutional efforts to control\\ntheir abundance\",\"paper\":\"skadranietal2017-arenewedframeworkforurbanbiodiversitygovernance-1\",\"doi\":\"10.1051/nss/2018051\",\"passages\":[{\"id\":\"quote:6781d289-61b5-5ef8-b242-f16718c401ca\",\"text\":\"Urban pigeons are commonly depicted as “pests”\\nand have led to continuous institutional efforts to control\\ntheir abundance\"}]},\"localized\":{\"text\":{\"en\":\"Urban pigeons are often portrayed in public opinion as vermin, leading to ongoing attempts by authorities to control their population size.\",\"nl\":\"Stadsduiven worden in de publieke opinie vaak afgeschilderd als ongedierte, wat leidt tot voortdurende pogingen van instanties om hun populatiegrootte te beheersen.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":11,\"type\":\"destillaat\",\"id\":\"destillaat:4544af2b-1a62-5e84-aa16-1547bb735553\",\"text\":\"Het massaal doden van duiven stuit op maatschappelijke weerstand en roept ethische bezwaren op bij veel burgers.\",\"perspective\":\"Sociale verbinding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"Moreover massive killing of pigeons is difficult to accept by many citizens, which\\ndetermines further problems of ethical nature.\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:afbd99eb-e3d2-53ca-aa4f-99727fbe0fe8\",\"text\":\"Moreover massive killing of pigeons is difficult to accept by many citizens, which\\ndetermines further problems of ethical nature.\"}]},\"localized\":{\"text\":{\"en\":\"The mass killing of pigeons meets with social resistance and raises ethical objections among many citizens.\",\"nl\":\"Het massaal doden van duiven stuit op maatschappelijke weerstand en roept ethische bezwaren op bij veel burgers.\"},\"perspective\":{\"en\":\"Social connection\",\"nl\":\"Sociale verbinding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":12,\"type\":\"destillaat\",\"id\":\"destillaat:8c50333b-be1b-5822-bdcf-6fc9792072fc\",\"text\":\"Het doden van duiven als beheersmaatregel is controversieel en ethisch twijfelachtig, waardoor deze methode tegenwoordig niet veel meer wordt toegepast.\",\"perspective\":\"Sociale verbinding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:edf48f05-bf73-5872-8e8e-93c785959ff0\",\"citation\":\"Geijtenbeek, J. W. (2026). The effect of large-scale urban events on feral pigeons (Columba livia) [Writing assignment, Utrecht University].\",\"citationConfidence\":\"medium\",\"citationMissing\":\"repository URL, page count, degree name\",\"quote\":\"Additionally, these strategies are also controversial and ethically questionable, and are\\ntherefore no longer common practice today.\",\"paper\":\"effects-human-activities-pigeons-msthesis-jgeijtenbeek\",\"passages\":[{\"id\":\"quote:1a342529-da79-505f-b5d3-df7b66c8c6fa\",\"text\":\"Additionally, these strategies are also controversial and ethically questionable, and are\\ntherefore no longer common practice today.\"}]},\"localized\":{\"text\":{\"en\":\"Killing pigeons as a control measure is controversial and ethically questionable, which is why this method is no longer applied much nowadays.\",\"nl\":\"Het doden van duiven als beheersmaatregel is controversieel en ethisch twijfelachtig, waardoor deze methode tegenwoordig niet veel meer wordt toegepast.\"},\"perspective\":{\"en\":\"Social connection\",\"nl\":\"Sociale verbinding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":13,\"type\":\"destillaat\",\"id\":\"destillaat:3a6ffcf8-396a-5697-b0b1-2f51d10b0a64\",\"text\":\"De meest effectieve methode om de duivenpopulatie te verkleinen is het verminderen van de hoeveelheid beschikbaar voedsel.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:edf48f05-bf73-5872-8e8e-93c785959ff0\",\"citation\":\"Geijtenbeek, J. W. (2026). The effect of large-scale urban events on feral pigeons (Columba livia) [Writing assignment, Utrecht University].\",\"citationConfidence\":\"medium\",\"citationMissing\":\"repository URL, page count, degree name\",\"quote\":\"The more eVective ways of reducing the population size are by reducing the amount of food\\navailable for pigeons.\",\"paper\":\"effects-human-activities-pigeons-msthesis-jgeijtenbeek\",\"passages\":[{\"id\":\"quote:57d6bd0c-471a-5375-8144-a6714ebd771a\",\"text\":\"The more eVective ways of reducing the population size are by reducing the amount of food\\navailable for pigeons.\"}]},\"localized\":{\"text\":{\"en\":\"The most effective method for reducing the pigeon population is reducing the amount of available food.\",\"nl\":\"De meest effectieve methode om de duivenpopulatie te verkleinen is het verminderen van de hoeveelheid beschikbaar voedsel.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":14,\"type\":\"destillaat\",\"id\":\"destillaat:93b55eea-ea1c-5138-a681-9689c276a64a\",\"text\":\"Het doden van volwassen duiven door afschot of vergiftiging is ineffectief omdat de opengevallen plekken snel worden ingenomen door jonge of migrerende duiven.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:d216d6f5-20c1-57ad-aaab-c4b907424096\",\"citation\":\"Skandrani, Z., Desquilbet, M., \\u0026 Prévot, A. C. (2018). A renewed framework for urban biodiversity governance: Urban pigeons as a case-study. Natures Sciences Sociétés, 26(3), 280–290. https://doi.org/10.1051/nss/2018051\",\"citationConfidence\":\"high\",\"quote\":\"However,\\nbecause of the high ﬂexibility of pigeon populations in\\nterms of reproduction and dispersal, culled birds are soon\\nreplaced by new juveniles and immigrating birds from\\nother areas (Magnino et al., 2009).\",\"paper\":\"skandrani2018\",\"doi\":\"10.1051/nss/2018051\",\"passages\":[{\"id\":\"quote:01cd07b3-2bdd-5454-bece-0471cba8b04d\",\"text\":\"However,\\nbecause of the high ﬂexibility of pigeon populations in\\nterms of reproduction and dispersal, culled birds are soon\\nreplaced by new juveniles and immigrating birds from\\nother areas (Magnino et al., 2009).\"}]},\"localized\":{\"text\":{\"en\":\"Killing adult pigeons by culling or poisoning is ineffective because the vacated spots are quickly taken over by young or migrating pigeons.\",\"nl\":\"Het doden van volwassen duiven door afschot of vergiftiging is ineffectief omdat de opengevallen plekken snel worden ingenomen door jonge of migrerende duiven.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":15,\"type\":\"destillaat\",\"id\":\"destillaat:6a92c131-83cc-500f-9f5f-464121761a5b\",\"text\":\"Een succesvol duivenbeheer vereist een sterke lokale kennis, waarbij monitoring, modellering en een zorgvuldige afweging van de kosten en het maatschappelijk draagvlak samenkomen.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"It is\\ntherefore important to understand the behavioural and ecological characteristics of the\\npigeon population before starting a control programme, and to analyse the capability of\\ncovering the costs and the participation and awareness of the municipal Authorities and city\\ndwellers.\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:3052e868-893a-58dd-919c-e38f59901efd\",\"text\":\"It is\\ntherefore important to understand the behavioural and ecological characteristics of the\\npigeon population before starting a control programme, and to analyse the capability of\\ncovering the costs and the participation and awareness of the municipal Authorities and city\\ndwellers.\"}]},\"localized\":{\"text\":{\"en\":\"Successful pigeon management requires strong local knowledge, combining monitoring, modeling, and a careful weighing of costs and societal support.\",\"nl\":\"Een succesvol duivenbeheer vereist een sterke lokale kennis, waarbij monitoring, modellering en een zorgvuldige afweging van de kosten en het maatschappelijk draagvlak samenkomen.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":16,\"type\":\"destillaat\",\"id\":\"destillaat:615877c8-abe7-5dba-958b-e2a84d6ecfd8\",\"text\":\"Chemische sterilisatie is een diervriendelijke methode die effectiever is in het verminderen van de duivenpopulatie dan het doden van duiven, hoewel de werking in de vrije natuur nog beter onderzocht moet worden.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:c54c8881-9b2d-5f8c-989d-0180ce70f30c\",\"citation\":\"Stukenholtz, E. E., Hailu, T. A., Childers, S., Leatherwood, C., Evans, L., Roulain, D., Townsley, D., Treider, M., II, R. N. P., Ray, D. A., Zak, J. C., Stevens, R. D., Stukenholtz, E. E., Hailu, T. A., Childers, S., Leatherwood, C., Evans, L., Roulain, D., Townsley, D., … Stevens, R. D. (2019). Ecology of Feral Pigeons: Population Monitoring, Resource Selection, and Management Practices. Wildlife Population Monitoring. https://doi.org/10.5772/intechopen.84612\",\"citationConfidence\":\"high\",\"quote\":\"Chemical sterilization is a humane strategy to decrease abundance but does not\\nget rid of the entire population [7]. Research conducted on the effect of decreasing reproductive output through sterilization did decrease abundance in feral\\npigeons (among other species) and was more effective than killing individuals\\n[49].\",\"paper\":\"stukenholtz2019\",\"doi\":\"10.5772/intechopen.84612\",\"passages\":[{\"id\":\"quote:abc9ef37-5ba2-58fa-98bc-92c60ee84d5f\",\"text\":\"Chemical sterilization is a humane strategy to decrease abundance but does not\\nget rid of the entire population [7]. Research conducted on the effect of decreasing reproductive output through sterilization did decrease abundance in feral\\npigeons (among other species) and was more effective than killing individuals\\n[49].\"},{\"id\":\"quote:358c00ee-e7ab-538a-8793-2297c0ef08ef\",\"text\":\"How effective sterilization is in field settings with natural populations is not well\\nunderstood.\"}]},\"localized\":{\"text\":{\"en\":\"Chemical sterilization is an animal-friendly method that is more effective in reducing the pigeon population than killing pigeons, although its efficacy in the wild still needs to be studied further.\",\"nl\":\"Chemische sterilisatie is een diervriendelijke methode die effectiever is in het verminderen van de duivenpopulatie dan het doden van duiven, hoewel de werking in de vrije natuur nog beter onderzocht moet worden.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":17,\"type\":\"destillaat\",\"id\":\"destillaat:1fe4aeb6-7872-5b02-a77c-6c97e606afec\",\"text\":\"Maatregelen zoals anticonceptie en sterilisatie zijn bij stadsduiven vaak niet effectief voor populatiebeheer vanwege hun relatief lange levensduur, grote populatieomvang en snelle voortplanting.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:edf48f05-bf73-5872-8e8e-93c785959ff0\",\"citation\":\"Geijtenbeek, J. W. (2026). The effect of large-scale urban events on feral pigeons (Columba livia) [Writing assignment, Utrecht University].\",\"citationConfidence\":\"medium\",\"citationMissing\":\"repository URL, page count, degree name\",\"quote\":\"However, these strategies\\nhave often also been ineVective, due to the rather long lifespan of pigeons, large population sizes\\nand rapid reproduction (Giunchi et al., 2012; Skandrani et al., 2018).\",\"paper\":\"effects-human-activities-pigeons-msthesis-jgeijtenbeek\",\"passages\":[{\"id\":\"quote:59ed1248-c3d7-5c5a-b758-c0323b1a91bf\",\"text\":\"However, these strategies\\nhave often also been ineVective, due to the rather long lifespan of pigeons, large population sizes\\nand rapid reproduction (Giunchi et al., 2012; Skandrani et al., 2018).\"}]},\"localized\":{\"text\":{\"en\":\"Measures such as contraception and sterilization are often not effective for population management in urban pigeons because of their relatively long lifespan, large population size, and rapid reproduction.\",\"nl\":\"Maatregelen zoals anticonceptie en sterilisatie zijn bij stadsduiven vaak niet effectief voor populatiebeheer vanwege hun relatief lange levensduur, grote populatieomvang en snelle voortplanting.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":18,\"type\":\"destillaat\",\"id\":\"destillaat:5e25905f-1586-507f-952b-fcaa1e453aa1\",\"text\":\"Stadsduiven zijn wijdverspreid en invasief, waardoor een effectieve bestrijding ervan wereldwijd een belangrijk aandachtspunt is.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:0bcd8848-06e9-51bb-93fe-dc1d37aec88a\",\"citation\":\"Soh, M. C. K., Pang, R. Y. T., Ng, B. X. K., Lee, B. P. Y. H., Loo, A. H. B., \\u0026 Er, K. B. H. (2021). Restricted human activities shift the foraging strategies of feral pigeons (Columba livia) and three other commensal bird species. Biological Conservation, 253, 108927. https://doi.org/10.1016/j.biocon.2020.108927\",\"citationConfidence\":\"high\",\"quote\":\"Feral pigeons (Columba livia) are\\nwidespread and invasive, thus their effective control is of keen international interest.\",\"paper\":\"soh2021\",\"doi\":\"10.1016/j.biocon.2020.108927\",\"passages\":[{\"id\":\"quote:27104079-9446-54f4-9082-712ea6f539fc\",\"text\":\"Feral pigeons (Columba livia) are\\nwidespread and invasive, thus their effective control is of keen international interest.\"}]},\"localized\":{\"text\":{\"en\":\"Urban pigeons are widespread and invasive, making their effective control an important focus worldwide.\",\"nl\":\"Stadsduiven zijn wijdverspreid en invasief, waardoor een effectieve bestrijding ervan wereldwijd een belangrijk aandachtspunt is.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":19,\"type\":\"destillaat\",\"id\":\"destillaat:9b2c0ce1-8262-5e11-a241-f38251ed9491\",\"text\":\"Vanwege de lange voortplantingsperiode van stadsduiven, die vrijwel het hele jaar doorloopt, moeten bestrijdingsacties continu en over de hele stad worden uitgevoerd om effectief te zijn.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"This means that any action aimed at reducing the population size of\\nferal pigeons, not only should be targeted to the whole or at least a significant part of the\\ncity, but also, especially if aimed at controlling the breeding output, should be continuous\\nthroughout the year.\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:6113ff77-a010-5800-a3af-ba8b004ff2a9\",\"text\":\"This means that any action aimed at reducing the population size of\\nferal pigeons, not only should be targeted to the whole or at least a significant part of the\\ncity, but also, especially if aimed at controlling the breeding output, should be continuous\\nthroughout the year.\"}]},\"localized\":{\"text\":{\"en\":\"Because of the long breeding period of urban pigeons, which lasts almost the entire year, control actions must be carried out continuously and city-wide to be effective.\",\"nl\":\"Vanwege de lange voortplantingsperiode van stadsduiven, die vrijwel het hele jaar doorloopt, moeten bestrijdingsacties continu en over de hele stad worden uitgevoerd om effectief te zijn.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":20,\"type\":\"destillaat\",\"id\":\"destillaat:4f07405f-c627-5efb-9733-18c627070747\",\"text\":\"De meeste historische stadsduivenpopulaties zijn nagenoeg stabiel omdat ze de grens van de draagkracht van hun stedelijke omgeving hebben bereikt, mits de omgevingsfactoren niet significant veranderen.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"This implies that, excluding recent colonized cities or newly built outskirts of\\ncities (e.g. Haag, 1988; Senar et al., 2009), most of the historical (and largest) populations of\\nferal pigeons should be almost stable, provided that the environmental conditions which affect\\npopulation abundance (e.g. human population density, prevalent structural characteristics of\\nbuildings, habitat features of the surrounding landscape; Buijs \\u0026 Van Wijnen, 2001; Hetmanski\\net al., 2010; Johnston \\u0026 Janiga, 1995; Jokimäki \\u0026 Suhonen, 1998; Sacchi et al., 2002) did not\\nchange significantly.\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:6cf5d758-8757-5daf-838e-8f8847e69777\",\"text\":\"This implies that, excluding recent colonized cities or newly built outskirts of\\ncities (e.g. Haag, 1988; Senar et al., 2009), most of the historical (and largest) populations of\\nferal pigeons should be almost stable, provided that the environmental conditions which affect\\npopulation abundance (e.g. human population density, prevalent structural characteristics of\\nbuildings, habitat features of the surrounding landscape; Buijs \\u0026 Van Wijnen, 2001; Hetmanski\\net al., 2010; Johnston \\u0026 Janiga, 1995; Jokimäki \\u0026 Suhonen, 1998; Sacchi et al., 2002) did not\\nchange significantly.\"}]},\"localized\":{\"text\":{\"en\":\"Most historical urban pigeon populations are nearly stable because they have reached the carrying-capacity limit of their urban environment, provided the environmental factors do not change significantly.\",\"nl\":\"De meeste historische stadsduivenpopulaties zijn nagenoeg stabiel omdat ze de grens van de draagkracht van hun stedelijke omgeving hebben bereikt, mits de omgevingsfactoren niet significant veranderen.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"}]}"
+    },
+    {
+     "t": 29326,
+     "data": "{\"type\":\"playback_state\",\"turnId\":\"1\",\"playback\":\"playing\",\"sessionId\":\"6732ea99675e6f3c5ed4b27cb5e6b833\",\"speaking\":true}"
+    },
+    {
+     "t": 32088,
+     "data": "{\"type\":\"arousal\",\"sessionId\":\"6732ea99675e6f3c5ed4b27cb5e6b833\",\"speaking\":false,\"arousal\":0.7821744378209953}"
+    },
+    {
+     "t": 32088,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"6732ea99675e6f3c5ed4b27cb5e6b833\",\"listening\":\"listening\",\"speaking\":true}"
+    },
+    {
+     "t": 32518,
+     "data": "{\"type\":\"playback_state\",\"turnId\":\"1\",\"autonomyPaused\":false,\"playback\":\"ended\",\"sessionId\":\"6732ea99675e6f3c5ed4b27cb5e6b833\",\"speaking\":false}"
+    }
+   ],
+   "openMs": 1346,
+   "closeMs": 35058
+  }
+ ],
+ "probes": [
+  {
+   "kind": "mic-open",
+   "t": 1419,
+   "audio": 1
+  },
+  {
+   "kind": "gesture",
+   "t": 1432,
+   "clip": "Peck"
+  },
+  {
+   "kind": "gesture",
+   "t": 1688,
+   "clip": "WingWave"
+  },
+  {
+   "kind": "gesture",
+   "t": 16189,
+   "clip": "Peck"
+  },
+  {
+   "kind": "pcm-start",
+   "t": 16511,
+   "at": 16561,
+   "duration": 0.3413333333333333,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 16667,
+   "at": 16898,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 16903,
+   "at": 17156,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 17116,
+   "at": 17406,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 17355,
+   "at": 17661,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 17544,
+   "at": 17925,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 17756,
+   "at": 18174,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 17981,
+   "at": 18436,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 18166,
+   "at": 18685,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 18403,
+   "at": 18949,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 18588,
+   "at": 19203,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 18804,
+   "at": 19451,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 19031,
+   "at": 19716,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 19228,
+   "at": 19971,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 19453,
+   "at": 20228,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 19655,
+   "at": 20478,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 19874,
+   "at": 20745,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 20083,
+   "at": 20986,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 20311,
+   "at": 21252,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 20515,
+   "at": 21514,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 20734,
+   "at": 21755,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 21023,
+   "at": 22012,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 21150,
+   "at": 22277,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 21385,
+   "at": 22528,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 21580,
+   "at": 22787,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 21813,
+   "at": 23036,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 22072,
+   "at": 23301,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 22233,
+   "at": 23558,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 22454,
+   "at": 23805,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 22671,
+   "at": 24070,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 22869,
+   "at": 24322,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 23122,
+   "at": 24580,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 23288,
+   "at": 24831,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 23500,
+   "at": 25091,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 23733,
+   "at": 25340,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 23964,
+   "at": 25598,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 24182,
+   "at": 25859,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 24399,
+   "at": 26113,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 24606,
+   "at": 26368,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 24808,
+   "at": 26623,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 25039,
+   "at": 26881,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 25219,
+   "at": 27136,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 25421,
+   "at": 27396,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 25743,
+   "at": 27644,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 25906,
+   "at": 27903,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 26062,
+   "at": 28165,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 26268,
+   "at": 28419,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 26482,
+   "at": 28676,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 26695,
+   "at": 28926,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 26908,
+   "at": 29187,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 27200,
+   "at": 29442,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 27393,
+   "at": 29704,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 27561,
+   "at": 29947,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 27847,
+   "at": 30206,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 27980,
+   "at": 30467,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 28219,
+   "at": 30722,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 28469,
+   "at": 30978,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 28724,
+   "at": 31227,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 28953,
+   "at": 31483,
+   "duration": 0.512,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 29265,
+   "at": 31998,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 29292,
+   "at": 32259,
+   "duration": 0.256,
+   "sampleRate": 24000
+  }
+ ],
+ "transcript": [
+  {
+   "t": 7796,
+   "text": "Ik denk dat het tijd is voor afschot."
+  }
+ ],
+ "voice": [
+  {
+   "file": "stem.mp3",
+   "turnId": "1",
+   "format": "pcm16",
+   "sampleRate": 24000,
+   "bytes": 765952,
+   "ms": 15957,
+   "sha256": "8de13e2004cb7f5311a7545ca6aa6a1edff4381083835b677a131f112597e8fc",
+   "encoded": "mp3, mono, 64 kbit/s (libmp3lame, bit-exact)"
+  }
+ ],
+ "checks": {
+  "reaction": "speech",
+  "delayMs": 8631,
+  "sessionLang": "nl",
+  "langMatches": true,
+  "autonomous": true
+ }
+}

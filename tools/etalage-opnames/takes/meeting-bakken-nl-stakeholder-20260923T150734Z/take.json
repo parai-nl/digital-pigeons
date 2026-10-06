@@ -1,0 +1,2255 @@
+{
+ "format": "duiven-etalage-take/1",
+ "id": "meeting-bakken-nl-stakeholder-20260923T150734Z",
+ "kind": "meeting",
+ "item": {
+  "statement": "bakken",
+  "lang": "nl",
+  "pigeon": "stakeholder",
+  "modulePigeon": "individualist"
+ },
+ "input": {
+  "speaker": "Adviseur",
+  "text": "Dan sluiten we de afvalbakken 's nachts ook meteen af.",
+  "audio": "uitspraken/bakken-nl.mp3",
+  "audioSha256": "7c29a6541d61e549d396cd97e9e7cdf70a83f3db342d1d11358656634b091f04",
+  "audioMs": 3065,
+  "voice": "Sarah (ElevenLabs eleven_multilingual_v2)",
+  "micLeadMs": 4000,
+  "windowMs": 25000,
+  "placeholder": true
+ },
+ "recordedAt": "2026-09-23T15:07:34.316Z",
+ "finishedAt": "2026-09-23T15:08:15.904Z",
+ "server": {
+  "base": "http://127.0.0.1:8094",
+  "modelPolicy": {
+   "model": "vertex_ai/gemini-3.5-flash",
+   "detectionModel": "vertex_ai/gemini-3.5-flash",
+   "endpoint": "https://llm-proxy.invalid"
+  },
+  "knowledge": {
+   "kbId": "Duiven",
+   "bundleSchema": "duiven/3",
+   "languages": [
+    "nl",
+    "en"
+   ],
+   "importedAt": "2026-09-15T12:26:51Z",
+   "counts": {
+    "belongs_to": 4067,
+    "belongs_to_perspective": 4067,
+    "belongs_to_subthema": 4067,
+    "contains": 4067,
+    "contains_perspective": 297,
+    "contains_subthema": 149,
+    "contains_thema": 26,
+    "destillaat": 4067,
+    "domein": 3,
+    "has_quote": 4225,
+    "interview": 120,
+    "perspective": 297,
+    "quote": 4225,
+    "subthema": 149,
+    "thema": 26
+   }
+  },
+  "database": {
+   "name": "duif_etalage",
+   "copyOf": "duif_v3"
+  },
+  "module": {
+   "commit": "44186b900325eefad26c20b91e92f7350eb81bd0",
+   "moduleTree": "272829aae8444c82053a849b7a66ccc5a5a9109f",
+   "dirty": false,
+   "paraiCore": {
+    "commit": "29c670c73b73295c8c96592947cb9622e730c51c",
+    "dirty": false
+   },
+   "tags": [
+    "skipauth"
+   ],
+   "builtAt": "2026-09-23T14:40:12.508Z",
+   "binary": "module/bin/duif-etalage",
+   "bundleSha256": "d64a902bff38bf25d090a3bfe74e3f6bf4cfc7c21cb5160bddda9c45dced540d"
+  },
+  "pigeons": [
+   {
+    "id": "biological",
+    "engine": "agent",
+    "chat": true,
+    "meeting": true,
+    "autonomousDefault": false
+   },
+   {
+    "id": "individualist",
+    "engine": "agent",
+    "chat": true,
+    "meeting": true,
+    "autonomousDefault": false
+   },
+   {
+    "id": "nonverbal",
+    "engine": "pipeline",
+    "chat": false,
+    "meeting": true,
+    "autonomousDefault": true
+   }
+  ]
+ },
+ "failure": null,
+ "session": {
+  "id": "b825783b8d2cc86d13252f04eff53177",
+  "lang": "nl",
+  "pigeonId": "individualist",
+  "autonomous": true,
+  "eagerness": "normal",
+  "cooldownSeconds": 0
+ },
+ "timeline": {
+  "micOpenMs": 1306,
+  "utteranceStartMs": 5306,
+  "utteranceEndMs": 8371,
+  "windowEndMs": 33371
+ },
+ "actions": [
+  {
+   "name": "load",
+   "t": 93
+  },
+  {
+   "name": "autonomy-on",
+   "t": 273
+  },
+  {
+   "name": "seat",
+   "t": 1090
+  },
+  {
+   "name": "reaction",
+   "t": 19247,
+   "type": "persona"
+  },
+  {
+   "name": "reaction-done",
+   "t": 39081
+  },
+  {
+   "name": "end-click",
+   "t": 40583
+  },
+  {
+   "name": "ended",
+   "t": 40607
+  }
+ ],
+ "exchanges": [
+  {
+   "id": 1,
+   "method": "GET",
+   "path": "/access/notice",
+   "requestBody": null,
+   "t": 176,
+   "headMs": 9,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 10,
+   "body": "{\"version\":\"2026-09-22.1\",\"acknowledged\":true,\"acknowledgedAt\":\"2026-09-22T12:57:04.398172+02:00\"}\n"
+  },
+  {
+   "id": 2,
+   "method": "GET",
+   "path": "/duiven",
+   "requestBody": null,
+   "t": 182,
+   "headMs": 2,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 3,
+   "body": "{\"duiven\":[{\"id\":\"biological\",\"name\":{\"en\":\"Knowledge Partner\",\"nl\":\"Kennispartner\"},\"voiceReady\":true,\"knowledgeBase\":true,\"chat\":true,\"meeting\":true,\"topics\":[{\"id\":\"population-control\",\"label\":{\"en\":\"Population control\",\"nl\":\"Populatiebeheer\"}},{\"id\":\"nuisance-and-health\",\"label\":{\"en\":\"Nuisance and health\",\"nl\":\"Overlast en gezondheid\"}},{\"id\":\"feeding-and-food\",\"label\":{\"en\":\"Feeding and food\",\"nl\":\"Voeren en voedsel\"}},{\"id\":\"nesting-and-shelter\",\"label\":{\"en\":\"Nesting and shelter\",\"nl\":\"Nestelen en beschutting\"}},{\"id\":\"urban-ecology\",\"label\":{\"en\":\"Urban ecology\",\"nl\":\"Stadsecologie\"}}],\"engine\":\"agent\",\"autonomousDefault\":false},{\"id\":\"individualist\",\"name\":{\"en\":\"Stakeholder\",\"nl\":\"Stakeholder\"},\"voiceReady\":true,\"knowledgeBase\":true,\"chat\":true,\"meeting\":true,\"topics\":[{\"id\":\"pigeon-rights\",\"label\":{\"en\":\"What pigeons are owed\",\"nl\":\"Waar duiven recht op hebben\"}},{\"id\":\"city-space\",\"label\":{\"en\":\"Whose city is it\",\"nl\":\"Van wie is de stad\"}},{\"id\":\"decided-about-not-with\",\"label\":{\"en\":\"Decided about, not with\",\"nl\":\"Over ons, zonder ons\"}},{\"id\":\"pest-framing\",\"label\":{\"en\":\"Being called vermin\",\"nl\":\"Ongedierte genoemd worden\"}}],\"engine\":\"agent\",\"autonomousDefault\":false},{\"id\":\"nonverbal\",\"name\":{\"en\":\"Signaling Pigeon\",\"nl\":\"Signalerende duif\"},\"voiceReady\":false,\"knowledgeBase\":false,\"chat\":false,\"meeting\":true,\"topics\":[{\"id\":\"threat-and-removal\",\"label\":{\"en\":\"Population intervention\",\"nl\":\"Ingrijpen in de populatie\"}},{\"id\":\"food\",\"label\":{\"en\":\"Access to food\",\"nl\":\"Toegang tot voedsel\"}},{\"id\":\"nesting\",\"label\":{\"en\":\"Nesting and roosting access\",\"nl\":\"Toegang tot nest- en verblijfplaatsen\"}},{\"id\":\"pigeons-nearby\",\"label\":{\"en\":\"Pigeons nearby\",\"nl\":\"Duiven in de buurt\"}}],\"engine\":\"pipeline\",\"autonomousDefault\":true}],\"gedrag\":{\"interventieZelfstandig\":false,\"interventieThrottleSeconden\":0,\"inactiviteitPromptMinuten\":10,\"inactiviteitSluitSeconden\":90,\"taalDefault\":\"en\",\"detectieGretigheid\":\"normal\",\"detectieVensterWoorden\":3,\"detectieIntervalSeconden\":6,\"stilteMilliseconden\":1500,\"arousalHalveringSeconden\":120},\"modelPolicy\":{\"model\":\"vertex_ai/gemini-3.5-flash\",\"detectionModel\":\"vertex_ai/gemini-3.5-flash\",\"endpoint\":\"https://llm-proxy.invalid\"}}\n"
+  },
+  {
+   "id": 3,
+   "method": "GET",
+   "path": "/chat/sessions",
+   "requestBody": null,
+   "t": 182,
+   "headMs": 5,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 6,
+   "bodyOmitted": "chatgeschiedenis van het opnameaccount; hoort niet bij deze vergadering"
+  },
+  {
+   "id": 4,
+   "method": "GET",
+   "path": "/knowledge/status",
+   "requestBody": null,
+   "t": 186,
+   "headMs": 2,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 4,
+   "body": "{\"state\":\"ready\",\"kbId\":\"Duiven\",\"counts\":{\"belongs_to\":4067,\"belongs_to_perspective\":4067,\"belongs_to_subthema\":4067,\"contains\":4067,\"contains_perspective\":297,\"contains_subthema\":149,\"contains_thema\":26,\"destillaat\":4067,\"domein\":3,\"has_quote\":4225,\"interview\":120,\"perspective\":297,\"quote\":4225,\"subthema\":149,\"thema\":26},\"bundleSchema\":\"duiven/3\",\"languages\":[\"nl\",\"en\"],\"sourceLanguage\":\"nl\",\"importedAt\":\"2026-09-15T12:26:51Z\"}\n"
+  },
+  {
+   "id": 5,
+   "method": "GET",
+   "path": "/chat/sessions/3294eaa1f8606aab568e8f343d74925f/messages",
+   "requestBody": null,
+   "t": 255,
+   "headMs": 8,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 9,
+   "bodyOmitted": "chatgeschiedenis van het opnameaccount; hoort niet bij deze vergadering"
+  },
+  {
+   "id": 6,
+   "method": "GET",
+   "path": "/knowledge/status",
+   "requestBody": null,
+   "t": 256,
+   "headMs": 6,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 7,
+   "body": "{\"state\":\"ready\",\"kbId\":\"Duiven\",\"counts\":{\"belongs_to\":4067,\"belongs_to_perspective\":4067,\"belongs_to_subthema\":4067,\"contains\":4067,\"contains_perspective\":297,\"contains_subthema\":149,\"contains_thema\":26,\"destillaat\":4067,\"domein\":3,\"has_quote\":4225,\"interview\":120,\"perspective\":297,\"quote\":4225,\"subthema\":149,\"thema\":26},\"bundleSchema\":\"duiven/3\",\"languages\":[\"nl\",\"en\"],\"sourceLanguage\":\"nl\",\"importedAt\":\"2026-09-15T12:26:51Z\"}\n"
+  },
+  {
+   "id": 7,
+   "method": "POST",
+   "path": "/meeting/sessions",
+   "requestBody": "{\"pigeonId\":\"individualist\",\"playbackTracking\":true,\"lang\":\"nl\",\"autonomous\":true,\"eagerness\":\"normal\",\"cooldownSeconds\":0}",
+   "t": 1222,
+   "headMs": 4,
+   "status": 201,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 4,
+   "body": "{\"autonomous\":true,\"autonomyPaused\":false,\"eagerness\":\"normal\",\"lang\":\"nl\",\"listening\":\"reconnecting\",\"pigeonId\":\"individualist\",\"playbackTracking\":true,\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"settings\":{\"turnId\":\"0\",\"autonomyPaused\":false,\"playbackTracking\":true,\"autonomous\":true,\"eagerness\":\"normal\",\"cooldownSeconds\":0},\"voice\":\"ready\"}\n"
+  },
+  {
+   "id": 78,
+   "method": "POST",
+   "path": "/meeting/sessions/b825783b8d2cc86d13252f04eff53177/playback",
+   "requestBody": "{\"turnId\":\"1\",\"state\":\"started\"}",
+   "t": 19546,
+   "headMs": 2,
+   "status": 202,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"accepted\":true,\"settings\":{\"turnId\":\"1\",\"autonomyPaused\":false,\"playbackTracking\":true,\"autonomous\":true,\"eagerness\":\"normal\",\"cooldownSeconds\":0},\"speaking\":true}\n"
+  },
+  {
+   "id": 152,
+   "method": "POST",
+   "path": "/meeting/sessions/b825783b8d2cc86d13252f04eff53177/playback",
+   "requestBody": "{\"turnId\":\"1\",\"state\":\"ended\"}",
+   "t": 38281,
+   "headMs": 2,
+   "status": 202,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"accepted\":true,\"settings\":{\"turnId\":\"1\",\"autonomyPaused\":false,\"playbackTracking\":true,\"autonomous\":true,\"eagerness\":\"normal\",\"cooldownSeconds\":0},\"speaking\":false}\n"
+  },
+  {
+   "id": 162,
+   "method": "DELETE",
+   "path": "/meeting/sessions/b825783b8d2cc86d13252f04eff53177",
+   "requestBody": null,
+   "t": 40598,
+   "headMs": 7,
+   "status": 204,
+   "headers": [],
+   "endMs": 7,
+   "body": ""
+  }
+ ],
+ "audioUpload": {
+  "requests": 152,
+  "statuses": {
+   "202": 152
+  },
+  "firstMs": 1668,
+  "lastMs": 40350
+ },
+ "channels": [
+  {
+   "channel": 1,
+   "path": "/meeting/sessions/b825783b8d2cc86d13252f04eff53177/events",
+   "t": 1226,
+   "messages": [
+    {
+     "t": 1234,
+     "data": "{\"type\":\"state\",\"turnId\":\"0\",\"autonomyPaused\":false,\"playbackTracking\":true,\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"pigeonId\":\"individualist\",\"lang\":\"nl\",\"listening\":\"reconnecting\",\"speaking\":false,\"detector\":{\"enabled\":true,\"state\":\"ready\",\"retryable\":false},\"settings\":{\"turnId\":\"0\",\"autonomyPaused\":false,\"playbackTracking\":true,\"autonomous\":true,\"eagerness\":\"normal\",\"cooldownSeconds\":0},\"voice\":\"ready\"}"
+    },
+    {
+     "t": 1352,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "t": 6226,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "t": 6377,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"speaking\":false,\"text\":\"Dan\"}"
+    },
+    {
+     "t": 6557,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"speaking\":false,\"text\":\"Dan slu\"}"
+    },
+    {
+     "t": 6880,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"speaking\":false,\"text\":\"Dan sluiten\"}"
+    },
+    {
+     "t": 7000,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"speaking\":false,\"text\":\"Dan sluiten we\"}"
+    },
+    {
+     "t": 7045,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"speaking\":false,\"text\":\"Dan sluiten we de\"}"
+    },
+    {
+     "t": 7345,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"speaking\":false,\"text\":\"Dan sluiten we de af\"}"
+    },
+    {
+     "t": 7383,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"speaking\":false,\"text\":\"Dan sluiten we de afval\"}"
+    },
+    {
+     "t": 7511,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"speaking\":false,\"text\":\"Dan sluiten we de afvalbakk\"}"
+    },
+    {
+     "t": 7859,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"speaking\":false,\"text\":\"Dan sluiten we de afvalbakkens\"}"
+    },
+    {
+     "t": 7911,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"speaking\":false,\"text\":\"Dan sluiten we de afvalbakkens nach\"}"
+    },
+    {
+     "t": 8033,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"speaking\":false,\"text\":\"Dan sluiten we de afvalbakkens nachts\"}"
+    },
+    {
+     "t": 8365,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"speaking\":false,\"text\":\"Dan sluiten we de afvalbakkens nachts ook\"}"
+    },
+    {
+     "t": 8422,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"speaking\":false,\"text\":\"Dan sluiten we de afvalbakkens nachts ook met\"}"
+    },
+    {
+     "t": 8543,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"speaking\":false,\"text\":\"Dan sluiten we de afvalbakkens nachts ook mete\"}"
+    },
+    {
+     "t": 8590,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"speaking\":false,\"text\":\"Dan sluiten we de afvalbakkens nachts ook meteen\"}"
+    },
+    {
+     "t": 8890,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"speaking\":false,\"text\":\"Dan sluiten we de afvalbakkens nachts ook meteen af\"}"
+    },
+    {
+     "t": 8946,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"speaking\":false,\"text\":\"Dan sluiten we de afvalbakkens nachts ook meteen af.\",\"final\":true}"
+    },
+    {
+     "t": 11476,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "t": 16726,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "t": 19117,
+     "data": "{\"type\":\"candidate\",\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"speaking\":false,\"candidate\":{\"id\":\"0a7a49d933fcb77b0f6389d4dd21f318\",\"topic\":{\"id\":\"city-space\",\"label\":{\"en\":\"Whose city is it\",\"nl\":\"Van wie is de stad\"}},\"score\":0.8,\"reason\":\"topic\",\"sources\":3}}"
+    },
+    {
+     "t": 19118,
+     "data": "{\"type\":\"arousal\",\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"speaking\":false,\"arousal\":0.8}"
+    },
+    {
+     "t": 19118,
+     "data": "{\"type\":\"candidate\",\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"speaking\":false}"
+    },
+    {
+     "t": 19118,
+     "data": "{\"type\":\"intervention\",\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"speaking\":false,\"topic\":{\"id\":\"city-space\",\"label\":{\"en\":\"Whose city is it\",\"nl\":\"Van wie is de stad\"}},\"score\":0.8}"
+    },
+    {
+     "t": 19118,
+     "data": "{\"type\":\"persona\",\"turnId\":\"1\",\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"pigeonId\":\"individualist\",\"lang\":\"nl\",\"speaking\":false}"
+    },
+    {
+     "t": 19118,
+     "data": "{\"type\":\"sources\",\"turnId\":\"1\",\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"speaking\":false,\"kbStatus\":\"sources\",\"sources\":[{\"grounding\":\"corpus_grounded\",\"number\":1,\"type\":\"destillaat\",\"id\":\"destillaat:14bae0cb-411b-5cf3-88e2-ec78f0e9fbd8\",\"text\":\"Het correct ontwerpen van vuilnisbakken met een beperkte toegang voor dieren is een aanbevolen methode om de overlast van duiven in woonwijken te verminderen.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:36878a2d-e678-54a2-98a9-1a72d88d450b\",\"citation\":\"Przybylska, K., Haidt, A., Myczko, Ł., Ekner-Grzyb, A., Rosin, Z. M., Kwieciński, Z., Tryjanowski, P., Suchodolska, J., Takacs, V., Jankowiak, Ł., Tobółka, M., Wasielewski, O., Graclik, A., Krawczyk, A. J., Kasprzak, A., Szwajkowski, P., Wylegała, P., Malecha, A. W., Mizera, T., \\u0026 Skórka, P. (2012). Local and Landscape-Level Factors Affecting the Density and Distribution of the Feral Pigeon Columba livia var. domestica in an Urban Environment. Acta Ornithologica, 47(1), 37–45. https://doi.org/10.3161/000164512X653908\",\"citationConfidence\":\"high\",\"quote\":\"The proper construction of\\nlitter bins with limited animal access is also a recommended solution to the problem of these birds\\nin residential areas.\",\"paper\":\"przybylska2012\",\"doi\":\"10.3161/000164512X653908\",\"passages\":[{\"id\":\"quote:93d27514-2722-52fa-bd3c-ccde8836d157\",\"text\":\"The proper construction of\\nlitter bins with limited animal access is also a recommended solution to the problem of these birds\\nin residential areas.\"}]},\"localized\":{\"text\":{\"en\":\"Properly designing garbage bins with limited access for animals is a recommended method for reducing pigeon nuisance in residential neighborhoods.\",\"nl\":\"Het correct ontwerpen van vuilnisbakken met een beperkte toegang voor dieren is een aanbevolen methode om de overlast van duiven in woonwijken te verminderen.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":2,\"type\":\"destillaat\",\"id\":\"destillaat:fd01fee8-1ca5-5cce-9f5f-f340972e6b2a\",\"text\":\"Om de duivenpopulatie in stedelijke gebieden te beheersen, adviseren de onderzoekers om de toegang tot voedselbronnen te beperken door het gebruik van ontoegankelijke vuilnisbakken.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:36878a2d-e678-54a2-98a9-1a72d88d450b\",\"citation\":\"Przybylska, K., Haidt, A., Myczko, Ł., Ekner-Grzyb, A., Rosin, Z. M., Kwieciński, Z., Tryjanowski, P., Suchodolska, J., Takacs, V., Jankowiak, Ł., Tobółka, M., Wasielewski, O., Graclik, A., Krawczyk, A. J., Kasprzak, A., Szwajkowski, P., Wylegała, P., Malecha, A. W., Mizera, T., \\u0026 Skórka, P. (2012). Local and Landscape-Level Factors Affecting the Density and Distribution of the Feral Pigeon Columba livia var. domestica in an Urban Environment. Acta Ornithologica, 47(1), 37–45. https://doi.org/10.3161/000164512X653908\",\"citationConfidence\":\"high\",\"quote\":\"To control the number of pigeons in urban areas,\\nwe suggest preventing access to local food resources by using litter-bins that are inaccessible to animals.\",\"paper\":\"przybylska2012\",\"doi\":\"10.3161/000164512X653908\",\"passages\":[{\"id\":\"quote:d89864e6-bbd8-55e9-836a-fd8b3c2f5be2\",\"text\":\"To control the number of pigeons in urban areas,\\nwe suggest preventing access to local food resources by using litter-bins that are inaccessible to animals.\"}]},\"localized\":{\"text\":{\"en\":\"To control the pigeon population in urban areas, the researchers recommend limiting access to food sources by using inaccessible waste bins.\",\"nl\":\"Om de duivenpopulatie in stedelijke gebieden te beheersen, adviseren de onderzoekers om de toegang tot voedselbronnen te beperken door het gebruik van ontoegankelijke vuilnisbakken.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":3,\"type\":\"destillaat\",\"id\":\"destillaat:d76fec90-28a1-55df-aa2b-f1dadd9bb62c\",\"text\":\"Het beter afsluiten van vuilnisbakken heeft een breder ecologisch voordeel, omdat het ook de voedseltoegang voor andere ongewenste stadsdieren zoals meeuwen, knaagdieren en zwerfkatten beperkt.\",\"perspective\":\"Ecologische waardering\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:36878a2d-e678-54a2-98a9-1a72d88d450b\",\"citation\":\"Przybylska, K., Haidt, A., Myczko, Ł., Ekner-Grzyb, A., Rosin, Z. M., Kwieciński, Z., Tryjanowski, P., Suchodolska, J., Takacs, V., Jankowiak, Ł., Tobółka, M., Wasielewski, O., Graclik, A., Krawczyk, A. J., Kasprzak, A., Szwajkowski, P., Wylegała, P., Malecha, A. W., Mizera, T., \\u0026 Skórka, P. (2012). Local and Landscape-Level Factors Affecting the Density and Distribution of the Feral Pigeon Columba livia var. domestica in an Urban Environment. Acta Ornithologica, 47(1), 37–45. https://doi.org/10.3161/000164512X653908\",\"citationConfidence\":\"high\",\"quote\":\"This would limit access to\\nfood, not only for pigeons, but also to other undesirable species such as corvids, gulls, rodents and\\ndomestic cats.\",\"paper\":\"przybylska2012\",\"doi\":\"10.3161/000164512X653908\",\"passages\":[{\"id\":\"quote:bfc8d982-1268-52e0-bb80-9a06d8bf26c1\",\"text\":\"This would limit access to\\nfood, not only for pigeons, but also to other undesirable species such as corvids, gulls, rodents and\\ndomestic cats.\"}]},\"localized\":{\"text\":{\"en\":\"Better sealing of garbage bins has a broader ecological benefit, because it also limits food access for other unwanted urban animals such as gulls, rodents, and stray cats.\",\"nl\":\"Het beter afsluiten van vuilnisbakken heeft een breder ecologisch voordeel, omdat het ook de voedseltoegang voor andere ongewenste stadsdieren zoals meeuwen, knaagdieren en zwerfkatten beperkt.\"},\"perspective\":{\"en\":\"Ecological appreciation\",\"nl\":\"Ecologische waardering\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"}]}"
+    },
+    {
+     "t": 19119,
+     "data": "{\"type\":\"text\",\"turnId\":\"1\",\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"speaking\":false,\"delta\":\"Jullie willen ons dus uithongeren door de vuilnisbakken af te sluiten. Het klopt dat dichte afvalbakken onze toegang tot voedsel beperken [3], wat door onderzoekers wordt aangeraden om onze aantallen te beheersen [2]. Maar wij weigeren te verhongeren voor jullie nette straatbeeld. Waarom bepalen jullie over onze overleving zonder dat wij een stem hebben?\"}"
+    },
+    {
+     "t": 19120,
+     "data": "{\"type\":\"text_done\",\"turnId\":\"1\",\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"speaking\":false,\"kbStatus\":\"sources\",\"sources\":[{\"grounding\":\"corpus_grounded\",\"number\":1,\"type\":\"destillaat\",\"id\":\"destillaat:14bae0cb-411b-5cf3-88e2-ec78f0e9fbd8\",\"text\":\"Het correct ontwerpen van vuilnisbakken met een beperkte toegang voor dieren is een aanbevolen methode om de overlast van duiven in woonwijken te verminderen.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:36878a2d-e678-54a2-98a9-1a72d88d450b\",\"citation\":\"Przybylska, K., Haidt, A., Myczko, Ł., Ekner-Grzyb, A., Rosin, Z. M., Kwieciński, Z., Tryjanowski, P., Suchodolska, J., Takacs, V., Jankowiak, Ł., Tobółka, M., Wasielewski, O., Graclik, A., Krawczyk, A. J., Kasprzak, A., Szwajkowski, P., Wylegała, P., Malecha, A. W., Mizera, T., \\u0026 Skórka, P. (2012). Local and Landscape-Level Factors Affecting the Density and Distribution of the Feral Pigeon Columba livia var. domestica in an Urban Environment. Acta Ornithologica, 47(1), 37–45. https://doi.org/10.3161/000164512X653908\",\"citationConfidence\":\"high\",\"quote\":\"The proper construction of\\nlitter bins with limited animal access is also a recommended solution to the problem of these birds\\nin residential areas.\",\"paper\":\"przybylska2012\",\"doi\":\"10.3161/000164512X653908\",\"passages\":[{\"id\":\"quote:93d27514-2722-52fa-bd3c-ccde8836d157\",\"text\":\"The proper construction of\\nlitter bins with limited animal access is also a recommended solution to the problem of these birds\\nin residential areas.\"}]},\"localized\":{\"text\":{\"en\":\"Properly designing garbage bins with limited access for animals is a recommended method for reducing pigeon nuisance in residential neighborhoods.\",\"nl\":\"Het correct ontwerpen van vuilnisbakken met een beperkte toegang voor dieren is een aanbevolen methode om de overlast van duiven in woonwijken te verminderen.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":2,\"type\":\"destillaat\",\"id\":\"destillaat:fd01fee8-1ca5-5cce-9f5f-f340972e6b2a\",\"text\":\"Om de duivenpopulatie in stedelijke gebieden te beheersen, adviseren de onderzoekers om de toegang tot voedselbronnen te beperken door het gebruik van ontoegankelijke vuilnisbakken.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:36878a2d-e678-54a2-98a9-1a72d88d450b\",\"citation\":\"Przybylska, K., Haidt, A., Myczko, Ł., Ekner-Grzyb, A., Rosin, Z. M., Kwieciński, Z., Tryjanowski, P., Suchodolska, J., Takacs, V., Jankowiak, Ł., Tobółka, M., Wasielewski, O., Graclik, A., Krawczyk, A. J., Kasprzak, A., Szwajkowski, P., Wylegała, P., Malecha, A. W., Mizera, T., \\u0026 Skórka, P. (2012). Local and Landscape-Level Factors Affecting the Density and Distribution of the Feral Pigeon Columba livia var. domestica in an Urban Environment. Acta Ornithologica, 47(1), 37–45. https://doi.org/10.3161/000164512X653908\",\"citationConfidence\":\"high\",\"quote\":\"To control the number of pigeons in urban areas,\\nwe suggest preventing access to local food resources by using litter-bins that are inaccessible to animals.\",\"paper\":\"przybylska2012\",\"doi\":\"10.3161/000164512X653908\",\"passages\":[{\"id\":\"quote:d89864e6-bbd8-55e9-836a-fd8b3c2f5be2\",\"text\":\"To control the number of pigeons in urban areas,\\nwe suggest preventing access to local food resources by using litter-bins that are inaccessible to animals.\"}]},\"localized\":{\"text\":{\"en\":\"To control the pigeon population in urban areas, the researchers recommend limiting access to food sources by using inaccessible waste bins.\",\"nl\":\"Om de duivenpopulatie in stedelijke gebieden te beheersen, adviseren de onderzoekers om de toegang tot voedselbronnen te beperken door het gebruik van ontoegankelijke vuilnisbakken.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":3,\"type\":\"destillaat\",\"id\":\"destillaat:d76fec90-28a1-55df-aa2b-f1dadd9bb62c\",\"text\":\"Het beter afsluiten van vuilnisbakken heeft een breder ecologisch voordeel, omdat het ook de voedseltoegang voor andere ongewenste stadsdieren zoals meeuwen, knaagdieren en zwerfkatten beperkt.\",\"perspective\":\"Ecologische waardering\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:36878a2d-e678-54a2-98a9-1a72d88d450b\",\"citation\":\"Przybylska, K., Haidt, A., Myczko, Ł., Ekner-Grzyb, A., Rosin, Z. M., Kwieciński, Z., Tryjanowski, P., Suchodolska, J., Takacs, V., Jankowiak, Ł., Tobółka, M., Wasielewski, O., Graclik, A., Krawczyk, A. J., Kasprzak, A., Szwajkowski, P., Wylegała, P., Malecha, A. W., Mizera, T., \\u0026 Skórka, P. (2012). Local and Landscape-Level Factors Affecting the Density and Distribution of the Feral Pigeon Columba livia var. domestica in an Urban Environment. Acta Ornithologica, 47(1), 37–45. https://doi.org/10.3161/000164512X653908\",\"citationConfidence\":\"high\",\"quote\":\"This would limit access to\\nfood, not only for pigeons, but also to other undesirable species such as corvids, gulls, rodents and\\ndomestic cats.\",\"paper\":\"przybylska2012\",\"doi\":\"10.3161/000164512X653908\",\"passages\":[{\"id\":\"quote:bfc8d982-1268-52e0-bb80-9a06d8bf26c1\",\"text\":\"This would limit access to\\nfood, not only for pigeons, but also to other undesirable species such as corvids, gulls, rodents and\\ndomestic cats.\"}]},\"localized\":{\"text\":{\"en\":\"Better sealing of garbage bins has a broader ecological benefit, because it also limits food access for other unwanted urban animals such as gulls, rodents, and stray cats.\",\"nl\":\"Het beter afsluiten van vuilnisbakken heeft een breder ecologisch voordeel, omdat het ook de voedseltoegang voor andere ongewenste stadsdieren zoals meeuwen, knaagdieren en zwerfkatten beperkt.\"},\"perspective\":{\"en\":\"Ecological appreciation\",\"nl\":\"Ecologische waardering\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"}]}"
+    },
+    {
+     "t": 19545,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 1,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 0,
+      "length": 24576
+     }
+    },
+    {
+     "t": 19547,
+     "data": "{\"type\":\"playback_state\",\"turnId\":\"1\",\"playback\":\"playing\",\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"speaking\":true}"
+    },
+    {
+     "t": 19841,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 2,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 24576,
+      "length": 12288
+     }
+    },
+    {
+     "t": 20043,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 3,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 36864,
+      "length": 12288
+     }
+    },
+    {
+     "t": 20264,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 4,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 49152,
+      "length": 12288
+     }
+    },
+    {
+     "t": 20487,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 5,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 61440,
+      "length": 12288
+     }
+    },
+    {
+     "t": 20705,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 6,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 73728,
+      "length": 12288
+     }
+    },
+    {
+     "t": 20909,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 7,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 86016,
+      "length": 12288
+     }
+    },
+    {
+     "t": 21111,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 8,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 98304,
+      "length": 12288
+     }
+    },
+    {
+     "t": 21315,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 9,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 110592,
+      "length": 12288
+     }
+    },
+    {
+     "t": 21542,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 10,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 122880,
+      "length": 12288
+     }
+    },
+    {
+     "t": 21726,
+     "data": "{\"type\":\"arousal\",\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"speaking\":false,\"arousal\":0.7430733973212555}"
+    },
+    {
+     "t": 21726,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"listening\":\"listening\",\"speaking\":true}"
+    },
+    {
+     "t": 21758,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 11,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 135168,
+      "length": 12288
+     }
+    },
+    {
+     "t": 21976,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 12,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 147456,
+      "length": 12288
+     }
+    },
+    {
+     "t": 22179,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 13,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 159744,
+      "length": 12288
+     }
+    },
+    {
+     "t": 22388,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 14,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 172032,
+      "length": 12288
+     }
+    },
+    {
+     "t": 22614,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 15,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 184320,
+      "length": 12288
+     }
+    },
+    {
+     "t": 22813,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 16,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 196608,
+      "length": 12288
+     }
+    },
+    {
+     "t": 23109,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 17,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 208896,
+      "length": 12288
+     }
+    },
+    {
+     "t": 23281,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 18,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 221184,
+      "length": 12288
+     }
+    },
+    {
+     "t": 23481,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 19,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 233472,
+      "length": 12288
+     }
+    },
+    {
+     "t": 23666,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 20,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 245760,
+      "length": 12288
+     }
+    },
+    {
+     "t": 23913,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 21,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 258048,
+      "length": 12288
+     }
+    },
+    {
+     "t": 24159,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 22,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 270336,
+      "length": 12288
+     }
+    },
+    {
+     "t": 24334,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 23,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 282624,
+      "length": 12288
+     }
+    },
+    {
+     "t": 24516,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 24,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 294912,
+      "length": 12288
+     }
+    },
+    {
+     "t": 24760,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 25,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 307200,
+      "length": 12288
+     }
+    },
+    {
+     "t": 24943,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 26,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 319488,
+      "length": 12288
+     }
+    },
+    {
+     "t": 25207,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 27,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 331776,
+      "length": 12288
+     }
+    },
+    {
+     "t": 25424,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 28,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 344064,
+      "length": 12288
+     }
+    },
+    {
+     "t": 25619,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 29,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 356352,
+      "length": 12288
+     }
+    },
+    {
+     "t": 25799,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 30,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 368640,
+      "length": 12288
+     }
+    },
+    {
+     "t": 26051,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 31,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 380928,
+      "length": 12288
+     }
+    },
+    {
+     "t": 26260,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 32,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 393216,
+      "length": 12288
+     }
+    },
+    {
+     "t": 26462,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 33,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 405504,
+      "length": 12288
+     }
+    },
+    {
+     "t": 26686,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 34,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 417792,
+      "length": 12288
+     }
+    },
+    {
+     "t": 26868,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 35,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 430080,
+      "length": 12288
+     }
+    },
+    {
+     "t": 26976,
+     "data": "{\"type\":\"arousal\",\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"speaking\":false,\"arousal\":0.7208778015070793}"
+    },
+    {
+     "t": 26977,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"listening\":\"listening\",\"speaking\":true}"
+    },
+    {
+     "t": 27105,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 36,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 442368,
+      "length": 12288
+     }
+    },
+    {
+     "t": 27319,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 37,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 454656,
+      "length": 12288
+     }
+    },
+    {
+     "t": 27532,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 38,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 466944,
+      "length": 12288
+     }
+    },
+    {
+     "t": 27720,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 39,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 479232,
+      "length": 12288
+     }
+    },
+    {
+     "t": 27934,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 40,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 491520,
+      "length": 12288
+     }
+    },
+    {
+     "t": 28150,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 41,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 503808,
+      "length": 12288
+     }
+    },
+    {
+     "t": 28364,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 42,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 516096,
+      "length": 12288
+     }
+    },
+    {
+     "t": 28572,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 43,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 528384,
+      "length": 12288
+     }
+    },
+    {
+     "t": 28875,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 44,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 540672,
+      "length": 12288
+     }
+    },
+    {
+     "t": 28998,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 45,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 552960,
+      "length": 12288
+     }
+    },
+    {
+     "t": 29211,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 46,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 565248,
+      "length": 12288
+     }
+    },
+    {
+     "t": 29429,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 47,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 577536,
+      "length": 12288
+     }
+    },
+    {
+     "t": 29672,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 48,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 589824,
+      "length": 12288
+     }
+    },
+    {
+     "t": 29924,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 49,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 602112,
+      "length": 12288
+     }
+    },
+    {
+     "t": 30070,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 50,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 614400,
+      "length": 12288
+     }
+    },
+    {
+     "t": 30308,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 51,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 626688,
+      "length": 12288
+     }
+    },
+    {
+     "t": 30509,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 52,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 638976,
+      "length": 12288
+     }
+    },
+    {
+     "t": 30715,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 53,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 651264,
+      "length": 12288
+     }
+    },
+    {
+     "t": 30973,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 54,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 663552,
+      "length": 12288
+     }
+    },
+    {
+     "t": 31155,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 55,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 675840,
+      "length": 12288
+     }
+    },
+    {
+     "t": 31351,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 56,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 688128,
+      "length": 12288
+     }
+    },
+    {
+     "t": 31564,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 57,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 700416,
+      "length": 12288
+     }
+    },
+    {
+     "t": 31769,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 58,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 712704,
+      "length": 12288
+     }
+    },
+    {
+     "t": 32022,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 59,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 724992,
+      "length": 12288
+     }
+    },
+    {
+     "t": 32200,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 60,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 737280,
+      "length": 12288
+     }
+    },
+    {
+     "t": 32226,
+     "data": "{\"type\":\"arousal\",\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"speaking\":false,\"arousal\":0.6993451914784408}"
+    },
+    {
+     "t": 32227,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"listening\":\"listening\",\"speaking\":true}"
+    },
+    {
+     "t": 32421,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 61,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 749568,
+      "length": 12288
+     }
+    },
+    {
+     "t": 32636,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 62,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 761856,
+      "length": 12288
+     }
+    },
+    {
+     "t": 32879,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 63,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 774144,
+      "length": 12288
+     }
+    },
+    {
+     "t": 33092,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 64,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 786432,
+      "length": 12288
+     }
+    },
+    {
+     "t": 33283,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 65,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 798720,
+      "length": 12288
+     }
+    },
+    {
+     "t": 33501,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 66,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 811008,
+      "length": 12288
+     }
+    },
+    {
+     "t": 33709,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 67,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 823296,
+      "length": 12288
+     }
+    },
+    {
+     "t": 33924,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 68,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 835584,
+      "length": 12288
+     }
+    },
+    {
+     "t": 34137,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 69,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 847872,
+      "length": 12288
+     }
+    },
+    {
+     "t": 34337,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 70,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 860160,
+      "length": 12288
+     }
+    },
+    {
+     "t": 34522,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "b825783b8d2cc86d13252f04eff53177",
+      "speaking": false,
+      "seq": 71,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 872448,
+      "length": 24576
+     }
+    },
+    {
+     "t": 34554,
+     "data": "{\"type\":\"tts_done\",\"turnId\":\"1\",\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"speaking\":false,\"frames\":71}"
+    },
+    {
+     "t": 34554,
+     "data": "{\"type\":\"response_done\",\"turnId\":\"1\",\"playbackTracking\":true,\"playback\":\"playing\",\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"speaking\":false,\"kbStatus\":\"sources\",\"sources\":[{\"grounding\":\"corpus_grounded\",\"number\":1,\"type\":\"destillaat\",\"id\":\"destillaat:14bae0cb-411b-5cf3-88e2-ec78f0e9fbd8\",\"text\":\"Het correct ontwerpen van vuilnisbakken met een beperkte toegang voor dieren is een aanbevolen methode om de overlast van duiven in woonwijken te verminderen.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:36878a2d-e678-54a2-98a9-1a72d88d450b\",\"citation\":\"Przybylska, K., Haidt, A., Myczko, Ł., Ekner-Grzyb, A., Rosin, Z. M., Kwieciński, Z., Tryjanowski, P., Suchodolska, J., Takacs, V., Jankowiak, Ł., Tobółka, M., Wasielewski, O., Graclik, A., Krawczyk, A. J., Kasprzak, A., Szwajkowski, P., Wylegała, P., Malecha, A. W., Mizera, T., \\u0026 Skórka, P. (2012). Local and Landscape-Level Factors Affecting the Density and Distribution of the Feral Pigeon Columba livia var. domestica in an Urban Environment. Acta Ornithologica, 47(1), 37–45. https://doi.org/10.3161/000164512X653908\",\"citationConfidence\":\"high\",\"quote\":\"The proper construction of\\nlitter bins with limited animal access is also a recommended solution to the problem of these birds\\nin residential areas.\",\"paper\":\"przybylska2012\",\"doi\":\"10.3161/000164512X653908\",\"passages\":[{\"id\":\"quote:93d27514-2722-52fa-bd3c-ccde8836d157\",\"text\":\"The proper construction of\\nlitter bins with limited animal access is also a recommended solution to the problem of these birds\\nin residential areas.\"}]},\"localized\":{\"text\":{\"en\":\"Properly designing garbage bins with limited access for animals is a recommended method for reducing pigeon nuisance in residential neighborhoods.\",\"nl\":\"Het correct ontwerpen van vuilnisbakken met een beperkte toegang voor dieren is een aanbevolen methode om de overlast van duiven in woonwijken te verminderen.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":2,\"type\":\"destillaat\",\"id\":\"destillaat:fd01fee8-1ca5-5cce-9f5f-f340972e6b2a\",\"text\":\"Om de duivenpopulatie in stedelijke gebieden te beheersen, adviseren de onderzoekers om de toegang tot voedselbronnen te beperken door het gebruik van ontoegankelijke vuilnisbakken.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:36878a2d-e678-54a2-98a9-1a72d88d450b\",\"citation\":\"Przybylska, K., Haidt, A., Myczko, Ł., Ekner-Grzyb, A., Rosin, Z. M., Kwieciński, Z., Tryjanowski, P., Suchodolska, J., Takacs, V., Jankowiak, Ł., Tobółka, M., Wasielewski, O., Graclik, A., Krawczyk, A. J., Kasprzak, A., Szwajkowski, P., Wylegała, P., Malecha, A. W., Mizera, T., \\u0026 Skórka, P. (2012). Local and Landscape-Level Factors Affecting the Density and Distribution of the Feral Pigeon Columba livia var. domestica in an Urban Environment. Acta Ornithologica, 47(1), 37–45. https://doi.org/10.3161/000164512X653908\",\"citationConfidence\":\"high\",\"quote\":\"To control the number of pigeons in urban areas,\\nwe suggest preventing access to local food resources by using litter-bins that are inaccessible to animals.\",\"paper\":\"przybylska2012\",\"doi\":\"10.3161/000164512X653908\",\"passages\":[{\"id\":\"quote:d89864e6-bbd8-55e9-836a-fd8b3c2f5be2\",\"text\":\"To control the number of pigeons in urban areas,\\nwe suggest preventing access to local food resources by using litter-bins that are inaccessible to animals.\"}]},\"localized\":{\"text\":{\"en\":\"To control the pigeon population in urban areas, the researchers recommend limiting access to food sources by using inaccessible waste bins.\",\"nl\":\"Om de duivenpopulatie in stedelijke gebieden te beheersen, adviseren de onderzoekers om de toegang tot voedselbronnen te beperken door het gebruik van ontoegankelijke vuilnisbakken.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":3,\"type\":\"destillaat\",\"id\":\"destillaat:d76fec90-28a1-55df-aa2b-f1dadd9bb62c\",\"text\":\"Het beter afsluiten van vuilnisbakken heeft een breder ecologisch voordeel, omdat het ook de voedseltoegang voor andere ongewenste stadsdieren zoals meeuwen, knaagdieren en zwerfkatten beperkt.\",\"perspective\":\"Ecologische waardering\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:36878a2d-e678-54a2-98a9-1a72d88d450b\",\"citation\":\"Przybylska, K., Haidt, A., Myczko, Ł., Ekner-Grzyb, A., Rosin, Z. M., Kwieciński, Z., Tryjanowski, P., Suchodolska, J., Takacs, V., Jankowiak, Ł., Tobółka, M., Wasielewski, O., Graclik, A., Krawczyk, A. J., Kasprzak, A., Szwajkowski, P., Wylegała, P., Malecha, A. W., Mizera, T., \\u0026 Skórka, P. (2012). Local and Landscape-Level Factors Affecting the Density and Distribution of the Feral Pigeon Columba livia var. domestica in an Urban Environment. Acta Ornithologica, 47(1), 37–45. https://doi.org/10.3161/000164512X653908\",\"citationConfidence\":\"high\",\"quote\":\"This would limit access to\\nfood, not only for pigeons, but also to other undesirable species such as corvids, gulls, rodents and\\ndomestic cats.\",\"paper\":\"przybylska2012\",\"doi\":\"10.3161/000164512X653908\",\"passages\":[{\"id\":\"quote:bfc8d982-1268-52e0-bb80-9a06d8bf26c1\",\"text\":\"This would limit access to\\nfood, not only for pigeons, but also to other undesirable species such as corvids, gulls, rodents and\\ndomestic cats.\"}]},\"localized\":{\"text\":{\"en\":\"Better sealing of garbage bins has a broader ecological benefit, because it also limits food access for other unwanted urban animals such as gulls, rodents, and stray cats.\",\"nl\":\"Het beter afsluiten van vuilnisbakken heeft een breder ecologisch voordeel, omdat het ook de voedseltoegang voor andere ongewenste stadsdieren zoals meeuwen, knaagdieren en zwerfkatten beperkt.\"},\"perspective\":{\"en\":\"Ecological appreciation\",\"nl\":\"Ecologische waardering\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"}]}"
+    },
+    {
+     "t": 34554,
+     "data": "{\"type\":\"playback_state\",\"turnId\":\"1\",\"playback\":\"playing\",\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"speaking\":true}"
+    },
+    {
+     "t": 37477,
+     "data": "{\"type\":\"arousal\",\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"speaking\":false,\"arousal\":0.6784557311450693}"
+    },
+    {
+     "t": 37477,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"listening\":\"listening\",\"speaking\":true}"
+    },
+    {
+     "t": 38282,
+     "data": "{\"type\":\"playback_state\",\"turnId\":\"1\",\"autonomyPaused\":false,\"playback\":\"ended\",\"sessionId\":\"b825783b8d2cc86d13252f04eff53177\",\"speaking\":false}"
+    }
+   ],
+   "openMs": 1234,
+   "closeMs": 40598
+  }
+ ],
+ "probes": [
+  {
+   "kind": "mic-open",
+   "t": 1306,
+   "audio": 1
+  },
+  {
+   "kind": "gesture",
+   "t": 1320,
+   "clip": "Peck"
+  },
+  {
+   "kind": "gesture",
+   "t": 1549,
+   "clip": "WingWave"
+  },
+  {
+   "kind": "gesture",
+   "t": 19119,
+   "clip": "Peck"
+  },
+  {
+   "kind": "pcm-start",
+   "t": 19546,
+   "at": 19596,
+   "duration": 0.512,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 19841,
+   "at": 20104,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 20044,
+   "at": 20361,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 20265,
+   "at": 20619,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 20488,
+   "at": 20879,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 20705,
+   "at": 21134,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 20909,
+   "at": 21391,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 21111,
+   "at": 21641,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 21316,
+   "at": 21899,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 21542,
+   "at": 22152,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 21759,
+   "at": 22406,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 21977,
+   "at": 22672,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 22180,
+   "at": 22918,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 22388,
+   "at": 23174,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 22614,
+   "at": 23437,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 22813,
+   "at": 23690,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 23109,
+   "at": 23943,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 23281,
+   "at": 24200,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 23481,
+   "at": 24454,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 23667,
+   "at": 24720,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 23913,
+   "at": 24971,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 24160,
+   "at": 25223,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 24334,
+   "at": 25483,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 24516,
+   "at": 25739,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 24761,
+   "at": 25990,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 24943,
+   "at": 26252,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 25208,
+   "at": 26511,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 25425,
+   "at": 26766,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 25619,
+   "at": 27024,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 25799,
+   "at": 27278,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 26052,
+   "at": 27531,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 26260,
+   "at": 27782,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 26462,
+   "at": 28043,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 26687,
+   "at": 28300,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 26869,
+   "at": 28551,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 27105,
+   "at": 28814,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 27319,
+   "at": 29070,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 27532,
+   "at": 29321,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 27720,
+   "at": 29583,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 27934,
+   "at": 29835,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 28151,
+   "at": 30089,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 28364,
+   "at": 30345,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 28573,
+   "at": 30602,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 28875,
+   "at": 30861,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 28998,
+   "at": 31117,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 29212,
+   "at": 31369,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 29429,
+   "at": 31623,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 29673,
+   "at": 31883,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 29925,
+   "at": 32140,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 30070,
+   "at": 32392,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 30308,
+   "at": 32646,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 30509,
+   "at": 32911,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 30715,
+   "at": 33165,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 30973,
+   "at": 33418,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 31155,
+   "at": 33674,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 31352,
+   "at": 33930,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 31564,
+   "at": 34185,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 31769,
+   "at": 34438,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 32022,
+   "at": 34696,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 32200,
+   "at": 34959,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 32421,
+   "at": 35207,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 32637,
+   "at": 35471,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 32879,
+   "at": 35718,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 33092,
+   "at": 35979,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 33284,
+   "at": 36235,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 33501,
+   "at": 36500,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 33710,
+   "at": 36752,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 33924,
+   "at": 37003,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 34137,
+   "at": 37264,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 34337,
+   "at": 37518,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 34522,
+   "at": 37767,
+   "duration": 0.512,
+   "sampleRate": 24000
+  }
+ ],
+ "transcript": [
+  {
+   "t": 8946,
+   "text": "Dan sluiten we de afvalbakkens nachts ook meteen af."
+  }
+ ],
+ "voice": [
+  {
+   "file": "stem.mp3",
+   "turnId": "1",
+   "format": "pcm16",
+   "sampleRate": 24000,
+   "bytes": 897024,
+   "ms": 18688,
+   "sha256": "132c9234ef9c53f08574b604da57d2bfce7e367bd26e75875dbc680affc16c22",
+   "encoded": "mp3, mono, 64 kbit/s (libmp3lame, bit-exact)"
+  }
+ ],
+ "checks": {
+  "reaction": "speech",
+  "delayMs": 10747,
+  "sessionLang": "nl",
+  "langMatches": true,
+  "autonomous": true
+ }
+}

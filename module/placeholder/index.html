@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="duif-placeholder" content="shell ontbreekt" />
+    <title>Digitale Duiven — shell nog niet geplaatst</title>
+    <style>
+      :root { color-scheme: light dark; }
+      body {
+        margin: 0;
+        padding: 3rem 1.5rem;
+        font: 16px/1.6 system-ui, sans-serif;
+        max-width: 42rem;
+        margin-inline: auto;
+      }
+      h1 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+      code { font-family: ui-monospace, monospace; }
+      ul { padding-left: 1.25rem; }
+    </style>
+  </head>
+  <body>
+    <h1>Digitale Duiven</h1>
+    <p>
+      De server draait, maar de parai-core-shell staat nog niet in
+      <code>static/</code>. Draai <code>make shell-static</code> om de gebouwde
+      shell erin te kopiëren en herstart daarna de server.
+    </p>
+    <p>De module zelf is ondertussen gewoon bereikbaar:</p>
+    <ul>
+      <li><a href="/api/duif/v1/health">/api/duif/v1/health</a> — de API van de duifmodule</li>
+      <li><a href="/modules/duif/bundle.js">/modules/duif/bundle.js</a> — de module-frontend (na <code>make bundle</code>)</li>
+    </ul>
+  </body>
+</html>

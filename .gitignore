@@ -1,0 +1,34 @@
+.DS_Store
+node_modules/
+dist/
+.env
+.env.local
+*.log
+
+# Playwright e2e (dev-tooling; de pagina zelf blijft buildloos)
+test-results/
+playwright-report/
+blob-report/
+.cache/ms-playwright/
+
+# Go-module: lokale workspace-bestanden nooit committen
+go.work
+go.work.sum
+go.work.*
+!go.work.example
+module/.env
+
+# de module-frontend-map valt buiten de generieke dist/-regel; de inhoud
+# (bundle.js) is alsnog gitignored in module/.gitignore, alleen .gitkeep blijft
+!module/duif/frontend/dist/
+
+# Kennisbankbundels komen nooit in git: niet de zip, niet het uitgepakte JSON,
+# niet een lokale werkmap.
+*.zip
+knowledge_base*.json
+module/kb/
+
+# The eleven selected native media exports under module/duif/frontend/public/media/
+# ARE committed (hash-verified by scripts/check-media.ts), so a fresh checkout and
+# the deploy build get the 3D pigeon without a side channel. Masters, footage and
+# Blender sources stay out of git.

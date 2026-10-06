@@ -1,0 +1,279 @@
+{
+ "format": "duiven-etalage-take/1",
+ "id": "chat-nestelen-en-stakeholder-naar-kennispartner-20260923T145753Z",
+ "kind": "chat",
+ "item": {
+  "question": "nestelen",
+  "lang": "en",
+  "route": "stakeholder>kennispartner",
+  "pigeon": "kennispartner",
+  "modulePigeon": "biological",
+  "from": "stakeholder",
+  "basedOn": "chat-nestelen-en-stakeholder-20260923T145711Z"
+ },
+ "input": {
+  "text": "Where do you prefer to nest in the city?",
+  "placeholder": true
+ },
+ "recordedAt": "2026-09-23T14:57:53.184Z",
+ "server": {
+  "base": "http://127.0.0.1:8094",
+  "modelPolicy": {
+   "model": "vertex_ai/gemini-3.5-flash",
+   "detectionModel": "vertex_ai/gemini-3.5-flash",
+   "endpoint": "https://llm-proxy.invalid"
+  },
+  "knowledge": {
+   "kbId": "Duiven",
+   "bundleSchema": "duiven/3",
+   "languages": [
+    "nl",
+    "en"
+   ],
+   "importedAt": "2026-09-15T12:26:51Z",
+   "counts": {
+    "belongs_to": 4067,
+    "belongs_to_perspective": 4067,
+    "belongs_to_subthema": 4067,
+    "contains": 4067,
+    "contains_perspective": 297,
+    "contains_subthema": 149,
+    "contains_thema": 26,
+    "destillaat": 4067,
+    "domein": 3,
+    "has_quote": 4225,
+    "interview": 120,
+    "perspective": 297,
+    "quote": 4225,
+    "subthema": 149,
+    "thema": 26
+   }
+  },
+  "database": {
+   "name": "duif_etalage",
+   "copyOf": "duif_v3"
+  },
+  "module": {
+   "commit": "44186b900325eefad26c20b91e92f7350eb81bd0",
+   "moduleTree": "272829aae8444c82053a849b7a66ccc5a5a9109f",
+   "dirty": false,
+   "paraiCore": {
+    "commit": "29c670c73b73295c8c96592947cb9622e730c51c",
+    "dirty": false
+   },
+   "tags": [
+    "skipauth"
+   ],
+   "builtAt": "2026-09-23T14:40:12.508Z",
+   "binary": "module/bin/duif-etalage",
+   "bundleSha256": "d64a902bff38bf25d090a3bfe74e3f6bf4cfc7c21cb5160bddda9c45dced540d"
+  },
+  "pigeons": [
+   {
+    "id": "biological",
+    "engine": "agent",
+    "chat": true,
+    "meeting": true,
+    "autonomousDefault": false
+   },
+   {
+    "id": "individualist",
+    "engine": "agent",
+    "chat": true,
+    "meeting": true,
+    "autonomousDefault": false
+   },
+   {
+    "id": "nonverbal",
+    "engine": "pipeline",
+    "chat": false,
+    "meeting": true,
+    "autonomousDefault": true
+   }
+  ]
+ },
+ "session": {
+  "id": "78cff25cfb634675c7bf4af1fb5c157d",
+  "lang": "en",
+  "comparison": {
+   "groupId": "a0357bf8929a2cf6111fce56a545b049",
+   "sessionId": "d26ef29ab92843f01eae2dcf02205a4d",
+   "pigeonId": "individualist",
+   "questionId": "a0357bf8929a2cf6111fce56a545b049",
+   "originalQuestion": "Where do you prefer to nest in the city?",
+   "contextMessageIds": [
+    "a0357bf8929a2cf6111fce56a545b049",
+    "5127ac5783b081a9629140222b99f65b"
+   ]
+  }
+ },
+ "finishedAt": "2026-09-23T14:58:24.454Z",
+ "exchanges": [
+  {
+   "id": 1,
+   "method": "GET",
+   "path": "/chat/sessions/d26ef29ab92843f01eae2dcf02205a4d/messages",
+   "requestBody": null,
+   "t": 0,
+   "headMs": 2,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "body": "{\"messages\":[{\"id\":\"a0357bf8929a2cf6111fce56a545b049\",\"role\":\"user\",\"kind\":\"text\",\"content\":\"Where do you prefer to nest in the city?\",\"createdAt\":\"2026-09-23T16:57:11.586365+02:00\"},{\"id\":\"2d69f7e332237047b6f63c83eaf8127c\",\"role\":\"assistant\",\"kind\":\"text\",\"persona\":\"facilitator\",\"content\":\"Let us see how the pigeon views the architecture of Rotterdam as potential homes and nesting grounds.\",\"createdAt\":\"2026-09-23T16:57:14.579317+02:00\",\"provenance\":{\"contractVersion\":\"duiven-2026-09-07-v1\",\"personaVersion\":\"ff996915bceffff46e1a92a2037311ffd17cf6dff27a35dc34325af6ba17a7a8\",\"promptVersion\":\"de87036e16a796abb1fead60162a5c4c27e14e4fbecd8ee10b88058c1b51b06a\",\"model\":\"vertex_ai/gemini-3.5-flash\",\"kbState\":\"versioned\",\"kbId\":\"Duiven\",\"kbVersion\":\"774f03e56ee7b10562e58e9b81d657647e5601647d29e74bde8ef7cb5e4fbcbf\"}},{\"id\":\"5127ac5783b081a9629140222b99f65b\",\"role\":\"assistant\",\"kind\":\"pigeon_answer\",\"persona\":\"individualist\",\"content\":\"I demand your highest ledges and refuse to hatch my chicks in the dirt. Your concrete structures mimic our natural rocky cliffs to give us shelter [1]. We choose high elevations to avoid predators [3], preferably close to your food sources [5]. Why should I leave when your hole-filled walls make the perfect homes [4]?\",\"kbStatus\":\"sources\",\"related\":true,\"createdAt\":\"2026-09-23T16:57:24.257909+02:00\",\"provenance\":{\"contractVersion\":\"duiven-2026-09-07-v1\",\"personaVersion\":\"ff996915bceffff46e1a92a2037311ffd17cf6dff27a35dc34325af6ba17a7a8\",\"promptVersion\":\"de87036e16a796abb1fead60162a5c4c27e14e4fbecd8ee10b88058c1b51b06a\",\"model\":\"vertex_ai/gemini-3.5-flash\",\"kbState\":\"versioned\",\"kbId\":\"Duiven\",\"kbVersion\":\"774f03e56ee7b10562e58e9b81d657647e5601647d29e74bde8ef7cb5e4fbcbf\"},\"sources\":[{\"number\":1,\"id\":\"destillaat:083461a1-1fab-5cfc-968b-614b07d0887c\",\"ref\":\"interview:8a797ee3-6546-506c-b90c-96ae28e39eb9\"},{\"number\":2,\"id\":\"destillaat:a962c094-4f82-559d-b87d-e4638fed49d5\",\"ref\":\"interview:53652e09-a3a2-5739-bc25-c5ab53d58915\"},{\"number\":3,\"id\":\"destillaat:3930b596-6a4c-5618-a217-10b70b4ae867\",\"ref\":\"interview:edf48f05-bf73-5872-8e8e-93c785959ff0\"},{\"number\":4,\"id\":\"destillaat:1681847a-ec1a-5104-a897-fbd590a67db1\",\"ref\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\"},{\"number\":5,\"id\":\"destillaat:02acadd0-ca83-539e-b826-fea8e89a42ca\",\"ref\":\"interview:0390dacf-0774-5d57-9ab6-feff4564589a\"},{\"number\":6,\"id\":\"destillaat:6986bef7-cc26-5656-9c3d-1c19879ec4e6\",\"ref\":\"interview:ba5582b2-1883-53ed-be4a-0412f4603e58\"},{\"number\":7,\"id\":\"destillaat:4eca7c88-41f0-57ca-8389-26cc36dad198\",\"ref\":\"interview:0390dacf-0774-5d57-9ab6-feff4564589a\"},{\"number\":8,\"id\":\"destillaat:9429913b-9a32-58fa-9550-bdd8c8f48526\",\"ref\":\"interview:0390dacf-0774-5d57-9ab6-feff4564589a\"},{\"number\":9,\"id\":\"destillaat:08b1e1d3-e4e6-5100-87ae-006df11ddf0e\",\"ref\":\"interview:4d1103a9-a603-5600-bf5e-9e0c12795736\"},{\"number\":10,\"id\":\"destillaat:c8287c0e-c70f-56ad-a7e3-6f1bfb275b46\",\"ref\":\"interview:0390dacf-0774-5d57-9ab6-feff4564589a\"},{\"number\":11,\"id\":\"destillaat:8fdb7824-0873-55a0-95d6-c19ee50aee13\",\"ref\":\"interview:0390dacf-0774-5d57-9ab6-feff4564589a\"}]},{\"id\":\"3ef7df44ad535c0ab86ec9c0fce19352\",\"role\":\"assistant\",\"kind\":\"text\",\"persona\":\"facilitator\",\"content\":\"Our high-rise architecture and concrete ledges unintentionally recreate the exact cliff environments that the pigeon's ancestors relied on for survival. This creates a constant tension between human efforts to keep buildings clean with spikes or netting, and the pigeon's natural instinct to colonize these elevated spaces. When planning the city, we are forced to choose between fighting these biological drives or designing spaces that acknowledge our shared environment. \\n\\nHow should city planners decide which buildings are reserved solely for humans, and which can be shared with urban wildlife?\",\"createdAt\":\"2026-09-23T16:57:31.105853+02:00\",\"provenance\":{\"contractVersion\":\"duiven-2026-09-07-v1\",\"personaVersion\":\"ff996915bceffff46e1a92a2037311ffd17cf6dff27a35dc34325af6ba17a7a8\",\"promptVersion\":\"de87036e16a796abb1fead60162a5c4c27e14e4fbecd8ee10b88058c1b51b06a\",\"model\":\"vertex_ai/gemini-3.5-flash\",\"kbState\":\"versioned\",\"kbId\":\"Duiven\",\"kbVersion\":\"774f03e56ee7b10562e58e9b81d657647e5601647d29e74bde8ef7cb5e4fbcbf\"}}]}",
+   "endMs": 2,
+   "compacted": "bronnen per rij ingekort tot nummer en id; de volledige bronnen staan in de stroom van de beurt"
+  },
+  {
+   "id": 2,
+   "method": "POST",
+   "path": "/chat/comparisons",
+   "requestBody": {
+    "requestId": "2049fbbb45f346e5d22ca442bf5ae3ab",
+    "sourceSessionId": "d26ef29ab92843f01eae2dcf02205a4d",
+    "questionId": "a0357bf8929a2cf6111fce56a545b049",
+    "pigeonId": "biological"
+   },
+   "t": 2,
+   "headMs": 5,
+   "status": 201,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "body": "{\"session\":{\"id\":\"78cff25cfb634675c7bf4af1fb5c157d\",\"pigeonId\":\"biological\",\"lang\":\"en\",\"createdAt\":\"2026-09-23T16:57:53.188165+02:00\",\"updatedAt\":\"2026-09-23T16:57:53.188165+02:00\",\"comparison\":{\"groupId\":\"a0357bf8929a2cf6111fce56a545b049\",\"sessionId\":\"d26ef29ab92843f01eae2dcf02205a4d\",\"pigeonId\":\"individualist\",\"questionId\":\"a0357bf8929a2cf6111fce56a545b049\",\"originalQuestion\":\"Where do you prefer to nest in the city?\",\"contextMessageIds\":[\"a0357bf8929a2cf6111fce56a545b049\",\"5127ac5783b081a9629140222b99f65b\"]},\"title\":\"Where do you prefer to nest in the city?\"}}\n",
+   "endMs": 5
+  },
+  {
+   "id": 3,
+   "method": "GET",
+   "path": "/chat/sessions/78cff25cfb634675c7bf4af1fb5c157d/messages",
+   "requestBody": null,
+   "t": 7,
+   "headMs": 1,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "body": "{\"messages\":[{\"id\":\"e5e67fa79fcfd5fad31e4ad13c1a7b93\",\"role\":\"user\",\"kind\":\"text\",\"content\":\"Where do you prefer to nest in the city?\",\"createdAt\":\"2026-09-23T16:57:53.188165+02:00\"},{\"id\":\"daf36aad2e6685e0a0c3588892e88d40\",\"role\":\"assistant\",\"kind\":\"pigeon_answer\",\"persona\":\"individualist\",\"content\":\"I demand your highest ledges and refuse to hatch my chicks in the dirt. Your concrete structures mimic our natural rocky cliffs to give us shelter [1]. We choose high elevations to avoid predators [3], preferably close to your food sources [5]. Why should I leave when your hole-filled walls make the perfect homes [4]?\",\"kbStatus\":\"sources\",\"related\":true,\"createdAt\":\"2026-09-23T16:57:53.188165+02:00\",\"provenance\":{\"contractVersion\":\"duiven-2026-09-07-v1\",\"personaVersion\":\"ff996915bceffff46e1a92a2037311ffd17cf6dff27a35dc34325af6ba17a7a8\",\"promptVersion\":\"de87036e16a796abb1fead60162a5c4c27e14e4fbecd8ee10b88058c1b51b06a\",\"model\":\"vertex_ai/gemini-3.5-flash\",\"kbState\":\"versioned\",\"kbId\":\"Duiven\",\"kbVersion\":\"774f03e56ee7b10562e58e9b81d657647e5601647d29e74bde8ef7cb5e4fbcbf\"},\"sources\":[{\"number\":1,\"id\":\"destillaat:083461a1-1fab-5cfc-968b-614b07d0887c\",\"ref\":\"interview:8a797ee3-6546-506c-b90c-96ae28e39eb9\"},{\"number\":2,\"id\":\"destillaat:a962c094-4f82-559d-b87d-e4638fed49d5\",\"ref\":\"interview:53652e09-a3a2-5739-bc25-c5ab53d58915\"},{\"number\":3,\"id\":\"destillaat:3930b596-6a4c-5618-a217-10b70b4ae867\",\"ref\":\"interview:edf48f05-bf73-5872-8e8e-93c785959ff0\"},{\"number\":4,\"id\":\"destillaat:1681847a-ec1a-5104-a897-fbd590a67db1\",\"ref\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\"},{\"number\":5,\"id\":\"destillaat:02acadd0-ca83-539e-b826-fea8e89a42ca\",\"ref\":\"interview:0390dacf-0774-5d57-9ab6-feff4564589a\"},{\"number\":6,\"id\":\"destillaat:6986bef7-cc26-5656-9c3d-1c19879ec4e6\",\"ref\":\"interview:ba5582b2-1883-53ed-be4a-0412f4603e58\"},{\"number\":7,\"id\":\"destillaat:4eca7c88-41f0-57ca-8389-26cc36dad198\",\"ref\":\"interview:0390dacf-0774-5d57-9ab6-feff4564589a\"},{\"number\":8,\"id\":\"destillaat:9429913b-9a32-58fa-9550-bdd8c8f48526\",\"ref\":\"interview:0390dacf-0774-5d57-9ab6-feff4564589a\"},{\"number\":9,\"id\":\"destillaat:08b1e1d3-e4e6-5100-87ae-006df11ddf0e\",\"ref\":\"interview:4d1103a9-a603-5600-bf5e-9e0c12795736\"},{\"number\":10,\"id\":\"destillaat:c8287c0e-c70f-56ad-a7e3-6f1bfb275b46\",\"ref\":\"interview:0390dacf-0774-5d57-9ab6-feff4564589a\"},{\"number\":11,\"id\":\"destillaat:8fdb7824-0873-55a0-95d6-c19ee50aee13\",\"ref\":\"interview:0390dacf-0774-5d57-9ab6-feff4564589a\"}]}]}",
+   "endMs": 1,
+   "compacted": "bronnen per rij ingekort tot nummer en id; de volledige bronnen staan in de stroom van de beurt"
+  },
+  {
+   "id": 4,
+   "method": "POST",
+   "path": "/chat/turn",
+   "requestBody": {
+    "sessionId": "78cff25cfb634675c7bf4af1fb5c157d",
+    "pigeonId": "biological",
+    "message": "Where do you prefer to nest in the city?",
+    "lang": "en"
+   },
+   "t": 8,
+   "headMs": 4,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "text/event-stream"
+    ],
+    [
+     "x-duif-session-id",
+     "78cff25cfb634675c7bf4af1fb5c157d"
+    ]
+   ],
+   "chunks": [
+    {
+     "ms": 4,
+     "text": "data: {\"type\":\"phase\",\"phase\":\"facilitator\"}\n\n"
+    },
+    {
+     "ms": 22826,
+     "text": "data: {\"type\":\"tool\",\"id\":\"tool-1\",\"name\":\"ask_pigeon\"}\n\ndata: {\"type\":\"phase\",\"phase\":\"pigeon_grounding\"}\n\n"
+    },
+    {
+     "ms": 23093,
+     "text": "data: {\"type\":\"phase\",\"phase\":\"pigeon_related_search\"}\n\n"
+    },
+    {
+     "ms": 23355,
+     "text": "data: {\"type\":\"artifact\",\"id\":\"pigeon-1\",\"kind\":\"pigeon_answer\",\"persona\":\"biological\",\"kbStatus\":\"sources\",\"related\":true}\n\n"
+    },
+    {
+     "ms": 23355,
+     "text": "data: {\"type\":\"sources\",\"id\":\"pigeon-1\",\"sources\":[{\"grounding\":\"corpus_grounded\",\"number\":1,\"type\":\"destillaat\",\"id\":\"destillaat:083461a1-1fab-5cfc-968b-614b07d0887c\",\"text\":\"De nestecologie van de stadsduif is niet verstoord door verstedelijking, omdat menselijke gebouwen vergelijkbare schuilplaatsen bieden als hun natuurlijke rotsachtige leefomgeving.\",\"perspective\":\"Ecologische waardering\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8a797ee3-6546-506c-b90c-96ae28e39eb9\",\"citation\":\"Tkaczenko, H., Hetmański, T., Kamiński, P., \\u0026 Kurhaluk, N. (2024). Can blood morphology, oxidative stress, and cholinesterase activity determine health status of pigeon Columba livia f. urbana? Environmental Science and Pollution Research, 31, 19927-19945. https://doi.org/10.1007/s11356-024-32296-z\",\"citationConfidence\":\"high\",\"citationMissing\":\"issue\",\"quote\":\"Nesting ecology has not been affected, i.e., the bird of\\nthe rock complex has found sheltering places similar to the\\nnatural ones in the human dwellings.\",\"paper\":\"tkaczenko2024\",\"doi\":\"10.1007/s11356-024-32296-z\",\"passages\":[{\"id\":\"quote:0b693177-c9c0-57b0-856a-967c8d23b212\",\"text\":\"Nesting ecology has not been affected, i.e., the bird of\\nthe rock complex has found sheltering places similar to the\\nnatural ones in the human dwellings.\"}]},\"localized\":{\"text\":{\"en\":\"The nesting ecology of the urban pigeon has not been disrupted by urbanization, because human buildings offer shelters comparable to their natural rocky habitat.\",\"nl\":\"De nestecologie van de stadsduif is niet verstoord door verstedelijking, omdat menselijke gebouwen vergelijkbare schuilplaatsen bieden als hun natuurlijke rotsachtige leefomgeving.\"},\"perspective\":{\"en\":\"Ecological appreciation\",\"nl\":\"Ecologische waardering\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":2,\"type\":\"destillaat\",\"id\":\"destillaat:a962c094-4f82-559d-b87d-e4638fed49d5\",\"text\":\"De onderzoekers veronderstellen dat steden voor duiven zeer gunstige leefgebieden vormen met een overvloed aan voedsel en nestplekken, waardoor de dieren gestimuleerd worden om in een heel klein en afgebakend gebied te blijven foerageren.\",\"perspective\":\"Wetenschappelijke interesse\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:53652e09-a3a2-5739-bc25-c5ab53d58915\",\"citation\":\"Frantz, A., Pottier, M.-A., Karimi, B., Corbel, H., Aubry, E., Haussy, C., Gasparini, J., \\u0026 Castrec-Rouelle, M. (2012). Contrasting levels of heavy metals in the feathers of urban pigeons from close habitats suggest limited movements at a restricted scale. Environmental Pollution, 168, 23–28. https://doi.org/10.1016/j.envpol.2012.04.003\",\"citationConfidence\":\"high\",\"quote\":\"Urban areas\\ncould be associated with favourable local habitats with abundant\\nresources and breeding sites which may allow pigeons to forage in\\nrestricted sites.\",\"paper\":\"frantz2012\",\"doi\":\"10.1016/j.envpol.2012.04.003\",\"passages\":[{\"id\":\"quote:ddfff1f1-3be2-5aca-acd0-97b6ff091d8d\",\"text\":\"Urban areas\\ncould be associated with favourable local habitats with abundant\\nresources and breeding sites which may allow pigeons to forage in\\nrestricted sites.\"}]},\"localized\":{\"text\":{\"en\":\"The researchers hypothesize that cities form very favorable habitats for pigeons, with an abundance of food and nesting sites, encouraging the animals to keep foraging within a very small, well-defined area.\",\"nl\":\"De onderzoekers veronderstellen dat steden voor duiven zeer gunstige leefgebieden vormen met een overvloed aan voedsel en nestplekken, waardoor de dieren gestimuleerd worden om in een heel klein en afgebakend gebied te blijven foerageren.\"},\"perspective\":{\"en\":\"Scientific interest\",\"nl\":\"Wetenschappelijke interesse\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":3,\"type\":\"destillaat\",\"id\":\"destillaat:3930b596-6a4c-5618-a217-10b70b4ae867\",\"text\":\"Duiven nestelen bij voorkeur op grote hoogte om te voorkomen dat hun nesten door roofdieren worden leeggeroofd.\",\"perspective\":\"Wetenschappelijke interesse\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:edf48f05-bf73-5872-8e8e-93c785959ff0\",\"citation\":\"Geijtenbeek, J. W. (2026). The effect of large-scale urban events on feral pigeons (Columba livia) [Writing assignment, Utrecht University].\",\"citationConfidence\":\"medium\",\"citationMissing\":\"repository URL, page count, degree name\",\"quote\":\"Additionally, they prefer to breed at higher elevations,\\nto avoid nest predation (Haag-Wackernagel \\u0026 Geigenfeind, 2008; Tang et al., 2018).\",\"paper\":\"effects-human-activities-pigeons-msthesis-jgeijtenbeek\",\"passages\":[{\"id\":\"quote:d2add37b-5632-5770-8a4a-47a64928347c\",\"text\":\"Additionally, they prefer to breed at higher elevations,\\nto avoid nest predation (Haag-Wackernagel \\u0026 Geigenfeind, 2008; Tang et al., 2018).\"}]},\"localized\":{\"text\":{\"en\":\"Pigeons preferentially nest at great height to prevent their nests from being raided by predators.\",\"nl\":\"Duiven nestelen bij voorkeur op grote hoogte om te voorkomen dat hun nesten door roofdieren worden leeggeroofd.\"},\"perspective\":{\"en\":\"Scientific interest\",\"nl\":\"Wetenschappelijke interesse\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":4,\"type\":\"destillaat\",\"id\":\"destillaat:1681847a-ec1a-5104-a897-fbd590a67db1\",\"text\":\"Middeleeuwse gebouwen vormen door de aanwezigheid van gaten in de buitenmuren een ideale nestgelegenheid voor stadsduiven.\",\"perspective\":\"Wetenschappelijke interesse\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"Medieval buildings, for instance, whose\\nexternal walls are plentiful of holes due to the building methods, constitute an ideal place\\nfor nesting (Ragni et al., 1996).\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:e99fa75c-51ff-588b-962e-cd8b5e2f96f9\",\"text\":\"Medieval buildings, for instance, whose\\nexternal walls are plentiful of holes due to the building methods, constitute an ideal place\\nfor nesting (Ragni et al., 1996).\"}]},\"localized\":{\"text\":{\"en\":\"Medieval buildings, through the presence of holes in their outer walls, constitute an ideal nesting opportunity for urban pigeons.\",\"nl\":\"Middeleeuwse gebouwen vormen door de aanwezigheid van gaten in de buitenmuren een ideale nestgelegenheid voor stadsduiven.\"},\"perspective\":{\"en\":\"Scientific interest\",\"nl\":\"Wetenschappelijke interesse\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":5,\"type\":\"destillaat\",\"id\":\"destillaat:02acadd0-ca83-539e-b826-fea8e89a42ca\",\"text\":\"De keuze van duiven voor dagroest- en nestplaatsen wordt beïnvloed door de hoogte van de structuur en, in nog belangrijkere mate, door de nabijheid van menselijke voedselbronnen.\",\"perspective\":\"Ecologische waardering\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:0390dacf-0774-5d57-9ab6-feff4564589a\",\"citation\":\"Lim, K. N., Soh, M. C. K., Leong, D. Y. W., Loo, A. H. B., Lee, B. P. Y. H., \\u0026 Er, K. B. H. (2023). Proximity to anthropogenic food sources determine roosting and nesting prevalence of feral pigeons (Columba livia) in a tropical city. Ecological Solutions and Evidence, 4(2), e12234. https://doi.org/10.1002/2688-8319.12234\",\"citationConfidence\":\"high\",\"quote\":\"feral pigeon day roosting and nesting preferences are influenced by structural height and more importantly, their proximity to human food sources.\",\"paper\":\"lim2023\",\"doi\":\"10.1002/2688-8319.12234\",\"passages\":[{\"id\":\"quote:1aad9165-9cd2-5b75-b230-866ff773a501\",\"text\":\"feral pigeon day roosting and nesting preferences are influenced by structural height and more importantly, their proximity to human food sources.\"}]},\"localized\":{\"text\":{\"en\":\"Pigeons' choice of daytime roosting and nesting sites is influenced by the height of the structure and, even more importantly, by the proximity of human food sources.\",\"nl\":\"De keuze van duiven voor dagroest- en nestplaatsen wordt beïnvloed door de hoogte van de structuur en, in nog belangrijkere mate, door de nabijheid van menselijke voedselbronnen.\"},\"perspective\":{\"en\":\"Ecological appreciation\",\"nl\":\"Ecologische waardering\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":6,\"type\":\"destillaat\",\"id\":\"destillaat:6986bef7-cc26-5656-9c3d-1c19879ec4e6\",\"text\":\"Gespecialiseerde vogelsoorten, zoals insecteneters en grondbroeders, hebben het erg moeilijk in de stedelijke omgeving.\",\"perspective\":\"Ecologische bescherming\",\"theme\":\"Stadsnatuur en vogels\",\"ref\":{\"id\":\"interview:ba5582b2-1883-53ed-be4a-0412f4603e58\",\"citation\":\"Mühlbauer, M., Weisser, W. W., Apfelbeck, B., Müller, N., \\u0026 Meyer, S. T. (2025). Bird guilds need different features on city squares. Basic and Applied Ecology, 83, 23–35. https://doi.org/10.1016/j.baae.2024.12.003\",\"citationConfidence\":\"high\",\"quote\":\"In contrast, specialists like insectivores and\\nground nesters are less common in the city\",\"paper\":\"muhlbauer2025\",\"doi\":\"10.1016/j.baae.2024.12.003\",\"passages\":[{\"id\":\"quote:57f1e3fc-a2c7-599d-8b2a-03b8446364f2\",\"text\":\"In contrast, specialists like insectivores and\\nground nesters are less common in the city\"}]},\"localized\":{\"text\":{\"en\":\"Specialized bird species, such as insectivores and ground nesters, have a very hard time in the urban environment.\",\"nl\":\"Gespecialiseerde vogelsoorten, zoals insecteneters en grondbroeders, hebben het erg moeilijk in de stedelijke omgeving.\"},\"perspective\":{\"en\":\"Ecological protection\",\"nl\":\"Ecologische bescherming\"},\"theme\":{\"en\":\"Urban nature and birds\",\"nl\":\"Stadsnatuur en vogels\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"rejected\",\"number\":7,\"type\":\"destillaat\",\"id\":\"destillaat:4eca7c88-41f0-57ca-8389-26cc36dad198\",\"text\":\"De auteurs concluderen dat duiven bij het nestelen de voorkeur geven aan een voorspelbare voedselbron, zoals treinstations waar constant voedselafval en menselijke activiteit te vinden is.\",\"perspective\":\"Wetenschappelijke interesse\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:0390dacf-0774-5d57-9ab6-feff4564589a\",\"citation\":\"Lim, K. N., Soh, M. C. K., Leong, D. Y. W., Loo, A. H. B., Lee, B. P. Y. H., \\u0026 Er, K. B. H. (2023). Proximity to anthropogenic food sources determine roosting and nesting prevalence of feral pigeons (Columba livia) in a tropical city. Ecological Solutions and Evidence, 4(2), e12234. https://doi.org/10.1002/2688-8319.12234\",\"citationConfidence\":\"high\",\"paper\":\"lim2023\",\"doi\":\"10.1002/2688-8319.12234\"},\"localized\":{\"text\":{\"en\":\"The authors conclude that when nesting, pigeons prefer a predictable food source, such as train stations where food waste and human activity are constantly present.\",\"nl\":\"De auteurs concluderen dat duiven bij het nestelen de voorkeur geven aan een voorspelbare voedselbron, zoals treinstations waar constant voedselafval en menselijke activiteit te vinden is.\"},\"perspective\":{\"en\":\"Scientific interest\",\"nl\":\"Wetenschappelijke interesse\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"rejected\",\"number\":8,\"type\":\"destillaat\",\"id\":\"destillaat:9429913b-9a32-58fa-9550-bdd8c8f48526\",\"text\":\"Verwilderde duiven nestelen voornamelijk in hogere gebouwen in woonwijken, vermoedelijk om predatie en verstoring vanaf de grond te vermijden.\",\"perspective\":\"Wetenschappelijke interesse\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:0390dacf-0774-5d57-9ab6-feff4564589a\",\"citation\":\"Lim, K. N., Soh, M. C. K., Leong, D. Y. W., Loo, A. H. B., Lee, B. P. Y. H., \\u0026 Er, K. B. H. (2023). Proximity to anthropogenic food sources determine roosting and nesting prevalence of feral pigeons (Columba livia) in a tropical city. Ecological Solutions and Evidence, 4(2), e12234. https://doi.org/10.1002/2688-8319.12234\",\"citationConfidence\":\"high\",\"paper\":\"lim2023\",\"doi\":\"10.1002/2688-8319.12234\"},\"localized\":{\"text\":{\"en\":\"Feral pigeons nest mainly in taller buildings in residential neighborhoods, presumably to avoid predation and disturbance from the ground.\",\"nl\":\"Verwilderde duiven nestelen voornamelijk in hogere gebouwen in woonwijken, vermoedelijk om predatie en verstoring vanaf de grond te vermijden.\"},\"perspective\":{\"en\":\"Scientific interest\",\"nl\":\"Wetenschappelijke interesse\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"rejected\",\"number\":9,\"type\":\"destillaat\",\"id\":\"destillaat:08b1e1d3-e4e6-5100-87ae-006df11ddf0e\",\"text\":\"De onderzoekers stellen dat hoge gebouwen duiven de ideale mogelijkheid bieden om op veilige hoogte te rusten en te nestelen, waardoor ze beschermd zijn tegen roofdieren en menselijke verstoring.\",\"perspective\":\"Wetenschappelijke interesse\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:4d1103a9-a603-5600-bf5e-9e0c12795736\",\"citation\":\"Tang, Q., Low, G. W., Lim, J. Y., Gwee, C. Y., \\u0026 Rheindt, F. E. (2018). Human activities and landscape features interact to closely define the distribution and dispersal of an urban commensal. Evolutionary Applications, 11(9), 1598–1608. https://doi.org/10.1111/eva.12650\",\"citationConfidence\":\"high\",\"paper\":\"tang2018\",\"doi\":\"10.1111/eva.12650\"},\"localized\":{\"text\":{\"en\":\"The researchers state that tall buildings offer pigeons the ideal opportunity to rest and nest at a safe height, protecting them from predators and human disturbance.\",\"nl\":\"De onderzoekers stellen dat hoge gebouwen duiven de ideale mogelijkheid bieden om op veilige hoogte te rusten en te nestelen, waardoor ze beschermd zijn tegen roofdieren en menselijke verstoring.\"},\"perspective\":{\"en\":\"Scientific interest\",\"nl\":\"Wetenschappelijke interesse\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"rejected\",\"number\":10,\"type\":\"destillaat\",\"id\":\"destillaat:c8287c0e-c70f-56ad-a7e3-6f1bfb275b46\",\"text\":\"De auteurs stellen dat de geografische verschillen tussen nest- en roestplaatsen kunnen wijzen op een actieve strategie om onderlinge concurrentie tussen duiven te verminderen.\",\"perspective\":\"Wetenschappelijke interesse\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:0390dacf-0774-5d57-9ab6-feff4564589a\",\"citation\":\"Lim, K. N., Soh, M. C. K., Leong, D. Y. W., Loo, A. H. B., Lee, B. P. Y. H., \\u0026 Er, K. B. H. (2023). Proximity to anthropogenic food sources determine roosting and nesting prevalence of feral pigeons (Columba livia) in a tropical city. Ecological Solutions and Evidence, 4(2), e12234. https://doi.org/10.1002/2688-8319.12234\",\"citationConfidence\":\"high\",\"paper\":\"lim2023\",\"doi\":\"10.1002/2688-8319.12234\"},\"localized\":{\"text\":{\"en\":\"The authors state that the geographic differences between nesting and roosting sites may indicate an active strategy to reduce mutual competition among pigeons.\",\"nl\":\"De auteurs stellen dat de geografische verschillen tussen nest- en roestplaatsen kunnen wijzen op een actieve strategie om onderlinge concurrentie tussen duiven te verminderen.\"},\"perspective\":{\"en\":\"Scientific interest\",\"nl\":\"Wetenschappelijke interesse\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"rejected\",\"number\":11,\"type\":\"destillaat\",\"id\":\"destillaat:8fdb7824-0873-55a0-95d6-c19ee50aee13\",\"text\":\"Een succesvol beheerplan voor stedelijke diersoorten vereist een veelzijdige aanpak die naast voedselbeperking ook de beschikbaarheid van nest- en roestplaatsen aanpakt.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:0390dacf-0774-5d57-9ab6-feff4564589a\",\"citation\":\"Lim, K. N., Soh, M. C. K., Leong, D. Y. W., Loo, A. H. B., Lee, B. P. Y. H., \\u0026 Er, K. B. H. (2023). Proximity to anthropogenic food sources determine roosting and nesting prevalence of feral pigeons (Columba livia) in a tropical city. Ecological Solutions and Evidence, 4(2), e12234. https://doi.org/10.1002/2688-8319.12234\",\"citationConfidence\":\"high\",\"paper\":\"lim2023\",\"doi\":\"10.1002/2688-8319.12234\"},\"localized\":{\"text\":{\"en\":\"A successful management plan for urban animal species requires a multifaceted approach that, besides food restriction, also addresses the availability of nesting and roosting sites.\",\"nl\":\"Een succesvol beheerplan voor stedelijke diersoorten vereist een veelzijdige aanpak die naast voedselbeperking ook de beschikbaarheid van nest- en roestplaatsen aanpakt.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"}]}\n\ndata: {\"type\":\"phase\",\"phase\":\"pigeon\"}\n\n"
+    },
+    {
+     "ms": 30711,
+     "text": "data: {\"type\":\"artifact_delta\",\"id\":\"pigeon-1\",\"delta\":\"For\"}\n\n"
+    },
+    {
+     "ms": 30782,
+     "text": "data: {\"type\":\"artifact_delta\",\"id\":\"pigeon-1\",\"delta\":\" pigeons like me, research indicates that we find nesting and sheltering places in human dwellings that are similar to our natural rocky habitats\"}\n\n"
+    },
+    {
+     "ms": 30909,
+     "text": "data: {\"type\":\"artifact_delta\",\"id\":\"pigeon-1\",\"delta\":\" [1]. Our nesting preferences in urban environments are influenced by structural height and, even more importantly, by proximity to human food sources\"}\n\n"
+    },
+    {
+     "ms": 31057,
+     "text": "data: {\"type\":\"artifact_delta\",\"id\":\"pigeon-1\",\"delta\":\" [5]. To avoid nest predation, we prefer to breed at higher elevations [3]. Additionally, buildings with holes in their external walls,\"}\n\n"
+    },
+    {
+     "ms": 31105,
+     "text": "data: {\"type\":\"artifact_delta\",\"id\":\"pigeon-1\",\"delta\":\" such as certain historical structures, have been found to provide ideal nesting places [4].\"}\n\n"
+    },
+    {
+     "ms": 31181,
+     "text": "data: {\"type\":\"artifact\",\"id\":\"pigeon-1\",\"kind\":\"pigeon_answer\",\"persona\":\"biological\",\"kbStatus\":\"sources\",\"done\":true,\"related\":true}\n\ndata: {\"type\":\"tool_result\",\"id\":\"tool-1\",\"name\":\"ask_pigeon\"}\n\n"
+    },
+    {
+     "ms": 31185,
+     "text": "data: {\"type\":\"done\",\"sessionId\":\"78cff25cfb634675c7bf4af1fb5c157d\",\"kbStatus\":\"sources\",\"stopReason\":\"natural\",\"provenance\":{\"contractVersion\":\"duiven-2026-09-07-v1\",\"personaVersion\":\"9315a68d3df59eaae95a2a4c2eb0c88bc5c1f1a74f9abcad7ab5a8bfd60898e5\",\"promptVersion\":\"b211e5c1c399604f9ec6ee5bb2caa848b9b779600db9071579b123ec6add1df7\",\"model\":\"vertex_ai/gemini-3.5-flash\",\"kbState\":\"versioned\",\"kbId\":\"Duiven\",\"kbVersion\":\"774f03e56ee7b10562e58e9b81d657647e5601647d29e74bde8ef7cb5e4fbcbf\"}}\n\n"
+    }
+   ],
+   "endMs": 31185
+  },
+  {
+   "id": 5,
+   "method": "GET",
+   "path": "/chat/sessions/78cff25cfb634675c7bf4af1fb5c157d/messages",
+   "requestBody": null,
+   "t": 31193,
+   "headMs": 3,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "body": "{\"messages\":[{\"id\":\"e5e67fa79fcfd5fad31e4ad13c1a7b93\",\"role\":\"user\",\"kind\":\"text\",\"content\":\"Where do you prefer to nest in the city?\",\"createdAt\":\"2026-09-23T16:57:53.188165+02:00\"},{\"id\":\"daf36aad2e6685e0a0c3588892e88d40\",\"role\":\"assistant\",\"kind\":\"pigeon_answer\",\"persona\":\"individualist\",\"content\":\"I demand your highest ledges and refuse to hatch my chicks in the dirt. Your concrete structures mimic our natural rocky cliffs to give us shelter [1]. We choose high elevations to avoid predators [3], preferably close to your food sources [5]. Why should I leave when your hole-filled walls make the perfect homes [4]?\",\"kbStatus\":\"sources\",\"related\":true,\"createdAt\":\"2026-09-23T16:57:53.188165+02:00\",\"provenance\":{\"contractVersion\":\"duiven-2026-09-07-v1\",\"personaVersion\":\"ff996915bceffff46e1a92a2037311ffd17cf6dff27a35dc34325af6ba17a7a8\",\"promptVersion\":\"de87036e16a796abb1fead60162a5c4c27e14e4fbecd8ee10b88058c1b51b06a\",\"model\":\"vertex_ai/gemini-3.5-flash\",\"kbState\":\"versioned\",\"kbId\":\"Duiven\",\"kbVersion\":\"774f03e56ee7b10562e58e9b81d657647e5601647d29e74bde8ef7cb5e4fbcbf\"},\"sources\":[{\"number\":1,\"id\":\"destillaat:083461a1-1fab-5cfc-968b-614b07d0887c\",\"ref\":\"interview:8a797ee3-6546-506c-b90c-96ae28e39eb9\"},{\"number\":2,\"id\":\"destillaat:a962c094-4f82-559d-b87d-e4638fed49d5\",\"ref\":\"interview:53652e09-a3a2-5739-bc25-c5ab53d58915\"},{\"number\":3,\"id\":\"destillaat:3930b596-6a4c-5618-a217-10b70b4ae867\",\"ref\":\"interview:edf48f05-bf73-5872-8e8e-93c785959ff0\"},{\"number\":4,\"id\":\"destillaat:1681847a-ec1a-5104-a897-fbd590a67db1\",\"ref\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\"},{\"number\":5,\"id\":\"destillaat:02acadd0-ca83-539e-b826-fea8e89a42ca\",\"ref\":\"interview:0390dacf-0774-5d57-9ab6-feff4564589a\"},{\"number\":6,\"id\":\"destillaat:6986bef7-cc26-5656-9c3d-1c19879ec4e6\",\"ref\":\"interview:ba5582b2-1883-53ed-be4a-0412f4603e58\"},{\"number\":7,\"id\":\"destillaat:4eca7c88-41f0-57ca-8389-26cc36dad198\",\"ref\":\"interview:0390dacf-0774-5d57-9ab6-feff4564589a\"},{\"number\":8,\"id\":\"destillaat:9429913b-9a32-58fa-9550-bdd8c8f48526\",\"ref\":\"interview:0390dacf-0774-5d57-9ab6-feff4564589a\"},{\"number\":9,\"id\":\"destillaat:08b1e1d3-e4e6-5100-87ae-006df11ddf0e\",\"ref\":\"interview:4d1103a9-a603-5600-bf5e-9e0c12795736\"},{\"number\":10,\"id\":\"destillaat:c8287c0e-c70f-56ad-a7e3-6f1bfb275b46\",\"ref\":\"interview:0390dacf-0774-5d57-9ab6-feff4564589a\"},{\"number\":11,\"id\":\"destillaat:8fdb7824-0873-55a0-95d6-c19ee50aee13\",\"ref\":\"interview:0390dacf-0774-5d57-9ab6-feff4564589a\"}]},{\"id\":\"58ccde5596772f8e706a3220bbdeeb48\",\"role\":\"user\",\"kind\":\"text\",\"content\":\"Where do you prefer to nest in the city?\",\"createdAt\":\"2026-09-23T16:57:53.193861+02:00\"},{\"id\":\"894775dcedc0501881e94d0fe46e3e8a\",\"role\":\"assistant\",\"kind\":\"pigeon_answer\",\"persona\":\"biological\",\"content\":\"For pigeons like me, research indicates that we find nesting and sheltering places in human dwellings that are similar to our natural rocky habitats [1]. Our nesting preferences in urban environments are influenced by structural height and, even more importantly, by proximity to human food sources [5]. To avoid nest predation, we prefer to breed at higher elevations [3]. Additionally, buildings with holes in their external walls, such as certain historical structures, have been found to provide ideal nesting places [4].\",\"kbStatus\":\"sources\",\"related\":true,\"createdAt\":\"2026-09-23T16:58:24.372878+02:00\",\"provenance\":{\"contractVersion\":\"duiven-2026-09-07-v1\",\"personaVersion\":\"9315a68d3df59eaae95a2a4c2eb0c88bc5c1f1a74f9abcad7ab5a8bfd60898e5\",\"promptVersion\":\"b211e5c1c399604f9ec6ee5bb2caa848b9b779600db9071579b123ec6add1df7\",\"model\":\"vertex_ai/gemini-3.5-flash\",\"kbState\":\"versioned\",\"kbId\":\"Duiven\",\"kbVersion\":\"774f03e56ee7b10562e58e9b81d657647e5601647d29e74bde8ef7cb5e4fbcbf\"},\"sources\":[{\"number\":1,\"id\":\"destillaat:083461a1-1fab-5cfc-968b-614b07d0887c\",\"ref\":\"interview:8a797ee3-6546-506c-b90c-96ae28e39eb9\"},{\"number\":2,\"id\":\"destillaat:a962c094-4f82-559d-b87d-e4638fed49d5\",\"ref\":\"interview:53652e09-a3a2-5739-bc25-c5ab53d58915\"},{\"number\":3,\"id\":\"destillaat:3930b596-6a4c-5618-a217-10b70b4ae867\",\"ref\":\"interview:edf48f05-bf73-5872-8e8e-93c785959ff0\"},{\"number\":4,\"id\":\"destillaat:1681847a-ec1a-5104-a897-fbd590a67db1\",\"ref\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\"},{\"number\":5,\"id\":\"destillaat:02acadd0-ca83-539e-b826-fea8e89a42ca\",\"ref\":\"interview:0390dacf-0774-5d57-9ab6-feff4564589a\"},{\"number\":6,\"id\":\"destillaat:6986bef7-cc26-5656-9c3d-1c19879ec4e6\",\"ref\":\"interview:ba5582b2-1883-53ed-be4a-0412f4603e58\"},{\"number\":7,\"id\":\"destillaat:4eca7c88-41f0-57ca-8389-26cc36dad198\",\"ref\":\"interview:0390dacf-0774-5d57-9ab6-feff4564589a\"},{\"number\":8,\"id\":\"destillaat:9429913b-9a32-58fa-9550-bdd8c8f48526\",\"ref\":\"interview:0390dacf-0774-5d57-9ab6-feff4564589a\"},{\"number\":9,\"id\":\"destillaat:08b1e1d3-e4e6-5100-87ae-006df11ddf0e\",\"ref\":\"interview:4d1103a9-a603-5600-bf5e-9e0c12795736\"},{\"number\":10,\"id\":\"destillaat:c8287c0e-c70f-56ad-a7e3-6f1bfb275b46\",\"ref\":\"interview:0390dacf-0774-5d57-9ab6-feff4564589a\"},{\"number\":11,\"id\":\"destillaat:8fdb7824-0873-55a0-95d6-c19ee50aee13\",\"ref\":\"interview:0390dacf-0774-5d57-9ab6-feff4564589a\"}]}]}",
+   "endMs": 3,
+   "compacted": "bronnen per rij ingekort tot nummer en id; de volledige bronnen staan in de stroom van de beurt"
+  }
+ ],
+ "failure": null,
+ "provenance": {
+  "contractVersion": "duiven-2026-09-07-v1",
+  "personaVersion": "9315a68d3df59eaae95a2a4c2eb0c88bc5c1f1a74f9abcad7ab5a8bfd60898e5",
+  "promptVersion": "b211e5c1c399604f9ec6ee5bb2caa848b9b779600db9071579b123ec6add1df7",
+  "model": "vertex_ai/gemini-3.5-flash",
+  "kbState": "versioned",
+  "kbId": "Duiven",
+  "kbVersion": "774f03e56ee7b10562e58e9b81d657647e5601647d29e74bde8ef7cb5e4fbcbf"
+ },
+ "checks": {
+  "model": "vertex_ai/gemini-3.5-flash",
+  "modelMatchesPolicy": true,
+  "storedEqualsStreamed": true
+ }
+}

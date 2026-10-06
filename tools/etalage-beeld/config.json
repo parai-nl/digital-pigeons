@@ -1,0 +1,192 @@
+{
+  "model": "v4",
+  "models": {
+    "v3": {
+      "version": "v3 iteratie 05",
+      "final": false,
+      "glb": { "kennispartner": "module/duif/frontend/public/media/stadsduif-v3.glb", "stakeholder": "module/duif/frontend/public/media/stadsduif-v3.glb", "signalerend": "module/duif/frontend/public/media/stadsduif-v3.glb" }
+    },
+    "v4": {
+      "version": "v4 iteratie 17",
+      "final": true,
+      "glb": {
+        "kennispartner": "module/duif/frontend/public/media/stadsduif-v4-biologisch.glb",
+        "stakeholder": "module/duif/frontend/public/media/stadsduif-v4-individualistisch.glb",
+        "signalerend": "module/duif/frontend/public/media/stadsduif-v4-signalerend.glb"
+      }
+    }
+  },
+  "modelCredit": {
+    "nl": "3D-duif: Digitale Duiven, fototextuur Luc Viatour / Lucnix.be · CC BY-SA 3.0",
+    "en": "3D pigeon: Digitale Duiven, photo texture by Luc Viatour / Lucnix.be · CC BY-SA 3.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Columba_livia_Luc_Viatour.jpg",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+  },
+  "card": { "aspect": 0.82, "px": 640, "radius": 0.047, "shadowFade": 0.05 },
+  "plate": { "width": 1200, "height": 1464, "maxBytes": 200000 },
+  "clip": { "maxBytes": 400000 },
+  "fps": 25,
+  "gestures": { "peck": "Peck", "ruffle": "WingWave" },
+  "defaultClip": "ruffle",
+  "pad": { "left": 0.34, "right": 0.6, "top": 0.5, "bottom": 0.06 },
+  "quality": {
+    "final": { "samples": 192, "noise": 0.012, "shadowSamples": 48, "motionBlur": true, "shutter": 0.5 },
+    "draft": { "samples": 48, "noise": 0.03, "shadowSamples": 16, "motionBlur": false }
+  },
+  "head": { "px": 512, "out": 512, "distance": 1.7 },
+  "pigeons": {
+    "kennispartner": {
+      "module": "biologisch",
+      "name": { "nl": "Kennispartner", "en": "Knowledge Partner" },
+      "view": { "azimuthDeg": 0, "elevationDeg": 5, "focalMm": 70 },
+      "rest": { "top": -0.13, "bottom": 0.75, "centerX": 0.5 },
+      "reaction": { "reach": 0.075, "orbitDeg": -5, "footDrop": 0.02, "inSeconds": 0.75, "outSeconds": 0.95 },
+      "headAzimuthDeg": 0,
+      "light": {
+        "key": {
+          "az": -50,
+          "el": 62,
+          "size": 2.0,
+          "power": 900,
+          "colour": [1.0, 0.96, 0.92]
+        },
+        "rim": {
+          "az": 155,
+          "el": 30,
+          "size": 0.9,
+          "power": 650,
+          "colour": [0.93, 0.96, 1.0]
+        },
+        "worldStrength": 1.3,
+        "look": "None",
+        "exposure": 0.0
+      },
+      "plate": {
+        "commons": "File:Rotterdam (43546674525).jpg",
+        "sha1": "3590026c7aab69556828fc89bfa3140ec0c00acb",
+        "license": "CC0",
+        "artist": "Guillaume Vachey",
+        "place": { "nl": "de kade aan de Maas bij de Erasmusbrug", "en": "the quay on the Maas by the Erasmus Bridge" },
+        "reason": {
+          "nl": "De kennispartner hoort bij de universiteit die de naam Erasmus draagt; de brug met diezelfde naam verbindt de oevers van de Maas.",
+          "en": "The knowledge partner belongs with the university that carries the name Erasmus; the bridge of the same name joins the banks of the Maas."
+        },
+        "crop": { "cx": 0.578, "cy": 0.5, "h": 1.0 },
+        "dof": { "focusY": 0.97, "horizonY": 0.8, "focus": 12, "front": 14, "far": 14 },
+        "grade": {
+          "exposure": 1.3,
+          "contrast": 0.82,
+          "saturation": 0.8,
+          "lift": 0.04,
+          "tint": [0.62, 0.7, 0.66],
+          "tintAmount": 0.1,
+          "haze": 0.1,
+          "vignette": 0.12
+        },
+        "page": "https://commons.wikimedia.org/wiki/File:Rotterdam_(43546674525).jpg",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }
+    },
+    "stakeholder": {
+      "module": "individualistisch",
+      "name": { "nl": "Stakeholder", "en": "Stakeholder" },
+      "view": { "azimuthDeg": -30, "elevationDeg": 5, "focalMm": 70 },
+      "rest": { "top": -0.13, "bottom": 0.75, "centerX": 0.5 },
+      "reaction": { "reach": 0.075, "orbitDeg": 5, "footDrop": 0.02, "inSeconds": 0.75, "outSeconds": 0.95 },
+      "headAzimuthDeg": 0,
+      "light": {
+        "key": {
+          "az": -45,
+          "el": 62,
+          "size": 2.0,
+          "power": 900,
+          "colour": [1.0, 0.95, 0.9]
+        },
+        "rim": {
+          "az": 160,
+          "el": 30,
+          "size": 0.9,
+          "power": 650,
+          "colour": [0.95, 0.96, 1.0]
+        },
+        "worldStrength": 1.3,
+        "look": "None",
+        "exposure": 0.0
+      },
+      "plate": {
+        "commons": "File:Coolsingel Rotterdam I73523 - copy.jpg",
+        "sha1": "9e556d1b7e91f4f5a5af31a97c8a1dc382ac1e64",
+        "license": "CC BY 4.0",
+        "artist": "G.Lanting",
+        "place": { "nl": "de Coolsingel voor het stadhuis", "en": "the Coolsingel in front of City Hall" },
+        "reason": { "nl": "De stakeholder komt op voor een belang; op het stadhuis worden belangen gewogen.", "en": "The stakeholder speaks up for an interest; City Hall is where interests are weighed." },
+        "crop": { "cx": 0.5075, "cy": 0.5, "h": 1.0 },
+        "dof": { "focusY": 0.97, "horizonY": 0.8, "focus": 12, "front": 14, "far": 14 },
+        "grade": {
+          "exposure": 1.3,
+          "contrast": 0.82,
+          "saturation": 0.8,
+          "lift": 0.04,
+          "tint": [0.74, 0.66, 0.52],
+          "tintAmount": 0.1,
+          "haze": 0.1,
+          "vignette": 0.12
+        },
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "page": "https://commons.wikimedia.org/wiki/File:Coolsingel_Rotterdam_I73523_-_copy.jpg"
+      }
+    },
+    "signalerend": {
+      "module": "signalerend",
+      "name": { "nl": "Signalerende duif", "en": "Signaling Pigeon" },
+      "view": { "azimuthDeg": 57, "elevationDeg": 5, "focalMm": 70 },
+      "rest": { "top": -0.11, "bottom": 0.75, "centerX": 0.47 },
+      "reaction": { "reach": 0.075, "orbitDeg": -5, "footDrop": 0.02, "inSeconds": 0.75, "outSeconds": 0.95 },
+      "headAzimuthDeg": 0,
+      "light": {
+        "key": {
+          "az": -45,
+          "el": 62,
+          "size": 2.0,
+          "power": 900,
+          "colour": [1.0, 0.96, 0.93]
+        },
+        "rim": {
+          "az": 160,
+          "el": 30,
+          "size": 0.9,
+          "power": 650,
+          "colour": [0.94, 0.96, 1.0]
+        },
+        "worldStrength": 1.3,
+        "look": "None",
+        "exposure": 0.0
+      },
+      "plate": {
+        "commons": "File:Rotterdam - Binnenrotte plein.jpg",
+        "sha1": "b2b2be19cb6b2bae285487300c0454cc29bd9319",
+        "license": "CC BY 4.0",
+        "artist": "Jorge Franganillo",
+        "place": { "nl": "het marktplein op de Binnenrotte, naast de Markthal", "en": "the market square on the Binnenrotte, next to the Markthal" },
+        "reason": { "nl": "De vergadering op deze pagina gaat over het marktplein; de signalerende duif staat op dat plein, naast de Markthal.", "en": "The meeting on this page is about the market square; the signaling pigeon stands on that square, next to the Markthal." },
+        "crop": { "cx": 0.77, "cy": 0.5, "h": 1.0 },
+        "dof": { "focusY": 0.97, "horizonY": 0.8, "focus": 12, "front": 14, "far": 14 },
+        "grade": {
+          "exposure": 1.3,
+          "contrast": 0.82,
+          "saturation": 0.8,
+          "lift": 0.04,
+          "tint": [0.62, 0.66, 0.7],
+          "tintAmount": 0.1,
+          "haze": 0.1,
+          "vignette": 0.12
+        },
+        "page": "https://commons.wikimedia.org/wiki/File:Rotterdam_-_Binnenrotte_plein.jpg",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "shadow": { "rx": 0.36, "strength": 1.4 }
+    }
+  },
+  "shadow": { "strength": 1.0, "rx": 0.3, "ry": 0.085 }
+}

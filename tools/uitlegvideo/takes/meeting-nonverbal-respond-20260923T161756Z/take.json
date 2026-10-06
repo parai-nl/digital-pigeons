@@ -1,0 +1,550 @@
+{
+ "format": "duiven-uitlegvideo-take/1",
+ "id": "meeting-nonverbal-respond-20260923T161756Z",
+ "scene": "meeting-nonverbal-respond",
+ "recordedAt": "2026-09-23T16:17:56.158Z",
+ "exchanges": [
+  {
+   "id": 1,
+   "method": "GET",
+   "path": "/api/duif/v1/access/notice",
+   "requestBody": null,
+   "t": 109,
+   "headMs": 7,
+   "status": 200,
+   "statusText": "OK",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 7,
+   "body": "{\"version\":\"2026-09-22.1\",\"acknowledged\":true,\"acknowledgedAt\":\"2026-09-22T12:57:04.398172+02:00\"}\n"
+  },
+  {
+   "id": 2,
+   "method": "GET",
+   "path": "/api/duif/v1/duiven",
+   "requestBody": null,
+   "t": 114,
+   "headMs": 2,
+   "status": 200,
+   "statusText": "OK",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"duiven\":[{\"id\":\"biological\",\"name\":{\"en\":\"Knowledge Partner\",\"nl\":\"Kennispartner\"},\"voiceReady\":true,\"knowledgeBase\":true,\"chat\":true,\"meeting\":true,\"topics\":[{\"id\":\"population-control\",\"label\":{\"en\":\"Population control\",\"nl\":\"Populatiebeheer\"}},{\"id\":\"nuisance-and-health\",\"label\":{\"en\":\"Nuisance and health\",\"nl\":\"Overlast en gezondheid\"}},{\"id\":\"feeding-and-food\",\"label\":{\"en\":\"Feeding and food\",\"nl\":\"Voeren en voedsel\"}},{\"id\":\"nesting-and-shelter\",\"label\":{\"en\":\"Nesting and shelter\",\"nl\":\"Nestelen en beschutting\"}},{\"id\":\"urban-ecology\",\"label\":{\"en\":\"Urban ecology\",\"nl\":\"Stadsecologie\"}}],\"engine\":\"agent\",\"autonomousDefault\":false},{\"id\":\"individualist\",\"name\":{\"en\":\"Stakeholder\",\"nl\":\"Stakeholder\"},\"voiceReady\":true,\"knowledgeBase\":true,\"chat\":true,\"meeting\":true,\"topics\":[{\"id\":\"pigeon-rights\",\"label\":{\"en\":\"What pigeons are owed\",\"nl\":\"Waar duiven recht op hebben\"}},{\"id\":\"city-space\",\"label\":{\"en\":\"Whose city is it\",\"nl\":\"Van wie is de stad\"}},{\"id\":\"decided-about-not-with\",\"label\":{\"en\":\"Decided about, not with\",\"nl\":\"Over ons, zonder ons\"}},{\"id\":\"pest-framing\",\"label\":{\"en\":\"Being called vermin\",\"nl\":\"Ongedierte genoemd worden\"}}],\"engine\":\"agent\",\"autonomousDefault\":false},{\"id\":\"nonverbal\",\"name\":{\"en\":\"Signaling Pigeon\",\"nl\":\"Signalerende duif\"},\"voiceReady\":false,\"knowledgeBase\":false,\"chat\":false,\"meeting\":true,\"topics\":[{\"id\":\"threat-and-removal\",\"label\":{\"en\":\"Population intervention\",\"nl\":\"Ingrijpen in de populatie\"}},{\"id\":\"food\",\"label\":{\"en\":\"Access to food\",\"nl\":\"Toegang tot voedsel\"}},{\"id\":\"nesting\",\"label\":{\"en\":\"Nesting and roosting access\",\"nl\":\"Toegang tot nest- en verblijfplaatsen\"}},{\"id\":\"pigeons-nearby\",\"label\":{\"en\":\"Pigeons nearby\",\"nl\":\"Duiven in de buurt\"}}],\"engine\":\"pipeline\",\"autonomousDefault\":true}],\"gedrag\":{\"interventieZelfstandig\":false,\"interventieThrottleSeconden\":0,\"inactiviteitPromptMinuten\":10,\"inactiviteitSluitSeconden\":90,\"taalDefault\":\"en\",\"detectieGretigheid\":\"normal\",\"detectieVensterWoorden\":3,\"detectieIntervalSeconden\":6,\"stilteMilliseconden\":1500,\"arousalHalveringSeconden\":120},\"modelPolicy\":{\"model\":\"vertex_ai/gemini-3.5-flash\",\"detectionModel\":\"vertex_ai/gemini-3.5-flash\",\"endpoint\":\"https://llm-proxy.invalid\"}}\n"
+  },
+  {
+   "id": 3,
+   "method": "GET",
+   "path": "/api/duif/v1/chat/sessions",
+   "requestBody": null,
+   "t": 114,
+   "headMs": 8,
+   "status": 200,
+   "statusText": "OK",
+   "headers": [
+    [
+     "content-type",
+     "application/json"
+    ]
+   ],
+   "endMs": 8,
+   "body": "{\"sessions\":[]}",
+   "sanitized": "eerdere gesprekken van het opnameaccount verwijderd"
+  },
+  {
+   "id": 4,
+   "method": "GET",
+   "path": "/api/duif/v1/knowledge/status",
+   "requestBody": null,
+   "t": 117,
+   "headMs": 2,
+   "status": 200,
+   "statusText": "OK",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"state\":\"ready\",\"kbId\":\"Duiven\",\"counts\":{\"belongs_to\":4067,\"belongs_to_perspective\":4067,\"belongs_to_subthema\":4067,\"contains\":4067,\"contains_perspective\":297,\"contains_subthema\":149,\"contains_thema\":26,\"destillaat\":4067,\"domein\":3,\"has_quote\":4225,\"interview\":120,\"perspective\":297,\"quote\":4225,\"subthema\":149,\"thema\":26},\"bundleSchema\":\"duiven/3\",\"languages\":[\"nl\",\"en\"],\"sourceLanguage\":\"nl\",\"importedAt\":\"2026-09-15T12:26:51Z\"}\n"
+  },
+  {
+   "id": 5,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions",
+   "requestBody": "{\"pigeonId\":\"nonverbal\",\"playbackTracking\":true,\"lang\":\"en\",\"autonomous\":false,\"eagerness\":\"normal\",\"cooldownSeconds\":0}",
+   "t": 1277,
+   "headMs": 4,
+   "status": 201,
+   "statusText": "Created",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 5,
+   "body": "{\"autonomous\":false,\"autonomyPaused\":false,\"eagerness\":\"normal\",\"lang\":\"en\",\"listening\":\"reconnecting\",\"pigeonId\":\"nonverbal\",\"playbackTracking\":true,\"sessionId\":\"aa4ea470d2563c3518064db43cc8ec67\",\"settings\":{\"turnId\":\"0\",\"autonomyPaused\":false,\"playbackTracking\":true,\"autonomous\":false,\"eagerness\":\"normal\",\"cooldownSeconds\":0},\"voice\":\"off\"}\n"
+  },
+  {
+   "id": 6,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/aa4ea470d2563c3518064db43cc8ec67/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 1746,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":2,\"listening\":\"reconnecting\",\"streamed\":0}\n"
+  },
+  {
+   "id": 7,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/aa4ea470d2563c3518064db43cc8ec67/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 1966,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":2,\"listening\":\"reconnecting\",\"streamed\":0}\n"
+  },
+  {
+   "id": 8,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/aa4ea470d2563c3518064db43cc8ec67/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 2255,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":2,\"listening\":\"reconnecting\",\"streamed\":0}\n"
+  },
+  {
+   "id": 9,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/aa4ea470d2563c3518064db43cc8ec67/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 2425,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":2,\"listening\":\"reconnecting\",\"streamed\":0}\n"
+  },
+  {
+   "id": 10,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/aa4ea470d2563c3518064db43cc8ec67/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 2777,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":2,\"listening\":\"reconnecting\",\"streamed\":0}\n"
+  },
+  {
+   "id": 11,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/aa4ea470d2563c3518064db43cc8ec67/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 2943,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":2,\"listening\":\"reconnecting\",\"streamed\":0}\n"
+  },
+  {
+   "id": 12,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/aa4ea470d2563c3518064db43cc8ec67/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 3284,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":2,\"listening\":\"reconnecting\",\"streamed\":0}\n"
+  },
+  {
+   "id": 13,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/aa4ea470d2563c3518064db43cc8ec67/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 3455,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":2,\"listening\":\"reconnecting\",\"streamed\":0}\n"
+  },
+  {
+   "id": 14,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/aa4ea470d2563c3518064db43cc8ec67/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 3796,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":2,\"listening\":\"reconnecting\",\"streamed\":0}\n"
+  },
+  {
+   "id": 15,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/aa4ea470d2563c3518064db43cc8ec67/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 3977,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":2,\"listening\":\"reconnecting\",\"streamed\":0}\n"
+  },
+  {
+   "id": 16,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/aa4ea470d2563c3518064db43cc8ec67/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 4313,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":2,\"listening\":\"reconnecting\",\"streamed\":0}\n"
+  },
+  {
+   "id": 17,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/aa4ea470d2563c3518064db43cc8ec67/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 4484,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":2,\"listening\":\"reconnecting\",\"streamed\":0}\n"
+  },
+  {
+   "id": 18,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/aa4ea470d2563c3518064db43cc8ec67/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 4825,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 19,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/aa4ea470d2563c3518064db43cc8ec67/audio",
+   "requestBody": {
+    "binary": 8192
+   },
+   "t": 4996,
+   "headMs": 2,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"dropped\":0,\"listening\":\"listening\",\"streamed\":2}\n"
+  },
+  {
+   "id": 20,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/aa4ea470d2563c3518064db43cc8ec67/intervene",
+   "requestBody": null,
+   "t": 330777,
+   "headMs": 5,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 6,
+   "body": "{\"arousal\":0.5,\"sound\":{\"id\":\"shuffle\",\"band\":\"calm\",\"file\":\"sounds/shuffle.mp3\",\"url\":\"/api/duif/v1/sounds/shuffle\"}}\n"
+  },
+  {
+   "id": 21,
+   "method": "POST",
+   "path": "/api/duif/v1/meeting/sessions/aa4ea470d2563c3518064db43cc8ec67/playback",
+   "requestBody": "{\"turnId\":\"1\",\"state\":\"failed\"}",
+   "t": 333560,
+   "headMs": 3,
+   "status": 202,
+   "statusText": "Accepted",
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 3,
+   "body": "{\"accepted\":true,\"settings\":{\"turnId\":\"2\",\"autonomyPaused\":true,\"playbackTracking\":true,\"autonomous\":false,\"eagerness\":\"normal\",\"cooldownSeconds\":0},\"speaking\":false}\n"
+  }
+ ],
+ "channels": [
+  {
+   "channel": 1,
+   "path": "/api/duif/v1/meeting/sessions/aa4ea470d2563c3518064db43cc8ec67/events",
+   "t": 1282,
+   "messages": [
+    {
+     "ms": 8,
+     "data": "{\"type\":\"state\",\"turnId\":\"0\",\"autonomyPaused\":false,\"playbackTracking\":true,\"sessionId\":\"aa4ea470d2563c3518064db43cc8ec67\",\"pigeonId\":\"nonverbal\",\"lang\":\"en\",\"listening\":\"reconnecting\",\"speaking\":false,\"detector\":{\"enabled\":true,\"state\":\"ready\",\"retryable\":false},\"settings\":{\"turnId\":\"0\",\"autonomyPaused\":false,\"playbackTracking\":true,\"autonomous\":false,\"eagerness\":\"normal\",\"cooldownSeconds\":0},\"voice\":\"off\"}"
+    },
+    {
+     "ms": 3405,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"aa4ea470d2563c3518064db43cc8ec67\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "ms": 6740,
+     "data": "{\"type\":\"state\",\"turnId\":\"0\",\"autonomyPaused\":false,\"playbackTracking\":true,\"sessionId\":\"aa4ea470d2563c3518064db43cc8ec67\",\"pigeonId\":\"nonverbal\",\"lang\":\"en\",\"listening\":\"listening\",\"speaking\":false,\"detector\":{\"enabled\":true,\"state\":\"ready\",\"retryable\":false},\"settings\":{\"turnId\":\"0\",\"autonomyPaused\":false,\"playbackTracking\":true,\"autonomous\":false,\"eagerness\":\"normal\",\"cooldownSeconds\":0},\"voice\":\"off\"}"
+    },
+    {
+     "ms": 10001,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"aa4ea470d2563c3518064db43cc8ec67\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "ms": 332278,
+     "data": "{\"type\":\"state\",\"turnId\":\"1\",\"autonomyPaused\":false,\"playbackTracking\":true,\"playback\":\"pending\",\"sessionId\":\"aa4ea470d2563c3518064db43cc8ec67\",\"pigeonId\":\"nonverbal\",\"lang\":\"en\",\"listening\":\"listening\",\"speaking\":true,\"detector\":{\"enabled\":true,\"state\":\"ready\",\"retryable\":false},\"settings\":{\"turnId\":\"1\",\"autonomyPaused\":false,\"playbackTracking\":true,\"autonomous\":false,\"eagerness\":\"normal\",\"cooldownSeconds\":0},\"voice\":\"off\"}"
+    },
+    {
+     "ms": 332281,
+     "data": "{\"type\":\"playback_state\",\"turnId\":\"1\",\"autonomyPaused\":true,\"playback\":\"failed\",\"sessionId\":\"aa4ea470d2563c3518064db43cc8ec67\",\"speaking\":false}"
+    },
+    {
+     "ms": 332281,
+     "data": "{\"type\":\"settings\",\"autonomyPaused\":true,\"sessionId\":\"aa4ea470d2563c3518064db43cc8ec67\",\"speaking\":false,\"settings\":{\"turnId\":\"2\",\"autonomyPaused\":true,\"playbackTracking\":true,\"autonomous\":false,\"eagerness\":\"normal\",\"cooldownSeconds\":0}}"
+    },
+    {
+     "ms": 335689,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":true,\"sessionId\":\"aa4ea470d2563c3518064db43cc8ec67\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "ms": 374676,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":true,\"sessionId\":\"aa4ea470d2563c3518064db43cc8ec67\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "ms": 379678,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":true,\"sessionId\":\"aa4ea470d2563c3518064db43cc8ec67\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "ms": 384928,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":true,\"sessionId\":\"aa4ea470d2563c3518064db43cc8ec67\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "ms": 390177,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":true,\"sessionId\":\"aa4ea470d2563c3518064db43cc8ec67\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "ms": 396130,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":true,\"sessionId\":\"aa4ea470d2563c3518064db43cc8ec67\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "ms": 401453,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":true,\"sessionId\":\"aa4ea470d2563c3518064db43cc8ec67\",\"listening\":\"listening\",\"speaking\":false}"
+    }
+   ],
+   "openMs": 332278,
+   "errors": 2
+  }
+ ],
+ "actions": [
+  {
+   "name": "load",
+   "t": 34
+  },
+  {
+   "name": "autonomy-toggle",
+   "t": 686
+  },
+  {
+   "name": "seat",
+   "t": 1142
+  },
+  {
+   "name": "channel",
+   "t": 1343,
+   "at": 1790180277440
+  },
+  {
+   "name": "transcript-open",
+   "t": 1522
+  },
+  {
+   "name": "respond-click",
+   "t": 330552
+  }
+ ],
+ "probes": [
+  {
+   "kind": "mic-open",
+   "t": 1365,
+   "audio": 1
+  }
+ ],
+ "app": {
+  "commit": "e82c2abfcf1ba2dd236b6042f9f3b36283719766",
+  "dirty": false,
+  "bundleSha256": "f7dd388b828497e3c4bbd591c3aae11d11bb1752c1609cfb11924f3f492823c6",
+  "server": "http://127.0.0.1:8092",
+  "modelPolicy": {
+   "model": "vertex_ai/gemini-3.5-flash",
+   "detectionModel": "vertex_ai/gemini-3.5-flash",
+   "endpoint": "https://llm-proxy.invalid"
+  },
+  "knowledge": {
+   "kbId": "Duiven",
+   "bundleSchema": "duiven/3",
+   "importedAt": "2026-09-15T12:26:51Z"
+  }
+ },
+ "provenance": [],
+ "input": {
+  "pigeon": "nonverbal",
+  "autonomous": false,
+  "respond": true,
+  "microphone": "meeting-audio/meeting-dialogue.wav",
+  "micLeadInMs": 4000,
+  "dialogue": "meeting-audio/meeting-dialogue.json",
+  "dialogueEndMs": 26599
+ },
+ "selection": "Kandidaat. De keuze staat in video.config.json; alle takes blijven bewaard.",
+ "sanitized": {
+  "freshVisitor": "GET /chat/sessions tijdens de opname beperkt tot gesprekken uit deze opname",
+  "chatSessionsRemoved": 0,
+  "headers": "alleen content-type en x-duif-*; geen cookies of autorisatie"
+ },
+ "failure": "wachten op reactie na de knop duurde langer dan 90000 ms",
+ "audio": []
+}

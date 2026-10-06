@@ -1,0 +1,26 @@
+.duif-chat-dialog {
+  width: min(42rem, calc(100vw - 2rem));
+  max-height: calc(100dvh - 3rem);
+  overflow-y: auto;
+  margin: auto;
+  padding: clamp(1.25rem, 4vw, 2rem);
+  border: 1px solid var(--duif-line);
+  border-radius: 1rem;
+  background: var(--duif-paper);
+  color: var(--duif-ink);
+  box-shadow: 0 1.5rem 6rem #0003;
+}
+.duif-chat-dialog::backdrop { background: #162b2466; }
+.duif-chat-dialog h2 { margin: 0 0 1rem; font-family: var(--font-serif); font-size: 1.65rem; font-weight: 500; line-height: 1.25; }
+.duif-chat-dialog p { line-height: 1.65; font-size: .9rem; color: var(--duif-dim); margin: .8rem 0; }
+.duif-chat-dialog footer { display: flex; justify-content: flex-end; flex-wrap: wrap; align-items: center; gap: 1rem; padding-top: 1.25rem; margin-top: .5rem; border-top: 1px solid var(--duif-line); }
+/* Drie knopstijlen in de chat en niet meer: `chat-primary` bevestigt,
+   `duif-text-action` (app.css) is de tekstactie, en `duif-danger-action`
+   markeert de ene handeling die iets weghaalt. Meer stijlen betekende alleen
+   dat gelijke knoppen er verschillend uitzagen. */
+.chat-primary { border: 1px solid transparent; color: var(--duif-paper); background: var(--duif-ink); border-radius: .55rem; padding: .7rem 1rem; font-size: .85rem; font-weight: 550; cursor: pointer; }
+.chat-primary:disabled { opacity: .55; cursor: wait; }
+.duif-danger-action { padding: .55rem .7rem; background: transparent; border: 1px solid var(--duif-line); border-radius: .5rem; color: var(--destructive); font-size: .75rem; font-weight: 550; min-height: 2.5rem; cursor: pointer; }
+.duif-danger-action:hover:not(:disabled) { border-color: var(--destructive); }
+.duif-danger-action:disabled { opacity: .55; cursor: wait; }
+.duif-chat-dialog button:focus-visible, .duif-chat-dialog input:focus-visible { outline: 2px solid var(--duif-ink); outline-offset: 3px; }

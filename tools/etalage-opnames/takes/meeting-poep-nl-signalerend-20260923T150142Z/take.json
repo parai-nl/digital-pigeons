@@ -1,0 +1,473 @@
+{
+ "format": "duiven-etalage-take/1",
+ "id": "meeting-poep-nl-signalerend-20260923T150142Z",
+ "kind": "meeting",
+ "item": {
+  "statement": "poep",
+  "lang": "nl",
+  "pigeon": "signalerend",
+  "modulePigeon": "nonverbal"
+ },
+ "input": {
+  "speaker": "Voorzitter",
+  "text": "De marktkooplui klagen over duivenpoep op hun kramen.",
+  "audio": "uitspraken/poep-nl.mp3",
+  "audioSha256": "3f7d05b252f62928ccb2f0fab29174e6e1c94187d1bcd047203e372f864b8911",
+  "audioMs": 3251,
+  "voice": "Charlotte (ElevenLabs eleven_multilingual_v2)",
+  "micLeadMs": 4000,
+  "windowMs": 25000,
+  "placeholder": true
+ },
+ "recordedAt": "2026-09-23T15:01:42.615Z",
+ "finishedAt": "2026-09-23T15:02:01.371Z",
+ "server": {
+  "base": "http://127.0.0.1:8094",
+  "modelPolicy": {
+   "model": "vertex_ai/gemini-3.5-flash",
+   "detectionModel": "vertex_ai/gemini-3.5-flash",
+   "endpoint": "https://llm-proxy.invalid"
+  },
+  "knowledge": {
+   "kbId": "Duiven",
+   "bundleSchema": "duiven/3",
+   "languages": [
+    "nl",
+    "en"
+   ],
+   "importedAt": "2026-09-15T12:26:51Z",
+   "counts": {
+    "belongs_to": 4067,
+    "belongs_to_perspective": 4067,
+    "belongs_to_subthema": 4067,
+    "contains": 4067,
+    "contains_perspective": 297,
+    "contains_subthema": 149,
+    "contains_thema": 26,
+    "destillaat": 4067,
+    "domein": 3,
+    "has_quote": 4225,
+    "interview": 120,
+    "perspective": 297,
+    "quote": 4225,
+    "subthema": 149,
+    "thema": 26
+   }
+  },
+  "database": {
+   "name": "duif_etalage",
+   "copyOf": "duif_v3"
+  },
+  "module": {
+   "commit": "44186b900325eefad26c20b91e92f7350eb81bd0",
+   "moduleTree": "272829aae8444c82053a849b7a66ccc5a5a9109f",
+   "dirty": false,
+   "paraiCore": {
+    "commit": "29c670c73b73295c8c96592947cb9622e730c51c",
+    "dirty": false
+   },
+   "tags": [
+    "skipauth"
+   ],
+   "builtAt": "2026-09-23T14:40:12.508Z",
+   "binary": "module/bin/duif-etalage",
+   "bundleSha256": "d64a902bff38bf25d090a3bfe74e3f6bf4cfc7c21cb5160bddda9c45dced540d"
+  },
+  "pigeons": [
+   {
+    "id": "biological",
+    "engine": "agent",
+    "chat": true,
+    "meeting": true,
+    "autonomousDefault": false
+   },
+   {
+    "id": "individualist",
+    "engine": "agent",
+    "chat": true,
+    "meeting": true,
+    "autonomousDefault": false
+   },
+   {
+    "id": "nonverbal",
+    "engine": "pipeline",
+    "chat": false,
+    "meeting": true,
+    "autonomousDefault": true
+   }
+  ]
+ },
+ "failure": null,
+ "session": {
+  "id": "35445cd3bf389730c3c58720f4a23685",
+  "lang": "nl",
+  "pigeonId": "nonverbal",
+  "autonomous": true,
+  "eagerness": "normal",
+  "cooldownSeconds": 0
+ },
+ "timeline": {
+  "micOpenMs": 1313,
+  "utteranceStartMs": 5313,
+  "utteranceEndMs": 8564,
+  "windowEndMs": 33564
+ },
+ "actions": [
+  {
+   "name": "load",
+   "t": 105
+  },
+  {
+   "name": "seat",
+   "t": 1079
+  },
+  {
+   "name": "reaction",
+   "t": 11558,
+   "type": "sound"
+  },
+  {
+   "name": "reaction-done",
+   "t": 16325
+  },
+  {
+   "name": "end-click",
+   "t": 17826
+  },
+  {
+   "name": "ended",
+   "t": 17851
+  }
+ ],
+ "exchanges": [
+  {
+   "id": 1,
+   "method": "GET",
+   "path": "/access/notice",
+   "requestBody": null,
+   "t": 185,
+   "headMs": 9,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 10,
+   "body": "{\"version\":\"2026-09-22.1\",\"acknowledged\":true,\"acknowledgedAt\":\"2026-09-22T12:57:04.398172+02:00\"}\n"
+  },
+  {
+   "id": 2,
+   "method": "GET",
+   "path": "/duiven",
+   "requestBody": null,
+   "t": 190,
+   "headMs": 3,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 3,
+   "body": "{\"duiven\":[{\"id\":\"biological\",\"name\":{\"en\":\"Knowledge Partner\",\"nl\":\"Kennispartner\"},\"voiceReady\":true,\"knowledgeBase\":true,\"chat\":true,\"meeting\":true,\"topics\":[{\"id\":\"population-control\",\"label\":{\"en\":\"Population control\",\"nl\":\"Populatiebeheer\"}},{\"id\":\"nuisance-and-health\",\"label\":{\"en\":\"Nuisance and health\",\"nl\":\"Overlast en gezondheid\"}},{\"id\":\"feeding-and-food\",\"label\":{\"en\":\"Feeding and food\",\"nl\":\"Voeren en voedsel\"}},{\"id\":\"nesting-and-shelter\",\"label\":{\"en\":\"Nesting and shelter\",\"nl\":\"Nestelen en beschutting\"}},{\"id\":\"urban-ecology\",\"label\":{\"en\":\"Urban ecology\",\"nl\":\"Stadsecologie\"}}],\"engine\":\"agent\",\"autonomousDefault\":false},{\"id\":\"individualist\",\"name\":{\"en\":\"Stakeholder\",\"nl\":\"Stakeholder\"},\"voiceReady\":true,\"knowledgeBase\":true,\"chat\":true,\"meeting\":true,\"topics\":[{\"id\":\"pigeon-rights\",\"label\":{\"en\":\"What pigeons are owed\",\"nl\":\"Waar duiven recht op hebben\"}},{\"id\":\"city-space\",\"label\":{\"en\":\"Whose city is it\",\"nl\":\"Van wie is de stad\"}},{\"id\":\"decided-about-not-with\",\"label\":{\"en\":\"Decided about, not with\",\"nl\":\"Over ons, zonder ons\"}},{\"id\":\"pest-framing\",\"label\":{\"en\":\"Being called vermin\",\"nl\":\"Ongedierte genoemd worden\"}}],\"engine\":\"agent\",\"autonomousDefault\":false},{\"id\":\"nonverbal\",\"name\":{\"en\":\"Signaling Pigeon\",\"nl\":\"Signalerende duif\"},\"voiceReady\":false,\"knowledgeBase\":false,\"chat\":false,\"meeting\":true,\"topics\":[{\"id\":\"threat-and-removal\",\"label\":{\"en\":\"Population intervention\",\"nl\":\"Ingrijpen in de populatie\"}},{\"id\":\"food\",\"label\":{\"en\":\"Access to food\",\"nl\":\"Toegang tot voedsel\"}},{\"id\":\"nesting\",\"label\":{\"en\":\"Nesting and roosting access\",\"nl\":\"Toegang tot nest- en verblijfplaatsen\"}},{\"id\":\"pigeons-nearby\",\"label\":{\"en\":\"Pigeons nearby\",\"nl\":\"Duiven in de buurt\"}}],\"engine\":\"pipeline\",\"autonomousDefault\":true}],\"gedrag\":{\"interventieZelfstandig\":false,\"interventieThrottleSeconden\":0,\"inactiviteitPromptMinuten\":10,\"inactiviteitSluitSeconden\":90,\"taalDefault\":\"en\",\"detectieGretigheid\":\"normal\",\"detectieVensterWoorden\":3,\"detectieIntervalSeconden\":6,\"stilteMilliseconden\":1500,\"arousalHalveringSeconden\":120},\"modelPolicy\":{\"model\":\"vertex_ai/gemini-3.5-flash\",\"detectionModel\":\"vertex_ai/gemini-3.5-flash\",\"endpoint\":\"https://llm-proxy.invalid\"}}\n"
+  },
+  {
+   "id": 3,
+   "method": "GET",
+   "path": "/chat/sessions",
+   "requestBody": null,
+   "t": 191,
+   "headMs": 5,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 6,
+   "bodyOmitted": "chatgeschiedenis van het opnameaccount; hoort niet bij deze vergadering"
+  },
+  {
+   "id": 4,
+   "method": "GET",
+   "path": "/knowledge/status",
+   "requestBody": null,
+   "t": 194,
+   "headMs": 2,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 3,
+   "body": "{\"state\":\"ready\",\"kbId\":\"Duiven\",\"counts\":{\"belongs_to\":4067,\"belongs_to_perspective\":4067,\"belongs_to_subthema\":4067,\"contains\":4067,\"contains_perspective\":297,\"contains_subthema\":149,\"contains_thema\":26,\"destillaat\":4067,\"domein\":3,\"has_quote\":4225,\"interview\":120,\"perspective\":297,\"quote\":4225,\"subthema\":149,\"thema\":26},\"bundleSchema\":\"duiven/3\",\"languages\":[\"nl\",\"en\"],\"sourceLanguage\":\"nl\",\"importedAt\":\"2026-09-15T12:26:51Z\"}\n"
+  },
+  {
+   "id": 5,
+   "method": "POST",
+   "path": "/meeting/sessions",
+   "requestBody": "{\"pigeonId\":\"nonverbal\",\"playbackTracking\":true,\"lang\":\"nl\",\"autonomous\":true,\"eagerness\":\"normal\",\"cooldownSeconds\":0}",
+   "t": 1228,
+   "headMs": 4,
+   "status": 201,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 4,
+   "body": "{\"autonomous\":true,\"autonomyPaused\":false,\"eagerness\":\"normal\",\"lang\":\"nl\",\"listening\":\"reconnecting\",\"pigeonId\":\"nonverbal\",\"playbackTracking\":true,\"sessionId\":\"35445cd3bf389730c3c58720f4a23685\",\"settings\":{\"turnId\":\"0\",\"autonomyPaused\":false,\"playbackTracking\":true,\"autonomous\":true,\"eagerness\":\"normal\",\"cooldownSeconds\":0},\"voice\":\"off\"}\n"
+  },
+  {
+   "id": 45,
+   "method": "POST",
+   "path": "/meeting/sessions/35445cd3bf389730c3c58720f4a23685/playback",
+   "requestBody": "{\"turnId\":\"1\",\"state\":\"started\"}",
+   "t": 11553,
+   "headMs": 3,
+   "status": 202,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 3,
+   "body": "{\"accepted\":true,\"settings\":{\"turnId\":\"1\",\"autonomyPaused\":false,\"playbackTracking\":true,\"autonomous\":true,\"eagerness\":\"normal\",\"cooldownSeconds\":0},\"speaking\":true}\n"
+  },
+  {
+   "id": 65,
+   "method": "POST",
+   "path": "/meeting/sessions/35445cd3bf389730c3c58720f4a23685/playback",
+   "requestBody": "{\"turnId\":\"1\",\"state\":\"ended\"}",
+   "t": 16286,
+   "headMs": 3,
+   "status": 202,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 3,
+   "body": "{\"accepted\":true,\"settings\":{\"turnId\":\"1\",\"autonomyPaused\":false,\"playbackTracking\":true,\"autonomous\":true,\"eagerness\":\"normal\",\"cooldownSeconds\":0},\"speaking\":false}\n"
+  },
+  {
+   "id": 72,
+   "method": "DELETE",
+   "path": "/meeting/sessions/35445cd3bf389730c3c58720f4a23685",
+   "requestBody": null,
+   "t": 17841,
+   "headMs": 7,
+   "status": 204,
+   "headers": [],
+   "endMs": 8,
+   "body": ""
+  }
+ ],
+ "audioUpload": {
+  "requests": 64,
+  "statuses": {
+   "202": 64
+  },
+  "firstMs": 1699,
+  "lastMs": 17773
+ },
+ "channels": [
+  {
+   "channel": 1,
+   "path": "/meeting/sessions/35445cd3bf389730c3c58720f4a23685/events",
+   "t": 1233,
+   "messages": [
+    {
+     "t": 1241,
+     "data": "{\"type\":\"state\",\"turnId\":\"0\",\"autonomyPaused\":false,\"playbackTracking\":true,\"sessionId\":\"35445cd3bf389730c3c58720f4a23685\",\"pigeonId\":\"nonverbal\",\"lang\":\"nl\",\"listening\":\"reconnecting\",\"speaking\":false,\"detector\":{\"enabled\":true,\"state\":\"ready\",\"retryable\":false},\"settings\":{\"turnId\":\"0\",\"autonomyPaused\":false,\"playbackTracking\":true,\"autonomous\":true,\"eagerness\":\"normal\",\"cooldownSeconds\":0},\"voice\":\"off\"}"
+    },
+    {
+     "t": 1398,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"35445cd3bf389730c3c58720f4a23685\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "t": 6107,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"35445cd3bf389730c3c58720f4a23685\",\"speaking\":false,\"text\":\"De\"}"
+    },
+    {
+     "t": 6233,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"35445cd3bf389730c3c58720f4a23685\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "t": 6633,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"35445cd3bf389730c3c58720f4a23685\",\"speaking\":false,\"text\":\"De Mar\"}"
+    },
+    {
+     "t": 6634,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"35445cd3bf389730c3c58720f4a23685\",\"speaking\":false,\"text\":\"De Markt\"}"
+    },
+    {
+     "t": 7034,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"35445cd3bf389730c3c58720f4a23685\",\"speaking\":false,\"text\":\"De marktko\"}"
+    },
+    {
+     "t": 7156,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"35445cd3bf389730c3c58720f4a23685\",\"speaking\":false,\"text\":\"De marktkoop\"}"
+    },
+    {
+     "t": 7156,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"35445cd3bf389730c3c58720f4a23685\",\"speaking\":false,\"text\":\"De marktkoopl\"}"
+    },
+    {
+     "t": 7178,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"35445cd3bf389730c3c58720f4a23685\",\"speaking\":false,\"text\":\"De marktkooplui\"}"
+    },
+    {
+     "t": 7369,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"35445cd3bf389730c3c58720f4a23685\",\"speaking\":false,\"text\":\"De marktkooplui k\"}"
+    },
+    {
+     "t": 7424,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"35445cd3bf389730c3c58720f4a23685\",\"speaking\":false,\"text\":\"De marktkooplui klag\"}"
+    },
+    {
+     "t": 7467,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"35445cd3bf389730c3c58720f4a23685\",\"speaking\":false,\"text\":\"De marktkooplui klagen\"}"
+    },
+    {
+     "t": 7538,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"35445cd3bf389730c3c58720f4a23685\",\"speaking\":false,\"text\":\"De marktkooplui klagen over\"}"
+    },
+    {
+     "t": 7890,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"35445cd3bf389730c3c58720f4a23685\",\"speaking\":false,\"text\":\"De marktkooplui klagen over du\"}"
+    },
+    {
+     "t": 7934,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"35445cd3bf389730c3c58720f4a23685\",\"speaking\":false,\"text\":\"De marktkooplui klagen over duiven\"}"
+    },
+    {
+     "t": 8101,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"35445cd3bf389730c3c58720f4a23685\",\"speaking\":false,\"text\":\"De marktkooplui klagen over duivenpo\"}"
+    },
+    {
+     "t": 8397,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"35445cd3bf389730c3c58720f4a23685\",\"speaking\":false,\"text\":\"De marktkooplui klagen over duivenpoep\"}"
+    },
+    {
+     "t": 8444,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"35445cd3bf389730c3c58720f4a23685\",\"speaking\":false,\"text\":\"De marktkooplui klagen over duivenpoep op hun\"}"
+    },
+    {
+     "t": 8930,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"35445cd3bf389730c3c58720f4a23685\",\"speaking\":false,\"text\":\"De marktkooplui klagen over duivenpoep op hun kr\"}"
+    },
+    {
+     "t": 8975,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"35445cd3bf389730c3c58720f4a23685\",\"speaking\":false,\"text\":\"De marktkooplui klagen over duivenpoep op hun kram\"}"
+    },
+    {
+     "t": 9083,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"35445cd3bf389730c3c58720f4a23685\",\"speaking\":false,\"text\":\"De marktkooplui klagen over duivenpoep op hun kramen.\"}"
+    },
+    {
+     "t": 9595,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"35445cd3bf389730c3c58720f4a23685\",\"speaking\":false,\"text\":\"De marktkooplui klagen over duivenpoep op hun kramen.\",\"final\":true}"
+    },
+    {
+     "t": 11233,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"35445cd3bf389730c3c58720f4a23685\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "t": 11538,
+     "data": "{\"type\":\"candidate\",\"sessionId\":\"35445cd3bf389730c3c58720f4a23685\",\"speaking\":false,\"candidate\":{\"id\":\"3f38c48f266ae0512b6b4e9bfc12a636\",\"score\":0,\"reason\":\"signal\",\"sources\":0}}"
+    },
+    {
+     "t": 11539,
+     "data": "{\"type\":\"candidate\",\"sessionId\":\"35445cd3bf389730c3c58720f4a23685\",\"speaking\":false}"
+    },
+    {
+     "t": 11539,
+     "data": "{\"type\":\"intervention\",\"sessionId\":\"35445cd3bf389730c3c58720f4a23685\",\"speaking\":false}"
+    },
+    {
+     "t": 11539,
+     "data": "{\"type\":\"sound\",\"turnId\":\"1\",\"eventId\":\"d0a25a74a5fcf8400c7ff360de0b34af\",\"durationMs\":1000,\"playbackTracking\":true,\"playback\":\"pending\",\"sessionId\":\"35445cd3bf389730c3c58720f4a23685\",\"speaking\":false,\"sound\":{\"id\":\"shuffle\",\"band\":\"calm\",\"file\":\"sounds/shuffle.mp3\",\"url\":\"/api/duif/v1/sounds/shuffle\"}}"
+    },
+    {
+     "t": 11540,
+     "data": "{\"type\":\"playback_state\",\"turnId\":\"1\",\"playback\":\"pending\",\"sessionId\":\"35445cd3bf389730c3c58720f4a23685\",\"speaking\":true}"
+    },
+    {
+     "t": 11556,
+     "data": "{\"type\":\"playback_state\",\"turnId\":\"1\",\"playback\":\"playing\",\"sessionId\":\"35445cd3bf389730c3c58720f4a23685\",\"speaking\":true}"
+    },
+    {
+     "t": 16233,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"35445cd3bf389730c3c58720f4a23685\",\"listening\":\"listening\",\"speaking\":true}"
+    },
+    {
+     "t": 16288,
+     "data": "{\"type\":\"playback_state\",\"turnId\":\"1\",\"autonomyPaused\":false,\"playback\":\"ended\",\"sessionId\":\"35445cd3bf389730c3c58720f4a23685\",\"speaking\":false}"
+    }
+   ],
+   "openMs": 1241,
+   "closeMs": 17841
+  }
+ ],
+ "probes": [
+  {
+   "kind": "mic-open",
+   "t": 1313,
+   "audio": 1
+  },
+  {
+   "kind": "gesture",
+   "t": 1326,
+   "clip": "Peck"
+  },
+  {
+   "kind": "gesture",
+   "t": 1539,
+   "clip": "WingWave"
+  },
+  {
+   "kind": "media-play",
+   "t": 11540,
+   "src": "http://127.0.0.1:8094/modules/duif/media/pigeon-field-coo.mp3"
+  },
+  {
+   "kind": "gesture",
+   "t": 11540,
+   "clip": "WingWave"
+  },
+  {
+   "kind": "media-playing",
+   "t": 11553,
+   "src": "http://127.0.0.1:8094/modules/duif/media/pigeon-field-coo.mp3"
+  },
+  {
+   "kind": "media-ended",
+   "t": 16286,
+   "src": "http://127.0.0.1:8094/modules/duif/media/pigeon-field-coo.mp3"
+  }
+ ],
+ "transcript": [
+  {
+   "t": 9595,
+   "text": "De marktkooplui klagen over duivenpoep op hun kramen."
+  }
+ ],
+ "voice": [],
+ "checks": {
+  "reaction": "signal",
+  "delayMs": 2975,
+  "sessionLang": "nl",
+  "langMatches": true,
+  "autonomous": true
+ }
+}

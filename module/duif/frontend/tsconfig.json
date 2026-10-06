@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "types": ["svelte", "node"],
+    // Sibling-defaults voor editors. `bun run check` typeert via het
+    // gegenereerde tsconfig.check.json, dat PARAI_UI_DIR en PARAI_GRAPH_DIR
+    // volgt zoals de build (scripts/tsconfig-check.ts).
+    "paths": {
+      "svelte": ["./node_modules/svelte"],
+      "svelte/*": ["./node_modules/svelte/*"],
+      "@parai/ui":["../../../../parai-ui/index.ts"],
+      "@parai/ui/layouts": ["../../../../parai-ui/layouts/index.ts"],
+      "@parai/ui/patterns": ["../../../../parai-ui/patterns/index.ts"],
+      "@parai/ui/*": ["../../../../parai-ui/*"],
+      "@parai/graph/*": ["../../../../parai-graph/module/graph/frontend/src/*"]
+    }
+  },
+  "include": ["src/**/*", "vitest-setup.ts"],
+  "exclude": ["node_modules", "dist"]
+}

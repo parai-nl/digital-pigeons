@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="nl" class="is-loading">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Digitale Duif van Rotterdam</title>
+<meta name="description" content="Drie digitale duiven aan tafel. Een experiment van AI-MAPS (Erasmus Universiteit Rotterdam), gemaakt door Parai.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Digitale Duif van Rotterdam">
+<meta property="og:title" content="Digitale Duif van Rotterdam">
+<meta property="og:description" content="Drie digitale duiven aan tafel. Een experiment van AI-MAPS (Erasmus Universiteit Rotterdam), gemaakt door Parai.">
+<meta property="og:url" content="https://pigeon.parai.nl/">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:image" content="https://pigeon.parai.nl/etalage/media/deel/deel.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="De drie digitale duiven naast elkaar: Signalerende duif, Kennispartner en Stakeholder.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Digitale Duif van Rotterdam">
+<meta name="twitter:description" content="Drie digitale duiven aan tafel. Een experiment van AI-MAPS (Erasmus Universiteit Rotterdam), gemaakt door Parai.">
+<meta name="twitter:image" content="https://pigeon.parai.nl/etalage/media/deel/deel.jpg">
+<meta name="twitter:image:alt" content="De drie digitale duiven naast elkaar: Signalerende duif, Kennispartner en Stakeholder.">
+<link rel="icon" href="etalage/media/logo/parai.svg" type="image/svg+xml">
+<link rel="preload" href="etalage/vendor/fonts/fustat-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="etalage/vendor/fonts/duif-serif-800-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script src="etalage/theme-early.js"></script>
+<link rel="stylesheet" href="etalage/styles/tokens.css">
+<link rel="stylesheet" href="etalage/styles/page.css">
+<script type="module" src="etalage/app.js"></script>
+</head>
+<body>
+<a class="skip" href="#duiven" data-t="skip">Naar de duiven</a>
+
+<header class="topbar">
+  <a class="topbar__title" href="./" data-t="header.title">Digitale Duif van Rotterdam</a>
+  <div class="topbar__right">
+    <div class="lang" role="group" aria-label="Taal" data-lang-group>
+      <button type="button" class="lang__btn" data-lang="nl" lang="nl" aria-pressed="true">NL</button>
+      <button type="button" class="lang__btn" data-lang="en" lang="en" aria-pressed="false">EN</button>
+    </div>
+    <button type="button" class="themebtn" role="switch" aria-checked="false" aria-label="Donkere weergave" data-theme-switch hidden></button>
+    <a class="login" href="https://pigeon.parai.nl/duif" data-login>
+      <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg></span>
+      <span class="login__text" data-t="header.login">Inloggen</span>
+    </a>
+    <span class="topbar__rule" aria-hidden="true"></span>
+    <span class="brands" role="img" aria-label="AI-MAPS en Parai" data-brands>
+      <picture>
+        <source srcset="etalage/media/logo/ai-maps-donker.png" media="not all" data-dark>
+        <img class="brands__aimaps" src="etalage/media/logo/ai-maps.png" alt="" width="83" height="20">
+      </picture>
+      <span class="brands__x" aria-hidden="true">×</span>
+      <img class="brands__parai" src="etalage/media/logo/parai.svg" alt="" width="28" height="22">
+    </span>
+  </div>
+</header>
+
+<main id="inhoud">
+  <section class="hero">
+    <p class="eyebrow hero__eyebrow" data-t="hero.eyebrow">Een experiment van AI-MAPS en Parai</p>
+    <h1 id="hero-title" data-t="hero.title">Wat gebeurt er met een gesprek als een duif aan tafel zit?</h1>
+    <p class="hero__line" data-t="hero.line">Drie digitale duiven, elk met een eigen manier van reageren. Kies er één: de duif vooraan zit bij jou aan tafel.</p>
+    <button type="button" class="faqbtn" aria-haspopup="dialog" aria-label="Veelgestelde vragen" data-faq-open>?</button>
+  </section>
+
+  <section class="stage" id="duiven" tabindex="-1" data-carousel></section>
+
+  <section class="talk" id="gesprek" aria-labelledby="talk-title" data-talk>
+    <div class="talk__intro">
+      <h2 class="talk__chip" id="talk-title"><span class="talk__icon" data-talk-icon aria-hidden="true"></span><span data-talk-chip></span><span aria-hidden="true"> · </span><span data-talk-name></span></h2>
+      <p class="talk__blurb" data-talk-blurb></p>
+    </div>
+    <div class="panel" data-panel>
+      <div class="panel__head">
+        <div class="tabs" role="tablist" data-tabs>
+          <button type="button" class="tab" role="tab" id="tab-chat" aria-controls="panel-chat" data-tab="chat">Chat</button>
+          <button type="button" class="tab" role="tab" id="tab-meeting" aria-controls="panel-meeting" data-tab="meeting">Vergadering</button>
+        </div>
+      </div>
+      <div class="panel__body" id="panel-chat" role="tabpanel" aria-labelledby="tab-chat" data-chat-root></div>
+      <div class="panel__body" id="panel-meeting" role="tabpanel" aria-labelledby="tab-meeting" data-meeting-root hidden></div>
+    </div>
+    <p class="honest" data-honest hidden><span data-honest-text></span><span aria-hidden="true"> · </span><button type="button" class="textbtn" aria-haspopup="dialog" data-honest-how></button></p>
+  </section>
+
+  <section class="band" aria-labelledby="band-title">
+    <div class="band__inner">
+      <div class="band__text">
+        <p class="eyebrow" data-t="video.eyebrow"></p>
+        <h2 id="band-title" data-t="video.title"></h2>
+        <p class="band__body" data-t="video.body"></p>
+      </div>
+      <div class="band__media" data-video></div>
+    </div>
+  </section>
+
+  <section class="research" id="onderzoek" aria-labelledby="research-title">
+    <div class="research__grid">
+      <div class="research__about">
+        <p class="eyebrow" data-t="research.eyebrow"></p>
+        <h2 id="research-title" data-t="research.title"></h2>
+        <p class="research__body" data-t="research.body"></p>
+        <ul class="research__links" data-research-links></ul>
+      </div>
+      <div class="research__posters">
+        <h3 class="research__posters-title" data-t="research.postersTitle"></h3>
+        <p class="research__posters-note" data-t="research.postersNote"></p>
+        <div class="posters" role="region" tabindex="0" data-posters></div>
+      </div>
+    </div>
+    <div class="cards" data-cards-block>
+      <h3 class="cards__title" data-t="research.cardsTitle"></h3>
+      <p class="cards__note" data-t="research.cardsNote"></p>
+      <ul class="cards__list" role="list" data-cards></ul>
+    </div>
+    <details class="method" id="methode" data-method>
+      <summary class="method__summary"><span class="method__title" data-t="method.summary"></span><span class="method__plus" data-method-plus aria-hidden="true"></span></summary>
+      <div class="method__body" data-method-body></div>
+    </details>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <span class="brands" role="img" aria-label="AI-MAPS en Parai" data-brands>
+      <picture>
+        <source srcset="etalage/media/logo/ai-maps-donker.png" media="not all" data-dark>
+        <img class="brands__aimaps" src="etalage/media/logo/ai-maps.png" alt="" width="100" height="24">
+      </picture>
+      <span class="brands__x" aria-hidden="true">×</span>
+      <img class="brands__parai" src="etalage/media/logo/parai.svg" alt="" width="33" height="26">
+    </span>
+    <p class="footer__line" data-t="footer.line">Een experiment van AI-MAPS · Erasmus Universiteit Rotterdam · gemaakt door Parai</p>
+    <div class="footer__credits">
+      <p class="footer__credits-title" data-t="footer.images">Beeld</p>
+      <ul class="footer__credits-list" data-credits></ul>
+    </div>
+  </div>
+</footer>
+
+<noscript><p class="noscript">Deze pagina heeft JavaScript nodig om de opgenomen gesprekken af te spelen. / This page needs JavaScript to play the recorded conversations.</p></noscript>
+</body>
+</html>

@@ -1,0 +1,275 @@
+{
+ "format": "duiven-etalage-take/1",
+ "id": "chat-vuurwerk-en-stakeholder-naar-kennispartner-20260923T145510Z",
+ "kind": "chat",
+ "item": {
+  "question": "vuurwerk",
+  "lang": "en",
+  "route": "stakeholder>kennispartner",
+  "pigeon": "kennispartner",
+  "modulePigeon": "biological",
+  "from": "stakeholder",
+  "basedOn": "chat-vuurwerk-en-stakeholder-20260923T145417Z"
+ },
+ "input": {
+  "text": "What do fireworks do to you?",
+  "placeholder": true
+ },
+ "recordedAt": "2026-09-23T14:55:10.998Z",
+ "server": {
+  "base": "http://127.0.0.1:8094",
+  "modelPolicy": {
+   "model": "vertex_ai/gemini-3.5-flash",
+   "detectionModel": "vertex_ai/gemini-3.5-flash",
+   "endpoint": "https://llm-proxy.invalid"
+  },
+  "knowledge": {
+   "kbId": "Duiven",
+   "bundleSchema": "duiven/3",
+   "languages": [
+    "nl",
+    "en"
+   ],
+   "importedAt": "2026-09-15T12:26:51Z",
+   "counts": {
+    "belongs_to": 4067,
+    "belongs_to_perspective": 4067,
+    "belongs_to_subthema": 4067,
+    "contains": 4067,
+    "contains_perspective": 297,
+    "contains_subthema": 149,
+    "contains_thema": 26,
+    "destillaat": 4067,
+    "domein": 3,
+    "has_quote": 4225,
+    "interview": 120,
+    "perspective": 297,
+    "quote": 4225,
+    "subthema": 149,
+    "thema": 26
+   }
+  },
+  "database": {
+   "name": "duif_etalage",
+   "copyOf": "duif_v3"
+  },
+  "module": {
+   "commit": "44186b900325eefad26c20b91e92f7350eb81bd0",
+   "moduleTree": "272829aae8444c82053a849b7a66ccc5a5a9109f",
+   "dirty": false,
+   "paraiCore": {
+    "commit": "29c670c73b73295c8c96592947cb9622e730c51c",
+    "dirty": false
+   },
+   "tags": [
+    "skipauth"
+   ],
+   "builtAt": "2026-09-23T14:40:12.508Z",
+   "binary": "module/bin/duif-etalage",
+   "bundleSha256": "d64a902bff38bf25d090a3bfe74e3f6bf4cfc7c21cb5160bddda9c45dced540d"
+  },
+  "pigeons": [
+   {
+    "id": "biological",
+    "engine": "agent",
+    "chat": true,
+    "meeting": true,
+    "autonomousDefault": false
+   },
+   {
+    "id": "individualist",
+    "engine": "agent",
+    "chat": true,
+    "meeting": true,
+    "autonomousDefault": false
+   },
+   {
+    "id": "nonverbal",
+    "engine": "pipeline",
+    "chat": false,
+    "meeting": true,
+    "autonomousDefault": true
+   }
+  ]
+ },
+ "session": {
+  "id": "50f2106c30fd68cb8583683fcdd16d03",
+  "lang": "en",
+  "comparison": {
+   "groupId": "fac5738b30750c3f27959681eb42f701",
+   "sessionId": "03aa86fcbd83563001b237fc46cd5e7d",
+   "pigeonId": "individualist",
+   "questionId": "fac5738b30750c3f27959681eb42f701",
+   "originalQuestion": "What do fireworks do to you?",
+   "contextMessageIds": [
+    "fac5738b30750c3f27959681eb42f701",
+    "491d745801968cc87f70f49a6bf34658"
+   ]
+  }
+ },
+ "finishedAt": "2026-09-23T14:55:22.274Z",
+ "exchanges": [
+  {
+   "id": 1,
+   "method": "GET",
+   "path": "/chat/sessions/03aa86fcbd83563001b237fc46cd5e7d/messages",
+   "requestBody": null,
+   "t": 0,
+   "headMs": 2,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "body": "{\"messages\":[{\"id\":\"fac5738b30750c3f27959681eb42f701\",\"role\":\"user\",\"kind\":\"text\",\"content\":\"What do fireworks do to you?\",\"createdAt\":\"2026-09-23T16:54:17.429802+02:00\"},{\"id\":\"771104ec6a111ba88b6e3100e0e74b08\",\"role\":\"assistant\",\"kind\":\"text\",\"persona\":\"facilitator\",\"content\":\"While fireworks represent celebration and joy for many humans, they introduce a sudden, overwhelming threat to the animals that share our urban spaces.\",\"createdAt\":\"2026-09-23T16:54:20.7796+02:00\",\"provenance\":{\"contractVersion\":\"duiven-2026-09-07-v1\",\"personaVersion\":\"ff996915bceffff46e1a92a2037311ffd17cf6dff27a35dc34325af6ba17a7a8\",\"promptVersion\":\"de87036e16a796abb1fead60162a5c4c27e14e4fbecd8ee10b88058c1b51b06a\",\"model\":\"vertex_ai/gemini-3.5-flash\",\"kbState\":\"versioned\",\"kbId\":\"Duiven\",\"kbVersion\":\"774f03e56ee7b10562e58e9b81d657647e5601647d29e74bde8ef7cb5e4fbcbf\"}},{\"id\":\"491d745801968cc87f70f49a6bf34658\",\"role\":\"assistant\",\"kind\":\"pigeon_answer\",\"persona\":\"individualist\",\"content\":\"There is no record here of what fireworks actually do to my body. We only know they damage human public health through pollution and trauma [1]. Human injuries in medical papers are mostly limited to burns and broken limbs [2]. Why must we endure your toxic, explosive trash raining down on our homes?\",\"kbStatus\":\"sources\",\"createdAt\":\"2026-09-23T16:54:33.621944+02:00\",\"provenance\":{\"contractVersion\":\"duiven-2026-09-07-v1\",\"personaVersion\":\"ff996915bceffff46e1a92a2037311ffd17cf6dff27a35dc34325af6ba17a7a8\",\"promptVersion\":\"de87036e16a796abb1fead60162a5c4c27e14e4fbecd8ee10b88058c1b51b06a\",\"model\":\"vertex_ai/gemini-3.5-flash\",\"kbState\":\"versioned\",\"kbId\":\"Duiven\",\"kbVersion\":\"774f03e56ee7b10562e58e9b81d657647e5601647d29e74bde8ef7cb5e4fbcbf\"},\"sources\":[{\"number\":1,\"id\":\"destillaat:6dd84727-1d7e-5d06-9543-cf099a0ec797\",\"ref\":\"interview:d4bd2cb3-c257-5baa-b187-0888b47d36fc\"},{\"number\":2,\"id\":\"destillaat:3054ff0d-ac78-5249-8934-abcce4993156\",\"ref\":\"interview:380dde85-7db3-5d8a-b2e8-2e54ba99ae74\"}]},{\"id\":\"c52d36476cb1e8ac75c748e5e716f347\",\"role\":\"assistant\",\"kind\":\"text\",\"persona\":\"facilitator\",\"content\":\"The tradition of lighting fireworks for human celebration directly conflicts with the basic safety and environmental needs of all urban residents. The pigeon's perspective highlights how these brief spectacles leave behind a trail of pollution and disruption in shared habitats. When cities make decisions about festival permits or firework bans, they are ultimately choosing whose comfort and safety to prioritize in the public space. \\n\\nHow should a city balance the cultural value of these traditions against the well-being of the local ecosystem?\",\"createdAt\":\"2026-09-23T16:54:41.226993+02:00\",\"provenance\":{\"contractVersion\":\"duiven-2026-09-07-v1\",\"personaVersion\":\"ff996915bceffff46e1a92a2037311ffd17cf6dff27a35dc34325af6ba17a7a8\",\"promptVersion\":\"de87036e16a796abb1fead60162a5c4c27e14e4fbecd8ee10b88058c1b51b06a\",\"model\":\"vertex_ai/gemini-3.5-flash\",\"kbState\":\"versioned\",\"kbId\":\"Duiven\",\"kbVersion\":\"774f03e56ee7b10562e58e9b81d657647e5601647d29e74bde8ef7cb5e4fbcbf\"}}]}",
+   "endMs": 2,
+   "compacted": "bronnen per rij ingekort tot nummer en id; de volledige bronnen staan in de stroom van de beurt"
+  },
+  {
+   "id": 2,
+   "method": "POST",
+   "path": "/chat/comparisons",
+   "requestBody": {
+    "requestId": "9982e37a3954b7584ea43f48e336fc4d",
+    "sourceSessionId": "03aa86fcbd83563001b237fc46cd5e7d",
+    "questionId": "fac5738b30750c3f27959681eb42f701",
+    "pigeonId": "biological"
+   },
+   "t": 2,
+   "headMs": 8,
+   "status": 201,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "body": "{\"session\":{\"id\":\"50f2106c30fd68cb8583683fcdd16d03\",\"pigeonId\":\"biological\",\"lang\":\"en\",\"createdAt\":\"2026-09-23T16:55:11.00341+02:00\",\"updatedAt\":\"2026-09-23T16:55:11.00341+02:00\",\"comparison\":{\"groupId\":\"fac5738b30750c3f27959681eb42f701\",\"sessionId\":\"03aa86fcbd83563001b237fc46cd5e7d\",\"pigeonId\":\"individualist\",\"questionId\":\"fac5738b30750c3f27959681eb42f701\",\"originalQuestion\":\"What do fireworks do to you?\",\"contextMessageIds\":[\"fac5738b30750c3f27959681eb42f701\",\"491d745801968cc87f70f49a6bf34658\"]},\"title\":\"What do fireworks do to you?\"}}\n",
+   "endMs": 8
+  },
+  {
+   "id": 3,
+   "method": "GET",
+   "path": "/chat/sessions/50f2106c30fd68cb8583683fcdd16d03/messages",
+   "requestBody": null,
+   "t": 10,
+   "headMs": 0,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "body": "{\"messages\":[{\"id\":\"31d05e7d158ac0aaddbbd7aac7948c7c\",\"role\":\"user\",\"kind\":\"text\",\"content\":\"What do fireworks do to you?\",\"createdAt\":\"2026-09-23T16:55:11.00341+02:00\"},{\"id\":\"255cdd3005ddb6da6c0dc51886aed14e\",\"role\":\"assistant\",\"kind\":\"pigeon_answer\",\"persona\":\"individualist\",\"content\":\"There is no record here of what fireworks actually do to my body. We only know they damage human public health through pollution and trauma [1]. Human injuries in medical papers are mostly limited to burns and broken limbs [2]. Why must we endure your toxic, explosive trash raining down on our homes?\",\"kbStatus\":\"sources\",\"createdAt\":\"2026-09-23T16:55:11.00341+02:00\",\"provenance\":{\"contractVersion\":\"duiven-2026-09-07-v1\",\"personaVersion\":\"ff996915bceffff46e1a92a2037311ffd17cf6dff27a35dc34325af6ba17a7a8\",\"promptVersion\":\"de87036e16a796abb1fead60162a5c4c27e14e4fbecd8ee10b88058c1b51b06a\",\"model\":\"vertex_ai/gemini-3.5-flash\",\"kbState\":\"versioned\",\"kbId\":\"Duiven\",\"kbVersion\":\"774f03e56ee7b10562e58e9b81d657647e5601647d29e74bde8ef7cb5e4fbcbf\"},\"sources\":[{\"number\":1,\"id\":\"destillaat:6dd84727-1d7e-5d06-9543-cf099a0ec797\",\"ref\":\"interview:d4bd2cb3-c257-5baa-b187-0888b47d36fc\"},{\"number\":2,\"id\":\"destillaat:3054ff0d-ac78-5249-8934-abcce4993156\",\"ref\":\"interview:380dde85-7db3-5d8a-b2e8-2e54ba99ae74\"}]}]}",
+   "endMs": 1,
+   "compacted": "bronnen per rij ingekort tot nummer en id; de volledige bronnen staan in de stroom van de beurt"
+  },
+  {
+   "id": 4,
+   "method": "POST",
+   "path": "/chat/turn",
+   "requestBody": {
+    "sessionId": "50f2106c30fd68cb8583683fcdd16d03",
+    "pigeonId": "biological",
+    "message": "What do fireworks do to you?",
+    "lang": "en"
+   },
+   "t": 11,
+   "headMs": 3,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "text/event-stream"
+    ],
+    [
+     "x-duif-session-id",
+     "50f2106c30fd68cb8583683fcdd16d03"
+    ]
+   ],
+   "chunks": [
+    {
+     "ms": 3,
+     "text": "data: {\"type\":\"phase\",\"phase\":\"facilitator\"}\n\n"
+    },
+    {
+     "ms": 3970,
+     "text": "data: {\"type\":\"tool\",\"id\":\"tool-1\",\"name\":\"ask_pigeon\"}\n\n"
+    },
+    {
+     "ms": 3970,
+     "text": "data: {\"type\":\"phase\",\"phase\":\"pigeon_grounding\"}\n\n"
+    },
+    {
+     "ms": 4229,
+     "text": "data: {\"type\":\"artifact\",\"id\":\"pigeon-1\",\"kind\":\"pigeon_answer\",\"persona\":\"biological\",\"kbStatus\":\"sources\"}\n\ndata: {\"type\":\"sources\",\"id\":\"pigeon-1\",\"sources\":[{\"grounding\":\"corpus_grounded\",\"number\":1,\"type\":\"destillaat\",\"id\":\"destillaat:6dd84727-1d7e-5d06-9543-cf099a0ec797\",\"text\":\"De schadelijke effecten van vuurwerk beperken zich niet tot de natuur; wereldwijd is de negatieve impact op de menselijke gezondheid door vervuiling, fysiek letsel en gehoorschade al uitgebreid aangetoond.\",\"perspective\":\"Actieve natuurbescherming\",\"theme\":\"Lawaai en dierenwelzijn\",\"ref\":{\"id\":\"interview:d4bd2cb3-c257-5baa-b187-0888b47d36fc\",\"citation\":\"Shamoun-Baranes, J., Dokter, A. M., van Gasteren, H., van Loon, E. E., Leijnse, H., \\u0026 Bouten, W. (2011). Birds flee en mass from New Year's Eve fireworks. Behavioral Ecology, 22, 1173-1177. https://doi.org/10.1093/beheco/arr102\",\"citationConfidence\":\"high\",\"citationMissing\":\"issue\",\"quote\":\"Numerous studies worldwide have\\ndocumented the negative impact fireworks have on public\\nhealth through pollution, physical injuries, auditory, and visual trauma (e.g., Plontke et al. 2002; Drewnick et al. 2006;\\nMoreno et al. 2007; Saadat et al. 2010).\",\"paper\":\"shamoun-baranes2011\",\"doi\":\"10.1093/beheco/arr102\",\"passages\":[{\"id\":\"quote:9b316c20-d8ee-572f-89b0-e3fe159e4d02\",\"text\":\"Numerous studies worldwide have\\ndocumented the negative impact fireworks have on public\\nhealth through pollution, physical injuries, auditory, and visual trauma (e.g., Plontke et al. 2002; Drewnick et al. 2006;\\nMoreno et al. 2007; Saadat et al. 2010).\"}]},\"localized\":{\"text\":{\"en\":\"The harmful effects of fireworks are not limited to nature; worldwide, the negative impact on human health through pollution, physical injury, and hearing damage has already been extensively demonstrated.\",\"nl\":\"De schadelijke effecten van vuurwerk beperken zich niet tot de natuur; wereldwijd is de negatieve impact op de menselijke gezondheid door vervuiling, fysiek letsel en gehoorschade al uitgebreid aangetoond.\"},\"perspective\":{\"en\":\"Active nature protection\",\"nl\":\"Actieve natuurbescherming\"},\"theme\":{\"en\":\"Noise and animal welfare\",\"nl\":\"Lawaai en dierenwelzijn\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":2,\"type\":\"destillaat\",\"id\":\"destillaat:3054ff0d-ac78-5249-8934-abcce4993156\",\"text\":\"In de medische literatuur over vuurwerkslachtoffers ligt de nadruk voornamelijk op brandwonden en botbreuken, in plaats van op de gevolgen van geluidsoverlast.\",\"perspective\":\"Kritische bewustwording\",\"theme\":\"Vuurwerkgeluid en eigenschappen\",\"ref\":{\"id\":\"interview:380dde85-7db3-5d8a-b2e8-2e54ba99ae74\",\"citation\":\"Kukulski, B., Wszołek, T., \\u0026 Mleczko, D. (2018). The Impact of Fireworks Noise on the Acoustic Climate in Urban Areas. Archives of Acoustics, 43(4), 697–705. https://doi.org/10.24425/aoa.2018.125163\",\"citationConfidence\":\"high\",\"quote\":\"In the medical literature, one can find a lot of\\npapers on injuries caused by fireworks, but these\\nare mainly information about burns or broken limbs\",\"paper\":\"kukulski2018\",\"doi\":\"10.24425/aoa.2018.125163\",\"passages\":[{\"id\":\"quote:0982384a-78af-502e-b923-803869a15086\",\"text\":\"In the medical literature, one can find a lot of\\npapers on injuries caused by fireworks, but these\\nare mainly information about burns or broken limbs\"}]},\"localized\":{\"text\":{\"en\":\"In the medical literature on fireworks victims, the emphasis is mainly on burns and bone fractures, rather than on the consequences of noise nuisance.\",\"nl\":\"In de medische literatuur over vuurwerkslachtoffers ligt de nadruk voornamelijk op brandwonden en botbreuken, in plaats van op de gevolgen van geluidsoverlast.\"},\"perspective\":{\"en\":\"Critical awareness-raising\",\"nl\":\"Kritische bewustwording\"},\"theme\":{\"en\":\"Fireworks sound and properties\",\"nl\":\"Vuurwerkgeluid en eigenschappen\"}},\"sourceLanguage\":\"nl\"}]}\n\n"
+    },
+    {
+     "ms": 4229,
+     "text": "data: {\"type\":\"phase\",\"phase\":\"pigeon\"}\n\n"
+    },
+    {
+     "ms": 10868,
+     "text": "data: {\"type\":\"artifact_delta\",\"id\":\"pigeon-1\",\"delta\":\"I cannot establish from the available sources how fireworks affect the bodies of\"}\n\n"
+    },
+    {
+     "ms": 10902,
+     "text": "data: {\"type\":\"artifact_delta\",\"id\":\"pigeon-1\",\"delta\":\" pigeons like me. The provided research instead documents the negative impacts of fireworks on human public health through pollution, physical injuries,\"}\n\n"
+    },
+    {
+     "ms": 10949,
+     "text": "data: {\"type\":\"artifact_delta\",\"id\":\"pigeon-1\",\"delta\":\" and auditory and visual trauma [1]. Additionally, medical literature on firework injuries primarily contains information about human burns or broken\"}\n\n"
+    },
+    {
+     "ms": 10978,
+     "text": "data: {\"type\":\"artifact_delta\",\"id\":\"pigeon-1\",\"delta\":\" limbs [2].\"}\n\n"
+    },
+    {
+     "ms": 11172,
+     "text": "data: {\"type\":\"artifact\",\"id\":\"pigeon-1\",\"kind\":\"pigeon_answer\",\"persona\":\"biological\",\"kbStatus\":\"sources\",\"done\":true}\n\ndata: {\"type\":\"tool_result\",\"id\":\"tool-1\",\"name\":\"ask_pigeon\"}\n\n"
+    },
+    {
+     "ms": 11176,
+     "text": "data: {\"type\":\"done\",\"sessionId\":\"50f2106c30fd68cb8583683fcdd16d03\",\"kbStatus\":\"sources\",\"stopReason\":\"natural\",\"provenance\":{\"contractVersion\":\"duiven-2026-09-07-v1\",\"personaVersion\":\"9315a68d3df59eaae95a2a4c2eb0c88bc5c1f1a74f9abcad7ab5a8bfd60898e5\",\"promptVersion\":\"b211e5c1c399604f9ec6ee5bb2caa848b9b779600db9071579b123ec6add1df7\",\"model\":\"vertex_ai/gemini-3.5-flash\",\"kbState\":\"versioned\",\"kbId\":\"Duiven\",\"kbVersion\":\"774f03e56ee7b10562e58e9b81d657647e5601647d29e74bde8ef7cb5e4fbcbf\"}}\n\n"
+    }
+   ],
+   "endMs": 11176
+  },
+  {
+   "id": 5,
+   "method": "GET",
+   "path": "/chat/sessions/50f2106c30fd68cb8583683fcdd16d03/messages",
+   "requestBody": null,
+   "t": 11187,
+   "headMs": 3,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "body": "{\"messages\":[{\"id\":\"31d05e7d158ac0aaddbbd7aac7948c7c\",\"role\":\"user\",\"kind\":\"text\",\"content\":\"What do fireworks do to you?\",\"createdAt\":\"2026-09-23T16:55:11.00341+02:00\"},{\"id\":\"255cdd3005ddb6da6c0dc51886aed14e\",\"role\":\"assistant\",\"kind\":\"pigeon_answer\",\"persona\":\"individualist\",\"content\":\"There is no record here of what fireworks actually do to my body. We only know they damage human public health through pollution and trauma [1]. Human injuries in medical papers are mostly limited to burns and broken limbs [2]. Why must we endure your toxic, explosive trash raining down on our homes?\",\"kbStatus\":\"sources\",\"createdAt\":\"2026-09-23T16:55:11.00341+02:00\",\"provenance\":{\"contractVersion\":\"duiven-2026-09-07-v1\",\"personaVersion\":\"ff996915bceffff46e1a92a2037311ffd17cf6dff27a35dc34325af6ba17a7a8\",\"promptVersion\":\"de87036e16a796abb1fead60162a5c4c27e14e4fbecd8ee10b88058c1b51b06a\",\"model\":\"vertex_ai/gemini-3.5-flash\",\"kbState\":\"versioned\",\"kbId\":\"Duiven\",\"kbVersion\":\"774f03e56ee7b10562e58e9b81d657647e5601647d29e74bde8ef7cb5e4fbcbf\"},\"sources\":[{\"number\":1,\"id\":\"destillaat:6dd84727-1d7e-5d06-9543-cf099a0ec797\",\"ref\":\"interview:d4bd2cb3-c257-5baa-b187-0888b47d36fc\"},{\"number\":2,\"id\":\"destillaat:3054ff0d-ac78-5249-8934-abcce4993156\",\"ref\":\"interview:380dde85-7db3-5d8a-b2e8-2e54ba99ae74\"}]},{\"id\":\"b8735071fd2ad8c628c9255ad550d556\",\"role\":\"user\",\"kind\":\"text\",\"content\":\"What do fireworks do to you?\",\"createdAt\":\"2026-09-23T16:55:11.010115+02:00\"},{\"id\":\"1a86869e4291af42860937e3fbf6d4d0\",\"role\":\"assistant\",\"kind\":\"pigeon_answer\",\"persona\":\"biological\",\"content\":\"I cannot establish from the available sources how fireworks affect the bodies of pigeons like me. The provided research instead documents the negative impacts of fireworks on human public health through pollution, physical injuries, and auditory and visual trauma [1]. Additionally, medical literature on firework injuries primarily contains information about human burns or broken limbs [2].\",\"kbStatus\":\"sources\",\"createdAt\":\"2026-09-23T16:55:22.180885+02:00\",\"provenance\":{\"contractVersion\":\"duiven-2026-09-07-v1\",\"personaVersion\":\"9315a68d3df59eaae95a2a4c2eb0c88bc5c1f1a74f9abcad7ab5a8bfd60898e5\",\"promptVersion\":\"b211e5c1c399604f9ec6ee5bb2caa848b9b779600db9071579b123ec6add1df7\",\"model\":\"vertex_ai/gemini-3.5-flash\",\"kbState\":\"versioned\",\"kbId\":\"Duiven\",\"kbVersion\":\"774f03e56ee7b10562e58e9b81d657647e5601647d29e74bde8ef7cb5e4fbcbf\"},\"sources\":[{\"number\":1,\"id\":\"destillaat:6dd84727-1d7e-5d06-9543-cf099a0ec797\",\"ref\":\"interview:d4bd2cb3-c257-5baa-b187-0888b47d36fc\"},{\"number\":2,\"id\":\"destillaat:3054ff0d-ac78-5249-8934-abcce4993156\",\"ref\":\"interview:380dde85-7db3-5d8a-b2e8-2e54ba99ae74\"}]}]}",
+   "endMs": 3,
+   "compacted": "bronnen per rij ingekort tot nummer en id; de volledige bronnen staan in de stroom van de beurt"
+  }
+ ],
+ "failure": null,
+ "provenance": {
+  "contractVersion": "duiven-2026-09-07-v1",
+  "personaVersion": "9315a68d3df59eaae95a2a4c2eb0c88bc5c1f1a74f9abcad7ab5a8bfd60898e5",
+  "promptVersion": "b211e5c1c399604f9ec6ee5bb2caa848b9b779600db9071579b123ec6add1df7",
+  "model": "vertex_ai/gemini-3.5-flash",
+  "kbState": "versioned",
+  "kbId": "Duiven",
+  "kbVersion": "774f03e56ee7b10562e58e9b81d657647e5601647d29e74bde8ef7cb5e4fbcbf"
+ },
+ "checks": {
+  "model": "vertex_ai/gemini-3.5-flash",
+  "modelMatchesPolicy": true,
+  "storedEqualsStreamed": true
+ }
+}

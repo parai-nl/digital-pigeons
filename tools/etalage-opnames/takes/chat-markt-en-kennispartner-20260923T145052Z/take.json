@@ -1,0 +1,195 @@
+{
+ "format": "duiven-etalage-take/1",
+ "id": "chat-markt-en-kennispartner-20260923T145052Z",
+ "kind": "chat",
+ "item": {
+  "question": "markt",
+  "lang": "en",
+  "route": "kennispartner",
+  "pigeon": "kennispartner",
+  "modulePigeon": "biological"
+ },
+ "input": {
+  "text": "Why are you always on the market square?",
+  "placeholder": true
+ },
+ "recordedAt": "2026-09-23T14:50:52.924Z",
+ "server": {
+  "base": "http://127.0.0.1:8094",
+  "modelPolicy": {
+   "model": "vertex_ai/gemini-3.5-flash",
+   "detectionModel": "vertex_ai/gemini-3.5-flash",
+   "endpoint": "https://llm-proxy.invalid"
+  },
+  "knowledge": {
+   "kbId": "Duiven",
+   "bundleSchema": "duiven/3",
+   "languages": [
+    "nl",
+    "en"
+   ],
+   "importedAt": "2026-09-15T12:26:51Z",
+   "counts": {
+    "belongs_to": 4067,
+    "belongs_to_perspective": 4067,
+    "belongs_to_subthema": 4067,
+    "contains": 4067,
+    "contains_perspective": 297,
+    "contains_subthema": 149,
+    "contains_thema": 26,
+    "destillaat": 4067,
+    "domein": 3,
+    "has_quote": 4225,
+    "interview": 120,
+    "perspective": 297,
+    "quote": 4225,
+    "subthema": 149,
+    "thema": 26
+   }
+  },
+  "database": {
+   "name": "duif_etalage",
+   "copyOf": "duif_v3"
+  },
+  "module": {
+   "commit": "44186b900325eefad26c20b91e92f7350eb81bd0",
+   "moduleTree": "272829aae8444c82053a849b7a66ccc5a5a9109f",
+   "dirty": false,
+   "paraiCore": {
+    "commit": "29c670c73b73295c8c96592947cb9622e730c51c",
+    "dirty": false
+   },
+   "tags": [
+    "skipauth"
+   ],
+   "builtAt": "2026-09-23T14:40:12.508Z",
+   "binary": "module/bin/duif-etalage",
+   "bundleSha256": "d64a902bff38bf25d090a3bfe74e3f6bf4cfc7c21cb5160bddda9c45dced540d"
+  },
+  "pigeons": [
+   {
+    "id": "biological",
+    "engine": "agent",
+    "chat": true,
+    "meeting": true,
+    "autonomousDefault": false
+   },
+   {
+    "id": "individualist",
+    "engine": "agent",
+    "chat": true,
+    "meeting": true,
+    "autonomousDefault": false
+   },
+   {
+    "id": "nonverbal",
+    "engine": "pipeline",
+    "chat": false,
+    "meeting": true,
+    "autonomousDefault": true
+   }
+  ]
+ },
+ "session": {
+  "id": "becf6dbe8c3d20e61dae1bbce1380d46"
+ },
+ "finishedAt": "2026-09-23T14:51:03.699Z",
+ "exchanges": [
+  {
+   "id": 1,
+   "method": "POST",
+   "path": "/chat/turn",
+   "requestBody": {
+    "sessionId": null,
+    "pigeonId": "biological",
+    "message": "Why are you always on the market square?",
+    "lang": "en"
+   },
+   "t": 0,
+   "headMs": 7,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "text/event-stream"
+    ],
+    [
+     "x-duif-session-id",
+     "becf6dbe8c3d20e61dae1bbce1380d46"
+    ]
+   ],
+   "chunks": [
+    {
+     "ms": 7,
+     "text": "data: {\"type\":\"phase\",\"phase\":\"facilitator\"}\n\n"
+    },
+    {
+     "ms": 3359,
+     "text": "data: {\"type\":\"tool\",\"id\":\"tool-1\",\"name\":\"ask_pigeon\"}\n\ndata: {\"type\":\"phase\",\"phase\":\"pigeon_grounding\"}\n\n"
+    },
+    {
+     "ms": 3634,
+     "text": "data: {\"type\":\"phase\",\"phase\":\"pigeon_related_search\"}\n\n"
+    },
+    {
+     "ms": 3845,
+     "text": "data: {\"type\":\"artifact\",\"id\":\"pigeon-1\",\"kind\":\"pigeon_answer\",\"persona\":\"biological\",\"kbStatus\":\"gap\"}\n\ndata: {\"type\":\"phase\",\"phase\":\"pigeon\"}\n\n"
+    },
+    {
+     "ms": 9587,
+     "text": "data: {\"type\":\"artifact_delta\",\"id\":\"pigeon-1\",\"delta\":\"The available sources in my corpus do not provide information on why\"}\n\n"
+    },
+    {
+     "ms": 9744,
+     "text": "data: {\"type\":\"artifact_delta\",\"id\":\"pigeon-1\",\"delta\":\" pigeons like me are always found on the market square. I cannot establish the answer to this question because of this limit in\"}\n\n"
+    },
+    {
+     "ms": 9864,
+     "text": "data: {\"type\":\"artifact_delta\",\"id\":\"pigeon-1\",\"delta\":\" my current database. Our conversation so far does not contain any previous findings to help answer this.\"}\n\n"
+    },
+    {
+     "ms": 10668,
+     "text": "data: {\"type\":\"artifact\",\"id\":\"pigeon-1\",\"kind\":\"pigeon_answer\",\"persona\":\"biological\",\"kbStatus\":\"gap\",\"done\":true}\n\ndata: {\"type\":\"tool_result\",\"id\":\"tool-1\",\"name\":\"ask_pigeon\"}\n\n"
+    },
+    {
+     "ms": 10673,
+     "text": "data: {\"type\":\"done\",\"sessionId\":\"becf6dbe8c3d20e61dae1bbce1380d46\",\"kbStatus\":\"gap\",\"stopReason\":\"natural\",\"provenance\":{\"contractVersion\":\"duiven-2026-09-07-v1\",\"personaVersion\":\"9315a68d3df59eaae95a2a4c2eb0c88bc5c1f1a74f9abcad7ab5a8bfd60898e5\",\"promptVersion\":\"b211e5c1c399604f9ec6ee5bb2caa848b9b779600db9071579b123ec6add1df7\",\"model\":\"vertex_ai/gemini-3.5-flash\",\"kbState\":\"versioned\",\"kbId\":\"Duiven\",\"kbVersion\":\"774f03e56ee7b10562e58e9b81d657647e5601647d29e74bde8ef7cb5e4fbcbf\"}}\n\n"
+    }
+   ],
+   "endMs": 10673
+  },
+  {
+   "id": 2,
+   "method": "GET",
+   "path": "/chat/sessions/becf6dbe8c3d20e61dae1bbce1380d46/messages",
+   "requestBody": null,
+   "t": 10673,
+   "headMs": 2,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "body": "{\"messages\":[{\"id\":\"114a225a9f33848e6f7220ecc58d6511\",\"role\":\"user\",\"kind\":\"text\",\"content\":\"Why are you always on the market square?\",\"createdAt\":\"2026-09-23T16:50:52.927765+02:00\"},{\"id\":\"e5b38c8ac1f90a424ec9c11a3effb2a8\",\"role\":\"assistant\",\"kind\":\"pigeon_answer\",\"persona\":\"biological\",\"content\":\"The available sources in my corpus do not provide information on why pigeons like me are always found on the market square. I cannot establish the answer to this question because of this limit in my current database. Our conversation so far does not contain any previous findings to help answer this.\",\"kbStatus\":\"gap\",\"createdAt\":\"2026-09-23T16:51:03.5927+02:00\",\"provenance\":{\"contractVersion\":\"duiven-2026-09-07-v1\",\"personaVersion\":\"9315a68d3df59eaae95a2a4c2eb0c88bc5c1f1a74f9abcad7ab5a8bfd60898e5\",\"promptVersion\":\"b211e5c1c399604f9ec6ee5bb2caa848b9b779600db9071579b123ec6add1df7\",\"model\":\"vertex_ai/gemini-3.5-flash\",\"kbState\":\"versioned\",\"kbId\":\"Duiven\",\"kbVersion\":\"774f03e56ee7b10562e58e9b81d657647e5601647d29e74bde8ef7cb5e4fbcbf\"}}]}",
+   "endMs": 2,
+   "compacted": "bronnen per rij ingekort tot nummer en id; de volledige bronnen staan in de stroom van de beurt"
+  }
+ ],
+ "failure": null,
+ "provenance": {
+  "contractVersion": "duiven-2026-09-07-v1",
+  "personaVersion": "9315a68d3df59eaae95a2a4c2eb0c88bc5c1f1a74f9abcad7ab5a8bfd60898e5",
+  "promptVersion": "b211e5c1c399604f9ec6ee5bb2caa848b9b779600db9071579b123ec6add1df7",
+  "model": "vertex_ai/gemini-3.5-flash",
+  "kbState": "versioned",
+  "kbId": "Duiven",
+  "kbVersion": "774f03e56ee7b10562e58e9b81d657647e5601647d29e74bde8ef7cb5e4fbcbf"
+ },
+ "checks": {
+  "model": "vertex_ai/gemini-3.5-flash",
+  "modelMatchesPolicy": true,
+  "storedEqualsStreamed": true
+ }
+}

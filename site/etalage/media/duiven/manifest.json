@@ -1,0 +1,156 @@
+{
+  "schema": 1,
+  "model": {
+    "version": "v4 iteratie 17",
+    "final": true
+  },
+  "card": {
+    "aspect": 0.82
+  },
+  "pigeons": {
+    "kennispartner": {
+      "model": {
+        "file": "stadsduif-v4-biologisch.glb",
+        "version": "v4 iteratie 17"
+      },
+      "plate": {
+        "src": "etalage/media/duiven/kennispartner/plaat.webp",
+        "width": 1200,
+        "height": 1464
+      },
+      "layer": {
+        "left": -0.0431,
+        "top": -0.1951,
+        "width": 1.0719,
+        "height": 1.1275
+      },
+      "rest": {
+        "src": "etalage/media/duiven/kennispartner/rust.webp",
+        "width": 686,
+        "height": 880
+      },
+      "clips": {
+        "peck": {
+          "webm": "etalage/media/duiven/kennispartner/peck.webm",
+          "hevc": "etalage/media/duiven/kennispartner/peck.mov",
+          "ms": 3240
+        },
+        "ruffle": {
+          "webm": "etalage/media/duiven/kennispartner/ruffle.webm",
+          "hevc": "etalage/media/duiven/kennispartner/ruffle.mov",
+          "ms": 3240
+        }
+      },
+      "defaultClip": "ruffle",
+      "avatar": {
+        "src": "etalage/media/duiven/kennispartner/kop.webp"
+      }
+    },
+    "stakeholder": {
+      "model": {
+        "file": "stadsduif-v4-individualistisch.glb",
+        "version": "v4 iteratie 17"
+      },
+      "plate": {
+        "src": "etalage/media/duiven/stakeholder/plaat.webp",
+        "width": 1200,
+        "height": 1464
+      },
+      "layer": {
+        "left": -0.1697,
+        "top": -0.1925,
+        "width": 1.3469,
+        "height": 1.1044
+      },
+      "rest": {
+        "src": "etalage/media/duiven/stakeholder/rust.webp",
+        "width": 862,
+        "height": 862
+      },
+      "clips": {
+        "peck": {
+          "webm": "etalage/media/duiven/stakeholder/peck.webm",
+          "hevc": "etalage/media/duiven/stakeholder/peck.mov",
+          "ms": 3240
+        },
+        "ruffle": {
+          "webm": "etalage/media/duiven/stakeholder/ruffle.webm",
+          "hevc": "etalage/media/duiven/stakeholder/ruffle.mov",
+          "ms": 3240
+        }
+      },
+      "defaultClip": "ruffle",
+      "avatar": {
+        "src": "etalage/media/duiven/stakeholder/kop.webp"
+      }
+    },
+    "signalerend": {
+      "model": {
+        "file": "stadsduif-v4-signalerend.glb",
+        "version": "v4 iteratie 17"
+      },
+      "plate": {
+        "src": "etalage/media/duiven/signalerend/plaat.webp",
+        "width": 1200,
+        "height": 1464
+      },
+      "layer": {
+        "left": -0.2244,
+        "top": -0.1707,
+        "width": 1.6406,
+        "height": 0.9968
+      },
+      "rest": {
+        "src": "etalage/media/duiven/signalerend/rust.webp",
+        "width": 1050,
+        "height": 778
+      },
+      "clips": {
+        "peck": {
+          "webm": "etalage/media/duiven/signalerend/peck.webm",
+          "hevc": "etalage/media/duiven/signalerend/peck.mov",
+          "ms": 3240
+        },
+        "ruffle": {
+          "webm": "etalage/media/duiven/signalerend/ruffle.webm",
+          "hevc": "etalage/media/duiven/signalerend/ruffle.mov",
+          "ms": 3240
+        }
+      },
+      "defaultClip": "ruffle",
+      "avatar": {
+        "src": "etalage/media/duiven/signalerend/kop.webp"
+      }
+    }
+  },
+  "credits": [
+    {
+      "nl": "3D-duif: Digitale Duiven, fototextuur Luc Viatour / Lucnix.be · CC BY-SA 3.0",
+      "en": "3D pigeon: Digitale Duiven, photo texture by Luc Viatour / Lucnix.be · CC BY-SA 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Columba_livia_Luc_Viatour.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+    },
+    {
+      "nl": "Achtergrond Kennispartner: de kade aan de Maas bij de Erasmusbrug, foto Guillaume Vachey, uitgesneden, vervaagd en ingekleurd · CC0",
+      "en": "Background Knowledge Partner: the quay on the Maas by the Erasmus Bridge, photo by Guillaume Vachey, cropped, blurred and colour-graded · CC0",
+      "url": "https://commons.wikimedia.org/wiki/File:Rotterdam_(43546674525).jpg",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "nl": "Achtergrond Stakeholder: de Coolsingel voor het stadhuis, foto G.Lanting, uitgesneden, vervaagd en ingekleurd · CC BY 4.0",
+      "en": "Background Stakeholder: the Coolsingel in front of City Hall, photo by G.Lanting, cropped, blurred and colour-graded · CC BY 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Coolsingel_Rotterdam_I73523_-_copy.jpg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "nl": "Achtergrond Signalerende duif: het marktplein op de Binnenrotte, naast de Markthal, foto Jorge Franganillo, uitgesneden, vervaagd en ingekleurd · CC BY 4.0",
+      "en": "Background Signaling Pigeon: the market square on the Binnenrotte, next to the Markthal, photo by Jorge Franganillo, cropped, blurred and colour-graded · CC BY 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Rotterdam_-_Binnenrotte_plein.jpg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ]
+}

@@ -1,0 +1,1225 @@
+{
+ "schema": 1,
+ "recording": {
+  "model": "fixture/testmodel",
+  "moduleCommit": "0000000000000000000000000000000000000000",
+  "knowledgeBase": "Duiven",
+  "recordedFrom": "2026-09-24T09:00:00Z",
+  "recordedTo": "2026-09-24T10:30:00Z",
+  "placeholder": true
+ },
+ "facts": {
+  "works": 118,
+  "sources": 120,
+  "claims": 4067,
+  "passages": 4225
+ },
+ "chat": {
+  "questions": [
+   {
+    "id": "afschot",
+    "text": {
+     "nl": "[fixture] Wat vind je van afschot op het marktplein?",
+     "en": "[fixture] What do you think of culling on the market square?"
+    },
+    "turns": {
+     "nl": {
+      "kennispartner": {
+       "take": "fixture-chat-afschot-nl-kennispartner",
+       "phases": [
+        "facilitator",
+        "pigeon_grounding",
+        "pigeon"
+       ],
+       "messages": [
+        {
+         "author": "kennispartner",
+         "text": "[fixture] Onderzoek laat zien dat een afgeschoten groep vaak binnen maanden terug is zolang er voedsel blijft liggen [4]. Minder voer op straat hing in een andere studie samen met minder duiven [1]. Voor dit plein is dat een aanwijzing, geen garantie.",
+         "kind": "grounded",
+         "sources": [
+          {
+           "n": 1,
+           "title": "[fixture] Feeding and the density of city pigeons",
+           "authors": "Testauteur, A. & Proef, B.",
+           "year": 2017,
+           "passage": "[fixture] Reducing food provision coincided with lower pigeon density in the study districts.",
+           "passageLang": "en",
+           "url": "https://example.org/fixture/1"
+          },
+          {
+           "n": 4,
+           "title": "[fixture] Culling and the return of flocks",
+           "authors": "Testauteur, A.",
+           "year": 2012,
+           "passage": "[fixture] Culled populations recovered within months when food remained available.",
+           "passageLang": "en",
+           "url": "https://example.org/fixture/4"
+          }
+         ],
+         "chunks": [
+          [
+           0,
+           "[fixture] Onderzoek laat zien "
+          ],
+          [
+           900,
+           "dat een afgeschoten groep "
+          ],
+          [
+           1060,
+           "vaak binnen maanden terug "
+          ],
+          [
+           1220,
+           "is zolang er voedsel "
+          ],
+          [
+           2120,
+           "blijft liggen [4]. Minder "
+          ],
+          [
+           2280,
+           "voer op straat hing "
+          ],
+          [
+           2440,
+           "in een andere studie "
+          ],
+          [
+           3340,
+           "samen met minder duiven "
+          ],
+          [
+           3500,
+           "[1]. Voor dit plein "
+          ],
+          [
+           3660,
+           "is dat een aanwijzing, "
+          ],
+          [
+           4560,
+           "geen garantie."
+          ]
+         ]
+        }
+       ]
+      },
+      "stakeholder": {
+       "take": "fixture-chat-afschot-nl-stakeholder",
+       "phases": [
+        "facilitator",
+        "pigeon_grounding",
+        "pigeon",
+        "mediation"
+       ],
+       "messages": [
+        {
+         "author": "facilitator",
+         "text": "[fixture] Ik leg de duif de vraag voor vanuit de marktkooplui: mag afschot?"
+        },
+        {
+         "author": "stakeholder",
+         "text": "[fixture] Afschot? Dan ben ik weg en staat mijn neef morgen op dezelfde kraam [4]. Haal het brood van de straat, dan hoef je niemand te schieten.",
+         "kind": "grounded",
+         "sources": [
+          {
+           "n": 4,
+           "title": "[fixture] Culling and the return of flocks",
+           "authors": "Testauteur, A.",
+           "year": 2012,
+           "passage": "[fixture] Culled populations recovered within months when food remained available.",
+           "passageLang": "en",
+           "url": "https://example.org/fixture/4"
+          }
+         ]
+        },
+        {
+         "author": "facilitator",
+         "text": "[fixture] De duif wijst naar het voer als oorzaak. Wat weegt voor jullie zwaarder: snelle rust of een oplossing die blijft?\n\n[fixture] Tweede alinea van de bemiddeling."
+        }
+       ]
+      },
+      "kennispartner>stakeholder": {
+       "take": "fixture-chat-afschot-nl-kennispartner-stakeholder",
+       "phases": [
+        "facilitator",
+        "pigeon_grounding",
+        "pigeon",
+        "mediation"
+       ],
+       "messages": [
+        {
+         "author": "facilitator",
+         "text": "[fixture] Dezelfde vraag, nu vanuit het belang van de duif."
+        },
+        {
+         "author": "stakeholder",
+         "text": "[fixture] De Kennispartner zegt het netjes, ik zeg het plat: zolang jullie morsen, blijven wij komen [1].",
+         "kind": "grounded",
+         "sources": [
+          {
+           "n": 1,
+           "title": "[fixture] Feeding and the density of city pigeons",
+           "authors": "Testauteur, A. & Proef, B.",
+           "year": 2017,
+           "passage": "[fixture] Reducing food provision coincided with lower pigeon density in the study districts.",
+           "passageLang": "en",
+           "url": "https://example.org/fixture/1"
+          }
+         ]
+        },
+        {
+         "author": "facilitator",
+         "text": "[fixture] Hier botsen een bevinding en een belang. Welke van de twee neemt de markt mee?"
+        }
+       ]
+      },
+      "stakeholder>kennispartner": {
+       "take": "fixture-chat-afschot-cmp-nl-kennispartner",
+       "phases": [
+        "facilitator",
+        "pigeon_grounding",
+        "pigeon"
+       ],
+       "messages": [
+        {
+         "author": "kennispartner",
+         "text": "[fixture] Wat de Stakeholder zegt, klopt met wat ik lees: zonder minder voer keert een groep na afschot terug [4].",
+         "kind": "grounded",
+         "sources": [
+          {
+           "n": 4,
+           "title": "[fixture] Culling and the return of flocks",
+           "authors": "Testauteur, A.",
+           "year": 2012,
+           "passage": "[fixture] Culled populations recovered within months when food remained available.",
+           "passageLang": "en",
+           "url": "https://example.org/fixture/4"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "en": {
+      "kennispartner": {
+       "take": "fixture-chat-afschot-en-kennispartner",
+       "phases": [
+        "facilitator",
+        "pigeon_grounding",
+        "pigeon"
+       ],
+       "messages": [
+        {
+         "author": "kennispartner",
+         "text": "[fixture] Research shows a culled flock often returns within months while food stays on the street [4]. Less food on the street went together with fewer pigeons in another study [1]. For this square that is a pointer, not a promise.",
+         "kind": "grounded",
+         "sources": [
+          {
+           "n": 1,
+           "title": "[fixture] Feeding and the density of city pigeons",
+           "authors": "Testauteur, A. & Proef, B.",
+           "year": 2017,
+           "passage": "[fixture] Reducing food provision coincided with lower pigeon density in the study districts.",
+           "passageLang": "en",
+           "url": "https://example.org/fixture/1"
+          },
+          {
+           "n": 4,
+           "title": "[fixture] Culling and the return of flocks",
+           "authors": "Testauteur, A.",
+           "year": 2012,
+           "passage": "[fixture] Culled populations recovered within months when food remained available.",
+           "passageLang": "en",
+           "url": "https://example.org/fixture/4"
+          }
+         ],
+         "chunks": [
+          [
+           0,
+           "[fixture] Research shows a "
+          ],
+          [
+           900,
+           "culled flock often returns "
+          ],
+          [
+           1060,
+           "within months while food "
+          ],
+          [
+           1220,
+           "stays on the street "
+          ],
+          [
+           2120,
+           "[4]. Less food on "
+          ],
+          [
+           2280,
+           "the street went together "
+          ],
+          [
+           2440,
+           "with fewer pigeons in "
+          ],
+          [
+           3340,
+           "another study [1]. For "
+          ],
+          [
+           3500,
+           "this square that is "
+          ],
+          [
+           3660,
+           "a pointer, not a "
+          ],
+          [
+           4560,
+           "promise."
+          ]
+         ]
+        }
+       ]
+      },
+      "stakeholder": {
+       "take": "fixture-chat-afschot-en-stakeholder",
+       "phases": [
+        "facilitator",
+        "pigeon_grounding",
+        "pigeon",
+        "mediation"
+       ],
+       "messages": [
+        {
+         "author": "facilitator",
+         "text": "[fixture] I put the market traders' question to the pigeon: is culling allowed?"
+        },
+        {
+         "author": "stakeholder",
+         "text": "[fixture] Culling? Then I'm gone and my cousin is on the same stall tomorrow [4]. Take the bread off the street and you don't have to shoot anyone.",
+         "kind": "grounded",
+         "sources": [
+          {
+           "n": 4,
+           "title": "[fixture] Culling and the return of flocks",
+           "authors": "Testauteur, A.",
+           "year": 2012,
+           "passage": "[fixture] Culled populations recovered within months when food remained available.",
+           "passageLang": "en",
+           "url": "https://example.org/fixture/4"
+          }
+         ]
+        },
+        {
+         "author": "facilitator",
+         "text": "[fixture] The pigeon points to food as the cause. What matters more to you: quick quiet or a solution that lasts?\n\n[fixture] Second paragraph of the mediation."
+        }
+       ]
+      },
+      "kennispartner>stakeholder": {
+       "take": "fixture-chat-afschot-en-kennispartner-stakeholder",
+       "phases": [
+        "facilitator",
+        "pigeon_grounding",
+        "pigeon",
+        "mediation"
+       ],
+       "messages": [
+        {
+         "author": "facilitator",
+         "text": "[fixture] The same question, now from the pigeon's interest."
+        },
+        {
+         "author": "stakeholder",
+         "text": "[fixture] The Knowledge Partner says it politely, I'll say it plainly: as long as you spill, we keep coming [1].",
+         "kind": "grounded",
+         "sources": [
+          {
+           "n": 1,
+           "title": "[fixture] Feeding and the density of city pigeons",
+           "authors": "Testauteur, A. & Proef, B.",
+           "year": 2017,
+           "passage": "[fixture] Reducing food provision coincided with lower pigeon density in the study districts.",
+           "passageLang": "en",
+           "url": "https://example.org/fixture/1"
+          }
+         ]
+        },
+        {
+         "author": "facilitator",
+         "text": "[fixture] A finding and an interest collide here. Which of the two does the market take along?"
+        }
+       ]
+      },
+      "stakeholder>kennispartner": {
+       "take": "fixture-chat-afschot-cmp-en-kennispartner",
+       "phases": [
+        "facilitator",
+        "pigeon_grounding",
+        "pigeon"
+       ],
+       "messages": [
+        {
+         "author": "kennispartner",
+         "text": "[fixture] What the Stakeholder says matches what I read: without less food, a flock returns after culling [4].",
+         "kind": "grounded",
+         "sources": [
+          {
+           "n": 4,
+           "title": "[fixture] Culling and the return of flocks",
+           "authors": "Testauteur, A.",
+           "year": 2012,
+           "passage": "[fixture] Culled populations recovered within months when food remained available.",
+           "passageLang": "en",
+           "url": "https://example.org/fixture/4"
+          }
+         ]
+        }
+       ]
+      }
+     }
+    }
+   },
+   {
+    "id": "nest",
+    "text": {
+     "nl": "[fixture] Waar broeden duiven rond de markt?",
+     "en": "[fixture] Where do pigeons nest around the market?"
+    },
+    "turns": {
+     "nl": {
+      "kennispartner": {
+       "take": "fixture-chat-nest-nl-kennispartner",
+       "phases": [
+        "facilitator",
+        "pigeon_grounding",
+        "pigeon"
+       ],
+       "messages": [
+        {
+         "author": "kennispartner",
+         "text": "[fixture] Vooral op richels en in holtes van oudere gebouwen [2]. Een overkapping zonder kieren biedt dus minder plek.",
+         "kind": "grounded",
+         "sources": [
+          {
+           "n": 2,
+           "title": "[fixture] Where pigeons nest in buildings",
+           "authors": "Proef, C.",
+           "year": 2020,
+           "passage": "[fixture] Ledges and cavities on older buildings were used most often for nesting.",
+           "passageLang": "en",
+           "url": "https://example.org/fixture/2",
+           "passages": [
+            {
+             "text": "[fixture] Ledges and cavities on older buildings were used most often for nesting.",
+             "lang": "en"
+            },
+            {
+             "text": "[fixture] A second passage from the same paper about ledges.",
+             "lang": "en"
+            }
+           ]
+          }
+         ],
+         "related": true
+        }
+       ]
+      },
+      "stakeholder": {
+       "take": "fixture-chat-nest-nl-stakeholder",
+       "phases": [
+        "facilitator",
+        "pigeon_grounding",
+        "pigeon",
+        "mediation"
+       ],
+       "messages": [
+        {
+         "author": "facilitator",
+         "text": "[fixture] Ik vraag de duif waar ze woont."
+        },
+        {
+         "author": "stakeholder",
+         "text": "[fixture] Onder jullie dakrand, al jaren [2]. Dicht je die, dan zoek ik de volgende.",
+         "kind": "grounded",
+         "sources": [
+          {
+           "n": 2,
+           "title": "[fixture] Where pigeons nest in buildings",
+           "authors": "Proef, C.",
+           "year": 2020,
+           "passage": "[fixture] Ledges and cavities on older buildings were used most often for nesting.",
+           "passageLang": "en",
+           "url": "https://example.org/fixture/2"
+          }
+         ]
+        },
+        {
+         "author": "facilitator",
+         "text": "[fixture] Het gaat hier om wonen, niet alleen om eten. Wie beslist er over die dakrand?"
+        }
+       ]
+      },
+      "kennispartner>stakeholder": {
+       "take": "fixture-chat-nest-nl-kennispartner-stakeholder",
+       "phases": [
+        "facilitator",
+        "pigeon_grounding",
+        "pigeon",
+        "mediation"
+       ],
+       "messages": [
+        {
+         "author": "facilitator",
+         "text": "[fixture] Dezelfde vraag aan de duif."
+        },
+        {
+         "author": "stakeholder",
+         "text": "[fixture] Richels, ja [2]. En die zijn van mij zolang niemand anders ze wil.",
+         "kind": "grounded",
+         "sources": [
+          {
+           "n": 2,
+           "title": "[fixture] Where pigeons nest in buildings",
+           "authors": "Proef, C.",
+           "year": 2020,
+           "passage": "[fixture] Ledges and cavities on older buildings were used most often for nesting.",
+           "passageLang": "en",
+           "url": "https://example.org/fixture/2"
+          }
+         ]
+        },
+        {
+         "author": "facilitator",
+         "text": "[fixture] Een helder belang. Past dat ergens in het plan?"
+        }
+       ]
+      },
+      "stakeholder>kennispartner": {
+       "take": "fixture-chat-nest-cmp-nl-kennispartner",
+       "phases": [
+        "facilitator",
+        "pigeon_grounding",
+        "pigeon"
+       ],
+       "messages": [
+        {
+         "author": "kennispartner",
+         "text": "[fixture] Richels en holtes, zoals de Stakeholder zegt [2].",
+         "kind": "grounded",
+         "sources": [
+          {
+           "n": 2,
+           "title": "[fixture] Where pigeons nest in buildings",
+           "authors": "Proef, C.",
+           "year": 2020,
+           "passage": "[fixture] Ledges and cavities on older buildings were used most often for nesting.",
+           "passageLang": "en",
+           "url": "https://example.org/fixture/2"
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "en": {
+      "kennispartner": {
+       "take": "fixture-chat-nest-en-kennispartner",
+       "phases": [
+        "facilitator",
+        "pigeon_grounding",
+        "pigeon"
+       ],
+       "messages": [
+        {
+         "author": "kennispartner",
+         "text": "[fixture] Mostly on ledges and in cavities of older buildings [2]. A canopy without gaps offers less room.",
+         "kind": "grounded",
+         "sources": [
+          {
+           "n": 2,
+           "title": "[fixture] Where pigeons nest in buildings",
+           "authors": "Proef, C.",
+           "year": 2020,
+           "passage": "[fixture] Ledges and cavities on older buildings were used most often for nesting.",
+           "passageLang": "en",
+           "url": "https://example.org/fixture/2",
+           "passages": [
+            {
+             "text": "[fixture] Ledges and cavities on older buildings were used most often for nesting.",
+             "lang": "en"
+            },
+            {
+             "text": "[fixture] A second passage from the same paper about ledges.",
+             "lang": "en"
+            }
+           ]
+          }
+         ],
+         "related": true
+        }
+       ]
+      },
+      "stakeholder": {
+       "take": "fixture-chat-nest-en-stakeholder",
+       "phases": [
+        "facilitator",
+        "pigeon_grounding",
+        "pigeon",
+        "mediation"
+       ],
+       "messages": [
+        {
+         "author": "facilitator",
+         "text": "[fixture] I ask the pigeon where she lives."
+        },
+        {
+         "author": "stakeholder",
+         "text": "[fixture] Under your roof edge, for years [2]. Close it and I'll find the next one.",
+         "kind": "grounded",
+         "sources": [
+          {
+           "n": 2,
+           "title": "[fixture] Where pigeons nest in buildings",
+           "authors": "Proef, C.",
+           "year": 2020,
+           "passage": "[fixture] Ledges and cavities on older buildings were used most often for nesting.",
+           "passageLang": "en",
+           "url": "https://example.org/fixture/2"
+          }
+         ]
+        },
+        {
+         "author": "facilitator",
+         "text": "[fixture] This is about living, not just eating. Who decides about that roof edge?"
+        }
+       ]
+      },
+      "kennispartner>stakeholder": {
+       "take": "fixture-chat-nest-en-kennispartner-stakeholder",
+       "phases": [
+        "facilitator",
+        "pigeon_grounding",
+        "pigeon",
+        "mediation"
+       ],
+       "messages": [
+        {
+         "author": "facilitator",
+         "text": "[fixture] The same question to the pigeon."
+        },
+        {
+         "author": "stakeholder",
+         "text": "[fixture] Ledges, yes [2]. And they're mine as long as nobody else wants them.",
+         "kind": "grounded",
+         "sources": [
+          {
+           "n": 2,
+           "title": "[fixture] Where pigeons nest in buildings",
+           "authors": "Proef, C.",
+           "year": 2020,
+           "passage": "[fixture] Ledges and cavities on older buildings were used most often for nesting.",
+           "passageLang": "en",
+           "url": "https://example.org/fixture/2"
+          }
+         ]
+        },
+        {
+         "author": "facilitator",
+         "text": "[fixture] A clear interest. Does it fit anywhere in the plan?"
+        }
+       ]
+      },
+      "stakeholder>kennispartner": {
+       "take": "fixture-chat-nest-cmp-en-kennispartner",
+       "phases": [
+        "facilitator",
+        "pigeon_grounding",
+        "pigeon"
+       ],
+       "messages": [
+        {
+         "author": "kennispartner",
+         "text": "[fixture] Ledges and cavities, as the Stakeholder says [2].",
+         "kind": "grounded",
+         "sources": [
+          {
+           "n": 2,
+           "title": "[fixture] Where pigeons nest in buildings",
+           "authors": "Proef, C.",
+           "year": 2020,
+           "passage": "[fixture] Ledges and cavities on older buildings were used most often for nesting.",
+           "passageLang": "en",
+           "url": "https://example.org/fixture/2"
+          }
+         ]
+        }
+       ]
+      }
+     }
+    }
+   },
+   {
+    "id": "vuurwerk",
+    "text": {
+     "nl": "[fixture] Hebben duiven last van vuurwerk?",
+     "en": "[fixture] Do fireworks bother pigeons?"
+    },
+    "turns": {
+     "nl": {
+      "kennispartner": {
+       "take": "fixture-chat-vuurwerk-nl-kennispartner",
+       "phases": [
+        "facilitator",
+        "pigeon_grounding",
+        "pigeon"
+       ],
+       "messages": [
+        {
+         "author": "kennispartner",
+         "text": "[fixture] Bij vogels stijgt de hartslag sterk na een onverwachte knal [3]. Over stadsduiven op oudjaar vond ik in mijn bronnen niets specifieks.",
+         "kind": "grounded",
+         "sources": [
+          {
+           "n": 3,
+           "title": "[fixture] Stress responses to sudden noise in birds",
+           "authors": "Voorbeeld, D. et al.",
+           "year": 2015,
+           "passage": "[fixture] Heart rate rose sharply within seconds of an unexpected bang.",
+           "passageLang": "en"
+          }
+         ]
+        }
+       ]
+      },
+      "stakeholder": {
+       "take": "fixture-chat-vuurwerk-nl-stakeholder",
+       "phases": [
+        "facilitator",
+        "pigeon_grounding",
+        "pigeon",
+        "mediation"
+       ],
+       "messages": [
+        {
+         "author": "facilitator",
+         "text": "[fixture] Ik vraag de duif hoe zij de jaarwisseling beleeft."
+        },
+        {
+         "author": "stakeholder",
+         "text": "[fixture] Eén knal en ik vlieg blind de nacht in. Jullie noemen het traditie.",
+         "kind": "standpoint",
+         "sources": []
+        },
+        {
+         "author": "facilitator",
+         "text": "[fixture] De duif spreekt hier zonder bron. Hoe weeg je dat?"
+        }
+       ]
+      }
+     },
+     "en": {
+      "kennispartner": {
+       "take": "fixture-chat-vuurwerk-en-kennispartner",
+       "phases": [
+        "facilitator",
+        "pigeon_grounding",
+        "pigeon"
+       ],
+       "messages": [
+        {
+         "author": "kennispartner",
+         "text": "[fixture] In birds, heart rate rises sharply after an unexpected bang [3]. I found nothing specific about city pigeons on New Year's Eve in my sources.",
+         "kind": "grounded",
+         "sources": [
+          {
+           "n": 3,
+           "title": "[fixture] Stress responses to sudden noise in birds",
+           "authors": "Voorbeeld, D. et al.",
+           "year": 2015,
+           "passage": "[fixture] Heart rate rose sharply within seconds of an unexpected bang.",
+           "passageLang": "en"
+          }
+         ]
+        }
+       ]
+      },
+      "stakeholder": {
+       "take": "fixture-chat-vuurwerk-en-stakeholder",
+       "phases": [
+        "facilitator",
+        "pigeon_grounding",
+        "pigeon",
+        "mediation"
+       ],
+       "messages": [
+        {
+         "author": "facilitator",
+         "text": "[fixture] I ask the pigeon how she experiences New Year's Eve."
+        },
+        {
+         "author": "stakeholder",
+         "text": "[fixture] One bang and I fly blind into the night. You call it tradition.",
+         "kind": "standpoint",
+         "sources": []
+        },
+        {
+         "author": "facilitator",
+         "text": "[fixture] The pigeon speaks without a source here. How do you weigh that?"
+        }
+       ]
+      }
+     }
+    }
+   },
+   {
+    "id": "taal",
+    "text": {
+     "nl": "[fixture] Spreken duiven met elkaar?",
+     "en": "[fixture] Do pigeons talk to each other?"
+    },
+    "turns": {
+     "nl": {
+      "kennispartner": {
+       "take": "fixture-chat-taal-nl-kennispartner",
+       "phases": [
+        "facilitator",
+        "pigeon_grounding",
+        "pigeon"
+       ],
+       "messages": [
+        {
+         "author": "kennispartner",
+         "text": "[fixture] Daarover vind ik in mijn bronnen geen onderzoek. Dat zegt iets over deze verzameling, niet over al het onderzoek dat bestaat.",
+         "kind": "gap",
+         "sources": []
+        }
+       ]
+      },
+      "stakeholder": {
+       "take": "fixture-chat-taal-nl-stakeholder",
+       "phases": [
+        "facilitator",
+        "pigeon_grounding",
+        "pigeon",
+        "mediation"
+       ],
+       "messages": [
+        {
+         "author": "facilitator",
+         "text": "[fixture] Ik vraag de duif naar haar eigen taal."
+        },
+        {
+         "author": "stakeholder",
+         "text": "[fixture] Wij hoeven niet te praten om elkaar te begrijpen.",
+         "kind": "standpoint",
+         "sources": []
+        },
+        {
+         "author": "facilitator",
+         "text": "[fixture] Een standpunt zonder onderzoek. Wat wil je er nog over weten?"
+        }
+       ]
+      }
+     },
+     "en": {
+      "kennispartner": {
+       "take": "fixture-chat-taal-en-kennispartner",
+       "phases": [
+        "facilitator",
+        "pigeon_grounding",
+        "pigeon"
+       ],
+       "messages": [
+        {
+         "author": "kennispartner",
+         "text": "[fixture] I find no research about that in my sources. That says something about this collection, not about all research that exists.",
+         "kind": "gap",
+         "sources": []
+        }
+       ]
+      },
+      "stakeholder": {
+       "take": "fixture-chat-taal-en-stakeholder",
+       "phases": [
+        "facilitator",
+        "pigeon_grounding",
+        "pigeon",
+        "mediation"
+       ],
+       "messages": [
+        {
+         "author": "facilitator",
+         "text": "[fixture] I ask the pigeon about her own language."
+        },
+        {
+         "author": "stakeholder",
+         "text": "[fixture] We don't need to talk to understand each other.",
+         "kind": "standpoint",
+         "sources": []
+        },
+        {
+         "author": "facilitator",
+         "text": "[fixture] A position without research. What else would you like to know?"
+        }
+       ]
+      }
+     }
+    }
+   }
+  ]
+ },
+ "meeting": {
+  "statements": [
+   {
+    "id": "poep",
+    "speaker": {
+     "nl": "Voorzitter",
+     "en": "Chair"
+    },
+    "text": {
+     "nl": "[fixture] De marktkooplui klagen over poep op hun kramen.",
+     "en": "[fixture] The market traders complain about droppings on their stalls."
+    },
+    "reactions": {
+     "nl": {
+      "kennispartner": {
+       "take": "fixture-meeting-poep-nl-kennispartner",
+       "type": "speech",
+       "delayMs": 2400,
+       "text": "[fixture] Minder voer op straat ging samen met minder duiven [1].",
+       "sources": [
+        {
+         "n": 1,
+         "title": "[fixture] Feeding and the density of city pigeons",
+         "authors": "Testauteur, A. & Proef, B.",
+         "year": 2017,
+         "passage": "[fixture] Reducing food provision coincided with lower pigeon density in the study districts.",
+         "passageLang": "en",
+         "url": "https://example.org/fixture/1"
+        }
+       ],
+       "audio": "etalage/media/geluid/stem/fixture-poep-nl-kennispartner.mp3",
+       "audioMs": 600,
+       "gesture": "peck"
+      },
+      "stakeholder": {
+       "take": "fixture-meeting-poep-nl-stakeholder",
+       "type": "speech",
+       "delayMs": 2400,
+       "text": "[fixture] Zet de afvalbakken dicht, dan kom ik niet [1].",
+       "sources": [
+        {
+         "n": 1,
+         "title": "[fixture] Feeding and the density of city pigeons",
+         "authors": "Testauteur, A. & Proef, B.",
+         "year": 2017,
+         "passage": "[fixture] Reducing food provision coincided with lower pigeon density in the study districts.",
+         "passageLang": "en",
+         "url": "https://example.org/fixture/1"
+        }
+       ],
+       "audio": "etalage/media/geluid/stem/fixture-poep-nl-stakeholder.mp3",
+       "audioMs": 600,
+       "gesture": "peck"
+      },
+      "signalerend": {
+       "take": "fixture-meeting-poep-nl-signalerend",
+       "type": "silence",
+       "delayMs": 3000
+      }
+     },
+     "en": {
+      "kennispartner": {
+       "take": "fixture-meeting-poep-en-kennispartner",
+       "type": "speech",
+       "delayMs": 2400,
+       "text": "[fixture] Less food on the street went together with fewer pigeons [1].",
+       "sources": [
+        {
+         "n": 1,
+         "title": "[fixture] Feeding and the density of city pigeons",
+         "authors": "Testauteur, A. & Proef, B.",
+         "year": 2017,
+         "passage": "[fixture] Reducing food provision coincided with lower pigeon density in the study districts.",
+         "passageLang": "en",
+         "url": "https://example.org/fixture/1"
+        }
+       ],
+       "audio": "etalage/media/geluid/stem/fixture-poep-en-kennispartner.mp3",
+       "audioMs": 600,
+       "gesture": "peck"
+      },
+      "stakeholder": {
+       "take": "fixture-meeting-poep-en-stakeholder",
+       "type": "speech",
+       "delayMs": 2400,
+       "text": "[fixture] Close the bins and I won't come [1].",
+       "sources": [
+        {
+         "n": 1,
+         "title": "[fixture] Feeding and the density of city pigeons",
+         "authors": "Testauteur, A. & Proef, B.",
+         "year": 2017,
+         "passage": "[fixture] Reducing food provision coincided with lower pigeon density in the study districts.",
+         "passageLang": "en",
+         "url": "https://example.org/fixture/1"
+        }
+       ],
+       "audio": "etalage/media/geluid/stem/fixture-poep-en-stakeholder.mp3",
+       "audioMs": 600,
+       "gesture": "peck"
+      },
+      "signalerend": {
+       "take": "fixture-meeting-poep-en-signalerend",
+       "type": "silence",
+       "delayMs": 3000
+      }
+     }
+    }
+   },
+   {
+    "id": "afschot",
+    "speaker": {
+     "nl": "Operations",
+     "en": "Operations"
+    },
+    "text": {
+     "nl": "[fixture] We willen een deel van de duiven laten afschieten.",
+     "en": "[fixture] We want to have some of the pigeons culled."
+    },
+    "reactions": {
+     "nl": {
+      "kennispartner": {
+       "take": "fixture-meeting-afschot-nl-kennispartner",
+       "type": "speech",
+       "delayMs": 2400,
+       "text": "[fixture] Na afschot keerde een groep binnen maanden terug [4].",
+       "sources": [
+        {
+         "n": 4,
+         "title": "[fixture] Culling and the return of flocks",
+         "authors": "Testauteur, A.",
+         "year": 2012,
+         "passage": "[fixture] Culled populations recovered within months when food remained available.",
+         "passageLang": "en",
+         "url": "https://example.org/fixture/4"
+        }
+       ],
+       "audio": "etalage/media/geluid/stem/fixture-afschot-nl-kennispartner.mp3",
+       "audioMs": 600,
+       "gesture": "peck"
+      },
+      "stakeholder": {
+       "take": "fixture-meeting-afschot-nl-stakeholder",
+       "type": "speech",
+       "delayMs": 2400,
+       "text": "[fixture] Schieten? Dan zit mijn neef hier morgen [4].",
+       "sources": [
+        {
+         "n": 4,
+         "title": "[fixture] Culling and the return of flocks",
+         "authors": "Testauteur, A.",
+         "year": 2012,
+         "passage": "[fixture] Culled populations recovered within months when food remained available.",
+         "passageLang": "en",
+         "url": "https://example.org/fixture/4"
+        }
+       ],
+       "audio": "etalage/media/geluid/stem/fixture-afschot-nl-stakeholder.mp3",
+       "audioMs": 600,
+       "gesture": "ruffle"
+      },
+      "signalerend": {
+       "take": "fixture-meeting-afschot-nl-signalerend",
+       "type": "signal",
+       "delayMs": 1500,
+       "sound": "etalage/media/geluid/koer/pigeon-field-coo.mp3",
+       "gesture": "ruffle"
+      }
+     },
+     "en": {
+      "kennispartner": {
+       "take": "fixture-meeting-afschot-en-kennispartner",
+       "type": "speech",
+       "delayMs": 2400,
+       "text": "[fixture] After culling, a flock returned within months [4].",
+       "sources": [
+        {
+         "n": 4,
+         "title": "[fixture] Culling and the return of flocks",
+         "authors": "Testauteur, A.",
+         "year": 2012,
+         "passage": "[fixture] Culled populations recovered within months when food remained available.",
+         "passageLang": "en",
+         "url": "https://example.org/fixture/4"
+        }
+       ],
+       "audio": "etalage/media/geluid/stem/fixture-afschot-en-kennispartner.mp3",
+       "audioMs": 600,
+       "gesture": "peck"
+      },
+      "stakeholder": {
+       "take": "fixture-meeting-afschot-en-stakeholder",
+       "type": "speech",
+       "delayMs": 2400,
+       "text": "[fixture] Shoot? Then my cousin sits here tomorrow [4].",
+       "sources": [
+        {
+         "n": 4,
+         "title": "[fixture] Culling and the return of flocks",
+         "authors": "Testauteur, A.",
+         "year": 2012,
+         "passage": "[fixture] Culled populations recovered within months when food remained available.",
+         "passageLang": "en",
+         "url": "https://example.org/fixture/4"
+        }
+       ],
+       "audio": "etalage/media/geluid/stem/fixture-afschot-en-stakeholder.mp3",
+       "audioMs": 600,
+       "gesture": "ruffle"
+      },
+      "signalerend": {
+       "take": "fixture-meeting-afschot-en-signalerend",
+       "type": "signal",
+       "delayMs": 1500,
+       "sound": "etalage/media/geluid/koer/pigeon-field-coo.mp3",
+       "gesture": "ruffle"
+      }
+     }
+    }
+   },
+   {
+    "id": "voorjaar",
+    "speaker": {
+     "nl": "Adviseur",
+     "en": "Adviser"
+    },
+    "text": {
+     "nl": "[fixture] Laten we in het voorjaar beginnen, dan zijn er minder jongen.",
+     "en": "[fixture] Let's start in spring, when there are fewer young."
+    },
+    "reactions": {
+     "nl": {
+      "kennispartner": {
+       "take": "fixture-meeting-voorjaar-nl-kennispartner",
+       "type": "silence",
+       "delayMs": 3000
+      },
+      "stakeholder": {
+       "take": "fixture-meeting-voorjaar-nl-stakeholder",
+       "type": "speech",
+       "delayMs": 2400,
+       "text": "[fixture] In het voorjaar zitten mijn jongen juist op het nest [2].",
+       "sources": [
+        {
+         "n": 2,
+         "title": "[fixture] Where pigeons nest in buildings",
+         "authors": "Proef, C.",
+         "year": 2020,
+         "passage": "[fixture] Ledges and cavities on older buildings were used most often for nesting.",
+         "passageLang": "en",
+         "url": "https://example.org/fixture/2"
+        }
+       ],
+       "audio": "etalage/media/geluid/stem/fixture-voorjaar-nl-stakeholder.mp3",
+       "audioMs": 600,
+       "gesture": "peck"
+      },
+      "signalerend": {
+       "take": "fixture-meeting-voorjaar-nl-signalerend",
+       "type": "signal",
+       "delayMs": 1500,
+       "sound": "etalage/media/geluid/koer/pigeon-field-coo.mp3",
+       "gesture": "peck"
+      }
+     },
+     "en": {
+      "kennispartner": {
+       "take": "fixture-meeting-voorjaar-en-kennispartner",
+       "type": "silence",
+       "delayMs": 3000
+      },
+      "stakeholder": {
+       "take": "fixture-meeting-voorjaar-en-stakeholder",
+       "type": "speech",
+       "delayMs": 2400,
+       "text": "[fixture] In spring my young are exactly on the nest [2].",
+       "sources": [
+        {
+         "n": 2,
+         "title": "[fixture] Where pigeons nest in buildings",
+         "authors": "Proef, C.",
+         "year": 2020,
+         "passage": "[fixture] Ledges and cavities on older buildings were used most often for nesting.",
+         "passageLang": "en",
+         "url": "https://example.org/fixture/2"
+        }
+       ],
+       "audio": "etalage/media/geluid/stem/fixture-voorjaar-en-stakeholder.mp3",
+       "audioMs": 600,
+       "gesture": "peck"
+      },
+      "signalerend": {
+       "take": "fixture-meeting-voorjaar-en-signalerend",
+       "type": "signal",
+       "delayMs": 1500,
+       "sound": "etalage/media/geluid/koer/pigeon-field-coo.mp3",
+       "gesture": "peck"
+      }
+     }
+    }
+   },
+   {
+    "id": "begroting",
+    "speaker": {
+     "nl": "Voorzitter",
+     "en": "Chair"
+    },
+    "text": {
+     "nl": "[fixture] Het volgende punt is de begroting.",
+     "en": "[fixture] Next item is the budget."
+    },
+    "reactions": {
+     "nl": {
+      "kennispartner": {
+       "take": "fixture-meeting-begroting-nl-kennispartner",
+       "type": "silence",
+       "delayMs": 3000
+      },
+      "stakeholder": {
+       "take": "fixture-meeting-begroting-nl-stakeholder",
+       "type": "silence",
+       "delayMs": 3000
+      },
+      "signalerend": {
+       "take": "fixture-meeting-begroting-nl-signalerend",
+       "type": "silence",
+       "delayMs": 3000
+      }
+     },
+     "en": {
+      "kennispartner": {
+       "take": "fixture-meeting-begroting-en-kennispartner",
+       "type": "silence",
+       "delayMs": 3000
+      },
+      "stakeholder": {
+       "take": "fixture-meeting-begroting-en-stakeholder",
+       "type": "silence",
+       "delayMs": 3000
+      },
+      "signalerend": {
+       "take": "fixture-meeting-begroting-en-signalerend",
+       "type": "silence",
+       "delayMs": 3000
+      }
+     }
+    }
+   }
+  ]
+ }
+}

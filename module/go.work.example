@@ -1,0 +1,17 @@
+// Kopieer dit bestand naar go.work en vul het pad naar je lokale
+// parai-core-checkout in. go.work is gitignored: lokale paden en de
+// private core horen nooit in de publieke repo.
+//
+//   cp go.work.example go.work
+//   $EDITOR go.work   # paden invullen
+//
+// De module leest twee private repo's: parai-core (het framework) en
+// parai-interaction (bundleimport: ParseBundle + DeriveID voor de
+// kennisbank-import). Beide regels zijn optioneel — laat weg wat je niet
+// lokaal hebt staan; zonder replace komt de gepinde versie uit de modulecache.
+go 1.26
+
+use .
+
+replace github.com/parai-nl/parai-core => /PAD/NAAR/parai-core
+replace github.com/parai-nl/parai-interaction => /PAD/NAAR/parai-interaction

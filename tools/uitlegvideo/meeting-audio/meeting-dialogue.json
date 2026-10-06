@@ -1,0 +1,44 @@
+{
+  "model": "eleven_multilingual_v2",
+  "provider": "ElevenLabs (premade voices)",
+  "sampleRate": 48000,
+  "duration": 42.299,
+  "lines": [
+    {
+      "speaker": "Chair",
+      "voice": "Charlotte",
+      "voiceId": "XB0fDUnXU5powFXDhCwa",
+      "text": "Okay, next item: the pigeons on the market square. The traders keep complaining about droppings on their stalls.",
+      "file": "line1-chair.mp3",
+      "start": 1.0,
+      "duration": 6.223
+    },
+    {
+      "speaker": "Operations",
+      "voice": "Daniel",
+      "voiceId": "onwK4e9ZLuTAKqWW03F9",
+      "text": "We clean every morning, and by noon it's back. Honestly, I think it's time for a culling programme.",
+      "file": "line2-operations.mp3",
+      "start": 7.923,
+      "duration": 7.384
+    },
+    {
+      "speaker": "Advisor",
+      "voice": "Sarah",
+      "voiceId": "EXAVITQu4vr4xnSDxMaL",
+      "text": "Agreed. If we start in spring, the square is clean before the festival season. Nobody is going to miss a few hundred pigeons.",
+      "file": "line3-advisor.mp3",
+      "start": 16.007,
+      "duration": 7.059
+    },
+    {
+      "speaker": "Chair",
+      "voice": "Charlotte",
+      "voiceId": "XB0fDUnXU5powFXDhCwa",
+      "text": "Right. So we remove them. Any objections?",
+      "file": "line4-chair.mp3",
+      "start": 23.766,
+      "duration": 2.833
+    }
+  ]
+}

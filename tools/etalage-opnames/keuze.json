@@ -1,0 +1,285 @@
+{
+ "note": "Per item één take voor opnames.json, met de reden. \"auto\": true is door keuze.mjs gekozen (de nieuwste bruikbare take) en mag opnieuw bepaald worden; haal \"auto\" weg om een keuze vast te zetten. Elke run schrijft zijn take in takes/, ook een mislukte, en takes worden niet weggegooid; alleen enkele proefruns vóór de eerste volledige ronde zijn niet bewaard, zie README, \"Proefruns die niet bewaard zijn\".",
+ "items": {
+  "chat/afschot/nl/kennispartner": {
+   "take": "chat-afschot-nl-kennispartner-20260923T144655Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "chat/afschot/nl/stakeholder": {
+   "take": "chat-afschot-nl-stakeholder-20260923T144710Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "chat/afschot/nl/kennispartner>stakeholder": {
+   "take": "chat-afschot-nl-kennispartner-naar-stakeholder-20260923T144732Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "chat/afschot/nl/stakeholder>kennispartner": {
+   "take": "chat-afschot-nl-stakeholder-naar-kennispartner-20260923T144802Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "chat/afschot/en/kennispartner": {
+   "take": "chat-afschot-en-kennispartner-20260923T144818Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "chat/afschot/en/stakeholder": {
+   "take": "chat-afschot-en-stakeholder-20260923T144832Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "chat/afschot/en/kennispartner>stakeholder": {
+   "take": "chat-afschot-en-kennispartner-naar-stakeholder-20260923T144858Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "chat/afschot/en/stakeholder>kennispartner": {
+   "take": "chat-afschot-en-stakeholder-naar-kennispartner-20260923T144935Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "chat/markt/nl/kennispartner": {
+   "take": "chat-markt-nl-kennispartner-20260923T144951Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "chat/markt/nl/stakeholder": {
+   "take": "chat-markt-nl-stakeholder-20260923T145001Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "chat/markt/nl/kennispartner>stakeholder": {
+   "take": "chat-markt-nl-kennispartner-naar-stakeholder-20260923T145020Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "chat/markt/nl/stakeholder>kennispartner": {
+   "take": "chat-markt-nl-stakeholder-naar-kennispartner-20260923T145040Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "chat/markt/en/kennispartner": {
+   "take": "chat-markt-en-kennispartner-20260923T145052Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "chat/markt/en/stakeholder": {
+   "take": "chat-markt-en-stakeholder-20260923T145103Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "chat/markt/en/kennispartner>stakeholder": {
+   "take": "chat-markt-en-kennispartner-naar-stakeholder-20260923T145127Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "chat/markt/en/stakeholder>kennispartner": {
+   "take": "chat-markt-en-stakeholder-naar-kennispartner-20260923T145148Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "chat/vuurwerk/nl/kennispartner": {
+   "take": "chat-vuurwerk-nl-kennispartner-20260923T145159Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "chat/vuurwerk/nl/stakeholder": {
+   "take": "chat-vuurwerk-nl-stakeholder-20260923T145214Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "chat/vuurwerk/nl/kennispartner>stakeholder": {
+   "take": "chat-vuurwerk-nl-kennispartner-naar-stakeholder-20260923T145919Z",
+   "reason": "automatisch: de nieuwste bruikbare van 2 bewaarde takes; niet gekozen: chat-vuurwerk-nl-kennispartner-naar-stakeholder-20260923T145241Z (het antwoord eindigde met stopReason truncated)",
+   "auto": true
+  },
+  "chat/vuurwerk/nl/stakeholder>kennispartner": {
+   "take": "chat-vuurwerk-nl-stakeholder-naar-kennispartner-20260923T145947Z",
+   "reason": "automatisch: de nieuwste bruikbare van 2 bewaarde takes; niet gekozen: chat-vuurwerk-nl-stakeholder-naar-kennispartner-20260923T145312Z (het antwoord eindigde met stopReason truncated)",
+   "auto": true
+  },
+  "chat/vuurwerk/en/kennispartner": {
+   "take": "chat-vuurwerk-en-kennispartner-20260923T145349Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "chat/vuurwerk/en/stakeholder": {
+   "take": "chat-vuurwerk-en-stakeholder-20260923T145417Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "chat/vuurwerk/en/kennispartner>stakeholder": {
+   "take": "chat-vuurwerk-en-kennispartner-naar-stakeholder-20260923T145441Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "chat/vuurwerk/en/stakeholder>kennispartner": {
+   "take": "chat-vuurwerk-en-stakeholder-naar-kennispartner-20260923T145510Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "chat/nestelen/nl/kennispartner": {
+   "take": "chat-nestelen-nl-kennispartner-20260923T145522Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "chat/nestelen/nl/stakeholder": {
+   "take": "chat-nestelen-nl-stakeholder-20260923T145537Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "chat/nestelen/nl/kennispartner>stakeholder": {
+   "take": "chat-nestelen-nl-kennispartner-naar-stakeholder-20260923T145607Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "chat/nestelen/nl/stakeholder>kennispartner": {
+   "take": "chat-nestelen-nl-stakeholder-naar-kennispartner-20260923T145643Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "chat/nestelen/en/kennispartner": {
+   "take": "chat-nestelen-en-kennispartner-20260923T145657Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "chat/nestelen/en/stakeholder": {
+   "take": "chat-nestelen-en-stakeholder-20260923T145711Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "chat/nestelen/en/kennispartner>stakeholder": {
+   "take": "chat-nestelen-en-kennispartner-naar-stakeholder-20260923T145731Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "chat/nestelen/en/stakeholder>kennispartner": {
+   "take": "chat-nestelen-en-stakeholder-naar-kennispartner-20260923T145753Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "meeting/poep/nl/kennispartner": {
+   "take": "meeting-poep-nl-kennispartner-20260923T150018Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "meeting/poep/nl/stakeholder": {
+   "take": "meeting-poep-nl-stakeholder-20260923T150102Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "meeting/poep/nl/signalerend": {
+   "take": "meeting-poep-nl-signalerend-20260923T150142Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "meeting/poep/en/kennispartner": {
+   "take": "meeting-poep-en-kennispartner-20260923T150201Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "meeting/poep/en/stakeholder": {
+   "take": "meeting-poep-en-stakeholder-20260923T150245Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "meeting/poep/en/signalerend": {
+   "take": "meeting-poep-en-signalerend-20260923T150318Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "meeting/afschot/nl/kennispartner": {
+   "take": "meeting-afschot-nl-kennispartner-20260923T150337Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "meeting/afschot/nl/stakeholder": {
+   "take": "meeting-afschot-nl-stakeholder-20260923T150426Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "meeting/afschot/nl/signalerend": {
+   "take": "meeting-afschot-nl-signalerend-20260923T150502Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "meeting/afschot/en/kennispartner": {
+   "take": "meeting-afschot-en-kennispartner-20260923T150518Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "meeting/afschot/en/stakeholder": {
+   "take": "meeting-afschot-en-stakeholder-20260923T150601Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "meeting/afschot/en/signalerend": {
+   "take": "meeting-afschot-en-signalerend-20260923T150636Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "meeting/bakken/nl/kennispartner": {
+   "take": "meeting-bakken-nl-kennispartner-20260923T150652Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "meeting/bakken/nl/stakeholder": {
+   "take": "meeting-bakken-nl-stakeholder-20260923T150734Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "meeting/bakken/nl/signalerend": {
+   "take": "meeting-bakken-nl-signalerend-20260923T150815Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "meeting/bakken/en/kennispartner": {
+   "take": "meeting-bakken-en-kennispartner-20260923T150833Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "meeting/bakken/en/stakeholder": {
+   "take": "meeting-bakken-en-stakeholder-20260923T150912Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "meeting/bakken/en/signalerend": {
+   "take": "meeting-bakken-en-signalerend-20260923T150940Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "meeting/begroting/nl/kennispartner": {
+   "take": "meeting-begroting-nl-kennispartner-20260923T150957Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "meeting/begroting/nl/stakeholder": {
+   "take": "meeting-begroting-nl-stakeholder-20260923T151033Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "meeting/begroting/nl/signalerend": {
+   "take": "meeting-begroting-nl-signalerend-20260923T151109Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "meeting/begroting/en/kennispartner": {
+   "take": "meeting-begroting-en-kennispartner-20260923T151146Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "meeting/begroting/en/stakeholder": {
+   "take": "meeting-begroting-en-stakeholder-20260923T151222Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  },
+  "meeting/begroting/en/signalerend": {
+   "take": "meeting-begroting-en-signalerend-20260923T151258Z",
+   "reason": "automatisch: de enige bewaarde take van dit item",
+   "auto": true
+  }
+ }
+}

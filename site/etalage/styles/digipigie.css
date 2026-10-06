@@ -1,0 +1,116 @@
+/* DigiPigie, de knipoog achter het AI-MAPS-logo (digipigie.js). Dit blad laadt
+ * pas bij de vijfde klik en raakt niets buiten .dialog--digipigie. Het is altijd
+ * nacht boven de Maas, ook in de lichte weergave: vuurwerk wil een donkere lucht. */
+
+.dialog--digipigie { padding: 0; overflow: hidden; }
+.dialog--digipigie::backdrop { background: #070a1f; -webkit-backdrop-filter: none; backdrop-filter: none; }
+.dialog--digipigie .dialog__panel {
+  position: absolute; inset: 0; max-width: none; margin: 0;
+  display: grid; place-items: center;
+  border: 0; border-radius: 0; box-shadow: none; overflow: hidden;
+  color: #fff;
+  background:
+    radial-gradient(80% 60% at 50% 42%, rgb(255 196 92 / .16) 0%, rgb(255 196 92 / 0) 60%),
+    radial-gradient(140% 90% at 50% 105%, #33408f 0%, #1a2257 38%, #0b0f2e 72%, #070a1f 100%);
+  animation: digipigie-in .5s var(--ease-out-quart) both;
+}
+@keyframes digipigie-in { from { opacity: 0; } to { opacity: 1; } }
+
+.digipigie__sky { position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; }
+
+/* Zonnestralen achter de duif, langzaam draaiend. */
+.digipigie__rays {
+  position: absolute; left: 50%; top: 42%; z-index: 0;
+  width: 170vmax; height: 170vmax; translate: -50% -50%;
+  background: repeating-conic-gradient(from 0deg, rgb(255 222 150 / .11) 0deg 6deg, rgb(255 222 150 / 0) 6deg 18deg);
+  -webkit-mask-image: radial-gradient(circle, #000 0%, rgb(0 0 0 / .6) 14%, transparent 34%);
+  mask-image: radial-gradient(circle, #000 0%, rgb(0 0 0 / .6) 14%, transparent 34%);
+  animation: digipigie-spin 60s linear infinite;
+}
+@keyframes digipigie-spin { to { rotate: 1turn; } }
+
+.digipigie__center {
+  position: relative; z-index: 2;
+  display: flex; flex-direction: column; align-items: center;
+  padding: 24px 16px 12vh; text-align: center;
+  pointer-events: none;
+}
+
+/* De duif staat op het podium van de kaart: een vak in de maat van de kaart,
+ * waar de duivenlaag boven en opzij uit steekt (--lift: hoeveel erboven). */
+.digipigie__bird {
+  --bird-h: min(44vh, 56vw);
+  position: relative; height: var(--bird-h); aspect-ratio: .82;
+  margin-top: calc(var(--bird-h) * var(--lift, 0));
+  pointer-events: auto; cursor: pointer;
+  transform-origin: 50% 100%;
+  animation:
+    digipigie-pop .9s var(--ease-spring) .15s both,
+    digipigie-bob 2.8s ease-in-out 1.05s infinite;
+}
+.digipigie__bird .card__plate { background: none; overflow: visible; }
+/* De duif steekt boven en opzij uit het vak; ook daar is ze aan te klikken. */
+.digipigie__bird .card__pigeon { pointer-events: auto; }
+.digipigie__bird .card__plate-img { display: none; }
+.digipigie__bird .card__portrait { object-fit: contain; }
+@keyframes digipigie-pop {
+  from { opacity: 0; transform: translateY(18%) scale(.35); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes digipigie-bob {
+  0%, 100% { transform: none; }
+  30% { transform: translateY(-2.5%) rotate(-1.5deg); }
+  65% { transform: translateY(-1%) rotate(1.2deg); }
+}
+
+.digipigie__title {
+  margin-top: clamp(4px, 1.5vh, 16px);
+  font-family: var(--font-serif); font-weight: 800;
+  font-size: clamp(48px, min(11vw, 15vh), 132px); line-height: 1; letter-spacing: -.02em;
+  color: #f3cf6e;
+  filter: drop-shadow(0 6px 22px rgb(240 176 60 / .38));
+}
+/* Het goud van de das, letter voor letter binnen en daarna een golf. */
+.digipigie__letter {
+  display: inline-block;
+  background: linear-gradient(180deg, #fff6d2 0%, #f3cf6e 42%, #d59a2c 70%, #a8701a 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  animation:
+    digipigie-letter .7s var(--ease-spring) calc(.55s + var(--i) * 70ms) both,
+    digipigie-wave 3s ease-in-out calc(1.8s + var(--i) * 110ms) infinite;
+}
+@keyframes digipigie-letter {
+  from { opacity: 0; transform: translateY(60%) scale(.6) rotate(-8deg); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes digipigie-wave {
+  0%, 60%, 100% { transform: none; }
+  20% { transform: translateY(-10%); }
+  40% { transform: translateY(2%); }
+}
+
+.digipigie__thanks {
+  max-width: 34ch; margin-top: clamp(10px, 2vh, 18px);
+  font-size: clamp(16px, 2.2vw, 21px); font-weight: 600; line-height: 1.4;
+  color: rgb(255 255 255 / .9); text-shadow: 0 1px 14px rgb(0 0 0 / .5);
+  animation: digipigie-rise .7s var(--ease-out-quart) 1.4s both;
+}
+@keyframes digipigie-rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+
+.digipigie__close {
+  position: absolute; top: 18px; right: 18px; z-index: 3;
+  display: flex; align-items: center; justify-content: center;
+  width: 44px; height: 44px; padding: 0; border-radius: 50%;
+  border: 1px solid rgb(255 255 255 / .32); background: rgb(255 255 255 / .1); color: #fff;
+  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+  transition: background .15s, border-color .15s;
+}
+.digipigie__close:hover { background: rgb(255 255 255 / .2); border-color: rgb(255 255 255 / .6); }
+.digipigie__close:focus-visible { outline-color: #fff; }
+
+@media (prefers-reduced-motion: reduce) {
+  .digipigie__bird, .digipigie__letter, .digipigie__thanks { animation-delay: 0s !important; }
+}
+@media print {
+  .dialog--digipigie { display: none; }
+}

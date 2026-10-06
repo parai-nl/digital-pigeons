@@ -1,0 +1,40 @@
+{
+ "countedAt": "2026-09-23T16:16:06.615Z",
+ "knowledgeBase": {
+  "kbId": "Duiven",
+  "importedAt": "2026-09-15T12:26:51Z",
+  "contentHash": "774f03e56ee7b10562e58e9b81d657647e5601647d29e74bde8ef7cb5e4fbcbf",
+  "bundleSchema": "duiven/3"
+ },
+ "facts": {
+  "sources": 120,
+  "claims": 4067,
+  "passages": 4225,
+  "claimsWithPassage": 4067,
+  "verifiedPassages": 3815,
+  "claimsWithVerifiedPassage": 3668,
+  "works": 118
+ },
+ "published": {
+  "sources": 120,
+  "claims": 4067,
+  "passages": 4225
+ },
+ "differences": [],
+ "sharedWorks": [
+  {
+   "work": "doi:10.1051/nss/2018051",
+   "sources": [
+    "skadranietal2017-arenewedframeworkforurbanbiodiversitygovernance-1",
+    "skandrani2018"
+   ]
+  },
+  {
+   "work": "doi:10.1093/jue/juy024",
+   "sources": [
+    "capoccia2018",
+    "capocciaetal2018-lovedorloathedferalpigeonsassubjects-1"
+   ]
+  }
+ ]
+}

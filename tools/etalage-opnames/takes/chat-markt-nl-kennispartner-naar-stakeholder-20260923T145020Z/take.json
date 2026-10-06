@@ -1,0 +1,303 @@
+{
+ "format": "duiven-etalage-take/1",
+ "id": "chat-markt-nl-kennispartner-naar-stakeholder-20260923T145020Z",
+ "kind": "chat",
+ "item": {
+  "question": "markt",
+  "lang": "nl",
+  "route": "kennispartner>stakeholder",
+  "pigeon": "stakeholder",
+  "modulePigeon": "individualist",
+  "from": "kennispartner",
+  "basedOn": "chat-markt-nl-kennispartner-20260923T144951Z"
+ },
+ "input": {
+  "text": "Waarom zitten jullie altijd op het marktplein?",
+  "placeholder": true
+ },
+ "recordedAt": "2026-09-23T14:50:20.396Z",
+ "server": {
+  "base": "http://127.0.0.1:8094",
+  "modelPolicy": {
+   "model": "vertex_ai/gemini-3.5-flash",
+   "detectionModel": "vertex_ai/gemini-3.5-flash",
+   "endpoint": "https://llm-proxy.invalid"
+  },
+  "knowledge": {
+   "kbId": "Duiven",
+   "bundleSchema": "duiven/3",
+   "languages": [
+    "nl",
+    "en"
+   ],
+   "importedAt": "2026-09-15T12:26:51Z",
+   "counts": {
+    "belongs_to": 4067,
+    "belongs_to_perspective": 4067,
+    "belongs_to_subthema": 4067,
+    "contains": 4067,
+    "contains_perspective": 297,
+    "contains_subthema": 149,
+    "contains_thema": 26,
+    "destillaat": 4067,
+    "domein": 3,
+    "has_quote": 4225,
+    "interview": 120,
+    "perspective": 297,
+    "quote": 4225,
+    "subthema": 149,
+    "thema": 26
+   }
+  },
+  "database": {
+   "name": "duif_etalage",
+   "copyOf": "duif_v3"
+  },
+  "module": {
+   "commit": "44186b900325eefad26c20b91e92f7350eb81bd0",
+   "moduleTree": "272829aae8444c82053a849b7a66ccc5a5a9109f",
+   "dirty": false,
+   "paraiCore": {
+    "commit": "29c670c73b73295c8c96592947cb9622e730c51c",
+    "dirty": false
+   },
+   "tags": [
+    "skipauth"
+   ],
+   "builtAt": "2026-09-23T14:40:12.508Z",
+   "binary": "module/bin/duif-etalage",
+   "bundleSha256": "d64a902bff38bf25d090a3bfe74e3f6bf4cfc7c21cb5160bddda9c45dced540d"
+  },
+  "pigeons": [
+   {
+    "id": "biological",
+    "engine": "agent",
+    "chat": true,
+    "meeting": true,
+    "autonomousDefault": false
+   },
+   {
+    "id": "individualist",
+    "engine": "agent",
+    "chat": true,
+    "meeting": true,
+    "autonomousDefault": false
+   },
+   {
+    "id": "nonverbal",
+    "engine": "pipeline",
+    "chat": false,
+    "meeting": true,
+    "autonomousDefault": true
+   }
+  ]
+ },
+ "session": {
+  "id": "a91bf55efa3e6445826b39a6d7fac9e2",
+  "lang": "nl",
+  "comparison": {
+   "groupId": "bb36874f56522a347665dbb222eb7d4e",
+   "sessionId": "62949317dfd12584cdf517c199020bfe",
+   "pigeonId": "biological",
+   "questionId": "bb36874f56522a347665dbb222eb7d4e",
+   "originalQuestion": "Waarom zitten jullie altijd op het marktplein?",
+   "contextMessageIds": [
+    "bb36874f56522a347665dbb222eb7d4e",
+    "6d9829afe585d2c8b6ca87296d36196d"
+   ]
+  }
+ },
+ "finishedAt": "2026-09-23T14:50:40.905Z",
+ "exchanges": [
+  {
+   "id": 1,
+   "method": "GET",
+   "path": "/chat/sessions/62949317dfd12584cdf517c199020bfe/messages",
+   "requestBody": null,
+   "t": 0,
+   "headMs": 2,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "body": "{\"messages\":[{\"id\":\"bb36874f56522a347665dbb222eb7d4e\",\"role\":\"user\",\"kind\":\"text\",\"content\":\"Waarom zitten jullie altijd op het marktplein?\",\"createdAt\":\"2026-09-23T16:49:51.359205+02:00\"},{\"id\":\"6d9829afe585d2c8b6ca87296d36196d\",\"role\":\"assistant\",\"kind\":\"pigeon_answer\",\"persona\":\"biological\",\"content\":\"De beschikbare bronnen in ons onderzoeksproject geven geen specifieke verklaring voor waarom duiven zoals ik op het marktplein zitten. Omdat dit het begin van ons gesprek is, kan ik hierover ook geen eerder gedeelde kennis herhalen. Voor duiven zoals ik blijft de exacte reden voor de aanwezigheid op deze specifieke locatie binnen het huidige corpus dus onbeantwoord.\",\"kbStatus\":\"gap\",\"createdAt\":\"2026-09-23T16:50:00.920129+02:00\",\"provenance\":{\"contractVersion\":\"duiven-2026-09-07-v1\",\"personaVersion\":\"9315a68d3df59eaae95a2a4c2eb0c88bc5c1f1a74f9abcad7ab5a8bfd60898e5\",\"promptVersion\":\"b211e5c1c399604f9ec6ee5bb2caa848b9b779600db9071579b123ec6add1df7\",\"model\":\"vertex_ai/gemini-3.5-flash\",\"kbState\":\"versioned\",\"kbId\":\"Duiven\",\"kbVersion\":\"774f03e56ee7b10562e58e9b81d657647e5601647d29e74bde8ef7cb5e4fbcbf\"}}]}",
+   "endMs": 2,
+   "compacted": "bronnen per rij ingekort tot nummer en id; de volledige bronnen staan in de stroom van de beurt"
+  },
+  {
+   "id": 2,
+   "method": "POST",
+   "path": "/chat/comparisons",
+   "requestBody": {
+    "requestId": "d8df6fc5db18f4bfc27bec0823e10f04",
+    "sourceSessionId": "62949317dfd12584cdf517c199020bfe",
+    "questionId": "bb36874f56522a347665dbb222eb7d4e",
+    "pigeonId": "individualist"
+   },
+   "t": 2,
+   "headMs": 6,
+   "status": 201,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "body": "{\"session\":{\"id\":\"a91bf55efa3e6445826b39a6d7fac9e2\",\"pigeonId\":\"individualist\",\"lang\":\"nl\",\"createdAt\":\"2026-09-23T16:50:20.401266+02:00\",\"updatedAt\":\"2026-09-23T16:50:20.401266+02:00\",\"comparison\":{\"groupId\":\"bb36874f56522a347665dbb222eb7d4e\",\"sessionId\":\"62949317dfd12584cdf517c199020bfe\",\"pigeonId\":\"biological\",\"questionId\":\"bb36874f56522a347665dbb222eb7d4e\",\"originalQuestion\":\"Waarom zitten jullie altijd op het marktplein?\",\"contextMessageIds\":[\"bb36874f56522a347665dbb222eb7d4e\",\"6d9829afe585d2c8b6ca87296d36196d\"]},\"title\":\"Waarom zitten jullie altijd op het marktplein?\"}}\n",
+   "endMs": 6
+  },
+  {
+   "id": 3,
+   "method": "GET",
+   "path": "/chat/sessions/a91bf55efa3e6445826b39a6d7fac9e2/messages",
+   "requestBody": null,
+   "t": 8,
+   "headMs": 2,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "body": "{\"messages\":[{\"id\":\"1b29bb70ed59ddea6646f706374ac1c9\",\"role\":\"user\",\"kind\":\"text\",\"content\":\"Waarom zitten jullie altijd op het marktplein?\",\"createdAt\":\"2026-09-23T16:50:20.401266+02:00\"},{\"id\":\"f8bec1a11864ec04ef6f2a37273ea3ed\",\"role\":\"assistant\",\"kind\":\"pigeon_answer\",\"persona\":\"biological\",\"content\":\"De beschikbare bronnen in ons onderzoeksproject geven geen specifieke verklaring voor waarom duiven zoals ik op het marktplein zitten. Omdat dit het begin van ons gesprek is, kan ik hierover ook geen eerder gedeelde kennis herhalen. Voor duiven zoals ik blijft de exacte reden voor de aanwezigheid op deze specifieke locatie binnen het huidige corpus dus onbeantwoord.\",\"kbStatus\":\"gap\",\"createdAt\":\"2026-09-23T16:50:20.401266+02:00\",\"provenance\":{\"contractVersion\":\"duiven-2026-09-07-v1\",\"personaVersion\":\"9315a68d3df59eaae95a2a4c2eb0c88bc5c1f1a74f9abcad7ab5a8bfd60898e5\",\"promptVersion\":\"b211e5c1c399604f9ec6ee5bb2caa848b9b779600db9071579b123ec6add1df7\",\"model\":\"vertex_ai/gemini-3.5-flash\",\"kbState\":\"versioned\",\"kbId\":\"Duiven\",\"kbVersion\":\"774f03e56ee7b10562e58e9b81d657647e5601647d29e74bde8ef7cb5e4fbcbf\"}}]}",
+   "endMs": 2,
+   "compacted": "bronnen per rij ingekort tot nummer en id; de volledige bronnen staan in de stroom van de beurt"
+  },
+  {
+   "id": 4,
+   "method": "POST",
+   "path": "/chat/turn",
+   "requestBody": {
+    "sessionId": "a91bf55efa3e6445826b39a6d7fac9e2",
+    "pigeonId": "individualist",
+    "message": "Waarom zitten jullie altijd op het marktplein?",
+    "lang": "nl"
+   },
+   "t": 10,
+   "headMs": 4,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "text/event-stream"
+    ],
+    [
+     "x-duif-session-id",
+     "a91bf55efa3e6445826b39a6d7fac9e2"
+    ]
+   ],
+   "chunks": [
+    {
+     "ms": 4,
+     "text": "data: {\"type\":\"phase\",\"phase\":\"facilitator\"}\n\n"
+    },
+    {
+     "ms": 5023,
+     "text": "data: {\"type\":\"tool\",\"id\":\"tool-1\",\"name\":\"ask_pigeon\"}\n\ndata: {\"type\":\"text\",\"delta\":\"Ik leg de duif de vraag voor naar de betekenis van het marktplein, ditmaal vanuit het eigen standpunt als stadsbewoner.\"}\n\n"
+    },
+    {
+     "ms": 5027,
+     "text": "data: {\"type\":\"phase\",\"phase\":\"pigeon_grounding\"}\n\n"
+    },
+    {
+     "ms": 5255,
+     "text": "data: {\"type\":\"phase\",\"phase\":\"pigeon_related_search\"}\n\n"
+    },
+    {
+     "ms": 5488,
+     "text": "data: {\"type\":\"artifact\",\"id\":\"pigeon-1\",\"kind\":\"pigeon_answer\",\"persona\":\"individualist\",\"kbStatus\":\"gap\"}\n\ndata: {\"type\":\"phase\",\"phase\":\"pigeon\"}\n\n"
+    },
+    {
+     "ms": 12674,
+     "text": "data: {\"type\":\"artifact_delta\",\"id\":\"pigeon-1\",\"delta\":\"Mijn onderzoeksbronnen zwijgen\"}\n\n"
+    },
+    {
+     "ms": 12740,
+     "text": "data: {\"type\":\"artifact_delta\",\"id\":\"pigeon-1\",\"delta\":\" over waarom ik op het marktplein zit. Maar ik wil gewoon voedsel en een veilige rustplek. Jullie\"}\n\n"
+    },
+    {
+     "ms": 12863,
+     "text": "data: {\"type\":\"artifact_delta\",\"id\":\"pigeon-1\",\"delta\":\" morsen daar patat, dus waarom zou ik wegblijven? Ik weiger mezelf onzichtbaar te\"}\n\n"
+    },
+    {
+     "ms": 12883,
+     "text": "data: {\"type\":\"artifact_delta\",\"id\":\"pigeon-1\",\"delta\":\" maken in een dode hoek.\"}\n\n"
+    },
+    {
+     "ms": 12919,
+     "text": "data: {\"type\":\"artifact\",\"id\":\"pigeon-1\",\"kind\":\"pigeon_answer\",\"persona\":\"individualist\",\"kbStatus\":\"gap\",\"done\":true}\n\ndata: {\"type\":\"tool_result\",\"id\":\"tool-1\",\"name\":\"ask_pigeon\"}\n\n"
+    },
+    {
+     "ms": 12923,
+     "text": "data: {\"type\":\"phase\",\"phase\":\"mediation\"}\n\n"
+    },
+    {
+     "ms": 19839,
+     "text": "data: {\"type\":\"text\",\"delta\":\"Het marktplein is bij uitstek een plek waar menselijke consumptie en de zoektocht van\"}\n\n"
+    },
+    {
+     "ms": 19849,
+     "text": "data: {\"type\":\"text\",\"delta\":\" de duif naar voedsel direct op elkaar botsen. Dit maakt de aanwezigheid van de duif geen toeval\"}\n\n"
+    },
+    {
+     "ms": 19944,
+     "text": "data: {\"type\":\"text\",\"delta\":\", maar een direct gevolg van hoe wij onze openbare ruimte gebruiken en achterlaten. Voor het beheer van de\"}\n\n"
+    },
+    {
+     "ms": 20044,
+     "text": "data: {\"type\":\"text\",\"delta\":\" stad betekent dit dat beslissingen over afval en hygiëne direct bepalen welke medegebruikers\"}\n\n"
+    },
+    {
+     "ms": 20134,
+     "text": "data: {\"type\":\"text\",\"delta\":\" we aantrekken. \\n\\nMoeten we de aanwezigheid van stadsnatuur op dit soort plekken accepteren\"}\n\n"
+    },
+    {
+     "ms": 20232,
+     "text": "data: {\"type\":\"text\",\"delta\":\" als een gegeven, of de ruimte zo ontwerpen dat voedselbronnen volledig worden afgeschermd?\"}\n\n"
+    },
+    {
+     "ms": 20425,
+     "text": "data: {\"type\":\"done\",\"sessionId\":\"a91bf55efa3e6445826b39a6d7fac9e2\",\"kbStatus\":\"gap\",\"stopReason\":\"natural\",\"provenance\":{\"contractVersion\":\"duiven-2026-09-07-v1\",\"personaVersion\":\"ff996915bceffff46e1a92a2037311ffd17cf6dff27a35dc34325af6ba17a7a8\",\"promptVersion\":\"de87036e16a796abb1fead60162a5c4c27e14e4fbecd8ee10b88058c1b51b06a\",\"model\":\"vertex_ai/gemini-3.5-flash\",\"kbState\":\"versioned\",\"kbId\":\"Duiven\",\"kbVersion\":\"774f03e56ee7b10562e58e9b81d657647e5601647d29e74bde8ef7cb5e4fbcbf\"}}\n\n"
+    }
+   ],
+   "endMs": 20425
+  },
+  {
+   "id": 5,
+   "method": "GET",
+   "path": "/chat/sessions/a91bf55efa3e6445826b39a6d7fac9e2/messages",
+   "requestBody": null,
+   "t": 20435,
+   "headMs": 2,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "body": "{\"messages\":[{\"id\":\"1b29bb70ed59ddea6646f706374ac1c9\",\"role\":\"user\",\"kind\":\"text\",\"content\":\"Waarom zitten jullie altijd op het marktplein?\",\"createdAt\":\"2026-09-23T16:50:20.401266+02:00\"},{\"id\":\"f8bec1a11864ec04ef6f2a37273ea3ed\",\"role\":\"assistant\",\"kind\":\"pigeon_answer\",\"persona\":\"biological\",\"content\":\"De beschikbare bronnen in ons onderzoeksproject geven geen specifieke verklaring voor waarom duiven zoals ik op het marktplein zitten. Omdat dit het begin van ons gesprek is, kan ik hierover ook geen eerder gedeelde kennis herhalen. Voor duiven zoals ik blijft de exacte reden voor de aanwezigheid op deze specifieke locatie binnen het huidige corpus dus onbeantwoord.\",\"kbStatus\":\"gap\",\"createdAt\":\"2026-09-23T16:50:20.401266+02:00\",\"provenance\":{\"contractVersion\":\"duiven-2026-09-07-v1\",\"personaVersion\":\"9315a68d3df59eaae95a2a4c2eb0c88bc5c1f1a74f9abcad7ab5a8bfd60898e5\",\"promptVersion\":\"b211e5c1c399604f9ec6ee5bb2caa848b9b779600db9071579b123ec6add1df7\",\"model\":\"vertex_ai/gemini-3.5-flash\",\"kbState\":\"versioned\",\"kbId\":\"Duiven\",\"kbVersion\":\"774f03e56ee7b10562e58e9b81d657647e5601647d29e74bde8ef7cb5e4fbcbf\"}},{\"id\":\"52bd54fd74b0f8ad30f7b70a0c936c6b\",\"role\":\"user\",\"kind\":\"text\",\"content\":\"Waarom zitten jullie altijd op het marktplein?\",\"createdAt\":\"2026-09-23T16:50:20.407463+02:00\"},{\"id\":\"caa5c9fb706c802f2cee35324f52d0d0\",\"role\":\"assistant\",\"kind\":\"text\",\"persona\":\"facilitator\",\"content\":\"Ik leg de duif de vraag voor naar de betekenis van het marktplein, ditmaal vanuit het eigen standpunt als stadsbewoner.\",\"createdAt\":\"2026-09-23T16:50:25.428826+02:00\",\"provenance\":{\"contractVersion\":\"duiven-2026-09-07-v1\",\"personaVersion\":\"ff996915bceffff46e1a92a2037311ffd17cf6dff27a35dc34325af6ba17a7a8\",\"promptVersion\":\"de87036e16a796abb1fead60162a5c4c27e14e4fbecd8ee10b88058c1b51b06a\",\"model\":\"vertex_ai/gemini-3.5-flash\",\"kbState\":\"versioned\",\"kbId\":\"Duiven\",\"kbVersion\":\"774f03e56ee7b10562e58e9b81d657647e5601647d29e74bde8ef7cb5e4fbcbf\"}},{\"id\":\"35efac1a0740db1426c720ef844331a6\",\"role\":\"assistant\",\"kind\":\"pigeon_answer\",\"persona\":\"individualist\",\"content\":\"Mijn onderzoeksbronnen zwijgen over waarom ik op het marktplein zit. Maar ik wil gewoon voedsel en een veilige rustplek. Jullie morsen daar patat, dus waarom zou ik wegblijven? Ik weiger mezelf onzichtbaar te maken in een dode hoek.\",\"kbStatus\":\"gap\",\"createdAt\":\"2026-09-23T16:50:33.325433+02:00\",\"provenance\":{\"contractVersion\":\"duiven-2026-09-07-v1\",\"personaVersion\":\"ff996915bceffff46e1a92a2037311ffd17cf6dff27a35dc34325af6ba17a7a8\",\"promptVersion\":\"de87036e16a796abb1fead60162a5c4c27e14e4fbecd8ee10b88058c1b51b06a\",\"model\":\"vertex_ai/gemini-3.5-flash\",\"kbState\":\"versioned\",\"kbId\":\"Duiven\",\"kbVersion\":\"774f03e56ee7b10562e58e9b81d657647e5601647d29e74bde8ef7cb5e4fbcbf\"}},{\"id\":\"f8b227c71807e6536924e2a3e9bdd290\",\"role\":\"assistant\",\"kind\":\"text\",\"persona\":\"facilitator\",\"content\":\"Het marktplein is bij uitstek een plek waar menselijke consumptie en de zoektocht van de duif naar voedsel direct op elkaar botsen. Dit maakt de aanwezigheid van de duif geen toeval, maar een direct gevolg van hoe wij onze openbare ruimte gebruiken en achterlaten. Voor het beheer van de stad betekent dit dat beslissingen over afval en hygiëne direct bepalen welke medegebruikers we aantrekken. \\n\\nMoeten we de aanwezigheid van stadsnatuur op dit soort plekken accepteren als een gegeven, of de ruimte zo ontwerpen dat voedselbronnen volledig worden afgeschermd?\",\"createdAt\":\"2026-09-23T16:50:40.828154+02:00\",\"provenance\":{\"contractVersion\":\"duiven-2026-09-07-v1\",\"personaVersion\":\"ff996915bceffff46e1a92a2037311ffd17cf6dff27a35dc34325af6ba17a7a8\",\"promptVersion\":\"de87036e16a796abb1fead60162a5c4c27e14e4fbecd8ee10b88058c1b51b06a\",\"model\":\"vertex_ai/gemini-3.5-flash\",\"kbState\":\"versioned\",\"kbId\":\"Duiven\",\"kbVersion\":\"774f03e56ee7b10562e58e9b81d657647e5601647d29e74bde8ef7cb5e4fbcbf\"}}]}",
+   "endMs": 2,
+   "compacted": "bronnen per rij ingekort tot nummer en id; de volledige bronnen staan in de stroom van de beurt"
+  }
+ ],
+ "failure": null,
+ "provenance": {
+  "contractVersion": "duiven-2026-09-07-v1",
+  "personaVersion": "ff996915bceffff46e1a92a2037311ffd17cf6dff27a35dc34325af6ba17a7a8",
+  "promptVersion": "de87036e16a796abb1fead60162a5c4c27e14e4fbecd8ee10b88058c1b51b06a",
+  "model": "vertex_ai/gemini-3.5-flash",
+  "kbState": "versioned",
+  "kbId": "Duiven",
+  "kbVersion": "774f03e56ee7b10562e58e9b81d657647e5601647d29e74bde8ef7cb5e4fbcbf"
+ },
+ "checks": {
+  "model": "vertex_ai/gemini-3.5-flash",
+  "modelMatchesPolicy": true,
+  "storedEqualsStreamed": true
+ }
+}

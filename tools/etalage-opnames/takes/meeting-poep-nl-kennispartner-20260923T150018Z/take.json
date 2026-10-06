@@ -1,0 +1,2649 @@
+{
+ "format": "duiven-etalage-take/1",
+ "id": "meeting-poep-nl-kennispartner-20260923T150018Z",
+ "kind": "meeting",
+ "item": {
+  "statement": "poep",
+  "lang": "nl",
+  "pigeon": "kennispartner",
+  "modulePigeon": "biological"
+ },
+ "input": {
+  "speaker": "Voorzitter",
+  "text": "De marktkooplui klagen over duivenpoep op hun kramen.",
+  "audio": "uitspraken/poep-nl.mp3",
+  "audioSha256": "3f7d05b252f62928ccb2f0fab29174e6e1c94187d1bcd047203e372f864b8911",
+  "audioMs": 3251,
+  "voice": "Charlotte (ElevenLabs eleven_multilingual_v2)",
+  "micLeadMs": 4000,
+  "windowMs": 25000,
+  "placeholder": true
+ },
+ "recordedAt": "2026-09-23T15:00:18.633Z",
+ "finishedAt": "2026-09-23T15:01:02.052Z",
+ "server": {
+  "base": "http://127.0.0.1:8094",
+  "modelPolicy": {
+   "model": "vertex_ai/gemini-3.5-flash",
+   "detectionModel": "vertex_ai/gemini-3.5-flash",
+   "endpoint": "https://llm-proxy.invalid"
+  },
+  "knowledge": {
+   "kbId": "Duiven",
+   "bundleSchema": "duiven/3",
+   "languages": [
+    "nl",
+    "en"
+   ],
+   "importedAt": "2026-09-15T12:26:51Z",
+   "counts": {
+    "belongs_to": 4067,
+    "belongs_to_perspective": 4067,
+    "belongs_to_subthema": 4067,
+    "contains": 4067,
+    "contains_perspective": 297,
+    "contains_subthema": 149,
+    "contains_thema": 26,
+    "destillaat": 4067,
+    "domein": 3,
+    "has_quote": 4225,
+    "interview": 120,
+    "perspective": 297,
+    "quote": 4225,
+    "subthema": 149,
+    "thema": 26
+   }
+  },
+  "database": {
+   "name": "duif_etalage",
+   "copyOf": "duif_v3"
+  },
+  "module": {
+   "commit": "44186b900325eefad26c20b91e92f7350eb81bd0",
+   "moduleTree": "272829aae8444c82053a849b7a66ccc5a5a9109f",
+   "dirty": false,
+   "paraiCore": {
+    "commit": "29c670c73b73295c8c96592947cb9622e730c51c",
+    "dirty": false
+   },
+   "tags": [
+    "skipauth"
+   ],
+   "builtAt": "2026-09-23T14:40:12.508Z",
+   "binary": "module/bin/duif-etalage",
+   "bundleSha256": "d64a902bff38bf25d090a3bfe74e3f6bf4cfc7c21cb5160bddda9c45dced540d"
+  },
+  "pigeons": [
+   {
+    "id": "biological",
+    "engine": "agent",
+    "chat": true,
+    "meeting": true,
+    "autonomousDefault": false
+   },
+   {
+    "id": "individualist",
+    "engine": "agent",
+    "chat": true,
+    "meeting": true,
+    "autonomousDefault": false
+   },
+   {
+    "id": "nonverbal",
+    "engine": "pipeline",
+    "chat": false,
+    "meeting": true,
+    "autonomousDefault": true
+   }
+  ]
+ },
+ "failure": null,
+ "session": {
+  "id": "574d691ed75d9a712753cb78c40481f1",
+  "lang": "nl",
+  "pigeonId": "biological",
+  "autonomous": true,
+  "eagerness": "normal",
+  "cooldownSeconds": 0
+ },
+ "timeline": {
+  "micOpenMs": 1369,
+  "utteranceStartMs": 5369,
+  "utteranceEndMs": 8620,
+  "windowEndMs": 33620
+ },
+ "actions": [
+  {
+   "name": "load",
+   "t": 136
+  },
+  {
+   "name": "autonomy-on",
+   "t": 344
+  },
+  {
+   "name": "seat",
+   "t": 1162
+  },
+  {
+   "name": "reaction",
+   "t": 16011,
+   "type": "persona"
+  },
+  {
+   "name": "reaction-done",
+   "t": 40601
+  },
+  {
+   "name": "end-click",
+   "t": 42102
+  },
+  {
+   "name": "ended",
+   "t": 42120
+  }
+ ],
+ "exchanges": [
+  {
+   "id": 1,
+   "method": "GET",
+   "path": "/access/notice",
+   "requestBody": null,
+   "t": 242,
+   "headMs": 8,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 9,
+   "body": "{\"version\":\"2026-09-22.1\",\"acknowledged\":true,\"acknowledgedAt\":\"2026-09-22T12:57:04.398172+02:00\"}\n"
+  },
+  {
+   "id": 2,
+   "method": "GET",
+   "path": "/duiven",
+   "requestBody": null,
+   "t": 247,
+   "headMs": 2,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 3,
+   "body": "{\"duiven\":[{\"id\":\"biological\",\"name\":{\"en\":\"Knowledge Partner\",\"nl\":\"Kennispartner\"},\"voiceReady\":true,\"knowledgeBase\":true,\"chat\":true,\"meeting\":true,\"topics\":[{\"id\":\"population-control\",\"label\":{\"en\":\"Population control\",\"nl\":\"Populatiebeheer\"}},{\"id\":\"nuisance-and-health\",\"label\":{\"en\":\"Nuisance and health\",\"nl\":\"Overlast en gezondheid\"}},{\"id\":\"feeding-and-food\",\"label\":{\"en\":\"Feeding and food\",\"nl\":\"Voeren en voedsel\"}},{\"id\":\"nesting-and-shelter\",\"label\":{\"en\":\"Nesting and shelter\",\"nl\":\"Nestelen en beschutting\"}},{\"id\":\"urban-ecology\",\"label\":{\"en\":\"Urban ecology\",\"nl\":\"Stadsecologie\"}}],\"engine\":\"agent\",\"autonomousDefault\":false},{\"id\":\"individualist\",\"name\":{\"en\":\"Stakeholder\",\"nl\":\"Stakeholder\"},\"voiceReady\":true,\"knowledgeBase\":true,\"chat\":true,\"meeting\":true,\"topics\":[{\"id\":\"pigeon-rights\",\"label\":{\"en\":\"What pigeons are owed\",\"nl\":\"Waar duiven recht op hebben\"}},{\"id\":\"city-space\",\"label\":{\"en\":\"Whose city is it\",\"nl\":\"Van wie is de stad\"}},{\"id\":\"decided-about-not-with\",\"label\":{\"en\":\"Decided about, not with\",\"nl\":\"Over ons, zonder ons\"}},{\"id\":\"pest-framing\",\"label\":{\"en\":\"Being called vermin\",\"nl\":\"Ongedierte genoemd worden\"}}],\"engine\":\"agent\",\"autonomousDefault\":false},{\"id\":\"nonverbal\",\"name\":{\"en\":\"Signaling Pigeon\",\"nl\":\"Signalerende duif\"},\"voiceReady\":false,\"knowledgeBase\":false,\"chat\":false,\"meeting\":true,\"topics\":[{\"id\":\"threat-and-removal\",\"label\":{\"en\":\"Population intervention\",\"nl\":\"Ingrijpen in de populatie\"}},{\"id\":\"food\",\"label\":{\"en\":\"Access to food\",\"nl\":\"Toegang tot voedsel\"}},{\"id\":\"nesting\",\"label\":{\"en\":\"Nesting and roosting access\",\"nl\":\"Toegang tot nest- en verblijfplaatsen\"}},{\"id\":\"pigeons-nearby\",\"label\":{\"en\":\"Pigeons nearby\",\"nl\":\"Duiven in de buurt\"}}],\"engine\":\"pipeline\",\"autonomousDefault\":true}],\"gedrag\":{\"interventieZelfstandig\":false,\"interventieThrottleSeconden\":0,\"inactiviteitPromptMinuten\":10,\"inactiviteitSluitSeconden\":90,\"taalDefault\":\"en\",\"detectieGretigheid\":\"normal\",\"detectieVensterWoorden\":3,\"detectieIntervalSeconden\":6,\"stilteMilliseconden\":1500,\"arousalHalveringSeconden\":120},\"modelPolicy\":{\"model\":\"vertex_ai/gemini-3.5-flash\",\"detectionModel\":\"vertex_ai/gemini-3.5-flash\",\"endpoint\":\"https://llm-proxy.invalid\"}}\n"
+  },
+  {
+   "id": 3,
+   "method": "GET",
+   "path": "/chat/sessions",
+   "requestBody": null,
+   "t": 247,
+   "headMs": 6,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 8,
+   "bodyOmitted": "chatgeschiedenis van het opnameaccount; hoort niet bij deze vergadering"
+  },
+  {
+   "id": 4,
+   "method": "GET",
+   "path": "/knowledge/status",
+   "requestBody": null,
+   "t": 251,
+   "headMs": 4,
+   "status": 200,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 4,
+   "body": "{\"state\":\"ready\",\"kbId\":\"Duiven\",\"counts\":{\"belongs_to\":4067,\"belongs_to_perspective\":4067,\"belongs_to_subthema\":4067,\"contains\":4067,\"contains_perspective\":297,\"contains_subthema\":149,\"contains_thema\":26,\"destillaat\":4067,\"domein\":3,\"has_quote\":4225,\"interview\":120,\"perspective\":297,\"quote\":4225,\"subthema\":149,\"thema\":26},\"bundleSchema\":\"duiven/3\",\"languages\":[\"nl\",\"en\"],\"sourceLanguage\":\"nl\",\"importedAt\":\"2026-09-15T12:26:51Z\"}\n"
+  },
+  {
+   "id": 5,
+   "method": "POST",
+   "path": "/meeting/sessions",
+   "requestBody": "{\"pigeonId\":\"biological\",\"playbackTracking\":true,\"lang\":\"nl\",\"autonomous\":true,\"eagerness\":\"normal\",\"cooldownSeconds\":0}",
+   "t": 1281,
+   "headMs": 4,
+   "status": 201,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 4,
+   "body": "{\"autonomous\":true,\"autonomyPaused\":false,\"eagerness\":\"normal\",\"lang\":\"nl\",\"listening\":\"reconnecting\",\"pigeonId\":\"biological\",\"playbackTracking\":true,\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"settings\":{\"turnId\":\"0\",\"autonomyPaused\":false,\"playbackTracking\":true,\"autonomous\":true,\"eagerness\":\"normal\",\"cooldownSeconds\":0},\"voice\":\"ready\"}\n"
+  },
+  {
+   "id": 64,
+   "method": "POST",
+   "path": "/meeting/sessions/574d691ed75d9a712753cb78c40481f1/playback",
+   "requestBody": "{\"turnId\":\"1\",\"state\":\"started\"}",
+   "t": 16389,
+   "headMs": 2,
+   "status": 202,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 2,
+   "body": "{\"accepted\":true,\"settings\":{\"turnId\":\"1\",\"autonomyPaused\":false,\"playbackTracking\":true,\"autonomous\":true,\"eagerness\":\"normal\",\"cooldownSeconds\":0},\"speaking\":true}\n"
+  },
+  {
+   "id": 155,
+   "method": "POST",
+   "path": "/meeting/sessions/574d691ed75d9a712753cb78c40481f1/playback",
+   "requestBody": "{\"turnId\":\"1\",\"state\":\"ended\"}",
+   "t": 39735,
+   "headMs": 3,
+   "status": 202,
+   "headers": [
+    [
+     "content-type",
+     "application/json; charset=utf-8"
+    ]
+   ],
+   "endMs": 4,
+   "body": "{\"accepted\":true,\"settings\":{\"turnId\":\"1\",\"autonomyPaused\":false,\"playbackTracking\":true,\"autonomous\":true,\"eagerness\":\"normal\",\"cooldownSeconds\":0},\"speaking\":false}\n"
+  },
+  {
+   "id": 166,
+   "method": "DELETE",
+   "path": "/meeting/sessions/574d691ed75d9a712753cb78c40481f1",
+   "requestBody": null,
+   "t": 42114,
+   "headMs": 7,
+   "status": 204,
+   "headers": [],
+   "endMs": 7,
+   "body": ""
+  }
+ ],
+ "audioUpload": {
+  "requests": 158,
+  "statuses": {
+   "202": 158
+  },
+  "firstMs": 1792,
+  "lastMs": 41975
+ },
+ "channels": [
+  {
+   "channel": 1,
+   "path": "/meeting/sessions/574d691ed75d9a712753cb78c40481f1/events",
+   "t": 1285,
+   "messages": [
+    {
+     "t": 1294,
+     "data": "{\"type\":\"state\",\"turnId\":\"0\",\"autonomyPaused\":false,\"playbackTracking\":true,\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"pigeonId\":\"biological\",\"lang\":\"nl\",\"listening\":\"reconnecting\",\"speaking\":false,\"detector\":{\"enabled\":true,\"state\":\"ready\",\"retryable\":false},\"settings\":{\"turnId\":\"0\",\"autonomyPaused\":false,\"playbackTracking\":true,\"autonomous\":true,\"eagerness\":\"normal\",\"cooldownSeconds\":0},\"voice\":\"ready\"}"
+    },
+    {
+     "t": 1378,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "t": 6281,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"speaking\":false,\"text\":\"De\"}"
+    },
+    {
+     "t": 6285,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "t": 6728,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"speaking\":false,\"text\":\"De Mar\"}"
+    },
+    {
+     "t": 6728,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"speaking\":false,\"text\":\"De Markt\"}"
+    },
+    {
+     "t": 6963,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"speaking\":false,\"text\":\"De marktko\"}"
+    },
+    {
+     "t": 7015,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"speaking\":false,\"text\":\"De marktkoop\"}"
+    },
+    {
+     "t": 7127,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"speaking\":false,\"text\":\"De marktkoopl\"}"
+    },
+    {
+     "t": 7252,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"speaking\":false,\"text\":\"De marktkooplui\"}"
+    },
+    {
+     "t": 7487,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"speaking\":false,\"text\":\"De marktkooplui k\"}"
+    },
+    {
+     "t": 7531,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"speaking\":false,\"text\":\"De marktkooplui klag\"}"
+    },
+    {
+     "t": 7573,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"speaking\":false,\"text\":\"De marktkooplui klagen\"}"
+    },
+    {
+     "t": 7659,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"speaking\":false,\"text\":\"De marktkooplui klagen over\"}"
+    },
+    {
+     "t": 7983,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"speaking\":false,\"text\":\"De marktkooplui klagen over du\"}"
+    },
+    {
+     "t": 8039,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"speaking\":false,\"text\":\"De marktkooplui klagen over duiven\"}"
+    },
+    {
+     "t": 8212,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"speaking\":false,\"text\":\"De marktkooplui klagen over duivenpoep\"}"
+    },
+    {
+     "t": 8500,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"speaking\":false,\"text\":\"De marktkooplui klagen over duivenpoep op\"}"
+    },
+    {
+     "t": 8553,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"speaking\":false,\"text\":\"De marktkooplui klagen over duivenpoep op hun\"}"
+    },
+    {
+     "t": 8714,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"speaking\":false,\"text\":\"De marktkooplui klagen over duivenpoep op hun kr\"}"
+    },
+    {
+     "t": 9066,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"speaking\":false,\"text\":\"De marktkooplui klagen over duivenpoep op hun kram\"}"
+    },
+    {
+     "t": 9193,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"speaking\":false,\"text\":\"De Marktkooplui klagen over duivenpoep op hun kramen.\"}"
+    },
+    {
+     "t": 9746,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"speaking\":false,\"text\":\"De marktkooplui klagen over duivenpoep op hun kramen,\"}"
+    },
+    {
+     "t": 10255,
+     "data": "{\"type\":\"transcript\",\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"speaking\":false,\"text\":\"De Marktkooplui klagen over duivenpoep op hun kramen.\",\"final\":true}"
+    },
+    {
+     "t": 11286,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"listening\":\"listening\",\"speaking\":false}"
+    },
+    {
+     "t": 15995,
+     "data": "{\"type\":\"candidate\",\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"speaking\":false,\"candidate\":{\"id\":\"56cb62d01c7914c23d9ba9c592c385ac\",\"topic\":{\"id\":\"nuisance-and-health\",\"label\":{\"en\":\"Nuisance and health\",\"nl\":\"Overlast en gezondheid\"}},\"score\":0.8,\"reason\":\"topic\",\"sources\":20}}"
+    },
+    {
+     "t": 15996,
+     "data": "{\"type\":\"arousal\",\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"speaking\":false,\"arousal\":0.8}"
+    },
+    {
+     "t": 15996,
+     "data": "{\"type\":\"candidate\",\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"speaking\":false}"
+    },
+    {
+     "t": 15996,
+     "data": "{\"type\":\"intervention\",\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"speaking\":false,\"topic\":{\"id\":\"nuisance-and-health\",\"label\":{\"en\":\"Nuisance and health\",\"nl\":\"Overlast en gezondheid\"}},\"score\":0.8}"
+    },
+    {
+     "t": 15996,
+     "data": "{\"type\":\"persona\",\"turnId\":\"1\",\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"pigeonId\":\"biological\",\"lang\":\"nl\",\"speaking\":false}"
+    },
+    {
+     "t": 15997,
+     "data": "{\"type\":\"sources\",\"turnId\":\"1\",\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"speaking\":false,\"kbStatus\":\"sources\",\"sources\":[{\"grounding\":\"corpus_grounded\",\"number\":1,\"type\":\"destillaat\",\"id\":\"destillaat:8f3cdf32-5baa-5b8e-9214-447177e5acec\",\"text\":\"Vanwege de gezondheidsrisico's en de hoge kosten door infrastructurele schade is er een grote behoefte aan effectieve methoden om te voorkomen dat stadsduiven op en in gebouwen nestelen.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8e70e457-1447-53dc-a7c1-c5971108b709\",\"citation\":\"Jenni-Eiermann, S., Heynen, D., \\u0026 Schaub, M. (2014). Effect of an ultrasonic device on the behaviour and the stress hormone corticosterone in feral pigeons. Journal of Pest Science, 87, 315-322. https://doi.org/10.1007/s10340-014-0553-y\",\"citationConfidence\":\"high\",\"citationMissing\":\"issue\",\"quote\":\"Health risks and high costs due to\\ninfrastructural damage raise a strong interest to prevent feral\\npigeons from roosting on and in buildings.\",\"paper\":\"jenni-eiermann2014\",\"doi\":\"10.1007/s10340-014-0553-y\",\"passages\":[{\"id\":\"quote:ac4ec3d2-524d-5b56-b336-ead571aa9bbd\",\"text\":\"Health risks and high costs due to\\ninfrastructural damage raise a strong interest to prevent feral\\npigeons from roosting on and in buildings.\"}]},\"localized\":{\"text\":{\"en\":\"Because of the health risks and the high costs from infrastructural damage, there is a great need for effective methods to prevent urban pigeons from nesting on and in buildings.\",\"nl\":\"Vanwege de gezondheidsrisico's en de hoge kosten door infrastructurele schade is er een grote behoefte aan effectieve methoden om te voorkomen dat stadsduiven op en in gebouwen nestelen.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":2,\"type\":\"destillaat\",\"id\":\"destillaat:baa2ed95-2ada-50e9-bb41-0901c3b57eb2\",\"text\":\"De ophoping van duivenuitwerpselen en nestmateriaal veroorzaakt niet alleen hygiënische problemen en visuele vervuiling, maar versnelt ook de achteruitgang van gebouwen en verhoogt de onderhoudskosten.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"Litter that accumulates under and on the surfaces used to roost or to\\nnest are not only problematic from hygienic and urban deface reasons, they also cause\\nstructural and aesthetic damages to man-made structures accelerating their deterioration\\nand increasing the costs of maintenance (Haag-Wackernagel, 1995; Pimentel et al., 2000).\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:868fb380-5bd4-5875-a656-a900e9ad4c46\",\"text\":\"Litter that accumulates under and on the surfaces used to roost or to\\nnest are not only problematic from hygienic and urban deface reasons, they also cause\\nstructural and aesthetic damages to man-made structures accelerating their deterioration\\nand increasing the costs of maintenance (Haag-Wackernagel, 1995; Pimentel et al., 2000).\"}]},\"localized\":{\"text\":{\"en\":\"The accumulation of pigeon droppings and nesting material not only causes hygienic problems and visual pollution, but also accelerates the deterioration of buildings and increases maintenance costs.\",\"nl\":\"De ophoping van duivenuitwerpselen en nestmateriaal veroorzaakt niet alleen hygiënische problemen en visuele vervuiling, maar versnelt ook de achteruitgang van gebouwen en verhoogt de onderhoudskosten.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":3,\"type\":\"destillaat\",\"id\":\"destillaat:96d645c0-c9d4-5cf0-9f47-bcbfa9de7765\",\"text\":\"Hoewel er diverse dodelijke en niet-dodelijke methoden bestaan om duiven te weren, zijn deze maatregelen niet altijd toepasbaar of effectief.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8e70e457-1447-53dc-a7c1-c5971108b709\",\"citation\":\"Jenni-Eiermann, S., Heynen, D., \\u0026 Schaub, M. (2014). Effect of an ultrasonic device on the behaviour and the stress hormone corticosterone in feral pigeons. Journal of Pest Science, 87, 315-322. https://doi.org/10.1007/s10340-014-0553-y\",\"citationConfidence\":\"high\",\"citationMissing\":\"issue\",\"quote\":\"A variety of\\nlethal and non-lethal chemical repellents, visual, sonic or\\nmechanic measures are available to deter pigeons, but they\\nare not always applicable or effective.\",\"paper\":\"jenni-eiermann2014\",\"doi\":\"10.1007/s10340-014-0553-y\",\"passages\":[{\"id\":\"quote:f95ffe60-db07-527d-814b-50a274b21213\",\"text\":\"A variety of\\nlethal and non-lethal chemical repellents, visual, sonic or\\nmechanic measures are available to deter pigeons, but they\\nare not always applicable or effective.\"}]},\"localized\":{\"text\":{\"en\":\"Although various lethal and non-lethal methods exist to deter pigeons, these measures are not always applicable or effective.\",\"nl\":\"Hoewel er diverse dodelijke en niet-dodelijke methoden bestaan om duiven te weren, zijn deze maatregelen niet altijd toepasbaar of effectief.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":4,\"type\":\"destillaat\",\"id\":\"destillaat:08ef224d-2e83-51d1-a180-87cf351f10af\",\"text\":\"Veel commerciële duivenweringssystemen zijn duur, verstoren het uiterlijk van gebouwen en bieden vaak slechts een tijdelijke of beperkte bescherming.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:9495f94a-9f10-5669-8c1c-dc464f1dfbce\",\"citation\":\"Haag-Wackernagel, D., \\u0026 Geigenfeind, I. (2008). Protecting buildings against feral pigeons. European Journal of Wildlife Research, 54, 715-721. https://doi.org/10.1007/s10344-008-0201-z\",\"citationConfidence\":\"high\",\"citationMissing\":\"issue\",\"quote\":\"Pest control companies offer a wide range of deterrent\\nsystems but these vary in efficacy and are costly and often\\ndifficult to install and maintain.\",\"paper\":\"haag-wackernagel2008\",\"doi\":\"10.1007/s10344-008-0201-z\",\"passages\":[{\"id\":\"quote:10893ea1-7b1e-5d8c-a2f2-7402d8e25ef9\",\"text\":\"Pest control companies offer a wide range of deterrent\\nsystems but these vary in efficacy and are costly and often\\ndifficult to install and maintain.\"}]},\"localized\":{\"text\":{\"en\":\"Many commercial pigeon deterrence systems are expensive, disrupt the appearance of buildings, and often provide only temporary or limited protection.\",\"nl\":\"Veel commerciële duivenweringssystemen zijn duur, verstoren het uiterlijk van gebouwen en bieden vaak slechts een tijdelijke of beperkte bescherming.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":5,\"type\":\"destillaat\",\"id\":\"destillaat:cc7e2132-0876-5584-8895-b7fd7b6bb65c\",\"text\":\"Het verjagen van duiven bij graansilo's en in de voedingsmiddelenindustrie is van cruciaal belang om de hygiëne tijdens de voedselbereiding te waarborgen.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"Pigeons do not only soil buildings but also foul foodstuffs; problems are relevant in\\nparticular places as grain elevators or food industries, all sites where scaring pigeons is of\\nparamount importance for hygienic purposes related to food preparation (Gingrich \\u0026\\nOsterberg, 2003).\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:36cec99c-ca93-5d2e-ad0d-d7028690c7d2\",\"text\":\"Pigeons do not only soil buildings but also foul foodstuffs; problems are relevant in\\nparticular places as grain elevators or food industries, all sites where scaring pigeons is of\\nparamount importance for hygienic purposes related to food preparation (Gingrich \\u0026\\nOsterberg, 2003).\"}]},\"localized\":{\"text\":{\"en\":\"Driving away pigeons at grain silos and in the food industry is crucial for safeguarding hygiene during food preparation.\",\"nl\":\"Het verjagen van duiven bij graansilo's en in de voedingsmiddelenindustrie is van cruciaal belang om de hygiëne tijdens de voedselbereiding te waarborgen.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":6,\"type\":\"destillaat\",\"id\":\"destillaat:108e72b9-0420-5207-95ec-a953a42f4488\",\"text\":\"Traditionele afschrikmethoden zoals geluidsapparaten, nep-uilen of chemische geurstoffen zijn op de lange termijn niet effectief om duiven te verjagen, omdat de vogels er snel aan wennen.\",\"perspective\":\"Praktische scepsis\",\"theme\":\"Gehoor en geluid bij vogels\",\"ref\":{\"id\":\"interview:c54c8881-9b2d-5f8c-989d-0180ce70f30c\",\"citation\":\"Stukenholtz, E. E., Hailu, T. A., Childers, S., Leatherwood, C., Evans, L., Roulain, D., Townsley, D., Treider, M., II, R. N. P., Ray, D. A., Zak, J. C., Stevens, R. D., Stukenholtz, E. E., Hailu, T. A., Childers, S., Leatherwood, C., Evans, L., Roulain, D., Townsley, D., … Stevens, R. D. (2019). Ecology of Feral Pigeons: Population Monitoring, Resource Selection, and Management Practices. Wildlife Population Monitoring. https://doi.org/10.5772/intechopen.84612\",\"citationConfidence\":\"high\",\"quote\":\"Noise-making devices such as those that emit a high-frequency sound have\\nproven to be ineffective in removing pigeons [56].\",\"paper\":\"stukenholtz2019\",\"doi\":\"10.5772/intechopen.84612\",\"passages\":[{\"id\":\"quote:4f95cc18-0da9-5755-89cd-ed2b21d8c0b5\",\"text\":\"Noise-making devices such as those that emit a high-frequency sound have\\nproven to be ineffective in removing pigeons [56].\"},{\"id\":\"quote:322ce9c9-766f-543f-8f70-620d8e2a51f9\",\"text\":\"Scaring pigeons with lights,\\nfake snakes, owls, and other devices also seem ineffective on pigeon abundance\"},{\"id\":\"quote:27e4c16b-a4c4-539a-9d52-3426882e89a0\",\"text\":\"While effective at first, pigeons can get used to the repellent and decrease repellent\\neffectiveness\"}]},\"localized\":{\"text\":{\"en\":\"Traditional deterrent methods such as sound devices, fake owls, or chemical repellents are not effective in the long term for driving away pigeons, because the birds quickly become habituated to them.\",\"nl\":\"Traditionele afschrikmethoden zoals geluidsapparaten, nep-uilen of chemische geurstoffen zijn op de lange termijn niet effectief om duiven te verjagen, omdat de vogels er snel aan wennen.\"},\"perspective\":{\"en\":\"Practical skepticism\",\"nl\":\"Praktische scepsis\"},\"theme\":{\"en\":\"Hearing and sound in birds\",\"nl\":\"Gehoor en geluid bij vogels\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":7,\"type\":\"destillaat\",\"id\":\"destillaat:5e25905f-1586-507f-952b-fcaa1e453aa1\",\"text\":\"Stadsduiven zijn wijdverspreid en invasief, waardoor een effectieve bestrijding ervan wereldwijd een belangrijk aandachtspunt is.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:0bcd8848-06e9-51bb-93fe-dc1d37aec88a\",\"citation\":\"Soh, M. C. K., Pang, R. Y. T., Ng, B. X. K., Lee, B. P. Y. H., Loo, A. H. B., \\u0026 Er, K. B. H. (2021). Restricted human activities shift the foraging strategies of feral pigeons (Columba livia) and three other commensal bird species. Biological Conservation, 253, 108927. https://doi.org/10.1016/j.biocon.2020.108927\",\"citationConfidence\":\"high\",\"quote\":\"Feral pigeons (Columba livia) are\\nwidespread and invasive, thus their effective control is of keen international interest.\",\"paper\":\"soh2021\",\"doi\":\"10.1016/j.biocon.2020.108927\",\"passages\":[{\"id\":\"quote:27104079-9446-54f4-9082-712ea6f539fc\",\"text\":\"Feral pigeons (Columba livia) are\\nwidespread and invasive, thus their effective control is of keen international interest.\"}]},\"localized\":{\"text\":{\"en\":\"Urban pigeons are widespread and invasive, making their effective control an important focus worldwide.\",\"nl\":\"Stadsduiven zijn wijdverspreid en invasief, waardoor een effectieve bestrijding ervan wereldwijd een belangrijk aandachtspunt is.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":8,\"type\":\"destillaat\",\"id\":\"destillaat:397852fd-44a5-5c17-b5ef-401425d8c89c\",\"text\":\"De wereldwijde aanwezigheid van stadsduiven in stedelijke gebieden brengt potentiële gezondheidsrisico's met zich mee door ziekteverwekkers en parasieten, en hun uitwerpselen kunnen schade aan gebouwen veroorzaken.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8e70e457-1447-53dc-a7c1-c5971108b709\",\"citation\":\"Jenni-Eiermann, S., Heynen, D., \\u0026 Schaub, M. (2014). Effect of an ultrasonic device on the behaviour and the stress hormone corticosterone in feral pigeons. Journal of Pest Science, 87, 315-322. https://doi.org/10.1007/s10340-014-0553-y\",\"citationConfidence\":\"high\",\"citationMissing\":\"issue\",\"quote\":\"The worldwide presence of feral pigeons Columba livia domestica in urban habitats presents potential\\npublic health hazards from pathogens and parasites, and\\ndroppings can lead to damage to buildings.\",\"paper\":\"jenni-eiermann2014\",\"doi\":\"10.1007/s10340-014-0553-y\",\"passages\":[{\"id\":\"quote:2d48eec7-63ed-5eb2-ba54-da25ead0b37f\",\"text\":\"The worldwide presence of feral pigeons Columba livia domestica in urban habitats presents potential\\npublic health hazards from pathogens and parasites, and\\ndroppings can lead to damage to buildings.\"}]},\"localized\":{\"text\":{\"en\":\"The worldwide presence of urban pigeons in built-up areas carries potential health risks through pathogens and parasites, and their droppings can cause damage to buildings.\",\"nl\":\"De wereldwijde aanwezigheid van stadsduiven in stedelijke gebieden brengt potentiële gezondheidsrisico's met zich mee door ziekteverwekkers en parasieten, en hun uitwerpselen kunnen schade aan gebouwen veroorzaken.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":9,\"type\":\"destillaat\",\"id\":\"destillaat:3a6ffcf8-396a-5697-b0b1-2f51d10b0a64\",\"text\":\"De meest effectieve methode om de duivenpopulatie te verkleinen is het verminderen van de hoeveelheid beschikbaar voedsel.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:edf48f05-bf73-5872-8e8e-93c785959ff0\",\"citation\":\"Geijtenbeek, J. W. (2026). The effect of large-scale urban events on feral pigeons (Columba livia) [Writing assignment, Utrecht University].\",\"citationConfidence\":\"medium\",\"citationMissing\":\"repository URL, page count, degree name\",\"quote\":\"The more eVective ways of reducing the population size are by reducing the amount of food\\navailable for pigeons.\",\"paper\":\"effects-human-activities-pigeons-msthesis-jgeijtenbeek\",\"passages\":[{\"id\":\"quote:57d6bd0c-471a-5375-8144-a6714ebd771a\",\"text\":\"The more eVective ways of reducing the population size are by reducing the amount of food\\navailable for pigeons.\"}]},\"localized\":{\"text\":{\"en\":\"The most effective method for reducing the pigeon population is reducing the amount of available food.\",\"nl\":\"De meest effectieve methode om de duivenpopulatie te verkleinen is het verminderen van de hoeveelheid beschikbaar voedsel.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":10,\"type\":\"destillaat\",\"id\":\"destillaat:71a29bbb-1cf1-5147-9950-20588f06fa18\",\"text\":\"Bestaande dodelijke en niet-dodelijke chemische, visuele, sonische of mechanische duivenwerende middelen worden zelden aan strenge wetenschappelijke tests onderworpen.\",\"perspective\":\"Praktische scepsis\",\"theme\":\"Gehoor en geluid bij vogels\",\"ref\":{\"id\":\"interview:8e70e457-1447-53dc-a7c1-c5971108b709\",\"citation\":\"Jenni-Eiermann, S., Heynen, D., \\u0026 Schaub, M. (2014). Effect of an ultrasonic device on the behaviour and the stress hormone corticosterone in feral pigeons. Journal of Pest Science, 87, 315-322. https://doi.org/10.1007/s10340-014-0553-y\",\"citationConfidence\":\"high\",\"citationMissing\":\"issue\",\"quote\":\"A variety of lethal\\nand non-lethal chemical repellents, such as visual, sonic or\\nmechanic measures are available, but they are not always\\napplicable or effective (for review see Mason 1997; Clark\\n1998) and rarely tested rigorously.\",\"paper\":\"jenni-eiermann2014\",\"doi\":\"10.1007/s10340-014-0553-y\",\"passages\":[{\"id\":\"quote:58f40c98-e3be-52ec-80f2-36b2da22a267\",\"text\":\"A variety of lethal\\nand non-lethal chemical repellents, such as visual, sonic or\\nmechanic measures are available, but they are not always\\napplicable or effective (for review see Mason 1997; Clark\\n1998) and rarely tested rigorously.\"}]},\"localized\":{\"text\":{\"en\":\"Existing lethal and non-lethal chemical, visual, sonic, or mechanical pigeon deterrents are rarely subjected to rigorous scientific testing.\",\"nl\":\"Bestaande dodelijke en niet-dodelijke chemische, visuele, sonische of mechanische duivenwerende middelen worden zelden aan strenge wetenschappelijke tests onderworpen.\"},\"perspective\":{\"en\":\"Practical skepticism\",\"nl\":\"Praktische scepsis\"},\"theme\":{\"en\":\"Hearing and sound in birds\",\"nl\":\"Gehoor en geluid bij vogels\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":11,\"type\":\"destillaat\",\"id\":\"destillaat:6dbc1511-aa5d-5a39-8f30-ba9e6937dde1\",\"text\":\"Stadsduiven veroorzaken diverse vormen van overlast in stedelijke gebieden, waaronder corrosieve schade aan gebouwen door hun uitwerpselen en het nestelen in de directe nabijheid van woningen.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:0bcd8848-06e9-51bb-93fe-dc1d37aec88a\",\"citation\":\"Soh, M. C. K., Pang, R. Y. T., Ng, B. X. K., Lee, B. P. Y. H., Loo, A. H. B., \\u0026 Er, K. B. H. (2021). Restricted human activities shift the foraging strategies of feral pigeons (Columba livia) and three other commensal bird species. Biological Conservation, 253, 108927. https://doi.org/10.1016/j.biocon.2020.108927\",\"citationConfidence\":\"high\",\"quote\":\"Furthermore, feral pigeons cause several dis-amenities, such as corrosive\\ndamage to building structures from their droppings (Del Monte and\\nSabbioni, 1986; Spennemann and Watson, 2017), and nesting in close\\nproximity to human habitation.\",\"paper\":\"soh2021\",\"doi\":\"10.1016/j.biocon.2020.108927\",\"passages\":[{\"id\":\"quote:697985fb-9236-50dc-a503-908eeb0ffc40\",\"text\":\"Furthermore, feral pigeons cause several dis-amenities, such as corrosive\\ndamage to building structures from their droppings (Del Monte and\\nSabbioni, 1986; Spennemann and Watson, 2017), and nesting in close\\nproximity to human habitation.\"}]},\"localized\":{\"text\":{\"en\":\"Urban pigeons cause various forms of nuisance in urban areas, including corrosive damage to buildings from their droppings and nesting in close proximity to homes.\",\"nl\":\"Stadsduiven veroorzaken diverse vormen van overlast in stedelijke gebieden, waaronder corrosieve schade aan gebouwen door hun uitwerpselen en het nestelen in de directe nabijheid van woningen.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":12,\"type\":\"destillaat\",\"id\":\"destillaat:4278630e-a001-549a-8cb2-53da13792835\",\"text\":\"De auteurs stellen dat het volledig uitsluiten van duiven van gebouwen de meest effectieve oplossing is om overlast te voorkomen.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:9495f94a-9f10-5669-8c1c-dc464f1dfbce\",\"citation\":\"Haag-Wackernagel, D., \\u0026 Geigenfeind, I. (2008). Protecting buildings against feral pigeons. European Journal of Wildlife Research, 54, 715-721. https://doi.org/10.1007/s10344-008-0201-z\",\"citationConfidence\":\"high\",\"citationMissing\":\"issue\",\"quote\":\"The exclusion of pigeons from\\nbuildings is the best option to solve this problem.\",\"paper\":\"haag-wackernagel2008\",\"doi\":\"10.1007/s10344-008-0201-z\",\"passages\":[{\"id\":\"quote:ed231599-226a-5ded-821e-ea7eede53e63\",\"text\":\"The exclusion of pigeons from\\nbuildings is the best option to solve this problem.\"}]},\"localized\":{\"text\":{\"en\":\"The authors state that completely excluding pigeons from buildings is the most effective solution for preventing nuisance.\",\"nl\":\"De auteurs stellen dat het volledig uitsluiten van duiven van gebouwen de meest effectieve oplossing is om overlast te voorkomen.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":13,\"type\":\"destillaat\",\"id\":\"destillaat:14bae0cb-411b-5cf3-88e2-ec78f0e9fbd8\",\"text\":\"Het correct ontwerpen van vuilnisbakken met een beperkte toegang voor dieren is een aanbevolen methode om de overlast van duiven in woonwijken te verminderen.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:36878a2d-e678-54a2-98a9-1a72d88d450b\",\"citation\":\"Przybylska, K., Haidt, A., Myczko, Ł., Ekner-Grzyb, A., Rosin, Z. M., Kwieciński, Z., Tryjanowski, P., Suchodolska, J., Takacs, V., Jankowiak, Ł., Tobółka, M., Wasielewski, O., Graclik, A., Krawczyk, A. J., Kasprzak, A., Szwajkowski, P., Wylegała, P., Malecha, A. W., Mizera, T., \\u0026 Skórka, P. (2012). Local and Landscape-Level Factors Affecting the Density and Distribution of the Feral Pigeon Columba livia var. domestica in an Urban Environment. Acta Ornithologica, 47(1), 37–45. https://doi.org/10.3161/000164512X653908\",\"citationConfidence\":\"high\",\"quote\":\"The proper construction of\\nlitter bins with limited animal access is also a recommended solution to the problem of these birds\\nin residential areas.\",\"paper\":\"przybylska2012\",\"doi\":\"10.3161/000164512X653908\",\"passages\":[{\"id\":\"quote:93d27514-2722-52fa-bd3c-ccde8836d157\",\"text\":\"The proper construction of\\nlitter bins with limited animal access is also a recommended solution to the problem of these birds\\nin residential areas.\"}]},\"localized\":{\"text\":{\"en\":\"Properly designing garbage bins with limited access for animals is a recommended method for reducing pigeon nuisance in residential neighborhoods.\",\"nl\":\"Het correct ontwerpen van vuilnisbakken met een beperkte toegang voor dieren is een aanbevolen methode om de overlast van duiven in woonwijken te verminderen.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":14,\"type\":\"destillaat\",\"id\":\"destillaat:a93acf4e-eff2-5e01-9b05-79f58b5eebc4\",\"text\":\"De hoge concentratie stadsduiven dwingt overheden tot actieve populatieregulering om overlast te beperken.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:836b7aae-cd75-5414-967f-045ef2457fb9\",\"citation\":\"Duffaut, C., Brondeau, F., \\u0026 Gasparini, J. (2023). An original and efficient fertilizer for cherry tomato plants grown in urban agriculture: Feral pigeon guano. Urban Agriculture and Regional Food Systems, 8(1), e20046. https://doi.org/10.1002/uar2.20046\",\"citationConfidence\":\"high\",\"quote\":\"The\\nurban pigeon (Columba livia) is present in almost all cities of\\nthe world (Aronson et al., 2014) and can reach high densities\\nin some cities that has forced local authorities to manage local\\nnuisance.\",\"paper\":\"duffaut2023\",\"doi\":\"10.1002/uar2.20046\",\"passages\":[{\"id\":\"quote:79616794-e8bb-587e-b330-b2afcdbb4104\",\"text\":\"The\\nurban pigeon (Columba livia) is present in almost all cities of\\nthe world (Aronson et al., 2014) and can reach high densities\\nin some cities that has forced local authorities to manage local\\nnuisance.\"}]},\"localized\":{\"text\":{\"en\":\"The high concentration of urban pigeons forces authorities into active population regulation to limit nuisance.\",\"nl\":\"De hoge concentratie stadsduiven dwingt overheden tot actieve populatieregulering om overlast te beperken.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":15,\"type\":\"destillaat\",\"id\":\"destillaat:83f0dbfd-4344-53ac-88d9-9d7cfdf5241b\",\"text\":\"Het structureel aanpassen van de leefomgeving, zoals het bemoeilijken van nestelen en rusten, is de meest effectieve en duurzame methode om de duivenpopulatie in steden permanent te verkleinen.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:c54c8881-9b2d-5f8c-989d-0180ce70f30c\",\"citation\":\"Stukenholtz, E. E., Hailu, T. A., Childers, S., Leatherwood, C., Evans, L., Roulain, D., Townsley, D., Treider, M., II, R. N. P., Ray, D. A., Zak, J. C., Stevens, R. D., Stukenholtz, E. E., Hailu, T. A., Childers, S., Leatherwood, C., Evans, L., Roulain, D., Townsley, D., … Stevens, R. D. (2019). Ecology of Feral Pigeons: Population Monitoring, Resource Selection, and Management Practices. Wildlife Population Monitoring. https://doi.org/10.5772/intechopen.84612\",\"citationConfidence\":\"high\",\"quote\":\"Population models performed by Guinchi et al. found that influencing the\\nhabitat is the most effective and long-lasting method in decreasing abundance [18].\",\"paper\":\"stukenholtz2019\",\"doi\":\"10.5772/intechopen.84612\",\"passages\":[{\"id\":\"quote:62cd809e-6721-58c1-89bc-f2dc7333ee09\",\"text\":\"Population models performed by Guinchi et al. found that influencing the\\nhabitat is the most effective and long-lasting method in decreasing abundance [18].\"}]},\"localized\":{\"text\":{\"en\":\"Structurally modifying the living environment, such as making nesting and resting more difficult, is the most effective and sustainable method for permanently reducing the pigeon population in cities.\",\"nl\":\"Het structureel aanpassen van de leefomgeving, zoals het bemoeilijken van nestelen en rusten, is de meest effectieve en duurzame methode om de duivenpopulatie in steden permanent te verkleinen.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":16,\"type\":\"destillaat\",\"id\":\"destillaat:ec48c45c-3d8b-5be7-a2b1-a7a83cb182cc\",\"text\":\"Veel directe maatregelen om de populatieomvang van stadsduiven te beheersen, zoals afschot, blijken in de praktijk weinig effectief te zijn.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:edf48f05-bf73-5872-8e8e-93c785959ff0\",\"citation\":\"Geijtenbeek, J. W. (2026). The effect of large-scale urban events on feral pigeons (Columba livia) [Writing assignment, Utrecht University].\",\"citationConfidence\":\"medium\",\"citationMissing\":\"repository URL, page count, degree name\",\"quote\":\"Yet, many of these measures only have limited\\neVects on actually controlling pigeon populations (Skandrani et al., 2018).\",\"paper\":\"effects-human-activities-pigeons-msthesis-jgeijtenbeek\",\"passages\":[{\"id\":\"quote:858f081a-ccd9-5de0-99ef-6f74dcb72488\",\"text\":\"Yet, many of these measures only have limited\\neVects on actually controlling pigeon populations (Skandrani et al., 2018).\"}]},\"localized\":{\"text\":{\"en\":\"Many direct measures to control the population size of urban pigeons, such as culling, prove in practice to be of little effect.\",\"nl\":\"Veel directe maatregelen om de populatieomvang van stadsduiven te beheersen, zoals afschot, blijken in de praktijk weinig effectief te zijn.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":17,\"type\":\"destillaat\",\"id\":\"destillaat:f22b2232-5f08-5157-879b-de1e24c7c460\",\"text\":\"Architectonische maatregelen om nestelplaatsen van duiven te blokkeren kunnen in de praktijk botsen met wetgeving voor het behoud van historische monumenten.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:6253ceb0-7f66-5317-9ded-fdc75cf5858e\",\"citation\":\"Skandrani, Z., Desquilbet, M., \\u0026 Prévot, A.-C. (2018). A renewed framework for urban biodiversity governance: urban pigeons as a case-study. Natures Sciences Sociétés, 26(3), 280-290. https://doi.org/10.1051/nss/2018051\",\"citationConfidence\":\"high\",\"quote\":\"Moreover, this measure may also\\ncome up against existing legal prescriptions on the built\\nenvironment, as in the case of legal restrictions in historic\\nmonuments in France for instance\",\"paper\":\"skadranietal2017-arenewedframeworkforurbanbiodiversitygovernance-1\",\"doi\":\"10.1051/nss/2018051\",\"passages\":[{\"id\":\"quote:ca1eee33-ac8e-521d-9b9c-6ed40f3b13d8\",\"text\":\"Moreover, this measure may also\\ncome up against existing legal prescriptions on the built\\nenvironment, as in the case of legal restrictions in historic\\nmonuments in France for instance\"}]},\"localized\":{\"text\":{\"en\":\"Architectural measures to block pigeon nesting sites can in practice conflict with legislation for the preservation of historic monuments.\",\"nl\":\"Architectonische maatregelen om nestelplaatsen van duiven te blokkeren kunnen in de praktijk botsen met wetgeving voor het behoud van historische monumenten.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":18,\"type\":\"destillaat\",\"id\":\"destillaat:9634c179-3b9c-563b-9773-ca369216a306\",\"text\":\"De auteurs zien potentieel in het hergebruiken van duivenuitwerpselen uit openbare duiventillen als duurzame grondstof voor de productie van organische mest of biogas.\",\"perspective\":\"Ecologische waardering\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:6253ceb0-7f66-5317-9ded-fdc75cf5858e\",\"citation\":\"Skandrani, Z., Desquilbet, M., \\u0026 Prévot, A.-C. (2018). A renewed framework for urban biodiversity governance: urban pigeons as a case-study. Natures Sciences Sociétés, 26(3), 280-290. https://doi.org/10.1051/nss/2018051\",\"citationConfidence\":\"high\",\"quote\":\"Another potential service could also\\nderive from the recovery of pigeon droppings collected\\nin public dovecotes in the form of organic fertilizer or\\nmethane gas, as has been done for centuries with\\ndomestic pigeons.\",\"paper\":\"skadranietal2017-arenewedframeworkforurbanbiodiversitygovernance-1\",\"doi\":\"10.1051/nss/2018051\",\"passages\":[{\"id\":\"quote:a814012a-fadc-58ab-855d-5167ad068646\",\"text\":\"Another potential service could also\\nderive from the recovery of pigeon droppings collected\\nin public dovecotes in the form of organic fertilizer or\\nmethane gas, as has been done for centuries with\\ndomestic pigeons.\"}]},\"localized\":{\"text\":{\"en\":\"The authors see potential in reusing pigeon droppings from public dovecotes as a sustainable raw material for the production of organic fertilizer or biogas.\",\"nl\":\"De auteurs zien potentieel in het hergebruiken van duivenuitwerpselen uit openbare duiventillen als duurzame grondstof voor de productie van organische mest of biogas.\"},\"perspective\":{\"en\":\"Ecological appreciation\",\"nl\":\"Ecologische waardering\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":19,\"type\":\"destillaat\",\"id\":\"destillaat:b14cc487-1a11-5e95-84ba-100b48f75d19\",\"text\":\"Het installeren van schuine vlakken op vlakke delen of het verkleinen van openingen ontmoedigt stadsduiven effectief om op richels te rusten.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:9495f94a-9f10-5669-8c1c-dc464f1dfbce\",\"citation\":\"Haag-Wackernagel, D., \\u0026 Geigenfeind, I. (2008). Protecting buildings against feral pigeons. European Journal of Wildlife Research, 54, 715-721. https://doi.org/10.1007/s10344-008-0201-z\",\"citationConfidence\":\"high\",\"citationMissing\":\"issue\",\"quote\":\"Feral pigeons can be discouraged from\\nroosting on ledges by installing sloping surfaces over the\\nflat surface or downsizing openings to the extent preventing\\na feral pigeon from passing.\",\"paper\":\"haag-wackernagel2008\",\"doi\":\"10.1007/s10344-008-0201-z\",\"passages\":[{\"id\":\"quote:a894ebca-e00a-5cf7-897c-048cf822631b\",\"text\":\"Feral pigeons can be discouraged from\\nroosting on ledges by installing sloping surfaces over the\\nflat surface or downsizing openings to the extent preventing\\na feral pigeon from passing.\"}]},\"localized\":{\"text\":{\"en\":\"Installing sloped surfaces on flat areas or reducing the size of openings effectively discourages urban pigeons from resting on ledges.\",\"nl\":\"Het installeren van schuine vlakken op vlakke delen of het verkleinen van openingen ontmoedigt stadsduiven effectief om op richels te rusten.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":20,\"type\":\"destillaat\",\"id\":\"destillaat:360d1d4b-d96d-5a76-b9ac-597366cdbf18\",\"text\":\"Het verminderen van de beschikbaarheid van nest- en roestplekken kan, in combinatie met voedselbeperking, helpen om de populatie van verwilderde duiven te reguleren.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:0390dacf-0774-5d57-9ab6-feff4564589a\",\"citation\":\"Lim, K. N., Soh, M. C. K., Leong, D. Y. W., Loo, A. H. B., Lee, B. P. Y. H., \\u0026 Er, K. B. H. (2023). Proximity to anthropogenic food sources determine roosting and nesting prevalence of feral pigeons (Columba livia) in a tropical city. Ecological Solutions and Evidence, 4(2), e12234. https://doi.org/10.1002/2688-8319.12234\",\"citationConfidence\":\"high\",\"quote\":\"reducing the availability of roosting and\\nnesting sites can help regulate feral pigeon populations.\",\"paper\":\"lim2023\",\"doi\":\"10.1002/2688-8319.12234\",\"passages\":[{\"id\":\"quote:799398df-500c-5470-ba44-8e250622050f\",\"text\":\"reducing the availability of roosting and\\nnesting sites can help regulate feral pigeon populations.\"}]},\"localized\":{\"text\":{\"en\":\"Reducing the availability of nesting and roosting sites can, combined with food restriction, help regulate the population of feral pigeons.\",\"nl\":\"Het verminderen van de beschikbaarheid van nest- en roestplekken kan, in combinatie met voedselbeperking, helpen om de populatie van verwilderde duiven te reguleren.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"}]}"
+    },
+    {
+     "t": 15999,
+     "data": "{\"type\":\"text\",\"turnId\":\"1\",\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"speaking\":false,\"delta\":\"Voor duiven suggereert onderzoek dat locaties met voedsel erg aantrekkelijk zijn, maar onze aanwezigheid daar brengt hygiënische risico's met zich mee, met name op plekken waar voedsel wordt bereid of verhandeld [5]. Daarnaast kunnen ophopingen van uitwerpselen op de kramen of omliggende structuren leiden tot esthetische schade en versnelde achteruitgang van de materialen [2].\"}"
+    },
+    {
+     "t": 16000,
+     "data": "{\"type\":\"text_done\",\"turnId\":\"1\",\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"speaking\":false,\"kbStatus\":\"sources\",\"sources\":[{\"grounding\":\"corpus_grounded\",\"number\":1,\"type\":\"destillaat\",\"id\":\"destillaat:8f3cdf32-5baa-5b8e-9214-447177e5acec\",\"text\":\"Vanwege de gezondheidsrisico's en de hoge kosten door infrastructurele schade is er een grote behoefte aan effectieve methoden om te voorkomen dat stadsduiven op en in gebouwen nestelen.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8e70e457-1447-53dc-a7c1-c5971108b709\",\"citation\":\"Jenni-Eiermann, S., Heynen, D., \\u0026 Schaub, M. (2014). Effect of an ultrasonic device on the behaviour and the stress hormone corticosterone in feral pigeons. Journal of Pest Science, 87, 315-322. https://doi.org/10.1007/s10340-014-0553-y\",\"citationConfidence\":\"high\",\"citationMissing\":\"issue\",\"quote\":\"Health risks and high costs due to\\ninfrastructural damage raise a strong interest to prevent feral\\npigeons from roosting on and in buildings.\",\"paper\":\"jenni-eiermann2014\",\"doi\":\"10.1007/s10340-014-0553-y\",\"passages\":[{\"id\":\"quote:ac4ec3d2-524d-5b56-b336-ead571aa9bbd\",\"text\":\"Health risks and high costs due to\\ninfrastructural damage raise a strong interest to prevent feral\\npigeons from roosting on and in buildings.\"}]},\"localized\":{\"text\":{\"en\":\"Because of the health risks and the high costs from infrastructural damage, there is a great need for effective methods to prevent urban pigeons from nesting on and in buildings.\",\"nl\":\"Vanwege de gezondheidsrisico's en de hoge kosten door infrastructurele schade is er een grote behoefte aan effectieve methoden om te voorkomen dat stadsduiven op en in gebouwen nestelen.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":2,\"type\":\"destillaat\",\"id\":\"destillaat:baa2ed95-2ada-50e9-bb41-0901c3b57eb2\",\"text\":\"De ophoping van duivenuitwerpselen en nestmateriaal veroorzaakt niet alleen hygiënische problemen en visuele vervuiling, maar versnelt ook de achteruitgang van gebouwen en verhoogt de onderhoudskosten.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"Litter that accumulates under and on the surfaces used to roost or to\\nnest are not only problematic from hygienic and urban deface reasons, they also cause\\nstructural and aesthetic damages to man-made structures accelerating their deterioration\\nand increasing the costs of maintenance (Haag-Wackernagel, 1995; Pimentel et al., 2000).\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:868fb380-5bd4-5875-a656-a900e9ad4c46\",\"text\":\"Litter that accumulates under and on the surfaces used to roost or to\\nnest are not only problematic from hygienic and urban deface reasons, they also cause\\nstructural and aesthetic damages to man-made structures accelerating their deterioration\\nand increasing the costs of maintenance (Haag-Wackernagel, 1995; Pimentel et al., 2000).\"}]},\"localized\":{\"text\":{\"en\":\"The accumulation of pigeon droppings and nesting material not only causes hygienic problems and visual pollution, but also accelerates the deterioration of buildings and increases maintenance costs.\",\"nl\":\"De ophoping van duivenuitwerpselen en nestmateriaal veroorzaakt niet alleen hygiënische problemen en visuele vervuiling, maar versnelt ook de achteruitgang van gebouwen en verhoogt de onderhoudskosten.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":3,\"type\":\"destillaat\",\"id\":\"destillaat:96d645c0-c9d4-5cf0-9f47-bcbfa9de7765\",\"text\":\"Hoewel er diverse dodelijke en niet-dodelijke methoden bestaan om duiven te weren, zijn deze maatregelen niet altijd toepasbaar of effectief.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8e70e457-1447-53dc-a7c1-c5971108b709\",\"citation\":\"Jenni-Eiermann, S., Heynen, D., \\u0026 Schaub, M. (2014). Effect of an ultrasonic device on the behaviour and the stress hormone corticosterone in feral pigeons. Journal of Pest Science, 87, 315-322. https://doi.org/10.1007/s10340-014-0553-y\",\"citationConfidence\":\"high\",\"citationMissing\":\"issue\",\"quote\":\"A variety of\\nlethal and non-lethal chemical repellents, visual, sonic or\\nmechanic measures are available to deter pigeons, but they\\nare not always applicable or effective.\",\"paper\":\"jenni-eiermann2014\",\"doi\":\"10.1007/s10340-014-0553-y\",\"passages\":[{\"id\":\"quote:f95ffe60-db07-527d-814b-50a274b21213\",\"text\":\"A variety of\\nlethal and non-lethal chemical repellents, visual, sonic or\\nmechanic measures are available to deter pigeons, but they\\nare not always applicable or effective.\"}]},\"localized\":{\"text\":{\"en\":\"Although various lethal and non-lethal methods exist to deter pigeons, these measures are not always applicable or effective.\",\"nl\":\"Hoewel er diverse dodelijke en niet-dodelijke methoden bestaan om duiven te weren, zijn deze maatregelen niet altijd toepasbaar of effectief.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":4,\"type\":\"destillaat\",\"id\":\"destillaat:08ef224d-2e83-51d1-a180-87cf351f10af\",\"text\":\"Veel commerciële duivenweringssystemen zijn duur, verstoren het uiterlijk van gebouwen en bieden vaak slechts een tijdelijke of beperkte bescherming.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:9495f94a-9f10-5669-8c1c-dc464f1dfbce\",\"citation\":\"Haag-Wackernagel, D., \\u0026 Geigenfeind, I. (2008). Protecting buildings against feral pigeons. European Journal of Wildlife Research, 54, 715-721. https://doi.org/10.1007/s10344-008-0201-z\",\"citationConfidence\":\"high\",\"citationMissing\":\"issue\",\"quote\":\"Pest control companies offer a wide range of deterrent\\nsystems but these vary in efficacy and are costly and often\\ndifficult to install and maintain.\",\"paper\":\"haag-wackernagel2008\",\"doi\":\"10.1007/s10344-008-0201-z\",\"passages\":[{\"id\":\"quote:10893ea1-7b1e-5d8c-a2f2-7402d8e25ef9\",\"text\":\"Pest control companies offer a wide range of deterrent\\nsystems but these vary in efficacy and are costly and often\\ndifficult to install and maintain.\"}]},\"localized\":{\"text\":{\"en\":\"Many commercial pigeon deterrence systems are expensive, disrupt the appearance of buildings, and often provide only temporary or limited protection.\",\"nl\":\"Veel commerciële duivenweringssystemen zijn duur, verstoren het uiterlijk van gebouwen en bieden vaak slechts een tijdelijke of beperkte bescherming.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":5,\"type\":\"destillaat\",\"id\":\"destillaat:cc7e2132-0876-5584-8895-b7fd7b6bb65c\",\"text\":\"Het verjagen van duiven bij graansilo's en in de voedingsmiddelenindustrie is van cruciaal belang om de hygiëne tijdens de voedselbereiding te waarborgen.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"Pigeons do not only soil buildings but also foul foodstuffs; problems are relevant in\\nparticular places as grain elevators or food industries, all sites where scaring pigeons is of\\nparamount importance for hygienic purposes related to food preparation (Gingrich \\u0026\\nOsterberg, 2003).\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:36cec99c-ca93-5d2e-ad0d-d7028690c7d2\",\"text\":\"Pigeons do not only soil buildings but also foul foodstuffs; problems are relevant in\\nparticular places as grain elevators or food industries, all sites where scaring pigeons is of\\nparamount importance for hygienic purposes related to food preparation (Gingrich \\u0026\\nOsterberg, 2003).\"}]},\"localized\":{\"text\":{\"en\":\"Driving away pigeons at grain silos and in the food industry is crucial for safeguarding hygiene during food preparation.\",\"nl\":\"Het verjagen van duiven bij graansilo's en in de voedingsmiddelenindustrie is van cruciaal belang om de hygiëne tijdens de voedselbereiding te waarborgen.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":6,\"type\":\"destillaat\",\"id\":\"destillaat:108e72b9-0420-5207-95ec-a953a42f4488\",\"text\":\"Traditionele afschrikmethoden zoals geluidsapparaten, nep-uilen of chemische geurstoffen zijn op de lange termijn niet effectief om duiven te verjagen, omdat de vogels er snel aan wennen.\",\"perspective\":\"Praktische scepsis\",\"theme\":\"Gehoor en geluid bij vogels\",\"ref\":{\"id\":\"interview:c54c8881-9b2d-5f8c-989d-0180ce70f30c\",\"citation\":\"Stukenholtz, E. E., Hailu, T. A., Childers, S., Leatherwood, C., Evans, L., Roulain, D., Townsley, D., Treider, M., II, R. N. P., Ray, D. A., Zak, J. C., Stevens, R. D., Stukenholtz, E. E., Hailu, T. A., Childers, S., Leatherwood, C., Evans, L., Roulain, D., Townsley, D., … Stevens, R. D. (2019). Ecology of Feral Pigeons: Population Monitoring, Resource Selection, and Management Practices. Wildlife Population Monitoring. https://doi.org/10.5772/intechopen.84612\",\"citationConfidence\":\"high\",\"quote\":\"Noise-making devices such as those that emit a high-frequency sound have\\nproven to be ineffective in removing pigeons [56].\",\"paper\":\"stukenholtz2019\",\"doi\":\"10.5772/intechopen.84612\",\"passages\":[{\"id\":\"quote:4f95cc18-0da9-5755-89cd-ed2b21d8c0b5\",\"text\":\"Noise-making devices such as those that emit a high-frequency sound have\\nproven to be ineffective in removing pigeons [56].\"},{\"id\":\"quote:322ce9c9-766f-543f-8f70-620d8e2a51f9\",\"text\":\"Scaring pigeons with lights,\\nfake snakes, owls, and other devices also seem ineffective on pigeon abundance\"},{\"id\":\"quote:27e4c16b-a4c4-539a-9d52-3426882e89a0\",\"text\":\"While effective at first, pigeons can get used to the repellent and decrease repellent\\neffectiveness\"}]},\"localized\":{\"text\":{\"en\":\"Traditional deterrent methods such as sound devices, fake owls, or chemical repellents are not effective in the long term for driving away pigeons, because the birds quickly become habituated to them.\",\"nl\":\"Traditionele afschrikmethoden zoals geluidsapparaten, nep-uilen of chemische geurstoffen zijn op de lange termijn niet effectief om duiven te verjagen, omdat de vogels er snel aan wennen.\"},\"perspective\":{\"en\":\"Practical skepticism\",\"nl\":\"Praktische scepsis\"},\"theme\":{\"en\":\"Hearing and sound in birds\",\"nl\":\"Gehoor en geluid bij vogels\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":7,\"type\":\"destillaat\",\"id\":\"destillaat:5e25905f-1586-507f-952b-fcaa1e453aa1\",\"text\":\"Stadsduiven zijn wijdverspreid en invasief, waardoor een effectieve bestrijding ervan wereldwijd een belangrijk aandachtspunt is.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:0bcd8848-06e9-51bb-93fe-dc1d37aec88a\",\"citation\":\"Soh, M. C. K., Pang, R. Y. T., Ng, B. X. K., Lee, B. P. Y. H., Loo, A. H. B., \\u0026 Er, K. B. H. (2021). Restricted human activities shift the foraging strategies of feral pigeons (Columba livia) and three other commensal bird species. Biological Conservation, 253, 108927. https://doi.org/10.1016/j.biocon.2020.108927\",\"citationConfidence\":\"high\",\"quote\":\"Feral pigeons (Columba livia) are\\nwidespread and invasive, thus their effective control is of keen international interest.\",\"paper\":\"soh2021\",\"doi\":\"10.1016/j.biocon.2020.108927\",\"passages\":[{\"id\":\"quote:27104079-9446-54f4-9082-712ea6f539fc\",\"text\":\"Feral pigeons (Columba livia) are\\nwidespread and invasive, thus their effective control is of keen international interest.\"}]},\"localized\":{\"text\":{\"en\":\"Urban pigeons are widespread and invasive, making their effective control an important focus worldwide.\",\"nl\":\"Stadsduiven zijn wijdverspreid en invasief, waardoor een effectieve bestrijding ervan wereldwijd een belangrijk aandachtspunt is.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":8,\"type\":\"destillaat\",\"id\":\"destillaat:397852fd-44a5-5c17-b5ef-401425d8c89c\",\"text\":\"De wereldwijde aanwezigheid van stadsduiven in stedelijke gebieden brengt potentiële gezondheidsrisico's met zich mee door ziekteverwekkers en parasieten, en hun uitwerpselen kunnen schade aan gebouwen veroorzaken.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8e70e457-1447-53dc-a7c1-c5971108b709\",\"citation\":\"Jenni-Eiermann, S., Heynen, D., \\u0026 Schaub, M. (2014). Effect of an ultrasonic device on the behaviour and the stress hormone corticosterone in feral pigeons. Journal of Pest Science, 87, 315-322. https://doi.org/10.1007/s10340-014-0553-y\",\"citationConfidence\":\"high\",\"citationMissing\":\"issue\",\"quote\":\"The worldwide presence of feral pigeons Columba livia domestica in urban habitats presents potential\\npublic health hazards from pathogens and parasites, and\\ndroppings can lead to damage to buildings.\",\"paper\":\"jenni-eiermann2014\",\"doi\":\"10.1007/s10340-014-0553-y\",\"passages\":[{\"id\":\"quote:2d48eec7-63ed-5eb2-ba54-da25ead0b37f\",\"text\":\"The worldwide presence of feral pigeons Columba livia domestica in urban habitats presents potential\\npublic health hazards from pathogens and parasites, and\\ndroppings can lead to damage to buildings.\"}]},\"localized\":{\"text\":{\"en\":\"The worldwide presence of urban pigeons in built-up areas carries potential health risks through pathogens and parasites, and their droppings can cause damage to buildings.\",\"nl\":\"De wereldwijde aanwezigheid van stadsduiven in stedelijke gebieden brengt potentiële gezondheidsrisico's met zich mee door ziekteverwekkers en parasieten, en hun uitwerpselen kunnen schade aan gebouwen veroorzaken.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":9,\"type\":\"destillaat\",\"id\":\"destillaat:3a6ffcf8-396a-5697-b0b1-2f51d10b0a64\",\"text\":\"De meest effectieve methode om de duivenpopulatie te verkleinen is het verminderen van de hoeveelheid beschikbaar voedsel.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:edf48f05-bf73-5872-8e8e-93c785959ff0\",\"citation\":\"Geijtenbeek, J. W. (2026). The effect of large-scale urban events on feral pigeons (Columba livia) [Writing assignment, Utrecht University].\",\"citationConfidence\":\"medium\",\"citationMissing\":\"repository URL, page count, degree name\",\"quote\":\"The more eVective ways of reducing the population size are by reducing the amount of food\\navailable for pigeons.\",\"paper\":\"effects-human-activities-pigeons-msthesis-jgeijtenbeek\",\"passages\":[{\"id\":\"quote:57d6bd0c-471a-5375-8144-a6714ebd771a\",\"text\":\"The more eVective ways of reducing the population size are by reducing the amount of food\\navailable for pigeons.\"}]},\"localized\":{\"text\":{\"en\":\"The most effective method for reducing the pigeon population is reducing the amount of available food.\",\"nl\":\"De meest effectieve methode om de duivenpopulatie te verkleinen is het verminderen van de hoeveelheid beschikbaar voedsel.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":10,\"type\":\"destillaat\",\"id\":\"destillaat:71a29bbb-1cf1-5147-9950-20588f06fa18\",\"text\":\"Bestaande dodelijke en niet-dodelijke chemische, visuele, sonische of mechanische duivenwerende middelen worden zelden aan strenge wetenschappelijke tests onderworpen.\",\"perspective\":\"Praktische scepsis\",\"theme\":\"Gehoor en geluid bij vogels\",\"ref\":{\"id\":\"interview:8e70e457-1447-53dc-a7c1-c5971108b709\",\"citation\":\"Jenni-Eiermann, S., Heynen, D., \\u0026 Schaub, M. (2014). Effect of an ultrasonic device on the behaviour and the stress hormone corticosterone in feral pigeons. Journal of Pest Science, 87, 315-322. https://doi.org/10.1007/s10340-014-0553-y\",\"citationConfidence\":\"high\",\"citationMissing\":\"issue\",\"quote\":\"A variety of lethal\\nand non-lethal chemical repellents, such as visual, sonic or\\nmechanic measures are available, but they are not always\\napplicable or effective (for review see Mason 1997; Clark\\n1998) and rarely tested rigorously.\",\"paper\":\"jenni-eiermann2014\",\"doi\":\"10.1007/s10340-014-0553-y\",\"passages\":[{\"id\":\"quote:58f40c98-e3be-52ec-80f2-36b2da22a267\",\"text\":\"A variety of lethal\\nand non-lethal chemical repellents, such as visual, sonic or\\nmechanic measures are available, but they are not always\\napplicable or effective (for review see Mason 1997; Clark\\n1998) and rarely tested rigorously.\"}]},\"localized\":{\"text\":{\"en\":\"Existing lethal and non-lethal chemical, visual, sonic, or mechanical pigeon deterrents are rarely subjected to rigorous scientific testing.\",\"nl\":\"Bestaande dodelijke en niet-dodelijke chemische, visuele, sonische of mechanische duivenwerende middelen worden zelden aan strenge wetenschappelijke tests onderworpen.\"},\"perspective\":{\"en\":\"Practical skepticism\",\"nl\":\"Praktische scepsis\"},\"theme\":{\"en\":\"Hearing and sound in birds\",\"nl\":\"Gehoor en geluid bij vogels\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":11,\"type\":\"destillaat\",\"id\":\"destillaat:6dbc1511-aa5d-5a39-8f30-ba9e6937dde1\",\"text\":\"Stadsduiven veroorzaken diverse vormen van overlast in stedelijke gebieden, waaronder corrosieve schade aan gebouwen door hun uitwerpselen en het nestelen in de directe nabijheid van woningen.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:0bcd8848-06e9-51bb-93fe-dc1d37aec88a\",\"citation\":\"Soh, M. C. K., Pang, R. Y. T., Ng, B. X. K., Lee, B. P. Y. H., Loo, A. H. B., \\u0026 Er, K. B. H. (2021). Restricted human activities shift the foraging strategies of feral pigeons (Columba livia) and three other commensal bird species. Biological Conservation, 253, 108927. https://doi.org/10.1016/j.biocon.2020.108927\",\"citationConfidence\":\"high\",\"quote\":\"Furthermore, feral pigeons cause several dis-amenities, such as corrosive\\ndamage to building structures from their droppings (Del Monte and\\nSabbioni, 1986; Spennemann and Watson, 2017), and nesting in close\\nproximity to human habitation.\",\"paper\":\"soh2021\",\"doi\":\"10.1016/j.biocon.2020.108927\",\"passages\":[{\"id\":\"quote:697985fb-9236-50dc-a503-908eeb0ffc40\",\"text\":\"Furthermore, feral pigeons cause several dis-amenities, such as corrosive\\ndamage to building structures from their droppings (Del Monte and\\nSabbioni, 1986; Spennemann and Watson, 2017), and nesting in close\\nproximity to human habitation.\"}]},\"localized\":{\"text\":{\"en\":\"Urban pigeons cause various forms of nuisance in urban areas, including corrosive damage to buildings from their droppings and nesting in close proximity to homes.\",\"nl\":\"Stadsduiven veroorzaken diverse vormen van overlast in stedelijke gebieden, waaronder corrosieve schade aan gebouwen door hun uitwerpselen en het nestelen in de directe nabijheid van woningen.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":12,\"type\":\"destillaat\",\"id\":\"destillaat:4278630e-a001-549a-8cb2-53da13792835\",\"text\":\"De auteurs stellen dat het volledig uitsluiten van duiven van gebouwen de meest effectieve oplossing is om overlast te voorkomen.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:9495f94a-9f10-5669-8c1c-dc464f1dfbce\",\"citation\":\"Haag-Wackernagel, D., \\u0026 Geigenfeind, I. (2008). Protecting buildings against feral pigeons. European Journal of Wildlife Research, 54, 715-721. https://doi.org/10.1007/s10344-008-0201-z\",\"citationConfidence\":\"high\",\"citationMissing\":\"issue\",\"quote\":\"The exclusion of pigeons from\\nbuildings is the best option to solve this problem.\",\"paper\":\"haag-wackernagel2008\",\"doi\":\"10.1007/s10344-008-0201-z\",\"passages\":[{\"id\":\"quote:ed231599-226a-5ded-821e-ea7eede53e63\",\"text\":\"The exclusion of pigeons from\\nbuildings is the best option to solve this problem.\"}]},\"localized\":{\"text\":{\"en\":\"The authors state that completely excluding pigeons from buildings is the most effective solution for preventing nuisance.\",\"nl\":\"De auteurs stellen dat het volledig uitsluiten van duiven van gebouwen de meest effectieve oplossing is om overlast te voorkomen.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":13,\"type\":\"destillaat\",\"id\":\"destillaat:14bae0cb-411b-5cf3-88e2-ec78f0e9fbd8\",\"text\":\"Het correct ontwerpen van vuilnisbakken met een beperkte toegang voor dieren is een aanbevolen methode om de overlast van duiven in woonwijken te verminderen.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:36878a2d-e678-54a2-98a9-1a72d88d450b\",\"citation\":\"Przybylska, K., Haidt, A., Myczko, Ł., Ekner-Grzyb, A., Rosin, Z. M., Kwieciński, Z., Tryjanowski, P., Suchodolska, J., Takacs, V., Jankowiak, Ł., Tobółka, M., Wasielewski, O., Graclik, A., Krawczyk, A. J., Kasprzak, A., Szwajkowski, P., Wylegała, P., Malecha, A. W., Mizera, T., \\u0026 Skórka, P. (2012). Local and Landscape-Level Factors Affecting the Density and Distribution of the Feral Pigeon Columba livia var. domestica in an Urban Environment. Acta Ornithologica, 47(1), 37–45. https://doi.org/10.3161/000164512X653908\",\"citationConfidence\":\"high\",\"quote\":\"The proper construction of\\nlitter bins with limited animal access is also a recommended solution to the problem of these birds\\nin residential areas.\",\"paper\":\"przybylska2012\",\"doi\":\"10.3161/000164512X653908\",\"passages\":[{\"id\":\"quote:93d27514-2722-52fa-bd3c-ccde8836d157\",\"text\":\"The proper construction of\\nlitter bins with limited animal access is also a recommended solution to the problem of these birds\\nin residential areas.\"}]},\"localized\":{\"text\":{\"en\":\"Properly designing garbage bins with limited access for animals is a recommended method for reducing pigeon nuisance in residential neighborhoods.\",\"nl\":\"Het correct ontwerpen van vuilnisbakken met een beperkte toegang voor dieren is een aanbevolen methode om de overlast van duiven in woonwijken te verminderen.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":14,\"type\":\"destillaat\",\"id\":\"destillaat:a93acf4e-eff2-5e01-9b05-79f58b5eebc4\",\"text\":\"De hoge concentratie stadsduiven dwingt overheden tot actieve populatieregulering om overlast te beperken.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:836b7aae-cd75-5414-967f-045ef2457fb9\",\"citation\":\"Duffaut, C., Brondeau, F., \\u0026 Gasparini, J. (2023). An original and efficient fertilizer for cherry tomato plants grown in urban agriculture: Feral pigeon guano. Urban Agriculture and Regional Food Systems, 8(1), e20046. https://doi.org/10.1002/uar2.20046\",\"citationConfidence\":\"high\",\"quote\":\"The\\nurban pigeon (Columba livia) is present in almost all cities of\\nthe world (Aronson et al., 2014) and can reach high densities\\nin some cities that has forced local authorities to manage local\\nnuisance.\",\"paper\":\"duffaut2023\",\"doi\":\"10.1002/uar2.20046\",\"passages\":[{\"id\":\"quote:79616794-e8bb-587e-b330-b2afcdbb4104\",\"text\":\"The\\nurban pigeon (Columba livia) is present in almost all cities of\\nthe world (Aronson et al., 2014) and can reach high densities\\nin some cities that has forced local authorities to manage local\\nnuisance.\"}]},\"localized\":{\"text\":{\"en\":\"The high concentration of urban pigeons forces authorities into active population regulation to limit nuisance.\",\"nl\":\"De hoge concentratie stadsduiven dwingt overheden tot actieve populatieregulering om overlast te beperken.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":15,\"type\":\"destillaat\",\"id\":\"destillaat:83f0dbfd-4344-53ac-88d9-9d7cfdf5241b\",\"text\":\"Het structureel aanpassen van de leefomgeving, zoals het bemoeilijken van nestelen en rusten, is de meest effectieve en duurzame methode om de duivenpopulatie in steden permanent te verkleinen.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:c54c8881-9b2d-5f8c-989d-0180ce70f30c\",\"citation\":\"Stukenholtz, E. E., Hailu, T. A., Childers, S., Leatherwood, C., Evans, L., Roulain, D., Townsley, D., Treider, M., II, R. N. P., Ray, D. A., Zak, J. C., Stevens, R. D., Stukenholtz, E. E., Hailu, T. A., Childers, S., Leatherwood, C., Evans, L., Roulain, D., Townsley, D., … Stevens, R. D. (2019). Ecology of Feral Pigeons: Population Monitoring, Resource Selection, and Management Practices. Wildlife Population Monitoring. https://doi.org/10.5772/intechopen.84612\",\"citationConfidence\":\"high\",\"quote\":\"Population models performed by Guinchi et al. found that influencing the\\nhabitat is the most effective and long-lasting method in decreasing abundance [18].\",\"paper\":\"stukenholtz2019\",\"doi\":\"10.5772/intechopen.84612\",\"passages\":[{\"id\":\"quote:62cd809e-6721-58c1-89bc-f2dc7333ee09\",\"text\":\"Population models performed by Guinchi et al. found that influencing the\\nhabitat is the most effective and long-lasting method in decreasing abundance [18].\"}]},\"localized\":{\"text\":{\"en\":\"Structurally modifying the living environment, such as making nesting and resting more difficult, is the most effective and sustainable method for permanently reducing the pigeon population in cities.\",\"nl\":\"Het structureel aanpassen van de leefomgeving, zoals het bemoeilijken van nestelen en rusten, is de meest effectieve en duurzame methode om de duivenpopulatie in steden permanent te verkleinen.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":16,\"type\":\"destillaat\",\"id\":\"destillaat:ec48c45c-3d8b-5be7-a2b1-a7a83cb182cc\",\"text\":\"Veel directe maatregelen om de populatieomvang van stadsduiven te beheersen, zoals afschot, blijken in de praktijk weinig effectief te zijn.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:edf48f05-bf73-5872-8e8e-93c785959ff0\",\"citation\":\"Geijtenbeek, J. W. (2026). The effect of large-scale urban events on feral pigeons (Columba livia) [Writing assignment, Utrecht University].\",\"citationConfidence\":\"medium\",\"citationMissing\":\"repository URL, page count, degree name\",\"quote\":\"Yet, many of these measures only have limited\\neVects on actually controlling pigeon populations (Skandrani et al., 2018).\",\"paper\":\"effects-human-activities-pigeons-msthesis-jgeijtenbeek\",\"passages\":[{\"id\":\"quote:858f081a-ccd9-5de0-99ef-6f74dcb72488\",\"text\":\"Yet, many of these measures only have limited\\neVects on actually controlling pigeon populations (Skandrani et al., 2018).\"}]},\"localized\":{\"text\":{\"en\":\"Many direct measures to control the population size of urban pigeons, such as culling, prove in practice to be of little effect.\",\"nl\":\"Veel directe maatregelen om de populatieomvang van stadsduiven te beheersen, zoals afschot, blijken in de praktijk weinig effectief te zijn.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":17,\"type\":\"destillaat\",\"id\":\"destillaat:f22b2232-5f08-5157-879b-de1e24c7c460\",\"text\":\"Architectonische maatregelen om nestelplaatsen van duiven te blokkeren kunnen in de praktijk botsen met wetgeving voor het behoud van historische monumenten.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:6253ceb0-7f66-5317-9ded-fdc75cf5858e\",\"citation\":\"Skandrani, Z., Desquilbet, M., \\u0026 Prévot, A.-C. (2018). A renewed framework for urban biodiversity governance: urban pigeons as a case-study. Natures Sciences Sociétés, 26(3), 280-290. https://doi.org/10.1051/nss/2018051\",\"citationConfidence\":\"high\",\"quote\":\"Moreover, this measure may also\\ncome up against existing legal prescriptions on the built\\nenvironment, as in the case of legal restrictions in historic\\nmonuments in France for instance\",\"paper\":\"skadranietal2017-arenewedframeworkforurbanbiodiversitygovernance-1\",\"doi\":\"10.1051/nss/2018051\",\"passages\":[{\"id\":\"quote:ca1eee33-ac8e-521d-9b9c-6ed40f3b13d8\",\"text\":\"Moreover, this measure may also\\ncome up against existing legal prescriptions on the built\\nenvironment, as in the case of legal restrictions in historic\\nmonuments in France for instance\"}]},\"localized\":{\"text\":{\"en\":\"Architectural measures to block pigeon nesting sites can in practice conflict with legislation for the preservation of historic monuments.\",\"nl\":\"Architectonische maatregelen om nestelplaatsen van duiven te blokkeren kunnen in de praktijk botsen met wetgeving voor het behoud van historische monumenten.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":18,\"type\":\"destillaat\",\"id\":\"destillaat:9634c179-3b9c-563b-9773-ca369216a306\",\"text\":\"De auteurs zien potentieel in het hergebruiken van duivenuitwerpselen uit openbare duiventillen als duurzame grondstof voor de productie van organische mest of biogas.\",\"perspective\":\"Ecologische waardering\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:6253ceb0-7f66-5317-9ded-fdc75cf5858e\",\"citation\":\"Skandrani, Z., Desquilbet, M., \\u0026 Prévot, A.-C. (2018). A renewed framework for urban biodiversity governance: urban pigeons as a case-study. Natures Sciences Sociétés, 26(3), 280-290. https://doi.org/10.1051/nss/2018051\",\"citationConfidence\":\"high\",\"quote\":\"Another potential service could also\\nderive from the recovery of pigeon droppings collected\\nin public dovecotes in the form of organic fertilizer or\\nmethane gas, as has been done for centuries with\\ndomestic pigeons.\",\"paper\":\"skadranietal2017-arenewedframeworkforurbanbiodiversitygovernance-1\",\"doi\":\"10.1051/nss/2018051\",\"passages\":[{\"id\":\"quote:a814012a-fadc-58ab-855d-5167ad068646\",\"text\":\"Another potential service could also\\nderive from the recovery of pigeon droppings collected\\nin public dovecotes in the form of organic fertilizer or\\nmethane gas, as has been done for centuries with\\ndomestic pigeons.\"}]},\"localized\":{\"text\":{\"en\":\"The authors see potential in reusing pigeon droppings from public dovecotes as a sustainable raw material for the production of organic fertilizer or biogas.\",\"nl\":\"De auteurs zien potentieel in het hergebruiken van duivenuitwerpselen uit openbare duiventillen als duurzame grondstof voor de productie van organische mest of biogas.\"},\"perspective\":{\"en\":\"Ecological appreciation\",\"nl\":\"Ecologische waardering\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":19,\"type\":\"destillaat\",\"id\":\"destillaat:b14cc487-1a11-5e95-84ba-100b48f75d19\",\"text\":\"Het installeren van schuine vlakken op vlakke delen of het verkleinen van openingen ontmoedigt stadsduiven effectief om op richels te rusten.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:9495f94a-9f10-5669-8c1c-dc464f1dfbce\",\"citation\":\"Haag-Wackernagel, D., \\u0026 Geigenfeind, I. (2008). Protecting buildings against feral pigeons. European Journal of Wildlife Research, 54, 715-721. https://doi.org/10.1007/s10344-008-0201-z\",\"citationConfidence\":\"high\",\"citationMissing\":\"issue\",\"quote\":\"Feral pigeons can be discouraged from\\nroosting on ledges by installing sloping surfaces over the\\nflat surface or downsizing openings to the extent preventing\\na feral pigeon from passing.\",\"paper\":\"haag-wackernagel2008\",\"doi\":\"10.1007/s10344-008-0201-z\",\"passages\":[{\"id\":\"quote:a894ebca-e00a-5cf7-897c-048cf822631b\",\"text\":\"Feral pigeons can be discouraged from\\nroosting on ledges by installing sloping surfaces over the\\nflat surface or downsizing openings to the extent preventing\\na feral pigeon from passing.\"}]},\"localized\":{\"text\":{\"en\":\"Installing sloped surfaces on flat areas or reducing the size of openings effectively discourages urban pigeons from resting on ledges.\",\"nl\":\"Het installeren van schuine vlakken op vlakke delen of het verkleinen van openingen ontmoedigt stadsduiven effectief om op richels te rusten.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":20,\"type\":\"destillaat\",\"id\":\"destillaat:360d1d4b-d96d-5a76-b9ac-597366cdbf18\",\"text\":\"Het verminderen van de beschikbaarheid van nest- en roestplekken kan, in combinatie met voedselbeperking, helpen om de populatie van verwilderde duiven te reguleren.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:0390dacf-0774-5d57-9ab6-feff4564589a\",\"citation\":\"Lim, K. N., Soh, M. C. K., Leong, D. Y. W., Loo, A. H. B., Lee, B. P. Y. H., \\u0026 Er, K. B. H. (2023). Proximity to anthropogenic food sources determine roosting and nesting prevalence of feral pigeons (Columba livia) in a tropical city. Ecological Solutions and Evidence, 4(2), e12234. https://doi.org/10.1002/2688-8319.12234\",\"citationConfidence\":\"high\",\"quote\":\"reducing the availability of roosting and\\nnesting sites can help regulate feral pigeon populations.\",\"paper\":\"lim2023\",\"doi\":\"10.1002/2688-8319.12234\",\"passages\":[{\"id\":\"quote:799398df-500c-5470-ba44-8e250622050f\",\"text\":\"reducing the availability of roosting and\\nnesting sites can help regulate feral pigeon populations.\"}]},\"localized\":{\"text\":{\"en\":\"Reducing the availability of nesting and roosting sites can, combined with food restriction, help regulate the population of feral pigeons.\",\"nl\":\"Het verminderen van de beschikbaarheid van nest- en roestplekken kan, in combinatie met voedselbeperking, helpen om de populatie van verwilderde duiven te reguleren.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"}]}"
+    },
+    {
+     "t": 16388,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 1,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 0,
+      "length": 16384
+     }
+    },
+    {
+     "t": 16391,
+     "data": "{\"type\":\"playback_state\",\"turnId\":\"1\",\"playback\":\"playing\",\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"speaking\":true}"
+    },
+    {
+     "t": 16536,
+     "data": "{\"type\":\"arousal\",\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"speaking\":false,\"arousal\":0.7715030944682035}"
+    },
+    {
+     "t": 16536,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"listening\":\"listening\",\"speaking\":true}"
+    },
+    {
+     "t": 16559,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 2,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 16384,
+      "length": 12288
+     }
+    },
+    {
+     "t": 16810,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 3,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 28672,
+      "length": 12288
+     }
+    },
+    {
+     "t": 16967,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 4,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 40960,
+      "length": 12288
+     }
+    },
+    {
+     "t": 17200,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 5,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 53248,
+      "length": 12288
+     }
+    },
+    {
+     "t": 17419,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 6,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 65536,
+      "length": 12288
+     }
+    },
+    {
+     "t": 17626,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 7,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 77824,
+      "length": 12288
+     }
+    },
+    {
+     "t": 17857,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 8,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 90112,
+      "length": 12288
+     }
+    },
+    {
+     "t": 18054,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 9,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 102400,
+      "length": 12288
+     }
+    },
+    {
+     "t": 18252,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 10,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 114688,
+      "length": 12288
+     }
+    },
+    {
+     "t": 18462,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 11,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 126976,
+      "length": 12288
+     }
+    },
+    {
+     "t": 18675,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 12,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 139264,
+      "length": 12288
+     }
+    },
+    {
+     "t": 18907,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 13,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 151552,
+      "length": 12288
+     }
+    },
+    {
+     "t": 19099,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 14,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 163840,
+      "length": 12288
+     }
+    },
+    {
+     "t": 19330,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 15,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 176128,
+      "length": 12288
+     }
+    },
+    {
+     "t": 19536,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 16,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 188416,
+      "length": 12288
+     }
+    },
+    {
+     "t": 19762,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 17,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 200704,
+      "length": 12288
+     }
+    },
+    {
+     "t": 19963,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 18,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 212992,
+      "length": 12288
+     }
+    },
+    {
+     "t": 20189,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 19,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 225280,
+      "length": 12288
+     }
+    },
+    {
+     "t": 20390,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 20,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 237568,
+      "length": 12288
+     }
+    },
+    {
+     "t": 20605,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 21,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 249856,
+      "length": 12288
+     }
+    },
+    {
+     "t": 20841,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 22,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 262144,
+      "length": 12288
+     }
+    },
+    {
+     "t": 21053,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 23,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 274432,
+      "length": 12288
+     }
+    },
+    {
+     "t": 21267,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 24,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 286720,
+      "length": 12288
+     }
+    },
+    {
+     "t": 21528,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 25,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 299008,
+      "length": 12288
+     }
+    },
+    {
+     "t": 21535,
+     "data": "{\"type\":\"arousal\",\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"speaking\":false,\"arousal\":0.7495398711922281}"
+    },
+    {
+     "t": 21535,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"listening\":\"listening\",\"speaking\":true}"
+    },
+    {
+     "t": 21659,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 26,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 311296,
+      "length": 12288
+     }
+    },
+    {
+     "t": 21884,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 27,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 323584,
+      "length": 12288
+     }
+    },
+    {
+     "t": 22103,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 28,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 335872,
+      "length": 12288
+     }
+    },
+    {
+     "t": 22311,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 29,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 348160,
+      "length": 12288
+     }
+    },
+    {
+     "t": 22575,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 30,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 360448,
+      "length": 12288
+     }
+    },
+    {
+     "t": 22738,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 31,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 372736,
+      "length": 12288
+     }
+    },
+    {
+     "t": 22944,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 32,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 385024,
+      "length": 12288
+     }
+    },
+    {
+     "t": 23151,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 33,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 397312,
+      "length": 12288
+     }
+    },
+    {
+     "t": 23379,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 34,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 409600,
+      "length": 12288
+     }
+    },
+    {
+     "t": 23625,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 35,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 421888,
+      "length": 12288
+     }
+    },
+    {
+     "t": 23804,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 36,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 434176,
+      "length": 12288
+     }
+    },
+    {
+     "t": 24019,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 37,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 446464,
+      "length": 12288
+     }
+    },
+    {
+     "t": 24231,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 38,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 458752,
+      "length": 12288
+     }
+    },
+    {
+     "t": 24432,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 39,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 471040,
+      "length": 12288
+     }
+    },
+    {
+     "t": 24673,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 40,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 483328,
+      "length": 12288
+     }
+    },
+    {
+     "t": 24879,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 41,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 495616,
+      "length": 12288
+     }
+    },
+    {
+     "t": 25108,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 42,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 507904,
+      "length": 12288
+     }
+    },
+    {
+     "t": 25286,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 43,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 520192,
+      "length": 12288
+     }
+    },
+    {
+     "t": 25508,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 44,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 532480,
+      "length": 12288
+     }
+    },
+    {
+     "t": 25728,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 45,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 544768,
+      "length": 12288
+     }
+    },
+    {
+     "t": 25935,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 46,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 557056,
+      "length": 12288
+     }
+    },
+    {
+     "t": 26244,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 47,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 569344,
+      "length": 12288
+     }
+    },
+    {
+     "t": 26387,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 48,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 581632,
+      "length": 12288
+     }
+    },
+    {
+     "t": 26578,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 49,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 593920,
+      "length": 12288
+     }
+    },
+    {
+     "t": 26777,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 50,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 606208,
+      "length": 12288
+     }
+    },
+    {
+     "t": 26784,
+     "data": "{\"type\":\"arousal\",\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"speaking\":false,\"arousal\":0.7271511509133584}"
+    },
+    {
+     "t": 26784,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"listening\":\"listening\",\"speaking\":true}"
+    },
+    {
+     "t": 26991,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 51,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 618496,
+      "length": 12288
+     }
+    },
+    {
+     "t": 27204,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 52,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 630784,
+      "length": 12288
+     }
+    },
+    {
+     "t": 27432,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 53,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 643072,
+      "length": 12288
+     }
+    },
+    {
+     "t": 27631,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 54,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 655360,
+      "length": 12288
+     }
+    },
+    {
+     "t": 27855,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 55,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 667648,
+      "length": 12288
+     }
+    },
+    {
+     "t": 28058,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 56,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 679936,
+      "length": 12288
+     }
+    },
+    {
+     "t": 28342,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 57,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 692224,
+      "length": 12288
+     }
+    },
+    {
+     "t": 28484,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 58,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 704512,
+      "length": 12288
+     }
+    },
+    {
+     "t": 28696,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 59,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 716800,
+      "length": 12288
+     }
+    },
+    {
+     "t": 28924,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 60,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 729088,
+      "length": 12288
+     }
+    },
+    {
+     "t": 29191,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 61,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 741376,
+      "length": 12288
+     }
+    },
+    {
+     "t": 29453,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 62,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 753664,
+      "length": 24576
+     }
+    },
+    {
+     "t": 29764,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 63,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 778240,
+      "length": 12288
+     }
+    },
+    {
+     "t": 29978,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 64,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 790528,
+      "length": 12288
+     }
+    },
+    {
+     "t": 30190,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 65,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 802816,
+      "length": 12288
+     }
+    },
+    {
+     "t": 30444,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 66,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 815104,
+      "length": 12288
+     }
+    },
+    {
+     "t": 30633,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 67,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 827392,
+      "length": 12288
+     }
+    },
+    {
+     "t": 30859,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 68,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 839680,
+      "length": 12288
+     }
+    },
+    {
+     "t": 31053,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 69,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 851968,
+      "length": 12288
+     }
+    },
+    {
+     "t": 31303,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 70,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 864256,
+      "length": 12288
+     }
+    },
+    {
+     "t": 31563,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 71,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 876544,
+      "length": 12288
+     }
+    },
+    {
+     "t": 31692,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 72,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 888832,
+      "length": 12288
+     }
+    },
+    {
+     "t": 31784,
+     "data": "{\"type\":\"arousal\",\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"speaking\":false,\"arousal\":0.7064505615036933}"
+    },
+    {
+     "t": 31784,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"listening\":\"listening\",\"speaking\":true}"
+    },
+    {
+     "t": 31904,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 73,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 901120,
+      "length": 12288
+     }
+    },
+    {
+     "t": 32120,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 74,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 913408,
+      "length": 12288
+     }
+    },
+    {
+     "t": 32324,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 75,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 925696,
+      "length": 12288
+     }
+    },
+    {
+     "t": 32579,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 76,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 937984,
+      "length": 12288
+     }
+    },
+    {
+     "t": 32765,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 77,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 950272,
+      "length": 12288
+     }
+    },
+    {
+     "t": 33064,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 78,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 962560,
+      "length": 12288
+     }
+    },
+    {
+     "t": 33197,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 79,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 974848,
+      "length": 12288
+     }
+    },
+    {
+     "t": 33396,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 80,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 987136,
+      "length": 12288
+     }
+    },
+    {
+     "t": 33604,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 81,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 999424,
+      "length": 12288
+     }
+    },
+    {
+     "t": 33821,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 82,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 1011712,
+      "length": 12288
+     }
+    },
+    {
+     "t": 34113,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 83,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 1024000,
+      "length": 12288
+     }
+    },
+    {
+     "t": 34252,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 84,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 1036288,
+      "length": 12288
+     }
+    },
+    {
+     "t": 34488,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 85,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 1048576,
+      "length": 12288
+     }
+    },
+    {
+     "t": 34686,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 86,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 1060864,
+      "length": 12288
+     }
+    },
+    {
+     "t": 34887,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 87,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 1073152,
+      "length": 12288
+     }
+    },
+    {
+     "t": 35187,
+     "tts": {
+      "type": "tts_audio",
+      "turnId": "1",
+      "sessionId": "574d691ed75d9a712753cb78c40481f1",
+      "speaking": false,
+      "seq": 88,
+      "format": "pcm16",
+      "sampleRate": 24000
+     },
+     "audio": {
+      "turn": "1",
+      "offset": 1085440,
+      "length": 32768
+     }
+    },
+    {
+     "t": 35219,
+     "data": "{\"type\":\"tts_done\",\"turnId\":\"1\",\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"speaking\":false,\"frames\":88}"
+    },
+    {
+     "t": 35220,
+     "data": "{\"type\":\"response_done\",\"turnId\":\"1\",\"playbackTracking\":true,\"playback\":\"playing\",\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"speaking\":false,\"kbStatus\":\"sources\",\"sources\":[{\"grounding\":\"corpus_grounded\",\"number\":1,\"type\":\"destillaat\",\"id\":\"destillaat:8f3cdf32-5baa-5b8e-9214-447177e5acec\",\"text\":\"Vanwege de gezondheidsrisico's en de hoge kosten door infrastructurele schade is er een grote behoefte aan effectieve methoden om te voorkomen dat stadsduiven op en in gebouwen nestelen.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8e70e457-1447-53dc-a7c1-c5971108b709\",\"citation\":\"Jenni-Eiermann, S., Heynen, D., \\u0026 Schaub, M. (2014). Effect of an ultrasonic device on the behaviour and the stress hormone corticosterone in feral pigeons. Journal of Pest Science, 87, 315-322. https://doi.org/10.1007/s10340-014-0553-y\",\"citationConfidence\":\"high\",\"citationMissing\":\"issue\",\"quote\":\"Health risks and high costs due to\\ninfrastructural damage raise a strong interest to prevent feral\\npigeons from roosting on and in buildings.\",\"paper\":\"jenni-eiermann2014\",\"doi\":\"10.1007/s10340-014-0553-y\",\"passages\":[{\"id\":\"quote:ac4ec3d2-524d-5b56-b336-ead571aa9bbd\",\"text\":\"Health risks and high costs due to\\ninfrastructural damage raise a strong interest to prevent feral\\npigeons from roosting on and in buildings.\"}]},\"localized\":{\"text\":{\"en\":\"Because of the health risks and the high costs from infrastructural damage, there is a great need for effective methods to prevent urban pigeons from nesting on and in buildings.\",\"nl\":\"Vanwege de gezondheidsrisico's en de hoge kosten door infrastructurele schade is er een grote behoefte aan effectieve methoden om te voorkomen dat stadsduiven op en in gebouwen nestelen.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":2,\"type\":\"destillaat\",\"id\":\"destillaat:baa2ed95-2ada-50e9-bb41-0901c3b57eb2\",\"text\":\"De ophoping van duivenuitwerpselen en nestmateriaal veroorzaakt niet alleen hygiënische problemen en visuele vervuiling, maar versnelt ook de achteruitgang van gebouwen en verhoogt de onderhoudskosten.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"Litter that accumulates under and on the surfaces used to roost or to\\nnest are not only problematic from hygienic and urban deface reasons, they also cause\\nstructural and aesthetic damages to man-made structures accelerating their deterioration\\nand increasing the costs of maintenance (Haag-Wackernagel, 1995; Pimentel et al., 2000).\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:868fb380-5bd4-5875-a656-a900e9ad4c46\",\"text\":\"Litter that accumulates under and on the surfaces used to roost or to\\nnest are not only problematic from hygienic and urban deface reasons, they also cause\\nstructural and aesthetic damages to man-made structures accelerating their deterioration\\nand increasing the costs of maintenance (Haag-Wackernagel, 1995; Pimentel et al., 2000).\"}]},\"localized\":{\"text\":{\"en\":\"The accumulation of pigeon droppings and nesting material not only causes hygienic problems and visual pollution, but also accelerates the deterioration of buildings and increases maintenance costs.\",\"nl\":\"De ophoping van duivenuitwerpselen en nestmateriaal veroorzaakt niet alleen hygiënische problemen en visuele vervuiling, maar versnelt ook de achteruitgang van gebouwen en verhoogt de onderhoudskosten.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":3,\"type\":\"destillaat\",\"id\":\"destillaat:96d645c0-c9d4-5cf0-9f47-bcbfa9de7765\",\"text\":\"Hoewel er diverse dodelijke en niet-dodelijke methoden bestaan om duiven te weren, zijn deze maatregelen niet altijd toepasbaar of effectief.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8e70e457-1447-53dc-a7c1-c5971108b709\",\"citation\":\"Jenni-Eiermann, S., Heynen, D., \\u0026 Schaub, M. (2014). Effect of an ultrasonic device on the behaviour and the stress hormone corticosterone in feral pigeons. Journal of Pest Science, 87, 315-322. https://doi.org/10.1007/s10340-014-0553-y\",\"citationConfidence\":\"high\",\"citationMissing\":\"issue\",\"quote\":\"A variety of\\nlethal and non-lethal chemical repellents, visual, sonic or\\nmechanic measures are available to deter pigeons, but they\\nare not always applicable or effective.\",\"paper\":\"jenni-eiermann2014\",\"doi\":\"10.1007/s10340-014-0553-y\",\"passages\":[{\"id\":\"quote:f95ffe60-db07-527d-814b-50a274b21213\",\"text\":\"A variety of\\nlethal and non-lethal chemical repellents, visual, sonic or\\nmechanic measures are available to deter pigeons, but they\\nare not always applicable or effective.\"}]},\"localized\":{\"text\":{\"en\":\"Although various lethal and non-lethal methods exist to deter pigeons, these measures are not always applicable or effective.\",\"nl\":\"Hoewel er diverse dodelijke en niet-dodelijke methoden bestaan om duiven te weren, zijn deze maatregelen niet altijd toepasbaar of effectief.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":4,\"type\":\"destillaat\",\"id\":\"destillaat:08ef224d-2e83-51d1-a180-87cf351f10af\",\"text\":\"Veel commerciële duivenweringssystemen zijn duur, verstoren het uiterlijk van gebouwen en bieden vaak slechts een tijdelijke of beperkte bescherming.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:9495f94a-9f10-5669-8c1c-dc464f1dfbce\",\"citation\":\"Haag-Wackernagel, D., \\u0026 Geigenfeind, I. (2008). Protecting buildings against feral pigeons. European Journal of Wildlife Research, 54, 715-721. https://doi.org/10.1007/s10344-008-0201-z\",\"citationConfidence\":\"high\",\"citationMissing\":\"issue\",\"quote\":\"Pest control companies offer a wide range of deterrent\\nsystems but these vary in efficacy and are costly and often\\ndifficult to install and maintain.\",\"paper\":\"haag-wackernagel2008\",\"doi\":\"10.1007/s10344-008-0201-z\",\"passages\":[{\"id\":\"quote:10893ea1-7b1e-5d8c-a2f2-7402d8e25ef9\",\"text\":\"Pest control companies offer a wide range of deterrent\\nsystems but these vary in efficacy and are costly and often\\ndifficult to install and maintain.\"}]},\"localized\":{\"text\":{\"en\":\"Many commercial pigeon deterrence systems are expensive, disrupt the appearance of buildings, and often provide only temporary or limited protection.\",\"nl\":\"Veel commerciële duivenweringssystemen zijn duur, verstoren het uiterlijk van gebouwen en bieden vaak slechts een tijdelijke of beperkte bescherming.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":5,\"type\":\"destillaat\",\"id\":\"destillaat:cc7e2132-0876-5584-8895-b7fd7b6bb65c\",\"text\":\"Het verjagen van duiven bij graansilo's en in de voedingsmiddelenindustrie is van cruciaal belang om de hygiëne tijdens de voedselbereiding te waarborgen.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8bbe1b4f-218c-5a5b-8a85-9ccad5c5e827\",\"citation\":\"Giunchi, D., V., Y., Emilio, N., Vanni, L., \\u0026 Soldatini, C. (2012). Feral Pigeons: Problems, Dynamics and Control Methods. In Integrated Pest Management and Pest Control - Current and Future Tactics. InTech. https://doi.org/10.5772/31536\",\"citationConfidence\":\"high\",\"quote\":\"Pigeons do not only soil buildings but also foul foodstuffs; problems are relevant in\\nparticular places as grain elevators or food industries, all sites where scaring pigeons is of\\nparamount importance for hygienic purposes related to food preparation (Gingrich \\u0026\\nOsterberg, 2003).\",\"paper\":\"giunchi2012\",\"doi\":\"10.5772/31536\",\"passages\":[{\"id\":\"quote:36cec99c-ca93-5d2e-ad0d-d7028690c7d2\",\"text\":\"Pigeons do not only soil buildings but also foul foodstuffs; problems are relevant in\\nparticular places as grain elevators or food industries, all sites where scaring pigeons is of\\nparamount importance for hygienic purposes related to food preparation (Gingrich \\u0026\\nOsterberg, 2003).\"}]},\"localized\":{\"text\":{\"en\":\"Driving away pigeons at grain silos and in the food industry is crucial for safeguarding hygiene during food preparation.\",\"nl\":\"Het verjagen van duiven bij graansilo's en in de voedingsmiddelenindustrie is van cruciaal belang om de hygiëne tijdens de voedselbereiding te waarborgen.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":6,\"type\":\"destillaat\",\"id\":\"destillaat:108e72b9-0420-5207-95ec-a953a42f4488\",\"text\":\"Traditionele afschrikmethoden zoals geluidsapparaten, nep-uilen of chemische geurstoffen zijn op de lange termijn niet effectief om duiven te verjagen, omdat de vogels er snel aan wennen.\",\"perspective\":\"Praktische scepsis\",\"theme\":\"Gehoor en geluid bij vogels\",\"ref\":{\"id\":\"interview:c54c8881-9b2d-5f8c-989d-0180ce70f30c\",\"citation\":\"Stukenholtz, E. E., Hailu, T. A., Childers, S., Leatherwood, C., Evans, L., Roulain, D., Townsley, D., Treider, M., II, R. N. P., Ray, D. A., Zak, J. C., Stevens, R. D., Stukenholtz, E. E., Hailu, T. A., Childers, S., Leatherwood, C., Evans, L., Roulain, D., Townsley, D., … Stevens, R. D. (2019). Ecology of Feral Pigeons: Population Monitoring, Resource Selection, and Management Practices. Wildlife Population Monitoring. https://doi.org/10.5772/intechopen.84612\",\"citationConfidence\":\"high\",\"quote\":\"Noise-making devices such as those that emit a high-frequency sound have\\nproven to be ineffective in removing pigeons [56].\",\"paper\":\"stukenholtz2019\",\"doi\":\"10.5772/intechopen.84612\",\"passages\":[{\"id\":\"quote:4f95cc18-0da9-5755-89cd-ed2b21d8c0b5\",\"text\":\"Noise-making devices such as those that emit a high-frequency sound have\\nproven to be ineffective in removing pigeons [56].\"},{\"id\":\"quote:322ce9c9-766f-543f-8f70-620d8e2a51f9\",\"text\":\"Scaring pigeons with lights,\\nfake snakes, owls, and other devices also seem ineffective on pigeon abundance\"},{\"id\":\"quote:27e4c16b-a4c4-539a-9d52-3426882e89a0\",\"text\":\"While effective at first, pigeons can get used to the repellent and decrease repellent\\neffectiveness\"}]},\"localized\":{\"text\":{\"en\":\"Traditional deterrent methods such as sound devices, fake owls, or chemical repellents are not effective in the long term for driving away pigeons, because the birds quickly become habituated to them.\",\"nl\":\"Traditionele afschrikmethoden zoals geluidsapparaten, nep-uilen of chemische geurstoffen zijn op de lange termijn niet effectief om duiven te verjagen, omdat de vogels er snel aan wennen.\"},\"perspective\":{\"en\":\"Practical skepticism\",\"nl\":\"Praktische scepsis\"},\"theme\":{\"en\":\"Hearing and sound in birds\",\"nl\":\"Gehoor en geluid bij vogels\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":7,\"type\":\"destillaat\",\"id\":\"destillaat:5e25905f-1586-507f-952b-fcaa1e453aa1\",\"text\":\"Stadsduiven zijn wijdverspreid en invasief, waardoor een effectieve bestrijding ervan wereldwijd een belangrijk aandachtspunt is.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:0bcd8848-06e9-51bb-93fe-dc1d37aec88a\",\"citation\":\"Soh, M. C. K., Pang, R. Y. T., Ng, B. X. K., Lee, B. P. Y. H., Loo, A. H. B., \\u0026 Er, K. B. H. (2021). Restricted human activities shift the foraging strategies of feral pigeons (Columba livia) and three other commensal bird species. Biological Conservation, 253, 108927. https://doi.org/10.1016/j.biocon.2020.108927\",\"citationConfidence\":\"high\",\"quote\":\"Feral pigeons (Columba livia) are\\nwidespread and invasive, thus their effective control is of keen international interest.\",\"paper\":\"soh2021\",\"doi\":\"10.1016/j.biocon.2020.108927\",\"passages\":[{\"id\":\"quote:27104079-9446-54f4-9082-712ea6f539fc\",\"text\":\"Feral pigeons (Columba livia) are\\nwidespread and invasive, thus their effective control is of keen international interest.\"}]},\"localized\":{\"text\":{\"en\":\"Urban pigeons are widespread and invasive, making their effective control an important focus worldwide.\",\"nl\":\"Stadsduiven zijn wijdverspreid en invasief, waardoor een effectieve bestrijding ervan wereldwijd een belangrijk aandachtspunt is.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":8,\"type\":\"destillaat\",\"id\":\"destillaat:397852fd-44a5-5c17-b5ef-401425d8c89c\",\"text\":\"De wereldwijde aanwezigheid van stadsduiven in stedelijke gebieden brengt potentiële gezondheidsrisico's met zich mee door ziekteverwekkers en parasieten, en hun uitwerpselen kunnen schade aan gebouwen veroorzaken.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:8e70e457-1447-53dc-a7c1-c5971108b709\",\"citation\":\"Jenni-Eiermann, S., Heynen, D., \\u0026 Schaub, M. (2014). Effect of an ultrasonic device on the behaviour and the stress hormone corticosterone in feral pigeons. Journal of Pest Science, 87, 315-322. https://doi.org/10.1007/s10340-014-0553-y\",\"citationConfidence\":\"high\",\"citationMissing\":\"issue\",\"quote\":\"The worldwide presence of feral pigeons Columba livia domestica in urban habitats presents potential\\npublic health hazards from pathogens and parasites, and\\ndroppings can lead to damage to buildings.\",\"paper\":\"jenni-eiermann2014\",\"doi\":\"10.1007/s10340-014-0553-y\",\"passages\":[{\"id\":\"quote:2d48eec7-63ed-5eb2-ba54-da25ead0b37f\",\"text\":\"The worldwide presence of feral pigeons Columba livia domestica in urban habitats presents potential\\npublic health hazards from pathogens and parasites, and\\ndroppings can lead to damage to buildings.\"}]},\"localized\":{\"text\":{\"en\":\"The worldwide presence of urban pigeons in built-up areas carries potential health risks through pathogens and parasites, and their droppings can cause damage to buildings.\",\"nl\":\"De wereldwijde aanwezigheid van stadsduiven in stedelijke gebieden brengt potentiële gezondheidsrisico's met zich mee door ziekteverwekkers en parasieten, en hun uitwerpselen kunnen schade aan gebouwen veroorzaken.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":9,\"type\":\"destillaat\",\"id\":\"destillaat:3a6ffcf8-396a-5697-b0b1-2f51d10b0a64\",\"text\":\"De meest effectieve methode om de duivenpopulatie te verkleinen is het verminderen van de hoeveelheid beschikbaar voedsel.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:edf48f05-bf73-5872-8e8e-93c785959ff0\",\"citation\":\"Geijtenbeek, J. W. (2026). The effect of large-scale urban events on feral pigeons (Columba livia) [Writing assignment, Utrecht University].\",\"citationConfidence\":\"medium\",\"citationMissing\":\"repository URL, page count, degree name\",\"quote\":\"The more eVective ways of reducing the population size are by reducing the amount of food\\navailable for pigeons.\",\"paper\":\"effects-human-activities-pigeons-msthesis-jgeijtenbeek\",\"passages\":[{\"id\":\"quote:57d6bd0c-471a-5375-8144-a6714ebd771a\",\"text\":\"The more eVective ways of reducing the population size are by reducing the amount of food\\navailable for pigeons.\"}]},\"localized\":{\"text\":{\"en\":\"The most effective method for reducing the pigeon population is reducing the amount of available food.\",\"nl\":\"De meest effectieve methode om de duivenpopulatie te verkleinen is het verminderen van de hoeveelheid beschikbaar voedsel.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":10,\"type\":\"destillaat\",\"id\":\"destillaat:71a29bbb-1cf1-5147-9950-20588f06fa18\",\"text\":\"Bestaande dodelijke en niet-dodelijke chemische, visuele, sonische of mechanische duivenwerende middelen worden zelden aan strenge wetenschappelijke tests onderworpen.\",\"perspective\":\"Praktische scepsis\",\"theme\":\"Gehoor en geluid bij vogels\",\"ref\":{\"id\":\"interview:8e70e457-1447-53dc-a7c1-c5971108b709\",\"citation\":\"Jenni-Eiermann, S., Heynen, D., \\u0026 Schaub, M. (2014). Effect of an ultrasonic device on the behaviour and the stress hormone corticosterone in feral pigeons. Journal of Pest Science, 87, 315-322. https://doi.org/10.1007/s10340-014-0553-y\",\"citationConfidence\":\"high\",\"citationMissing\":\"issue\",\"quote\":\"A variety of lethal\\nand non-lethal chemical repellents, such as visual, sonic or\\nmechanic measures are available, but they are not always\\napplicable or effective (for review see Mason 1997; Clark\\n1998) and rarely tested rigorously.\",\"paper\":\"jenni-eiermann2014\",\"doi\":\"10.1007/s10340-014-0553-y\",\"passages\":[{\"id\":\"quote:58f40c98-e3be-52ec-80f2-36b2da22a267\",\"text\":\"A variety of lethal\\nand non-lethal chemical repellents, such as visual, sonic or\\nmechanic measures are available, but they are not always\\napplicable or effective (for review see Mason 1997; Clark\\n1998) and rarely tested rigorously.\"}]},\"localized\":{\"text\":{\"en\":\"Existing lethal and non-lethal chemical, visual, sonic, or mechanical pigeon deterrents are rarely subjected to rigorous scientific testing.\",\"nl\":\"Bestaande dodelijke en niet-dodelijke chemische, visuele, sonische of mechanische duivenwerende middelen worden zelden aan strenge wetenschappelijke tests onderworpen.\"},\"perspective\":{\"en\":\"Practical skepticism\",\"nl\":\"Praktische scepsis\"},\"theme\":{\"en\":\"Hearing and sound in birds\",\"nl\":\"Gehoor en geluid bij vogels\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":11,\"type\":\"destillaat\",\"id\":\"destillaat:6dbc1511-aa5d-5a39-8f30-ba9e6937dde1\",\"text\":\"Stadsduiven veroorzaken diverse vormen van overlast in stedelijke gebieden, waaronder corrosieve schade aan gebouwen door hun uitwerpselen en het nestelen in de directe nabijheid van woningen.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:0bcd8848-06e9-51bb-93fe-dc1d37aec88a\",\"citation\":\"Soh, M. C. K., Pang, R. Y. T., Ng, B. X. K., Lee, B. P. Y. H., Loo, A. H. B., \\u0026 Er, K. B. H. (2021). Restricted human activities shift the foraging strategies of feral pigeons (Columba livia) and three other commensal bird species. Biological Conservation, 253, 108927. https://doi.org/10.1016/j.biocon.2020.108927\",\"citationConfidence\":\"high\",\"quote\":\"Furthermore, feral pigeons cause several dis-amenities, such as corrosive\\ndamage to building structures from their droppings (Del Monte and\\nSabbioni, 1986; Spennemann and Watson, 2017), and nesting in close\\nproximity to human habitation.\",\"paper\":\"soh2021\",\"doi\":\"10.1016/j.biocon.2020.108927\",\"passages\":[{\"id\":\"quote:697985fb-9236-50dc-a503-908eeb0ffc40\",\"text\":\"Furthermore, feral pigeons cause several dis-amenities, such as corrosive\\ndamage to building structures from their droppings (Del Monte and\\nSabbioni, 1986; Spennemann and Watson, 2017), and nesting in close\\nproximity to human habitation.\"}]},\"localized\":{\"text\":{\"en\":\"Urban pigeons cause various forms of nuisance in urban areas, including corrosive damage to buildings from their droppings and nesting in close proximity to homes.\",\"nl\":\"Stadsduiven veroorzaken diverse vormen van overlast in stedelijke gebieden, waaronder corrosieve schade aan gebouwen door hun uitwerpselen en het nestelen in de directe nabijheid van woningen.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":12,\"type\":\"destillaat\",\"id\":\"destillaat:4278630e-a001-549a-8cb2-53da13792835\",\"text\":\"De auteurs stellen dat het volledig uitsluiten van duiven van gebouwen de meest effectieve oplossing is om overlast te voorkomen.\",\"perspective\":\"Strikte plaagbestrijding\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:9495f94a-9f10-5669-8c1c-dc464f1dfbce\",\"citation\":\"Haag-Wackernagel, D., \\u0026 Geigenfeind, I. (2008). Protecting buildings against feral pigeons. European Journal of Wildlife Research, 54, 715-721. https://doi.org/10.1007/s10344-008-0201-z\",\"citationConfidence\":\"high\",\"citationMissing\":\"issue\",\"quote\":\"The exclusion of pigeons from\\nbuildings is the best option to solve this problem.\",\"paper\":\"haag-wackernagel2008\",\"doi\":\"10.1007/s10344-008-0201-z\",\"passages\":[{\"id\":\"quote:ed231599-226a-5ded-821e-ea7eede53e63\",\"text\":\"The exclusion of pigeons from\\nbuildings is the best option to solve this problem.\"}]},\"localized\":{\"text\":{\"en\":\"The authors state that completely excluding pigeons from buildings is the most effective solution for preventing nuisance.\",\"nl\":\"De auteurs stellen dat het volledig uitsluiten van duiven van gebouwen de meest effectieve oplossing is om overlast te voorkomen.\"},\"perspective\":{\"en\":\"Strict pest control\",\"nl\":\"Strikte plaagbestrijding\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":13,\"type\":\"destillaat\",\"id\":\"destillaat:14bae0cb-411b-5cf3-88e2-ec78f0e9fbd8\",\"text\":\"Het correct ontwerpen van vuilnisbakken met een beperkte toegang voor dieren is een aanbevolen methode om de overlast van duiven in woonwijken te verminderen.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:36878a2d-e678-54a2-98a9-1a72d88d450b\",\"citation\":\"Przybylska, K., Haidt, A., Myczko, Ł., Ekner-Grzyb, A., Rosin, Z. M., Kwieciński, Z., Tryjanowski, P., Suchodolska, J., Takacs, V., Jankowiak, Ł., Tobółka, M., Wasielewski, O., Graclik, A., Krawczyk, A. J., Kasprzak, A., Szwajkowski, P., Wylegała, P., Malecha, A. W., Mizera, T., \\u0026 Skórka, P. (2012). Local and Landscape-Level Factors Affecting the Density and Distribution of the Feral Pigeon Columba livia var. domestica in an Urban Environment. Acta Ornithologica, 47(1), 37–45. https://doi.org/10.3161/000164512X653908\",\"citationConfidence\":\"high\",\"quote\":\"The proper construction of\\nlitter bins with limited animal access is also a recommended solution to the problem of these birds\\nin residential areas.\",\"paper\":\"przybylska2012\",\"doi\":\"10.3161/000164512X653908\",\"passages\":[{\"id\":\"quote:93d27514-2722-52fa-bd3c-ccde8836d157\",\"text\":\"The proper construction of\\nlitter bins with limited animal access is also a recommended solution to the problem of these birds\\nin residential areas.\"}]},\"localized\":{\"text\":{\"en\":\"Properly designing garbage bins with limited access for animals is a recommended method for reducing pigeon nuisance in residential neighborhoods.\",\"nl\":\"Het correct ontwerpen van vuilnisbakken met een beperkte toegang voor dieren is een aanbevolen methode om de overlast van duiven in woonwijken te verminderen.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":14,\"type\":\"destillaat\",\"id\":\"destillaat:a93acf4e-eff2-5e01-9b05-79f58b5eebc4\",\"text\":\"De hoge concentratie stadsduiven dwingt overheden tot actieve populatieregulering om overlast te beperken.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:836b7aae-cd75-5414-967f-045ef2457fb9\",\"citation\":\"Duffaut, C., Brondeau, F., \\u0026 Gasparini, J. (2023). An original and efficient fertilizer for cherry tomato plants grown in urban agriculture: Feral pigeon guano. Urban Agriculture and Regional Food Systems, 8(1), e20046. https://doi.org/10.1002/uar2.20046\",\"citationConfidence\":\"high\",\"quote\":\"The\\nurban pigeon (Columba livia) is present in almost all cities of\\nthe world (Aronson et al., 2014) and can reach high densities\\nin some cities that has forced local authorities to manage local\\nnuisance.\",\"paper\":\"duffaut2023\",\"doi\":\"10.1002/uar2.20046\",\"passages\":[{\"id\":\"quote:79616794-e8bb-587e-b330-b2afcdbb4104\",\"text\":\"The\\nurban pigeon (Columba livia) is present in almost all cities of\\nthe world (Aronson et al., 2014) and can reach high densities\\nin some cities that has forced local authorities to manage local\\nnuisance.\"}]},\"localized\":{\"text\":{\"en\":\"The high concentration of urban pigeons forces authorities into active population regulation to limit nuisance.\",\"nl\":\"De hoge concentratie stadsduiven dwingt overheden tot actieve populatieregulering om overlast te beperken.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":15,\"type\":\"destillaat\",\"id\":\"destillaat:83f0dbfd-4344-53ac-88d9-9d7cfdf5241b\",\"text\":\"Het structureel aanpassen van de leefomgeving, zoals het bemoeilijken van nestelen en rusten, is de meest effectieve en duurzame methode om de duivenpopulatie in steden permanent te verkleinen.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:c54c8881-9b2d-5f8c-989d-0180ce70f30c\",\"citation\":\"Stukenholtz, E. E., Hailu, T. A., Childers, S., Leatherwood, C., Evans, L., Roulain, D., Townsley, D., Treider, M., II, R. N. P., Ray, D. A., Zak, J. C., Stevens, R. D., Stukenholtz, E. E., Hailu, T. A., Childers, S., Leatherwood, C., Evans, L., Roulain, D., Townsley, D., … Stevens, R. D. (2019). Ecology of Feral Pigeons: Population Monitoring, Resource Selection, and Management Practices. Wildlife Population Monitoring. https://doi.org/10.5772/intechopen.84612\",\"citationConfidence\":\"high\",\"quote\":\"Population models performed by Guinchi et al. found that influencing the\\nhabitat is the most effective and long-lasting method in decreasing abundance [18].\",\"paper\":\"stukenholtz2019\",\"doi\":\"10.5772/intechopen.84612\",\"passages\":[{\"id\":\"quote:62cd809e-6721-58c1-89bc-f2dc7333ee09\",\"text\":\"Population models performed by Guinchi et al. found that influencing the\\nhabitat is the most effective and long-lasting method in decreasing abundance [18].\"}]},\"localized\":{\"text\":{\"en\":\"Structurally modifying the living environment, such as making nesting and resting more difficult, is the most effective and sustainable method for permanently reducing the pigeon population in cities.\",\"nl\":\"Het structureel aanpassen van de leefomgeving, zoals het bemoeilijken van nestelen en rusten, is de meest effectieve en duurzame methode om de duivenpopulatie in steden permanent te verkleinen.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":16,\"type\":\"destillaat\",\"id\":\"destillaat:ec48c45c-3d8b-5be7-a2b1-a7a83cb182cc\",\"text\":\"Veel directe maatregelen om de populatieomvang van stadsduiven te beheersen, zoals afschot, blijken in de praktijk weinig effectief te zijn.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:edf48f05-bf73-5872-8e8e-93c785959ff0\",\"citation\":\"Geijtenbeek, J. W. (2026). The effect of large-scale urban events on feral pigeons (Columba livia) [Writing assignment, Utrecht University].\",\"citationConfidence\":\"medium\",\"citationMissing\":\"repository URL, page count, degree name\",\"quote\":\"Yet, many of these measures only have limited\\neVects on actually controlling pigeon populations (Skandrani et al., 2018).\",\"paper\":\"effects-human-activities-pigeons-msthesis-jgeijtenbeek\",\"passages\":[{\"id\":\"quote:858f081a-ccd9-5de0-99ef-6f74dcb72488\",\"text\":\"Yet, many of these measures only have limited\\neVects on actually controlling pigeon populations (Skandrani et al., 2018).\"}]},\"localized\":{\"text\":{\"en\":\"Many direct measures to control the population size of urban pigeons, such as culling, prove in practice to be of little effect.\",\"nl\":\"Veel directe maatregelen om de populatieomvang van stadsduiven te beheersen, zoals afschot, blijken in de praktijk weinig effectief te zijn.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":17,\"type\":\"destillaat\",\"id\":\"destillaat:f22b2232-5f08-5157-879b-de1e24c7c460\",\"text\":\"Architectonische maatregelen om nestelplaatsen van duiven te blokkeren kunnen in de praktijk botsen met wetgeving voor het behoud van historische monumenten.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:6253ceb0-7f66-5317-9ded-fdc75cf5858e\",\"citation\":\"Skandrani, Z., Desquilbet, M., \\u0026 Prévot, A.-C. (2018). A renewed framework for urban biodiversity governance: urban pigeons as a case-study. Natures Sciences Sociétés, 26(3), 280-290. https://doi.org/10.1051/nss/2018051\",\"citationConfidence\":\"high\",\"quote\":\"Moreover, this measure may also\\ncome up against existing legal prescriptions on the built\\nenvironment, as in the case of legal restrictions in historic\\nmonuments in France for instance\",\"paper\":\"skadranietal2017-arenewedframeworkforurbanbiodiversitygovernance-1\",\"doi\":\"10.1051/nss/2018051\",\"passages\":[{\"id\":\"quote:ca1eee33-ac8e-521d-9b9c-6ed40f3b13d8\",\"text\":\"Moreover, this measure may also\\ncome up against existing legal prescriptions on the built\\nenvironment, as in the case of legal restrictions in historic\\nmonuments in France for instance\"}]},\"localized\":{\"text\":{\"en\":\"Architectural measures to block pigeon nesting sites can in practice conflict with legislation for the preservation of historic monuments.\",\"nl\":\"Architectonische maatregelen om nestelplaatsen van duiven te blokkeren kunnen in de praktijk botsen met wetgeving voor het behoud van historische monumenten.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":18,\"type\":\"destillaat\",\"id\":\"destillaat:9634c179-3b9c-563b-9773-ca369216a306\",\"text\":\"De auteurs zien potentieel in het hergebruiken van duivenuitwerpselen uit openbare duiventillen als duurzame grondstof voor de productie van organische mest of biogas.\",\"perspective\":\"Ecologische waardering\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:6253ceb0-7f66-5317-9ded-fdc75cf5858e\",\"citation\":\"Skandrani, Z., Desquilbet, M., \\u0026 Prévot, A.-C. (2018). A renewed framework for urban biodiversity governance: urban pigeons as a case-study. Natures Sciences Sociétés, 26(3), 280-290. https://doi.org/10.1051/nss/2018051\",\"citationConfidence\":\"high\",\"quote\":\"Another potential service could also\\nderive from the recovery of pigeon droppings collected\\nin public dovecotes in the form of organic fertilizer or\\nmethane gas, as has been done for centuries with\\ndomestic pigeons.\",\"paper\":\"skadranietal2017-arenewedframeworkforurbanbiodiversitygovernance-1\",\"doi\":\"10.1051/nss/2018051\",\"passages\":[{\"id\":\"quote:a814012a-fadc-58ab-855d-5167ad068646\",\"text\":\"Another potential service could also\\nderive from the recovery of pigeon droppings collected\\nin public dovecotes in the form of organic fertilizer or\\nmethane gas, as has been done for centuries with\\ndomestic pigeons.\"}]},\"localized\":{\"text\":{\"en\":\"The authors see potential in reusing pigeon droppings from public dovecotes as a sustainable raw material for the production of organic fertilizer or biogas.\",\"nl\":\"De auteurs zien potentieel in het hergebruiken van duivenuitwerpselen uit openbare duiventillen als duurzame grondstof voor de productie van organische mest of biogas.\"},\"perspective\":{\"en\":\"Ecological appreciation\",\"nl\":\"Ecologische waardering\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":19,\"type\":\"destillaat\",\"id\":\"destillaat:b14cc487-1a11-5e95-84ba-100b48f75d19\",\"text\":\"Het installeren van schuine vlakken op vlakke delen of het verkleinen van openingen ontmoedigt stadsduiven effectief om op richels te rusten.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:9495f94a-9f10-5669-8c1c-dc464f1dfbce\",\"citation\":\"Haag-Wackernagel, D., \\u0026 Geigenfeind, I. (2008). Protecting buildings against feral pigeons. European Journal of Wildlife Research, 54, 715-721. https://doi.org/10.1007/s10344-008-0201-z\",\"citationConfidence\":\"high\",\"citationMissing\":\"issue\",\"quote\":\"Feral pigeons can be discouraged from\\nroosting on ledges by installing sloping surfaces over the\\nflat surface or downsizing openings to the extent preventing\\na feral pigeon from passing.\",\"paper\":\"haag-wackernagel2008\",\"doi\":\"10.1007/s10344-008-0201-z\",\"passages\":[{\"id\":\"quote:a894ebca-e00a-5cf7-897c-048cf822631b\",\"text\":\"Feral pigeons can be discouraged from\\nroosting on ledges by installing sloping surfaces over the\\nflat surface or downsizing openings to the extent preventing\\na feral pigeon from passing.\"}]},\"localized\":{\"text\":{\"en\":\"Installing sloped surfaces on flat areas or reducing the size of openings effectively discourages urban pigeons from resting on ledges.\",\"nl\":\"Het installeren van schuine vlakken op vlakke delen of het verkleinen van openingen ontmoedigt stadsduiven effectief om op richels te rusten.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"},{\"grounding\":\"corpus_grounded\",\"number\":20,\"type\":\"destillaat\",\"id\":\"destillaat:360d1d4b-d96d-5a76-b9ac-597366cdbf18\",\"text\":\"Het verminderen van de beschikbaarheid van nest- en roestplekken kan, in combinatie met voedselbeperking, helpen om de populatie van verwilderde duiven te reguleren.\",\"perspective\":\"Pragmatische populatiebeheersing\",\"theme\":\"Stadsduiven in de leefomgeving\",\"ref\":{\"id\":\"interview:0390dacf-0774-5d57-9ab6-feff4564589a\",\"citation\":\"Lim, K. N., Soh, M. C. K., Leong, D. Y. W., Loo, A. H. B., Lee, B. P. Y. H., \\u0026 Er, K. B. H. (2023). Proximity to anthropogenic food sources determine roosting and nesting prevalence of feral pigeons (Columba livia) in a tropical city. Ecological Solutions and Evidence, 4(2), e12234. https://doi.org/10.1002/2688-8319.12234\",\"citationConfidence\":\"high\",\"quote\":\"reducing the availability of roosting and\\nnesting sites can help regulate feral pigeon populations.\",\"paper\":\"lim2023\",\"doi\":\"10.1002/2688-8319.12234\",\"passages\":[{\"id\":\"quote:799398df-500c-5470-ba44-8e250622050f\",\"text\":\"reducing the availability of roosting and\\nnesting sites can help regulate feral pigeon populations.\"}]},\"localized\":{\"text\":{\"en\":\"Reducing the availability of nesting and roosting sites can, combined with food restriction, help regulate the population of feral pigeons.\",\"nl\":\"Het verminderen van de beschikbaarheid van nest- en roestplekken kan, in combinatie met voedselbeperking, helpen om de populatie van verwilderde duiven te reguleren.\"},\"perspective\":{\"en\":\"Pragmatic population control\",\"nl\":\"Pragmatische populatiebeheersing\"},\"theme\":{\"en\":\"Urban pigeons in the environment\",\"nl\":\"Stadsduiven in de leefomgeving\"}},\"sourceLanguage\":\"nl\"}]}"
+    },
+    {
+     "t": 35221,
+     "data": "{\"type\":\"playback_state\",\"turnId\":\"1\",\"playback\":\"playing\",\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"speaking\":true}"
+    },
+    {
+     "t": 37033,
+     "data": "{\"type\":\"arousal\",\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"speaking\":false,\"arousal\":0.6853485970207388}"
+    },
+    {
+     "t": 37034,
+     "data": "{\"type\":\"listening_heartbeat\",\"autonomyPaused\":false,\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"listening\":\"listening\",\"speaking\":true}"
+    },
+    {
+     "t": 39737,
+     "data": "{\"type\":\"playback_state\",\"turnId\":\"1\",\"autonomyPaused\":false,\"playback\":\"ended\",\"sessionId\":\"574d691ed75d9a712753cb78c40481f1\",\"speaking\":false}"
+    }
+   ],
+   "openMs": 1294,
+   "closeMs": 42114
+  }
+ ],
+ "probes": [
+  {
+   "kind": "mic-open",
+   "t": 1369,
+   "audio": 1
+  },
+  {
+   "kind": "gesture",
+   "t": 1383,
+   "clip": "Peck"
+  },
+  {
+   "kind": "gesture",
+   "t": 1600,
+   "clip": "WingWave"
+  },
+  {
+   "kind": "gesture",
+   "t": 15999,
+   "clip": "WingWave"
+  },
+  {
+   "kind": "pcm-start",
+   "t": 16389,
+   "at": 16439,
+   "duration": 0.3413333333333333,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 16559,
+   "at": 16780,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 16810,
+   "at": 17041,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 16967,
+   "at": 17300,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 17200,
+   "at": 17549,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 17420,
+   "at": 17805,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 17626,
+   "at": 18060,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 17857,
+   "at": 18328,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 18054,
+   "at": 18579,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 18253,
+   "at": 18836,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 18462,
+   "at": 19088,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 18675,
+   "at": 19349,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 18907,
+   "at": 19597,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 19099,
+   "at": 19853,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 19330,
+   "at": 20111,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 19536,
+   "at": 20375,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 19762,
+   "at": 20623,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 19963,
+   "at": 20882,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 20189,
+   "at": 21135,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 20390,
+   "at": 21389,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 20606,
+   "at": 21653,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 20841,
+   "at": 21904,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 21053,
+   "at": 22164,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 21267,
+   "at": 22421,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 21528,
+   "at": 22677,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 21659,
+   "at": 22925,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 21884,
+   "at": 23187,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 22103,
+   "at": 23444,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 22311,
+   "at": 23694,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 22575,
+   "at": 23958,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 22739,
+   "at": 24218,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 22944,
+   "at": 24466,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 23151,
+   "at": 24721,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 23379,
+   "at": 24976,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 23625,
+   "at": 25227,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 23804,
+   "at": 25491,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 24019,
+   "at": 25754,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 24231,
+   "at": 25998,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 24432,
+   "at": 26258,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 24674,
+   "at": 26516,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 24879,
+   "at": 26764,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 25108,
+   "at": 27019,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 25286,
+   "at": 27283,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 25509,
+   "at": 27532,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 25728,
+   "at": 27789,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 25935,
+   "at": 28054,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 26245,
+   "at": 28306,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 26387,
+   "at": 28554,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 26578,
+   "at": 28825,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 26778,
+   "at": 29068,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 26992,
+   "at": 29330,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 27204,
+   "at": 29585,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 27432,
+   "at": 29839,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 27631,
+   "at": 30097,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 27855,
+   "at": 30358,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 28059,
+   "at": 30605,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 28342,
+   "at": 30867,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 28484,
+   "at": 31121,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 28696,
+   "at": 31370,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 28924,
+   "at": 31635,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 29191,
+   "at": 31886,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 29453,
+   "at": 32148,
+   "duration": 0.512,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 29765,
+   "at": 32658,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 29978,
+   "at": 32908,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 30191,
+   "at": 33169,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 30444,
+   "at": 33427,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 30633,
+   "at": 33680,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 30859,
+   "at": 33933,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 31054,
+   "at": 34197,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 31304,
+   "at": 34442,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 31563,
+   "at": 34706,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 31692,
+   "at": 34963,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 31904,
+   "at": 35218,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 32120,
+   "at": 35471,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 32324,
+   "at": 35729,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 32579,
+   "at": 35984,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 32765,
+   "at": 36234,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 33064,
+   "at": 36490,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 33197,
+   "at": 36746,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 33396,
+   "at": 37003,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 33604,
+   "at": 37265,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 33821,
+   "at": 37519,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 34113,
+   "at": 37779,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 34252,
+   "at": 38035,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 34489,
+   "at": 38288,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 34687,
+   "at": 38540,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 34887,
+   "at": 38804,
+   "duration": 0.256,
+   "sampleRate": 24000
+  },
+  {
+   "kind": "pcm-start",
+   "t": 35188,
+   "at": 39051,
+   "duration": 0.6826666666666666,
+   "sampleRate": 24000
+  }
+ ],
+ "transcript": [
+  {
+   "t": 10255,
+   "text": "De Marktkooplui klagen over duivenpoep op hun kramen."
+  }
+ ],
+ "voice": [
+  {
+   "file": "stem.mp3",
+   "turnId": "1",
+   "format": "pcm16",
+   "sampleRate": 24000,
+   "bytes": 1118208,
+   "ms": 23296,
+   "sha256": "9af1d0ad98c724404d929762eb8d8137f29fffdbb608ba09f8578db1510f67aa",
+   "encoded": "mp3, mono, 64 kbit/s (libmp3lame, bit-exact)"
+  }
+ ],
+ "checks": {
+  "reaction": "speech",
+  "delayMs": 7376,
+  "sessionLang": "nl",
+  "langMatches": true,
+  "autonomous": true
+ }
+}

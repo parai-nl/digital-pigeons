@@ -1,0 +1,20 @@
+# Lokale ontwikkeling: workspace met replace naar de private parai-core-checkout.
+# De gecommitte go.mod bevat nooit lokale paden (zie go.work.example).
+go.work
+go.work.sum
+.env
+
+# Coverage- en e2e-artefacten
+coverage-*.out
+bin/
+
+# Frontend-build en node_modules: de bundle wordt bij dev/deploy gebouwd (make bundle)
+duif/frontend/dist/*
+!duif/frontend/dist/.gitkeep
+duif/frontend/node_modules/
+# Typecheck-paden uit PARAI_UI_DIR/PARAI_GRAPH_DIR (scripts/tsconfig-check.ts)
+duif/frontend/tsconfig.check.json
+
+# Shell-statics: lokale kopie van parai-core's frontend/build (make shell-static)
+static/*
+!static/.gitkeep

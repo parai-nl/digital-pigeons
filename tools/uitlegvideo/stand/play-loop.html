@@ -1,0 +1,97 @@
+<!doctype html>
+<!--
+  Standspeler voor een scherm op een stand. Speelt ./uitlegvideo.mp4 uit
+  dezelfde map zonder geluid in een eindeloze loop, schermvullend op zwart. Werkt
+  als los bestand (file://) in Chrome en Safari, zonder netwerk en zonder externe
+  lettertypen. F of dubbelklikken schakelt schermvullend; de muis verdwijnt na
+  twee seconden stilte. Zie tools/uitlegvideo/README.md, "Standspeler".
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Geen enkele netwerkaanvraag: alleen de video uit deze map en de inline code. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; media-src 'self' file:; style-src 'unsafe-inline'; script-src 'unsafe-inline'">
+<title>Digital Pigeons — explainer</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
+  body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: #eff2f0; }
+  body.idle, body.idle * { cursor: none; }
+  video { position: fixed; inset: 0; width: 100vw; height: 100vh; object-fit: contain; background: #000; }
+  .notice { position: fixed; inset: 0; display: grid; place-content: center; gap: 1.5rem; padding: 8vw; text-align: center; }
+  .notice[hidden] { display: none; }
+  .notice h1 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-weight: 500; font-size: clamp(2rem, 5vw, 4.5rem); line-height: 1.2; }
+  .notice p { margin: 0; font-size: clamp(1.1rem, 2vw, 1.8rem); line-height: 1.5; color: #b8c0bb; }
+  .notice small { margin-top: 3rem; font-size: clamp(.8rem, 1vw, 1rem); color: #66706a; }
+</style>
+</head>
+<body>
+<video id="film" src="uitlegvideo.mp4" muted autoplay loop playsinline disablepictureinpicture preload="auto"></video>
+<div class="notice" id="broken" role="status" hidden>
+  <h1>Digital Pigeons</h1>
+  <p>The video is taking a short break.<br>What would a pigeon say at your table? Come back and find out.</p>
+  <small>For the team: put uitlegvideo.mp4 next to play-loop.html and reload (⌘R).</small>
+</div>
+<div class="notice" id="start" role="button" tabindex="0" hidden>
+  <h1>Digital Pigeons</h1>
+  <p>Click anywhere to start the video.</p>
+</div>
+<script>
+  const film = document.getElementById('film')
+  const broken = document.getElementById('broken')
+  const start = document.getElementById('start')
+
+  // Een video die niet laadt, laat geen kapotte speler achter maar een rustige tekst.
+  function showBroken() { film.hidden = true; start.hidden = true; broken.hidden = false }
+  film.addEventListener('error', showBroken)
+  // Faalde het laden al vóór dit script liep, dan is het error-event voorbij.
+  if (film.error) showBroken()
+
+  // Zonder geluid mag autoplay in Chrome en Safari. Weigert de browser toch, dan
+  // start één klik de video; daarna loopt hij vanzelf door.
+  function play() {
+    film.muted = true
+    const attempt = film.play()
+    if (attempt) attempt.then(() => { start.hidden = true }).catch(error => {
+      if (error && error.name === 'NotAllowedError') start.hidden = false
+    })
+  }
+  start.addEventListener('click', play)
+  start.addEventListener('keydown', event => { if (event.key === 'Enter' || event.key === ' ') play() })
+  play()
+
+  // De loop hoort naadloos te zijn; blijft het beeld toch staan (een haperende
+  // decoder na uren draaien), dan begint de video opnieuw.
+  let last = -1
+  setInterval(() => {
+    if (film.hidden || film.paused || film.readyState < 2) return
+    if (film.currentTime === last) { film.currentTime = 0; play() }
+    last = film.currentTime
+  }, 5000)
+
+  // Schermvullend met F of dubbelklik. Safari vóór versie 16.4 kent alleen de
+  // webkit-variant; nieuwere browsers de standaard-API.
+  function toggleFullscreen() {
+    const root = document.documentElement
+    if (document.fullscreenElement || document.webkitFullscreenElement) (document.exitFullscreen || document.webkitExitFullscreen).call(document)
+    else (root.requestFullscreen || root.webkitRequestFullscreen).call(root)
+  }
+  document.addEventListener('dblclick', toggleFullscreen)
+  document.addEventListener('keydown', event => {
+    if ((event.key === 'f' || event.key === 'F') && !event.metaKey && !event.ctrlKey && !event.altKey) toggleFullscreen()
+  })
+
+  // De muis verdwijnt na twee seconden zonder beweging.
+  let idle
+  function wake() { document.body.classList.remove('idle'); clearTimeout(idle); idle = setTimeout(() => document.body.classList.add('idle'), 2000) }
+  document.addEventListener('mousemove', wake)
+  wake()
+
+  // Waar de browser het toestaat, houdt de pagina het scherm zelf wakker. Dat
+  // vervangt `caffeinate -d` niet: die blijft de afspraak (README.md).
+  async function keepAwake() { try { if (navigator.wakeLock && document.visibilityState === 'visible') await navigator.wakeLock.request('screen') } catch {} }
+  document.addEventListener('visibilitychange', keepAwake)
+  keepAwake()
+</script>
+</body>
+</html>
