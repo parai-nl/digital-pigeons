@@ -63,7 +63,7 @@ export function compile({ vragen, keuze, takesById, facts, bands = {} }) {
 // is, of als een take dat model niet mocht gebruiken (modelAllowed: het huidige
 // verplichte model, of een eerder model vóór zijn einddatum).
 // Het endpoint zelf komt niet in opnames.json; de takes leggen het vast.
-// Ook de bouwgegevens van de server (module-tree, core-commit, database)
+// Ook de bouwgegevens van de server (module-tree, core-commit)
 // blijven in de takes: de publieke pagina heeft er niets aan.
 export function recording(takes, vragen) {
   const models = new Set(takes.map((t) => t.server.modelPolicy.model))

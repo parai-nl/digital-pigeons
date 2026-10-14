@@ -6,7 +6,7 @@ import { execFileSync } from 'node:child_process'
 import { createHash } from 'node:crypto'
 import { existsSync, readFileSync } from 'node:fs'
 import path from 'node:path'
-import { DATABASE, FORBIDDEN_PORTS, MODEL, MODULE_DIR, REPO_DIR, SOURCE_DATABASE, endpointOrigin, readEnv } from './config.mjs'
+import { FORBIDDEN_PORTS, MODEL, MODULE_DIR, REPO_DIR, endpointOrigin, readEnv } from './config.mjs'
 
 const STATE = path.join(MODULE_DIR, 'bin', 'etalage-server.json')
 
@@ -39,7 +39,6 @@ export async function checkServer(base) {
     base,
     modelPolicy: duiven.modelPolicy,
     knowledge: { kbId: knowledge.kbId, bundleSchema: knowledge.bundleSchema, languages: knowledge.languages, importedAt: knowledge.importedAt, counts: knowledge.counts },
-    database: { name: DATABASE, copyOf: SOURCE_DATABASE },
     module: moduleInfo(state.build, createHash('sha256').update(bundle).digest('hex')),
     tool: toolInfo(),
     pigeons: (duiven.duiven ?? []).map((d) => ({ id: d.id, engine: d.engine, chat: d.chat, meeting: d.meeting, autonomousDefault: d.autonomousDefault })),

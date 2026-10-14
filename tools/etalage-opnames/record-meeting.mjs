@@ -61,7 +61,7 @@ const WORK = path.join(TOOL_DIR, '.work')
 mkdirSync(WORK, { recursive: true })
 
 const server = await checkServer(args.base)
-console.log(`opname tegen ${args.base}: ${server.modelPolicy.model} via ${server.modelPolicy.endpoint}, commit ${server.module.commit.slice(0, 10)}, kennisbank ${server.knowledge.kbId} (${server.database.name})`)
+console.log(`opname tegen ${args.base}: ${server.modelPolicy.model} via ${server.modelPolicy.endpoint}, commit ${server.module.commit.slice(0, 10)}, kennisbank ${server.knowledge.kbId}`)
 let failures = 0
 for (const s of statements) {
   for (const lang of langs) {

@@ -10,7 +10,6 @@ export const SERVER = {
   base: 'http://127.0.0.1:8094',
   modelPolicy: { model: MODEL, detectionModel: MODEL, endpoint: ENDPOINT },
   knowledge: { kbId: 'Duiven', bundleSchema: 'duiven/3' },
-  database: { name: 'opname_kopie', copyOf: 'kennisbank' },
   module: { commit: 'a'.repeat(40), moduleTree: 'b'.repeat(40), dirty: false, paraiCore: { commit: 'c'.repeat(40) }, builtAt: '2026-09-23T14:00:00.000Z', bundleSha256: 'd'.repeat(64) },
 }
 

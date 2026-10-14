@@ -103,6 +103,6 @@ de opnameserver (daarna gestopt), zonder modelaanroepen:
   alleen tijdens de opname verborgen). Op dubbele pixeldichtheid:
   1525×1186 (NL) en 1517×1185/1186 (EN) pixels, 50–52 KB.
 
-Per beeld staan maat, hash, tijdstip, module, database en de commit van het
+Per beeld staan maat, hash, tijdstip, module en de commit van het
 gereedschap in `kennisgraaf.json`. In beeld staan alleen de namen
 uit de kennisbank en het domeinlabel van de module; geen schil, geen account.

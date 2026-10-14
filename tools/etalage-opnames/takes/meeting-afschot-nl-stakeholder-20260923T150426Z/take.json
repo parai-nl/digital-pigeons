@@ -54,10 +54,6 @@
     "thema": 26
    }
   },
-  "database": {
-   "name": "duif_etalage",
-   "copyOf": "duif_v3"
-  },
   "module": {
    "commit": "44186b900325eefad26c20b91e92f7350eb81bd0",
    "moduleTree": "272829aae8444c82053a849b7a66ccc5a5a9109f",

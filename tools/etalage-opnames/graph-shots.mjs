@@ -25,7 +25,7 @@
 //   node tools/etalage-opnames/graph-shots.mjs --lang en       Engels, als kennisgraaf-licht-en.webp en -donker-en.webp
 //   node tools/etalage-opnames/graph-shots.mjs --select ""     de beginstand, zonder selectie
 //
-// De herkomst (module-commit, tijdstip, database, maat, hash) komt in
+// De herkomst (module-commit, tijdstip, maat, hash) komt in
 // kennisgraaf.json naast dit script.
 import { execFileSync } from 'node:child_process'
 import { createHash } from 'node:crypto'
@@ -145,7 +145,6 @@ try {
         moduleCommit: server.module.commit,
         moduleTree: server.module.moduleTree,
         bundleSha256: server.module.bundleSha256,
-        database: `${server.database.name} (kopie van ${server.database.copyOf})`,
         knowledgeBase: { kbId: server.knowledge.kbId, importedAt: server.knowledge.importedAt },
         tool: server.tool,
       }

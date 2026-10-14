@@ -50,7 +50,7 @@ if (!questions.length || !langs.length) throw new Error('geen vragen of talen ge
 const secrets = envSecrets(readEnv())
 
 const server = await checkServer(args.base)
-console.log(`opname tegen ${args.base}: ${server.modelPolicy.model} via ${server.modelPolicy.endpoint}, commit ${server.module.commit.slice(0, 10)}, kennisbank ${server.knowledge.kbId} (${server.database.name})`)
+console.log(`opname tegen ${args.base}: ${server.modelPolicy.model} via ${server.modelPolicy.endpoint}, commit ${server.module.commit.slice(0, 10)}, kennisbank ${server.knowledge.kbId}`)
 const limiter = createLimiter(10)
 let failures = 0
 

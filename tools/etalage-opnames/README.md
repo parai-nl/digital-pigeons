@@ -90,6 +90,10 @@ node tools/etalage-opnames/server.mjs stop     # alleen het eigen proces; de kop
   pad (`server.module`), en legt daarnaast de commit van dit gereedschap zelf
   vast, met of de code ervan op dat moment afweek (`server.tool`). Oudere
   takes hebben dat laatste veld nog niet.
+- Lokale databasenamen blijven in de genegeerde serverstand. Ze worden niet
+  in takes of beeldherkomst opgenomen; in de gepubliceerde takes zijn die
+  metadata verwijderd. Antwoorden, onderzoeksdata en herkomsthashes blijven
+  ongewijzigd.
 - De server begrenst dure verzoeken per account; de opname blijft daaronder
   en wacht bij een 429 (dat gebeurt vóór elke modelaanroep) de gevraagde tijd.
 
@@ -203,7 +207,7 @@ tweede duif meekreeg.
   `vragen.json`. `recording` bevat het model van de gekozen takes (één model
   voor alle takes, anders weigert de bouw), niet het endpoint: dat staat in
   de takes en hoort niet op de publieke pagina, net als de bouwgegevens van
-  de server (module-tree, core-commit, database). `knowledgeBase` is de id
+  de server (module-tree, core-commit). `knowledgeBase` is de id
   van de kennisbank uit de takes. Naast het contract staat er het aantal takes
   in.
 - `site/etalage/media/geluid/stem/<take>.mp3`: de stem van elke gesproken
@@ -312,7 +316,7 @@ modelaanroepen; start wel de opnameserver en stop hem na afloop.
 - De module plaatst de namen zelf: een naam die naast zijn knoop geen plek
   heeft, zakt omlaag of blijft weg. Dat is haar gedrag, niet dat van het
   script.
-- Maat, hash, tijdstip, module-commit, database en de commit van het
+- Maat, hash, tijdstip, module-commit en de commit van het
   gereedschap staan per beeld in `kennisgraaf.json`.
 
 ## Opnieuw opnemen met andere vragen
